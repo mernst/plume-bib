@@ -1,0 +1,72 @@
+Directory of BibTeX bibliography files.
+
+Please do not distribute.
+(The comments are not complete and have not been double-checked, so
+distributing them could lead to misunderstanding or resentment.)
+
+This is a set of BibTeX bibliographies, with the following advantanges:
+ # Already typed in, so you don't have to do that work.
+ # Capitalization is corrected.  Bibliographies downloaded from the web
+   often have incorrect capitalization; the ACM Digital Library is one
+   notorious offender.
+ # Short and long versions of names, locations, and dates for conferences,
+   journals, etc.  The short (abbreviated) version is convenient if your
+   paper is nearing its page limit.
+ # Correct, detailed dates.  Dates contain days of the month, which give
+   the dates of just the appropriate track rather than the whole conference.
+ # Searchable via the bibfind tool.  For instance, 
+     bibfind keyword1 keyword2
+   displays all the bibliographies with all the keywords, either in the
+   entries in the comments.  (This is why there are no line breaks in the
+   comments, though we may lift that restriction in the future.)
+
+
+USAGE
+-----
+
+To choose the abbreviated (short) or unabbreviated (long) version of the
+bibliography strings, use one of these commands in your LaTeX file:
+  \bibliography{bibstring-abbrev,...}
+  \bibliography{bibstring-unabbrev,...}
+
+When using the bibliographies, add near the top of your LaTeX document:
+  \usepackage{relsize}
+  \usepackage{url}
+  \def\UrlFont{\smaller\ttfamily}
+These define the \url command used in the bibliographies, and make it use
+in a slightly smaller font (the regular tt font is very big).
+
+
+EDITING AND ADDING ENTRIES
+--------------------------
+
+Changes, corrections, and additions are welcome.
+
+When adding new bibliography entries, please use bibliography strings
+rather than hard-coding conference/journal/institution names, locations,
+and dates.  Add the new abbreviations to bibstring-master.bib as necessary.
+
+
+SETUP
+-----
+
+Obtain the bibliographies by running the command
+
+  hg clone https://plume-bib.googlecode.com/hg/ plume-bib  
+
+Then, add the "plume-bib" directory to your BIBINPUTS environment variable.
+bash syntax:
+  export BIBINPUTS=.:PATHTOPLUMEBIB:..:
+csh syntax:
+  setenv BIBINPUTS .:PATHTOPLUMEBIB:..:
+
+For the bibfind command, see http://code.google.com/p/uwisdom/wiki/README
+It uses the "bibroot" file in the repository.
+
+Note for miktex users:
+The bibtex that is supplied with miktex (the popular Windows implementation)
+does not support the BIBINPUTS variable. You need to modify the miktex
+configuration.  In file ...\miktex\config\miktex.ini, edit this entry:
+ Input Dirs=searchpath 
+(search path for BibTeX input files -- both databases and style files).
+
