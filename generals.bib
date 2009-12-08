@@ -1,0 +1,1739 @@
+% This file should be better organized, and perhaps eliminated with its
+% parts being put in more logical places.
+
+%% See prefetch.bib
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Run-time disambiguation
+%%%
+
+@Article{Nicolau89,
+  author =       "Alexandru Nicolau",
+  title =        "Run-Time Disambiguation: Coping with Statically
+                 Unpredictable Dependencies",
+  pages =        "663--678",
+  journal =      "IEEE Transactions on Computers",
+  volume =       38,
+  number =       5,
+  month =        may,
+  year =         1989,
+  publisher =    "IEEE Computer Society",
+  address =      "Washington, DC",
+}
+
+@InProceedings{SuEtAl94,
+  author =       "Bogong Su and Stanley Habib and Wei Zhao and Jian Wang
+                 and Youfeng Wu",
+  title =        "A Study of Pointer Aliasing for Software Pipelining
+                 using Run-Time Disambiguation",
+  booktitle =    MICRO97,
+  address =      micro97addr,
+  month =        nov # "~30--" # dec # "~2,",
+  year =         1994,
+  pages =        "112--117",
+}
+
+
+@InProceedings{HuangSlaShe94,
+  author =       "Andrew S. Huang and Gert Slavenburg and John Paul
+                 Shen",
+  title =        "Speculative Disambiguation: A Compilation Technique
+                 for Dynamic Memory Disambiguation",
+  booktitle =    ISCA94,
+  address =      "Chicago, Illinois",
+  month =        apr # " 18--21,",
+  year =         1994,
+  pages =        "200--210",
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Dependence analysis
+%%%
+
+
+@Book{Banerjee:1988:DAS,
+  author =       "Utpal Banerjee",
+  title =        "Dependence analysis for supercomputing",
+  publisher =    "Kluwer Academic",
+  address =      "Boston, MA, USA",
+  pages =        "x + 155",
+  year =         1988,
+  ISBN =         "0-89838-289-0",
+  LCCN =         "QA76.5 .B2641 1988",
+  series =       "The Kluwer international series in engineering and
+                 computer science. Parallel processing and fifth
+                 generation computing",
+  keywords =     "Parallel processing (Electronic computers);
+                 Supercomputer systems; Supercomputers",
+}
+
+
+@InProceedings{pldi91*15,
+  author =       "Gina Goff and Ken Kennedy and Chau-Wen Tseng",
+  title =        "Practical Dependence Testing",
+  pages =        "15--29",
+  ISBN =         "0-89791-428-7",
+  booktitle =	 PLDI91,
+  year =	 1991,
+  address =	 PLDI91addr,
+  month =	 PLDI91date
+}
+
+@Article{Maydan:1995:EDD,
+  author =       "Dror E. Maydan and John L. Hennessy and Monica S.
+                 Lam",
+  title =        "Effectiveness of Data Dependence Analysis",
+  journal =      "International Journal of Parallel Programming",
+  volume =       23,
+  number =       1,
+  pages =        "63--81",
+  month =        feb,
+  year =         1995,
+  coden =        "IJPPE5",
+  ISSN =         "0885-7458",
+  affiliation =  "Stanford Univ",
+  affiliationaddress = "Stanford, CA, USA",
+  classification = "722.1; 722.4; 723.1; 723.2; 921.6; C6110P (Parallel
+                 programming); C6130 (Data handling techniques); C6150C
+                 (Compilers, interpreters and other processors); C6150G
+                 (Diagnostic, testing, debugging and evaluating
+                 systems)",
+  corpsource =   "Comput. Syst. Lab., Stanford Univ., CA, USA",
+  journalabr =   "Int J Parallel Program",
+  keywords =     "11pp system; affine approximation; affine memory
+                 disambiguation; affine memory disambiguation system;
+                 Approximation theory; array references; data analysis;
+                 Data dependence; data dependence analysis; data
+                 dependence testing; data flow analysis; Data reduction;
+                 Data storage equipment; dataflow information;
+                 decidability; flow insensitive; Larus; Larus's llpp
+                 system; linear integer functions; Loop level
+                 parallelism; loop level parallelism detection; loop
+                 variables; loops bounds; memory disambiguation;
+                 Numerical analysis; numerical programs; Parallel
+                 processing systems; parallel programming; Program
+                 compilers; program compilers; program testing;
+                 undecidable",
+  treatment =    "P Practical",
+}
+
+@Article{Pugh:1992:PAE,
+  author =       "William Pugh",
+  title =        "A practical algorithm for exact array dependence
+                 analysis",
+  journal =      "Communications of the ACM",
+  volume =       35,
+  number =       8,
+  pages =        "102--114",
+  month =        aug,
+  year =         1992,
+  coden =        "CACMA2",
+  ISSN =         "0001-0782",
+  url =          "http://www.acm.org/pubs/toc/Abstracts/0001-0782/135233.html",
+  keywords =     "algorithms; experimentation; languages; measurement;
+                 performance",
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Subscript checks
+%%%
+
+@InProceedings{Kolte:1995:ERA,
+  author =       "Priyadarshan Kolte and Michael Wolfe",
+  title =        "Elimination of redundant array subscript range
+                 checks",
+  booktitle =    PLDI95,
+  address =      pldi95addr,
+  month =        jun,
+  year =         1995,
+  ISSN =         "0362-1340",
+  pages =        "270--278",
+  coden =        "SINODQ",
+  ISSN =         "0362-1340",
+  abstract =     "The paper presents a compiler optimization algorithm
+                 to reduce the run time overhead of array subscript
+                 range checks in programs without compromising safety.
+                 The algorithm is based on partial redundancy
+                 elimination and it incorporates previously developed
+                 algorithms for range check optimization. We implemented
+                 the algorithm in our research compiler, Nascent, and
+                 conducted experiments on a suite of 10 benchmark
+                 programs to obtain four results: the execution overhead
+                 of naive range checking is high enough to merit
+                 optimization; there are substantial differences between
+                 various optimizations; loop based optimizations that
+                 hoist checks out of loops are effective in eliminating
+                 about 98\% of the range checks; and more sophisticated
+                 analysis and optimization algorithms produce very
+                 marginal benefits. (18 Refs.)",
+  affiliation =  "Oregon Graduate Inst. of Sci. and Technol., Beaverton,
+                 OR, USA",
+  classification = "C6150C (Compilers, interpreters and other
+                 processors); C6150G (Diagnostic, testing, debugging and
+                 evaluating systems)",
+  keywords =     "Benchmark programs; Compiler optimization algorithm;
+                 Execution overhead; Loop based optimizations; Naive
+                 range checking; Nascent; Optimization algorithms;
+                 Partial redundancy elimination; Range check
+                 optimization; Redundant array subscript range check
+                 elimination; Research compiler; Run time overhead",
+  thesaurus =    "Optimising compilers; Program diagnostics;
+                 Redundancy",
+}
+
+
+@Article{Gupta:1993:OAB,
+  author =       "Rajiv Gupta",
+  title =        "Optimizing array bound checks using flow analysis",
+  journal =      "ACM Letters on Programming Languages and Systems",
+  volume =       2,
+  number =       4,
+  pages =        "135--150",
+  month =        mar,
+  year =         1993,
+  coden =        "ALPSE8",
+  ISSN =         "1057-4514",
+  url =          "http://www.acm.org/pubs/toc/Abstracts/1057-4514/176507.html",
+  abstract =     "Bound checks are introduced in programs for the
+                 run-time detection of array bound violations.
+                 Compile-time optimizations are employed to reduce the
+                 execution-time overhead due to bound checks. The
+                 optimizations reduce the program execution time through
+                 {\em elimination} of checks and {\em propagation} of
+                 checks out of loops. An execution of the optimized
+                 program terminates with an array bound violation if and
+                 only if the same outcome would have resulted during the
+                 execution of the program containing all array bound
+                 checks. However, the point at which the array bound
+                 violation occurs may not be the same. Experimental
+                 results indicate that the number of bound checks
+                 performed during the execution of a program is greatly
+                 reduced using these techniques.",
+  keywords =     "languages, reliability",
+  subject =      "{\bf D.3.4}: Software, PROGRAMMING LANGUAGES,
+                 Processors, Optimization. {\bf D.2.5}: Software,
+                 SOFTWARE ENGINEERING, Testing and Debugging, Error
+                 handling and recovery. {\bf D.3.4}: Software,
+                 PROGRAMMING LANGUAGES, Processors, Compilers.",
+}
+
+@InProceedings{pldi90*272,
+  author =       "Rajiv Gupta",
+  title =        "A fresh look at optimizing array bound checking",
+  pages =        "272--282",
+  ISBN =         "0-89791-364-7",
+  booktitle =    PLDI90,
+  address =      pldi90addr,
+  month =        jun,
+  year =         "1990",
+  abstract =     "This paper describes techniques for optimizing range
+                 checks performed to detect array bound violations. In
+                 addition to the elimination of range checks, the
+                 optimizations discussed in this paper also reduce the
+                 overhead due to range checks that cannot be eliminated
+                 by compile-time analysis. The optimizations reduce the
+                 program execution time and the object code size through
+                 elimination of redundant checks, propagation of checks
+                 out of loops, and combination of multiple checks into a
+                 single check. A minimal control flow graph (MCFG) is
+                 constructed using which the minimal amount of data flow
+                 information required for range check optimizations is
+                 computed. The range check optimizations are performed
+                 using the MCFG rather the CFG for the entire program.
+                 This allows the global range check optimizations to be
+                 performed efficiently since the MCFG is significantly
+                 smaller than the CFG.",
+  affiliation =  "Philips Lab",
+  affiliationaddress = "Briarcliff Manor, NY, USA",
+  classification = 723,
+  conference =   "Proceedings of the ACM SIGPLAN '90 Conference on
+                 Programming Language Design and Implementation",
+  conferenceyear = 1990,
+  journalabr =   "SIGPLAN Not",
+  keywords =     "Arrays; Computer Operating Systems; Data Processing
+                 --- Data Structures; Optimizing Compilers; Program
+                 Compilers",
+  meetingaddress = "White Plains, NY, USA",
+  meetingdate =  "Jun 20--22 1990",
+  meetingdate2 = "06/20--22/90",
+  sponsor =      "Assoc for Computing Machinery, Special Interest Group
+                 on Programming Languages",
+}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Alias analysis
+%%%
+
+@InProceedings{CWZ:APS,
+  author =       "David R. Chase and Mark Wegman and F. Kenneth Zadeck",
+  title =        "Analysis of Pointers and Structures",
+  booktitle =    PLDI90,
+  month =        jun,
+  year =         1990,
+  address =      pldi90addr,
+  pages =        "296--310",
+}
+
+@InProceedings{LandiWilli1992a,
+  author =       "William Landi and Barbara G. Ryder",
+  title =        "A safe approximate algorithm for interprocedural
+                 pointer aliasing",
+  booktitle =    PLDI92,
+  address =	 pldi92addr,
+  pages =	 "235--248",
+  year =         1992,
+  abstracturl =  "file://cs.rutgers.edu/pub/technical-reports/lcsr-tr-168.abstract",
+  url =          "file://cs.rutgers.edu/pub/technical-reports/lcsr-tr-168.ps.Z",
+  month =        PLDI92date,
+}
+
+
+@TechReport{LandiR91:TR,
+  author =       "William Landi and Barbara G. Ryder",
+  title =        "A Safe Approximation Algorithm for Interprocedural
+                 Pointer Aliasing",
+  institution =  "Rutgers University",
+  year = 	 1991,
+  number =	 "LCSR-TR-168",
+  month =	 sep
+}
+
+
+@InProceedings{pldi94*242,
+  author =       "Maryam Emami and Rakesh Ghiya and Laurie J. Hendren",
+  title =        "Context-Sensitive Interprocedural Points-to Analysis
+                 in the Presence of Function Pointers",
+  pages =        "242--256",
+  ISBN =         "0-89791-662-X",
+  booktitle =    PLDI94,
+  address =	 pldi94addr,
+  month =        jun,
+  year =         1994,
+}
+
+
+@InProceedings{Wilson:1995:ECP,
+  author =       "Robert P. Wilson and Monica S. Lam",
+  title =        "Efficient context-sensitive pointer analysis for {C}
+                 programs",
+  booktitle =    PLDI95,
+  address =      pldi95addr,
+  month =        jun,
+  year =         1995,
+  ISSN =         "0362-1340",
+  pages =        "1--12",
+  coden =        "SINODQ",
+  ISSN =         "0362-1340",
+  abstract =     "This paper proposes an efficient technique for
+                 context-sensitive pointer analysis that is applicable
+                 to real C programs. For efficiency, we summarize the
+                 effects of procedures using partial transfer functions.
+                 A partial transfer function (PTF) describes the
+                 behavior of a procedure assuming that certain alias
+                 relationships hold when it is called. We can reuse a
+                 PTF in many calling contexts as long as the aliases
+                 among the inputs to the procedure are the same. Our
+                 empirical results demonstrate that this technique is
+                 successful-a single PTF per procedure is usually
+                 sufficient to obtain completely context-sensitive
+                 results. Because many C programs use features such as
+                 type casts and pointer arithmetic to circumvent the
+                 high-level type system, our algorithm is based on a
+                 low-level representation of memory locations that
+                 safely handles all the features of C. We have
+                 implemented our algorithm in the SUIF compiler system
+                 and we show that it runs efficiently for a set of C
+                 benchmarks. (16 Refs.)",
+  affiliation =  "Comput. Syst. Lab., Stanford Univ., CA, USA",
+  classification = "C6140D (High level languages); C6150C (Compilers,
+                 interpreters and other processors)",
+  keywords =     "Alias relationships; C benchmarks; C programs;
+                 Compiler system; Context-sensitive pointer analysis;
+                 High-level type system; Memory locations; Partial
+                 transfer functions; Pointer arithmetic; Procedure call;
+                 SUIF; Type casts",
+  thesaurus =    "C language; Program compilers; Remote procedure
+                 calls",
+}
+
+
+
+@InProceedings{popl93*232,
+  author =       "Jong-Deok Choi and Michael Burke and Paul Carini",
+  title =        "Efficient Flow-Sensitive Interprocedural Computation
+                 of Pointer-Induced Aliases and Side Effects",
+  pages =        "232--245",
+  ISBN =         "0-89791-560-7",
+  booktitle =    POPL93,
+  address =      popl93addr,
+  month =        popl93date,
+  year =         1993,
+}
+
+
+@InProceedings{Deutsch94a,
+  author =       "Alain Deutsch",
+  title =        "Interprocedural May-Alias Analysis for Pointers:
+                 Beyond {$k$}-Limiting",
+  pages =        "230--241",
+  booktitle =    PLDI94,
+  year =         1994,
+  address =      pldi94addr,
+  month =        jun,
+  note =         "SIGPLAN Notices, 29(6)",
+  abstract =     "Existing methods for alias analysis of recursive
+                 pointer data structures are based on two approximation
+                 techniques: {\em $k$-limiting}, which blurs distinction
+                 between sub-objects below depth $k$; and {\em
+                 store-based\/} (or equivalently location or
+                 region-based) approximations, which blur distinction
+                 between elements of recursive data structures. Although
+                 notable progress in interprocedural alias analysis has
+                 been recently accomplished, very little progress in the
+                 precision of analysis of recursive pointer data
+                 structures has been seen since the inception of these
+                 approximation techniques by Jones and Muchnick a decade
+                 ago. As a result, optimizing, verifying and
+                 parallelizing programs with pointers has remained
+                 difficult. We present a new parametric framework for
+                 analyzing recursive pointer data structures which can
+                 express a new natural class of alias information not
+                 accessible to existing methods. The key idea is to
+                 represent alias information by pairs of {\em symbolic
+                 access paths\/} which are qualified by symbolic
+                 descriptions of the positions for which the alias pair
+                 holds. Based on this result, we present an algorithm
+                 for interprocedural may-alias analysis with pointers
+                 which on numerous examples that occur in practice is
+                 much more precise than recently published algorithms.",
+}
+
+
+@InProceedings{Deutsch95,
+  author =       "Alain Deutsch",
+  title =        "Semantic Models and Abstract Interpretation Techniques
+                 for Inductive Data Structures and Pointers",
+  booktitle =    PEPM95,
+  address =      pepm95addr,
+  month =        PEPM95date,
+  year =         1995,
+  pages =        "226--229",
+}
+
+
+@InProceedings{POPL::Steensgaard1996,
+  title =        "Points-to Analysis in Almost Linear Time",
+  author =       "Bjarne Steensgaard",
+  pages =        "32--41",
+  booktitle =    POPL96,
+  month =        POPL96date,
+  year =         1996,
+  address =      popl96addr
+}
+
+
+@InProceedings{Steensgaard96,
+  author = 	 "Bjarne Steensgaard",
+  title = 	 "Points-to analysis by type inference of programs with
+		  structures and unions",
+  booktitle =    CC96,
+  address =	 CC96addr,
+  coden =        "LNCSD9",
+  ISBN =         "3-540-61053-7 (paperback)",
+  ISSN =         "0302-9743",
+  LCCN =         "QA76.76.C65 I52 1996",
+  OMITseries =       LNCS,
+  OMITvolume =       1060,
+  year =	 1996,
+  month =	 CC96date
+}
+
+
+@InProceedings{Jones:Muchnick:acm:popl:1982,
+  author =       "Neil D. Jones and Stephen S. Muchnick",
+  title =        "A Flexible Approach to Interprocedural Data Flow
+                 Analysis and Programs with Recursive Data Structures",
+  booktitle =    POPL82,
+  month =        jan,
+  year =         1982,
+  pages =        "66--74",
+  abstract =     "A new approach to data flow analysis of procedural
+                 programs and programs with recursive data structures is
+                 described. The method depends on simulation of the
+                 interpreter for the subject programming language using
+                 a retrieval function to approximate a program's data
+                 structures.",
+}
+
+@InProceedings{POPL79*244,
+  author =       "Neil D. Jones and Steven S. Muchnick",
+  title =        "Flow analysis and optimization of {LISP}-like
+                 structures",
+  pages =        "244--256",
+  booktitle =    POPL79,
+  month =        jan,
+  address =      "New York, USA",
+  year =         "1979",
+}
+
+
+@InProceedings{Ruf:1995:CAA,
+  author =       "Erik Ruf",
+  title =        "Context-insensitive alias analysis reconsidered",
+  booktitle =    PLDI95,
+  address =      pldi95addr,
+  month =        jun,
+  year =         1995,
+  ISSN =         "0362-1340",
+  pages =        "13--22",
+  coden =        "SINODQ",
+  ISSN =         "0362-1340",
+  abstract =     "Recent work on alias analysis in the presence of
+                 pointers has concentrated on context-sensitive
+                 interprocedural analyses, which treat multiple calls to
+                 a single procedure independently rather than
+                 constructing a single approximation to a procedure's
+                 effect on all of its callers. While context-sensitive
+                 modeling offers the potential for greater precision by
+                 considering only realizable call-return paths, its
+                 empirical benefits have yet to be measured. This paper
+                 compares the precision of a simple, efficient,
+                 context-insensitive points-to analysis for the C
+                 programming language with that of a maximally
+                 context-sensitive version of the same analysis. We
+                 demonstrate that, for a number of pointer-intensive
+                 benchmark programs, context-insensitivity exerts little
+                 to no precision penalty. We also describe techniques
+                 for using the output of context-insensitive analysis to
+                 improve the efficiency of context-sensitive analysis
+                 without affecting precision. (23 Refs.)",
+  affiliation =  "Microsoft Corp., Redmond, WA, USA",
+  classification = "C6110 (Systems analysis and programming); C6150C
+                 (Compilers, interpreters and other processors); C6150N
+                 (Distributed systems software)",
+  keywords =     "C programming language; Call-return paths; Compilers;
+                 Context-insensitive alias analysis; Context-insensitive
+                 analysis; Context-insensitivity; Context-sensitive
+                 analysis; Context-sensitive interprocedural analyses;
+                 Context-sensitive modeling; Multiple procedure calls;
+                 Pointer-intensive benchmark programs; Pointers;
+                 Precision penalty",
+  thesaurus =    "C language; Data flow analysis; Program compilers;
+                 Remote procedure calls; Software performance
+                 evaluation",
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Shape analysis
+%%%
+
+@InProceedings{HendrenHumNic92,
+  author =       "Laurie J. Hendren and Joseph Hummel and Alexandru
+                 Nicolau",
+  title =        "Abstractions for Recursive Pointer Data Structures:
+                 Improving the Analysis and Transformation of Imperative
+                 Programs",
+  booktitle =    PLDI92,
+  address =      PLDI92addr,
+  month =        PLDI92date,
+  year =         1992,
+  pages =        "249--260",
+  url =          "ftp://ftp-acaps.cs.mcgill.ca/pub/doc/papers/PLDI92.ps.gz",
+}
+
+
+@Article{Ghiya:1996:CAP,
+  author =       "Rakesh Ghiya and Laurie J. Hendren",
+  title =        "Connection Analysis: A Practical Interprocedural
+                 Heap Analysis for {C}",
+  journal =      "International Journal of Parallel Programming",
+  volume =       "24",
+  number =       "6",
+  pages =        "547--578",
+  month =        dec,
+  year =         "1996",
+  coden =        "IJPPE5",
+  ISSN =         "0885-7458",
+  affiliation =  "McGill Univ",
+  affiliationaddress = "Que, Can",
+  classification = "722.4; 723.1; 723.1.1; 723.5; 922.2; C4240P
+                 (Parallel programming and algorithm theory); C6110P
+                 (Parallel programming); C6120 (File organisation);
+                 C6140D (High level languages); C6150C (Compilers,
+                 interpreters and other processors)",
+  corpsource =   "Sch. of Comput. Sci., McGill Univ., Montreal, Que.,
+                 Canada",
+  journalabr =   "Int J Parallel Program",
+  keywords =     "array dependence; C (programming language); C
+                 language; C programs; Computer aided analysis;
+                 Connection analysis; connection analysis; connection
+                 matrices; connection relationships; conservative
+                 estimate; context sensitive interprocedural analysis;
+                 Context sensitive languages; disjoint objects;
+                 dynamically allocated arrays; heap access
+                 disambiguation; heap allocated objects; Heap analysis
+                 technique; heap directed pointers; interference
+                 analysis; McCAT optimizing/parallelizing C compiler;
+                 optimising compilers; Parallel processing systems;
+                 parallel programming; parallelising compilers;
+                 parallelizing compilers; Pointer disambiguation;
+                 points-to analysis; Program compilers; program control
+                 structures; program point; scientific programs;
+                 Statistical methods; storage management",
+  treatment =    "P Practical",
+}
+
+
+@InProceedings{POPL::GhiyaH1996,
+  title =        "Is it a Tree, a {DAG}, or a Cyclic Graph? {A} Shape
+                 Analysis for Heap-Directed Pointers in~{C}",
+  author =       "Rakesh Ghiya and Laurie J. Hendren",
+  pages =        "1--15",
+  booktitle =    POPL96,
+  address =      popl96addr,
+  month =        jan # "~21--24,",
+  year =         1996,
+}
+
+
+@InProceedings{POPL::FradetM1997,
+  title =        "Shape Types",
+  author =       "Pascal Fradet and Daniel Le M{\'e}tayer",
+  pages =        "27--39",
+  booktitle =    POPL97,
+  month =        POPL97date,
+  year =         1997,
+  address =      popl97addr,
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Other static analyses
+%%%
+
+
+@InProceedings{OCallahan97a,
+  author =       "Robert O'Callahan and Daniel Jackson",
+  title =        "Lackwit: A Program Understanding Tool Based on Type
+                 Inference",
+  booktitle =    ICSE97,
+  address =      ICSE97addr,
+  year =         1997,
+  pages =        "338--348",
+  month =        ICSE97date,
+  abstract =
+   "By determining, statically, where the structure of a program requires sets
+    of variables to share a common representation, we can identify abstract
+    data types, detect abstraction violations, find unused variables,
+    functions, and fields of data structures, detect simple errors in
+    operations on abstract datatypes, and locate sites of possible references
+    to a value.  We compute representation sharing with type inference, using
+    types to encode representations.  The method is efficient, fully automatic,
+    and smoothly integrates pointer aliasing and higher-order functions.  We
+    show how we used a prototype tool to answer a user's questions about a
+    17,000 line program written in C.",
+}
+
+
+@TechReport{OCallahanJ96,
+  author = 	 "Robert O'Callahan and Daniel Jackson",
+  title = 	 "Practical program understanding with type inference",
+  institution =  "School of Computer Science, Carnegie Mellon University",
+  year = 	 1996,
+  number =	 "CMU-CS-96-130",
+  address =	 "Pittsburgh, PA",
+  month =	 may
+}
+
+@InProceedings{evans94a,
+  author =       "David Evans and John Guttag and James Horning and Yang
+                 Meng Tan",
+  title =        "{LCLint}: A Tool for Using Specifications to Check
+                 Code",
+  booktitle = 	 FSE94,
+  address =      FSE94addr,
+  year =         1994,
+  pages =        "87--97",
+  month =        FSE94date
+}
+
+
+
+@InProceedings{Evans96,
+  key =          "Evans",
+  author =       "David Evans",
+  title =        "Static Detection of Dynamic Memory Errors",
+  booktitle =    PLDI96,
+  pages =        "44--53",
+  address = 	 PLDI96addr,
+  month =        PLDI96date,
+  year =         1996,
+}
+
+
+@Article{EvansL2002,
+  author = 	 "David Evans and David Larochelle",
+  title = 	 "Improving security using extensible lightweight static analysis",
+  journal = 	 IEEESoftware,
+  year = 	 2002,
+  volume = 	 19,
+  number = 	 1,
+  pages = 	 "42--51",
+  doi = {http://dx.doi.org/10.1109/52.976940},
+}
+
+
+@TechReport{MIT-LCS//MIT/LCS/TR-628,
+  author =       "David Evans",
+  title =        "Using Specifications to Check Source Code",
+  institution =  "Massachusetts Institute of Technology, Laboratory for
+                 Computer Science",
+  number =       "MIT-LCS//MIT/LCS/TR-628",
+  month =        jun,
+  year =         1994,
+  abstract =     "Traditional static checkers are limited to detecting
+                 simple anomalies since thy have no information
+                 regarding the intent of the code. Program verifiers are
+                 too expensive for nearly all applications. This thesis
+                 investigates the possibilities of using specifications
+                 too lightweight static checks to detect inconsistencies
+                 between specifications and implementations. A tool,
+                 LCLint, was developed to do static checks on C source
+                 code using LCL specifications. It is similar to
+                 traditional lint, except it uses information in
+                 specifications to do more powerful checks. Some typical
+                 problems detected by LCLint include violations of
+                 abstraction barriers and modifications of
+                 caller-visible state that are inconsistent with the
+                 specification. Experience using LCLint to check a
+                 specified program and to understand and maintain a
+                 program with no specifications illustrate some
+                 applications of LCLint and suggest future directions
+                 for using specifications to check source code.",
+}
+
+@TechReport{MIT-LCS//MIT/LCS/TR-619,
+  author =       "Yang Meng Tan",
+  title =        "Formal Specification Techniques for Promoting Software
+                 Modularity, Enhancing Documentation, and Testing
+                 Specifications",
+  institution =  "Massachusetts Institute of Technology, Laboratory for
+                 Computer Science",
+  number =       "MIT-LCS//MIT/LCS/TR-619",
+  month =        jun,
+  year =         1994,
+  abstract =     "This thesis presents three ideas. First, it presents a
+                 novel use of formal specification to promote a
+                 programming style based on specified interfaces and
+                 data abstraction in a programming language that lacks
+                 such supports. Second it illustrates the uses of claims
+                 about specifications. Third, it describes a software
+                 reengineering process for making existing software
+                 easier to maintain and reuse. The process centers
+                 around specifying existing software modules and using
+                 the specifications to drive the code improvement
+                 process. The Larch/C Interface Language, or LCL, is a
+                 formal specification language for documenting ANSI C
+                 software modules. Although C does not support abstract
+                 types, LCL is designed to support abstract types. A
+                 lint-like program, LCLint, enforces type discipline in
+                 clients of LCL abstract types. LCL is structured in a
+                 way that enables LCLint to extract information from an
+                 LCL specification for performing some consistency
+                 checks between the specification and its
+                 implementation. LCL also provides facilities to state
+                 claims, or redundant, problem-specific assertions about
+                 a specification. Claims enhance the role of
+                 specifications as a software documentation tool. Claims
+                 can be used to highlight important or unusual
+                 properties, promote design coherence of software
+                 modules, and aid in program reasoning. In addition,
+                 claims about a specification can be used to test the
+                 specification by proving that they follow semantically
+                 from the specification. A semantics of LCL suitable for
+                 reasoning about claims is given. A software
+                 reengineering process developed around LCL and claims
+                 is effective for improving existing programs. The
+                 impact of the process applied to an existing C program
+                 is described. The process improved the modularity and
+                 robustness of the program with changing its essential
+                 functionality or performance. A major product of the
+                 process is the specifications of the main modules of
+                 the reengineered program. A proof checker was used to
+                 verify some claims about the specifications; and in the
+                 process, several specifications mistakes were found.
+                 The specifications are also used to illustrate
+                 specification writing techniques and heuristics",
+}
+
+@InProceedings{Tofte:1994:ITC,
+  author =       "Mads Tofte and Jean-Pierre Talpin",
+  title =        "Implementation of the typed call-by-value $lambda$-calculus
+		  using a stack of regions",
+  booktitle =    POPL94,
+  address =      popl94addr,
+  ISBN =         "0-89791-636-0",
+  pages =        "188--201",
+  year =         1994,
+  abstract =     "Presents a translation scheme for the polymorphically
+                 typed call-by-value lambda -calculus. All runtime
+                 values, including function closures, are put into
+                 regions. The store consists of a stack of regions.
+                 Region inference and effect inference are used to infer
+                 where regions can be allocated and de-allocated.
+                 Recursive functions are handled using a limited form of
+                 polymorphic recursion. The translation is proved
+                 correct with respect to a store semantics, which models
+                 a region-based run-time system. Experimental results
+                 suggest that regions tend to be small, that region
+                 allocation is frequent and that overall memory demands
+                 are usually modest, even without garbage collection.
+                 (31 Refs.)",
+  affiliation =  "Dept. of Comput. Sci., Copenhagen Univ., Denmark",
+  classification = "C4210 (Formal logic); C4210L (Formal languages and
+                 computational linguistics); C6120 (File organisation);
+                 C6150C (Compilers, interpreters and other processors)",
+  keywords =     "Allocation; Effect inference; Function closures;
+                 Lambda calculus; Memory demand; Memory management;
+                 Polymorphic recursion; Polymorphically typed; Process
+                 algebra; Recursive functions; Region inference; Runtime
+                 value; Stack of regions; Storage; Store semantics;
+                 Translation scheme; Typed call-by-value lambda
+                 -calculus",
+  thesaurus =    "Inference mechanisms; Lambda calculus; Program
+                 interpreters; Recursive functions; Storage management",
+}
+
+
+@InProceedings{AikenAandF1995a,
+  author =       "Alex Aiken and Manuel F{\"a}hndrich and Raph Levien",
+  title =        "Better Static Memory Management: Improving
+                 Region-Based Analysis of Higher-Order Languages",
+  year =         "1995",
+  abstracturl =  "http://http.cs.berkeley.edu/~aiken/pubs.html",
+  booktitle =    PLDI95,
+  address =      pldi95addr,
+  url =          "http://http.cs.berkeley.edu/~aiken/ftp/region.ps",
+  month =        jun,
+}
+
+
+
+
+@Article{Schnorf93,
+  author =       "P. Schnorf and M. Ganapathi and J. L. Hennessy",
+  title =        "Compile-Time Copy Elimination",
+  journal =      j-SPE,
+  volume =       23,
+  number =       11,
+  pages =        "1175--1200",
+  year =         1993,
+  keywords =     "functional parallel",
+  abstract =     "Single-assignment and functional languages have value
+                 semantics that do not permit side-effects. This lack of
+                 side-effects makes automatic detection of parallelism
+                 and optimization for data locality in programs much
+                 easier. However, the same property poses a challenge in
+                 implementing these languages efficiently. The authors
+                 describe an optimizing compiler system that solves the
+                 key problem of aggregate copy elimination. The methods
+                 developed rely exclusively on compile-time algorithms,
+                 including interprocedural analysis, that are applied to
+                 an intermediate data flow representation. By dividing
+                 the problem into update-in-place and build-in-place
+                 analysis, a small set of relatively simple
+                 techniques-edge substitution, graph pattern matching,
+                 substructure sharing and substructure targeting-was
+                 found to be very powerful. If combined properly and
+                 implemented carefully, the algorithms eliminate
+                 unnecessary copy operations to a very high degree. No
+                 run-time overhead is imposed on the compiled
+                 programs.",
+}
+
+
+
+
+
+@InCollection{Hudak:aiodl:1987,
+  author =       "Paul Hudak",
+  title =        "A semantic model of reference counting and its
+                 abstraction",
+  editor =       "Samson Abramsky and Chris Hankin",
+  booktitle =    "Abstract Interpretation of Declarative Languages",
+  publisher =    "Ellis Horwood",
+  year =         1987,
+  pages =        "45--62",
+  chapter =      3
+}
+
+
+
+@InProceedings{KhurshidS2005,
+  author = 	 "Sarfraz Khurshid and Yuk Lai Suen",
+  title = 	 "Generalizing symbolic execution to library classes",
+  booktitle =	 PASTE2005,
+  pages = 	 "103--110",
+  year =	 2005,
+  address =	 PASTE2005addr,
+  month =	 PASTE2005date
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Dynamic
+%%%
+
+@InProceedings{sosp93*203,
+  author =       "Robert Wahbe and Steven Lucco and Thomas E. Anderson
+                 and Susan L. Graham",
+  title =        "Efficient Software-Based Fault Isolation",
+  pages =        "203--216",
+  ISBN =         "0-89791-632-8",
+  booktitle =    "Proceedings of the 14th Symposium on Operating Systems
+                 Principles",
+  month =        dec,
+  address =      "New York, NY, USA",
+  year =         1993,
+}
+
+
+@InProceedings{Hastings:1992:PAT,
+  author =       "Reed Hastings and Bob Joyce",
+  title =        "{Purify}: A Tool for Detecting Memory Leaks and
+                 Access Errors in {C} and {C++} Programs",
+  booktitle =    USENIX92Winter,
+  address =      USENIX92Winteraddr,
+  pages =        "125--138",
+  month =        USENIX92Winterdate,
+  year =         1992,
+  affiliation =  "Pure Software Inc.",
+}
+
+
+@InProceedings{XuDS2004,
+  author = 	 "Wei Xu and Daniel C. DuVarney and R. Sekar",
+  title = 	 "An efficient and backwards-compatible transformation to
+                  ensure memory safety of {C} programs",
+  booktitle =	 FSE2004,
+  pages = 	 "117--126",
+  year = 	 2004,
+  address =	 FSE2004addr,
+  month =	 FSE2004date
+}
+
+
+
+
+
+@Misc{KolawaH,
+  author =	 "Adam Kolawa and Arthur Hicken",
+  title =	 "Insure++:  A Tool To Support Total Quality Software",
+  howpublished = "ParaSoft Corporation white paper",
+  note =	 "http://www.parasoft.com/insure/papers/tech.htm"
+}
+
+@TechReport{feuer85,
+  author = 	 "Alan R. Feuer",
+  title = 	 "Introduction to the {S}afe {C} Runtime Analyzer",
+  institution =  "Catalytix Corporation",
+  year = 	 1985,
+  month =	 jan
+}
+
+@Manual{ThirdDegreeMan,
+  title = 	 "Third Degree User Manual",
+  organization = "Digital Equipment Corporation",
+  year =	 1994,
+  month =	 may # "~24,"
+}
+
+
+
+@Manual{DigitalUnixThirdDegree,
+  title = 	 "Digital Unix Programmer's Guide",
+  note = 	 "Chapter 7, ``Debugging Programs with Third Degree''",
+  year = 	 1996,
+  month =	 mar,
+  organization = 	 "{Digital Equipment Corporation}"
+}
+
+
+@InProceedings{AustinBS94,
+  author =       "Todd M. Austin and Scott E. Breach and Gurindar S.
+                 Sohi",
+  title =        "Efficient Detection of all Pointer and Array Access
+                 Errors",
+  booktitle =    PLDI94,
+  address =      pldi94addr,
+  month =        jun,
+  year =         1994,
+  pages =        "290--301",
+}
+
+
+@Misc{Austin97,
+  author =	 "Todd M. Austin",
+  title =	 "Compile-time check optimization for {Safe-C}",
+  howpublished = "Personal communication",
+  year =	 1997,
+  month =	 oct # "~6,"
+}
+
+
+
+
+@TechReport{ncstrl.uwmadison//CS-TR-93-1197,
+  number =       "CS-TR-93-1197",
+  institution =  "University of Wisconsin, Madison",
+  title =        "Efficient Detection of All Pointer and Array Access
+                 Errors",
+  year =         1993,
+  month =        dec,
+  author =       "Todd M. Austin and Scott E. Breach and Gurindar S.
+                 Sohi",
+  abstract =     "In this paper, we present a pointer and array access
+                 checking technique that provides complete error
+                 coverage through a simple set of program
+                 transformations. Our technique, based on an extended
+                 safe pointer representation, has a number of novel
+                 aspects. Foremost, it is the first technique that
+                 detects all spatial and temporal access errors. Its use
+                 is not limited by the expressiveness of the language;
+                 that is, it can be applied successfully to compiled or
+                 interpreted languages with subscripted and mutable
+                 pointers, local references, and explicit and typeless
+                 dynamic storage management, e.g., C. Because it is a
+                 source level transformation, it is amenable to both
+                 compile- and run-time optimization. Finally, its
+                 performance, even without compile-time optimization, is
+                 quite good. We implemented a prototype translator for
+                 the C language and analyzed the checking overheads of
+                 six non-trivial, pointer intensive programs. Execution
+                 overheads range from 130\% to 540\%; with text and data
+                 size overheads typically below 100\%.",
+}
+
+
+@Misc{heapagent_comparison97,
+  author =	 "{MicroQuill Software Publishing, Inc.}",
+  title =	 "Comparing and contrasting the 
+                  runtime error detection 
+                  technologies used in 
+                  {H}eap{A}gent 3.0, 
+                  {P}urify {NT} 4.0, and 
+                  {B}ounds{C}hecker {P}ro 4.0",
+  howpublished = "White paper",
+  year =	 1997,
+  note =	 "http://www.heapagent.com/prod\_ha/ha\_comp.htm"
+}
+
+
+@InProceedings{Wahbe:1993:PDB,
+  author =       "R. Wahbe and S. Lucco and S. L. Graham",
+  title =        "Practical data breakpoints: design and
+                 implementation",
+  booktitle =    PLDI93,
+  address =      PLDI93addr,
+  ISBN =         "0-89791-598-4",
+  ISSN =         "0362-1340",
+  pages =        "1--12",
+  month =        PLDI93date,
+  year =         1993,
+  coden =        "SINODQ",
+  ISSN =         "0362-1340",
+  abstract =     "A data breakpoint associates debugging actions with
+                 programmer-specified conditions on the memory state of
+                 an executing program. The authors present the design
+                 and implementation of a practical data breakpoint
+                 facility. A data breakpoint facility must monitor all
+                 memory updates performed by the program being debugged.
+                 The authors implemented and evaluated two complementary
+                 techniques for reducing the overhead of monitoring
+                 memory updates. First, they checked write instructions
+                 by inserting checking code directly into the program
+                 being debugged. The checks use a segmented bitmap data
+                 structure that minimizes address lookup complexity.
+                 Second, they developed data flow algorithms that
+                 eliminate checks on some classes of write instructions
+                 but may increase the complexity of the remaining
+                 checks. They evaluated these techniques on the SPARC
+                 using the SPEC benchmarks. (19 Refs.)",
+  affiliation =  "Div. of Comput. Sci., California Univ., Berkeley, CA,
+                 USA",
+  classification = "C4240 (Programming and algorithm theory); C6110
+                 (Systems analysis and programming); C6120 (File
+                 organisation); C6150G (Diagnostic, testing, debugging
+                 and evaluating systems)",
+  confdate =     "23-25 June 1993",
+  conflocation = "Albuquerque, NM, USA",
+  confsponsor =  "ACM",
+  keywords =     "Address lookup complexity; Checking code;
+                 Complementary techniques; Complexity; Data flow
+                 algorithms; Debugging actions; Executing program;
+                 Memory state; Memory updates; Practical data breakpoint
+                 facility; Programmer-specified conditions; Segmented
+                 bitmap data structure; SPARC; SPEC benchmarks; Write
+                 instructions",
+  thesaurus =    "Computational complexity; Data structures; Program
+                 debugging; Storage management; System monitoring",
+}
+
+
+@Article{Steffen92,
+  key =          "Steffen",
+  author =       "J. L. Steffen",
+  title =        "Adding Run-time Checking to the {P}ortable {C}
+                 {C}ompiler",
+  journal =      j-SPE,
+  pages =        "305--316",
+  volume =       22,
+  number =       4,
+  month =        apr,
+  year =         1992,
+}
+
+
+@InProceedings{Kaufer:1988:SIP,
+  author =       "Stephen Kaufer and Russell Lopez and Sesha Pratap",
+  title =        "{Saber-C} --- An Interpreter-based Programming
+                 Environment for the {C} Language",
+  booktitle =    "{USENIX} Conference Proceedings",
+  address =      "San Francisco, CA",
+  month =        "Summer",
+  year =         1988,
+  pages =        "161--171",
+  affiliation =  "Saber Software, Inc.",
+}
+
+@InProceedings{Kendall:1983:BRC,
+  author =       "Samuel C. Kendall",
+  title =        "{Bcc}: Runtime Checking for {C} Programs",
+  booktitle =    "Proceedings: {USENIX} Association [and] Software Tools
+                 Users Group Summer Conference",
+  address =      "Toronto, Ontario, Canada",
+  pages =        "5--16",
+  month =        jul,
+  year =         1983,
+  affiliation =  "Delft Consulting Corporation",
+}
+
+
+@Article{FischerL1980,
+  title =        "The Implementation of Run-Time Diagnostics in
+                 {Pascal}",
+  author =       "Charles N. Fischer and Richard J. LeBlanc",
+  journal =      "IEEE Transactions on Software Engineering",
+  pages =        "313--319",
+  month =        jul,
+  year =         "1980",
+  volume =       "6",
+  number =       "4",
+}
+
+
+@InProceedings{usenix_su88*223,
+  author =       "Benjamin G. Zorn and Paul N. Hilfinger",
+  title =        "A Memory Allocation Profiler for {C} and Lisp
+                 Programs",
+  pages =        "223--238",
+  booktitle =    SumUSENIX,
+  month =        jun,
+  publisher =    "USENIX Association",
+  address =      "San Francisco, CA, USA",
+  year =         1988,
+}
+
+@Misc{Geodesic,
+  author =	 "{Geodesic Systems}",
+  title =	 "Automatic Memory Management in C/C++ with Garbage Collection",
+  howpublished = "White paper"
+}
+
+@Article{BW:GCIUE,
+  author =       "Hans-Juergen Boehm and Mark Weiser",
+  title =        "Garbage Collection in an Uncooperative Environment",
+  journal =      j-SPE,
+  volume =       18,
+  number =       9,
+  month =        sep,
+  year =         1988,
+  pages =        "807--820",
+  abstract =     "We describe a technique for storage allocation and
+                 garbage collection in the absence of significant
+                 co-operation from the code using the allocator. This
+                 limits garbage collection overhead to the time actually
+                 required for garbage collection. In particular,
+                 application programs that rarely or never make use of
+                 the collector no longer encounter a substantial
+                 performance penalty. This approach greatly simplifies
+                 the implementation of languages supporting garbage
+                 collection. It further allows conventional compilers to
+                 be used with a garbage collector, either as the primary
+                 means of storage reclamation, or as a debugging tool.
+                 Our approach has two potential disadvantages. First,
+                 some garbage may fail to be reclaimed. Secondly, we use
+                 a 'stop and collect' approach, thus making the strategy
+                 unsuitable for applications with severe real-time
+                 constraints. We argue that the first problem is, to
+                 some extent, inherent in any garbage collection system.
+                 Furthermore, based on our experience, it is usually not
+                 significant in practice. In spite of the second
+                 problem, we have had favourable experiences with
+                 interactive applications, including some that use a
+                 heap of several megabytes.",
+  keywords =     "garbage collection, storage management, debugging",
+}
+
+
+
+
+@Article{PatilF97,
+  author = 	 "Harish Patil and Charles Fischer",
+  title = 	 "Low-cost, concurrent checking of pointer and array
+                  accesses in {C} programs",
+  journal = 	 SPE,
+  year = 	 1997,
+  volume =	 27,
+  number =	 1,
+  pages =	 "87--110",
+  month =	 jan
+}
+
+
+@InProceedings{NeculaMW2002,
+  author = 	 "George C. Necula and Scott McPeak and Westley Weimer",
+  title = 	 "{CCured}: Type-safe retrofitting of legacy code",
+  booktitle =	 POPL2002,
+  pages =	 "128--139",
+  year =	 2002,
+  address =	 POPL2002addr,
+  month =	 POPL2002date
+}
+
+@InProceedings{ConditHMNW2003,
+  author = 	 {Jeremy Condit and Mathew Harren and Scott McPeak
+                  and George C. Necula and Westley Weimer},
+  title = 	 {{CCured} in the Real World},
+  booktitle = 	 PLDI2003,
+  year =	 2003,
+  address =	 PLDI2003addr,
+  pages =        "232--244",
+  month =	 PLDI2003date,
+}
+
+@InProceedings{NethercoteS2003,
+    author      = {Nicholas Nethercote and Julian Seward},
+    title       = {Valgrind: A Program Supervision Framework},
+    booktitle   = RV2003,
+    year        = 2003,
+    month       = RV2003date,
+    address     = RV2003addr,
+}
+
+@InProceedings{NethercoteS2007,
+    author      = {Nicholas Nethercote and Julian Seward},
+    title       = {Valgrind: A Framework for Heavyweight Dynamic Binary Insrumentation},
+    pages       = "89-100",
+    booktitle   = PLDI2007,
+    year        = 2007,
+    month       = PLDI2007date,
+    address     = PLDI2007addr,
+}
+
+@InProceedings{SewardN2005,
+  author =       {Julian Seward and Nicholas Nethercote},
+  title =        {Using {Valgrind} to Detect Undefined Value Errors with Bit-Precision},
+  pages =        "17--30",
+  booktitle =    USENIX2005,
+  month =        USENIX2005date,
+  year =         2005,
+  address =      USENIX2005addr
+}
+
+% Apparently no page numbers, since the proceedings were only
+% published electronically (in ENTCS 89)
+@InProceedings{NethercoteM2003,
+    author      = {Nicholas Nethercote and Alan Mycroft},
+    title       = {Redux: A Dynamic Dataflow Tracer},
+    booktitle   = RV2003,
+    year        = 2003,
+    month       = RV2003date,
+    address     = RV2003addr,
+    summary     = {Description of Redux.  Lots of examples, particularly fac(5)
+                   essence comparisons in C, stack machine interpreter, and
+                   Haskell. Also demonstrates program slicing, and discusses
+                   other possible uses of Redux.}
+}
+
+
+@InProceedings{ArthoB,
+  author = 	 "C. Artho and A. Biere",
+  title = 	 "Combined static and dynamic analysis",
+  booktitle =	 "1st International Workshop on
+                  Abstract Interpretation of Object-Oriented Languages",
+  NEEDpages = 	 "",
+  year =	 2005,
+  address =	 "Paris, France",
+  month =	 jan # "~21,",
+  abstract =
+   "Static analysis is usually faster than dynamic analysis but less
+    precise. Therefore it is often desirable to retain information from
+    static analysis for run-time verification, or to compare the results of
+    both techniques. However, this requires writing two [analysis]
+    programs, which may not act identically under the same conditions. It
+    would be desirable to share the same generic algorithm by static and
+    dynamic analysis. In JNuke, a framework for static and dynamic analysis
+    of Java programs, this has been achieved. By keeping the architecture
+    of static analysis similar to a virtual machine, the only key
+    difference between abstract interpretation and execution remains the
+    nature of program states. In dynamic analysis, concrete states are
+    available, while in static analysis, sets of (abstract) states are
+    considered. Our new analysis is generic because it can re-use the same
+    algorithm in static analysis and dynamic analysis. This paper describes
+    the architecture of such a generic analysis. To our knowledge, JNuke is
+    the first tool that has achieved this integration, which enables static
+    and dynamic analysis to interact in novel ways.",
+}
+
+@InProceedings{SullivanBBGA2003,
+  author = 	 {Gregory T. Sullivan and Derek L. Bruening and Iris
+                  Baron and Timothy Garnett and Saman Amarasinghe},
+  title = 	 {Dynamic Native Optimization of Interpreters},
+  booktitle = 	 IVME2003,
+  pages =	 "50--57",
+  year =	 2003,
+  address =	 IVME2003addr,
+  month =	 IVME2003date
+}
+
+
+@InProceedings{DhurjatiA06,
+  author = 	 "Dinakar Dhurjati and Vikram Adve",
+  title = 	 "Backwards-compatible array bounds checking for {C} with very low overhead",
+  booktitle = ICSE2006,
+  year = 	 2006,
+  address = 	 ICSE2006addr,
+  month = 	 ICSE2006date,
+  abstract =
+   "The problem of enforcing correct usage of array and pointer references
+    in C and C++ programs remains unsolved. The approach proposed by Jones
+    and Kelly (extended by Ruwase and Lam) is the only one we know of that
+    does not require significant manual changes to programs, but it has
+    extremely high overheads of 5x-6x and 11x-12x in the two versions. In
+    this paper, we describe a collection of techniques that dramatically
+    reduce the overhead of this approach, by exploiting a fine-grain
+    partitioning of memory called Automatic Pool Allocation. Together,
+    these techniques bring the average overhead checks down to only 12% for
+    a set of benchmarks (but 69\% for one case). We show that the memory
+    partitioning is key to bringing down this overhead. We also show that
+    our technique successfully detects all buffer overrun violations in a
+    test suite modeling reported violations in some important real-world
+    programs."
+}
+
+@InProceedings{BondM2007,
+  author = 	 {Michael D. Bond and Kathryn S. McKinley},
+  title = 	 {Probabilistic Calling Context},
+  booktitle = 	 OOPSLA2007,
+  year =	 2007,
+  address =	 OOPSLA2007addr,
+  month =	 OOPSLA2007date,
+  pages =        "97--112"
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Prefetching
+%%%
+
+
+
+@InProceedings{ASPLOS::LukM1996,
+  title =        "Compiler-Based Prefetching for Recursive Data
+                 Structures",
+  author =       "Chi-Keung Luk and Todd C. Mowry",
+  booktitle =    ASPLOS96,
+  month =        oct # "~1--5,",
+  year =         1996,
+  address =      "Cambridge, Massachusetts",
+  pages =        "222--233",
+}
+
+
+@Article{mowry-jpdc,
+  title =        "Tolerating latency through software-controlled
+                 prefetching in shared-memory multiprocessors",
+  author =       "Todd Mowry and Anoop Gupta",
+  journal =      "Journal of Parallel and Distributed Computing",
+  volume =       12,
+  number =       2,
+  year =         1991,
+  month =        jun,
+  pages =        "87--106",
+  annote =       "\bn This article uses a DASH-like
+                 simulator (MIPS, primary write-through, secondary
+                 write-back) to study nonbinding prefetching (read and
+                 read-exclusive). It uses MP3D, LU, and PTHOR as
+                 benchmarks. An analytical model is derived but not used
+                 much. Various manual prefetching is inserted with good
+                 results (about 100\% speedup) except for PTHOR.
+                 Architectural variations are also studied: cache size,
+                 memory consistency model, separate prefetch buffer,
+                 lockup-free caches, primary-cache prefetching, and read
+                 vs. read-exclusive prefetching. They find prefetching
+                 into a primary lockup-free cache is the most helpful.
+                 Compiler work is underway. \en",
+}
+
+@TechReport{STAN//CSL-TR-94-628,
+  number =       "CSL-TR-94-628",
+  title =        "Tolerating Latency Through Software-Controlled Data
+                 Prefetching",
+  year =         "1994",
+  month =        jun,
+  institution =  "Stanford University, Computer Systems Laboratory",
+  author =       "Todd C. Mowry",
+  abstract =     "The large latency of memory accesses in modern
+                 computer systems is a key obstacle to achieving high
+                 processor utilization. Furthermore, the technology
+                 trends indicate that this gap between processor and
+                 memory speeds is likely to increase in the future.
+                 While increased latency affects all computer systems,
+                 the problem is magnified in large-scale shared-memory
+                 multiprocessors, where physical dimensions cause
+                 latency to be an inherent problem. To cope with the
+                 memory latency problem, the basic solution that nearly
+                 all computer systems rely on is their cache hierarchy.
+                 While caches are useful, they are not a panacea.
+                 Software-controlled prefetching is a technique for
+                 tolerating memory latency by explicitly executing
+                 prefetch instructions to move data close to the
+                 processor before it is actually needed. This technique
+                 is attractive because it can hide both read and write
+                 latency within a single thread of execution while
+                 requiring relatively little hardware support.
+                 Software-controlled prefetching, however, presents two
+                 major challenges. First, some sophistication is
+                 required on the part of either the programmer, runtime
+                 system, or (preferably) the compiler to insert
+                 prefetches into the code. Second, care must be taken
+                 that the overheads of prefetching, which include
+                 additional instructions and increased memory queueing
+                 delays, do not outweigh the benefits. This dissertation
+                 proposes and evaluates a new compiler algorithm for
+                 inserting prefetches into code. The proposed algorithm
+                 attempts to minimize overheads by only issuing
+                 prefetches for references that are predicted to suffer
+                 cache misses. The algorithm can prefetch both
+                 dense-matrix and sparse-matrix codes, thus covering a
+                 large fraction of scientific applications. It also
+                 works for both uniprocessor and large-scale
+                 shared-memory multiprocessor architectures. We have
+                 implemented our algorithm in the SUIF (Stanford
+                 University Intermediate Form) optimizing compiler. The
+                 results of our detailed architectural simulations
+                 demonstrate that the speed of some applications can be
+                 improved by as much as a factor of two, both on
+                 uniprocessor and multiprocessor systems. This
+                 dissertation also compares software-controlled
+                 prefetching with other latency-hiding techniques (e.g.,
+                 locality optimizations, relaxed consistency models, and
+                 multithreading), and investigates the architectural
+                 support necessary to make prefetching effective.",
+  notes =        "[Adminitrivia V1/Prg/19950109]",
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Hardware
+%%%
+
+@TechReport{SteffanM97,
+  author = 	 "J. Gregory Steffan and Todd C. Mowry",
+  title = 	 "The potential for thread-level data speculation in
+		  tightly-coupled multiprocessors",
+  institution =  "Department of Electrical and Computer Engineering,
+                  University of Toronto",
+  year = 	 1997,
+  number =	 "SCRI-TR-350",
+  address =	 "Toronto, Canada",
+  month =	 feb
+}
+
+@TechReport{STAN//CSL-TR-97-715,
+  number =       "CSL-TR-97-715",
+  year = 	 1997,
+  month = 	 mar,
+  title =        "Software and Hardware for Exploiting Speculative
+                 Parallelism with a Multiprocessor",
+  institution =  "Stanford University, Computer Systems Laboratory",
+  author =       "Jeffrey Oplinger and David Heine and Shih-Wei Liao and
+                 Basem A. Nayfeh and Monica S. Lam and Kunle Olukotun",
+  abstract =     "Thread-level speculation (TLS) makes it possible to
+                 parallelize general purpose C programs. This paper
+                 proposes software and hardware mechanisms that support
+                 speculative thread- level execution on a single-chip
+                 multiprocessor. A detailed analysis of programs using
+                 the TLS execution model shows a bound on the
+                 performance of a TLS machine that is promising. In
+                 particular, TLS makes it feasible to find speculative
+                 do across parallelism in outer loops that can greatly
+                 improve the performance of general-purpose
+                 applications. Exploiting speculative thread-level
+                 parallelism on a multiprocessor requires the compiler
+                 to determine where to speculate, and to generate SPMD
+                 (single program multiple data) code.We have developed a
+                 fully automatic compiler system that uses profile
+                 information to determine the best loops to execute
+                 speculatively, and to generate the synchronization code
+                 that improves the performance of speculative execution.
+                 The hardware mechanisms required to support speculation
+                 are simple extensions to the cache hierarchy of a
+                 single chip multiprocessor. We show that with our
+                 proposed mechanisms, thread-level speculation provides
+                 significant performance benefits.",
+  notes =        "[Adminitrivia V1/Prg/19970930]",
+}
+
+
+
+@InProceedings{GallagherEtAl94,
+  author =       "David M. Gallagher and William Y. Chen and Scott A.
+                 Mahlke and John C. Gyllenhaal and {Wen-mei} W. Hwu",
+  title =        "Dynamic Memory Disambiguation Using
+		  the Memory Conflict Buffer",
+  booktitle =    ASPLOS94,
+  address =      "San Jose, California",
+  month =        oct # " 4--7,",
+  year =         1994,
+  pages =        "183--193",
+}
+
+
+@InProceedings{DietzC88,
+  author = 	 "Henry G. Dietz and C. H. Chi",
+  title = 	 "{CRegs}: A New Kind of Memory for Referencing Arrays and Pointers",
+  booktitle = 	 "Proceedings of Supercomputing 1988",
+  year =	 1988,
+  address =	 "Orlando, Florida",
+  month =	 nov,
+  pages =	 "360--367"
+}
+
+
+@InProceedings{HeggyS90,
+  author = 	 "Ben Heggy and Mary Lou Soffa",
+  title = 	 "Architectural support for register allocation in the
+		  presence of aliasing",
+  booktitle = 	 "Proceedings of Supercomputing '90",
+  year =	 1990,
+  month =	 nov,
+  pages =	 "730--739"
+}
+
+
+@InProceedings{Chen:1992:TDA,
+  author =       "William Y. Chen and Scott A. Mahlke and {Wen-mei} W. Hwu
+		  and Tokuzo Kiyohara and Pohua P. Chang",
+  title =        "Tolerating Data Access Latency with Register Preloading",
+  booktitle =    "6th International Conference on Supercomputing",
+  address =      "Washington, DC",
+  year =         1992,
+  month =	 jul # "~19--23,",
+  ISBN =         "0-89791-485-6",
+  pages =        "104--113",
+}
+
+
+@TechReport{ncstrl.uwmadison//CS-TR-96-1316,
+  number =       "CS-TR-96-1316",
+  institution =  "University of Wisconsin, Madison",
+  title =        "A Dynamic Approach to Improve the Accuracy of Data
+                 Speculation",
+  year =         1996,
+  month =        mar,
+  author =       "Andreas I. Moshovos and Scott E. Breach and T. N.
+                 Vijaykumar and Gurindar S. Sohi",
+  abstract =     "Dynamic techniques to improve the accuracy of data
+                 speculation. Data speculation is used in
+                 instruction-level parallel (ILP) processors to allow
+                 the early execution of an instruction before a
+                 logically preceding instruction on which it may be data
+                 dependent. If no dependency exists, data speculation
+                 succeeds; if not, it fails, and the two instructions
+                 must be synchronized. To date much of the attention is
+                 on techniques to ensure correct execution while
+                 carrying data speculation. The issue of improving the
+                 accuracy of data speculation - especially dynamic
+                 techniques to do so - has not received attention.
+                 However, as we demonstrate, the need for accurate data
+                 speculation becomes more acute as ILP processors
+                 sustain ever increasing instruction windows. In this
+                 paper we consider dynamic techniques to improve the
+                 accuracy with which data speculation of memory values
+                 is carried out. We present dynamic techniques: (i) to
+                 predict if the execution of an instruction is likely to
+                 result in a data misspeculation, and (ii) to provide
+                 the synchronization needed to avoid a misspeculation.
+                 Experimental results evaluating the effectiveness of
+                 the proposed techniques are presented within the
+                 context of a Multiscalar processor.",
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Misc
+%%%
+
+
+
+
+
+
+
+@InProceedings{LenceviciusHS97,
+  author = 	 "Raimondas Lencevicius and Urs H{\"o}lzle and Ambuj K. Singh",
+  title = 	 "Query-based debugging of object-oriented programs",
+  booktitle = 	 oopsla97,
+  address = 	 oopsla97addr,
+  pages =        "304--317",
+  year =	 1997,
+  month =	 oopsla97date
+}
+
+
+@TechReport{PRINCETONCS//TR-399-92,
+  number =       "TR-399-92",
+  title =        "{DUEL} --- A Very High-Level Debugging Language",
+  year =         1992,
+  month =        nov,
+  institution =  "Princeton University, Computer Science Department",
+  author =       "Michael Golan and David R. Hanson",
+  abstract =     "Most source-level debuggers accept expressions in the
+                 source language, e.g., C, and can print source-language
+                 values. This approach is usually justified on grounds
+                 that programmers need to know only one language. But
+                 the evaluation of source-language expressions or even
+                 statements is poorly suited for making non-trivial
+                 queries about the program state, e.g., ``which elements
+                 of array \verb|x[100]| are positive?'' {\rm Duel}
+                 departs from the conventional wisdom: It is a very
+                 high-level language designed specifically for
+                 source-level debugging of C programs. {\rm Duel}
+                 expressions are a superset of C's and include
+                 ``generators,'' which are expressions that can produce
+                 zero or more values and are inspired by Icon, APL, and
+                 LISP. For example, \verb|x[..100] >? 0| displays the
+                 positive elements of {\tt x} and their indices. {\rm
+                 Duel} is implemented on top of {\tt gdb} and adds one
+                 new command to evaluate {\rm Duel} expressions and
+                 display their results. This paper describes {\rm
+                 Duel}'s semantics and syntax, gives examples of its
+                 use, and outlines its implementation. {\rm Duel} is
+                 freely available and could be interfaced to other
+                 debuggers. <dl> <dt> This technical paper has been
+                 published as <dd> DUEL - A Very High-Level Debugging
+                 Language. Michael Golan and David R. Hanson, <i>Proc.
+                 of the the Winter USENIX Technical Conference</i>, San
+                 Diego, Jan. 1993, pp. 107-117. </dl>",
+  language =     "English",
+  supersededby = "Golan:1993:DAV",
+}
+
+@InProceedings{Golan:1993:DAV,
+  author =       "Michael Golan and David R. Hanson",
+  title =        "{DUEL} --- A Very High-Level Debugging Language",
+  booktitle =    USENIX93Winter,
+  address =      USENIX93Winteraddr,
+  ISBN =         "1-880446-48-0",
+  pages =        "107--117",
+  month =        USENIX93Winterdate,
+  year =         1993,
+  affiliation =  "Princeton University",
+}
+
+
+@TechReport{UCB//CSD-89-502,
+  number =       "CSD-89-502",
+  institution =  "University of California, Berkeley",
+  title =        "Restructuring Symbolic Programs for Concurrent
+                 Execution on Multiprocessors",
+  year =         "1989",
+  author =       "James Richard Larus",
+  abstract =     "CURARE, the program restructurer described in this
+                 dissertation, automatically transforms a sequential
+                 Lisp program into an equivalent concurrent program that
+                 executes on a multiprocessor. CURARE first analyzes a
+                 program to find its control and data dependences. This
+                 analysis is most difficult for references to structures
+                 connected by pointers. CURARE uses a new
+                 data-dependence algorithm, which finds and classifies
+                 these dependencies. The analysis is conservative and
+                 may detect conflicts that do not arise in practice. A
+                 programmer can temper and refine its results with
+                 declarations. Dependences constrain the program's
+                 concurrent execution because, in general, two
+                 conflicting statements cannot execute in a different
+                 order without affecting the program's result. A
+                 restructurer must know all dependences in order to
+                 preserve them. However, not all dependences are
+                 essential to produce the program's result. CURARE
+                 attempts to transform the program so it computes its
+                 result with fewer conflicts. An optimized program will
+                 execute with less synchronization and more concurrency.
+                 CURARE then examines loops in a program to find those
+                 that are unconstrained or lightly constrained by
+                 dependences. By necessity, CURARE treats recursive
+                 functions as loops and does not limit itself to
+                 explicit program loops. Recursive functions offer
+                 Several advantages over explicit loops since they
+                 provide a convenient framework for inserting locks and
+                 handling the dynamic behavior of symbolic programs.
+                 Loops that are suitable for concurrent execution are
+                 changed to execute on a set of concurrent server
+                 processes. These servers execute single loop iterations
+                 and therefore need to be extremely inexpensive to
+                 invoke. Restructured programs execute significantly
+                 faster than the original sequential programs. This
+                 improvement is large enough to attract programmers to a
+                 multiprocessor, particularly since it requires little
+                 effort on their part. Although restructured programs
+                 may not make optimal use of a multiprocessor's
+                 parallelism, they make good use of a programmer's
+                 time.",
+}
+
+
+
+@Article{Jeffery:1994:FEM,
+  author =       "Clinton L. Jeffery and Ralph E. Griswold",
+  title =        "A Framework for Execution Monitoring in {Icon}",
+  journal =      j-SPE,
+  volume =       24,
+  number =       11,
+  pages =        "1025--1049",
+  month =        nov,
+  year =         1994,
+  coden =        "SPEXBL",
+  ISSN =         "0038-0644",
+}
+
+
+
+% LocalWords: prefetch Nicolau RR timesteps InProceedings SuEtAl Su
+% LocalWords: Bogong Habib Zhao Jian Youfeng booktitle addr nov dec
+% LocalWords: fixup RTD HuangSlaShe Gert Slavenburg Shen ISCA apr ILP
+% LocalWords: Utpal Banerjee supercomputing Kluwer ISBN LCCN pldi Chau
+% LocalWords: Tseng Dror Maydan Hennessy feb coden IJPPE ISSN Univ Int
+% LocalWords: affiliationaddress corpsource Comput Syst journalabr aug
+% LocalWords: Larus Larus's llpp CACMA url

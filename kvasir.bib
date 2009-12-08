@@ -1,0 +1,146 @@
+% Ad hoc references from a submitted paper about our Valgrind-based C
+% front end Kvasir. The fact they were used in this paper isn't a good
+% categorization scheme, and the names mostly don't match our usual 
+% conventions, so consider the contents of this file deprecated and move
+% entries to other files when they're used in other papers.
+
+@InProceedings{Valgrind03,
+    author      = {Nicholas Nethercote and Julian Seward},
+    title       = {Valgrind: A Program Supervision Framework},
+    booktitle   = RV2003,
+    year        = 2003,
+    month       = RV2003date,
+    address     = RV2003addr,
+}
+
+
+@InProceedings{Memcheck05,
+  author = 	 {Julian Seward and Nicholas Nethercote},
+  title = 	 {Using {Valgrind} to Detect Undefined Value Errors with Bit-Precision},
+  booktitle = 	 "USENIX 2005 Technical Conference",
+  pages = 	 "17--30",
+  month =	 apr,
+  year =	 2005,
+  address =	 {Anaheim, CA}
+}
+
+@InProceedings{ccured:real,
+  author =       {Jeremy Condit and Mathew Harren and Scott McPeak
+                  and George C. Necula and Westley Weimer},
+  title =        {{CCured} in the Real World},
+  booktitle =    PLDI2003,
+  year =         2003,
+  address =      PLDI2003addr,
+  month =        jun
+}
+
+% Technically, this is a "Final Year Individual Project" for the
+% degree of "MEng Computing"
+@MastersThesis{Logrind,
+  author = 	 {Christopher January},
+  title = 	 {Logrind 2 --- A program trace framework},
+  school = 	 {Imperial College London},
+  year = 	 2004,
+  month =	 jun
+}
+
+@InProceedings{AskIgor05,
+  author = 	 {Holger Cleve and Andreas Zeller},
+  title = 	 {Locating Causes of Program Failures},
+  booktitle = 	 ICSE2005,
+  year =	 2005,
+  address =	 ICSE2005addr,
+  month =	 may
+}
+
+@PhdThesis{ROC-Thesis,
+  author = 	 {Robert O'Callahan},
+  title = 	 {Generalized Aliasing as a Basis for Program Analysis Tools},
+  school = 	 {Carnegie Mellon University},
+  year = 	 2000,
+  address =	 {Pittsburgh, PA},
+  month =	 nov
+}
+
+@Misc{DWARF-www,
+  author =	 {{Free Standards Group}},
+  title =	 {The {DWARF} Debugging Standard},
+  howpublished = {\url{http://dwarf.freestandards.org/}}
+}
+
+@Misc{Binutils-www,
+  author =	 {{Free Software Foundation}},
+  title =	 {{GNU} Binary Utilities},
+  howpublished = {\url{http://www.gnu.org/software/binutils/}}
+}
+
+@article{Satterthwaite72,
+  author    = {Edwin H. Satterthwaite},
+  title     = {Debugging Tools for High Level Languages},
+  journal   = SPE,
+  volume    = {2},
+  number    = {3},
+  year      = {1972},
+  pages     = {197-217}
+}
+
+% These next few are from http://www.cs.utexas.edu/users/njn/pubs/pubs.bib
+
+@InProceedings{Net:redux2003,
+    author      = {Nicholas Nethercote and Alan Mycroft},
+    title       = {Redux: A Dynamic Dataflow Tracer},
+    booktitle   = RV2003,
+    year        = 2003,
+    month       = RV2003date,
+    address     = RV2003addr,
+    summary     = {Description of Redux.  Lots of examples, particularly fac(5)
+                   essence comparisons in C, stack machine interpreter, and
+                   Haskell. Also demonstrates program slicing, and discusses
+                   other possible uses of Redux.}
+}
+
+@InProceedings{Net:bounds-checking2004,
+    author      = {Nicholas Nethercote and Jeremy Fitzhardinge},
+    title       = {Bounds-Checking Entire Programs without Recompiling},
+    booktitle   = SPACE2004,
+    year        = 2004,
+    month       = SPACE2004date,
+    address     = SPACE2004addr,
+    summary     = {Detailed description of Annelid.}
+}
+
+@Misc{Sew:valgrind,
+    author      = {Julian Seward and Nicholas Nethercote and Jeremy
+                   Fitzhardinge and others},
+    title       = {Valgrind},
+    howpublished= {\url{http://valgrind.org/}},
+}
+
+@PhDThesis{Net:PhD2004,
+    author      = {Nicholas Nethercote},
+    title       = {Dynamic Binary Analysis and Instrumentation},
+    school      = {Computer Laboratory, University of Cambridge},
+    address     = {United Kingdom},
+    month       = sep,
+    year        = 2004,
+}
+
+@TechReport{Net:PhD2004:TR,
+  author = 	 {Nicholas Nethercote},
+  title = 	 {Dynamic Binary Analysis and Instrumentation},
+  institution =  {Computer Laboratory, University of Cambridge},
+  year = 	 2004,
+  key =		 {UCAM-CL-TR-606},
+  number =	 606,
+  month =	 nov,
+  note =         "Revision of Ph.D. thesis",
+}
+
+@Book{GDB,
+  author =	 "Richard M. Stallman and Roland Pesch and Stan Shebs",
+  title = 	 "Debugging with GDB:  The GNU Source-Level Debugger",
+  publisher = 	 "Free Software Foundation",
+  year = 	 2002,
+  OPTaddress = 	 "",
+  edition =	 "9th"
+}

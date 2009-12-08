@@ -1,0 +1,681 @@
+% ioa.bib
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% IOA
+%%%
+
+@Book{Lynch96,
+  author =       "Nancy Lynch",
+  title =        "Distributed Algorithms",
+  publisher =    "Morgan Kaufmann",
+  address =      "San Francisco, CA",
+  year =         1996,
+  keywords =     "book, text, asynchronous/synchronous network models,
+                 ring, consensus, failures, Byzantine, shared memory,
+                 mutex (mutual exclusion), resource allocation, atomic
+                 objects, logical time, partial synchrony,",
+}
+
+@Book{IB-B931394,
+  author =       "Nancy A. Lynch and Michael Merritt and William E. Weihl
+		  and Alan Fekete and Ronald R. Yager",
+  title =        "Atomic Transactions",
+  publisher =    "Morgan Kaufmann",
+  address =      "San Mateo",
+  year =         "1994",
+  ISBN =         "1-55860-104-X",
+}
+
+
+
+
+@InCollection{GarlandL2000,
+  author = 	 "Stephen J. Garland and Nancy A. Lynch",
+  title = 	 "Using {I/O} Automata for Developing Distributed Systems",
+  booktitle = 	 "Foundations of Component-Based Systems",
+  OPTcrossref =  "",
+  OPTkey = 	 "",
+  pages = 	 "285--312",
+  publisher = "Cambridge University Press",
+  year = 	 2000,
+  editor = 	 "Gary T. Leavens and Murali Sitaraman",
+  OPTvolume = 	 "",
+  OPTnumber = 	 "",
+  OPTseries = 	 "",
+  OPTtype = 	 "",
+  OPTchapter = 	 "",
+  OPTaddress = 	 "",
+  OPTedition = 	 "",
+  OPTmonth = 	 "",
+  OPTnote = 	 "",
+  OPTannote = 	 "",
+  abstract =     "This paper describes a new language for distributed
+		  programming, IOA, and high-level designs for a set of
+		  tools to support IOA programming.  Both the language and
+		  the tools are based formally on the mathematical I/O
+		  automaton model for reactive systems. The language
+		  supports structured modeling of distributed systems using
+		  shared-action composition and levels of abstraction. The
+		  tools are intended to support design, several kinds of
+		  analysis, and generation of efficient runnable code."
+}
+
+
+@TechReport{GarlandLV97,
+  author = 	 "Stephen J. Garland and Nancy A. Lynch and Mandana Vaziri",
+  title = 	 "{IOA}: A language for specifying, programming, and validating distributed systems",
+  institution =  "MIT Laboratory for Computer Science",
+  year = 	 "1997",
+  OPTkey = 	 "",
+  OPTtype = 	 "",
+  OPTnumber = 	 "",
+  OPTaddress = 	 "",
+  OPTmonth = 	 "",
+  OPTannote = 	 ""
+}
+
+
+
+@Article{LynTut89,
+  author =       "Nancy A. Lynch and Mark R. Tuttle",
+  title =        "An Introduction to {I}nput/{O}utput automata",
+  pages =        "219--246",
+  year =         "1989",
+  added-at =     "Tue Oct 24 12:53:41 2000",
+  abstract =     "The input/output automaton model is a tool for
+                 modeling components in asynchronous concurrent systems.
+                 Since its introduction, the model has been used for
+                 describing and reasoning about many different types of
+                 systems, including network resource allocation
+                 algorithms, communication algorithms, concurrent
+                 database systems, shared atomic objects, and dataflow
+                 architectures. This paper is intended to introduce
+                 researchers to the model. It contains an overview of
+                 its definitions, several illustrative examples
+                 involving candy vending machines and leader election,
+                 and a brief survey of some of the uses that have so far
+                 been made of the model.",
+  annote =       "tutorial summary of I/O automaton~\cite{LynTut87}.",
+  month =        sep,
+  volume =       "2",
+  number =       "3",
+  added-by =     "sti",
+  journal =      "CWI-Quarterly",
+}
+
+
+@InProceedings{LynTut87,
+  author =       "Nancy A. Lynch and Mark R. Tuttle",
+  title =        "Hierarchical correctness proofs for distributed
+                 algorithms",
+  pages =        "137--151",
+  added-at =     "Tue Oct 24 12:48:32 2000",
+  annote =       "Introduces I/O Automaton. A long version appeared as
+                 Master of Science Thesis, Dept. of Electrical
+                 Engineering and Computer Science, Massachusetts
+                 Institute of Technology, April 1987 and as Technical
+                 Report MIT/LCS/TR-387, Laboratory for Computer Science,
+                 Massachusetts Institute of Technology. For tutorial
+                 summary see \cite{LynTut89}. See also
+                 \cite{GarLyn2000}.",
+  url =          "http://theory.csail.mit.edu/tds/papers/Lynch/PODC87.ps.gz",
+  booktitle =    PODC87,
+  year =         "1987",
+  month =        aug,
+  address =      "Vancouver, BC, Canada",
+  added-by =     "sti",
+}
+
+
+@InProceedings{Sogaard93,
+  author =       "J{\o}rgen~F. S{\o}gaard-Anderson and Stephen~J.
+                 Garland and John~V. Guttag and Nancy~A. Lynch and Anna
+                 Pogosyants",
+  title =        "Computer-Assisted Simulation Proofs",
+  booktitle =    "Fifth Conference on Computer-Aided Verification",
+  address =      "Heraklion, Crete",
+  month =        jun,
+  year =         "1993",
+  editor =       "Costas Courcoubetis",
+  publisher =    "Springer-Verlag Lecture Notes in Computer
+                 Science~697",
+  pages =        "305--319",
+}
+
+@TechReport{Garland91,
+  author =       "Stephen J. Garland and John V. Guttag",
+  title =        "A Guide to {LP}, The {L}arch {P}rover",
+  titleforsearches = "A Guide to LP, the Larch Prover",
+  institution =  "Digital Equipment Corporation, Systems Research
+                 Center",
+  number =       "82",
+  pages =        "112 pages",
+  month =        "31 " # dec,
+  year =         "1991",
+  abstract =     "This guide provides an introduction to LP (the Larch
+                 Prover), Release 2.2. It describes how LP can be used
+                 to axiomatize theories in a subset of multisorted
+                 first-order logic and to provide assistance in proving
+                 theorems. It also contains a tutorial overview of the
+                 equational term-rewriting technology that provides,
+                 along with induction rules and other user-supplied
+                 nonequational rules of inference, part of LP's
+                 inference engine.",
+}
+
+@InProceedings{GarlandG88,
+  author = 	 "Stephen J. Garland and John V. Guttag",
+  title =        "{LP}, The {L}arch {P}rover",
+  titleforsearches = "LP, the Larch Prover",
+  booktitle =	 "CADE: 9th International Conference on Automated Deduction",
+  pages =	 "748-749",
+  year =	 1988,
+  address =	 "Argonne, Illinois, USA",
+  month =	 may # "~23--26,",
+  supersededby = "GarlandG89",
+}
+
+
+@InProceedings{GarlandG89,
+  author = 	 "Stephen J. Garland and John V. Guttag",
+  title = 	 "An overview of {LP}, the {L}arch {P}rover",
+  titleforsearches = "An overview of LP, the Larch Prover",
+  booktitle =	 RTA89,
+  pages =	 "137--151",
+  year =	 1989,
+  address =	 RTA89addr,
+  month =	 RTA89date
+}
+
+
+@InProceedings{KirliCDGLNWRR2002,
+  author = 	 "Dilsun {K{\i}rl{\i} Kaynar} and Anna Chefter and Laura Dean
+                  and Stephen J. Garland and Nancy A. Lynch and Toh {Ne
+                  Win} and Antonio Ramirez-Robredo",
+  authorASCII =  "Dilsun Kirli",
+  title = 	 "Simulating nondeterministic systems at multiple levels of
+                  abstraction",
+  booktitle =	 "CONCUR 2002 Tools Day",
+  year =	 2002,
+  address =	 "Brno, Czech Republic",
+  month =	 aug # "~24,",
+  abstract =
+   "IOA is a high-level distributed programming language based on the
+    formal I/O automaton model for asynchronous concurrent systems. A suite
+    of software tools, called the IOA toolkit, has been designed and
+    partially implemented to facilitate the analysis and verification of
+    distributed systems using techniques supported by the formal model. An
+    important proof technique for distributed systems defined by a
+    hierarchy of abstractions involves the notion of a simulation relation
+    between pairs of automata at different levels in the hierarchy. The IOA
+    toolkit's simulator tests purported simulation relations by executing
+    the low-level automaton and, given a proposed correspondence between
+    its steps and those of the higher-level automaton, generating and
+    checking an execution of the higher-level automaton. Once checked by
+    the simulator, the simulation relation and the step correspondence can
+    be used in conjunction with the toolkit's proof tools to construct a
+    formal proof that the low-level automaton implements the higher-level
+    one. This paper presents a case study that illustrates this use of the
+    IOA toolkit to prove correct an algorithm for mutual exclusion. The
+    case study shows how tools like the IOA simulator can play an important
+    role in proving distributed systems correct."
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Example IOA programs
+%%%
+
+@MastersThesis{Ramirez2000,
+  author = 	 "J. Antonio Ram\'{\i}rez-Robredo",
+  title = 	 "Paired Simulation of {I}/{O} Automata",
+  school = 	 mit,
+  year = 	 2000,
+  type =	 "Master of Engineering",
+  address =	 mitaddr,
+  month =	 sep
+}
+
+
+@MastersThesis{DeanThesis,
+  author = 	 "Laura G. Dean",
+  title = 	 "Improved Simulation of {I}/{O} Automata",
+  school = 	 mit,
+  year = 	 2000,
+  month =	 sep,
+  type =	 "Master of Engineering Thesis",
+  address =	 mitaddr,
+  howpublished = "\url{theory.csail.mit.edu/~lgdean/Thesis/thesis.dvi}"
+}
+
+@MastersThesis{BogdanovThesis,
+  author = 	 "Andrej Bogdanov",
+  title = 	 "Formal Verification of Simulations between {I}/{O} Automata",
+  school = 	 mit,
+  year = 	 2000,
+  month =	 sep,
+  type =	 "Master of Engineering Thesis",
+  address =	 mitaddr,
+  howpublished = "\url{theory.csail.mit.edu/tds/papers/Bogdanov/thesis.pdf}"
+}
+
+
+@Misc{GarlandLeader,
+  OPTkey = 	 "",
+  author = 	 "Stephen Garland",
+  title = 	 "{I}/{O} automata description of leader election algorithm",
+  howpublished = "\url{http://larch-www.csail.mit.edu:8001/~garland/leader.html}",
+  OPTmonth = 	 "",
+  OPTyear = 	 "",
+  OPTnote = 	 "",
+  OPTannote = 	 ""
+}
+
+@Misc{LuhrsIOAPrograms,
+  OPTkey = 	 "",
+  author = 	 "Chris Luhrs",
+  title = 	 "{IOA} programs",
+  howpublished = "\url{http://www.mit.edu/people/cluhrs/index.html}",
+  OPTmonth = 	 "",
+  OPTyear = 	 "",
+  OPTnote = 	 "",
+  OPTannote = 	 ""
+}
+
+
+@Misc{TsaiADTs,
+  OPTkey = 	 "",
+  author = 	 "Michael Tsai",
+  title = 	 "{ADT}s for {IOA} Code Generation",
+  howpublished = "\url{theory.csail.mit.edu/tds/papers/Tsai}",
+  year = 	 2001,
+  month =        aug,
+  OPTnote = 	 "",
+  OPTannote = 	 ""
+}
+
+@Misc{NeWinSantosBanking,
+  OPTkey = 	 "",
+  author = 	 "Toh {Ne Win} and Gustavo Santos",
+  title = 	 "A Test for the {IOA}-{D}aikon Connection: Banking Examples in {IOA}",
+  howpublished = "\url{theory.csail.mit.edu/tds/papers/Tohn}",
+  year = 	 2001,
+  month =        sep,
+  OPTnote = 	 "",
+  OPTannote = 	 ""
+}
+
+@Misc{NeWinSantosIOADaikon,
+  OPTkey = 	 "",
+  author = 	 "Toh {Ne Win} and Gustavo Santos",
+  title = 	 "The {IOA}-{D}aikon Connection: Enabling Dynamic Invariant Discovery in {IOA} Programs",
+  howpublished = "\url{theory.csail.mit.edu/tds/papers/Tohn}",
+  year = 	 2001,
+  month =        sep,
+  OPTnote = 	 "",
+  OPTannote = 	 ""
+}
+
+@Misc{ImmorlicaNeWin6_897,
+  OPTkey = 	 "",
+  author = 	 "Nicole Immorlica and Toh {Ne Win}",
+  title = 	 "Verifying {L}amport's {P}axos protocol using computer-assisted methods",
+  OPThowpublished = "\url{theory.csail.mit.edu/classes/6.897/papers}",
+  year = 	 2002,
+  month =        may # "~24,",
+  OPTnote = 	 "",
+  OPTannote = 	 ""
+}
+
+
+
+@InProceedings{KeikarK2000,
+  author = 	 "Idit Keidar and Roger Khazan",
+  title = 	 "A Client-Server Approach to Virtually Synchronous Group
+		  Multicast: Specifications and Algorithms",
+  booktitle = 	 "IEEE 20th International Conference on Distributed
+		  Computing Systems (ICDCS)",
+  pages =	 "344--355",
+  year =	 2000,
+  address =	 "Taipei, Taiwan",
+  month =	 apr
+}
+
+
+
+@InProceedings{KeidarKLS2000,
+  author = 	 "Idit Keidar and Roger Khazan and Nancy Lynch and Alex
+		  Shvartsman",
+  title = 	 "An Inheritance-Based Technique for Building Simulation
+		  Proofs\ Incrementally",
+  booktitle = 	 icse2000,
+  pages =	 "478--487",
+  year =	 2000,
+  address =	 icse2000addr,
+  month =	 icse2000date
+}
+
+
+%%%
+%%% Ways to refine axioms or proof goals to make failing proofs succeed
+%%%
+
+
+
+
+@InProceedings{lncs310*111,
+  author =       "Alan Bundy",
+  title =        "The Use of Explicit Plans to Guide Inductive Proofs",
+  pages =        "111--120",
+  ISBN =         "3-540-19343-X",
+  editor =       "E. Lusk; R. Overbeek",
+  booktitle =    "Proceedings on the 9th International Conference on
+                 Automated Deduction",
+  month =        may,
+  series =       "LNCS",
+  volume =       "310",
+  publisher =    "Springer",
+  pubaddress =      "Berlin",
+  year =         "1988",
+}
+
+
+@Article{JAR::KraanBB1996,
+  title =        "Middle-Out Reasoning for Synthesis and Induction",
+  author =       "Ina Kraan and David A. Basin and Alan Bundy",
+  journal =      "Journal of Automated Reasoning",
+  pages =        "113--145",
+  month =        mar,
+  year =         "1996",
+  volume =       "16",
+  number =       "1--2",
+}
+
+
+
+@InProceedings{cade96*298,
+  author =       "William M. Farmer and Joshua D. Guttman and F. Javier
+                 Thayer F{\'a}brega",
+  title =        "{IMPS}: an updated system description",
+  pages =        "298--302",
+  ISBN =         "3-540-61511-3",
+  editor =       "M. A. McRobbie and J. K. Slaney",
+  booktitle =    "Proceedings of the Thirteenth International Conference
+                 on Automated Deduction ({CADE}-96)",
+  month =        jul # "~30--" # aug # "~3",
+  series =       "LNAI",
+  volume =       "1104",
+  publisher =    "Springer",
+  address =      "Berlin",
+  year =         "1996",
+}
+
+
+
+
+
+%%%
+%%% Other
+%%%
+
+
+@Article{Lamport:94:TLA,
+  author =       "L. Lamport",
+  title =        "The Temporal Logic of Actions",
+  journal =      "{ACM} Transactions on Programming Languages and
+                 Systems",
+  year =         "1994",
+  month =        may,
+  volume =       "16",
+  number =       "3",
+  pages =        "872--923",
+  url =          "ftp://ftp.digital.com/pub/DEC/SRC/research-reports/SRC-079.pdf",
+  abstracturl  = "http://gatekeeper.dec.com/pub/DEC/SRC/research-reports/abstracts/src-rr-079.html",
+}
+
+@InProceedings{Lamport99,
+  author =       "L. Lamport",
+  booktitle =    "Calculational System Design",
+  year =         "1999",
+  editors =      "M. Broy and R. Steinbr{\"u}ggen",
+  title =        "Specifying Concurrent Systems with {TLA+}",
+  publisher =    "IOS Press",
+  address =      "Amsterdam",
+}
+
+
+
+
+@Misc{LynchShvartsman02,
+  OPTkey = 	 "",
+  author =       "Nancy Lynch and Alex Shvartsman",
+  title =        "Paxos Made Even Simpler (and Formal)",
+  howpublished = "In preparation",
+  year = 	 2002,
+  OPTmonth =        apr,
+  OPTnote = 	 "",
+  OPTannote = 	 ""
+}
+
+
+@Article{LynchVaandrager95,
+  author = 	 "Nancy A. Lynch and Frits W. Vaandrager",
+  title = 	 "Forward and Backward Simulations -- Part {I}: Untimed Systems",
+  journal = 	 "Information and Computation",
+  year = 	 1995,
+  volume =	 121,
+  number =	 2,
+  pages =	 "214--233",
+  month =        sep
+}
+
+@Article{LynchVaandrager96,
+  author = 	 "Nancy A. Lynch and Frits W. Vaandrager",
+  title = 	 "Forward and Backward Simulations, {II}: Timing-Based Systems",
+  journal = 	 "Information and Computation",
+  year = 	 1996,
+  volume =	 128,
+  number =	 1,
+  pages =	 "1--25"
+}
+
+
+
+@Article{AlpernSchneider87,
+  author =       "Bowen Alpern and Frederick Schneider",
+  title =        "Recognizing Safety and Liveness",
+  pages =        "117--126",
+  year =         "1987",
+  url =          "",
+  journal =      "Distributed Computing",
+}
+
+
+
+@Article{LamportPaxos98,
+  author =       "Leslie Lamport",
+  title =        "The Part-Time Parliament",
+  pages =        "133--169",
+  volume = 	 16,
+  number = 	 2,
+  year =         1998,
+  url =          "http://research.microsoft.com/users/lamport/pubs/pubs.html#lamport-paxos",
+  journal =      "ACM Transactions on Computer Systems",
+  month =        May,
+}
+
+
+
+@Article{Peterson81,
+  author =       "Gary L. Peterson",
+  title =        "Myths about the mutual exclusion problem",
+  pages =        "115--116",
+  journal =      "Information Processing Letters",
+  volume = 	 12,
+  number = 	 3,
+  year =         1981,
+  month =        Jun,
+}
+
+
+@Book{Sipser97,
+  author =       "Michael Sipser",
+  title =        "Introduction to the Theory of Computation",
+  publisher =    "Brooks/Cole Publishing",
+  address =      "",
+  year =         1997,
+}
+
+
+
+@InProceedings{PnueliRZ01,
+  author = 	 "Amir Pnueli and Sitvanit Ruah and Lenore Zuck",
+  title = 	 "Automatic Deductive Verification with Invisible Invariants",
+  booktitle =    TACAS2001,
+  pages = 	 "82--97",
+  year = 	 2001,
+  volume = 	 2031,
+  series = 	 lncs,
+  address = 	 TACAS2001addr,
+  month = 	 TACAS2001date,
+  abstract =
+   "The paper presents a method for the automatic verification of a certain
+    class of parameterized systems. These are {\em bounded-data} systems
+    consisting of N processes (N being the parameter), where each process
+    is finite-state. First, we show that if we use the standard deductive
+    {\sc inv} rule for proving invariance properties, then all the
+    generated verification conditions can be automatically resolved by
+    finite-state ({\sc bdd}-based) methods with no need for interactive
+    theorem proving.
+    \par
+    Next, we show how to use model-checking techniques over finite (and small)
+    instances of the parameterized system in order to derive candidates for
+    invariant assertions. Combining this automatic computation of invariants
+    with the previously mentioned resolution of the VCs (verification
+    conditions) yields a (necessarily) incomplete but fully automatic sound
+    method for verifying bounded-data parameterized systems. The generated
+    invariants can be transferred to the VC-validation phase without ever been
+    examined by the user, which explains why we refer to them as ``invisible''.
+    \par
+    We illustrate the method on a non-trivial example of a cache
+    protocol, provided by Steve German.",
+}
+
+
+@InProceedings{AronsPRXZ01,
+  author = 	 "T. Arons and A. Pnueli and S. Ruah and J. Xu and L. Zuck",
+  title = 	 "Parameterized verification with automatically computed inductive assertions",
+  booktitle =	 CAV2001,
+  pages =	 "221--234",
+  year =	 2001,
+  volume =	 2102,
+  address =	 CAV2001addr,
+  month =	 CAV2001date
+}
+
+
+
+
+@InProceedings{Wessel2001,
+  author =       "Michael Wessel",
+  title =        "Obstacles on the Way to Qualitative Spatial Reasoning with Description Logics: Some Undecidability Results",
+  added-at =     "Sat May 25 2002",
+  url =          "http://kogs-www.informatik.uni-hamburg.de/~mwessel/publications.html",
+  booktitle =    "International Workshop on Description Logics (DL2001)",
+  month =        aug # "~1--3,",
+  year =         "2001",
+  address =      "Palo Alto, CA",
+  added-by =     "tohn",
+  abstract =
+   "We summarize the results we obtained on the extensions of ALC with
+    composition-based role inclusion axioms of the form R o S -> T1 \/ T2
+    \/ ... \/ Tn. A set of these role axioms is called a role box. The
+    original motivation for this work was to develop a description logic
+    suitable for qualitative spatial reasoning problems. We quickly define
+    and discuss the DLs ALCRA, ALCRAMINUS, ALCRASG and ALCNRASG. All but
+    ALCRASG are shown to be undecidable, and ALCRASG is of limited
+    utility, even though it is still as expressive as ALCRPLUS. ALCRASG
+    has shown to be EXPTIME-complete, due to associativity of role boxes,
+    which is an important requirement.",
+}
+
+
+@PhdThesis{Mueller98,
+  author = 	 "Olaf M{\"u}ller",
+  title = 	 "A Verification Environment for {I/O} Automata Based on
+                  Formalized Meta-Theory",
+  school = 	 "Technische Universit{\"a}t M{\"u}nchen",
+  year = 	 1998,
+  address =	 "Munich, Germany",
+}
+
+@Misc{Luhrs2002:Translating,
+  author =	 "Chris Luhrs",
+  title =	 "Translating from {IOA} to {Isabelle}",
+  month =	 aug,
+  year =	 2002,
+  abstract =
+   "The goal of this document is to describe an algorithmic translation
+    from IOA to Isabelle in sufficient detail that it can be used to
+    produce an automated tool."
+}
+
+
+@InProceedings{DePriscoLL97,
+  author = 	 "De Prisco, Roberto and Butler W. Lampson and Nancy A. Lynch",
+  title = 	 "Revisiting the {Paxos} algorithm",
+  booktitle =	 WDAG97,
+  pages =	 "111--125",
+  year =	 1997,
+  address =	 WDAG97addr,
+  month =	 WDAG97date
+}
+
+
+@Manual{DePriscoLSIN02,
+  title = 	 "A Formal Treatment of Lamport's Paxos Algorithm",
+  author =	 "De Prisco, Roberto and Nancy Lynch and Alex Shvartsman and Nicole Immorlica and Ne Win, Toh",
+  year =	 2002,
+  note =	 "In progress"
+}
+
+
+
+
+@InProceedings{NipkowS94,
+  author = 	 "Tobias Nipkow and Konrad Slind",
+  title = 	 "{I/O} Automata in {Isabelle/{HOL}}",
+  booktitle =	 "Proceedings of the International Workshop on Types for
+                  Proofs and Programs",
+  pages =	 "101--119",
+  year =	 1994,
+  OPTmonth = 	 "",
+  address =	 "B{\aa}stad, Sweden"
+}
+
+
+
+
+@InProceedings{BogdanovGL2002,
+  author = 	 "Andrej Bogdanov and Stephen J. Garland and Nancy A. Lynch",
+  title = 	 "Mechanical translation of {I/O} automaton specifications
+                  into first-order logic",
+  booktitle =	 FORTE2002,
+  OPTpages = 	 "",
+  year =	 2002,
+  address =	 FORTE2002addr,
+  month =	 FORTE2002date
+}
+
+@InProceedings{LGT98,
+  author = 	 "Lehman, Li-wei H. and Stephen J. Garland and David L. Tennenhouse",
+  title = 	 "Active reliable multicast",
+  booktitle =	 "Infocom '98",
+  pages =	 "581--589",
+  year =	 1998,
+  address =	 "San Francisco, CA",
+  month =	 mar # "~29--" # apr # "~2"
+}
+
+
+% LocalWords: ioa Kaufmann San mutex IB Weihl Fekete Yager Mateo ISBN

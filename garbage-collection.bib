@@ -1,0 +1,1173 @@
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% On-the-fly garbage collection (concurrent with mutator)
+%%%
+
+
+@Article{DijkstraLMSS78,
+  author = 	"Edsger W. Dijkstra and Leslie Lamport and A. J. Martin and
+		 C. S. Scholten and E. F. M. Steffens",
+  title = 	"On-the-Fly Garbage Collection:  An Exercise in Cooperation",
+  journal = 	CACM,
+  year = 	1978,
+  volume = 	21,
+  number = 	11,
+  pages = 	"966--975",
+  month = 	Nov
+}
+
+
+@TechReport{Detlefs90a,
+  author = 	"Detlefs, David L.",
+  title = 	"Concurrent garbage collection for C++",
+  institution = 	"Carnegie-Mellon Univ. Computer Science Dept.",
+  year = 	"1990",
+  number = 	"CMU-CS-90-119",
+  address = 	"Pittsburgh, Pennsylvania",
+  month = 	may
+}
+
+
+
+
+
+
+
+
+
+
+@TechReport{Detlefs90b,
+  author = 	"Detlefs, David L.",
+  title = 	"Concurrent, atomic garbage collection",
+  institution = 	"Carnegie-Mellon Univ. Computer Science Dept.",
+  year = 	"1990",
+  number = 	"CMU-CS-90-177",
+  address = 	"Pittsburgh, Pennsylvania",
+  month = 	Oct,
+  note = 	"PhD thesis"
+}
+
+
+@TechReport{Kolodner87,
+  author = 	"Kolodner, Elliot K.",
+  title = 	"Recovery using virtual memory",
+  institution = 	"MIT Lab. for Computer Science",
+  year = 	"1987",
+  number = 	"MIT-LCS-TR-404",
+  month = 	jul,
+  note = 	"S.M. thesis"
+}
+
+
+@InProceedings{Boehm93,
+  author = 	 "Hans-Juergen Boehm",
+  title = 	 "Space efficient conservative garbage collection",
+  pages =	 "197--206",
+  booktitle =	 PLDI93,
+  year =	 1993,
+  address =	 PLDI93addr,
+  month =	 PLDI93date
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Reference counting
+%%%
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Distributed garbage collection
+%%%
+
+
+@InProceedings{TelTL86,
+  author = 	"Gerard Tel and Richard B. Tan and Jan van Leeuwen",
+  title = 	"The derivation of on-the-fly garbage collection algorithms
+		 from distributed termination detection protocols",
+  booktitle = 	"STACS '87:  4th Annual Symposium on Theoretical Aspects of
+		 Computer Science",
+  year = 	"1987",
+  editor = 	"Brandenburg",
+  pages = 	"445--455",
+  publisher = 	"Springer-Verlag"
+}
+
+
+@InProceedings{Augusteijn,
+  author = 	"Lex Augusteijn",
+  title = 	"Garbage Collection in a Distributed Environment",
+  pages = 	"75--93",
+  booktitle	= "Proc PARLE Parallel Architectures and Languages
+			   Europe (Springer-Verlag LNCS 259)",
+  year		= 1987,
+  month		= jun,
+  address	= "Eindhoven, The Netherlands"
+}
+
+
+
+
+@InProceedings{KoikeT,
+  author = 	"Hanpei Koike and Hidehiko Tanaka",
+  title = 	"Generation scavenging {GC} on Distributed-Memory Parallel
+		 Computers",
+  booktitle = "ASTEM",
+  NEEDpages = 	 "",
+  year = 	 1989,
+  NEEDaddress = 	 "",
+  month = 	 nov,
+}
+
+
+@Article{Halstead85,
+  author = 	"Halstead, Jr., Robert H.",
+  title = 	"Multilisp:  A Language for Concurrent Symbolic Computation",
+  journal = 	toplas,
+  year = 	1985,
+  volume = 	7,
+  number = 	4,
+  pages = 	"501--538",
+  month = 	Oct
+}
+
+
+@techreport{AliH85,
+	author		= "    Ali, Khayri M.
+			   and Haridi, Seif",
+	title		= "Global Garbage Collection for Distributed
+			   Heap Storage Systems",
+	institution	= "IBM Thomas J. Watson Research Center",
+	address		= "PO Box 218, Yorktown Heights NY 10598",
+	year		= 1985,
+	month		= feb,
+	number		= "RC 11082 (\#49769)"
+}
+
+
+@inproceedings{Rudalics86,
+	author		= "Rudalics, Martin",
+	title		= "Distributed Copying Garbage Collection",
+	booktitle	= "Proc Lisp and Functional Programming Conf.",
+	pages		= "364--372",
+	year		= 1986,
+	month		= aug
+}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Fault-tolerant distributed garbage collection
+%%%
+
+@inproceedings{LiskovL86,
+	author		= "    Liskov, Barbara
+			   and Ladin, Rivka",
+	title		= "Highly-Available Distributed Services and 
+			   Fault-Tolerant Distributed Garbage Collection",
+	booktitle	= "Proc 5th Annual ACM Symp on Principles of
+			   Distributed Computing",
+	pages		= "29--39",
+	year		= 1986,
+	month		= aug,
+	address		= "Calgary, Alberta, Canada"
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Shared-memory garbage collection
+%%%
+
+
+
+@InProceedings{SharmaS91,
+  author = 	 "Ravi Sharma and Mary Lou Soffa",
+  title = 	 "Parallel generational garbage collection",
+  pages =	 "16--32",
+  booktitle =	 "Object-Oriented Programming Systems, Languages, and
+		  Applications '91",
+  organization = "ACM",
+  address =	 "Phoenix, Arizona",
+  year =         1991,
+  month =	 oct # "~6--11,"
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Finalization
+%%%
+
+@InProceedings{Boehm2003,
+  author = 	 "Hans-J. Boehm",
+  title = 	 "Destructors, Finalizers, and Synchronization",
+  booktitle =	 POPL2003,
+  pages =	 "262--272",
+  year =	 2003,
+  address =	 POPL2003addr,
+  month =	 POPL2003date
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Other bibliographies
+%%%
+
+@techreport{NS94102,
+  author = "Nandakumar Sankaran",
+  title = "A Bibliography on Garbage Collection",
+  institution = "Clemson University",
+  address = "$4^{th}$ Floor, R. C. Edwards Hall, Computer Science
+             Department, Clemson, SC 29631",
+  month = feb,
+  year = 1994,
+  type = "Technical Report",
+  number = "94-102",
+  note = "This paper references literature related to garbage
+		  collection in uniprocessor, parallel, distributed,
+		  real-time, object-oriented, functional and logic
+		  programming systems.",
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Local talent
+%%%
+
+
+
+
+
+
+@Unpublished{Vandevoorde88,
+  author = 	 "Mark T. Vandevoorde",
+  title = 	 "An Evaluation of Garbage Collection Algorithms for
+		  Multiprocessors",
+  note = 	 "Area Exam Paper",
+  year =	 1988,
+  month =	 Dec # "~7,"
+}
+
+@InProceedings{VG94,
+  author =       "Mark T. Vandevoorde and John V. Guttag",
+  title =        "Using specialized procedures and specification-based analysis
+                  to reduce the runtime costs of modularity",
+  booktitle =    FSE94,
+  pages =        "121--127",
+  year =         1994,
+  address =      FSE94addr,
+  month =        FSE94date,
+}
+
+@Unpublished{Hsieh91,
+  author = 	 "Wilson C. Hsieh",
+  title = 	 "Garbage Collection for Parallel and Distributed Systems",
+  note = 	 "Area Examination Paper",
+  year =	 1991,
+  month =	 Dec # "~5,"
+}
+
+
+@Unpublished{Keen92,
+  author = 	 "John S. Keen",
+  title = 	 "A Critical Survey of Some Concurrent Garbage Collection
+		  Algorithms",
+  note = 	 "Area examination report",
+  year =	 1992,
+  month =	 Jun # "~3,"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Grouping information to improve locality
+%%%
+
+
+
+
+
+
+
+
+@InProceedings{WLM91,
+  author = 	 "Paul R. Wilson and Michael S. Lam and Thomas G. Moher",
+  title = 	 "Effective ``Static-graph'' Reorganization to Improve
+		  Locality in Garbage-Collected Systems",
+  crossref =  "PLDI91",
+  pages = 	 "177--191"
+}
+
+@INPROCEEDINGS{WM89,
+  crossref =	"OOPSLA89",
+	AUTHOR = "Paul R. Wilson and Thomas G. Moher",
+	TITLE = "Design of the {Opportunistic Garbage Collector}",
+	PAGES = "23--35"
+}
+
+@TechReport{Shaw87,
+  author = 	 "Robert A. Shaw",
+  title = 	 "Improving Garbage Collector Performance in Virtual Memory",
+  institution =  "Stanford University",
+  year = 	 1987,
+  number = 	 "CSL-TR-87-323",
+  month = 	 mar
+}
+
+@PHDTHESIS{Shaw88,
+	AUTHOR = "Robert A. Shaw",
+	TITLE = "Empirical Analysis of a {LISP} System",
+	SCHOOL = "Stanford University",
+	MONTH = feb,
+	YEAR = 1988,
+	NOTE = "Available as Technical Report CSL-TR-88-351"
+}
+
+@InProceedings{Ungar84,
+  author = 	 "David Ungar",
+  title = 	 "Generation Scavenging:  A Non-disruptive High Performance
+		  Storage Reclamation Algorithm",
+  BookTitle={SIGSOFT/SIGPLAN Notices Practical Programming Environments Conference},
+  Organization={ACM},
+  pages =	 "157--167",
+  year =	 1984,
+  month =	 Apr
+}
+
+
+@INPROCEEDINGS{UngarJ88,
+  crossref =	"OOPSLA88",
+	AUTHOR = "David Ungar and Frank Jackson",
+	TITLE = "Tenuring Policies for Generation-Based Storage Reclamation",
+	PAGES = "1--17"
+}
+
+@Book{Ungar87,
+  author = 	"David Michael Ungar",
+  title = 	"The Design and Evaluation of a High Performance Smalltalk
+  		System",
+  publisher = 	"MIT Press",
+  year = 	1987,
+  series = 	"ACM Distinguished Dissertations",
+  address = 	"Cambridge, Massachusetts",
+  note = 	"Ph.D. Dissertation, University of California at Berkeley,
+  February 1986"
+}
+
+
+@InProceedings{Moon84,
+  author = 	 "David A. Moon",
+  title = 	 "Garbage collection in a large lisp system",
+  pages =	 "235--246",
+  booktitle =	 "Proceedings of the 1984 ACM Symposium on Lisp and
+		  Functional Programming",
+  year =	 1984,
+  month =	 Aug
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% I have it, but haven't read it.
+%%%
+
+
+
+
+
+
+@inproceedings{HudakK82,
+	author		= "    Hudak, Paul
+			   and Keller, Robert M.",
+	title		= "Garbage Collection and Task Deletion in
+			   Distributed Applicative Processing Systems",
+	booktitle	= "Proc ACM Symp on Lisp and Functional Programming",
+	pages		= "168--178",
+	year		= 1982,
+	month		= aug,
+	address		= "{Pittsburgh, Pennsylvania}"
+}
+
+@inproceedings{Halstead84,
+	author		= "Halstead, Jr., Robert H.",
+	title		= "Implementation of Multilisp:  Lisp on a
+			   Multiprocessor",
+	booktitle	= "Proc ACM Symp on Lisp and Functional Programming",
+	pages		= "9--17",
+	year		= 1984,
+	month		= Aug,
+	address		= "{Austin, Texas}"
+}
+
+@inproceedings{MillerE89,
+	author		= "    Miller, James S.
+			   and Epstein, Barbara S.",
+	title		= "Garbage Collection in MultiScheme (Preliminary Version)",
+	booktitle	= "Proc Parallel Lisp:  Languages and Systems 
+			   (Springer-Verlag LNCS 441)",
+	pages		= "138--160",
+	year		= 1989,
+	month		= Jun # "5--8,",
+	address		= "{Sendai, Japan}"
+}
+
+@inproceedings{Hughes85,
+	author		= "Hughes, John",
+	title		= "A Distributed Garbage Collection Algorithm",
+	booktitle	= "Proc Functional Programming Languages and 
+			   Computer Architecture (Springer-Verlag LNCS 201)",
+	editor		= "J. P. Jouannaud",
+	pages		= "256--272",
+	year		= 1985,
+	month		= sep,
+	address		= "{Nancy, France}"
+}
+
+
+@techreport{ManciniS88,
+	author		= "    Mancini, L. V.
+			   and Shrivastava, S. K.",
+	title		= "Fault-tolerant reference counting for garbage
+			   collection in distributed systems",
+	institution	= "{University of Newcastle upon Tyne}",
+	address		= "{Computing Laboratory, 
+			   University of Newcastle upon Tyne, England}",
+	year		= 1988,
+	month		= jun,
+	number		= "260"
+}
+
+@techreport{EllisLA88,
+	author		= "    Ellis, John R.
+			   and Li, Kai
+			   and Appel, Andrew W.",
+	title		= "Real-time Concurrent Collection 
+			   on Stock Multiprocessors",
+	institution	= "{DEC Systems Research Centre}",
+	address		= "{130 Lytton Ave., Palo Alto, California}",
+	year		= 1988,
+	month		= feb,
+	number		= 25
+}
+
+@mastersthesis{Venkatasubramanian92,
+	author		= "Venkatasubramanian, Nalini",
+	title		= "Hierarchical Garbage Collection in Scalable
+			   Distributed Systems",
+	school		= "University of Illinois at Urbana-Champaign",
+	year		= 1992
+}
+
+@TechReport{Vestal87,
+  author = 	 "Stephen C. Vestal",
+  title = 	 "Garbage collection: an exercise in
+                  distributed, fault-tolerant programming",
+  institution =  "University of Washington Department of Computer Science",
+  year = 	 1987,
+  number =	 "87-01-03",
+  month =	 Jan
+}
+
+
+
+@InProceedings{DiwanMH92,
+  author = 	 "Amer Diwan and Eliot Moss and Richard Hudson",
+  title = 	 "Compiler support for garbage collection in a statically
+		  typed language",
+  pages =	 "273--282",
+  booktitle =	 PLDI92,
+  year =	 1992,
+  address =      PLDI92addr,
+  month =	 PLDI92date
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% From John Keen
+%%%
+
+% Some of these may be duplicates of stuff that's above.
+% And beware the odd or misleading use of some fields, especially institution.
+
+@article{Baker78,
+	author		= "Baker, Jr., Henry G.",
+	title		= "List Processing in Real Time on a Serial Computer",
+	journal		= CACM,
+	volume		= 21,
+	number		= 4,
+	month		= Apr,
+	year		= 1978,
+	pages		= "280--294"
+}
+
+@inproceedings{NorthR87,
+	author		= "    North, S. C.
+			   and Reppy, J. H.",
+	title		= "Concurrent Garbage Collection on Stock Hardware",
+	booktitle	= "Proc Functional Programming Languages and 
+			   Computer Architecture (Springer-Verlag LNCS 274)",
+	pages		= "113--133",
+	year		= 1987,
+	month		= sep,
+	address		= "{Portland, Oregon}"
+}
+
+@inproceedings{Brooks84,
+	author		= "Brooks, Rodney A.",
+	title		= "Trading Data Space for Reduced Time and Code
+			   Space in Real-Time Garbage Collection on
+			   Stock Hardware",
+	booktitle	= "Proc ACM Symp on Lisp and Functional Programming",
+	pages		= "256--262",
+	year		= 1984,
+	month		= aug,
+	address		= "{Austin, Texas}"
+}
+
+
+
+
+@inproceedings{Ali85b,
+	author		= "Ali, Khayri A. M.",
+	title		= "Garbage Collection Schemes for Distributed
+			   Storage Systems",
+	booktitle	= "Proc Workshop on Implementation of 
+			   Functional Languages",
+	pages		= "422--428",
+	year		= 1985,
+	month		= feb
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+@article{Fenichel69,
+	author		= "    Fenichel, Robert R.
+			   and Yochelson, Jerome C.",
+	title		= "A LISP Garbage-Collector for Virtual-Memory
+			   Computer Systems",
+	journal		= CACM,
+	volume		= 12,
+	number		= 11,
+	month		= nov,
+	year		= 1969,
+	pages		= "611--612"
+}
+
+@article{Steele75,
+	author		= "{Steele Jr.}, Guy L.",
+	title		= "Multiprocessing Compactifying Garbage Collection",
+	journal		= CACM,
+	volume		= 18,
+	number		= 9,
+	month		= sep,
+	year		= 1975,
+	pages		= "495--508"
+}
+
+@article{Schorr67,
+	author		= "    Schorr, H.
+			   and Waite, W.M.",
+	title		= "An Efficient Machine-Independent Procedure for
+			   Garbage Collection in Various List Structures",
+	journal		= CACM,
+	volume		= 10,
+	number		= 8,
+	month		= aug,
+	year		= 1967,
+	pages		= "501--506"
+}
+
+@article{Lamport78,
+	author		= "Lamport, Leslie",
+	title		= "Time, Clocks, and the Ordering of Events in a
+			   Distributed System",
+	journal		= CACM,
+	volume		= 21,
+	number		= 7,
+	month		= jul,
+	year		= 1978,
+	pages		= "558--565"
+}
+
+@article{Lieberman83,
+	author		= "    Lieberman, Henry
+			   and Hewitt, Carl",
+	title		= "A Real-Time Garbage Collector Based on the
+			   Lifetimes of Objects",
+	journal		= CACM,
+	volume		= 26,
+	number		= 6,
+	month		= jun,
+	year		= 1983,
+	pages		= "419--429"
+}
+
+@inproceedings{Wise85,
+	author		= "Wise, David S.",
+	title		= "Design for a Multiprocessing Heap with On-board
+			   Reference Counting",
+	booktitle	= "Proc.\ Functional Programming Languages and 
+			   Computer Architecture (Springer-Verlag LNCS 201)",
+	pages		= "289--303",
+	year		= 1985,
+	month		= sep,
+	address		= "{Nancy, France}"
+}
+
+@inproceedings{Brownbridge85,
+	author		= "Brownbridge, D.R.",
+	title		= "Cyclic Reference Counting for Combinator Machines",
+	booktitle	= "Proc Functional Programming Languages and 
+			   Computer Architecture (Springer-Verlag LNCS 201)",
+	pages		= "273--288",
+	year		= 1985,
+	month		= sep,
+	address		= "{Nancy, France}"
+}
+
+@inproceedings{Chiueh91,
+	author		= "Chiueh, Tzi-cker",
+	title		= "An Architectural Technique for Cache-level Garbage
+			   Collection",
+	booktitle	= "Proc Functional Programming Languages and 
+			   Computer Architecture",
+	pages		= "520--537",
+	year		= 1991,
+	month		= aug,
+	address		= "{Cambridge, Massachusetts}"
+}
+
+@inproceedings{Zorn90,
+	author		= "Zorn, Benjamin",
+	title		= "Comparing Mark-and-sweep and Stop-and-copy
+			   Garbage Collection",
+	booktitle	= "Proc ACM Symp on Lisp and Functional Programming",
+	pages		= "87--98",
+	year		= 1990,
+	month		= jun,
+	address		= "{Nice, France}"
+}
+
+@inproceedings{Thacker87,
+	author		= "    Thacker, Charles P.
+			   and Stewart, Lawrence C.",
+	title		= "Firefly:  A Multiprocessor Workstation",
+	booktitle	= "Proc 2nd Int'l Conf on Architectural Support for
+			   Programming Langs and Operating Systems (ASPLOS II)",
+	pages		= "164--172",
+	year		= 1987,
+	month		= oct,
+	address		= "{Palo Alto, California}"
+}
+
+@inproceedings{Tel87,
+	author		= "    Tel, Gerard
+			   and Tan, Richard B.
+			   and {van Leeuwen}, Jan",
+	title		= "The Derivation of On-the-fly Garbage Collection
+			   Algorithms from Distributed Termination Detection
+			   Protocols",
+	booktitle	= "Proc 4th Annual Symp on Theoretical Aspects of
+			   Computer Science (Springer-Verlag LNCS 247)",
+	pages		= "445--455",
+	year		= 1987,
+	month		= feb,
+	address		= "{Passau, Federal Republic of Germany}"
+}
+
+@inproceedings{Tel91,
+	author		= "    Tel, Gerard
+			   and Mattern, Friedemann",
+	title		= "The Derivation of Distributed Termination Detection
+			   Algorithms from Garbage Collection Schemes",
+	booktitle	= "Proc PARLE '91 Parallel Architectures and Languages
+			   Europe",
+	pages		= "137--149",
+	year		= 1991,
+	month		= jun,
+	address		= "{Eindhoven, The Netherlands}"
+}
+
+@inproceedings{Piquer91,
+	author		= "Piquer, Jos\'{e} M.",
+	title		= "Indirect Reference Counting:  A Distributed Garbage
+			   Collection Algorithm",
+	booktitle	= "Proc PARLE '91 Parallel Architectures and Languages
+			   Europe",
+	pages		= "150--165",
+	year		= 1991,
+	month		= jun,
+	address		= "{Eindhoven, The Netherlands}"
+}
+
+@inproceedings{Queinnec89,
+	author		= "    Queinnec, Christian
+			   and Beaudoing, Barbara
+			   and Queille, Jean-Pierre",
+	title		= "Mark DURING Sweep rather than Mark THEN Sweep",
+	booktitle	= "Proc PARLE '89 Parallel Architectures and Languages
+			   Europe (Springer-Verlag LNCS 365)",
+	pages		= "224--237",
+	year		= 1989,
+	month		= jun,
+	address		= "{Eindhoven, The Netherlands}"
+}
+
+@inproceedings{Lester89,
+	author		= "Lester, David R.",
+	title		= "An Efficient Distributed Garbage Collection 
+			   Algorithm",
+	booktitle	= "Proc PARLE '89 Parallel Architectures and Languages
+			   Europe (Springer-Verlag LNCS 365)",
+	pages		= "207--223",
+	year		= 1989,
+	month		= jun,
+	address		= "{Eindhoven, The Netherlands}"
+}
+
+@inproceedings{Bevan87,
+	author		= "Bevan, D.I.",
+	title		= "Distributed Garbage Collection Using Reference Counting",
+	booktitle	= "Proc PARLE Parallel Architectures and Languages
+			   Europe (Springer-Verlag LNCS 259)",
+	pages		= "176--187",
+	year		= 1987,
+	month		= jun,
+	address		= "{Eindhoven, The Netherlands}"
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Database searches and other possibilities
+%%%
+
+
+
+
+
+
+@PhdThesis{Ali84,
+  author = 	 "Ali, K. A. M.",
+  title = 	 "Object Oriented Storage Management and Garbage Collection
+		  in Distributed Systems",
+  school = 	 "Royal Institute of Technology",
+  year = 	 1984,
+  address =	 "Stockholm",
+  month =	 dec
+}
+
+@MastersThesis{Nori79,
+  author = 	 "Nori, A. K.",
+  title = 	 "A Storage Reclamation Scheme for Applicative
+		  Multiprocessor Systems",
+  school = 	 "University of Utah",
+  year = 	 1979,
+  month =	 dec
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% From Keene
+%%%
+
+
+@techreport{Zorn89,
+	author		= "Zorn, Benjamin G.",
+	title		= "Comparative Performance Evaluation of 
+			   Garbage Collection Algorithms",
+	institution	= "{Univ of California, Berkeley}",
+	year		= 1989,
+	month		= dec,
+	number		= "Report No. UCB/CSD 89/544"
+}
+
+@techreport{Ellis88,
+	author		= "    Ellis, John R.
+			   and Li, Kai
+			   and Appel, Andrew W.",
+	title		= "Real-time Concurrent Collection 
+			   on Stock Multiprocessors",
+	institution	= "{DEC Systems Research Centre}",
+	address		= "{130 Lytton Ave., Palo Alto, California}",
+	year		= 1988,
+ 	month		= feb,
+	number		= 25,
+	note		= "The contents of this report also appear in
+			   {\em Proc ACM Conf on Programming Language Design
+			   and Implementation}, pages 11--20, Atlanta, 
+			   Georgia, June 1988."
+}
+
+@techreport{DeTreville90,
+	author		= "DeTreville, John",
+	title		= "Experience with Concurrent Garbage 
+			   Collectors for Modula-2+",
+	institution	= "{DEC Systems Research Centre}",
+	address		= "{130 Lytton Ave., Palo Alto, California}",
+	year		= 1990,
+ 	month		= nov,
+	number		= 64
+}
+
+@techreport{Ali85,
+	author		= "    Ali, Khayri M.
+			   and Haridi, Seif",
+	title		= "Global Garbage Collection for Distributed
+			   Heap Storage Systems",
+	institution	= "{Royal Institute of Technology, Sweden, 
+			    and IBM Thomas Watson Research Center}",
+	address		= "{PO Box 218, Yorktown Heights NY 10598}",
+	year		= 1985,
+	month		= feb,
+	number		= "IBM RC 11082 (\#49769)"
+}
+
+@techreport{Herlihy90,
+	author		= "    Herlihy, Maurice
+			   and Moss, J. Eliot B.",
+	title		= "Non-Blocking Garbage Collection for Multiprocessors",
+	institution	= "{DEC Cambridge Research Lab}",
+	address		= "{Cambridge, Massachusetts}",
+	year		= 1990,
+	month		= nov,
+	number		= "CRL 90/9"
+}
+
+@mastersthesis{Totty88,
+	author		= "Totty, Brian",
+	title		= "An Operating Environment for the Jellybean Machine",
+	school		= "Massachusetts Institute of Technology",
+	year		= 1988
+}
+
+@article{Dijkstra78,
+	author		= "    Dijkstra, Edsger W.
+			   and Lamport, Leslie
+			   and Martin, A.J.
+			   and Scholten, C.S.
+			   and Steffens, E.F.M.",
+	title		= "On-the-Fly Garbage Collection:  An Exercise
+			   in Cooperation",
+	journal		= "Comm. of ACM",
+	volume		= "21",
+	number		= 11,
+	month		= nov,
+	year		= 1978,
+	pages		= "966--975"
+}
+
+
+@article{Cohen81,
+	author		= "Cohen, Jacques",
+	institution	= "{Brandeis University}",
+	title		= "Garbage Collection of Linked Data Structures",
+	journal		= "ACM Computing Surveys",
+	volume		= 13,
+	number		= 3,
+	month		= sep,
+	year		= 1981,
+	pages		= "341--367"
+}
+
+@inproceedings{North87,
+	author		= "    North, S.C.
+			   and Reppy, J.H.",
+	title		= "Concurrent Garbage Collection on Stock Hardware",
+	booktitle	= "Proc Functional Programming Languages and 
+			   Computer Architecture (Springer-Verlag LNCS 274)",
+	pages		= "113--133",
+	year		= 1987,
+	month		= sep,
+	address		= "{Portland, Oregon}"
+}
+
+@inproceedings{Miller89,
+	author		= "    Miller, James S.
+			   and Epstein, Barbara S.",
+	title		= "Garbage Collection in MultiScheme (Preliminary Version)",
+	booktitle	= "Proc Parallel Lisp:  Languages and Systems 
+			   (Springer-Verlag LNCS 441)",
+	pages		= "138--160",
+	year		= 1989,
+	month		= jun,
+	address		= "{Sendai, Japan}"
+}
+
+@inproceedings{Hudak82,
+	author		= "    Hudak, Paul
+			   and Keller, Robert M.",
+	title		= "Garbage Collection and Task Deletion in
+			   Distributed Applicative Processing Systems",
+	booktitle	= "Proc ACM Symp on Lisp and Functional Programming",
+	pages		= "168--178",
+	year		= 1982,
+	month		= aug,
+	address		= "{Pittsburgh, Pennsylvania}"
+}
+
+@inproceedings{Liskov86,
+	author		= "    Liskov, Barbara
+			   and Ladin, Rivka",
+	title		= "Highly-Available Distributed Services and 
+			   Fault-Tolerant Distributed Garbage Collection",
+	booktitle	= "Proc 5th Annual ACM Symp on Principles of
+			   Distributed Computing",
+	pages		= "29--39",
+	year		= 1986,
+	month		= aug,
+	address		= "{Calgary, Alberta, Canada}"
+}
+
+@inproceedings{Watson87,
+	author		= "    Watson, Paul
+			   and Watson, Ian",
+	title		= "An Efficient Garbage Collection Scheme for Parallel
+			   Computer Architectures",
+	booktitle	= "Proc PARLE Parallel Architectures and Languages
+			   Europe (Springer-Verlag LNCS 259)",
+	pages		= "432--443",
+	year		= 1987,
+	month		= jun,
+	address		= "{Eindhoven, The Netherlands}"
+}
+
+@inproceedings{Augusteijn87,
+	author		= "Augusteijn, Lex",
+	title		= "Garbage Collection in a Distributed Environment",
+	booktitle	= "Proc PARLE Parallel Architectures and Languages
+			   Europe (Springer-Verlag LNCS 259)",
+	pages		= "75--93",
+	year		= 1987,
+	month		= jun,
+	address		= "{Eindhoven, The Netherlands}"
+}
+
+@inproceedings{Goldberg89,
+	author		= "Goldberg, Benjamin",
+	title		= "Generational Reference Counting:
+			   A Reduced-Communication Distributed 
+			   Storage Reclamation Scheme",
+	booktitle	= "Proc ACM Conf on Programming Language Design
+			   and Implementation",
+	pages		= "313--321",
+	year		= 1989,
+	month		= jun,
+	address		= "{Portland, Oregon}"
+}
+
+@inproceedings{Goldberg91,
+	author		= "Goldberg, Benjamin",
+	title		= "Tag-Free Garbage Collection for Strongly
+			   Typed Programming Languages",
+	booktitle	= "Proc ACM Conf on Programming Language Design
+			   and Implementation",
+	pages		= "165--176",
+	year		= 1991,
+	month		= jun,
+	address		= "{Toronto, Canada}"
+}
+
+@inproceedings{Wilson91,
+	author		= "    Wilson, Paul R.
+			   and Lam, Michael S.
+			   and Moher, Thomas G.",
+	title		= "Effective ``Static-graph'' Reorganization
+			   to Improve Locality in Garbage-Collected Systems",
+	booktitle	= "Proc ACM Conf on Programming Language Design
+			   and Implementation",
+	pages		= "177--191",
+	year		= 1991,
+	month		= jun,
+	address		= "{Toronto, Canada}"
+}
+
+@inproceedings{Boehm91,
+	author		= "    Boehm, Hans-J.
+			   and Demers, Alan J.
+			   and Shenker, Scott",
+	title		= "Mostly Parallel Garbage Collection",
+	booktitle	= "Proc ACM Conf on Programming Language Design
+			   and Implementation",
+	pages		= "157--164",
+	year		= 1991,
+	month		= jun,
+	address		= "{Toronto, Canada}"
+}
+
+@inproceedings{Appel88,
+	author		= "    Appel, Andrew W.
+			   and Ellis, John R.
+			   and Li, Kai",
+	title		= "Real-time Concurrent Collection on Stock
+			   Multiprocessors",
+	booktitle	= "Proc ACM Conf on Programming Language Design
+			   and Implementation",
+	pages		= "11--20",
+	year		= 1988,
+	month		= jun,
+	address		= "{Atlanta, Georgia}"
+}
+
+@inproceedings{Sharma91,
+	author		= "    Sharma, Ravi
+			   and Soffa, Mary Lou",
+	title		= "Parallel Generational Garbage Collection",
+	booktitle	= "Proc Object-Oriented Programming Systems,
+			   Languages, and Applications Conf",
+	pages		= "16--32",
+	year		= 1991,
+	month		= oct,
+	address		= "{Phoenix, Arizona}"
+}
+
+@inproceedings{Xu89,
+	author		= "    Xu, Lu
+			   and Koike, Hanpei
+			   and Tanaka, Hidehiko",
+	title		= "Distributed Garbage Collection for the
+			   Parallel Inference Machine PIE64",
+	booktitle	= "Proc IFIP 11th World Computer Congress",
+	pages		= "1161--1166",
+	year		= 1989,
+	month		= aug,
+	address		= "{San Francisco, California}"
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Miscellaneous
+%%%
+
+
+
+
+@InProceedings{JumpM2007,
+  author = 	 "Maria Jump and Kathryn S. McKinley",
+  title = 	 "Cork: Dynamic memory leak detection for garbage-collected languages",
+  booktitle = POPL2007,
+  NEEDpages = 	 "*",
+  year = 	 2007,
+  address = 	 POPL2007addr,
+  month = 	 POPL2007date,
+  abstract =
+   "A \emph{memory leak} in a garbage-collected program occurs when the program
+    inadvertently maintains references to objects that it no longer
+    needs. Memory leaks cause systematic heap growth, degrading performance and
+    resulting in program crashes after perhaps days or weeks of
+    execution. Prior approaches for detecting memory leaks rely on heap
+    differencing or detailed object statistics which store state proportional
+    to the number of objects in the heap. These overheads preclude their use on
+    the same processor for deployed long-running applications.
+    \par
+    This paper introduces a dynamic heap-summarization technique based on type
+    that accurately identifies leaks, is space efficient (adding less than 1%
+    to the heap), and is time efficient (adding 2.3% on average to total
+    execution time). We implement this approach in \emph{Cork} which utilizes
+    dynamic type information and garbage collection to summarize the live
+    objects in a \emph{type points-from graph} (\emph{TPFG}) whose nodes
+    (types) and edges (references between types) are annotated with
+    volume. \emph{Cork} compares \emph{TPFG}s across multiple collections,
+    identifies growing data structures, and computes a \emph{type slice} for
+    the user. \emph{Cork} is accurate: it identifies systematic heap growth
+    with no false positives in 4 of 15 benchmarks we tested. Cork's slice
+    report enabled us (non-experts) to quickly eliminate growing data
+    structures in SPECjbb2000 and Eclipse, something their developers had not
+    previously done. Cork is accurate, scalable, and efficient enough to
+    consider using online.",
+}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% End
+%%%
+
+
+% LocalWords: gc InProceedings JumpM booktitle NEEDpages addr TPFG
+% LocalWords: SPECjbb Elipse

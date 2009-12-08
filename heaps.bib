@@ -1,0 +1,3945 @@
+@string{ASPLOS = "Architectural Support for Programming Languages and Operating Systems"}
+@string{CA = "International Symposium on Computer Architecture"}
+@string{CC = "{SIGPLAN} Symposium on Compiler Construction"}
+@string{ECOOP = "European Conference on Object Oriented Programming"}
+@string{IJCAI = "International Joint Conference on Artificial Intelligence"}
+@string{IWMM = "International Workshop on Memory Management"}
+@string{IWOOOS = "International Workshop on Object Orientation in Operating Systems"}
+@string{LFP = "{ACM} Symposium on {LISP} and Functional Programming"}
+@string{OOPSLA = "Conference on Object Oriented Programming Systems, Languages and Applications"}
+@string{PARLE = "Parallel Architectures and Languages Europe"}
+@string{SOSP = "Symposium on Operating Systems Principles"}
+@string{TLC  = "{LISP} Conference"}
+
+@string{ai = "Artificial Intelligence"}
+@string{bstj = "Bell System Technical Journal"}
+@string{compj = "Computer Journal"}
+@string{clang = "Computer Languages"}
+@string{csurv = "Computing Surveys"}
+@string{lsc = "Lisp and Symbolic Computation"}
+@string{sigarch = "{SIGARCH} Newsletter"}
+@string{spe = "Software Practice and Experience"}
+
+@string{BROWN = "Brown University"}
+@string{CORNELL = "Cornell University"}
+@string{DECSRC = "Digital Equipment Corporation Systems Research Center"}
+@string{DECWRL = "Digital Equipment Corporation Western Research Laboratory"}
+@string{NYUCOUR = "Courant Institute of Mathematical Sciences, New York University"}
+@string{OGC = "Oregon Graduate Center"}
+@string{PRINCETON = "Princeton University"}
+@string{RICE = "Rice University"}
+@string{SIAM = "Society for Industrial and Applied Mathematics"}
+@string{UCB = "University of California, Berkeley"}
+@string{UCSC = "University of California at Santa Cruz"}
+
+@string{AW = "Addison-Wesley"}
+@string{ACM = "{ACM} Press"}
+@string{ENH = "Elsevier North-Holland"}
+@string{HR = "Harper and Row"}
+@string{HRW = "Holt, Reinhart and Winston"}
+@string{MK = "Morgan-Kaufman"}
+@string{PH = "Prentice-Hall"}
+@string{PP = "Pergamon Press"}
+@string{SV = "Springer-Verlag"}
+
+
+@inproceedings{AP:PGCVMS,
+author = "S. Abraham and J. Patel",
+title = "Parallel Garbage Collection on a Virtual Memory System",
+booktitle = "International Conference on Parallel Processing and
+Applications",
+editor = "E. Chiricozzi and A. D'Amato",
+year = 1987,
+month = sep,
+address = "L'Aquila, Italy",
+publisher = ENH,
+pages = {243--246}
+}
+
+@inproceedings{RMA:DGC,
+author = "Saleh E. Abdullahi and Eliot E. Miranda and Graem A. Ringwood",
+title = "Distributed Garbage Collection",
+crossref = "IWMM92",
+key = "",
+pages = "43--81"
+}
+
+@techreport{Ae:ISWGC,
+author="J.P.H. Aerts",
+title="Implementing {SASL} without Garbage Collection",
+institution="Eindhoven University of Technology",
+address = "The Netherlands",
+type="EUT Report",
+number="81--WSK--05",
+year=1981}
+
+@article{AgHH88,
+author = "Agarwal, Anant and Mark Horowitz and John Hennessy",
+title = "Cache Performance of Operating Systems and Multiprogramming
+Workloads",
+journal = tocs,
+volume =  6, 
+number = 4, 
+pages = "393--431", 
+month = Nov,
+year = 1988	}
+
+@article{APW:PCS,
+author = "M. Anderson and R. D. Pose and C. S. Wallace",
+title = "A Password-Capability System",
+journal = compj,
+volume = 29,
+number = 1,
+pages = "1--7",
+year = 1986
+}
+
+@inproceedings{ALBL91,
+author = "Thomas E. Anderson and Henry M. Levy and Brian N. Bershad
+and Edward D. Lazowska",
+title = "The Interaction of Architecture and Operating Systems
+Design",
+crossref = "ASPLOS4",
+key = "",
+pages = "108--120"
+}
+
+@mastersthesis{An:PLP,
+author = "Andre, David L.", 
+title = "Paging in {L}isp Programs",
+school = "University of Maryland", 
+address = "College Park, Maryland",
+year = 1986	}
+
+@article{Appel:GCCBFTSA,
+author = "Appel, Andrew W.",
+title = "Garbage Collection Can Be Faster Than Stack Allocation",
+journal = IPL,
+volume = 25,
+number = 4,
+month = jun,
+year = 1987, 
+pages = "275--279"	
+}
+
+@article{Appel:RTTAN,
+title = "Runtime Tags Aren't Necessary",
+author = "Andrew W. Appel",
+journal = lsc,
+year = 1989,
+volume = 2,
+pages = {153--162}
+}
+
+@techreport{Appel:AWL,
+AUTHOR = "Andrew W. Appel",
+TITLE = "Allocation without Locking",
+INSTITUTION = PRINCETON,
+NUMBER = "CS-TR-182-88",
+YEAR = 1988,
+MONTH = sep
+}
+
+@techreport{AB:VGC,
+AUTHOR = "Andrew W. Appel and Aage Bendiksen",
+TITLE = "Vectorized Garbage Collection",
+INSTITUTION = PRINCETON,
+NUMBER = "CS-TR-169-88",
+YEAR = 1988,
+MONTH = jul
+}
+
+@article{Ap:SGGCFA,
+AUTHOR = "Andrew W. Appel",
+TITLE = "Simple Generational Garbage Collection and Fast Allocation",
+JOURNAL = spe,
+VOLUME = 19,
+NUMBER = 2,
+YEAR = 1989,
+MONTH = feb,
+PAGES ={171--183}
+}
+
+@incollection{Appel:GC,
+title = "Garbage Collection",
+author = "Andrew W. Appel",
+booktitle = "Topics in Advanced Language Implementation",
+editor = "Peter Lee",
+pages = {89--100},
+publisher = "{MIT} Press",
+address = "Cambridge, Massachusetts",
+year = 1991
+}
+
+@inproceedings{AEL:RTCGCSM,  
+author = "Appel, Andrew W. and John R. Ellis and Kai Li",
+title = "Real-time Concurrent Garbage Collection on Stock Multiprocessors",
+crossref = "PLDI88",
+key = "",
+pages = "11--20",
+COMMENT = "Not ``real'' real-time, but a very cool algorithm."
+}
+
+@techreport{AJ:OCER,
+AUTHOR = "Andrew W. Appel and Trevor T. Y. Jim",
+TITLE = "Optimizing Closure Environment Representations",
+INSTITUTION = PRINCETON,
+NUMBER = "CS-TR-168-88",
+YEAR = 1988,
+MONTH = jul
+}
+
+@inproceedings{AM:SMLC,
+AUTHOR = "A. W. Appel and D. B. MacQueen",
+TITLE = "A Standard {ML} Compiler",
+CROSSREF = "FPLCA87",
+key = "",
+PAGES = {301--324}
+}
+
+@inproceedings{AL:VMPUP,
+title = "Virtual Memory Primitives For User Programs",
+author = "Andrew W. Appel and Kai Li",
+crossref = "ASPLOS4",
+key = "",
+pages = "96--107"
+}
+
+@article{ArCS84,
+author = "Archer, J. E. and R. Conway and F. B. Schneider",
+title = "User Recovery and Reversal in Interactive Systems",
+journal = toplas,
+volume = 6,
+number = 1,
+month = jan,
+year = 1984,
+pages = "1--19"
+}
+
+@article{Ar:SASimula,
+AUTHOR = "Stefan Arnborg",
+TITLE = "Storage administration in a virtual memory {SIMULA} system",
+JOURNAL = "BIT", VOLUME = 12, YEAR = 1972,
+PAGES = {125--141}
+}
+
+@article{At:AAPP,
+author = "Atkinson, M.P. and P.J. Bailey and K.J. Chisholm and P. W. Cockshott
+and R. Morrison",
+title = "An Approach to Persistent Programming",
+journal = compj,
+volume = 26, 
+number = 4, 
+month = dec,
+year = 1983, 
+pages = "360--365"
+}
+
+@inproceedings{Au:GCDE,
+	author = "Augusteijn, Lex",
+	title = "Garbage Collection in a Distributed Environment",
+	crossref = "PARLE87",
+	key = "",
+	pages = "75--93"
+}
+
+@inproceedings{Aug:ACLML,
+AUTHOR = "Lennart Augustsson",
+TITLE = "A Compiler for Lazy {ML}",
+CROSSREF = "LFP84",
+KEY = "",
+PAGES = {218--227}
+}
+
+@article{Ax:RCCGFP,
+title="Reference Counting of Cyclic Graphs for Functional Programs",
+author="T.H. Axford",
+address="Univ. Birmingham, Birmingham B15 2tt, W Midlands, England",
+journal=CompJ,
+year=1990,
+volume=33,
+number=5,
+pages="466--470"
+}
+
+@article{Ba:TLRD,
+author = "Babaoglu, Ozalp and Domenico Ferrari",
+title = "Two-Level Replacement Decisions in Paging Stores",
+journal = "{IEEE} Transactions on Computers",
+VOLUME = "C-32",
+NUMBER = 12,
+MONTH = dec,
+YEAR = 1983,
+PAGES = {1151--1159}
+}
+
+@article{BS:DR,  
+author = "Baer, Jean-Loup and Sager, Gary R.",
+title = "Dynamic Improvement of Locality in Virtual Memory Systems",
+journal = ieeese,
+volume =  "SE-2", 
+number = 1, 
+month = mar,
+pages = {54--62},
+year = 1976	}
+
+@article{Bake78,
+author = "Baker, Jr., Henry G.",
+title = "List Processing in Real Time on a Serial Computer",
+journal = cacm,
+volume = 21,
+number = 4,
+month = apr,
+year = 1978,
+pages = "280--294"
+}
+
+@techreport{Ba:PBCLCA,
+author = "Baker, Jr., Henry G.",
+title = "The Paging Behavior of the {Cheney} List Copying Algorithm",
+type = "Technical Report",
+institution = "University of Rochester Computer Science Department",
+year = 1980,
+note = "Copies available from the author."
+}
+
+@unpublished{Ba90:CONS,
+author = "Baker, Jr., Henry G.",
+title = "{CONS} Should Not {CONS} its Arguments, or, {A} Lazy Alloc is a Smart Alloc",
+year = 1990,
+note = "Submitted to {\em Communications of the {ACM}}"
+}
+
+@unpublished{Ba90:ERFO,
+author = "Baker, Jr., Henry G.",
+title = "Equal Rights for Functional Objects",
+year = 1990,
+note = "Submitted to {\em {ACM} Transactions on Programming Languages
+and Systems}"
+}
+
+@misc{Ba:Treadmill,
+author = "Baker, Jr., Henry G.",
+title = "The {Treadmill}: Real-time garbage collection without motion
+sickness",
+month = oct,
+year = 1991,
+howpublished = "Position paper for {OOPSLA} '91 Workshop on Garbage Collection
+in Object-Oriented Systems.  Summary appears in \cite{WH:GC91}",
+note = "Also appears as {\em SIGPLAN Notices 27}(3):66--70, March 1992"
+}
+
+@misc{Ba:CCCC,
+author = "Baker, Jr., Henry G.",
+title = "Cache-Conscious Copying Collection",
+howpublished = "Unpublished position paper for {OOPSLA} '91 Workshop
+on Garbage Collection in Object-Oriented Systems.  See \cite{WH:GC91}",
+note =  "Available via anonymous Internet {FTP} from cs.utexas.edu
+(/pub/garbage/GC91/baker.ps)",
+month = oct,
+year = 1991
+}
+
+@incollection{BS:VAXS80,
+TITLE = "The Design and Implementation of {VAX}/{S}malltalk-80",
+AUTHOR = "Stoney Ballard and Stephen Shirron",
+CROSSREF = "ST80:BHWA",
+COMMENT = "Use variation of Lieberman-Hewitt collector; use indirection table; don't like reference counting",
+PAGES = {127--150}
+}
+
+@inproceedings{Balz69,
+author = "R. M. Balzer",
+title = "{EXDAMS}---Extendable Debugging and Monitoring System",
+booktitle = "{AFIPS} Proceedings Spring Joint Computer Conference",
+month = may,
+year = 1969,
+publisher = "{AFIPS} Press",
+address = "Arlington, Virginia",
+pages = "567--580"
+}
+
+@techreport{Barb71,
+author = "Barbacci, M.",
+title = "A LISP Processor for {C.ai}",
+institution = "Carnegie-Mellon University",
+address = "Pittsburgh, PA",
+type = "Memo",
+number = "CMU-CS-71-103",
+year = 1971
+}
+
+@article{Barth:GCatCT,
+AUTHOR = "Jeffrey M. Barth",
+TITLE = "Shifting Garbage Collection Overhead to Compile Time",
+JOURNAL = cacm, VOLUME = 20, NUMBER = 7, YEAR = 1977, MONTH = jul,
+PAGES = {513--518}
+}
+
+@techreport{Ba:CGCAR,  
+author = "Bartlett, Joel F.",
+title = "Compacting Garbage Collection With Ambiguous Roots",
+type = "Technical Report",
+number = "88/2", 
+institution = DECWRL,
+address = "Palo Alto, California",
+month = Feb, 
+COMMENT="Excellent trick here---make newness a page property, not an
+  address-range property",
+year = 1988	}
+
+@inproceedings{BDK:IIV,
+AUTHOR = "Raymond L. Bates and David Dyer and Johannes A. G. M. Koomen",
+TITLE = "Implementation of {I}nterlisp on the {VAX}",
+CROSSREF = "LFP82",
+KEY = "",
+PAGES = {81--87}
+}
+
+@article{BB:AlgolStat,
+AUTHOR = "A. P. Batson and R. E. Brundage",
+TITLE = "Segment Sizes and Lifetimes in {ALGOL} 60 Programs",
+JOURNAL = cacm,
+VOLUME = 20,
+NUMBER = 1,
+YEAR = 1977,
+MONTH = jan,
+PAGES = {36--44}
+}
+
+@inproceedings{Be:DIDS,
+	author = "Bennett, J.K.",
+	title = "The Design and Implementation of Distributed
+		{Smalltalk}", 
+	crossref = "OOPSLA87",
+	key = "",
+	pages = "318--330"
+}
+
+@techreport{Berg88,
+author = "Bergstein, Steven H.", 
+title = "Best-Case Caching in a Symbolic Multiprocessor",
+institution = MIT # " {EECS} Department",
+month = Feb,
+year = 1988,
+address = "Cambridge, Massachusetts",
+type = "Bachelor's thesis"
+}
+
+@inproceedings{Be:DGCURC,
+	author = "Bevan, David I.",
+	title = "Distributed Garbage Collection Using Reference Counting", 
+	crossref = "PARLE87",
+	key = "",
+	pages = "176/117--187"
+}
+
+@article{Be:ERCSDGCP,
+	author = "Bevan, David I.",
+	title = "An Efficient Reference Counting Solution to the
+		Distributed Garbage Collection Problem",  
+	journal = "Parallel Computing",
+	volume = 9,
+	number = 2,
+	year = 1989,
+	pages = {179--192}
+}
+
+@phdthesis{Bishop:phd,
+author = "Peter B. Bishop",
+title = "Computer Systems with a Very Large Address Space and Garbage Collection",
+SCHOOL = MIT # " Laboratory for Computer Science",
+note = "Technical report MIT/LCS/TR-178",
+YEAR = 1977,
+MONTH = MAY
+}
+
+@inproceedings{Blau83,
+author = "Blau, Ricki",
+title = "Paging on an Object-Oriented Personal Computer for {S}malltalk",
+booktitle = "Proceedings of the {ACM} {SIGMETRICS} Conference on
+Measurement and Modeling of Computer Systems",
+address = "Minneapolis, Minnesota",
+note = "Also available as Technical Report {UCB/CSD}
+83/125, University of California at Berkeley, Computer Science
+Division ({EECS}), August 1983",
+month = aug,
+year = 1983
+}
+
+@article{Bo:HL,
+AUTHOR = "Daniel G. Bobrow",
+TITLE = "A Note on Hash Linking",
+JOURNAL = cacm, VOLUME = 18, NUMBER = 7, YEAR = 1975, MONTH = jul,
+PAGES = {413--415}
+}
+
+@article{Bo:MRSURC,
+TITLE = "Managing Reentrant Structures Using Reference Counts",
+AUTHOR = "Daniel G. Bobrow",
+JOURNAL = toplas, VOLUME = 2, NUMBER = 3, MONTH = jul, YEAR = 1980,
+PAGES = {269--273},
+comment = "\com can handle some special cases of reference counting, but
+restricts the programmer to certain stereotyped patterns."
+}
+
+@article{BC:CELS,
+TITLE = "Compact Encodings of List Structure",
+AUTHOR = "Daniel G. Bobrow and Douglas W. Clark",
+JOURNAL = toplas, VOLUME = 1, NUMBER = 2, MONTH = oct, YEAR = 1979,
+COMMENT = "Good words on {CDR}-coding",
+PAGES =  {266--286}
+}
+
+@inproceedings{Bo:HOSSCGC,
+title = "Hardware and Operating System Support for Conservative Garbage Collection",
+author = "Hans-Juergen Boehm",
+booktitle = IWMM,
+year = 1991,
+month = oct,
+address = "Palo Alto, California",
+pages = {61--67},
+publisher = "{IEEE} Press"
+}
+
+@misc{BMBC:GC91panel,
+author = "Hans-Juergen Boehm and Eliot Moss and Joel Bartlett and David Chase",
+title = "Panel Discussion: Conservative vs. Accurate Garbage Collection",
+howpublished= "Summary appears in \cite{WH:GC91}",
+month = oct,
+year = 1991
+}
+
+@techreport{BA:IR,
+AUTHOR= "Hans-Juergen Boehm and Alan Demers",
+TITLE= "Implementing {R}ussell",
+INSTITUTION=RICE,
+NUMBER="COMP TR85-25",
+YEAR=1985
+}
+
+@unpublished{BH:SAOCR,
+AUTHOR = "Hans Boehm and Lucy Hederman",
+TITLE = "Storage Allocation Optimization in a Compiler for {R}ussell",
+NOTE = "Submitted for publication",
+YEAR = 1988,
+MONTH = jul
+}
+
+@inproceedings{BDS:MPGC,
+AUTHOR = "Hans-J. Boehm and Alan J. Demers and Scott Shenker",
+TITLE = "Mostly Parallel Garbage Collection",
+CROSSREF = "PLDI91",
+KEY = "",
+PAGES= {157--164}
+}
+
+@incollection{BL:SSAGCA68,
+TITLE = "A Scheme of Storage Allocation and Garbage Collection for {ALGOL} 68",
+AUTHOR = "P. Branquart and J. Lewi",
+CROSSREF = "Peck71",
+PAGES = {199--238}
+}
+
+@book{Brooks:MMM,
+AUTHOR="Brooks, Jr., Frederick P.",
+TITLE="The Mythical Man Month",
+PUBLISHER=AW,
+YEAR=1975
+}
+
+@inproceedings{Broo84,
+author = "Rodney A. Brooks",
+title = "Trading Data Space For Reduced Time and Code Space in Real-Time
+Collection on Stock Hardware",
+crossref = "LFP84",
+key = "",
+pages = "108--113"
+}
+
+@inproceedings{BGS:S1CL,
+AUTHOR = "Rodney A. Brooks and Richard P. Gabriel and Guy L. {Steele Jr.}",
+TITLE = "S-1 {C}ommon {LISP} Implementation",
+CROSSREF = "LFP82",
+KEY = "",
+PAGES = {108--113}
+}
+
+@inproceedings{BGS:OCfLSL,
+AUTHOR = "Rodney A. Brooks and Richard P. Gabriel and Guy L. {Steele Jr.}",
+TITLE = "An Optimizing Compiler for Lexically Scoped {LISP}",
+YEAR = 1982,
+PAGES = {261--275},
+BOOKTITLE = CC
+}
+
+@inproceedings{BGS:LiLHPP,
+AUTHOR = "Rodney A. Brooks and Richard P. Gabriel and Guy L. {Steele Jr.}",
+TITLE = "{LISP}-in-{LISP}: High Performance and Portability",
+CROSSREF = "IJCAI83", VOLUME = 2, PAGES = {845--849}
+}
+
+@phdthesis{Br:thesis,
+TITLE = "Recursive Structures in Computer Systems",
+AUTHOR = "D. R. Brownbridge",
+SCHOOL = "University of Newcastle upon Tyne",
+ADDRESS = "United Kingdom",
+YEAR = 1984,
+month = sep
+}
+
+@inproceedings{Bro:CRC,
+AUTHOR = "D. R. Brownbridge",
+TITLE = "Cyclic Reference Counting for Combinator Machines",
+CROSSREF = "FPLCA85",
+key = "",
+PAGES = {273--288},
+comments={\com
+Presents an interesting, but incorrect algorithm
+(see [Salkild, 1987]), for cyclic reference counting
+based on the notion of strong and weak (cycle-closing) pointers.}
+}
+
+@inproceedings{BJLM:ODCLFS,
+AUTHOR = "Michael Burrows and Charles Jerian and Butler Lampson and Timothy Mann",
+TITLE = "On-line data compression in a log-structured file system",
+CROSSREF = "ASPLOS5",
+key = "",
+pages = "2--9"
+}
+
+@inproceedings{Card:CFL,
+AUTHOR = "Luca Cardelli",
+TITLE = "Compiling a Functional Language",
+CROSSREF = "LFP84",
+KEY = "",
+PAGES = {208--217}
+}
+
+@inproceedings{CG:CCCC,
+author = "Vincent Cate and Thomas Gross",
+title = "Combining the Concepts of Compression and Caching for a
+Two-Level File System",
+crossref = "ASPLOS4",
+key = "",
+pages = {200--209}
+}
+
+@incollection{Ca:OO1,
+author = "R. G. G. Cattell",
+title = "An Engineering Database Benchmark",
+booktitle = "The Benchmark Handbook for Database and Transaction Processing Systems",
+editor = "Jim Gray",
+publisher = MK,
+year = 1991,
+pages = {247--281}
+}
+
+@inproceedings{CaWB86,
+author = "Caudill, Patrick J. and Allen Wirfs-Brock",
+title = "A Third-Generation {S}malltalk-80 Implementation",
+crossref = "OOPSLA86",
+key = "",
+pages = "119--130"
+}
+
+@misc{Caud88,
+author = "Patrick J. Caudill",
+note = "personal communication"
+}
+
+@article{CFKA90,
+author = "Chaiken, David and Craig Fields and Kiyoshi Kurihara and Anant
+Agarwal",
+title = "Directory-Based Cache Coherence in Large-Scale Multiprocessors",
+journal = "{IEEE} Computer", 
+volume = 23, 
+number =  6, 
+month = jun, 
+year = 1990, 
+pages = "49--58"
+}
+
+@phdthesis{Chambers:phd,
+title = "The Design and Implementation of the SELF Compiler, an Optimizing Compiler for an Object-Oriented Programming Language",
+author = "Craig Chambers",
+school = "Stanford University",
+addres = "Palo Alto, California",
+year = 1992,
+month = mar
+}
+
+@InProceedings{ChambersU89,
+  author = 	 "Craig Chambers and David Ungar",
+  title = 	 "Customization:  Optimizing Compiler Technology for
+                  {Self}, a Dynamically-Typed Object-Oriented Language",
+  booktitle =	 PLDI89,
+  pages =	 "146--160",
+  year =	 1989,
+  address =	 PLDI89addr,
+  month =	 PLDI89date
+}
+
+@inproceedings{ChKa89,
+author = "Ellis E. Chang and Randy H. Katz",
+title = "Exploiting Inheritance and Structure Semantics for
+Effective Clustering and Buffering in an Object-Oriented {DBMS}",
+booktitle = "Proceedings of {ACM} {SIGMOD} International Conference
+on Management of Data",
+note = {Snowbird, Utah},
+month = jun,
+year = 1989,
+pages = {348--357}
+}
+
+@phdthesis{Chase:phd,
+AUTHOR="David Chase",
+TITLE="Garbage Collection and Other Optimizations",
+YEAR=1987, MONTH=aug,
+SCHOOL=RICE,
+ADDRESS = "Houston, Texas"
+}
+
+@inproceedings{Chase:SCSAO,
+AUTHOR = "David Chase",
+TITLE = "Safety Considerations for Storage Allocation Optimizations",
+CROSSREF = "PLDI88",
+KEY = "",
+PAGES= {1--10}
+}
+
+@inproceedings{CLLB:LSO,
+author = "Jeffrey S. Chase and Henry M. Levy and Edward D. Lazowska and Miche
+Baker-Harvey",
+title = "Lightweight Shared Objects in a 64-bit Operating System",
+crossref = "OOPSLA92",
+key = "",
+pages = "397--413"
+}
+
+@techreport{CLBL:HTU64AS,
+author = "Jeffrey S. Chase and Henry M. Levy and Miche Baker-Harvey
+and Edward D. Lazowska",
+title = "How to Use a 64-bit Virtual Address Space",
+institution = "University of Washington",
+address = "Seattle, Washington",
+number = "92-03-02",
+year = 1992,
+month = feb
+}
+
+@article{Ch:NLCA,
+AUTHOR = "C. J. Cheney",
+TITLE = "A Nonrecursive List Compacting Algorithm",
+JOURNAL = cacm, VOLUME = 13, NUMBER = 11, YEAR = 1970, MONTH = nov,
+PAGES = {677--678}
+}
+
+@article{Ch:RCGC,
+AUTHOR = "Thomas W. Christopher",
+TITLE = "Reference Count Garbage Collection",
+JOURNAL = spe, VOLUME = 14, NUMBER = 6, PAGES = {503--507}, 
+MONTH = jun, YEAR = 1984,
+comments={ \com
+A heap management scheme for languages (such as Fortran) which do not have
+this facility buit in.
+Does not rely on the existance of {\it roots} in the graph.
+His complex algorithm actually contains a cyclic reference count algorithm.}
+}
+
+@article{Cl:MDLSUL,
+AUTHOR = "Douglas W. Clark",
+TITLE = "Measurements of Dynamic List Structure Use in {L}isp",
+JOURNAL = ieeese, VOLUME = 5, NUMBER = 1, MONTH = jan, YEAR = 1979,
+PAGES = {51--59}
+}
+@article{CG:ESLS,
+AUTHOR = "Douglas W. Clark and C. Cordell Green",
+TITLE = "An Empirical Study of List Structure in {LISP}",
+JOURNAL = cacm, VOLUME = 20, NUMBER = 2, YEAR = 1977, MONTH = feb,
+PAGES = {78--87},
+COMMENT = "Great paper; evidence pro CDR-coding, con fancy CONS"
+}
+
+@inproceedings{ClHO88,
+author = "Clinger, Will and Anne Hartheimer and Erik Ost",
+title = "Implementation Strategies for Continuations", 
+crossref = "LFP88",
+key = "",
+pages = "124--131"
+}
+
+@article{CACB84,  
+author = "Cockshott,  W. and M.  Atkinson and K. Chisholm and P. Bailey
+and R. Morrison",
+title = "Persistent Object Management System",
+journal = spe,
+volume = 14, 
+number = 1,
+month = jan,
+year = 1984, 
+pages = "49--71"
+}
+
+@article{Co:GCLDS,
+TITLE = "Garbage Collection of Linked Data Structures",
+AUTHOR = "Jacques Cohen",
+JOURNAL = csurv, VOLUME = 13, NUMBER = 3, YEAR = 1981, MONTH = sep,
+PAGES = {341--367}
+}
+
+@article{CN:CCAGC,
+TITLE = "Comparison of Compacting Algorithms for Garbage Collection",
+AUTHOR = "Jacques Cohen and Alexandru Nicolau",
+JOURNAL = toplas, VOLUME = 5, NUMBER = 4, MONTH = oct, YEAR = 1983,
+PAGES = {532--553}
+}
+
+@article{Co:RC,
+AUTHOR = "George E. Collins",
+TITLE = "A Method for Overlapping and Erasure of Lists",
+JOURNAL = cacm,
+YEAR = 1960,
+VOLUME = 2,
+NUMBER = 12,
+month = dec,
+COMMENT = "The original? reference counting paper.",
+PAGES = {655--657}
+}
+
+@inproceedings {Co:ERWGCM,
+	author = "Corporaal, H. and T. Veldman and A. J. van de Goor",
+	title = "An Efficient, Reference Weightbased Garbage
+		Collection Method for Distributed Systems", 
+	booktitle = "Proceedings of the PARBASE-90 Conference",
+	year = 1990,
+	pages = "463 -- 465",
+	publisher = "{IEEE}"
+}
+
+@article{Cour88,
+author = "Courts, Robert", 
+title = "Improving Locality of Reference in a Garbage-Collecting Memory
+Management System",
+journal = CACM,
+volume = 31,
+number = 9, 
+month = Sep,
+year = 1988,
+pages = "1128--1138"
+}
+
+
+@article{Cr:GCASMP,
+	author = "Crammond, J.",
+	title = "A Garbage Collection Algorithm for Shared Memory
+		Parallel Processors",
+	journal = "International Journal of Parallel Programming",
+	volume = 17,
+	number = 6,
+	year = 1989,
+	month = Dec,
+	pages = "497 -- 522"
+}
+
+@inproceedings{Da:IERTLGC,
+title = "Improved Effectiveness from a Real-Time {LISP} Garbage Collector",
+author = "Jeffrey L. Dawson",
+crossref = "LFP82",
+key = "",
+pages = {159--167}
+}
+
+
+@inproceedings{De:Grasshopper,
+author = "Alan Dearle and Rex di Bona and James Farrow and Frans Henskens and Anders Lindstrom and John Rosenberg and Francis Vaughan",
+title = "Grasshopper---A Persistent Operating System for Conventional Hardware",
+crossref = "IWOOOS92",
+key = "",
+pages = {81--85}
+}
+
+@inproceedings{DRHV:EOSSPOS,
+author = "Alan Dearle and others",
+title = "An Examination of Operating System Support for Persistent Object Systems",
+booktitle = "25th Hawaii International Conference on Systems Sciences",
+year = 1992,
+volume = 1,
+pages = {779--789}
+}
+
+@techreport{Deb:EGCGM,
+AUTHOR = "Ashoke Deb",
+TITLE = "An efficient garbage collector for graph machines",
+INSTITUTION = OGC,
+YEAR = 1984,
+NUMBER = "CS/E-84-003"
+}
+
+@inproceedings{DWH:CGCGC,
+author = "Demers, Alan and Mark Weiser and Barry Hayes and Daniel Bobrow
+and Scott Shenker", 
+title = "Combining Generational and Conservative Garbage Collection:
+Framework and Implementations", 
+crossref = "POPL90",
+key = "",
+pages =  "261--269"
+}
+
+
+@article{De:MSGCDA,
+	author = "Derbyshire, Margaret H.",
+	title = "Mark Scan Garbage Collection on a Distributed Architecture",
+	journal = "Lisp and Symbolic Computation",
+	year = 1990,
+	month = Apr,
+	volume = 3,
+	number = 2,
+	pages = "135--170"
+}
+
+@inproceedings{De:GCRTCL,
+title = "Garbage Collection and Runtime Typing as a {C}++ Library",
+author = "David L. Detlefs",
+booktitle = USENIXCxx92,
+year = 1992,
+date = USENIXCxx92date,
+address = USENIXCxx92addr,
+key = ""
+}
+
+@techreport{De:CGCC,
+title = "Concurrent garbage collection for {C}++",
+author = "David L. Detlefs",
+institution = "Carnegie-Mellon University",
+number = "CMU-CS-90-119",
+year = 1990,
+month = may
+}
+
+@phdthesis{De:phdthesis,
+author = "David L. Detlefs",
+title = "Concurrent, Atomic Garbage Collection",
+school = "Dept. of Computer Science, Carnegie Mellon University",
+year = 1991,
+month = nov,
+address = "Pittsburgh, Pennsylvania",
+note = "Technical report CMU-CS-90-177"
+}
+
+@techreport{DeTr90,
+author = "John DeTreville",
+title = "Experience with Concurrent Garbage Collectors for {M}odula-2+",
+institution = DECSRC,
+address = "Palo Alto, California",
+number = 64,
+month = Aug, year = 1990
+}
+
+@techreport{De:HeapUsage,
+author = "John DeTreville",
+title = "Heap Usage in the {Topaz} Environment",
+institution = DECSRC,
+address = "Palo Alto, California",
+number = 63,
+month = Aug, year = 1990
+}
+
+@article{DeBo76,  
+author = "Deutsch, L. Peter and Daniel G. Bobrow",
+title = "An Efficient, Incremental, Automatic Garbage Collector",
+journal = cacm,
+volume = 19,
+number = 9, 
+month = Sep, 
+year = 1976, 
+COMMENT = "Transaction-based reference counting; interesting blend of marking and ref-counting collection",
+pages =  "522--526"
+}
+
+@inproceedings{DeSc84,
+author = "Deutsch, Peter L. and A.M. Schiffman",
+title = "Efficient Implementation of the {S}malltalk-80 System",
+crossref = "POPL84",
+key = "",
+pages = "297--302"
+}
+
+@phdthesis{Dickman:phd,
+AUTHOR = "Peter Dickman",
+TITLE = "Distributed Object Management in a Non-Small Graph of Autonomous Networks With Few Failures",
+SCHOOL = "University of Cambridge",
+ADDRESS = "United Kingdom",
+MONTH = sep,
+YEAR = 1991
+}
+
+@unpublished{Di:OWRC,
+	author = "Dickman, Peter",
+	title = "Optimising Weighted Reference Counts for Scalable
+		Fault-Tolerant Distributed Object-Support Systems", 
+	note = "Submitted for {HICSS} 26",
+	month = jun,
+	year =  1992
+}
+
+@article{DL:OTFGC,
+AUTHOR = "Edsger W. Dijkstra and Leslie Lamport and A. J. Martin and C. S. Scholten and E. F. M. Steffens",
+TITLE = "On-the-Fly Garbage Collection: An Exercise in Cooperation",
+JOURNAL = cacm, VOLUME = 21, NUMBER = 11, YEAR = 1978, MONTH = nov,
+COMMENT = "much overlooked algorithm, presented as more of a concurrency exercise than a garbage collector",
+PAGES = {966--975}
+}
+
+@inproceedings{DMH:CSGC,
+author = "Amer Diwan and Eliot Moss and Richard Hudson",
+title = "Compiler Support for Garbage Collection in a Statically-Typed Language",
+crossref = "PLDI92",
+key = "",
+pages = {273--282}
+}
+
+
+@inproceedings{EL:DGC,
+	author = "Eckart, J.D. and R.J. LeBlanc",
+	title = "Distributed Garbage Collection",
+	crossref = "SIIT87",
+	key = "",
+	pages = "264--273"
+}
+
+
+@techreport{Edelson:DSRiC,
+AUTHOR="Daniel Ross Edelson",
+TITLE="Dynamic Storage Reclamation in {C++}",
+INSTITUTION=UCSC,
+NUMBER="UCSC-CRL-90-19",
+YEAR=1990,
+MONTH=jun
+}
+
+@inproceedings{Ed:SP,
+author = "Daniel Ross Edelson",
+title = "Smart Pointers: They're Smart, But They're Not Pointers",
+booktitle = USENIXCxx92,
+year = 1992,
+date = USENIXCxx92date,
+address = USENIXCxx92addr,
+key = "",
+pages = "1--19",
+note = "Technical Report UCSC-CRL-92-27, University of California at
+Santa Cruz, Baskin Center for Computer Engineering and Information
+Sciences, June 1992"
+}
+
+@misc{EHH:GCOODPE,
+	author = "El-Habbash, A. and C. Horn and M. Harris",
+	title = "Garbage Collection in an Object Oriented,
+		Distributed, Persistent Environment",
+	howpublished = "Unpublished position paper for {OOPSLA/ECOOP} '90
+		Workshop on Garbage Collection in Object-Oriented Systems.
+		See \cite{JJ:GCOOS}",
+	month = oct,
+	year = 1990
+}
+
+@article{ES:OLEDP,
+TITLE = "An On-Line Edge-Deletion Problem",
+AUTHOR = "Shimon Even and Yossi Shiloach",
+JOURNAL = jacm,  VOLUME = 28, NUMBER = 1, MONTH = jan, YEAR = 1981,
+PAGES = {1--4}
+}
+
+@inproceedings{FP:DBRC,
+AUTHOR = "Matthew Farrens and Arvin Park",
+TITLE = "Dynamic Base Register Caching:  A Technique for Reducing Address Bus Width",
+BOOKTITLE = "Proceedings of the  18th Annual " # CA,
+MONTH = May,
+YEAR = 1991,
+NOTE = "Toronto, Canada",
+PAGES = "128--137"
+}
+
+@inproceedings{FeMi90,
+author = "Feeley, Marc and James S. Miller", 
+title = "A Parallel Virtual Machine for Efficient {S}cheme Compilation", 
+crossref = "LFP90", 
+key = "",
+pages = "119--130"
+}
+
+@inproceedings{Fe:Igor,
+title = "{IGOR}: A System For Program Debugging Via Reversible Execution",
+author = "Stuart I. Feldman and Channing B. Brown",
+crossref = "PDD88",
+key = "",
+pages = "112--123"
+}
+
+@article{FY:LGCVMCS,
+AUTHOR = "Robert R. Fenichel and Jerome C. Yochelson",
+TITLE = "A {LISP} Garbage-Collector for Virtual-Memory Computer Systems",
+JOURNAL = cacm, VOLUME = 12, NUMBER = 11, YEAR = 1969, MONTH = nov,
+PAGES = {611--612}
+}
+
+@article{Ferr76,
+author = "Domenico Ferrari",
+title = "The improvement of program behavior",
+journal = "{IEEE} Computer",
+month = Nov,
+year = 1976,
+pages = {39--47}
+}
+
+@manual{Fran89,
+title = "Allegro Common {L}isp Manual",
+year = 1989,
+organization = "Franz Inc."
+}
+
+@incollection{FrHK84,
+author = "Friedman, D. P. and C. T. Haynes and Kohlbecker, E.",
+title = "Programming With Continuations",
+editor = "P. Pepper",
+booktitle = "Program Transformation and Programming Environments",
+pages = "263--274",
+publisher = SV,
+year = 1984
+}
+
+@article{FrW:RCCMCE,
+AUTHOR = "D. P. Friedman and D.S. Wise",
+TITLE = "Reference Counting Can Manage the Circular Environments of Mutual Recursion",
+JOURNAL = IPL,
+YEAR = 1979,
+VOLUME = 8,
+NUMBER = 1,
+PAGES = {41--44},
+MONTH = Jan
+}
+
+@misc{FuMY91,
+author = "Shinichi Furusou and Satoshi Matsuoka and Akinori Yonezawa",
+title = "Parallel Conservative Garbage Collection with Fast Allocation",
+unpublished= "Position paper for {OOPSLA} '91 Workshop on Garbage
+Collection in Object-Oriented Systems. Summary appears in \cite{WH:GC91}",
+month = Oct,
+year = 1991 }
+
+@book{Gabr85,
+author = "Richard P. Gabriel",
+title = "Performance and Evaluation of {Lisp} Systems",
+series = "Series in Computer Science",
+publisher = "{MIT} Press",
+address = "Cambridge, Massachusetts",
+year = 1985
+}
+
+@article{Ga:WisB,
+author = "Richard P. Gabriel",
+title = "Lisp: Good News, Bad News, How to Win Big",
+journal = "A.I. Expert",
+volume = 6,
+number = 6,
+month = jun,
+pages = "31--39",
+year = 1991
+}
+
+@article{GN:AGCCFS,
+	author = "Garnett, N.H. and R.M. Needham",
+	title = "An Asynchronous Garbage Collector for
+		the {Cambridge File Server}",
+	journal = "Operating Systems Review",
+	year = 1980,
+	volume = 14,
+	number = 4,
+	pages = "36--40",
+}
+
+
+@inproceedings{GJSO:SFS,
+author = "David K. Gifford and Pierre Jouvelot and Mark A. Sheldon and 
+O'Toole, Jr., James W.",
+title = "Semantic File Systems",
+crossref = "SOSP91",
+key = "",
+pages = {16--25}
+}
+
+@inproceedings{G:GRC,
+AUTHOR = "Benjamin Goldberg",
+TITLE = "Generational Reference Counting: A Reduced-Communication
+  Distributed Storage Reclamation Scheme",
+CROSSREF = "PLDI89",
+KEY = "",
+PAGES= {313--320}
+}
+
+@inproceedings{Go:TFGC,
+AUTHOR = "Benjamin Goldberg",
+TITLE = "Tag-free Garbage Collection for Strongly-Typed Programming Languages",
+CROSSREF = "PLDI91",
+KEY = "",
+PAGES= {165--176}
+}
+
+@inproceedings{GoGa88,
+author = "Goldman, Ron and Richard P. Gabriel", 
+title = "Preliminary Results With the Initial Implementation of {Q}lisp",
+crossref = "LFP88",
+key = "",
+pages = "143--152"
+}
+
+@inproceedings{GH:DPA,
+author = "R.P. Goldberg and R. Hassinger",
+title = "The Double Paging Anomaly",
+booktitle = "{AFIPS} National Computer Conference",
+year = 1974,
+month = May,
+pages = {195--199}
+}
+
+@incollection{Gr:LispMachine,
+title = "The {LISP} Machine",
+author = "Richard Greenblatt",
+booktitle = "Interactive Programming Environments",
+publisher = "McGraw Hill",
+editor = "D.R. Barstow and H.E. Shrobe and E. Sandewall",
+year = 1984
+}
+
+
+@mastersthesis{Gr:MPADC,
+title = "Multiple Prefetch Adaptive Disk Caching with Strategic Data Layout",
+author = "Knut S. Grimsrud",
+school = "Brigham Young University",
+year = 1989,
+month = dec
+}
+
+@book{Gris83,
+author = "R. E. Griswold and M. T. Griswold",
+title = "The {Icon} Programming Language",
+publisher = "Prentice-Hall, Inc.",
+address = "Englewood Cliffs, NJ",
+year = 1983
+}
+
+@article{GP:DITEOMS,
+AUTHOR = "Dale H. Grit and Rex L. Page",
+TITLE = "Deleting Irrelevant Tasks in an Expression-Oriented Multiprocessor System",
+JOURNAL = toplas, VOLUME = 3, NUMBER = 1, YEAR = 1981, MONTH = jan,
+PAGES = {49--59}
+}
+
+@inproceedings{HMT:TSLS,
+AUTHOR = "Joseph Y. Halpern and Albert R. Meyer and B. A. Trakhtenbrot",
+TITLE = "The Semantics of Local Storage, or What Makes the Free-List Free?",
+PAGES = {245--257},
+CROSSREF = "POPL84",
+key = ""
+}
+
+@article{Hals86,
+author = "R. Halstead",
+title = "Parallel Symbolic Computing",
+journal = "{IEEE} Computer",
+volume = 19,
+number = 8,
+month = aug,
+year = 1986,
+pages = "35--43"
+}
+
+@article{Han:CLR,
+AUTHOR = "Wilfred J. Hansen",
+TITLE = "Compact List Representation: Definition, Garbage Collection, and System Implementation",
+JOURNAL = cacm, VOLUME = 12, NUMBER = 9, MONTH = sep, YEAR = 1969, PAGES = {499--507}
+}
+
+@techreport{Hanson:FADMBOL,
+AUTHOR = "David R. Hanson",
+TITLE = "Fast Allocation and Deallocation of Memory Based on Object Lifetimes",
+INSTITUTION = PRINCETON,
+NUMBER = "CS-TR-191-88",
+YEAR = 1988,
+MONTH = nov
+}
+
+@inproceedings{HaFW84,
+author = "Haynes, C. T. and Friedman, D. P. and Wand, M.",
+title = "Continuations and Coroutines",
+crossref = "LFP84",
+key = "",
+pages = "293--298"
+}
+
+@inproceedings{Ha:KOO,
+author = "Barry Hayes",
+title = "Using Key Object Opportunism to Collect Old Objects",
+crossref = "OOPSLA91",
+key = "",
+pages = {33--46}
+}
+
+@mastersthesis{He:mthesis,
+TITLE = "Compile time Garbage Collection",
+AUTHOR = "Lucy Hederman",
+SCHOOL = "Rice University",
+ADDRESS = "Houston, Texas",
+YEAR = 1988
+}
+
+@article{HeKl85, 
+author = "Heering, J. and P.  Klint",
+title = "Towards Monolingual Programming Environments",
+journal = toplas,
+volume = 7, 
+number = 2, 
+month = apr, 
+year = 1985, 
+pages =  "183--213"
+}
+
+@phdthesis{Hendren:phd,
+AUTHOR="Laurie J. Hendren",
+TITLE="Parallelizing Programs with Recursive Data Structures",
+YEAR=1990, MONTH=apr,
+COMMENT = "Not about memory allocation per se, but the analysis is
+  useful for that application",
+SCHOOL=CORNELL,
+ADDRESS = "Ithaca, New York"
+}
+
+@article{HC:PAOFGC,
+AUTHOR = "Tim Hickey and Jacques Cohen",
+TITLE = "Performance Analysis of On-the-Fly Garbage Collection",
+JOURNAL = cacm, VOLUME = 27, NUMBER = 11, YEAR = 1984, MONTH = nov,
+PAGES = {1143--1154}
+}
+
+@article{Hill88,
+author = "Hill, Mark D.",
+title = "A Case for Direct-Mapped Caches", 
+journal = "{IEEE} Computer", 
+volume = 21, 
+number = 12,
+month = Dec, 
+year = 1988,
+pages = "25--40"
+}
+
+@article{HiSm89,
+author = "Hill, Mark D. and Alan Jay Smith", 
+title = "Evaluating Associativity in {CPU} Caches", 
+journal = "{IEEE} Transactions on Computers", 
+volume = 38, 
+number = 12,
+month = Dec,
+year = 1989, 
+pages = "1612--1629"
+}
+
+
+@inproceedings{UCH:DOCDD,
+author = {Urs H\"{o}lzle and Craig Chambers and David Ungar},
+title = "Debugging Optimized Code with Dynamic Deoptimization",
+crossref = "PLDI92",
+key = "",
+pages = {32--43}
+}
+
+@article{HH:ADDPP,
+title = "Analysis and Development of Demand Prepaging Policies",
+author = "R. Nigel Horspool and Ronald M. Huberman",
+journal = "Journal of Systems and Software",
+year = 1987,
+volume = 7,
+pages = "183--194"
+}
+
+
+@InProceedings{HMS:CPEWBI,
+author = "Antony L. Hosking and J. Eliot B. Moss and Darko Stefanovi{\'c}",
+title = "A Comparative Performance Evaluation of Write Barrier Implementations",
+crossref = "OOPSLA92",
+key = "",
+pages = "92--109"
+}
+
+@inproceedings{HB:AUPFPS,
+AUTHOR = "Paul Hudak and Adrienne Bloss",
+TITLE = "The Aggregate Update Problem in Functional Programming Systems",
+PAGES = {300--314},
+CROSSREF = "POPL84",
+key = ""
+}
+
+@inproceedings{Hudak:SMRCA,
+AUTHOR = "Paul Hudak",
+TITLE = "A Semantic Model of Reference Counting and its Abstraction",
+CROSSREF = "LFP86",
+KEY = "",
+PAGES = {351--363}
+}
+
+@phdthesis{Hudak:phd,
+	author = "Hudak, P.",
+	title = "Object and Task Reclamation in Distributed Applicative
+		Processing Systems",
+	school = "University of Utah",
+	address = "Salt Lake City, Utah",
+	month = jul,
+	year = 1982}
+
+@techreport{Hu:DGM,
+	author = "Hudak, P.",
+	title = "Distributed Graph Marking",
+	institution = "Yale University",
+	year = 1983,
+	type = "Research Report",
+	number = 268,
+	month = jan
+}
+
+@inproceedings{HK:GCTD,
+	author = "Hudak, P. and R.M. Keller",
+	title = "Garbage Collection and Task Deletion in Distributed
+		Applicative Processing Systems",  
+	crossref = "LFP82",
+	key = "",
+	pages = "168 -- 178"
+}
+
+
+@inproceedings{HK:CBC,
+AUTHOR = "Paul Hudak and David Kranz",
+TITLE = "A Combinator-based Compiler for a Functional Language",
+PAGES = {121--132},
+CROSSREF = "POPL84",
+key = ""
+}
+
+
+@inproceedings{HM:ICMO,
+author =  "Richard L. Hudson and J. Eliot B. Moss",
+title =  "Incremental collection of mature objects",
+crossref = "IWMM92",
+key = "",
+pages = "388--403"
+}
+
+@techreport{Hu:RCCSVM,
+author="R. John M. Hughes",
+title="Reference Counting with Circular Structures in Virtual Memory
+Applicative Systems",
+institution="Programming Research Group, Oxford University",
+address = "United Kingdom",
+type="Departmental Research Report",
+year=1982
+}
+
+@inproceedings{Hug:DGC,
+AUTHOR = "John Hughes",
+TITLE = "A Distributed Garbage Collection Algorithm",
+CROSSREF = "FPLCA85",
+key = "",
+PAGES = {256--272}
+}
+
+@misc{IYDGCUGRC,
+author = "Ichisuki, Yuuji and Akinori Yonezawa",
+title = "Distributed Garbage Collection Using Group Reference Counting",
+howpublished= "Position paper for {OOPSLA/ECOOP} '90 Workshop on Garbage
+Collection in Object-Oriented Systems. Summary appears in
+\cite{JJ:GCOOS}",
+note = "Available by anonymous Internet {FTP} from ftp.diku.dk
+(129.142.96.1) in pub/GC90",
+month = oct,
+year = 1990
+}
+
+@article{ISY:AFPDRGC,
+AUTHOR = "Katsuro Inoue and Hiroyuki Seki and Hikaru Yagi",
+TITLE = "Analysis of Functional Programs to Detect Run-Time Garbage Cells",
+JOURNAL = toplas,
+VOLUME = 10, NUMBER = 4, PAGES = {555--578}, YEAR = 1988, MONTH = oct
+}
+
+@article{Jeff85,
+author = "D. R. Jefferson",
+title = "Virtual Time",
+journal = toplas,
+volume = 7,
+number = 3,
+month = jul,
+year = 1985,
+pages = "404--425"
+}
+
+@inproceedings{Jeff87,
+author = "D. R. Jefferson and others",
+title = "Distributed Simulation and the {Time Warp Operating System}",
+crossref = "SOSP87",
+key = "",
+pages = "77--93"
+}
+
+@inproceedings{Jo:CFRB,
+title = "The Case For a Read Barrier",
+author = "Douglas Johnson",
+crossref = "ASPLOS4",
+key = "",
+pages = "96--107"
+}
+
+@article{Jo:RLRTGC,
+title = "Reducing the Latency of a Real-Time Garbage Collector",
+author = "Ralph E. Johnson",
+journal = "{ACM} Letters on Programming Languages and Systems",
+year = 1992,
+month = mar,
+volume = 1,
+number = 1,
+pages = {46--58}
+}
+
+@inproceedings{JJ:GCOOS,
+author = "Niels Christian Juul and Eric Jul",
+title = "Workshop Report: Garbage Collection in Object-Oriented Systems",
+crossref = "OOPSLA/ECOOP90Add",
+key = "",
+pages = "35--41"
+}
+
+@inproceedings{JJ:CRGCDS,
+author = "Niels Christian Juul and Eric Jul",
+title = "Comprehensive and Robust Garbage Collection in a Distributed System",
+crossref = "IWMM92",
+key = ""
+}
+
+@inproceedings{JM:FAIDFA,
+TITLE="A Flexible Approach to Interprocedural Data Flow Analysis and Programs with Recursive Data Structures",
+AUTHOR="Neil D. Jones and Steven S. Muchnick",
+CROSSREF="POPL82", 
+key = "",
+PAGES={66--74}
+}
+
+@techreport{JL:CWRCWD,
+author="Richard E. Jones and Rafael D. Lins",
+title="Cyclic Weighted Reference Counting without Delay",
+institution="University of Kent, Canterbury",
+address = "United Kingdom",
+number="28--92",
+month=Dec,
+year=1992,
+comments={\com Improves on [Lins and Jones, 1991] by allowing processors to
+continue to perform useful work in all circumstances.}
+}
+
+@inproceedings{JM:CTCGSA,
+AUTHOR = "Simon B. Jones and Daniel Le Metayer",
+TITLE = "Compile-time garbage collection by sharing analysis",
+BOOKTITLE = "Unknown (Func. Prog. Lang. and Comp. Arch.?)",
+YEAR=1989
+}
+
+@inproceedings{Joup90,
+author = "Jouppi, Norman P.", 
+title = "Improving Direct-Mapped Cache Performance by the Addition of a
+Small Fully-Associative Cache and Prefetch Buffers", 
+crossref = "CA90",
+key = "",
+pages = "364--373"
+}
+
+@article{Kaeh81, 
+author = "Kaehler, T.",  
+title = "Virtual Memory For an Object-Oriented Language",
+journal = "Byte",
+volume = 6, 
+number = 8, 
+month = aug, 
+year = 1981, 
+pages = "378--387"
+}
+
+@misc{Kaeh86,
+author = "Kaehler, T."
+}
+
+@mastersthesis{Katz86,
+author = "M. J. Katz",
+title = "{ParaTran}:  A Transparent, Transaction Based Runtime
+Mechanism For Parallel Execution of {Scheme}",
+school = MIT,
+month = jun,
+year = 1986
+}
+
+@unpublished{Kels90,
+author = "Kelsey, Richard",
+title = "Stack cache design",
+note = "Unpublished paper",
+}
+
+@inproceedings{KJLH89,
+author = "Kessler, Richard and Richard Jooss and Alvin Lebeck and Mark D.
+Hill",
+title = "Inexpensive Implementations of Set-Associativity", 
+booktitle = "16th Annual " # CA,
+month = jun, 
+year = 1989, 
+publisher = "{IEEE-ACM}",
+address = "Jerusalem, Israel",
+pages = "131--139"
+}
+
+@inproceedings{Kie:GM,
+AUTHOR = "Richard Kieburtz",
+TITLE = "The {G} {M}achine: A fast, graph-reduction evaluator",
+PAGES = {400--413},
+CROSSREF = "FPLCA85",
+key = ""
+}
+
+@inproceedings{Kn:AMFP,
+author = "Knight, Tom",
+title = "An Architecture for Nearly Functional Languages",
+crossref = "LFP86",
+key = "",
+pages = {105--112}
+}
+
+@inbook{Kn:GC,
+author = "Donald E. Knuth",
+title = "The Art of Computer Programming",
+volume = "1: Fundamental Algorithms",
+chapter = "2.3.5",
+type = "Section",
+pages = {406--422},
+publisher = AW,
+address = "Reading, Massachusetts",
+year = 1969
+}
+
+
+@inproceedings{KSDV:CCSMPOS,
+title = "Cache Coherence and Storage Management in a Persistent Object System",
+author = "B. Koch and T. Schunke and A. Dearle and F. Vaughan and C. Marlin and R. Fazekerley and C. Barter",
+crossref = "POS4",
+key = "",
+pages = {99--109}
+}
+
+@inproceedings{Ko:AIGC,
+author = "Elliot Kolodner",
+title = "Atomic incremental garbage collection and recovery for large stable heap",
+crossref  = "POS4",
+key = ""
+}
+
+@techreport{KLCE:PLB,
+AUTHOR = "Eric J. Koldinger and Henry M. Levy and Jeffrey S. Chase and Susan J. Eggers",
+TITLE = "The Protection Lookaside Buffer: Efficient Protection for Single-Address Space Computers",
+NUMBER = "91-11-05",
+MONTH = Nov,
+YEAR = 1991,
+INSTITUTION = "Department of Computer Science and Engineering, University of Washington",
+ADDRESS = "Seattle, Washington"
+}
+
+@article{KLS:CPCGR,
+author = "Koopman, Jr., Phillip J. and Peter Lee and Daniel P. Siewiorek",
+title = "Cache Performance of Combinator Graph Reduction",
+journal = toplas,
+year = 1992,
+month = apr,
+volume = 14,
+number = 2,
+pages = {265--297}
+}
+
+@techreport{KSA:GCDSMS,
+author = "Kordale, Rammohan and John Shilling and Mustaque Ahamad",
+title = "Garbage Collection in Distributed Shared Memory Systems",
+institution = "Georgia Institute of Technology",
+number = "GIT-CC-92/45",
+year = 1992
+}
+
+@inproceedings{KKRHP:Orbit,
+author = "Kranz, David A. and Richard Kelsey and Jonathan Rees and Paul Hudak and James Philbin and Norman Adams",
+title = "{ORBIT}:  An Optimizing Compiler For {S}cheme",
+booktitle = CC, 
+month = jun, 
+year = 1986, 
+note = "Published as {\em ACM SIGPLAN Notices 21}(7), July 1986",
+address = "Palo Alto, California",
+pages =  "219--233"
+}
+
+@phdthesis{Kranz:phd,
+author = "David A. Kranz",
+title = "{ORBIT}:  An Optimizing Compiler For {S}cheme",
+school = "Yale University",
+address = "New Haven, Connecticut",
+year = 1988,
+month = feb
+}
+
+@inproceedings{KrHM89,
+author = "Kranz, David A. and Robert H. Halstead and Eric Mohr",
+title = "{M}ul-{T}: A High-Performance Parallel {L}isp",
+crossref = "PLDI89",
+key = "",
+pages = "81--90"
+}
+
+@book{ST80:BHWA,
+TITLE = "Smalltalk-80: Bits of History, Words of Advice",
+EDITOR = "Glenn Krasner",
+PUBLISHER = AW,
+YEAR = 1983
+}
+
+@article{KuRo81,
+author = "Kung, H. T. and Robinson, J. T.",
+title = "On Optimistic Methods for Concurrency Control",
+journal = "{ACM} Transactions on Database Systems",
+volume = 6,
+number = 2,
+month = jun,
+year = 1981
+}
+
+@inproceedings{KS:EPGCS,
+author = "H.T. Kung and S.W. Song",
+title = "An Efficient Parallel Garbage Collection System and its Correctness Proof",
+booktitle = "{IEEE} Symposum on Foundations of Computer Science",
+year = 1977,
+month = oct,
+address = "Providence, Rhode Island",
+pages = {120--131}
+}
+
+
+@inproceedings{Lam:CPOBA,
+author = "Monica S. Lam and others",
+title = "The Cache Performance and Optimizations of Blocked Algorithms",
+crossref = "ASPLOS4",
+key = "",
+pages = "63--74"
+}
+
+@article{LLOW:OS,
+author = "Charles Lamb and Gordon Landis and Jack Orenstein and Dan Weinreb",
+title = "The {ObjectStore} Database System",
+journal = cacm,
+year = 1991,
+volume = 34,
+number = 10,
+month = oct,
+pages = {50--63}
+}
+
+@inproceedings{LD:IICGC,
+author =  "Bernard Lang and Francis Dupont",
+title =  "Incremental Incrementally Compacting Garbage Collection",
+crossref = "SIIT87",
+key = "",
+pages =  "253--263"
+}
+
+@inproceedings{LQP:GCTW,
+author =  "Bernard Lang and Christian Queinnec and Jos\'e Piquer",
+title =  "Garbage Collecting the World",
+booktitle =  "{ACM} Symposium on Principles of Programming",
+year = 1992,
+pages = "39--50",
+address = "Albuquerque, New Mexico",
+month = jan,
+ecritsdIcsla = 6,
+abstract = "Distributed symbolic computations involve the existence of 
+{\em remote references} allowing an object, local to a processor, to
+designate another object located on another processor. To reclaim
+inaccessible objects is the non trivial task of a distributed Garbage
+Collector (GC).  We present in this paper a new distributed GC algorithm
+which
+\begin{localenumerate}
+\item is fault-tolerant,
+\item is largely independent of how a processor garbage collects its
+      own data space,
+\item does not need centralized control nor global stop-the-world
+      synchronization,
+\item allows for multiple concurrent active GCs,
+\item does not require to migrate objects from processor to processor and
+\item eventually reclaims all inaccessible objects including
+      distributed cycles.
+\end{localenumerate}
+\par
+These results are mainly obtained through the concept of a {\em group}
+of processors (or processes).
+ Processors of a same group cooperate together to a GC inside this group;
+this GC is conservative with respect to the outside of the group.
+ A processor contributes to the global GC of all groups to which it
+belongs. Garbage collection on small groups reclaims quickly locally
+distributed garbage clusters, while garbage collection on large groups
+ultimately reclaims widely distributed garbage clusters, albeit more
+slowly.
+ Groups can be reorganized dynamically, in particular to tolerate
+failures of some member processors.
+ These properties make the algorithm usable on very large and evolving
+networks of processors.
+ Other than distributed symbolic computations, possible applications
+include for example distributed file or database systems."
+}
+
+
+@article{Lars77,
+author = "R. G. Larson",
+title = "Minimizing Garbage Collection as a Function of Region Size",
+journal = "{SIAM} Journal on Computing",
+volume = 6,
+number = 4,
+month = dec,
+year = 1977,
+pages = "663--667"
+}
+
+@techreport{Lee:msthesis,
+author = "Lee, Elgin Hoe-Sing", 
+title = "Object Storage and Inheritance for {SELF}, a Prototype-Based Object-Oriented Programming Language",
+institution = "Stanford University",
+address = "Palo Alto, California",
+month = dec,
+year = 1988,
+type = "Engineer's thesis"
+}
+
+@inproceedings{Leem85,
+author = "G. B. Leeman",
+title = "Building Undo/Redo Operations into the {C} Language",
+booktitle = "15th Annual International Symposium on Fault-Tolerant Computing",
+publisher = "{IEEE} Computer Society Press",
+year = 1985,
+pages = "410--415"
+}
+
+@article{Leem86,
+author = "G. B. Leeman",
+title = "A Formal Approach to Undo Operations in Programming
+Languages",
+journal = toplas,
+volume = 8,
+number = 1,
+month = jan,
+year = 1986,
+pages = "50--87"
+}
+
+@inproceedings{LM:PDRC,
+author = "Lermen C.W. and D. Maurer",
+title = "A Protocol for Distributed Reference Counting", 
+booktitle = FPCA,
+year = 1986,
+pages = {343--350}
+}
+
+@book{Le:CBCS,
+AUTHOR = "Henry M. Levy",
+TITLE = "Capability-Based Computer Systems",
+PUBLISHER = "Digital Press",
+ADDRESS = "Bedford, Massachusetts",
+YEAR = 1984
+}
+
+@inproceedings{LB:IMTGC,
+title = "Incremental Multi-Threaded Garbage Collection on Virtually
+Shared Memory Architectures",
+author = "Le Sergent, Thierry and Bernard Berthomieu",
+crossref = "IWMM92",
+key = "",
+pages = {179--199}
+}
+
+@inproceedings{Le:EDGCA,
+author = "Lester, David",
+title = "An Efficient Distributed Garbage Collection Algorithm",
+crossref = "PARLE89",
+key = "",
+page = "207--223"
+}
+
+
+@phdthesis{Li:phd,
+title = "Shared Virtual Memory on Loosely-Coupled Processors",
+author = "Kai Li",
+school = "Yale University",
+address = "New Haven, Connecticut",
+year = 1986
+}
+
+@article{LiHe83,
+author = "Lieberman, Henry and Carl Hewitt",
+title = "A Real-Time Garbage Collector Based on the Lifetimes of Objects",
+journal = CACM,
+volume = 26,
+number = 6,
+month = jun,
+year = 1983, 
+pages = "419--429"
+}
+
+@inproceedings{LL:GCDH,
+AUTHOR = "Ladin, Rivka and Liskov, Barbara",
+TITLE = "Garbage Collection of a Distributed Heap",
+BOOKTITLE = "Principles of Distributed Computing",
+YEAR = 1992,
+PAGES = {708--715}
+}
+
+@inproceedings{LL:HADSFTDGC,
+author = "Liskov, Barbara and Ladin, Rivka",
+title = "Highly-available distributed services and fault- tolerant distributed garbage collection",
+booktitle = "Fifth {ACM} Symposium on the Principles of Distributed Computing",
+pages = {29--39},
+year = 1989
+}
+
+@inproceedings{KlLe91,
+author = "Klaiber, Alexander C. and Henry M. Levy",
+title = "An Architecture for Software-Controlled Data Prefetching",
+booktitle = "18th Annual " # CA,
+publisher = ACM,
+year = 1991,
+month = may,
+pages = "43--53",
+address = "Toronto, Ontario"
+}
+
+@techreport{Li:CRCLMS,
+author="Rafael D. Lins",
+title="Cyclic Reference Counting with Lazy Mark-Scan",
+institution="University of Kent, Canterbury",
+address = "United Kingdom",
+number=75,
+month= jun,
+note="To appear in {\em Information Processing Letters}",
+year=1990,
+comments={\com Optimises [Martinez {\em et al}, 1990]. 
+Author claims improvements make this efficient.}
+}
+
+@techreport{LV:CSACRC,
+author="Rafael D. Lins and M\'{a}rcio A. Vasques",
+title="A Comparative Study of Algorithms for Cyclic Reference Counting",
+institution="University of Kent, Canterbury",
+address = "United Kingdom",
+number=92,
+month=aug,
+note="Submitted to {\em Software Practice and Experience}",
+year=1991,
+comments={\com Compares the performance of [Martinez {\em et al}, 1990] and
+several control strategies of [Lins, 1990].
+Also extends [Glaser and Thompson, 1987] to work with cyclic structures.}
+}
+
+@article{Li:SMAPCRC,
+author="Rafael D. Lins",
+title="A Shared Memory Architecture for Parallel Cyclic Reference
+Counting",
+journal="Microprocessing and Microprogramming",
+volume=34,
+pages="31--35",
+publisher="North-Holland",
+month=Sep,
+year=1991,
+comments={\com Describes a shared memory architecture based on
+reference counting algorithms described in [Martines {\et al}, 1990] and
+[Lins, 1990]}
+}
+
+@techreport{LJ:CWRC,
+author="Rafael D. Lins and Richard E. Jones",
+title="Cyclic Weighted Reference Counting",
+institution="University of Kent, Canterbury",
+address = "United Kingdom",
+number=95,
+month=Dec,
+year=1991,
+comments={\com Allows weighted reference counting
+[Bevan, 1987; Watson and Watson, 1987] to work with cyclic structures.
+Based on algorithms described in [Martines {\et al}, 1990] and [Lins, 1990]}
+}
+
+@article{Li:MSMAPCRC,
+author="Rafael D. Lins",
+title="A Multi-processor Shared Memory Architecture for Parallel
+Cyclic Reference Counting",
+journal="Microprocessing and Microprogramming",
+volume=35,
+pages="563--568",
+publisher="North-Holland",
+month=Sep,
+year=1992,
+comments={\com Generalises the architecture presented in [Lins, 1991a].}
+}
+
+@mastersthesis{Ma:DGCCSTS,
+author = "U. Maheshwari",
+title = "Distributed Garbage Collection in a Client-Server Transaction System",
+school = MIT # " {EECS} Department",
+year = 1992
+}
+
+@inproceedings{MG:EOSSOOE,
+title = "Extending the Operating System to Support an Object-Oriented Environment",
+author = "Jose Alves Marques and Paulo Guedes",
+crossref = "OOPSLA89",
+key = "",
+pages = {113--122}
+}
+
+
+@inproceedings{MRV:CGCDOS,
+author = "Mancini, Luigi V. and Vittoria Rotella and Simonetta Venosa",
+title = "Copying Garbage Collection for  Distributed Object Stores",
+booktitle = "10th Symposium on Reliable Distributed Systems",
+address = "Pisa, Italy",
+month = sep,
+year = 1991
+}
+
+@article{MS:FTRC,
+author = "Mancini, Luigi and S. K. Shrinivastava",
+title = "Fault-tolerant Reference Counting for Garbage Colection in Distributed Systems",
+journal = compj,
+volume = 34,
+number = 6,
+month = dec,
+year = 1991,
+pages = {503--513}
+}
+
+@incollection{MA:A68GC,
+TITLE = "An {ALGOL} 68 Garbage Collector",
+AUTHOR = "S. Marshall",
+CROSSREF = "Peck71",
+KEY = "",
+PAGES = {239--243}
+}
+
+@article{Ma:EGCA,
+AUTHOR = "Johannes J. Martin",
+TITLE = "An Efficient Garbage Compaction Algorithm",
+JOURNAL = cacm, VOLUME = 25, NUMBER = 8, MONTH = aug, YEAR = 1982,
+PAGES = {571--581}
+}
+
+@article{MWL:CRCLMS,
+author="A.D. Martinez and R. Wachenchauzer and Rafael D. Lins",
+title="Cyclic Reference Counting with Local Mark-Scan",
+journal=IPL,
+volume=34,
+pages="31--35",
+year=1990,
+comments={\com
+Presents a general garbage collection algorithm based on
+reference counting, which deals with cyclic data structures, and proves its
+correctness. Very inefficient.}
+}
+
+@article{Mc:cycles,
+author = "J. Harold McBeth",
+title = "On the reference counter method",
+journal = CACM,
+volume = 6,
+number =9,
+month = Sep,
+year = 1963,
+pages = {575}
+}
+
+@article{McC:RFSECM,
+author = "John McCarthy",
+title = "Recursive Functions of Symbolic Expressions and their Computation
+by Machine",
+journal = cacm,
+year = 1960,
+month = apr,
+volume = 3,
+number = 4,
+pages = {184--195}
+}
+
+@inproceedings{MiCh88,
+author = "Miller, B. P. and Choi, J. D.",
+title = "A Mechanism For Efficient Debugging of Parallel Systems",
+crossref = "PLDI88",
+key = "",
+pages = "135--144"
+}
+
+@techreport{Mi:CopyingGC,
+author = "Marvin Minsky",
+title = "A {LISP} Garbage Collector Algorithm Using Serial Secondary Storage",
+year = 1963,
+type = "A.I Memo",
+number = 58,
+institution = MIT # " Project {MAC}",
+address = "Cambridge, Massachusetts"
+}
+
+@inproceedings{MiBK86,
+author = "Mittal, S. and Bobrow, Daniel and Kahn, K.",
+title = "Virtual Copies: At the Boundary Between Classes and
+Instances",
+crossref = "OOPSLA86",
+key = "",
+pges = "159--166"
+}
+
+@inproceedings{MoBo91,
+author = "Mogul, Jeffrey C. and Anita Borg",
+title = "The Effect of Context Switches on Cache Performance",
+crossref = "ASPLOS4",
+key = "",
+pages = "75--84"
+}
+
+@phdthesis{Mo:phd,
+author = "K. A. Mohammed-Ali",
+title = "Object-Oriented Storage Management and Garbage Collection in
+Distributed Processing Systems",
+school = "Royal Institute of Technology, Dept. of Computer Systems", 
+address = "Stockholm, Sweden",
+year = 1984
+}
+
+@article{Mohe88,
+author = "Thomas G. Moher",
+title = "{PROVIDE}:  A Process Visualization and Debugging
+Environment",
+journal = ieeese,
+volume = 14,
+number = 6,
+month = jun,
+year = 1988,
+pages = "849--857"
+}
+
+@article{MW:OHLDT,
+author = "Thomas G. Moher and Paul R. Wilson",
+title = "Offsetting Human Limitations with Debugging Technology",
+journal = "{IEEE} Software",
+volume = 8,
+number = 3,
+month = may,
+year = 1991,
+pages = {11--13},
+annote = "Guest editors' introduction to issue on debugging"
+}
+
+@inproceedings{Mo:GCLLS,
+author = "Moon, David",
+title = "Garbage Collection in a Large {L}isp System",  
+crossref = "LFP84",
+key = "",
+pages = "235--246"
+}
+
+@inproceedings{Mo:AS3600,
+AUTHOR = "David A. Moon",
+TITLE = "Architecture of the {S}ymbolics 3600",
+BOOKTITLE = "The 12th Annual " # CA,
+address = "Boston, Massachusetts",
+month = jun,
+YEAR = 1985, PAGES = {76--83}
+}
+
+@article{Mo:TSEGCA,
+AUTHOR="F. Lockwood Morris",
+TITLE="A Time- and Space-Efficient Garbage Compaction Algorithm",
+JOURNAL=cacm, VOLUME=21, NUMBER = 8, YEAR=1978, MONTH=aug, PAGES={662--665}
+}
+
+@inproceedings{Mo:Mneme,  
+author = "Moss, J. Eliot B.",  
+title = "Addressing Large Distributed Collections of Persistent
+Objects:  The {M}neme Project's Approach",
+booktitle = "Second International Workshop on Database Programming
+Languages", 
+pages = "269--285",
+month = jun,
+year = 1989,
+address = "Glenedon Beach, Oregon",
+note = "Also available as Technical Report 89-68,
+University of Massachusetts Dept. of Computer and Information
+Science, Amherst, Massachusetts, 1989"
+}
+
+@techreport{Mo:Swizzle,  
+author = "Moss, J. Eliot B.",  
+title = "Working With Objects: To Swizzle or Not to Swizzle?",  
+type = "Technical Report", 
+number = "90--38",
+institution = "University of Massachusetts",
+address = "Amherst, Massachusetts",
+month = may,
+year = 1990
+}
+
+@inproceedings{Mo:LFGC,
+author = "J. Eliot B. Moss",
+title = "Lock-Free garbage collection for Multiprocessors",
+booktitle = "Parallel Algorithms and Architectures",
+month = jul,
+year = 1991
+}
+
+
+@techreport{Moyer91,
+author = "Moyer, Steven A.",
+title = "Performance of the i{PSC}/860 Node Architecture",
+institution = "University of Virginia, Institute for Parallel Computing, Engineering, and Applied Science",
+number = "IPC-TR-91-007",
+month = may,
+year = 1991
+}
+
+@inproceedings{MJ:BTO,
+AUTHOR = "Steven S. Muchnick and Neil D. Jones",
+TITLE = "Binding Time Optimizations in Programming Languages: {S}ome Thoughts toward the Design of an Ideal Language",
+PAGES = {77--91},
+CROSSREF = "POPL76",
+key = ""
+}
+
+@inproceedings{Mu:ALDMAS,
+AUTHOR = "Thomas P. Murtagh",
+TITLE = "A Less Dynamic Memory Allocation Scheme for {ALGOL}-like Languages",
+PAGES = {283--289},
+CROSSREF = "POPL84",
+key = "",
+COMMENT = "Uses call graph to allocate activation records many at once; reduce cost of procedure call"
+}
+
+@phdthesis{Mycroft:thesis,
+AUTHOR = "Alan Mycroft",
+TITLE = "Abstract Interpretation and Optimising Transformations for Applicative Programs",
+YEAR = 1981,
+SCHOOL = "University of Edinburgh",
+ADDRESS = "United Kingdom"
+}
+
+@inproceedings{NMK:LSSDSLE,
+AUTHOR = "Sanjai Narain and David McArthur and Philip Klahr",
+TITLE = "Large-Scale System Development in Several {LISP} Environments",
+CROSSREF = "IJCAI83", VOLUME = 2, PAGES = {859--861}
+}
+
+@article{NSW:PPGA,
+author = "I. A. Newman and R. P. Stallard and M. C. Woodward",
+title = "Performance of parallel garbage collection algorithms",
+journal = "Computer Studies",
+volume = 166,
+year = 1982,
+month = sep
+}
+
+@article{NSW:HMPGCA,
+author = "I. A. Newman and R. P. Stallard and M. C. Woodward",
+title = "A Hybrid Multiple Processor Garbage Collection Algorithm",
+journal = compj,
+volume = 30,
+number = 2,
+year = 1987,
+month = apr
+}
+
+@mastersthesis{No:SRSAMS,
+author = "A. K. Nori",
+title = "A Storage Reclamation Scheme for Applicative Multiprocessor Systems",
+school = "University of Utah",
+year = 1979,
+month = dec
+}
+
+@article{Nie:DMACS,
+AUTHOR = "Norman R. Nielsen",
+TITLE = "Dynamic Memory Allocation in Computer Simulation",
+JOURNAL = cacm,
+YEAR = 1977,
+VOLUME = 20,
+NUMBER = 11,
+MONTH = nov,
+PAGES = {864--873}
+}
+
+@phdthesis{Neirynck:phd,
+AUTHOR = "Anne Neirynck",
+TITLE="Static Analysis of Aliasing and Side Effects in Higher-Order
+  Languages",
+SCHOOL=CORNELL,
+ADDRESS = "Ithaca, New York",
+YEAR=1988, MONTH=jan
+}
+
+@inproceedings{NPD:CASS,
+AUTHOR="Anne Neirynck and Prakash Panangaden and Alan J. Demers",
+TITLE = "Computation of Aliases and Support Sets",
+CROSSREF="POPL87",
+key = "",
+PAGES= {274--283}
+}
+
+@inproceedings{NOPH:RBICC,
+title = "Replication-based Incremental Copying Collection",
+author = "Scott Nettles and James O'Toole and David Pierce and Nicholas Haines",
+crossref="IWMM92",
+key = "",
+pages = {357--364}
+}
+
+@article{Ni:GCSLDSRT,
+AUTHOR = "Nilsen, Kelvin",
+TITLE = "Garbage Collection of Strings and Linked Data Structures in Real Time",
+JOURNAL = spe,
+VOLUME = 18,
+NUMBER = 7,
+YEAR = 1988,
+MONTH = jul,
+PAGES = {613--640}
+}
+
+@techreport{NS:HARTGC,
+author = "Kelvin Nilsen and William J. Schmidt",
+title = "A High-Level Overview of Hardware Assisted Real-Time Garbage Collection",
+institution = "Dept. of Computer Science, Iowa State University",
+address = "Ames, Iowa",
+year = 1990,
+number = "TR 90-18a"
+}
+
+@incollection{NR:CGCSH,
+AUTHOR = "S. C. North and J. H. Reppy",
+TITLE = "Concurrent Garbage Collection on Stock Hardware",
+CROSSREF = "FPLCA87",
+KEY = "",
+PAGES = {113--133}
+}
+
+@techreport{Nuth87,
+author = "Nuth, Peter R.",
+title = "Communication Patterns in a Symbolic Multiprocessor",
+type = "Technical Report", 
+number = "MIT/LCS/TR-395",
+institution = "Massachusetts Institute of Technology Laboratory for
+Computer Science",
+address = "Cambridge, Massachusetts",
+month = Jun,
+year = 1987
+}
+
+@inproceedings{Ou:WAOSGF,
+author="John Ousterhout",
+title="Why Aren't Operating Systems Getting Faster as Fast as Hardware?",
+booktitle="Summer 1990 {USENIX} Conference",
+organization = "{USENIX} Association",
+month=jun,
+year=1990,
+address="Anaheim, California",
+publisher="{IEEE} Press",
+pages={247--256}
+}
+
+@inproceedings{Ow:MWSGC,
+AUTHOR="Susan Owicki",
+TITLE="Making the world safe for garbage collection",
+CROSSREF="POPL81",
+key = "",
+PAGES={77--86}
+}
+
+@inproceedings{PaLi88,
+author = "Pan, Douglas Z. and Linton, Mark",
+title = "Supporting Reverse Execution of Parallel Programs",
+crossref = "PDD88",
+key = "",
+pages = "112--123"
+}
+
+@article{Parnas:modules,
+TITLE="On the Criteria to be used in decomposing systems into modules",
+AUTHOR="D. L. Parnas",
+JOURNAL=cacm,
+YEAR=1972,MONTH=dec,NUMBER=12,VOLUME=15,PAGES={1053--1058}
+}
+
+@techreport{Pat:SOAR,
+AUTHOR="David A. Patterson",
+TITLE="Smalltalk on a {RISC}: Architectural Investigations",
+INSTITUTION="Computer Science Division, University of California at Berkeley",
+NUMBER="CS292R",
+YEAR=1983,
+MONTH=apr
+}
+
+@techreport{PeSo89,
+author = "Peng, C.-J. and Gurindar S. Sohi",
+title = "Cache Memory Design Considerations to Support Languages With
+Dynamic Heap Allocation",
+type = "Technical Report", 
+number = 860,
+institution = {Computer Sciences Dept. University of Wisconsin},
+address = "Madison, Wisconsin",
+month = Jul, 
+year = 1989
+}
+
+@techreport{PVEP:CRCAP,
+author="E. J. H. Pepels and M. C. J. D. {van Eekelen} and M. J. Plasmeijer",
+title="A Cyclic Reference Counting Algorithm and its Proof",
+institution="Computing Science Department",
+address="University of Nijmegen",
+year="1988",
+type="Technical report",
+number="88--10",
+comments={\com A correct and terminating version of the algorithm in
+[Brownbridge, 1985] and its proof. Based on [Salkild, 1987].
+Complexity is at least exponential.}
+}
+
+@inproceedings{PS:EFTGC,
+author = "David Plainfosse and Marc Shapiro",
+title = "Experience with Fault Tolerant garbage collection in a Distributed {L}isp System",
+crossref = "IWMM92",
+key = "",
+pages = "116--133"
+}
+
+@inproceedings{PoPr83,
+author = "Powell, M. L. and Presotto, D. L.",
+title = "Publishing: A Reliable Broadcast Communication Mechanism",
+crossref = "SOSP83",
+key = "",
+pages = "100--109"
+}
+
+@inproceedings{PrHH88,
+author = "Przybylski, Stephen and Mark Horowitz and John Hennessy",
+title = "Performance Tradeoffs in Cache Design",
+booktitle = "15th Annual " # CA,
+address = "Honolulu, Hawaii", 
+month = jun,
+year = 1988, 
+pages = "290--298"
+}
+
+@inproceedings{Przy90,
+author = "Przybylski, Stephen",
+title = "The Performance Impact of Block Sizes and Fetch Strategies",
+crossref = "CA90",
+key = "",
+pages = "160--169"
+}
+
+
+@inproceedings{QPQ:MDS,
+author =       "Christian Queinnec and Barbara Beaudoing and
+Jean-Pierre Queille",
+title =        "{M}ark {DURING} {S}weep rather than {M}ark {THEN} {S}weep",
+crossref =    "PARLE89",
+key = "",
+ecritsdIcsla = 1,
+abstract = "Garbage Collection frees the programmer from the burden of
+explicitly deallocating unused data. This facility induces a considerable
+overhead but also causes some delays that may affect real-time
+applications.  Guaranteed throughput (with at most short and
+predictable delays) is needed in many applications such as plane or
+plant control and requires at least a worst case analysis to identify
+the performances of the whole system.  Traditional GC are made of two
+phases~: the marker which identifies all useful data, followed by the
+sweeper which reclaims all useless data.  On-the-fly GC schemes were
+introduced to permit an application and a collector to run
+concurrently. That concurrency may lessen the GC penalty incurred by
+the application.
+\par
+We present here a new algorithm where the application,
+the marker and the sweeper are concurrent. The benefit is to tightly
+adjust collection rate to application consumption and have an allocation
+time bounded by a small constant. Moreover our algorithm does not waste memory
+and appears to be well suited for embedded systems.
+\par
+This ``mark {\sc during} sweep'' algorithm is completely presented.  An
+interesting single-processor and incremental realisation is also
+analysed and followed by  some implementation variations."
+}
+
+
+@article{Ra:DTD,
+author = "S. P. Rana",
+title = "A Distributed Solution to the Distributed Termination Problem",
+journal = IPL,
+volume = 17,
+pages = {43--46},
+year = 1983,
+month = jul
+}
+
+@article{Rand75,
+author = "Randell, Brian",
+title = "System Structure For Software Fault Tolerance",
+journal = ieeese,
+volume = "SE-1",
+number = 2,
+pages = "220--232",
+month = jun,
+year = 1975
+}
+
+@inproceedings{Rash87,
+author = "Rashid, R. and Tevanian, A. and Young, M. and others",
+title = "Machine-Independent Virtual Memory Management For Paged
+Uniprocessor and Multiprocessor Architectures",
+crossref = "ASPLOS2",
+key = "",
+pages = "31--39"
+}
+
+@techreport{ReCl86,
+author = "Rees, Jonathan and William Clinger",
+title = "The Revised$^3$ Report on the Algorithmic Language {Scheme}",
+type = "AI Memo",
+number = "848a",
+institution = MIT,
+address = "Cambridge, Massachusetts",
+month = sep,
+year = 1986
+}
+
+@inproceedings{RoDe90,
+author = "Robertson, J. and M. Devarakonda",
+title = "Data Cache Management Using Frequency-Based Replacement",
+booktitle = "{SIGMETRICS}",
+year = 1990
+}
+
+@inproceedings{Ro:ASPO,
+AUTHOR = "John Rosenberg",
+TITLE = "Architectural Support for Persistent Objects",
+PAGES = "48--60",
+crossref = "IWOOOS91",
+key = ""
+}
+
+@inproceedings{RHBM:SPS,
+title = "Stability in a Persistent Store Based on a Large Virtual Memory",
+author = "John Rosenberg and F. A. Henskens and A. L. Brown and R. Morrison and D. Munro",
+year = 1990,
+booktitle = "Security and Persistence:  Proceedings of the
+International Workshop on Computer Architectures to Support Security
+and Persistence of Information",
+editors = "John Rosenberg and J. Leslie Keedy",
+address = "Bremen, West Germany",
+publisher = SV # " and the British Computer Society",
+pages = {229--245}
+}
+
+@inproceedings{RK:OMAMA,
+author = "John Rosenberg and J. Leslie Keedy",
+title = "Object Management and Addressing in the {MONADS} Architecture",
+booktitle = "Second International Workshop on Persistent Object Systems",
+address = "Appin, Scotland",
+year = 1987
+}
+
+@inproceedings{RO:LFS,
+author = "Mendel Rosenblum and John K. Ousterhout",
+title = "The Design and Implementation of a Log-Structured File System",
+crossref = "SOSP91",
+key = "",
+pages = {1--15}
+}
+
+@techreport{Ro:CedarGC,
+AUTHOR = "Paul Rovner",
+TITLE = "On Adding Garbage Collection and Runtime Types to a Strongly-Typed, Statically Checked, Concurrent Language",
+INSTITUTION = PARC,
+YEAR = 1985,
+type = "Technical Report",
+address = "Palo Alto, California",
+month = jul,
+NUMBER = "CSL-84-7"
+}
+
+@techreport{Ro:Modula,
+AUTHOR = "Paul Rovner and Roy Levin and John Wick",
+TITLE = "On Extending {M}odula-2 For Building Large, Integrated Systems",
+INSTITUTION = DECSRC,
+address = "Palo Alto, California",
+YEAR = 1985,
+NUMBER = 3
+}
+
+@inproceedings{Ru:DCGC,
+author = "Martin Rudalics",
+title = "Distributed Copying Garbage Collection",
+crossref = "LFP86",
+key = "",
+pages = {364--372}
+}
+
+@phdthesis{Ruggieri:phd,
+AUTHOR = "Christina Ruggieri",
+TITLE = "Dynamic Memory Allocation Techniques Based on the Lifetimes of Objects",
+SCHOOL = "Purdue University",
+ADDRESS = "West Lafayette, Indiana",
+YEAR = 1987, MONTH = aug
+}
+
+@inproceedings{RM:LADAO,
+AUTHOR = "Christina Ruggieri and Thomas P. Murtagh",
+TITLE = "Lifetime Analysis of Dynamically Allocated Objects",
+CROSSREF = "POPL88",
+key = "",
+PAGES={285--293}
+}
+
+@inproceedings{SB:IDS,
+author = "M. Schelvis and E. Bledoeg",
+title = "The Implementation of Distributed Smalltalk",
+booktitle = ECOOP,
+editor = "S. Gjessing and K. Nygaard",
+year = 1988,
+month = aug,
+address = "Oslo, Norway",
+publisher = SV,
+series = LNCS,
+number = 322
+}
+
+@inproceedings{Sc:IDTP,
+author = "M. Schelvis",
+title = "Incremental Distribution of Timestamp Packets: a New Approach
+to Distributed Garbage Collection",
+crossref = "OOPSLA89",
+key = "",
+pages = {37--48}
+}
+
+@mastersthesis{Sa:IATRCA,
+author = "Jon D. Salkild",
+title = "Implementation and Analysis of Two Reference Counting Algorithms",
+school = "University College",
+address = "London, United Kingdom",
+year=1987,
+comments = {\com Proves the incorrectness of the algorithm in
+[Brownbridge, 1985] and suggests a way of fixing it.
+Unfortunately his algorithm is non-terminating in pathological cases.}
+}
+
+@phdthesis{Schmidt:phd,
+author = "William J. Schmidt",
+title = "Issues in the Design and Implementation of a Real-Time
+Garbage Collection Architecture",
+year = 1992,
+school = "Iowa State University",
+address = "Ames, Iowa",
+note = "Technical report ISUTR 92-25"
+}
+
+@techreport{SETL131,
+AUTHOR="Jacob T. Schwartz",
+TITLE="More on Copy Optimization of {SETL} Programs",
+NUMBER=131,
+TYPE="{SETL} Newsletter",
+INSTITUTION=NYUCOUR,
+YEAR=1974,
+MONTH=jun
+}
+
+@inproceedings{Sh:FTS,
+title = "A Fault-tolerant, Scalable, Low-overhead Distributed Garbage Detection Protocol",
+author = "Marc Shapiro",
+booktitle = "Tenth Symposium on Reliable Distributed Systems",
+address = "Pisa, Italy",
+year = 1991,
+month = sep,
+publisher = "{IEEE} Computer Society Press"
+}
+
+
+@inproceedings{SKW:TPS,
+AUTHOR = "Singhal, Vivek and Sheetal V. Kakkad and Paul R. Wilson",
+TITLE = "{T}exas: an Efficient, Portable Persistent Store",
+crossref = "POS5",
+key = ""
+}
+
+
+@article{Sch:OVHLL1,
+AUTHOR = "Jacob T. Schwartz",
+TITLE = "Optimization of Very High Level Languages---{I}.  {V}alue Transmission and its Corollaries",
+JOURNAL = "Journal of Computer Languages",
+YEAR = 1975,
+VOLUME = 1,
+PAGES = {161--194}
+}
+
+@article{Sch:OVHLL2,
+AUTHOR = "Jacob T. Schwartz",
+TITLE = "Optimization of Very High Level Languages---{II}.  {D}educing Relationships of Inclusion and Membership",
+JOURNAL = "Journal of Computer Languages",
+YEAR = 1975,
+VOLUME = 1,
+PAGES = {197--218}
+}
+
+@techreport{SETL176,
+AUTHOR="Jacob T. Schwartz",
+TITLE="A coarser, but simpler and considerably more efficient copy optimization technique",
+NUMBER=176,
+TYPE="{SETL} Newsletter",
+INSTITUTION=NYUCOUR,
+YEAR=1976,
+MONTH=aug
+}
+
+@inproceedings{S:VSUDOAP,
+AUTHOR = "Jerald Schwarz",
+TITLE = "Verifying the Safe Use of Destructive Operations in Applicative Programs",
+YEAR = 1978,
+BOOKTITLE = "Program Transformations--Proceedings of the 3rd International Symposium on Programming",
+PAGES = {395--411}
+}
+
+@inproceedings{SS:PGGC,
+author = "Ravi Sharma and Mary Lou Soffa",
+title = "Parallel Generational Garbage Collection",
+crossref = "OOPSLA91",
+key = "",
+pages = {16--32}
+}
+
+
+
+@inproceedings{SM:TCEMEA,
+author = "Smith, J. M. and Maguire, Jr., Gerald Q.",
+title = "Transparent Concurrent Execution of Mutually Exclusive
+Alternatives",
+booktitle = "Ninth International Conference on Distributed Computer
+Systems",
+month = jun,
+year = 1989,
+address = "Also available as Technical Report
+CUCS-387-88, Columbia University, New York, New York"
+}
+
+@inproceedings{SW:MAOSH,
+author = "Walter R. Smith and Robert V. Welland",
+title = "A Model for Address-Oriented Software and Hardware",
+booktitle = "25th Hawaii International Conference on Systems Sciences",
+month = Jan,
+year = 1991
+}
+
+@techreport{Soba88,
+author = "Patrick G. Sobalvarro",
+title = "A Lifetime-Based Garbage Collector for {LISP} Systems on
+General-Purpose Computers",
+type = "{B.S.} thesis",
+institution = MIT # " {EECS} Department",
+address = "Cambridge, Massachusetts",
+year = 1988
+}
+
+@inproceedings{St:SM,
+author = "Mark E. Staknis",
+title = "Sheaved Memory: Architectural Support for State Saving and
+Restoration in Paged Systems",
+crossref = "ASPLOS3",
+key = "",
+pages = "96--102"
+}
+
+@techreport{Stam82,  
+author = "Stamos, James William", 
+title = "A Large Object-Oriented Virtual Memory: Grouping Strategies,
+Measurements, and Performance",
+institution= PARC,
+address = "Palo Alto, California",
+type = "Technical Report", 
+number = "SCG-82-2", 
+month = May,
+year = 1982
+}
+
+@article{Stam84,
+author = "Stamos, James William",
+title = "Static Grouping of Small Objects to Enhance Performance of a
+Paged Virtual Memory",
+journal = "{ACM} Transactions on Programming Languages and Systems", 
+volume = 2,
+number = 2,
+month = May, 
+year = 1984, 
+pages = "155--180"
+}
+
+@techreport{Stam86,
+author = "James William Stamos",
+title = "Programmer-Invoked Local Garbage Collection: A Design",
+type = "Technical Report",
+number = "unpublished draft",
+institution = MIT,
+year = 1986
+}
+
+@article{SPUR86,
+author = "Hill, Mark and Susan Eggers and James Larus and George Taylor and others",
+title = "{SPUR}: A {VLSI} Multiprocessor Workstation",
+journal = "{IEEE} Computer",
+volume = 19,
+number = 11,
+month = nov,
+year = 1986,
+pages = "8--22"
+}
+
+@techreport{St:RACFS,
+AUTHOR = "Guy L. {Steele Jr.}",
+TITLE="{RABBIT}: A Compiler for {SCHEME}",
+INSTITUTION= MIT,
+YEAR=1978,
+MONTH=may
+}
+
+@article{St:MCGC,
+author = "Guy L. {Steele Jr.}",
+title = "Multiprocessing Compactifying Garbage Collection",
+journal = cacm,
+year = 1975,
+month = sep,
+volume = 18,
+number = 9,
+pages = {495--508}
+}
+
+@techreport{StSu75,
+author = "{Steele Jr}, Guy L. and Gerald J. Sussman",
+title = "{S}cheme: An Interpreter For the Extended Lambda Calculus",
+type = "AI Memo",
+number = 349,
+institution = MIT # " Artificial Intelligence Laboratory",
+address = "Cambridge, Massachusetts",
+year = 1975
+}
+
+@phdthesis{Stee87,
+author = "Steenkiste, Peter",
+title = "Lisp on a Reduced-Instruction-Set Processor:  Characterization and
+Optimization",
+school = "Stanford University", 
+address = "Palo Alto, California", 
+note = "Technical Report CSL-TR-87-324, Stanford University Computer System Laboratory", 
+month = mar,
+year = 	1987
+}
+
+@inproceedings{SH:TTCIL,
+author = "Peter Steenkiste and John Hennessy",
+title = "Tags and Type Checking in Lisp",
+crossref = "ASPLOS2",
+key = "",
+pages = "50--59"
+}
+
+@inproceedings{Stoye:SPMRCR,
+AUTHOR = "W. R. Stoye and T. J. W. Clarke and A. C. Norman",
+TITLE = "Some Practical Methods for Rapid Combinator Reduction",
+CROSSREF = "LFP84",
+KEY = "",
+PAGES = {159--166},
+COMMENT = "Useful tricks in a ``by the book'' combinator reduction machine"
+}
+
+@article{StYe85,
+author = "Strom, Robert E. and Yemini, Shaula",
+title = "Optimistic Recovery in Distributed Systems",
+journal = tocs,
+volume = 3,
+number = 3,
+month = aug,
+year = 1985,
+pages = "204--226",
+}
+
+@techreport{StYB88,
+author = "Strom, R. E. and Yemini, S. and Bacon, D.",
+title = "A Recoverable Object Store",
+type = "Technical Report",
+institution = "{IBM} T. J. Watson Research Center",
+year = 1988,
+note = "Submitted for publication"
+}
+
+@article{StCo87,
+author = "Strothotte, T. W. and Cormack, G. V.",
+title = "Structured Program Lookahead",
+journal = "Comp. Lang.",
+volume = 12,
+number = 2,
+year = 1987,
+pages = "95--108"
+}
+
+@inproceedings{Ta:CE,
+author = "M. Taunton",
+title = "Compressed Executables: an Exercise in Thinking Small",
+booktitle = "Summer 1991 {USENIX} Conference",
+organization = "{USENIX} Association",
+year = 1991,
+month = jun,
+location = "Nashville, Tennessee",
+pages = {385--403}
+}
+
+@article{TeRe81,
+author = "Teitelbaum, T. and Reps, T.",
+title = "The {Cornell Program Synthesizer}:  A Syntax Directed
+Programming Environment",
+journal = cacm,
+volume = 4,
+number = 9,
+month = sep,
+year = 1981,
+pages = "563--573"
+}
+
+@incollection{Teit81,
+author = "Teitelman, W.",
+title = "Automated Programmering: The {Programmer's Assistant}",
+editor = "Barstow and Shrobe and Sandewell",
+booktitle = "Interactive Programming Environments",
+address = "New York",
+publisher = "McGraw-Hill",
+year = 1981,
+pages = "232--239"
+}
+
+@inproceedings{TA:DSMLWRE,
+title = "Debugging {S}tandard {ML} Without Reverse Engineering",
+author = "Andrew Tolmach and Andrew Appel",
+crossref = "LFP90",
+key = ""
+}
+
+@inproceedings{Unga84,
+author = "Ungar, David M.",
+title = "Generation Scavenging: A Non-disruptive High-Performance Storage
+Reclamation Algorithm",
+crossref = "SESPSDE87",
+key = "",
+pages = "157--167"
+}
+
+@book{Unga86,
+author = "David Ungar",
+title = "Design and Evaluation of a High-Performance {S}malltalk
+System",
+publisher = "{MIT} Press",
+address = "Cambridge, Massachusetts",
+year = 1986
+}
+
+@inproceedings{UnJa88,
+author = "Ungar, David and Frank Jackson",
+title = "Tenuring Policies For Generation-Based Storage Reclamation",
+crossref = "OOPSLA88",
+key = "",
+pages = "1--17"
+}
+
+
+@InProceedings{ChambersUL89,
+  author = 	 "Craig Chambers and David Ungar and Elgin Lee",
+  title = 	 "An efficient implementation of {Self}, a dynamically-typed
+		  object-oriented language based on prototypes",
+  booktitle =	 OOPSLA89,
+  pages =	 "49--70",
+  year =	 1989,
+  address =	 OOPSLA89addr,
+  month =	 OOPSLA89date
+}
+
+@article{VD:DICIL,
+author = "Van Dyke, E. J.",
+title = "A Dynamic Incremental Compiler For an Interpretive Language",
+journal = "Hewlett-Packard Journal",
+month = jul,
+year = 1977,
+pages = "17--24"
+}
+
+@inproceedings{VD:SLPSUCH,
+author = "Francis Vaughan and Alan Dearle",
+title = "Supporting Large Persistent Stores Using Conventional Hardware",
+crossref = "POS5",
+key = ""
+}
+
+@inproceedings{Va:PDA,
+author = "Francis Vaughan and T. Schunke and B. Koch and A. Dearle and C. Marlin and C. Barter",
+title = "A Persistent Distributed Architecture Supported by the Mach Operating
+System",
+booktitle = "Workshop Proceedings: Mach",
+organization = "{USENIX} Association",
+year = 1990,
+month = oct,
+address = "Burlington, Vermont",
+pages = {123--140}
+}
+
+@phdthesis{VeGC,
+author = "Vestal,  S. C.",
+title = "Garbage Collection: An Exercise in Distributed, Fault-Tolerant  Programming",
+school = "University of Washington",
+address = "Seattle, Washington",
+year = 1987,
+month = jan
+}
+
+@inproceedings{Vitt84,
+author = "Vitter, J. S.",
+title = "{US\&R}: A New Framework For Redoing",
+crossref = "SESPSDE87",
+key = "",
+pages = "168--176"
+}
+
+@article{Wa:AARTGC,
+AUTHOR = "Philip L. Wadler",
+TITLE = "Analysis of an Algorithm for Real Time Garbage Collection",
+JOURNAL = cacm, VOLUME = 19, NUMBER = 9, YEAR = 1976, MONTH = Sep,
+PAGES = {491--500}
+}
+
+@techreport{GNUTypeDesc,
+author="David Wallace",
+title="Runtime Type Support in {C} and {C++}",
+institution="Cygnus Reports",
+number="revision 1.1",
+year=1992
+}
+
+@incollection{Watson-Watson-1987,
+	author = "Watson, P. and I. Watson",
+	title = "An Efficient Garbage Collection Scheme for Parallel
+		Computer Architecture", 
+	crossref = "PARLE87",
+	key = "",
+	pages = "432 -- 443"
+}
+
+@inproceedings{WeDH89,
+title = "The Portable Common Runtime Approach to Interoperability",
+crossref = "SOSP89",
+key = "",
+author = "Mark Weiser and Alan Demers and Carl Hauser"
+}
+
+@article{We:PCGC,
+title = "Pitfalls of Conservative Garbage Collection",
+author = "E. P. Wentworth",
+journal = spe,
+year = 1990,
+month = jul,
+volume = 20,
+number = 7,
+pages = {719--727}
+}
+
+@inproceedings{Whit80,
+author = "White, Jon L.",
+title = "Address/Memory Management For a Gigantic {L}isp Environment, or, {GC}
+Considered Harmful",
+booktitle = TLC,
+address = "Redwood Estates, California",
+pages = "119--127",
+month = aug,
+year = 1980
+}
+
+@inproceedings{WD:PSAOFPSS,
+author = "Seth J. White and David J. Dewitt",
+title = "A Performance Study of Alternative Object Faulting and Pointer Swizzling Strategies",
+booktitle = "18th International Conference on Very Large Data Bases",
+year = 1992,
+month = oct,
+address = "Vancouver, British Columbia",
+publisher = MK,
+note = "To appear"
+}
+
+
+@inproceedings{WWH:DG,
+author = "Ifor W. Williams and Mario I. Wolkzko and Trevor P. Hopkins",
+title = "Dynamic Grouping in an Object-Oriented Virtual Memory Hierarchy",
+booktitle = ECOOP,
+publisher = SV,
+month = jun,
+pages = {87--96},
+address = "Paris, France",
+year = 1987
+}
+
+@techreport{WWH:RDGOOMH,  
+author = "Williams, Ifor and Mario I. Wolkzko and Trevor Hopkins",
+title = "Realization of a Dynamically Grouped Object-Oriented Memory
+Hierarchy",
+type = "Technical Report", 
+institution = "University of Manchester Dept. of Computer Science", 
+address = "Manchester, United Kingdom",
+year = 1990
+}
+
+@article{Wils88a,
+author = "Paul R. Wilson",
+title = "Opportunistic Garbage Collection",
+journal = SIGPLAN,
+volume = 23,
+number = 12,
+month = dec,
+year = 1988,
+pages = "98--102"
+}
+
+@mastersthesis{Wils88b,
+author = "Paul R. Wilson",
+title = "Two Comprehensive Virtual Copy Mechanisms",
+school = "University of Illinois at Chicago, Electrical Engineering and Computer Science Department",
+address = "Chicago, Illinois",
+year = 1988
+}
+
+@unpublished{Wils89,  
+author = "Wilson, Paul R.",
+title = "Heap Management and Hierarchical Memories",
+note = "Unpublished working paper", 
+month = May,
+year = 1989
+}
+
+@misc{Wi:ISHMMH,
+author = "Wilson, Paul R.",
+title = "Some Issues and Strategies in Heap Management and Memory
+Hierarchies",
+year = 1990,
+month = oct,
+howpublished= "Unpublished position paper for {OOPSLA/ECOOP} '90 Workshop on
+Garbage Collection in Object-Oriented Systems.  See \cite{JJ:GCOOS}",
+note = "Also appears in {\em {SIGPLAN} Notices 23}(1):45--52, January 1991"
+}
+
+@techreport{Wi:SwizzCAN,
+title = "Pointer Swizzling at Page Fault Time: Efficiently Supporting
+Huge Address Spaces on Standard Hardware",
+author = "Paul R. Wilson",
+type = "Technical Report", 
+number = "UIC-EECS-90-6",
+institution = "University of Illinois at Chicago, Electrical Engineering and Computer Science Department",
+address = "Chicago, Illinois", 
+month = Dec, 
+year = 1990,
+note = "Also appears in {\em Computer Architecture News 19}(4):6-13, June 1991"
+}
+
+@inproceedings{WK:PSPFT,
+title = "Pointer Swizzling at Page Fault Time: Efficiently and Compatibly
+Supporting Huge Addresses on Standard Hardware",
+author = "Paul R. Wilson and Sheetal V. Kakkad",
+crossref = "IWOOOS92",
+key = "",
+pages = {364--377}
+}
+
+@phdthesis{Wi:PhD,
+author = "Paul R. Wilson",
+title = "Heap Management and Memory Hierarchies",
+school = "University of Illinois at Chicago",
+month = Dec,
+year = 1991
+}
+
+@inproceedings{Wi:OSSSO,
+author = "Wilson, Paul R.",
+title = "Operating System Support for Small Objects",
+crossref = "IWOOOS91",
+key = "",
+pages = "80--86",
+note = "Revised version to appear in {\em Computing Systems}"
+}
+
+@inproceedings{Wi:SMMH,
+author = "Wilson, Paul R.",
+title = "Storage Management and Memory Heirarches",
+crossref = "IWMM92",
+key = "",
+note = "Unpublished discussion session paper"
+}
+
+@inproceedings{Wi:UGCT,
+Author = "Wilson, Paul R.",
+title = "Uniprocessor Garbage Collection Techniques",
+crossref = "IWMM92",
+key = "",
+pages = {1--42}
+}
+
+@unpublished{Wi:GC,
+author = "Wilson, Paul R.",
+title = "Garbage Collection",
+note = {Expanded version of \cite{Wi:UGCT},
+now covering parallel, distributed, and conservative collection.  In
+preparation.},
+year = 1993
+}
+
+@inproceedings{WLM:ILOTDGC,
+author = "Michael S. Lam and Paul R. Wilson and Thomas G. Moher",
+title = "Object Type Directed Garbage Collection to Improve Locality",
+crossref = "IWMM92",
+key = "",
+pages = {404--425}
+}
+
+@unpublished{WC:Tracing,
+author = "Paul R. Wilson and Atif Chaudrhy",
+title = "Efficient tracing using virtual memory address protection",
+note = "In preparation",
+year = 1992
+}
+
+@inproceedings{WLM:ESGR,
+author = "Wilson, Paul R. and Michael S. Lam and Thomas G. Moher",
+title = "Effective Static-Graph Reorganization to Improve Locality in
+Garbage-Collected Systems",
+crossref = "PLDI91",
+Key = "",
+pages = "177--191" 
+}
+
+@techreport{WiLM90b,
+title = "Caching Consideration For Generational Garbage Collection:  A
+Case For Large and Set-Associative Caches",
+author = "Paul R. Wilson and Michael S. Lam and Thomas G. Moher",
+institution = "University of Illinois at Chicago EECS Dept.",
+type = "Technical Report", 
+number = "UIC-EECS-90-5",
+address = "Chicago, Illinois",
+month = Dec,
+year = 1990
+}
+
+@inproceedings{WH:GC91,
+author = "Paul R. Wilson and Barry Hayes",
+title = "The 1991 {OOPSLA} {W}orkshop on {G}arbage {C}ollection in {O}bject
+{O}riented {S}ystems (Organizers' Report)",
+crossref = "OOPSLA91Add",
+pages = "63--71"
+}
+
+@inproceedings{WM:DM,
+title = "Demonic Memory For Process Histories",	
+author = "Paul R. Wilson and Thomas G. Moher",
+crossref = "PLDI89",
+key = "",
+pages = "330--343"
+}
+
+@inproceedings{WM:OGC,
+author = "Wilson, Paul R. and Thomas G. Moher",
+title = "Design of the {O}pportunistic {G}arbage {C}ollector",
+crossref = "OOPSLA89",
+key = "",
+pages = "23--35"
+}
+
+@inproceedings{WLM:CCGGC,
+author = "Wilson, Paul R. and Michael S. Lam and Thomas G. Moher",
+title = "Caching Considerations for Generational Garbage Collection",
+crossref = "LFP92",
+key = "",
+pages = "32--42"
+}
+
+@article{WMK:Anomalies,
+AUTHOR = "Wilson, Paul R. and Shubhendu S. Mukherjee and Sheetal V. Kakkad",
+TITLE = "Anomalies and Adaptation in the Analysis and Development of Prepaging Policies",
+JOURNAL = "Journal of Systems and Software",
+NOTE = "Technical Communication, to appear",
+YEAR = 1992
+}
+
+
+@article{Wi:MGCARRC,
+AUTHOR="David S. Wise",
+TITLE="Morris's Garbage Compaction Algorithm Restores Reference Counts",
+JOURNAL=toplas,
+VOLUME=1,
+NUMBER=1,
+MONTH=jul,
+YEAR=1979,
+PAGES={115--120}
+}
+
+@techreport{Wi:GCLDAS,
+author = "Wiseman, S. R.",
+title = "A Garbage Collector for a Large Distributed Address Space",
+number = "85009",
+institution = "Royal Signals and Radar Establishment",
+address = "Malvern, United Kingdom",
+year = 1985
+}
+
+@unpublished{Wi:HRRTGC,
+title = "How Real is ``Real Time'' Garbage Collection?",
+author = "P.T. Withington",
+note = "Position paper, OOPSLA '92 Workshop on Garbage Collection in Object-Oriented Systems",
+year = 1992
+}
+
+@incollection{WO:MGCA68,
+TITLE = "Methods of Garbage Collection for {ALGOL} 68",
+AUTHOR = "P. L. Wodon",
+CROSSREF = "Peck71",
+PAGES = {245--262}
+}
+
+@article{Yu:RTGCGPM,
+TITLE = "Real-Time Garbage Collection on General-Purpose Machines",
+AUTHOR = "Taichi Yuasa",
+JOURNAL = "Journal of Systems and Software",
+YEAR = 1990,
+VOLUME = 11,
+PAGES = {181--198}
+}
+
+@inproceedings{Yu:MMGCECLS,
+TITLE = "Memory Management and Garbage Collection of an Extended 
+{C}ommon {L}isp system for massively parallel {SIMD} architecture",
+author = "Taichi Yuasa",
+crossref = "IWMM92",
+key = "",
+pages = "490--506"
+}
+
+@phdthesis{Zorn:phd,
+author = "Zorn, Benjamin",
+title = "Comparative Performance Evaluation of Garbage Collection Algorithms",
+school = "University of California at Berkeley, {EECS} Department",
+note = "Technical Report UCB/CSD 89/544", 
+month = dec,
+year = 1989
+}
+
+@techreport{Zo:EGCCP,
+author = "Zorn, Benjamin",
+title = "The Effect of Garbage Collection on Cache Performance",
+institution = "University of Colorado at Boulder, Dept. of Computer Science",
+year = 1991,
+month = may,
+address = "Boulder, Colorado",
+number = "CU-CS-528-91"
+}
+
+@techreport{Zo:MCCGC,
+author = "Zorn, Benjamin",
+title = "The Measured Cost of Conservative Garbage Collection",
+institution = "University of Colorado at Boulder, Dept. of Computer Science",
+year = 1992,
+address = "Boulder, Colorado",
+number = "CU-CS-573-92"
+}
+
+@techreport{ZG:EMSACP,
+author = "Benjamin Zorn and Dirk Grunwald",
+title = "Empirical Measurements of Six Allocation-Intensive {C} Programs",
+institution = "University of Colorado at Boulder, Dept. of Computer Science",
+year = 1992,
+month = jul,
+number = "CU-CS-604-92"
+}
+
+@techreport{ZG:EMMA,
+author = "Benjamin Zorn and Dirk Grunwald",
+title = "Evaluating Models of Memory Allocation",
+institution = "University of Colorado at Boulder, Dept. of Computer Science",
+year = 1992,
+month = jul,
+number = "CU-CS-603-92"
+}
+
+
+@book{Peck71,
+TITLE = "{ALGOL} 68 Implementation",
+BOOKTITLE = "{ALGOL} 68 Implementation",
+EDITOR = "J. E. L. Peck",
+PUBLISHER = ENH,
+YEAR = 1971
+}
+
+@proceedings{ASPLOS1,
+title = "Symposium on " # ASPLOS,
+booktitle = "Symposium on " # ASPLOS,
+key = "{ASPLOS}",
+month = mar,
+year = 1982
+}
+
+@proceedings{ASPLOS2,
+title = "Second International Conference on " # ASPLOS # " ({ASPLOS II})",
+booktitle = "Second International Conference on " # ASPLOS # " ({ASPLOS II})",
+key = "{ASPLOS}",
+month = oct,
+year = 1987,
+address = "Palo Alto, California"
+}
+
+@proceedings{ASPLOS3,
+title = "Third International Conference on " # ASPLOS # " ({ASPLOS III})",
+booktitle = "Third International Conference on " # ASPLOS # " ({ASPLOS III})",
+key = "{ASPLOS}",
+month = apr,
+year = 1989,
+address = "Boston, Massachusetts"
+}
+
+@proceedings{ASPLOS4,
+title  = "Fourth International Conference on " # ASPLOS # "  ({ASPLOS IV})",
+booktitle = "Fourth International Conference on " # ASPLOS # " ({ASPLOS IV})",
+key = "{ASPLOS}",
+month = apr,
+year = 1991,
+address = "Santa Clara, California"
+}
+
+@proceedings{ASPLOS5, 
+title = "Fifth International Conference on " # ASPLOS # " ({ASPLOS V})",
+booktitle = "Fifth International Conference on " # ASPLOS # " ({ASPLOS V})",
+key = "{ASPLOS}",
+month = sep,
+year = 1992,
+address = "Boston, Massachusetts"
+}
+
+@proceedings{CA90,
+title = "17th Annual " # CA,
+booktitle = "17th Annual " # CA,
+key = "{CA}",
+address = "Seattle, Washington", 
+month = May, 
+year = 1990,
+publisher = "{IEEE} Computer Society Press"
+}
+
+@proceedings{FPLCA85,
+title = FPLCA,
+booktitle = FPLCA,
+month = spe,
+year = 1985,
+editor = "Jean-Pierre Jouannaud",
+address = "Nancy, France",
+publisher = SV,
+series = lncs,
+number = 201
+}
+
+@proceedings{FPLCA87,
+title = FPLCA,
+booktitle = FPLCA,
+editor = "Gilles Kahn",
+series = lncs,
+number = 274,
+publisher = sv,
+month = sep,
+year = 1987
+}
+
+@proceedings{IJCAI83,
+title = IJCAI,
+booktitle = IJCAI,
+editor = "Alan Bundy",
+year = 1983,
+month = aug,
+address = "Karlsruhe, West Germany",
+publisher = "William Kaufman"
+}
+
+@proceedings{IWMM92,
+title = IWMM,
+booktitle = IWMM,
+editor = "Yves Bekkers and Jacques Cohen",
+key = "{IWMM}",
+year = 1992,
+month = sep,
+address = "St. Malo, France",
+publisher = SV,
+series = LNCS,
+number = 637
+}
+
+@proceedings{IWOOOS91,
+title = IWOOOS,
+booktitle = IWOOOS,
+key = "{IWOOOS}",
+month = Oct,
+year = 1991,
+address = "Palo Alto, California",
+publisher = "{IEEE} Press"
+}
+
+@proceedings{IWOOOS92,
+title = IWOOOS,
+booktitle = IWOOOS,
+key = "{IWOOOS}",
+year = 1992,
+month = sep,
+address = "Paris, France",
+publisher = "{IEEE} Press"
+}
+
+@proceedings{LFP82,
+title = "Conference Record of the " # 1982 # " " # LFP,
+booktitle = "Conference Record of the " # 1982 # " " # LFP,
+key = "{LFP}",
+year = 1982,
+month = aug,
+address = "Pittsburgh, Pennsylvania",
+publisher = ACM
+}
+
+@proceedings{LFP84,
+title = "Conference Record of the " # 1984 # " " # LFP,
+booktitle = "Conference Record of the " # 1984 # " " # LFP,
+key = "{LFP}",
+month = aug,
+year = 1984,
+address = "Austin, Texas",
+publisher = ACM
+}
+
+@proceedings{LFP86,
+title = "Conference Record of the " # 1986 # " " # LFP,
+booktitle = "Conference Record of the " # 1986 # " " # LFP,
+key = "{LFP}",
+month = aug,
+year = 1986,
+address = "Cambridge, Massachusetts",
+publisher = ACM
+}
+
+@proceedings{LFP88,
+title = "Conference Record of the " # 1988 # " " # LFP,
+booktitle = "Conference Record of the " # 1988 # " " # LFP,
+key = "{LFP}",
+month = jul,
+year = 1988,
+address = "Snowbird, Utah",
+publisher = ACM
+}
+
+@proceedings{LFP90,
+title = "Conference Record of the " # 1990 # " " # LFP,
+booktitle = "Conference Record of the " # 1990 # " " # LFP,
+key = "{LFP}",
+month = LFP90date,
+year = 1990,
+address = LFP90addr,
+}
+
+@proceedings{LFP92,
+title = "Conference Record of the " # 1992 # " " # LFP,
+booktitle = "Conference Record of the " # 1992 # " " # LFP,
+key = "{LFP}",
+month = LFP92date,
+year = 1992,
+address = LFP92addr,
+}
+
+@proceedings{OOPSLA86,
+title =  OOPSLA # " ({OOPSLA} '86) Proceedings",
+booktitle = OOPSLA # " ({OOPSLA} '86) Proceedings",
+key = "{OOPSLA}",
+month = oct,
+year = 1986,
+publisher = ACM,
+note = "Published as {\em {SIGPLAN} Notices 21}(11), November 1986."
+}
+
+@proceedings{OOPSLA87,
+title = OOPSLA # " ({OOPSLA} '87) Proceedings",
+booktitle = OOPSLA # " ({OOPSLA} '87) Proceedings",
+editor = "Norman Meyrowitz",
+month = oct,
+year = 1987,
+address = "Orlando, Florida",
+publisher = ACM,
+note = "Published as {\em {SIGPLAN} Notices 22}(12), December 1987."
+}
+
+@proceedings{OOPSLA87Add,
+title = "{OOPSLA} '87 Addendum to the Proceedings",
+booktitle = "{OOPSLA} '87 Addendum to the Proceedings",
+editor = "Leigh Power and Zvi Weiss",
+month = oct,
+year = 1987,
+address = "Orlando, Florida",
+publisher = ACM,
+note = "Published as {\em {SIGPLAN} Notices 23}(5), May 1988."
+}
+
+@proceedings{OOPSLA88,
+title  = OOPSLA # " ({OOPSLA} '88) Proceedings",
+booktitle = OOPSLA # " ({OOPSLA} '88) Proceedings",
+editor = "Norman Meyrowitz",
+month = sep,
+year = 1988,
+address = "San Diego, California",
+publisher = ACM,
+note = "Published as {\em {SIGPLAN} Notices 23}(11), November 1988."
+}
+
+@proceedings{OOPSLA89,
+title = OOPSLA # " ({OOPSLA} '89) Proceedings",
+booktitle = OOPSLA # " ({OOPSLA} '89) Proceedings",
+key = "{OOPSLA}",
+year = 1989,
+publisher = ACM
+}
+
+@proceedings{OOPSLA/ECOOP90,
+title = OOPSLA # "/" # ECOOP # " ({OOPSLA/ECOOP} '90) Proceedings",
+booktitle  = OOPSLA # "/" # ECOOP # " ({OOPSLA/ECOOP} '90) Proceedings",
+editor = "Norman Meyrowitz",
+month = oct,
+year = 1990,
+address = "Ottawa, Ontario",
+publisher = ACM,
+note = "Published as {\em {SIGPLAN} Notices 25}(10), October 1990."
+}
+
+@proceedings{OOPSLA/ECOOP90Add,
+title = "{OOPSLA/ECOOP} '90 Addendum to the Proceedings",
+booktitle = "{OOPSLA/ECOOP} '90 Addendum to the Proceedings",
+editor = "Jerry L. Archibald and K. C. Burgess Yakemovic",
+month = oct,
+year = 1990,
+address = "Ottawa, Ontario",
+publisher = ACM,
+note = "Published as a special issue of {\em {SIGPLAN} Notices}, 1991."
+}
+
+@proceedings{OOPSLA91,
+title =  OOPSLA # " ({OOPSLA} '91)",
+booktitle = OOPSLA # " ({OOPSLA} '91)",
+editor = "Andreas Paepcke", 
+month = oct,
+year = 1991,
+address = "Phoenix, Arizona",
+publisher = ACM,
+note = "Published as {\em {SIGPLAN} Notices 26}(11), November 1991."
+}
+
+@proceedings{OOPSLA91Add,
+title = "{OOPSLA} '91 Addendum to the Proceedings",
+booktitle = "{OOPSLA} '91 Addendum to the Proceedings",
+editor = "Jerry L. Archibald",
+month = oct,
+year = 1991,
+address = "Phoenix, Arizona",
+publisher = ACM,
+note = "Published as {\em {OOPS} Messenger 3}(4), October 1992."
+}
+
+@proceedings{OOPSLA92,
+title = OOPSLA # " ({OOPSLA} '92)",
+booktitle = OOPSLA # " ({OOPSLA} '92)",
+editor = "Andreas Paepcke",
+month = oct,
+year = 1992,
+address = "Vancouver, British Columbia",
+publisher = ACM,
+note = "Published as {\em {SIGPLAN} Notices 27}(10), October 1992."
+}
+
+@proceedings{PARLE87,
+title = PARLE,
+booktitle = PARLE,
+editor = "Jacobus W. de Bakker and L. Nijman and Philip C. Treleaven",
+month = jun,
+year = 1987,
+address = "Eindhoven, The Netherlands",
+publisher = sv,
+series = lncs,
+number = "258, 259"
+}
+
+@proceedings{PARLE89,
+title = PARLE,
+booktitle = PARLE,
+editor = "Eddy Odijik and M. Rem and Jean-Claude Sayr",
+address = "Eindhoven, The Netherlands",
+year = 1989,
+month = jun,
+publisher = sv,
+series = lncs,
+number = "365, 366"
+}
+
+@proceedings{PDD88,
+title = "{ACM SIGPLAN/SIGOPS} Workshop on Parallel and Distributed Debugging",
+booktitle = "{ACM SIGPLAN/SIGOPS} Workshop on Parallel and Distributed Debugging",
+key = "{PDD}",
+month = may,
+year = 1988,
+address = "Madison, Wisconsin",
+note = "Published as {\em SIGPLAN Notices 24}(1), January, 1989"
+}
+
+@proceedings{POS4,
+title = "Implementing Persistent Object Bases:  Principles and Practice
+(Proceedings of the Fourth International Workshop on Persistent Object
+Systems)",
+booktitle = "Implementing Persistent Object Bases:  Principles and Practice
+(Proceedings of the Fourth International Workshop on Persistent Object
+Systems)",
+editor = "Alan Dearle and Gail M. Shaw and Stanley B. Zdonik",
+address = "Martha's Vineyard, Massachusetts",
+publisher = "Morgan Kaufman",
+year = 1990,
+month = sep
+}
+
+@proceedings{POS5,
+title = "Fifth International Workshop on Persistent Object Systems",
+booktitle = "Fifth International Workshop on Persistent Object Systems",
+key = "{POS5}",
+YEAR = 1992,
+month = sep,
+address = "San Miniato, Italy",
+publisher = SV
+}
+
+@proceedings{POPL76,
+title = "Conference Record of the Third Annual " # POPL,
+booktitle = "Conference Record of the Third Annual " # POPL,
+key = "{POPL}",
+address = "Atlanta, Georgia",
+month = jan,
+year = 1976,
+publisher = ACM
+}
+
+@proceedings{POPL81,
+title = "Conference Record of the Eighth Annual " # POPL,
+booktitle = "Conference Record of the Eighth Annual " # POPL,
+key = "{POPL}",
+year = 1981,
+publisher = ACM
+}
+
+@proceedings{POPL82,
+title = "Conference Record of the Ninth Annual " # POPL,
+booktitle = "Conference Record of the Ninth Annual " # POPL,
+key = "{POPL}",
+address = "Albuquerque, New Mexico",
+month = jan,
+year = 1982,
+publisher = ACM
+}
+
+@proceedings{POPL84,
+title = "Conference Record of the Eleventh Annual " # POPL,
+booktitle = "Conference Record of the Eleventh Annual " # POPL,
+key = "{POPL}",
+month = jan,
+year = 1984, 
+address = "Salt Lake City, Utah",
+publisher = ACM
+}
+
+@proceedings{POPL85,
+title = "Conference Record of the Twelfth Annual " # POPL,
+booktitle = "Conference Record of the Twelfth Annual " # POPL,
+key = "{POPL}",
+month = jan,
+year = 1985, 
+address = "New Orleans, Louisiana",
+publisher = ACM
+}
+
+@proceedings{POPL87,
+title = "Conference Record of the Fourteenth Annual " # POPL,
+booktitle = "Conference Record of the Fourteenth Annual " # POPL,
+key = "{POPL}",
+month = jan,
+year = 1987,
+publisher = ACM
+}
+
+@proceedings{POPL88,
+title = "Conference Record of the Fifteenth Annual " # POPL,
+booktitle = "Conference Record of the Fifteenth Annual " # POPL,
+key = "{POPL}",
+month = jan,
+year = 1988,
+address = "San Diego, California",
+publisher = ACM
+}
+
+@proceedings{POPL90,
+title = "Conference Record of the Seventeenth Annual " # POPL,
+booktitle = "Conference Record of the Seventeenth Annual " # POPL,
+key = "{POPL}",
+month = jan,
+year = 1990, 
+address = "San Francisco, California",
+publisher = ACM
+}
+
+@proceedings{PLDI88,
+title = "Proceedings of the " # 1988 # " " # PLDI,
+booktitle = "Proceedings of the " # 1988 # " " # PLDI,
+key = "{PLDI}",
+month = jun,
+year = 1988,
+address = "Atlanta, Georgia",
+publisher = ACM
+}
+
+@proceedings{PLDI89,
+title = "Proceedings of the " # 1989 # " " # PLDI,
+booktitle = "Proceedings of the " # 1989 # " " # PLDI,
+key = "{PLDI}",
+month = jun,
+year = 1989,
+address = "Portland, Oregon",
+publisher = ACM,
+note = "Published as {\em {SIGPLAN} Notices 24}(7), July 1989."
+}
+
+@proceedings{PLDI90,
+title = "Proceedings of the " # 1990 # " " # PLDI,
+booktitle = "Proceedings of the " # 1990 # " " # PLDI,
+key = "{PLDI}",
+month = jun,
+year = 1990,
+address = "White Plains, New York",
+publisher = ACM,
+note = "Published as {\em {SIGPLAN} Notices 25}(6), June 1990."
+}
+
+@proceedings{PLDI91,
+title = "Proceedings of the " # 1991 # " " # PLDI,
+booktitle = "Proceedings of the " # 1991 # " " # PLDI,
+key = "{PLDI}",
+month = jun,
+year = 1991,
+address = "Toronto, Ontario",
+publisher = ACM,
+note = "Published as {\em {SIGPLAN} Notices 26}(6), June 1992."
+}
+
+@proceedings{PLDI92,
+title = "Proceedings of the " # 1992 # " " # PLDI,
+booktitle = "Proceedings of the " # 1992 # " " # PLDI,
+key = "{PLDI}",
+month = jun,
+year = 1992,
+address = "San Francisco, California",
+publisher = ACM
+}
+
+@proceedings{SESPSDE87,
+title = "{ACM SIGSOFT/SIGPLAN} Software Engineering Symposium on Practical
+Software Development Environments",
+booktitle = "{ACM SIGSOFT/SIGPLAN} Software Engineering Symposium on Practical
+Software Development Environments",
+key = "{SESPSDE}",
+publisher = ACM,
+month = apr,
+year = 1984,
+note = "Published as {\em ACM SIGPLAN Notices 19}(5), May, 1987"
+}
+
+@proceedings{SIIT87,
+title = "{SIGPLAN} 1987 Symposium on Interpreters and Interpretive Techniques",
+booktitle = "{SIGPLAN} 1987 Symposium on Interpreters and Interpretive Techniques",
+key = "{SIIT}",
+publisher = ACM,
+year = 1987,
+month = jun,
+address = "Saint Paul, Minnesota",
+note = "Published as {\em {SIGPLAN} Notices 22}(7), July 1987"
+}
+
+@proceedings{SOSP83,
+title = "Proceedings of the Ninth " # SOSP,
+booktitle = "Proceedings of the Ninth " # SOSP,
+key = "{SOSP}",
+month = oct,
+year = 1983,
+address = "Bretton Woods, New Hampshire",
+publisher = ACM,
+note = "Published as {\em Operating Systems Review 17}(5), October 1983"
+}
+
+@proceedings{SOSP87,
+title = "Proceedings of the Eleventh " # SOSP,
+booktitle = "Proceedings of the Eleventh " # SOSP,
+key = "{SOSP}",
+month = nov,
+year = 1987,
+address = "Austin, Texas",
+publisher = ACM,
+note = "Published as {\em Operating Systems Review 21}(5), November 1987"
+}
+
+@proceedings{SOSP89,
+title = "Proceedings of the Twelfth " # SOSP,
+booktitle = "Proceedings of the Twelfth " # SOSP,
+key = "{SOSP}",
+month = dec,
+year = 1989
+}
+
+@proceedings{SOSP91,
+title = "Proceedings of the Thirteenth " # SOSP,
+booktitle = "Proceedings of the Thirteenth " # SOSP,
+key = "{SOSP}",
+month = oct,
+year = 1991,
+publisher = ACM,
+address = "Pacific Grove, California",
+note = "Published as {\em Operating Systems Review 25}(5)"
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Runciman
+%%%
+
+
+
+
+
+

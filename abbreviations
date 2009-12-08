@@ -1,0 +1,62 @@
+The following abbreviations are available in the standard BibTeX
+styles (abbrev, alpha, plain, unsrt).
+
+acmcs:  ACM Computing Surveys; 
+        ACM Comput. Surv.
+
+acta:   Acta Informatica;
+        Acta Inf.
+
+cacm:   Communications of the ACM;
+        Commun. ACM
+
+ibmjrd: IBM Journal of Research and Development;
+        IBM J. Res. Dev.
+
+ibmsj:  IBM Systems Journal; 
+        IBM Syst.~J.
+
+ieeese: IEEE Transactions on Software Engineering; 
+        IEEE Trans. Softw. Eng.
+
+ieeetc: IEEE Transactions on Computers; 
+        IEEE Trans. Comput.
+
+ieeetcad: IEEE Transactions on Computer-Aided Design of Integrated Circuits; 
+         IEEE Trans. Comput.-Aided Design Integrated Circuits
+
+ipl:    Information Processing Letters;
+        Inf. Process. Lett.
+
+jacm:   Journal of the ACM;
+        J.~ACM
+
+jcss:   Journal of Computer and System Sciences;
+        J.~Comput. Syst. Sci. 
+
+scp:    Science of Computer Programming;
+        Sci. Comput. Programming
+
+sicomp: SIAM Journal on Computing;
+        SIAM J. Comput.
+
+tcs:    Theoretical Computer Science;
+        Theor. Comput. Sci.
+
+tocs:   ACM Transactions on Computer Systems;
+        ACM Trans. Comput. Syst. 
+
+tods:   ACM Transactions on Database Systems;
+        ACM Trans. Database Syst.
+
+tog:    ACM Transactions on Graphics;
+        ACM Trans. Gr.
+
+toms:   ACM Transactions on Mathematical Software;
+        ACM Trans. Math. Softw.
+
+toois:  ACM Transactions on Office Information Systems;
+        ACM Trans. Office Inf. Syst.
+
+toplas: ACM Transactions on Programming Languages and Systems;
+        ACM Trans. Prog. Lang. Syst.

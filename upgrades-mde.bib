@@ -1,0 +1,66 @@
+
+@inproceedings{bloom92:reconfiguration,
+  author =       "Toby Bloom and Mark Day",
+  title =        "Reconfiguration in {A}rgus",
+  pages =        "176--187",
+  booktitle =    "International Workshop on Configurable Distributed Systems",
+  month =        mar,
+  year =         "1992",
+  address =      "London, England",
+  CROSSREFnote =         "Also in \cite{swej93mar}, pages 102--108",
+  annote =       "Defines a correctness condition for reconfiguration:
+                 ``continuation abstractions are preserved or invisibly
+                 extended by a replacement.'' That is, module (guardian)
+                 replacements must be backward (upward) compatible and
+                 must continue the behavior of the original module
+                 (e.g., by transferring the old module's state).
+                 Reconfiguration quiesces the modules to be replaced;
+                 client transactions on those modules abort. The authors
+                 describe two kinds of upgrading infrastructures:
+                 system-supported replacement (SSR) and
+                 application-level replacement (ALR). SSR requires hooks
+                 in the Argus system to allow replacement and an
+                 additional indirection on handler calls. ALR requires
+                 participation by designers of modules and clients of
+                 modules to support upgrades.",
+}
+
+@inproceedings{hofmeister92:surgeon,
+  author =       "C. Hofmeister and E. White and J. Purtilo",
+  title =        "Surgeon: {A} Packager for Dynamically Reconfigurable
+                 Distributed Applications",
+  pages =        "164--175",
+  booktitle =    "International Workshop on Configurable Distributed Systems",
+  month =        mar,
+  year =         "1992",
+  address =      "London, England",
+  CROSSREFnote =         "Also in \cite{swej93mar}, pages 95--101",
+  annote =       "Describes a way to package an upgrade to software
+                 components in a distributed system. Packaging analyzes
+                 interface bindings, determines how components should be
+                 integrated, generates interface software to connect
+                 components, and creates configuration commands to build
+                 the application. A ``catalyst'' module on each node
+                 actually runs reconfigurations using a package (cf. the
+                 UL). Packaging may require component participation to
+                 save the state, transform state, restart the component,
+                 or delay upgrades until a suitable point (so that
+                 consistency can be maintained). The authors categorize
+                 the kinds of components that can be reconfigured
+                 without any such participation: these are those modules
+                 that neither require state transfer, nor special
+                 initialization, nor synchronization with other
+                 modules.",
+}
+
+@Article{herlihy82:value,
+  author =       "Maurice P. Herlihy and Barbara Liskov",
+  title =        "A value transmission method for abstract data types",
+  journal =      toplas,
+  volume =       "4",
+  number =       "4",
+  pages =        "527--551",
+  year =         "1982",
+  annote =       "Used by several reconfiguration systems to transfer
+                 state from old versions of components to new ones.",
+}

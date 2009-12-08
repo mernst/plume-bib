@@ -1,0 +1,1783 @@
+
+
+
+@Article{brewer01lessons,
+  author =       "Eric A. Brewer",
+  title =        "Lessons from Giant-Scale Services",
+  journal =      "IEEE Internet Computing",
+  month =        jul,
+  year =         "2001",
+  annote = "Discusses tradeoffs in the design of giant-scale services
+  that allow for graceful degredation of service under load and failure
+  and support for online evolution.  Advocates automatic upgrade
+  systems, and describes three approaches: fast reboot (everyone at
+  once), rolling upgrade (round-robin), and big flip (partition the
+  system, then upgrade each partition).  Insists that these systems need
+  a safe and fast way to roll back to the old version, since new
+  versions tend to be buggy.  Mentions that many systems use a staging
+  area where the new software is set up alongside the old software
+  before going live --- makes switchover (in either direction) easy.",
+}
+
+@Misc{swg,
+  title =        "Star Wars Galaxies",
+  key =          "Star Wars Galaxies",
+  annote =       "A multiplayer online game that requires clients to
+                 version sync with the server before logging in.
+                 Presumably, the server kicks off all clients (requiring
+                 them to resync) when a new version is deployed.",
+}
+
+@InProceedings{solarski02towards,
+  author =       "Marcin Solarski and Hein Meling",
+  title =        "Towards Upgrading Actively Replicated Servers
+                 on-the-fly",
+  crossref =     "dependable02",
+  annote =       "Upgrades a replicated server by upgrading each replica
+                 in turn. Assumes that (1) multiple upgrades do not
+                 interleave, (2) version v+1 offers a compatible
+                 interface to version v, (3) there exists a mapping from
+                 version v's state to version v+1, and (4) clients only
+                 use extensions offered by v+1's interface after all
+                 replicas are upgraded. Upgrades are scheduled by
+                 totally ordering the replicas (using some replica
+                 identifier). Assumes full compatibility between
+                 different versions, so doesn't need to convert messages
+                 between versions (i.e., no simulation mode).",
+}
+
+
+
+@TechReport{rsync,
+  author = 	 "Andrew Tridgell and Paul Mackerras",
+  title = 	 "The rsync algorithm",
+  institution =  "Australian National University",
+  year = 	 1996,
+  number = 	 "TR-CS-96-05",
+  NEEDaddress = 	 "",
+  month = 	 jun,
+}
+
+@Misc{redhat-update,
+  title =        "{R}ed {H}at up2date",
+  key =          "Red Hat",
+  note =         "\url{http://www.redhat.com/docs/manuals/RHNetwork/ref-guide/up2date.html}",
+}
+
+@Misc{paula-specifying,
+  author =       "Virginia C. de Paula and G. R. Ribeiro Justo and P. R.
+                 F. Cunha",
+  title =        "Specifying Dynamic Distributed Software
+                 Architectures",
+  URL =          "http://citeseer.ist.psu.edu/473045.html",
+}
+
+@Misc{pai03codeen,
+  author =       "Vivek Pai and others",
+  title =        "{CoDeeN}",
+  url =         "http://codeen.cs.princeton.edu/",
+  annote =       "A CDN deployed on PlanetLab that upgrades its nodes
+                 about twice a week, causing only about 20 seconds of
+                 downtime per node. New versions are simply scp'd to the
+                 nodes and the software is restarted to use the new
+                 code. Versions are typically backwards-compatible; on
+                 the rare occasions when a new version is incompatible,
+                 version numbers are used to distinguish new calls from
+                 old ones (which are rejected).",
+}
+
+@Misc{marimba,
+  title =        "Mar\'{\i}mba",
+  key =          "Marimba",
+  note =         "\url{http://www.marimba.com/}",
+  annote =       "A commercial system for ``managing software on
+                 desktops, laptops, servers, and devices.''",
+}
+
+@InProceedings{liu02using,
+  author =       "Chang Liu and Debra J. Richardson",
+  title =        "Using {RAIC} for Dependable On-Line Upgrading of
+                 Distributed Systems",
+  crossref =     "dependable02",
+  annote =       "A RAIC controller provides a static interface to an
+                 array of similar or identical components. The RAIC
+                 automatically handles failover and recovery of
+                 components. Thus, RAIC can support component updates by
+                 allowing new versions to be added to the component
+                 array. If the new version of a component is faulty
+                 (e.g., raises an exception), RAIC intercepts the fault
+                 and redirects the call to an older version of the
+                 component. Furthermore, different callers can use
+                 different versions of the components. It is not clear
+                 whether this system avoids state divergence between
+                 components of different versions.",
+}
+
+@InProceedings{hofmeister92surgeon,
+  author =       "C. Hofmeister and E. White and J. Purtilo",
+  title =        "Surgeon: {A} Packager for Dynamically Reconfigurable
+                 Distributed Applications",
+  crossref =     "iccds92",
+  note =         "Also in \cite{swej93mar}, pages 95--101",
+  annote =       "Describes a way to package an upgrade to software
+                 components in a distributed system. Packaging analyzes
+                 interface bindings, determines how components should be
+                 integrated, generates interface software to connect
+                 components, and creates configuration commands to build
+                 the application. A ``catalyst'' module on each node
+                 actually runs reconfigurations using a package (cf. the
+                 UL). Packaging may require component participation to
+                 save the state, transform state, restart the component,
+                 or delay upgrades until a suitable point (so that
+                 consistency can be maintained). The authors categorize
+                 the kinds of components that can be reconfigured
+                 without any such participation: these are those modules
+                 that neither require state transfer, nor special
+                 initialization, nor synchronization with other
+                 modules.",
+  pages =     "164--175",
+}
+
+@InProceedings{hauptmann96online,
+  author =       "Steffen Hauptmann and Josef Wasel",
+  title =        "On-line Maintenance with On-the-fly Software
+                 Replacement",
+  crossref =     "iccds96",
+  annote =       "Supports replacement of modules, called ``actors'', in
+                 the Chorus real-time OS. Actors can contain several
+                 threads and provide an interface composed of several
+                 communication ports. The replacement approach does not
+                 depend on specially-written apps; instead, app code is
+                 modified to make the app replaceable. The authors claim
+                 that most of this modification can be done
+                 automatically. Modifications include (1) adding a
+                 thread to run the replacement, (2) adding state
+                 capture/restore functions at exchange points (places
+                 where threads can block), (3) addings handlers for
+                 aborted system calls, (4) adding instructions to
+                 restore the call stack after replacement.",
+  pages =     "70--80",
+}
+
+@Misc{gnucleus,
+  title =        "The Gnucleus Open-Source Gnutella Client",
+note="\url{http://www.gnucleus.com/Gnucleus/}",
+  key =          "Gnucleus",
+  annote =       "A peer-to-peer file sharing system that deploys
+                 upgrades eagerly: nodes version sync on eahc
+                 communication, so if one node upgrades, it causes each
+                 node it talks to to upgrade (epidemic dissemination).",
+}
+
+@Misc{emc-oncourse,
+  title =        "{EMC} {O}n{C}ourse",
+  key =          "EMC OnCourse",
+  note =         "\url{http://www.emc.com/products/software/oncourse.jsp}",
+  annote =       "A commercial ``application that enables secure,
+                 reliable, automated distribution of files between
+                 systems across IP networks.''",
+}
+
+@InProceedings{dislis02improving,
+  author =       "Chryssa Dislis",
+  title =        "Improving Service Availability via Low-Outage
+                 Upgrades",
+  crossref =     "dependable02",
+  annote =       "Gives an industry perspective (Motorola, Inc.) on the
+                 importance of upgrading software without interrupting
+                 service, and suggests (common sense) techniques for
+                 minimizing downtime. For example, preparing the system
+                 for the upgrade, taking backups in case roll-back is
+                 needed, minimizing user interaction (since this is
+                 typically slower than automated actions and reduces
+                 error), etc. Note that the full paper is not available
+                 yet.",
+}
+
+@InProceedings{cook02reliable,
+  author =       "Jonathan E. Cook and Navin Vedagiri",
+  title =        "Reliable Upgrading through Multi-Version Execution",
+  crossref =     "dependable02",
+  annote =       "Allows multiple versions of a function to exist
+                 simultaneously, and uses an arbiter to dispatch calls
+                 dynamically to different versions of a function. Keeps
+                 the old version around to protect the system from
+                 errors introduced by a new version, until the new
+                 version is deemed safe.",
+}
+
+@Misc{cisco-essentials,
+  title =        "Cisco {R}esource {M}anager",
+  key =          "Cisco Resource Manager",
+  note =         "\url{http://www.cisco.com/warp/public/cc/pd/wr2k/rsmn/}",
+  annote =       "A commercial, web-based management system that
+                 supports software upgrades for ``Cisco switches, access
+                 servers, and routers.''",
+}
+
+@InProceedings{chaudron02upgrade,
+  author =       "M. R. V. Chaudron and F. van de Laar",
+  title =        "An Upgrade Mechanism Based on Publish/Subscribe
+                 Interaction",
+  crossref =     "dependable02",
+  annote =       "Advocates the use of publish/subscribe as an
+                 interaction style for upgradeable component-based
+                 systems. Publish/subscribe induces less coupling than
+                 request-response (e.g., RPC), since components do not
+                 have to interact synchronously and do not have to know
+                 each other. Therefore, components can be replaced
+                 (more) easily; a configuration manager (CM) manages
+                 these replacements. Authors do not consider upgrades
+                 that require state transfer between components or
+                 upgrades to the CM.",
+}
+
+@InProceedings{bloom92reconfiguration,
+  author =       "Toby Bloom and Mark Day",
+  title =        "Reconfiguration in {A}rgus",
+  crossref =     "iccds92",
+  note =         "Also in \cite{swej93mar}, pages 102--108",
+  annote =       "Defines a correctness condition for reconfiguration:
+                 ``continuation abstractions are preserved or invisibly
+                 extended by a replacement.'' That is, module (guardian)
+                 replacements must be backward (upward) compatible and
+                 must continue the behavior of the original module
+                 (e.g., by transferring the old module's state).
+                 Reconfiguration quiesces the modules to be replaced;
+                 client transactions on those modules abort. The authors
+                 describe two kinds of upgrading infrastructures:
+                 system-supported replacement (SSR) and
+                 application-level replacement (ALR). SSR requires hooks
+                 in the Argus system to allow replacement and an
+                 additional indirection on handler calls. ALR requires
+                 participation by designers of modules and clients of
+                 modules to support upgrades.",
+  pages =     "176--187",
+}
+
+@InProceedings{bidan98dynamic,
+  author =       "C. Bidan and V. Issarny and T. Saridakis and A.
+                 Zarras",
+  title =        "A Dynamic Reconfiguration Service for {CORBA}",
+  crossref =     "iccds98",
+  URL =          "http://citeseer.ist.psu.edu/bidan98dynamic.html",
+  annote =       "Defines a Dynamic Reconfiguration Manager (DRM) that
+                 coordinates reconfigurations in Aster, a CORBA-based
+                 distributed system. Builds on reconfiguration work in
+                 Polylith (Hofmeister and Purtilo, 1993). Like that
+                 work, the DRM passivates links between objects before
+                 reconfiguring them and transfers state to initialize
+                 new versions. The authors define formal consistency and
+                 efficiency constraints for reconfiguration, and argue
+                 that their reconfiguration algorithm is optimally
+                 efficient (i.e., causes minimal disruption).",
+  pages =     "35--42",
+}
+
+@InProceedings{bialek02architecture,
+  author =       "Robert P. Bialek",
+  title =        "The Architecture of a Dynamically Updatable,
+                 Component-based System",
+  crossref =     "dependable02",
+  annote =       "Combines dynamic component architectures (e.g., CORBA,
+                 EJB, DCOM) with dynamic software updating (e.g., Gupta
+                 and Jalote, Hicks) to create an architecture that
+                 supports both structural reconfigurations and non-stop
+                 updates to component implementations. Defines an
+                 ``update descriptor'' as a set of requests to add,
+                 remove, and/or update objects in the system, along with
+                 the replacement implementations (much like a
+                 package).",
+}
+
+@Misc{battle.net,
+  title =        "Battle.net",
+  key =          "Battle.net",
+  annote =       "A game server system that requires clients to version
+                 sync with the server before allowing them to set up
+                 games with other clients. This ensures that clients in
+                 the same game are version-synced, but also enables
+                 Battle.net to upgrade without interrupt existing
+                 games.",
+}
+
+@InProceedings{barbacci92durra,
+  author =       "M. Barbacci and others",
+  title =        "Building Fault-tolerant Distributed Applications with
+                 {D}urra",
+  crossref =     "iccds92",
+  note =         "Also in \cite{swej93mar}, pages 83--94",
+  annote =       "Durra describes an application as a set of components
+                 (application tasks and communication channels), a set
+                 of alternative configurations showing how these
+                 components are connected at runtime, and a set of
+                 conditional configuration transitions that take place
+                 at runtime. A ``cluster'' is a physical grouping of
+                 components at a node; a ``cluster manager'' is
+                 responsible for starting and terminating application
+                 processes and links, for passing messages between
+                 components, for monitoring reconfiguration conditions,
+                 and for carrying out reconfigurations. The Durra
+                 runtime requires that processes be quiescent before
+                 reconfiguring; Durra relies on processes to declare
+                 themselves quiescent explicitly by making a call to
+                 their cluster managers. If a process does not quiesce
+                 in a timely manner, the cluster manager times out.
+                 While Durra tolerates component failures, it does not
+                 tolerate cluster failures.",
+  pages =     "128--139",
+}
+
+@Misc{apt-howto,
+  title =        "{APT} {HOWTO}",
+  key =          "APT",
+  howpublished = "\url{http://www.debian.org/doc/manuals/apt-howto/}",
+}
+
+@InProceedings{soules03system,
+  author =       "Craig A. N. Soules and Jonathan Appavoo and Kevin Hui
+                 and Robert W. Wisniewski and Dilma Da Silva and Gregory
+                 R. Ganger and Orran Krieger and Michael Stumm and Marc
+                 Auslander and Michal Ostrowski and Bryan Rosenburg and
+                 Jimi Xenidis",
+  booktitle =    "Proc. of the Usenix Technical Conference",
+  title =        "System Support for Online Reconfiguration",
+  year =         "2003",
+  annote =       "Implements dynamic interposition and hot-swapping for
+                 components in the K42 operating system. In the common
+                 case, nothing is interposed; interposers installed
+                 dynamically by modifying a call indirection table.
+                 Interposition can add wrappers to a component that can
+                 take action before and after each call to the
+                 component, like a profiler. Interposition also enables
+                 hot-swapping: an interposed Mediator blocks new calls
+                 to the component, lets the old calls drain, transfers
+                 state to the new component, then unblocks the calls.
+                 This scheme depends on the fact that requests to a
+                 component are short-lived, and this kind of component
+                 change is called Read-Copy Update (RCU).",
+}
+
+@InProceedings{mccamant03predicting,
+  author =       "Stephen McCamant and Michael D. Ernst",
+  booktitle =    "10th European Software Engineering Conference and the
+                 11th ACM SIGSOFT Symposium on the Foundations of
+                 Software Engineering",
+  title =        "Predicting problems caused by component upgrades",
+  address =      "Helsinki, Finland",
+  pages =        "287--296",
+  month =        sep,
+  year =         "2003",
+}
+
+@Article{appavoo03enabling,
+  author =       "Jonathan Appavoo and Kevin Hui and Craig A. N. Soules
+                 and Robert W. Wisniewski and Dilma M. Da Silva and
+                 Orran Krieger and David J. Edelsohn Marc A. Auslander
+                 and Ben Gamsa and Gregory R. Ganger and Paul McKenney
+                 and Michal Ostrowski and Bryan Rosenburg and Michael
+                 Stumm and Jimi Xenidis",
+  title =        "Enabling autonomic behavior in systems software with
+                 hot-swapping",
+  journal =      "IBM Systems Journal",
+  volume =       "42",
+  number =       "1",
+  year =         "2003",
+}
+
+@InProceedings{ajmani03scheduling,
+  author =       "Sameer Ajmani and Barbara Liskov and Liuba Shrira",
+  booktitle =    "HotOS-IX: Ninth Workshop on Hot Topics in Operating Systems",
+  title =        "Scheduling and Simulation: How to Upgrade Distributed
+                 Systems",
+  year =         "2003",
+  month =     may,
+}
+
+@Article{weiler02automatic,
+  author =       "Robert K. Weiler",
+  title =        "Automatic Upgrades: {A} Hands-On Process",
+  journal =      "Information Week",
+  year =         "2002",
+  URL =          "http://www.informationweek.com/story/IWK20020321S0011",
+  annote =       "Weiler argues that fully automatic upgrades are
+                 dangerous, since automatic upgrade mechanisms often
+                 introduce incompatibilities in the system. Part of the
+                 problem is that each vendor develops and deploys their
+                 own automatic upgrade system, and systems from
+                 different vendors don't work together (e.g., to detect
+                 and resolve dependencies and incompatibilites).
+                 Standards for automatic upgrade systems would help
+                 address these problems by allowing different vendors'
+                 systems to interoperate. Another thing that could help
+                 is a log of all changes made to a PC's configuration
+                 and a record of when problems occur. This helps users
+                 identify bad upgrades; these upgrades can be removed if
+                 they support ``automatic restoration'' (i.e.,
+                 rollback).",
+  month =     mar,
+}
+
+@Article{rauch02optimizing,
+  author =       "Felix Rauch and Christian Kurmann and Thomas M.
+                 Stricker",
+  title =        "Optimizing the distribution of large data sets in
+                 theory and practice",
+  journal =      "Concurrency and Computation: Practice and Experience",
+  volume =       "14",
+  number =       "3",
+  publisher =    "John Wiley & Sons, Ltd",
+  pages =        "165--181",
+  month =        apr,
+  year =         "2002",
+  url =         "http://www.cs.inf.ethz.ch/CoPs/ccpe2002/ccpe2002.pdf",
+  annote =       "[rauch] The problem of installing multiple operating
+                 systems on our 128-node cluster motivated us to do this
+                 study on the distribution of large data sets (basically
+                 hard-disk partitions).",
+}
+
+@InProceedings{peterson02blueprint,
+  author =       "L. Peterson and D. Culler and T. Anderson and T.
+                 Roscoe",
+  booktitle =    "In Proceedings of the 1st Workshop on Hot Topics in
+                 Networks (HotNets-I)",
+  title =        "A Blueprint for Introducing Disruptive Technology into
+                 the Internet",
+  year =         "2002",
+  URL =          "http://citeseer.ist.psu.edu/peterson02blueprint.html",
+  month =     oct,
+  note =      "PlanetLab",
+}
+
+@Unpublished{microsoft02managing,
+  author =       "Microsoft Corporation",
+  title =        "Managing Automatic Updating and Download Technologies
+                 in {W}indows {XP}",
+  year =         "2002",
+  note =         "\url{http://www.microsoft.com/WindowsXP/pro/techinfo/administration/manageautoupdate/default.asp}",
+}
+
+@Misc{ghemawat02google,
+  author =       "Sanjay Ghemawat",
+  title =        "Google, Inc., personal communication",
+  year =         "2002",
+  personal =     "Sanjay explained how Google updates its software: they
+                 have several (5?) data centers, and DNS directs clients
+                 to each of them. To upgrade a data center, they change
+                 DNS to point to the other ones, upgrade it, then change
+                 DNS back.",
+}
+
+@InProceedings{brown02rewind,
+  author =       "A. Brown and D. A. Patterson",
+  booktitle =    "10th ACM SIGOPS European Workshop",
+  title =        "Rewind, Repair, Replay: Three {R}'s to Dependability",
+  year =         "2002",
+  address =   "Saint-Emilion, France",
+  month =     sep,
+}
+
+@Unpublished{ajmani02review,
+  author =       "Sameer Ajmani",
+  title =        "A Review of Software Upgrade Techniques for
+                 Distributed Systems",
+  year =         "2002",
+  url =         "http://www.pmg.lcs.mit.edu/~ajmani/papers/review.pdf",
+  month =     aug,
+  note = 	 "Manuscript",
+}
+
+@Unpublished{ajmani02distributed,
+  author =       "Sameer Ajmani",
+  title =        "Distributed System Upgrade Scenarios",
+  year =         "2002",
+  url =         "http://www.pmg.lcs.mit.edu/~ajmani/papers/scenarios.pdf",
+  month =     oct,
+  note = 	 "Manuscript",
+}
+
+@InProceedings{2002:icsm:truyen,
+  author =       "E. Truyen and W. Joosen and P. Verbaeten",
+  booktitle =    "Proceedings of the International Conference on
+                 Software Maintenance ({ICSM}'02)",
+  title =        "Consistency Management in the Presence of Simultaneous
+                 Client-Specific Views",
+  publisher =    "IEEE Computer Society",
+  pages =        "501--510",
+  month =        Oct # "3--6",
+  year =         "2002",
+  abstract =       "This paper is about client-specific
+                 customization of systems that implement an on-line
+                 Internet service in the presence of simultaneous
+                 client-specific views. The problem is that each client
+                 must be able to customize the running system for use in
+                 its own context, without impacting the service behavior
+                 that is delivered to other clients. To solve this, we
+                 propose to customize the system on a per client request
+                 basis, where the system itself consists of a stable
+                 core and several extensions that are injected into the
+                 core as needed. However, this approach brings on its
+                 own several consistency management problems that must
+                 be dealt with in order to make the approach viable. We
+                 give an overview of these problems and present a
+                 management architecture that deals with these
+                 problems.",
+}
+
+@Article{wills01open,
+  author =       "Linda Wills and others",
+  title =        "An open platform for reconfigurable control",
+  journal =      "IEEE Control Systems Magazine",
+  year =         "2001",
+  URL =          "http://citeseer.ist.psu.edu/wills01open.html",
+  annote =       "Uses real-time CORBA to implement component-based
+                 control systems, and uses a publish-subscribe
+                 communication bus to loosen component coupling (and
+                 make reconfiguration easier). Components specify input
+                 and output ports along qith QoS constraints (priority,
+                 sample rate, execution time). Reconfiguration can
+                 create components, change port connections, and alter
+                 QoS constraints. Authors propose to use common
+                 controller design patterns to support common
+                 reconfigurations. Cites Oreizy et al. as main previous
+                 work.",
+  month =     jun,
+}
+
+@InProceedings{tewksbury01live,
+  author =       "L. A. Tewksbury and L. E. Moser and P. M.
+                 Melliar-Smith",
+  booktitle =    "IEEE Intl. Conf. on Software Maintenance (ICSM)",
+  title =        "Live upgrades of {CORBA} applications using object
+                 replication",
+  year =         "2001",
+  annote =       "Uses replication of CORBA objects to support upgrades
+                 without interrupting service. Rather than allowing the
+                 system to exist in a hybrid state (i.e., where
+                 different objects are at different versions), the
+                 upgrade executes an ``atomic switchover'' that changes
+                 all objects from one version to another. Reliable,
+                 totally-ordered multicast ensures atomicity. If the
+                 upgrade changes an objects' interface, all clients that
+                 use that interface must also be upgraded at the
+                 switchover. Furthermore, all affected objects must be
+                 quiescent when the switchover occurs. The system uses
+                 wrapper functions to loosen this quiescence requirement
+                 (i.e., by translating old calls to new ones). The
+                 system provides an ``upgrade preparer'' tool that
+                 automatically generates wrapper functions and state
+                 transformers given the old and new versions of an
+                 object's code. This work follows that of Kramer and
+                 Magee, Hofmeister and Purtilo, and Bidan et al.",
+  address =   "Florence, Italy",
+  month =     nov,
+  pages =     "488--497",
+}
+
+@Misc{liskov01software,
+  author =       "Barbara Liskov",
+  title =        "Software Upgrades in Distributed Systems",
+  year =         "2001",
+  note =         "Keynote address at the 18th ACM Symposium on Operating
+                 Systems Principles",
+  month =     oct,
+}
+
+@InProceedings{hicks01dynamic,
+  author =       "Michael W. Hicks and Jonathan T. Moore and Scott
+                 Nettles",
+  booktitle =    "{SIGPLAN} Conf. on Programming Language Design and
+                 Implementation",
+  title =        "Dynamic Software Updating",
+  year =         "2001",
+  URL =          "http://citeseer.ist.psu.edu/article/hicks01dynamic.html",
+  annote =       "[by Steven Richman] Hicks et al. implement a dynamic
+                 update system in a C-like imperative language. Their
+                 system allows for data transformation during an
+                 upgrade. An upgrade consists of dynamically-linked code
+                 and optional state transformer functions. An upgrade's
+                 type safety is guaranteed with a proof-carrying typed
+                 assembly language (it is unclear why the type analysis
+                 cannot be carried out at compile time). New code is
+                 attached to old code by relinking references. A tool
+                 automatically generates simple state transformer
+                 functions based on code changes, minimizing programmer
+                 work. The programmer is required to specify a single
+                 quiescent point in the application at which upgrades
+                 can safely occur, and this point cannot change across
+                 versions. An upgrade happens atomically at the
+                 specified time. The authors apply their upgrade system
+                 to a single-threaded event-driven web server that is
+                 amenable to quiescence identification, but it is not
+                 clear that update timing can be specified easily in
+                 multithreaded or more complex applications. In general,
+                 update timing is an important and difficult problem in
+                 systems that seek to upgrade running applications
+                 mid-execution.",
+  pages =     "13--23",
+}
+
+@InProceedings{duggan01typebased,
+  author =       "Dominic Duggan",
+  booktitle =    "Intl. Conf. on Functional Programming",
+  title =        "Type-Based Hot Swapping of Running Modules",
+  year =         "2001",
+  URL =          "http://citeseer.ist.psu.edu/duggan01typebased.html",
+  pages =     "62--73",
+}
+
+@Misc{almeida01transparent,
+  author =       "Joao Paulo A. Almeida and Maarten Wegdam and Marten
+                 van Sinderen and Lambert Nieuwenhuis",
+  title =        "Transparent Dynamic Reconfiguration for {CORBA}",
+  year =         "2001",
+  URL =          "http://citeseer.ist.psu.edu/almeida01transparent.html",
+  annote =       "Uses ORB extensions to intercept requests and thus
+                 passivate objects for reconfiguration. Request
+                 interceptors queue requests made during a
+                 reconfiguration. A ``reconfiguration manager'' handles
+                 the creation and deletion of objects, state transfer
+                 (and translation), and object passivation. A ``location
+                 agent'' provides indirection between clients and server
+                 objects; this allows clients to locate objects that
+                 migrate during a reconfiguration. The main differences
+                 between this and Bidan et al. are (1) support for
+                 re-entrant invocations, (2) support for atomic
+                 replacement of multiple objects, and (3) greater
+                 transparency using ORB extensions.",
+}
+
+@Misc{almeida01approach,
+  author =       "Joao Paulo Almeida",
+  title =        "An approach to dynamic reconfiguration of distributed
+                 systems based on object-middleware",
+  year =         "2001",
+  URL =          "http://citeseer.ist.psu.edu/article/almeida01approach.html",
+  annote =       "See ``Transparent Dynamic Reconfiguration'' (Almeida
+                 et al.) for details. This paper provides more
+                 comparisons with related work.",
+  month =     may,
+}
+
+@InProceedings{2001:icse:truyen,
+  author =       "E. Truyen and B. Vanhaute and W. Joosen and P.
+                 Verbaeten and B. N{\o}rregaard J{\o}rgensen",
+  booktitle =    "Proceedings of the 23rd International Conference on
+                 Software Engeneering ({ICSE}'01)",
+  title =        "Dynamic and Selective Combination of Extensions in
+                 {Component-Based} Applications",
+  publisher =    "IEEE Computer Society",
+  pages =        "233--242",
+  month =        May # "12--19",
+  year =         "2001",
+  abstract =       "Support for dynamic and client-specific
+                 customization is required in many application areas. We
+                 present a (distributed) application as consisting of a
+                 minimal functional core - implemented as a
+                 component-based system, and an unbound set of potential
+                 extensions that can be selectively integrated within
+                 this core functionality. An extension to this core may
+                 be a new service, due to new requirements of end users.
+                 Another important category of extensions we consider,
+                 are n on-functional services such as authentication,
+                 which typically introduce interaction refinements at
+                 the application level. In accordance to the separation
+                 of concerns principle, each extension is implemented as
+                 a layer of mixin-like wrappers. Each wrapper
+                 incrementally adds behavior and state to a core
+                 component instance from the outside, without modifying
+                 the component's implementation. The novelty of this
+                 work is that the composition logic, responsible for
+                 integrating extensions into the core system, is
+                 externalized from the code of clients, core system and
+                 extensions. Clients (end users, system integrators) can
+                 customize this composition logic on a per collaboration
+                 basis by 'attaching' high-level interpretable extension
+                 identifiers to their interactions with the core
+                 system.",
+}
+
+@InProceedings{ritzau00dynamic,
+  author =       "Tobias Ritzau and Jesper Andersson",
+  booktitle =    "Java for Embedded Systems Workshop",
+  title =        "Dynamic Deployment of {Java} Applications",
+  year =         "2000",
+  annote =       "Uses lazy upgrades to convert classes and objects to
+                 new versions. An upgrade consists of a class converter
+                 that converts static class data and an object converter
+                 that converts instances. The system uses a modified JVM
+                 to keeps old versions of classes and objects around so
+                 that old references continue to work. Does not comment
+                 on the problem of state divergence between different
+                 versions of the same object. Uses Jini to deploy
+                 upgrades in distributed systems, but has no mechanism
+                 to synchronize or otherwise schedule distributed
+                 upgrades. Converter routines cannot call methods of old
+                 or new objects -- they can only copy and convert object
+                 state.",
+  address =   "London",
+  month =     may,
+}
+
+@InProceedings{rauch00partition,
+  author =       "Felix Rauch and Christian Kurmann and Thomas M.
+                 Stricker",
+  booktitle =    "Proceedings of the IEEE International Conference on
+                 Cluster Computing 2000",
+  title =        "Partition Repositories for Partition Cloning---{OS}
+                 Independent Software Maintenance in Large Clusters of
+                 {PC}s",
+  address =      "Chemnitz, Germany",
+  month =        nov,
+  year =         "2000",
+  url =         "http://www.cs.inf.ethz.ch/CoPs/publications/#cluster2000",
+  annote =       "[rauch] In this paper we looked at the problem of
+                 minimizing the amount of data to archive (or upgrade)
+                 multiple versions of installations in a multi-use
+                 cluster.",
+}
+
+@Unpublished{microsoft00rolling,
+  author =       "Microsoft Corporation",
+  title =        "Windows 2000 Clustering: Performing a Rolling
+                 Upgrade",
+  year =         "2000",
+  url =         "http://www.microsoft.com/windows2000/techinfo/planning/incremental/rollupgr.asp",
+  note =         "(No longer available)",
+  annote =       "Describes how to maintain service while upgrading a
+                 cluster of NT or Windows 2000 servers with a new
+                 service pack. Servers are upgraded one-at-a-time, and
+                 resources and clients automatically fail over and fail
+                 back between nodes in the cluster, even when those
+                 nodes are running different versions (i.e., the cluster
+                 is in mixed mode).",
+}
+
+@InProceedings{malabarba00runtime,
+  author =       "Scott Malabarba and Raju Pandey and Jeff Gragg and
+                 Earl Barr and J. Fritz Barnes",
+  booktitle =    "European Conf. on Object-Oriented Programming",
+  title =        "Runtime support for type-safe dynamic {J}ava classes",
+  year =         "2000",
+  annote =       "[by Steven Richman] Malabarba et al. bring dynamic
+                 classes to Java by modifying the virtual machine and
+                 adding a dynamic class loader. Type correctness is
+                 checked when an upgrade in compiled. Specifically,
+                 their compiler guarantees that the set of new and
+                 changed classes comprising an update forms a complete
+                 upgrade if the changes are applied atomically. In their
+                 implementation, upgrades occur in an atomic global
+                 update, but objects are transformed lazily, as in our
+                 persistent object base. A quick initial marking phase
+                 tags all reachable objects that need to be upgraded,
+                 and any subsequent references to marked objects trap to
+                 an upgrader that suspends all threads and brings the
+                 objects up to date. No general state transformation
+                 facility is provided; fields are simply copied from old
+                 objects to new objects and new fields are initialized
+                 to default values.",
+}
+
+@Article{lerner00model,
+  author =       "Barbara Staudt Lerner",
+  title =        "A model for compound type changes encountered in
+                 schema evolution",
+  journal =      "ACM Transactions on Database Systems",
+  volume =       "25",
+  number =       "1",
+  year =         "2000",
+  url =         "http://citeseer.ist.psu.edu/staudtlerner96model.html",
+  annote =       "Excellent related work on schema evolution systems.
+                 Focus is on identifying (inferring) steps in schema
+                 evolution from before and after definitions (i.e., does
+                 an intelligent diff to infer refactorings). Also
+                 generates derivation functions to initialize new state
+                 from old values (i.e., state transform functions).",
+  pages =     "83--127",
+}
+
+@InProceedings{senivongse99enabling,
+  author =       "Twittie Senivongse",
+  booktitle =    "Intl. Symposium on Dist. Objects and Applications",
+  title =        "Enabling Flexible Cross-Version Interoperability for
+                 Distributed Services",
+  year =         "1999",
+  annote =       "Describes how to use mappers to enable cross-version
+                 interoperation during distributed upgrades. Argues that
+                 this interrupts service less than systems that
+                 atomically upgrade all clients and servers that use a
+                 changing interface. Describes a UI that guides the
+                 evolver (upgrader) through automatic generation of
+                 mapper (simulation) code. Restricts autogenerated
+                 wrappers to 1-to-1 mapping from old method calls to new
+                 ones (in general, the wrapper could call multiple
+                 methods on many different servers). Categorizes the
+                 supported kinds of interface evolution, including
+                 subtyping. Also discusses chains of mappers, backwards
+                 mappers (new-to-old), propagation of supertype changes
+                 to subtypes, and optimizations (like deprecating old
+                 mappers).",
+  address =   "Edinburgh, UK",
+}
+
+@InProceedings{hall99cooperative,
+  author =       "Richard S. Hall and Dennis Heimbigner and Alexander L.
+                 Wolf",
+  booktitle =    "Intl. Conf. on Software Engineering",
+  title =        "A Cooperative Approach to Support Software Deployment
+                 Using the Software Dock",
+  year =         "1999",
+  URL =          "http://citeseer.ist.psu.edu/hall99cooperative.html",
+  pages =     "174--183",
+}
+
+@InProceedings{wohlstadter02framework,
+author="Eric Wohlstadter and Brian Toone and Prem Devanbu",
+title="A framework for flexible evolution in distributed heterogeneous systems",
+booktitle = "International Workshop on Principles of Software Evolution",
+address="Orlando, Florida",
+pages="39--42",
+year=2002,
+isbn="1-58113-545-9",
+}
+
+@InProceedings{devanbu99security,
+  author =       "P. Devanbu and M. Gertz and S. Stubblebine",
+  booktitle =    "ICSE Workshop on Software Engineering over the
+                 Internet",
+  title =        "Security for Automated, Distributed Configuration
+                 Management",
+  year =         "1999",
+  annote =       "Identifies security issues for automatic software
+                 management and a research plan to address them.
+                 Integrity must be guaranteed for the software being
+                 shipped from vendor to user, the user's configuration,
+                 and messages from user to vendor that describe
+                 configurations. Authentication is needed to identify
+                 software vendors and licenced software users. Privacy
+                 protections are needed for software components (because
+                 of their intellectual property value) and for software
+                 configurations (because they may reveal sensitive
+                 data). Finally, delegation is needed, e.g., to let
+                 administrators delegate configuration control to
+                 vendors and to let vendors delegate configuration
+                 checking to a testing lab.",
+  month =     apr,
+}
+
+@InProceedings{cook99highly,
+  author =       "Jonathan E. Cook and Jeffery A. Dage",
+  booktitle =    "Intl. Conf. on Software Engineering",
+  title =        "Highly Reliable Upgrading of Components",
+  year =         "1999",
+  annote =       "Maintains and runs multiple versions of a component
+                 simultaneously to avoid introducing errors at upgrades.
+                 For example, suppose version 1 of a component has a
+                 method whose input is any nonnegative number, and
+                 suppose version 2 accepts any number. Then, this system
+                 uses version 2's output for nonpositive numbers and
+                 uses version 1's for positive numbers (the idea being
+                 version 1 probably works fine for positive numbers, but
+                 version 2 might be broken). The system monitors version
+                 2's output on positive numbers and records statistics
+                 on whether it makes any errors. The upgrader can
+                 examine these statistics to determine whether version 1
+                 can be removed in favor of version 2. This work does
+                 not seem to address the problem of state divergence
+                 between components (i.e., since version 2 sees some
+                 requests that version 1 does not, version 2's state may
+                 diverge from version 1's).",
+  address =   "Los Angeles, CA",
+}
+
+@Unpublished{barnes99rpm,
+  author =       "Donnie Barnes",
+  title =        "{RPM} {HOWTO}",
+  year =         "1999",
+  note =         "\url{http://www.rpm.org/RPM-HOWTO/}",
+  month =     nov,
+}
+
+@InProceedings{wrembel98object,
+  author =       "Robert Wrembel",
+  booktitle =    "13th International Symposium on Computer and
+                 Information Sciences (ISCIS)",
+  title =        "Object-Oriented Views: Virtues and Limitations",
+  address =      "Antalya",
+  month =        nov,
+  year =         "1998",
+  URL =          "http://citeseer.ist.psu.edu/wrembel98objectoriented.html",
+  URL =          "http://citeseer.ist.psu.edu/524487.html",
+  annote =       "A survey of techniques for supporting object-oriented
+                 views. Relevant to upgrades because simulation objects
+                 for different versions act like different views on the
+                 state of a node.",
+}
+
+@InProceedings{oreizy98architecture,
+  author =       "P. Oreizy and N. Medvidovic and R. N. Taylor",
+  booktitle =    "Intl. Conf. on Software Engineering",
+  title =        "Architecture-based runtime software evolution",
+  year =         "1998",
+  annote =       "Supports runtime software evolution by adjusting
+                 ``connectors'' between components dynamically.
+                 Connectors are themselves components that regulate
+                 communication and abstract the underlying mechanisms.
+                 Uses imperative commands (add, link, start) to direct
+                 reconfiguration.",
+  address =   "Kyoto, Japan",
+  month =     apr,
+}
+
+@InProceedings{hjalmtysson98dynamic,
+  author =       "Gilsi Hjalmtysson and Robert Gray",
+  booktitle =    "{USENIX} Annual Technical Conf.",
+  title =        "Dynamic {C}++ Classes---{A} lightweight mechanism to
+                 update code in a running program",
+  year =         "1998",
+  URL =          "http://citeseer.ist.psu.edu/266962.html",
+  annote =       "[by Steven Richman] Hjalmtysson and Gray's dynamic C++
+                 classes represent an upgrade system similar in spirit
+                 to but simpler than Fabry's scheme. They permit updates
+                 at class granularity by providing a library with a
+                 generic template class that serves as a proxy for
+                 indirect access to dynamic classes. Dynamic linking
+                 intromits new code. Dynamic C++ classes avoid the
+                 problem of upgrade completeness and quiescence by
+                 allowing objects with old class versions to persist
+                 until they are destroyed; an upgrade applies only to
+                 new objects. Objects of different versions can coexist
+                 because the system forces dynamic classes to inherit
+                 from abstract interfaces that cannot change across
+                 versions. This constraint necessarily limits program
+                 evolution. Further, the policy of keeping objects with
+                 out of date class versions until deletion is ill-suited
+                 to applications with long-lived objects: an upgrade is
+                 not complete until all objects from the old version
+                 have been destroyed, and this may never occur. This
+                 becomes problematic if a critical bug fix must be
+                 applied to a long-lived object. Ultimately, the onus is
+                 placed on the programmer to delete and reconstruct
+                 objects that would not otherwise be updated. It is
+                 clear, then, that automatic transformation of live
+                 objects is a desirable property in an upgrade system.
+                 Hjalmtysson and Gray's method has several strengths,
+                 though; namely, it is an efficient implementation of
+                 dynamic updates in a modern programming language and
+                 uses only those features already present in the
+                 language and linking environment--no language
+                 extensions or special runtime systems are required.",
+  month =     jun,
+  pages =     "65--76",
+}
+
+@TechReport{govindan98framework,
+  author =       "R. Govindan and C. Alaettino and D. Estrin",
+  title =        "A framework for active distributed services",
+  number =       "98-669",
+  institution =  "ISI-USC",
+  year =         "1998",
+  URL =          "http://citeseer.ist.psu.edu/govindan97framework.html",
+  annote =       "An active distributed service (ADS) is composed of
+                 cooperating agents located on nodes on a network.
+                 Agents are extensible by plugging in new event handlers
+                 (e.g., message handlers). Handlers are pushed from
+                 agent to agent or are retrieved on demand. Each
+                 physical node has one ``actuator'' that sends and
+                 receives handlers (cf. upgrade dissemination). Each ADS
+                 agent on a node has an ``envoy'' that uses the actuator
+                 to get handlers. Together, the actuator and the envoys
+                 compose the ADS's runtime ``substrate''.",
+}
+
+@Misc{insert-project,
+  key =          "INSERT",
+  title =        "{INSERT}: Incremental Software Evolution for Real-Time
+                 applications",
+  institution =  "CMU",
+  year =         "1997",
+  URL =          "http://www-2.cs.cmu.edu/Groups/real-time/insert/darpa96.html",
+  annote =       "This entry is a placeholder until a suitable
+                 publication is found. From the web page: Our objective
+                 is the development of a capability package that will
+                 permit safe on-line upgrading of hardware and software
+                 in spite of residual errors in the new components. This
+                 package will facilitate a paradigm shift from static
+                 design and extensive testing to safe upgrades of
+                 real-time safety critical systems. The package will be
+                 implemented and demonstrated in the Lockheed Martin
+                 flight simulation hotbench.",
+}
+
+@InProceedings{hall97architecture,
+  author =       "Richard S. Hall and Dennis Heimbeigner and Andre van
+                 der Hoek and Alexander L. Wolf",
+  booktitle =    "Intl. Conf. on Dist. Computing Systems",
+  title =        "An Architecture for Post-Development Configuration
+                 Management in a Wide-Area Network",
+  year =         "1997",
+  annote =       "Uses servers called ``release docks'' at software
+                 producers and ``field docks'' at software consumers to
+                 disseminate new software and updates. Users download
+                 and authorize installation agents which in turn install
+                 the requested software and install update agents. A
+                 global event system routes update notifications to
+                 update agents, which in turn download and install
+                 updates. A hierarchical registry system standardizes
+                 descriptions of software packages, their file
+                 structure, and their interdependencies. If an
+                 installation or update depends on another package, that
+                 package is automatically installed or updated as
+                 needed. Local agents enforce access control, e.g., by
+                 mapping registry changes onto the file system.",
+  month =     may,
+}
+
+@TechReport{gilmore97dynamic,
+  author =       "Stephen Gilmore and Dilsun Kirli and Chris Walton",
+  title =        "Dynamic {ML} without Dynamic Types",
+  number =       "ECS-LFCS-97-378",
+  institution =  "University of Edinburgh",
+  year =         "1997",
+  URL =          "http://citeseer.ist.psu.edu/gilmore97dynamic.html",
+  month =     dec,
+}
+
+@Article{evans97drastic,
+  author =       "Huw Evans and Peter Dickman",
+  title =        "{DRASTIC}: {A} Run-Time Architecture for Evolving,
+                 Distributed, Persistent Systems",
+  journal =      "Lecture Notes in Computer Science",
+  volume =       "1241",
+  year =         "1997",
+  URL =          "http://citeseer.ist.psu.edu/evans97drastic.html",
+  annote =       "Separates distributed systems into ``zones'' that
+                 upgrade using stop-the-world. Uses ``change absorbers''
+                 and ``transformers'' to convert objects as they move
+                 from zone to zone.",
+  pages =     "243--??",
+}
+
+@InProceedings{choi97backward,
+  author =       "Injun Choi and Sungmoon Bae and Namchul Do and
+                 Myungwhan Yun",
+  booktitle =    "Proc. of 22nd International Conference on Computers
+                 and Industrial Engineering",
+  title =        "Backward Propagation of Engineering Constraints in
+                 Active Object-oriented Databases",
+  address =      "Cairo, Egypt",
+  pages =        "20--23",
+  month =        dec,
+  year =         "1997",
+  annote =       "Describes a use of triggers to maintain integrity
+                 constraints among a set of related objects. This is
+                 mildly related to how simulation objects must propagate
+                 mutations to objects further down the chain and deal
+                 with problems that occur when their constraints are
+                 violated.",
+}
+
+@InProceedings{bartoletti97secure,
+  author =       "T. Bartoletti and L. A. Dobbs and M. Kelley",
+  booktitle =    "Proc. 20th {NIST}-{NCSC} National Information Systems
+                 Security Conf.",
+  title =        "Secure Software Distribution System",
+  year =         "1997",
+  annote =       "Authenticating and upgrading system software plays a
+                 critical role in information security, yet practical
+                 tools for assessing and installing software are lacking
+                 in today's marketplace. the Secure Software
+                 Distribution System (SSDS) will provide automated
+                 analysis, notification, distribution, and installation
+                 of security patches and related software to
+                 network-based computer systems in a vendor-independent
+                 fashion. SSDS will assist with the authentication of
+                 software by comparing the system's objects with the
+                 patch's objects. SSDS will monitor vendors' patch sites
+                 to determine when new patches are released and will
+                 upgrade system software on target systems
+                 automatically. This paper describes the design of SSDS.
+                 Motivations behind the project, the advantages of SSDS
+                 over existing tools as well as the current status of
+                 the project are also discussed.",
+  keywords =     "Security, Distributed, Software Management",
+  pages =     "191--201",
+}
+
+@InProceedings{senivongse96model,
+  author =       "Twittie Senivongse and Ian Utting",
+  editor =       "Spaniol {Schill, Mittasch} and Popien",
+  booktitle =    "Distributed Platforms",
+  title =        "A Model for Evolution of Services in Distributed
+                 Systems",
+  publisher =    "Chapman and Hall",
+  year =         "1996",
+  ISBN =         "0-412-73280-7",
+  note =         "",
+  URL =          "http://www.cs.ukc.ac.uk/pubs/1996/341",
+  annote =       "Uses mapping operators to provide ``evolution
+                 transparency'' (behavioral compatibility between
+                 versions). No forward compatibility, SO state, failure
+                 mode, or correctness criteria. Supports adapter
+                 chaining, automatic adapter generation, and non-subtype
+                 evolution.",
+  keywords =     "evolution, transparency, RM-ODP, interoperability,
+                 distributed systems",
+  refereed =     "yes",
+  month =     jan,
+  pages =     "373--385",
+}
+
+@InProceedings{reichl96enhance,
+  author =       "P. Reichl and D. Thi{\ss}en and C. Linnhoff-Popien",
+  booktitle =    "Intl. Conf. Dist. Computer Communication
+                 Networks---Theory and Applications",
+  title =        "How to enhance service selection in distributed
+                 systems",
+  year =         "1996",
+  annote =       "Extends service selection to choose best match via
+                 ``service distance'' (best-fit specification
+                 matching)",
+  address =   "Tel-Aviv",
+  month =     nov,
+  pages =     "114--123",
+}
+
+@InProceedings{meyer96enabling,
+  author =       "B. Meyer and S. Zlatintsis and C. Popien",
+  booktitle =    "IFIP/IEEE Intl. Conf. on Dist. Platforms (ICDP)",
+  title =        "Enabling interworking between heterogeneous
+                 distributed platforms",
+  publisher =    "Chapman \& Hall",
+  year =         "1996",
+  annote =       "Uses gateways between heterogeneous distributed
+                 platforms to provide ``federation transparency'' (cf.
+                 ``evolution transparency''). When using objects from a
+                 different domain, they look like objects in the local
+                 domain.",
+  subtitle =     "A gateway for federating traders",
+  pages =     "329--341",
+}
+
+@InProceedings{bellissard96distributed,
+  author =       "Luc Bellissard and Slim Ben Atallah and Fabienne Boyer
+                 and Michel Riveill",
+  booktitle =    "Intl. Conf. on Dist. Computing Systems",
+  title =        "Distributed Application Configuration",
+  year =         "1996",
+  URL =          "http://citeseer.ist.psu.edu/bellissard96distributed.html",
+  annote =       "Olan is a module interconnection language (MIL) that
+                 extends the work of Conic, Polylith, Darwin, and Durra.
+                 In particular, Olan adds support for encapsulating
+                 legacy applications as components of the system. Uses
+                 ``interactions'' to define functional dependencies
+                 between components and ``connectors'' to decouple
+                 implementations from interactions.",
+  pages =     "579--585",
+}
+
+@Inproceedings{amer-yahia96object,
+  author =       "S. Amer-Yahia and P. Breche and C. Souza",
+  booktitle =    "Proc. of Journées Bases de Données Avancées",
+  title =        "Object Views and Updates",
+  year =         "1996",
+  URL =          "http://citeseer.ist.psu.edu/amer-yahia96object.html",
+  annote =       "Describes how the O2 ODBS supports object-oriented
+                 views and data updates made to those views. A view is a
+                 virtual schema and base (set of persistent roots),
+                 defined using a view definition language (VDL). The
+                 view is expressed in terms of the root (underlying)
+                 schema and base. The paper defines completeness and
+                 consistency constraints on the view, and requires that
+                 updates made to the view respect those constraints. An
+                 update to a data attribute in a view is translated to
+                 updates on root data as follows: if an attribute in the
+                 root is the same (or renamed) in the view, then updates
+                 to the attribute view are made to the root. If the
+                 attribute in the view is defined as a function of the
+                 root attribute, and if the function is invertible, then
+                 an update is applied to the root by first applying the
+                 inverse of that function (e.g., if the view is root x
+                 2, then new-root is new-view / 2). If the function is
+                 not invertible, then the user may define code that
+                 translates view updates to root updates. A runtime
+                 check made after such updates ensures that the new root
+                 value still maps to the new view value (if this check
+                 fails, the update aborts). Finally, if no translation
+                 is possible, the update fails.",
+}
+
+@InProceedings{shaddock95upgrade,
+  author =       "Michael E. Shaddock and Michael C. Mitchell and Helen
+                 E. Harrison",
+  booktitle =    "Proc. of the 9th {USENIX} Sys. Admin. Conf.",
+  title =        "How to Upgrade 1500 Workstations on {S}aturday, and
+                 Still Have Time to Mow the Yard on {S}unday",
+  year =         "1995",
+  ISBN =         "1-880446-73-1",
+  address =   "Berkeley",
+  month =     sep,
+  pages =     "59--66",
+  publisher = "Usenix Association",
+}
+
+@TechReport{sha95evolving,
+  author =       "Lui Sha and Ragunathan Rajkuman and Michael
+                 Gagliardi",
+  title =        "Evolving Dependable Real-Time Systems",
+  number =       "CMS/SEI-95-TR-005",
+  institution =  "CMU",
+  year =         "1995",
+  annote =       "Describes the Simplex architecture for supporting
+                 evolution of real-time systems that use commercial
+                 off-the-shelf (COTS) components. Upgrades are supported
+                 by grouping a set of analytically redundant components
+                 (i.e., that satisfy the same abstract spec) into a
+                 subsystem module. Each module contains a safety
+                 component that is assumed correct but may be
+                 inefficient, a baseline component that acts as the
+                 ``leader'' of the replica group, and an optional new
+                 component that is evaluated against the other two. Each
+                 module also contains a management system that monitors
+                 the components for errors (e.g. functional or resource
+                 utilization). If the new component behaves correctly
+                 according toa user-specified metric, the system
+                 replaces the baseline component with the new one. A
+                 two-phase protocol is used to atomically switch over a
+                 set of distributed components.",
+}
+
+@InProceedings{breche95simulation,
+  author =       "Philippe Breche and Fabrizio Ferrandina and Martin
+                 Kuklok",
+  booktitle =    "Database and Expert Systems Applications",
+  title =        "Simulation of Schema Change using Views",
+  pages =        "247--258",
+  year =         "1995",
+  URL =          "http://citeseer.ist.psu.edu/breche95simulation.html",
+}
+
+@PhdThesis{hofmeister94dynamic,
+  author =       "Christine R. Hofmeister",
+  title =        "Dynamic Reconfiguration of Distributed Applications",
+  school =       "University of Maryland, College Park",
+  year =         "1994",
+  note =         "Also as Technical Report CS-TR-3210",
+  URL =          "http://citeseer.ist.psu.edu/hofmeister93dynamic.html",
+  annote =       "Hofmeister's thesis on her 1993 work with Purtilo.",
+}
+
+@Misc{swej93mar,
+  key =          "{IEE} Software Engineering Journal, Special Issue on
+                 Configurable Dist. Systems",
+  title =        "{IEE} Software Engineering Journal, Special Issue on
+                 Configurable Dist. Systems",
+  journal =      "{IEE} Software Engineering Journal, Special Issue on
+                 Configurable Dist. Systems",
+  number =       "2",
+  publisher =    "IEE",
+  year =         "1993",
+  series =       "8",
+  month =     mar,
+crossrefonly = "",
+}
+
+@Article{segal93program,
+  author =       "Mark E. Segal and Ophir Frieder",
+  title =        "On-the-Fly Program Modification: Systems for Dynamic
+                 Updating",
+  journal =      "{IEEE} Software",
+  volume =       "10",
+  number =       "2",
+  year =         "1993",
+  annote =       "A good review of several updating systems. Categorizes
+                 software-based dynamic updating systems as those that
+                 replace abstract data types (e.g., Fabry), replace
+                 servers in client-server systems (e.g., Argus), update
+                 in constrained message-passing systems (e.g. Conic),
+                 and update programs in procedural languages (e.g.,
+                 PODUS). Also details PODUS: a procedure-oriented
+                 dynamic updating system that can replace a procedure
+                 definition provided it is inactive, i.e., not on the
+                 stack, not used by any proc on the stack, and not
+                 semantically depended on by any proc on the stack.
+                 PODUS works in distributed environments that use RPC.
+                 Semantic dependencies between procs are specified by a
+                 programmer; semantically dependent procs must reside at
+                 the same physical site. PODUS uses ``interprocedures''
+                 to map calls from an old version of a proc to a new
+                 version and uses ``mapper procedures'' to copy/convert
+                 static state from one proc to another. Thus, PODUS can
+                 support multiple interacting versions of concurrent,
+                 distributed programs.",
+  month =     mar,
+}
+
+@InProceedings{oki93information,
+  author =       "Brian Oki and Manfred Pfluegl and Alex Siegel and Dale
+                 Skeen",
+  booktitle =    "14th {ACM} Symposium on Operating System Principals",
+  title =        "The {I}nformation {B}us: An Architecture for
+                 Extensible Distributed Systems",
+  year =         "1993",
+  annote =       "A communication medium that supports the transfer of
+                 objects using either publish-subscribe or RMI. Objects
+                 are identified using hierarchical (DNS-like) names
+                 called ``subjects.'' Clients get data by subscribing to
+                 subjects. Servers name published data using subjects.
+                 Clients locate services (e.g., for RMI) by publishing
+                 interests. Thus, new servers can be introduced without
+                 altering clients. Data is disseminated using ethernet
+                 broadcast on LANs and an overlay network in the wide
+                 area. Objects are dynamically typed, so new types can
+                 be introduced (although clients can use the new types
+                 only if they know how to handle a supertype). The
+                 system supports legacy applications and services using
+                 ``adapters'' to translate between the app domain and
+                 the Information Bus object format.",
+  address =   "Asheville, NC",
+}
+
+@TechReport{hofmeister93framework,
+  author =       "Christine R. Hofmeister and James M. Purtilo",
+  title =        "A Framework for Dynamic Reconfiguration of Distributed
+                 Programs",
+  number =       "CS-TR-3119",
+  institution =  "University of Maryland, College Park",
+  year =         "1993",
+  URL =          "http://citeseer.ist.psu.edu/hofmiester93framework.html",
+  annote =       "Inspired by Kramer and Magee's reconfiguration model
+                 in Conic, this work adapts that model to the Polylith
+                 distributed environment (supports general
+                 message-passing, not just RPC). Reconfigurations can
+                 change module implementations, application structure
+                 (e.g. add and remove modules), and application geometry
+                 (e.g. physical location of modules). This work extends
+                 the Conic work by adding support for capturing and
+                 restoring process state via an intermediate abstract
+                 representation \cite{herlihy82value}. Reconfiguring
+                 modules must be quiescent; messages received during the
+                 reconfiguration are buffered and are used to initialize
+                 the replacement module.",
+}
+
+@Article{gupta93online,
+  author =       "Deepak Gupta and Pankaj Jalote",
+  title =        "On-line software version change using state transfer
+                 between processes",
+  journal =      "Software Practice and Experience",
+  volume =       "23",
+  number =       "9",
+  year =         "1993",
+  annote =       "[by Steven Richman] Gupta and Jalote take a rather
+                 different approach to on-the-fly upgrades. Instead of
+                 modifying a running process, they suspend the process
+                 and copy it to a new, upgraded process. The copy
+                 process has a new code segment that reflects the
+                 update, and data and stack segments that are duplicated
+                 from the old processes (with pointers modified as
+                 necessary). A runtime library contains special versions
+                 of the open and close system calls that allow open file
+                 descriptors to be transfered to the new processes. The
+                 system only considers an upgrade valid if none of the
+                 modified functions are being executed at the time the
+                 update occurs. This is enforced by having the
+                 application run as a child process of an upgrader
+                 process: the upgrader process uses the ptrace debugging
+                 system call to monitor the application's stack. This
+                 quiescence requirement precludes the update of
+                 long-lived functions that are often or always on the
+                 stack, such as top level functions or event processing
+                 loops. Gupta and Jalote posit that these sorts of
+                 functions generally can be made static, with the ``real
+                 work'' delegated to shorter-lived functions. It is not
+                 obvious that this is true, and their quiescence
+                 requirement may prove onerous in many applications. The
+                 programmer is allowed to specify a single state
+                 transformer function that is executed when the rest of
+                 the upgrade is complete.",
+  month =     sep,
+  pages =     "949--964",
+}
+
+@InProceedings{monk92model,
+  author =       "Simon Monk and Ian Sommerville",
+  booktitle =    "Proceedings of {BNCOD} 10",
+  title =        "A Model for Versioning of Classes in Object-Oriented
+                 Databases",
+  publisher =    "Springer Verlag",
+  year =         "1992",
+  annote =       "Presents a model for class (schema) versioning in
+                 OODBs. Schema versioning is different from schema
+                 modification: modification has a single logical schema
+                 that is updated, e.g., by changing a class definition.
+                 All instances of the class are eventually (eagerly or
+                 lazily) updated. In versioning, every change to a class
+                 results in a new version. Each instance is created
+                 using a given version. This version never changes,
+                 i.e., an instance never transforms to a new version.
+                 The author's model uses ``update'' and ``backdate''
+                 methods to convert method/field accesses up and down
+                 versions. This is more flexible than ENCORE
+                 \cite{skarra86management, zdonik86maintaining} because
+                 it allows accesses to have different semantics in each
+                 version. This system also stores old values that are
+                 removed in later versions.",
+  address =   "Aberdeen",
+  pages =     "42--58",
+}
+
+@InProceedings{richardson91aspects,
+  author =       "Joel Richardson and Peter Schwarz",
+  booktitle =    "Proc. of the ACM SIGMOD Intl. Conf. on Management of
+                 Data",
+  title =        "Aspects: Extending Objects to Support Multiple,
+                 Independent Roles",
+  volume =       "20",
+  pages =        "298--307",
+  month =        may,
+  year =         "1991",
+  annote =       "Describes how to integrate aspects (wrappers) into the
+                 type system, so that a single object may evolve over
+                 time with new state and new behavior. Similar to SOs,
+                 since aspects need not implement a subtype of the base
+                 object's type and may contain their own state. But this
+                 paper does not discuss what happens when the base
+                 object enters a state that doesn't make sense in the
+                 aspect.",
+}
+
+@Article{frieder91dynamically,
+  author =       "Ophir Frieder and Mark E. Segal",
+  title =        "On dynamically updating a computer program: From
+                 concept to prototype",
+  journal =      "Journal of Systems and Software",
+  year =         "1991",
+  annote =       "Describes PODUS (see Segal and Frieder, 1993).",
+  month =     feb,
+  pages =     "111--128",
+}
+
+@InProceedings{kramer90towards,
+  author =       "J. Kramer and J. Magee and A. Young",
+  booktitle =    "{IEEE} Workshop on Future Trends of Dist. Computing
+                 Systems in the '90s",
+  title =        "Towards Unifying Fault and Change Management",
+  year =         "1990",
+  URL =          "http://citeseer.ist.psu.edu/kramer90towards.html",
+  address =   "Cairo",
+  pages =     "57--63",
+}
+
+@Article{kramer90evolving,
+  author =       "J. Kramer and J. Magee",
+  title =        "The Evolving Philosophers Problem: Dynamic Change
+                 Management",
+  journal =      "{IEEE} Transactions on Software Engineering",
+  volume =       "16",
+  number =       "11",
+  publisher =    "IEEE Computer Society",
+  year =         "1990",
+  URL =          "http://citeseer.ist.psu.edu/kramer90evolving.html",
+  annote =       "Argues for a separation of functional application
+                 concerns from structural configuration concerns.
+                 Distributed applications are described as
+                 interconnected components. Configuration changes are
+                 specified declaratively; a configuration management
+                 system translates this specification into a ``change
+                 transaction'' that can create, remove, link, or unlink
+                 components. To preserve application consistency,
+                 components must be able to become ``passive,'' i.e.,
+                 stop initiating but continue serving transactions.
+                 Given this capability, the configuration management
+                 system can passivate the appropriate components before
+                 actually changing the system structure. A component can
+                 be removed if it is ``quiescent'', i.e., it is passive
+                 and all components linked to it are passive. The
+                 authors mention that an alternative to quiescence is to
+                 use recovery to restore application consistency, but
+                 they argue that this complicates applications (but they
+                 also mention recovery may be necessary to deal with
+                 failure). The initial presentation assumes transactions
+                 are independent (i.e. not nested), but later sections
+                 relax this assumption (either by passivating dependent
+                 components or by aborting the dependent transactions).
+                 The system requires that the initiator of a transaction
+                 be informed of when a transaction completes (i.e., no
+                 one-way messages). The system can be extended to
+                 support multiple, concurrent change transactions by
+                 passivating more components. The system does not
+                 support state transfer between old and new components,
+                 but the authors mention that this is possible between
+                 quiescent components. In future work, the authors
+                 mention that an application could minimize system
+                 disruption by instigating change when quiescence is
+                 detected, rather than externally imposed.",
+  address =   "Washington, DC",
+  month =     nov,
+  pages =     "1293--1306",
+}
+
+@InProceedings{segal89dynamically,
+  author =       "Mark E. Segal and Ophir Frieder",
+  booktitle =    "{IEEE} Conf. on Software Maintenance",
+  title =        "Dynamically updating distributed software: supporting
+                 change in uncertain and mistrustful environments",
+  year =         "1989",
+  month =     oct,
+  pages =     "254--261",
+}
+
+@InProceedings{frieder88dynamic,
+  author =       "Ophir Frieder and Mark E. Segal",
+  booktitle =    "{IEEE} Conf. on Software Maintenance",
+  title =        "Dynamic Program Updating in a Distributed Computer
+                 System",
+  year =         "1988",
+  address =   "Phoenix, AZ",
+  month =     oct,
+  pages =     "198--203",
+}
+
+@Article{zdonik86maintaining,
+  author =       "Stanley B. Zdonik",
+  title =        "Maintaining Consistency in a Database with Changing
+                 Types",
+  journal =      "{SIGPLAN} Notices",
+  volume =       "21",
+  number =       "10",
+  year =         "1986",
+  annote =       "A nice summary of the ideas presented in
+                 \cite{skarra86management}. Ignores the issue of changes
+                 to the type hierarchy; just deals with version changes
+                 that add/remove/change methods and fields.",
+  month =     oct,
+  pages =     "120--127",
+}
+
+@InProceedings{skarra86management,
+  author =       "Andrea H. Skarra and Staney B. Zdonik",
+  booktitle =    OOPSLA86,
+  title =        "The Management of Changing Types in an Object-Oriented
+                 Database",
+  year =         "1986",
+  address = 	 OOPSLA86addr,
+  month = 	 OOPSLA86date,
+  annote =       "This system (ENCORE) makes type changes by creating
+                 new versions. Objects (instances) retain their version
+                 unless they are coerced (transformed) to another
+                 version. To satisfy cross-version method calls/field
+                 accesses, each type has a version set interface (VSI).
+                 The VSI is the union of all methods anf fields of all
+                 the versions of that type; therefore, any program that
+                 accesses any version of the type can access the VSI
+                 correctly. Accesses are passed from the VSI to the
+                 underlying instance. If the access fails (e.g., because
+                 the target method/field doesn't exist or the access
+                 would read/write an illegal value), then an error
+                 handler in the VSI can substitute a response (e.g.,
+                 default/alternate return value). This system handles
+                 not only changes to a type definition, but also changes
+                 to the type hierarchy. It also uses boolean formulas in
+                 type specs to automatically determine when handlers are
+                 needed. This system does not support changes to
+                 method/field semantics across versions (e.g.,
+                 readOdometer() cannot change from returning miles to
+                 km; instead, you need to remove one method and add
+                 another). More importantly, the number of handlers
+                 scales as the square of the number of versions, because
+                 each time a version is added, handlers must be added
+                 for all the other versions.",
+  pages =     "483--495",
+}
+
+@InProceedings{katz86version,
+  author =       "R. H. Katz and M. Anwarrudin and E. Chang",
+  booktitle =    "Proc. 23rd Design Automation Conference",
+  title =        "A version server for computer-aided design data",
+  pages =        "27--33",
+  year =         "1986",
+  annote =       "Describes a way to keep a history of object versions
+                 by allowing later versions to keep a pointer to earlier
+                 ones. Need to read this to determine whether or not
+                 this is similar to SOs. (I don't think so)",
+}
+
+@Article{kramer85dynamic,
+  author =       "J. Kramer and J. Magee",
+  title =        "Dynamic Configuration for Distributed Systems",
+  journal =      "{IEEE} Transactions on Software Engineering",
+  volume =       "11",
+  number =       "4",
+  year =         "1985",
+  annote =       "Describes how to upgrade a distributed system that is
+                 specified in Conic, i.e., as a set of modules and
+                 connections between them. Messages between modules may
+                 be one-way (asynchronous) or request-response
+                 (RPC-like). Upgrades are specified as declarative
+                 change commands (link, unlink, create, delete, etc); a
+                 Configuration Manager (CM) translates these into
+                 operating system commands and executes them.
+                 Declarative commands allow the CM to select the best
+                 ``change strategy,'' e.g., to minimize downtime (cf.
+                 upgrade schedule). The CM checks that any changes obey
+                 module interface type signatures. The upgrader must
+                 specify change commands directly; the system does not
+                 attempt to infer change commands from before and after
+                 versions of the configuration (e.g., Hicks, 2001 and
+                 Tewksbury, 2001). The CM itself is specified in Conic,
+                 but is not upgradable. System does not quiesce modules,
+                 and so cannot guarantee state consistency. System does
+                 not support state transfer or translation between
+                 versions. System does not provide atomic upgrades,
+                 i.e., an upgrade may fail and leave the system in an
+                 inconsistent state.",
+  month =     apr,
+  pages =     "424--436",
+}
+
+@PhdThesis{bloom83dynamic,
+  author =       "Toby Bloom",
+  title =        "Dynamic Module Replacement in a Distributed
+                 Programming System",
+  school =       "MIT",
+  year =         "1983",
+  URL =          "http://citeseer.ist.psu.edu/bloom83dynamic.html",
+  annote =       "Bloom's thesis describes reconfiguration in Argus, a
+                 strongly-typed distributed system composed of modules
+                 called ``guardians.'' A guardian resides at a single
+                 node and is composed of a set of processes and a set of
+                 state variables. State can either be volatile or
+                 stable; stable state is guaranteed to survive crashes.
+                 A guardian's interface is a set of handlers (i.e.,
+                 RPCs). Handlers are implemented using atomic actions
+                 (i.e., transactions) that guarantee consistency, even
+                 across multiple guardians at different nodes. Bloom's
+                 work addresses the problem of replacing implementations
+                 in this environment. The smallest unit of replacement
+                 is a single guardian. Subsystems, which are composed of
+                 multiple guardians, may also be replaced atomically. To
+                 support this, Bloom defines the interface of a
+                 subsystem as a subset of the handlers of the guardians
+                 in that subsystem. Bloom also defines a formal model to
+                 determine which replacements are legal; these are those
+                 replacements that preserve or invisibly extend the
+                 replaced subsystem's continuation abstraction. Bloom
+                 presents several examples of replacements that seem
+                 intuitively legal but that actually violate this
+                 condition. For example, replacing a unique ID generator
+                 may violate future behavior by repeating an ID.
+                 Extending an abstraction by adding a ``delete''
+                 operation may break clients that depend on data
+                 existing forever (i.e., that only check for existence
+                 once). Bloom also argues that successive replacements
+                 can eventually restrict a continuation abstraction
+                 until no more replacements are possible. The actual
+                 mechanisms used to replace subsystems allow a user to
+                 manually locate, add, remove, and restart guardians;
+                 get, put, and optionally translate their state; and
+                 fetch and rebind handlers. A sequence of these actions
+                 compose a replacement transaction; this transaction
+                 either may wait until it can acquire exclusive lock on
+                 all required guardians or may preempt and abort other
+                 clients' transactions. Bloom does not detail an
+                 implementation and cites the need for a higher-level
+                 user interface to replacement.",
+  note =      "Also as MIT LCS Tech. Report 303",
+  pages =     "134",
+}
+
+@Article{herlihy82value,
+  author =       "M. Herlihy and B. Liskov",
+  title =        "A Value Transmission Method for Abstract Data Types",
+  journal =      "ACM Transactions on Programming Languages and
+                 Systems",
+  volume =       "4",
+  number =       "4",
+  year =         "1982",
+  annote =       "Used by several reconfiguration systems to transfer
+                 state from old versions of components to new ones.",
+  pages =     "527--551",
+}
+
+@InProceedings{fabry76design,
+  author =       "R. S. Fabry",
+  booktitle =    "Intl. Conf. on Software Engineering",
+  title =        "How to design systems in which modules can be changed
+                 on the fly",
+  year =         "1976",
+  annote =       "[by Steven Richman] Fabry introduces many of the basic
+                 concepts of dynamic upgrades. He proposes the use of
+                 pointer indirection to resolve code and data references
+                 to current versions. Data structures are upgraded
+                 lazily and can have their representations transformed
+                 arbitrarily during an upgrade. Because upgrades can
+                 introduce incompatibilities between code and data of
+                 different versions, data structures are tagged with
+                 version numbers. These numbers are checked before the
+                 execution of data access routines: if a data
+                 structure's version is not what a routine expects, then
+                 the out of date data or code is upgraded. Fabry makes
+                 no mention of quiescence or valid times at which
+                 upgrades can be safely applied; instead, he relies upon
+                 synchronization on data structure locks to control the
+                 progress and ordering of an upgrade's modifications.
+                 This scheme requires the restart of code segments that
+                 are older than the data they are trying to access, and
+                 therefore seems to not work if a side effect precedes a
+                 data structure access in a flow of execution.",
+}
+
+@Proceedings{dependable02,
+  key =          "Workshop on Dependable On-line Upgrading of Dist.
+                 Systems",
+  booktitle =    "Workshop on Dependable On-line Upgrading of Dist.
+                 Systems in conjunction with {COMPSAC} 2002",
+  title =        "Workshop on Dependable On-line Upgrading of Dist.
+                 Systems in conjunction with {COMPSAC} 2002",
+  year =         "2002",
+  address =   "Oxford, England",
+  month =     aug,
+  crossrefonly = "",
+}
+
+@Proceedings{iccds98,
+  key =          "Intl. Conf. on Configurable Dist. Systems",
+  booktitle =    "4th Intl. Conf. on Configurable Dist. Systems",
+  title =        "4th Intl. Conf. on Configurable Dist. Systems",
+  year =         "1998",
+  address =   "Annapolis, MD",
+  month =     may,
+  crossrefonly = "",
+}
+
+@Proceedings{iccds96,
+  key =          "Intl. Conf. on Configurable Dist. Systems",
+  booktitle =    "3rd Intl. Conf. on Configurable Dist. Systems",
+  title =        "3rd Intl. Conf. on Configurable Dist. Systems",
+  year =         "1996",
+  address =   "Annapolis, MD",
+  month =     may,
+  crossrefonly = "",
+}
+
+@Proceedings{iccds94,
+  key =          "Intl. Conf. on Configurable Dist. Systems",
+  booktitle =    "2nd Intl. Workshop on Configurable Dist. Systems",
+  title =        "2nd Intl. Workshop on Configurable Dist. Systems",
+  year =         "1994",
+  address =   "Pittsburgh, PA",
+  month =     mar,
+  crossrefonly = "",
+}
+
+@Proceedings{iccds92,
+  key =          "Intl. Conf. on Configurable Dist. Systems",
+  booktitle =    "Intl. Workshop on Configurable Dist. Systems",
+  title =        "Intl. Workshop on Configurable Dist. Systems",
+  year =         "1992",
+  address =   "London, England",
+  month =     mar,
+  crossrefonly = "",
+}
