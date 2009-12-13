@@ -1,15 +1,23 @@
 Directory of BibTeX bibliography files.
 
-This is a set of BibTeX bibliographies, with the following features:
- # Already typed in, so you don't have to do that work.
- # Capitalization is corrected.  Bibliographies downloaded from the web
-   often have incorrect capitalization; the ACM Digital Library is one
-   notorious offender.
+This is a set of BibTeX bibliographies.  You can re-use them rather than
+having to re-type or download.  Re-typing or downloading is a notorious
+source of errors in bibliographies.  For example, even the ACM Digital
+Library often has incorrect capitalization, or gives a SIGPLAN Notices
+reference when the conference proceedings would be more appropriate.
+
+Here are some other features:
  # Short and long versions of names, locations, and dates for conferences,
    journals, etc.  The short (abbreviated) version is convenient if your
-   paper is nearing its page limit.
- # Correct, detailed dates.  Dates contain days of the month, which give
-   the dates of just the appropriate track rather than the whole conference.
+   paper is nearing its page limit.  Changing between the two versions only
+   requires a two-character change to your LaTeX file (see below).
+ # Detailed dates.  Dates contain days of the month, which give the dates
+   of just the appropriate track rather than the whole conference.  The
+   abbreviated version omits the day of the month, though.
+ # Consistent naming convention for citation keys:  last name of first
+   author, followed by last initial of each other author, followed by
+   year.  This makes the citation more recognizable in your LaTeX source,
+   and avoids duplicates.
  # Searchable via the bibfind tool.  For instance, 
      bibfind keyword1 keyword2
    displays all the bibliographies with all the keywords, either in the
@@ -26,11 +34,13 @@ bibliography strings, use one of these commands in your LaTeX file:
   \bibliography{bibstring-unabbrev,...}
 
 When using the bibliographies, add near the top of your LaTeX document:
-  \usepackage{relsize}
   \usepackage{url}
+This defines the \url command used in the bibliographies.  To make it use
+a slightly smaller font (the regular tt font is very big), do either
+  \usepackage{pslatex}
+or
+  \usepackage{relsize}
   \def\UrlFont{\smaller\ttfamily}
-These define the \url command used in the bibliographies, and make it use
-in a slightly smaller font (the regular tt font is very big).
 
 
 EDITING AND ADDING ENTRIES
@@ -42,6 +52,9 @@ When adding new bibliography entries, please use bibliography strings
 rather than hard-coding conference/journal/institution names, locations,
 and dates.  Add the new abbreviations to bibstring-master.bib as necessary.
 
+For consistency, please start a new bibliography entry with @ in the first
+column, and end the entry with "}" or ")" on its own line.
+
 
 SETUP
 -----
@@ -51,12 +64,12 @@ Obtain the bibliographies by running the command
   hg clone https://plume-bib.googlecode.com/hg/ plume-bib  
 
 Then, add the "plume-bib" directory to your BIBINPUTS environment variable.
-bash syntax:
-  export BIBINPUTS=.:PATHTOPLUMEBIB:..:
-csh syntax:
-  setenv BIBINPUTS .:PATHTOPLUMEBIB:..:
+  bash syntax:
+    export BIBINPUTS=.:PATHTOPLUMEBIB:..:
+  csh syntax:
+    setenv BIBINPUTS .:PATHTOPLUMEBIB:..:
 
-For the bibfind command, see http://code.google.com/p/uwisdom/wiki/README
+For the bibfind command, see http://code.google.com/p/uwisdom/wiki/README .
 It uses the "bibroot" file in the repository.
 
 Note for miktex users:
@@ -65,4 +78,3 @@ does not support the BIBINPUTS variable. You need to modify the miktex
 configuration.  In file ...\miktex\config\miktex.ini, edit this entry:
  Input Dirs=searchpath 
 (search path for BibTeX input files -- both databases and style files).
-
