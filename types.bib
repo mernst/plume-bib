@@ -2322,7 +2322,6 @@
 
 
 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% JACK (Java Applet Correctness Kit)
 %%%
@@ -2452,6 +2451,72 @@
 %%% Combining static and dynamic typing
 %%%
 
+
+@InProceedings{MeijerD2005,
+  author = 	 "Erik Meijer and Peter Drayton",
+  title = 	 "Static typing where possible, dynamic typing when needed:  The end of the cold war between programming languages",
+  booktitle = RDL2004,
+  NEEDpages = 	 "*",
+  year = 	 2004,
+  address = 	 OOPSLA2004addr,
+  month = 	 RDL2004date,
+  abstract =
+   "This paper argues that we should seek the golden middle way
+    between dynamically and statically typed languages.",
+}
+
+
+
+@InProceedings{BrachaG1993,
+  author = 	 "Gilad Bracha and David Griswold",
+  title = 	 "Strongtalk: Typechecking {Smalltalk} in a production environment",
+  booktitle = OOPSLA93,
+  pages = 	 "215--230",
+  year = 	 1993,
+  address = 	 OOPSLA93addr,
+  month = 	 OOPSLA93date,
+}
+
+
+
+@Proceedings{STOP2009,
+  key =          "STOP2009",
+  title = 	 STOP2009,
+  year = 	 2009,
+  address = 	 STOP2009addr,
+  month = 	 STOP2009date,
+}
+
+
+%%%
+%%% Soft typing and type inference approach
+%%%
+
+
+
+
+@InProceedings{CartwrightF91,
+  author =       "Robert Cartwright and Mike Fagan",
+  title =        "Soft Typing",
+  pages =        "278--292",
+  ISBN =         "0-89791-428-7",
+  booktitle =    PLDI91,
+  address =      PLDI91addr,
+  month =        PLDI91date,
+  year =         1991,
+}
+
+
+@InProceedings{WrightAndr1994a,
+  author =       "Andrew K. Wright and Robert Cartwright",
+  booktitle =    "Conference on Lisp and Functional programming",
+  title =        "{A} Practical Soft Type System for Scheme",
+  year =         "1994",
+  url =          "ftp://cs.rice.edu/public/languages/tr93-218.dvi.Z",
+  scope =        "imptype",
+}
+
+
 @Article{Wright:1997:PST,
   author =       "Andrew K. Wright and Robert Cartwright",
   title =        "A Practical Soft Type System for {Scheme}",
@@ -2491,400 +2556,6 @@
 }
 
 
-@InProceedings{WrightAndr1994a,
-  author =       "Andrew K. Wright and Robert Cartwright",
-  booktitle =    "Conference on Lisp and Functional programming",
-  title =        "{A} Practical Soft Type System for Scheme",
-  year =         "1994",
-  url =          "ftp://cs.rice.edu/public/languages/tr93-218.dvi.Z",
-  scope =        "imptype",
-}
-
-
-@InProceedings{CartwrightF91,
-  author =       "Robert Cartwright and Mike Fagan",
-  title =        "Soft Typing",
-  pages =        "278--292",
-  ISBN =         "0-89791-428-7",
-  booktitle =    PLDI91,
-  address =      PLDI91addr,
-  month =        PLDI91date,
-  year =         1991,
-}
-
-
-@InProceedings{BloomFNORSVW2009,
-  author = 	 "Bloom, Bard and Field, John and Nystrom, Nathaniel and {\"O}stlund, Johan and Richards, Gregor and Strni\v{s}a, Rok and Vitek, Jan and Wrigstad, Tobias",
-  authorASCII = 	 "Bloom, Bard and Field, John and Nystrom, Nathaniel and Ostlund, Johan and Richards, Gregor and Strnisa, Rok and Vitek, Jan and Wrigstad, Tobias",
-  title = 	 "Thorn: Robust, concurrent, extensible scripting on the {JVM}",
-  booktitle = OOPSLA2009,
-  pages = 	 "117--136",
-  year = 	 2009,
-  address = 	 OOPSLA2009addr,
-  month = 	 OOPSLA2009date,
-  abstract =
-   "Scripting languages enjoy great popularity due to their support for
-    rapid and exploratory development. They typically have lightweight
-    syntax, weak data privacy, dynamic typing, powerful aggregate data
-    types, and allow execution of the completed parts of incomplete
-    programs. The price of these features comes later in the software life
-    cycle. Scripts are hard to evolve and compose, and often slow. An
-    additional weakness of most scripting languages is lack of support for
-    concurrency - though concurrency is required for scalability and
-    interacting with remote services. This paper reports on the design and
-    implementation of Thorn, a novel programming language targeting the
-    JVM. Our principal contributions are a careful selection of features
-    that support the evolution of scripts into industrial grade programs -
-    e.g., an expressive module system, an optional type annotation facility
-    for declarations, and support for concurrency based on message passing
-    between lightweight, isolated processes. On the implementation side,
-    Thorn has been designed to accommodate the evolution of the language
-    itself through a compiler plugin mechanism and target the Java virtual
-    machine.",
-}
-
-
-
-
-
-@InProceedings{FurrAF2009,
-  author = 	 "Furr, Michael and An, Jong-hoon (David) and Foster, Jeffrey S.",
-  title = 	 "Profile-guided static typing for dynamic scripting languages",
-  booktitle = OOPSLA2009,
-  pages = 	 "283--300",
-  year = 	 2009,
-  address = 	 OOPSLA2009addr,
-  month = 	 OOPSLA2009date,
-  abstract =
-   "Many popular scripting languages such as Ruby, Python, and Perl
-    include highly dynamic language constructs, such as an eval method that
-    evaluates a string as program text. While these constructs allow terse
-    and expressive code, they have traditionally obstructed static
-    analysis. In this paper we present PRuby, an extension to Diamondback
-    Ruby (DRuby), a static type inference system for Ruby. PRuby augments
-    DRuby with a novel dynamic analysis and transformation that allows us
-    to precisely type uses of highly dynamic constructs. PRuby's analysis
-    proceeds in three steps. First, we use run-time instrumentation to
-    gather per-application profiles of dynamic feature usage. Next, we
-    replace dynamic features with statically analyzable alternatives based
-    on the profile. We also add instrumentation to safely handle cases when
-    subsequent runs do not match the profile. Finally, we run DRuby's
-    static type inference on the transformed code to enforce type safety.
-    \par
-    We used PRuby to gather profiles for a benchmark suite of sample Ruby
-    programs. We found that dynamic features are pervasive throughout the
-    benchmarks and the libraries they include, but that most uses of these
-    features are highly constrained and hence can be effectively
-    profiled. Using the profiles to guide type inference, we found that
-    DRuby can generally statically type our benchmarks modulo some
-    refactoring, and we discovered several previously unknown type
-    errors. These results suggest that profiling and transformation is a
-    lightweight but highly effective approach to bring static typing to
-    highly dynamic languages.",
-}
-
-
-
-
-@InProceedings{AhmedFMW2009,
-  author = 	 "Amal Ahmed and Robert Bruce Findler and Jacob Matthews and Philip Wadler",
-  title = 	 "Blame for all",
-  booktitle = STOP2009,
-  NEEDpages = 	 "*",
-  year = 	 2009,
-  address = 	 STOP2009addr,
-  month = 	 STOP2009date,
-  abstract =
-   "We present a language that integrates statically and dynamically typed
-    components, similar to the gradual types of Siek and Taha (2006), and
-    extend it to incorporate parametric polymorphism. Our system permits a
-    dynamically typed value to be cast to a polymorphic type, with the type
-    enforced by dynamic sealing along the lines proposed by Pierce and Sumii
-    (2000), Matthews and Ahmed (2008), and Neis, Dreyer, and Rossberg (2009),
-    in a way that ensures all terms satisfy relational parametricity. Our
-    system includes a notion of blame, which allows us to show that when
-    more-typed and less-typed portions of a program interact, that any type
-    failures are due to the less-typed portion.",
-}
-
-
-@InProceedings{MeijerD2005,
-  author = 	 "Erik Meijer and Peter Drayton",
-  title = 	 "Static typing where possible, dynamic typing when needed:  The end of the cold war between programming languages",
-  booktitle = RDL2004,
-  NEEDpages = 	 "*",
-  year = 	 2004,
-  address = 	 OOPSLA2004addr,
-  month = 	 RDL2004date,
-  abstract =
-   "This paper argues that we should seek the golden middle way
-    between dynamically and statically typed languages.",
-}
-
-
-
-
-
-
-
-
-
-@InProceedings{AndersonGD2005,
-  author = 	 "Christopher Anderson and Paola Giannini and Sophia Drossopoulou1",
-  title = 	 "Towards type inference for {JavaScript}",
-  booktitle = ECOOP2005,
-  pages = 	 "428--452",
-  year = 	 2005,
-  address = 	 ECOOP2005addr,
-  month = 	 ECOOP2005date,
-  abstract =
-   "Object-oriented scripting languages like Javascript and Python are
-   popular partly because of their dynamic features. These include the
-   runtime modification of objects and classes through addition of fields
-   or updating of methods. These features make static typing difficult and
-   so usually dynamic typing is used. Consequently, errors such as access
-   to non-existent members are not detected until runtime.
-   \par
-   We first develop a formalism for an object based language, JS$_0$ with
-   features from Javascript, including dynamic addition of fields and
-   updating of methods. We give an operational semantics and static type
-   system for JS$_0$ using structural types. Our types allow objects to evolve
-   in a controlled manner by classifying members as definite or potential.
-   \par
-   We define a type inference algorithm for JS$_0$ that is sound with respect
-   to the type system. If the type inference algorithm succeeds, then the
-   program is typeable. Therefore, programmers can benefit from the safety
-   offered by the type system, without the need to write explicitly types
-   in their programs.",
-}
-
-
-@InProceedings{AnconaACM2007,
-  author = 	 "Davide Ancona and Massimo Ancona and Antonio Cuni and Nicholas D. Matsakis",
-  title = 	 "RPython: a Step Towards Reconciling Dynamically and Statically Typed OO Languages",
-  booktitle = DLS2007,
-  pages = 	 "53-64",
-  year = 	 2007,
-  address = 	 OOPSLA2007addr,
-  month = 	 DLS2007date,
-  abstract =
-   "Although the C-based interpreter of Python is reasonably fast,
-    implementations on the CLI or the JVM platforms offers some advantages
-    in terms of robustness and interoperability. Unfortunately, because the
-    CLI and JVM are primarily designed to execute statically typed,
-    object-oriented languages, most dynamic language implementations cannot
-    use the native bytecodes for common operations like method calls and
-    exception handling; as a result, they are not able to take full
-    advantage of the power offered by the CLI and JVM. We describe a
-    different approach that attempts to preserve the flexibility of Python,
-    while still allowing for efficient execution. This is achieved by
-    limiting the use of the more dynamic features of Python to an initial,
-    bootstrapping phase. This phase is used to construct a final RPython
-    (Restricted Python) program that is actually executed. RPython is a
-    proper subset of Python, is statically typed, and does not allow dynamic
-    modification of class or method definitions; however, it can still take
-    advantage of Python features such as mixins and first-class methods and
-    classes. This paper presents an overview of RPython, including its
-    design and its translation to both CLI and JVM bytecode. We show how the
-    bootstrapping phase can be used to implement advanced features, like
-    extensible classes and generative programming. We also discuss what work
-    remains before RPython is truly ready for general use, and compare the
-    performance of RPython with that of other approaches.",
-}
-
-
-
-@InProceedings{WrigstadZNLOV2010,
-  author = 	 "Tobias Wrigstad and Francesco {Zappa Nardelli} and Sylvain Lebresne and Johan {\"O}stlund and Jan Vitek",
-  authorASCII =  "Tobias Wrigstad and Francesco Zappa Nardelli and Sylvain Lebresne and Johan Ostlund and Jan Vitek",
-  title = 	 "Integrating typed and untyped code in a scripting language",
-  booktitle = POPL2010,
-  NEEDpages = 	 "*",
-  year = 	 2010,
-  address = 	 POPL2010addr,
-  month = 	 POPL2010date,
-  abstract =
-   "Many large software systems originate from untyped scripting language
-    code. While good for initial development, the lack of static
-    type annotations can impact code-quality and performance in the
-    long run. We present an approach for integrating untyped code
-    and typed code in the same system to allow an initial prototype to
-    smoothly evolve into an efficient and robust program.We introduce
-    like types, a novel intermediate point between dynamic and static
-    typing. Occurrences of like types variables are checked statically
-    within their scope but, as they may be bound to dynamic values,
-    their usage is checked dynamically. Thus like types provide some
-    of the benefits of static typing without decreasing the expressiveness
-    of the language. We provide a formal account of like types in
-    a core object calculus and evaluate their applicability in the context
-    of a new scripting language.",
-}
-
-
-@InProceedings{Flanagan2006,
-  author = 	 "Cormac Flanagan",
-  title = 	 "Hybrid type checking",
-  booktitle = POPL2006,
-  NEEDpages = 	 "*",
-  year = 	 2006,
-  address = 	 POPL2006addr,
-  month = 	 POPL2006date,
-  abstract =
-   "Traditional static type systems are very effective for verifying basic
-    interface specifications, but are somewhat limited in the kinds
-    specifications they support. Dynamically-checked contracts can enforce
-    more precise specifications, but these are not checked until run time,
-    resulting in incomplete detection of defects.Hybrid type checking is a
-    synthesis of these two approaches that enforces precise interface
-    specifications, via static analysis where possible, but also via
-    dynamic checks where necessary. This paper explores the key ideas and
-    implications of hybrid type checking, in the context of the
-    simply-typed \lambda-calculus with arbitrary refinements of base types.",
-}
-
-
-
-
-@InProceedings{OuTMW2004,
-  author = 	 "Xinming Ou and Gang Tan and Yitzhak Mandelbaum and David Walker",
-  title = 	 "Dynamic typing with dependent types",
-  booktitle = TCS2004,
-  pages = 	 "437--450",
-  year = 	 2004,
-  address = 	 TCS2004addr,
-  month = 	 TCS2004date,
-  abstract =
-    "Dependent type systems are promising tools programmers can use to
-    increase the reliability and security of their programs. Unfortunately,
-    dependently-typed programming languages require programmers to annotate
-    their programs with many typing specifications to help guide the type
-    checker. This paper shows how to make the process of programming with
-    dependent types more palatable by defining a language in which programmers
-    have fine-grained control over the trade-off between the number of
-    dependent typing annotations they must place on programs and the degree of
-    compile-time safety. More specifically, certain program fragments are
-    marked dependent, in which case the programmer annotates them in detail and
-    a dependent type checker verifies them at compile time. Other fragments are
-    marked simple, in which case they may be annotationfree and dependent
-    constraints are verified at run time.",
-}
-
-
-
-@InProceedings{KnowlesTGFF2006,
-  author = 	 "Kenneth Knowles and Aaron Tomb and Jessica Gronski and Stephen N. Freund and Cormac Flanagan",
-  title = 	 "Sage: Unified hybrid checking for first-class types, general refinement types, and \texttt{Dynamic}",
-  booktitle = SFP2006,
-  NEEDpages = 	 "*",
-  year = 	 2006,
-  address = 	 SFP2006addr,
-  month = 	 SFP2006date,
-  abstract =
-   "This paper presents Sage, a functional programming language with a rich
-    type system that supports a broad range of typing paradigms, from
-    dynamically-typed Scheme-like programming, to decidable ML-like types,
-    to precise refinement types. This type system is a synthesis of three
-    general concepts --- first-class types, general refinement types, and
-    the type Dynamic --- that add expressive power in orthogonal and
-    complementary ways.
-    \par
-    None of these concepts are statically decidable. The Sage compiler
-    uniformly circumvents this limitation using hybrid type checking, which
-    inserts occasional run-time casts in particularly complicated
-    situations that cannot be statically checked. We describe a prototype
-    implementation of Sage and preliminary experimental results showing
-    that most or all types are enforced via static type checking --- the
-    number of compiler-inserted casts is very small or zero on all our
-    benchmarks.",
-}
-
-
-@InProceedings{SiekT2007,
-  author = 	 "Siek, Jeremy and Taha, Walid",
-  title = 	 "Gradual typing for objects",
-  booktitle = ECOOP2007,
-  pages = 	 "2--27",
-  year = 	 2007,
-  address = 	 ECOOP2007addr,
-  month = 	 ECOOP2007date,
-  abstract =
-   "Static and dynamic type systems have well-known strengths and
-    weaknesses. In previous work we developed a gradual type system for a
-    functional calculus named $\lambda^?_\rightarrow$. Gradual typing provides
-    the benefits of both static and dynamic checking in a single language by
-    allowing the programmer to control whether a portion of the program is type
-    checked at compile-time or run-time by adding or removing type annotations
-    on variables. Several object-oriented scripting languages are preparing to
-    add static checking. To support that work this paper develops Ob$^?_{<:}$,
-    a gradual type system for object-based languages, extending the Ob$_{<:}$
-    calculus of Abadi and Cardelli. Our primary contribution is to show that
-    gradual typing and subtyping are orthogonal and can be combined in a
-    principled fashion. We also develop a small-step semantics, provide a
-    machine-checked proof of type safety, and improve the space efficiency of
-    higher-order casts.",
-}
-
-
-@InProceedings{Thatte90,
-  author = 	 "S. Thatte",
-  title = 	 "Quasi-static typing",
-  booktitle = POPL90,
-  pages = 	 "367--381",
-  year = 	 1990,
-  address = 	 POPL90addr,
-  month = 	 POPL90date,
-  OPTabstract =  "",
-}
-
-
-@InProceedings{SiekW2009,
-  author = 	 "Jeremy G. Siek and Philip Wadler",
-  title = 	 "Threesomes, with and without blame",
-  booktitle = STOP2009,
-  pages = 	 "34--46",
-  year = 	 2009,
-  address = 	 STOP2009addr,
-  month = 	 STOP2009date,
-  supersededby = "SiekW2010"
-}
-
-
-@InProceedings{SiekW2010,
-  author = 	 "Jeremy G. Siek and Philip Wadler",
-  title = 	 "Threesomes, with and without blame",
-  booktitle =    POPL2010,
-  NEEDpages = 	 "*",
-  year = 	 2010,
-  address = 	 POPL2010addr,
-  month = 	 POPL2010date,
-  abstract =
-   "How to integrate static and dynamic types? Recent work focuses
-    on casts to mediate between the two. However, adding casts may
-    degrade tail calls into a non-tail calls, increasing space consumption
-    from constant to linear in the depth of calls.
-    \par
-    We present a new solution to this old problem, based on the
-    notion of a threesome. A cast is specified by a source and a target
-    type—a twosome. Any twosome factors into a downcast from the
-    source to an intermediate type, followed by an upcast from the
-    intermediate to the target—a threesome. Any chain of threesomes
-    collapses to a single threesome, calculated by taking the greatest
-    lower bound of the intermediate types. We augment this solution
-    with blame labels to map any failure of a threesome back to the
-    offending twosome in the source program.
-    \par
-    Herman, Tomb, and Flanagan (2007) solve the space problem
-    by representing casts with the coercion calculus of Henglein
-    (1994). While they provide a theoretical limit on the space overhead,
-    there remains the practical question of how best to implement
-    coercion reduction. The threesomes presented in this paper
-    provide a streamlined data structure and algorithm for representing
-    and normalizing coercions. Furthermore, threesomes provide a
-    typed-based explanation of coercion reduction."
-}
-
-
-
 @InProceedings{AnconaLZ2007,
   author = 	 "Davide Ancona and Giovanni Lagorio and Elena Zucca",
   title = 	 "Type inference for polymorphic methods in {Java}-like languages",
@@ -2922,35 +2593,6 @@
   urlpdf = {{http://www.cs.uu.nl/research/techreps/repo/CS-2009/2009-004.pdf}},
 }
 
-
-
-@InProceedings{FurrAFH2009,
-  author = 	 "Furr, Michael and An, Jong-hoon (David) and Foster, Jeffrey S. and Hicks, Michael",
-  title = 	 "Static type inference for Ruby",
-  booktitle = SAC2009,
-  pages = 	 "1859--1866",
-  year = 	 2009,
-  address = 	 SAC2009addr,
-  month = 	 SAC2009date,
-  abstract =
-   "Many general-purpose, object-oriented scripting languages are dynamically
-    typed, which provides flexibility but leaves the programmer without the
-    benefits of static typing, including early error detection and the
-    documentation provided by type annotations. This paper describes
-    Diamondback Ruby (DRuby), a tool that blends Ruby's dynamic type system
-    with a static typing discipline. DRuby provides a type language that is
-    rich enough to precisely type Ruby code we have encountered, without
-    unneeded complexity. When possible, DRuby infers static types to discover
-    type errors in Ruby programs. When necessary, the programmer can provide
-    DRuby with annotations that assign static types to dynamic code. These
-    annotations are checked at run time, isolating type errors to unverified
-    code. We applied DRuby to a suite of benchmarks and found several bugs that
-    would cause run-time type errors. DRuby also reported a number of warnings
-    that reveal questionable programming practices in the benchmarks. We
-    believe that DRuby takes a major step toward bringing the benefits of
-    combined static and dynamic typing to Ruby and other object-oriented
-    languages.",
-}
 
 
 @Article{LagorioZ2007,
@@ -3009,6 +2651,445 @@
 
 
 
+@InProceedings{Aycock2000,
+  author = 	 "John Aycock",
+  title = 	 "Aggressive type inference",
+  OPTcrossref =  "",
+  OPTkey = 	 "",
+  booktitle =    "International Python Conference",
+  OPTpages = 	 "",
+  year = 	 "2000",
+  OPTeditor = 	 "",
+  OPTvolume = 	 "",
+  OPTnumber = 	 "",
+  OPTseries = 	 "",
+  OPTaddress = 	 "",
+  OPTmonth = 	 "",
+}
+
+
+@InProceedings{HolknerH2009,
+  author = 	 "Alex Holkner and James Harland",
+  title = 	 "Evaluating the dynamic behavior of Python applications",
+  OPTcrossref =  "",
+  OPTkey = 	 "",
+  booktitle =    "Australasian Computer Science Conference (ACSC)",
+  OPTpages = 	 "",
+  year = 	 "2009",
+  OPTeditor = 	 "",
+  OPTvolume = 	 "",
+  OPTnumber = 	 "",
+  OPTseries = 	 "",
+  OPTaddress = 	 "",
+  OPTmonth = 	 "",
+}
+
+
+@MastersThesis{Salib2004,
+  author = 	 "Michael Salib",
+  title = 	 "Starkiller: A static type inferencer and compiler for Python",
+  school = 	 MITEECS,
+  year = 	 2004,
+  address = 	 MITAddr,
+  month = 	 may,
+  abstract =
+   "Starkiller is a type inferencer and compiler for the dynamic language
+    Python designed to generate fast native code. It analyzes Python source
+    programs and converts them into equivalent C++ programs. Starkiller's type
+    inference algorithm is based on the Cartesian Product Algorithm but has
+    been significantly modified to support a radically different language. It
+    includes an External Type Description Language that enables extension
+    authors to document how their foreign code extensions interact with
+    Python. This enables Starkiller to analyze Python code that interacts with
+    foreign code written in C, C++, or Fortran. The type inference algorithm
+    also handles data polymorphism in addition to parametric polymorphism, thus
+    improving precision.  Starkiller supports the entire Python language except
+    for dynamic code insertion features such as eval and dynamic module
+    loading. While the system is not yet complete, early numeric benchmarks
+    show that Starkiller compiled code performs almost as well as hand made C
+    code and substantially better than alternative Python compilers.",
+}
+
+
+@InProceedings{AnconaACM2007,
+  author = 	 "Davide Ancona and Massimo Ancona and Antonio Cuni and Nicholas D. Matsakis",
+  title = 	 "RPython: a Step Towards Reconciling Dynamically and Statically Typed OO Languages",
+  booktitle = DLS2007,
+  pages = 	 "53-64",
+  year = 	 2007,
+  address = 	 OOPSLA2007addr,
+  month = 	 DLS2007date,
+  abstract =
+   "Although the C-based interpreter of Python is reasonably fast,
+    implementations on the CLI or the JVM platforms offers some advantages
+    in terms of robustness and interoperability. Unfortunately, because the
+    CLI and JVM are primarily designed to execute statically typed,
+    object-oriented languages, most dynamic language implementations cannot
+    use the native bytecodes for common operations like method calls and
+    exception handling; as a result, they are not able to take full
+    advantage of the power offered by the CLI and JVM. We describe a
+    different approach that attempts to preserve the flexibility of Python,
+    while still allowing for efficient execution. This is achieved by
+    limiting the use of the more dynamic features of Python to an initial,
+    bootstrapping phase. This phase is used to construct a final RPython
+    (Restricted Python) program that is actually executed. RPython is a
+    proper subset of Python, is statically typed, and does not allow dynamic
+    modification of class or method definitions; however, it can still take
+    advantage of Python features such as mixins and first-class methods and
+    classes. This paper presents an overview of RPython, including its
+    design and its translation to both CLI and JVM bytecode. We show how the
+    bootstrapping phase can be used to implement advanced features, like
+    extensible classes and generative programming. We also discuss what work
+    remains before RPython is truly ready for general use, and compare the
+    performance of RPython with that of other approaches.",
+}
+
+
+
+
+@InProceedings{FurrAFH2009,
+  author = 	 "Furr, Michael and An, Jong-hoon (David) and Foster, Jeffrey S. and Hicks, Michael",
+  title = 	 "Static type inference for Ruby",
+  booktitle = SAC2009,
+  pages = 	 "1859--1866",
+  year = 	 2009,
+  address = 	 SAC2009addr,
+  month = 	 SAC2009date,
+  abstract =
+   "Many general-purpose, object-oriented scripting languages are dynamically
+    typed, which provides flexibility but leaves the programmer without the
+    benefits of static typing, including early error detection and the
+    documentation provided by type annotations. This paper describes
+    Diamondback Ruby (DRuby), a tool that blends Ruby's dynamic type system
+    with a static typing discipline. DRuby provides a type language that is
+    rich enough to precisely type Ruby code we have encountered, without
+    unneeded complexity. When possible, DRuby infers static types to discover
+    type errors in Ruby programs. When necessary, the programmer can provide
+    DRuby with annotations that assign static types to dynamic code. These
+    annotations are checked at run time, isolating type errors to unverified
+    code. We applied DRuby to a suite of benchmarks and found several bugs that
+    would cause run-time type errors. DRuby also reported a number of warnings
+    that reveal questionable programming practices in the benchmarks. We
+    believe that DRuby takes a major step toward bringing the benefits of
+    combined static and dynamic typing to Ruby and other object-oriented
+    languages.",
+}
+
+
+@InProceedings{FurrAF2009,
+  author = 	 "Furr, Michael and An, Jong-hoon (David) and Foster, Jeffrey S.",
+  title = 	 "Profile-guided static typing for dynamic scripting languages",
+  booktitle = OOPSLA2009,
+  pages = 	 "283--300",
+  year = 	 2009,
+  address = 	 OOPSLA2009addr,
+  month = 	 OOPSLA2009date,
+  abstract =
+   "Many popular scripting languages such as Ruby, Python, and Perl
+    include highly dynamic language constructs, such as an eval method that
+    evaluates a string as program text. While these constructs allow terse
+    and expressive code, they have traditionally obstructed static
+    analysis. In this paper we present PRuby, an extension to Diamondback
+    Ruby (DRuby), a static type inference system for Ruby. PRuby augments
+    DRuby with a novel dynamic analysis and transformation that allows us
+    to precisely type uses of highly dynamic constructs. PRuby's analysis
+    proceeds in three steps. First, we use run-time instrumentation to
+    gather per-application profiles of dynamic feature usage. Next, we
+    replace dynamic features with statically analyzable alternatives based
+    on the profile. We also add instrumentation to safely handle cases when
+    subsequent runs do not match the profile. Finally, we run DRuby's
+    static type inference on the transformed code to enforce type safety.
+    \par
+    We used PRuby to gather profiles for a benchmark suite of sample Ruby
+    programs. We found that dynamic features are pervasive throughout the
+    benchmarks and the libraries they include, but that most uses of these
+    features are highly constrained and hence can be effectively
+    profiled. Using the profiles to guide type inference, we found that
+    DRuby can generally statically type our benchmarks modulo some
+    refactoring, and we discovered several previously unknown type
+    errors. These results suggest that profiling and transformation is a
+    lightweight but highly effective approach to bring static typing to
+    highly dynamic languages.",
+}
+
+
+
+@InProceedings{AndersonGD2005,
+  author = 	 "Christopher Anderson and Paola Giannini and Sophia Drossopoulou1",
+  title = 	 "Towards type inference for {JavaScript}",
+  booktitle = ECOOP2005,
+  pages = 	 "428--452",
+  year = 	 2005,
+  address = 	 ECOOP2005addr,
+  month = 	 ECOOP2005date,
+  abstract =
+   "Object-oriented scripting languages like Javascript and Python are
+   popular partly because of their dynamic features. These include the
+   runtime modification of objects and classes through addition of fields
+   or updating of methods. These features make static typing difficult and
+   so usually dynamic typing is used. Consequently, errors such as access
+   to non-existent members are not detected until runtime.
+   \par
+   We first develop a formalism for an object based language, JS$_0$ with
+   features from Javascript, including dynamic addition of fields and
+   updating of methods. We give an operational semantics and static type
+   system for JS$_0$ using structural types. Our types allow objects to evolve
+   in a controlled manner by classifying members as definite or potential.
+   \par
+   We define a type inference algorithm for JS$_0$ that is sound with respect
+   to the type system. If the type inference algorithm succeeds, then the
+   program is typeable. Therefore, programmers can benefit from the safety
+   offered by the type system, without the need to write explicitly types
+   in their programs.",
+}
+
+
+
+
+%%%
+%%% Adding a "Dynamic" type to a statically typed language
+%%%
+
+@InProceedings{AbadiCPP89,
+  author = 	 "Mart{\'\i}n Abadi and Luca Cardelli and Benjamin Pierce and Gordon Plotkin",
+  authorASCII =	 "Martin Abadi and Luca Cardelli and Benjamin Pierce and Gordon Plotkin",
+  title = 	 "Dynamic typing in a statically-typed language",
+  booktitle = POPL89,
+  pages = 	 "213-227",
+  year = 	 1989,
+  address = 	 POPL89addr,
+  month = 	 POPL89date,
+  abstract =
+   "Statically-typed programming languages allow earlier error checking,
+    better enforcement of disciplined programming styles, and generation of
+    more efficient object code than languages where all type-consistency
+    checks are performed at runtime. However, even in statically-type
+    languages, there is often the need to deal with data whose type cannot be
+    known at compile time. To handle such situations safely, we propose to add
+    a type Dynamic whose values are pairs of a value v and a type tag T where
+    v has the type denoted by T. Instances of Dynamic are built with an
+    explicit tagging construct and inspected with a type-safe typecase
+    construct.
+    \par
+    This paper is an exploration of the syntax, operational semantics, and
+    denotational semantics of a simple language with the type Dynamic. We give
+    examples of how dynamically-typed values might be used in programming. Then
+    we discuss an operational semantics for our language and obtain a soundness
+    theorem. We present two formulations of the denotational semantics of this
+    language and relate them to the operational semantics. Finally, we consider
+    the implications of polymorphism and some implementation issues.",
+}
+
+
+@Article{AbadiCPP91,
+  author = 	 "Mart{\'\i}n Abadi and Luca Cardelli and Benjamin Pierce and Gordon Plotkin",
+  authorASCII =	 "Mart{\'\i}n Abadi and Luca Cardelli and Benjamin Pierce and Gordon Plotkin",
+  title = 	 "Dynamic typing in a statically typed language",
+  journal = 	 TOPLAS,
+  year = 	 1991,
+  volume = 	 13,
+  number = 	 2,
+  pages = 	 "237--268",
+  month = 	 apr,
+  abstract =
+   "Statically typed programming languages allow earlier error checking,
+    better enforcement of diciplined programming styles, and the generation of
+    more efficient object code than languages where all type consistency
+    checks are performed at run time. However, even in statically typed
+    languages, there is often the need to deal with data whose type cannot be
+    determined at compile time. To handle such situations safely, we propose
+    to add a type Dynamic whose values are pairs of a value v and a type tag T
+    where v has the type denoted by T. Instances of Dynamic are built with an
+    explicit tagging construct and inspected with a type safe typecase
+    construct.
+    \par
+    This paper explores the syntax, operational semantics, and denotational
+    semantics of a simple language that includes the type Dynamic. We give
+    examples of how dynamically typed values can be used in programming. Then
+    we discuss an operational semantics for our language and obtain a soundness
+    theorem. We present two formulations of the denotational semantics of this
+    language and relate them to the operational semantics. Finally, we consider
+    the implications of polymorphism and some implementation issues.",
+}
+
+
+@InProceedings{BloomFNORSVW2009,
+  author = 	 "Bloom, Bard and Field, John and Nystrom, Nathaniel and {\"O}stlund, Johan and Richards, Gregor and Strni\v{s}a, Rok and Vitek, Jan and Wrigstad, Tobias",
+  authorASCII = 	 "Bloom, Bard and Field, John and Nystrom, Nathaniel and Ostlund, Johan and Richards, Gregor and Strnisa, Rok and Vitek, Jan and Wrigstad, Tobias",
+  title = 	 "Thorn: Robust, concurrent, extensible scripting on the {JVM}",
+  booktitle = OOPSLA2009,
+  pages = 	 "117--136",
+  year = 	 2009,
+  address = 	 OOPSLA2009addr,
+  month = 	 OOPSLA2009date,
+  abstract =
+   "Scripting languages enjoy great popularity due to their support for
+    rapid and exploratory development. They typically have lightweight
+    syntax, weak data privacy, dynamic typing, powerful aggregate data
+    types, and allow execution of the completed parts of incomplete
+    programs. The price of these features comes later in the software life
+    cycle. Scripts are hard to evolve and compose, and often slow. An
+    additional weakness of most scripting languages is lack of support for
+    concurrency - though concurrency is required for scalability and
+    interacting with remote services. This paper reports on the design and
+    implementation of Thorn, a novel programming language targeting the
+    JVM. Our principal contributions are a careful selection of features
+    that support the evolution of scripts into industrial grade programs -
+    e.g., an expressive module system, an optional type annotation facility
+    for declarations, and support for concurrency based on message passing
+    between lightweight, isolated processes. On the implementation side,
+    Thorn has been designed to accommodate the evolution of the language
+    itself through a compiler plugin mechanism and target the Java virtual
+    machine.",
+}
+
+@InProceedings{WrigstadZNLOV2010,
+  author = 	 "Tobias Wrigstad and Francesco {Zappa Nardelli} and Sylvain Lebresne and Johan {\"O}stlund and Jan Vitek",
+  authorASCII =  "Tobias Wrigstad and Francesco Zappa Nardelli and Sylvain Lebresne and Johan Ostlund and Jan Vitek",
+  title = 	 "Integrating typed and untyped code in a scripting language",
+  booktitle = POPL2010,
+  NEEDpages = 	 "*",
+  year = 	 2010,
+  address = 	 POPL2010addr,
+  month = 	 POPL2010date,
+  abstract =
+   "Many large software systems originate from untyped scripting language
+    code. While good for initial development, the lack of static
+    type annotations can impact code-quality and performance in the
+    long run. We present an approach for integrating untyped code
+    and typed code in the same system to allow an initial prototype to
+    smoothly evolve into an efficient and robust program.We introduce
+    like types, a novel intermediate point between dynamic and static
+    typing. Occurrences of like types variables are checked statically
+    within their scope but, as they may be bound to dynamic values,
+    their usage is checked dynamically. Thus like types provide some
+    of the benefits of static typing without decreasing the expressiveness
+    of the language. We provide a formal account of like types in
+    a core object calculus and evaluate their applicability in the context
+    of a new scripting language.",
+}
+
+
+
+
+
+
+@InProceedings{AhmedFMW2009,
+  author = 	 "Amal Ahmed and Robert Bruce Findler and Jacob Matthews and Philip Wadler",
+  title = 	 "Blame for all",
+  booktitle = STOP2009,
+  NEEDpages = 	 "*",
+  year = 	 2009,
+  address = 	 STOP2009addr,
+  month = 	 STOP2009date,
+  abstract =
+   "We present a language that integrates statically and dynamically typed
+    components, similar to the gradual types of Siek and Taha (2006), and
+    extend it to incorporate parametric polymorphism. Our system permits a
+    dynamically typed value to be cast to a polymorphic type, with the type
+    enforced by dynamic sealing along the lines proposed by Pierce and Sumii
+    (2000), Matthews and Ahmed (2008), and Neis, Dreyer, and Rossberg (2009),
+    in a way that ensures all terms satisfy relational parametricity. Our
+    system includes a notion of blame, which allows us to show that when
+    more-typed and less-typed portions of a program interact, that any type
+    failures are due to the less-typed portion.",
+}
+
+
+
+
+
+
+@InProceedings{Flanagan2006,
+  author = 	 "Cormac Flanagan",
+  title = 	 "Hybrid type checking",
+  booktitle = POPL2006,
+  NEEDpages = 	 "*",
+  year = 	 2006,
+  address = 	 POPL2006addr,
+  month = 	 POPL2006date,
+  abstract =
+   "Traditional static type systems are very effective for verifying basic
+    interface specifications, but are somewhat limited in the kinds
+    specifications they support. Dynamically-checked contracts can enforce
+    more precise specifications, but these are not checked until run time,
+    resulting in incomplete detection of defects.Hybrid type checking is a
+    synthesis of these two approaches that enforces precise interface
+    specifications, via static analysis where possible, but also via
+    dynamic checks where necessary. This paper explores the key ideas and
+    implications of hybrid type checking, in the context of the
+    simply-typed \lambda-calculus with arbitrary refinements of base types.",
+}
+
+
+@InProceedings{OuTMW2004,
+  author = 	 "Xinming Ou and Gang Tan and Yitzhak Mandelbaum and David Walker",
+  title = 	 "Dynamic typing with dependent types",
+  booktitle = TCS2004,
+  pages = 	 "437--450",
+  year = 	 2004,
+  address = 	 TCS2004addr,
+  month = 	 TCS2004date,
+  abstract =
+    "Dependent type systems are promising tools programmers can use to
+    increase the reliability and security of their programs. Unfortunately,
+    dependently-typed programming languages require programmers to annotate
+    their programs with many typing specifications to help guide the type
+    checker. This paper shows how to make the process of programming with
+    dependent types more palatable by defining a language in which programmers
+    have fine-grained control over the trade-off between the number of
+    dependent typing annotations they must place on programs and the degree of
+    compile-time safety. More specifically, certain program fragments are
+    marked dependent, in which case the programmer annotates them in detail and
+    a dependent type checker verifies them at compile time. Other fragments are
+    marked simple, in which case they may be annotation-free and dependent
+    constraints are verified at run time.",
+}
+
+
+
+
+
+@InProceedings{KnowlesTGFF2006,
+  author = 	 "Kenneth Knowles and Aaron Tomb and Jessica Gronski and Stephen N. Freund and Cormac Flanagan",
+  title = 	 "Sage: Unified hybrid checking for first-class types, general refinement types, and \texttt{Dynamic}",
+  booktitle = SFP2006,
+  NEEDpages = 	 "*",
+  year = 	 2006,
+  address = 	 SFP2006addr,
+  month = 	 SFP2006date,
+  abstract =
+   "This paper presents Sage, a functional programming language with a rich
+    type system that supports a broad range of typing paradigms, from
+    dynamically-typed Scheme-like programming, to decidable ML-like types,
+    to precise refinement types. This type system is a synthesis of three
+    general concepts --- first-class types, general refinement types, and
+    the type Dynamic --- that add expressive power in orthogonal and
+    complementary ways.
+    \par
+    None of these concepts are statically decidable. The Sage compiler
+    uniformly circumvents this limitation using hybrid type checking, which
+    inserts occasional run-time casts in particularly complicated
+    situations that cannot be statically checked. We describe a prototype
+    implementation of Sage and preliminary experimental results showing
+    that most or all types are enforced via static type checking --- the
+    number of compiler-inserted casts is very small or zero on all our
+    benchmarks.",
+}
+
+
+@InProceedings{Thatte90,
+  author = 	 "S. Thatte",
+  title = 	 "Quasi-static typing",
+  booktitle = POPL90,
+  pages = 	 "367--381",
+  year = 	 1990,
+  address = 	 POPL90addr,
+  month = 	 POPL90date,
+  OPTabstract =  "",
+}
+
+
 
 @InProceedings{AndersonD2003,
   author = 	 "Christopher Anderson and Sophia Drossopoulou",
@@ -3026,7 +3107,7 @@
     typed and compiled, require a rigid class structure and class membership,
     and thus they support more robust, type safe programs.
     \par
-    The two paradigms therefore address the needs ofp different stages in the
+    The two paradigms therefore address the needs of different stages in the
     programming lifecycle: object based programming better fits the earlier,
     exploratory phases, whereas class based better fits the latter,
     consolidation and maintenance phases. Because the transition from one
@@ -3048,19 +3129,6 @@
 
 
 
-
-@InProceedings{BrachaG1993,
-  author = 	 "Gilad Bracha and David Griswold",
-  title = 	 "Strongtalk: Typechecking {Smalltalk} in a production environment",
-  booktitle = OOPSLA93,
-  pages = 	 "215--230",
-  year = 	 1993,
-  address = 	 OOPSLA93addr,
-  month = 	 OOPSLA93date,
-}
-
-
-
 @InProceedings{FindlerF2002,
   author = 	 "Robert Bruce Findler and Matthias Felleisen",
   title = 	 "Contracts for higher-order functions",
@@ -3073,7 +3141,7 @@
    "Assertions play an important role in the construction of robust software.
     Their use in programming languages dates back to the 1970s.
     Eiffel, an object-oriented programming language, wholeheartedly
-    adopted assertions and developed the “Design by Contract” philosophy.
+    adopted assertions and developed the ``Design by Contract'' philosophy.
     Indeed, the entire object-oriented community recognizes the
     value of assertion-based contracts on methods.
     \par
@@ -3089,7 +3157,7 @@
     monitoring system that we employ in DrScheme. We establish
     basic properties of the model (type soundness, etc.) and
     illustrate the usefulness of contract checking with examples from
-    DrScheme’s code base.
+    DrScheme's code base.
     \par
     We believe that the development of an assertion system for higherorder
     functions serves two purposes. On one hand, the system has
@@ -3127,6 +3195,98 @@
 }
 
 
+
+@InProceedings{FindlerLF2001,
+  author = 	 "Findler, Robert Bruce and Latendresse, Mario and Felleisen, Matthias",
+  title = 	 "Behavioral contracts and behavioral subtyping",
+  booktitle = FSE2001,
+  pages = 	 "229--236",
+  year = 	 2001,
+  address = 	 FSE2001addr,
+  month = 	 FSE2001date,
+  abstract =
+   "Component-based software manufacturing has the potential to bring
+    division-of-labor benefits to the world of software engineering. In order
+    to make a market of software components viable, however, producers and
+    consumers must agree on enforceable software contracts.
+    \par
+    In this paper, we show how to enforce contracts if components are
+    manufactured from class and interface hierarchies. In particular, we focus
+    on one style of contract: pre- and post-conditions. Programmers annotate
+    class and interface methods with pre- and post-conditions and the run-time
+    system checks these conditions during evaluation. These contracts guarantee
+    that methods are called properly and provide appropriate results.
+    \par
+    In procedural languages, the use of pre- and post-condition contracts is
+    well-established and studies have demonstrated its value. In
+    object-oriented languages, however, assigning blame for pre- and
+    post-condition failures poses subtle and complex problems. Specifically,
+    assigning blame for malformed class and interface hierarchies is so
+    difficult that none of the existing contract monitoring tools correctly
+    assign blame for these failures. In this paper, we show how to overcome
+    these problems in the context of Java. Our work is based on the notion of
+    behavioral subtyping.",
+}
+
+
+
+@InProceedings{WadlerF2009,
+  author = 	 "Wadler, Philip and Findler, Robert Bruce",
+  title = 	 "Well-typed programs can't be blamed",
+  booktitle = ESOP2009,
+  pages = 	 "1--16",
+  year = 	 2009,
+  address = 	 ESOP2009addr,
+  month = 	 ESOP2009date,
+  abstract =
+   "We introduce the blame calculus, which adds the notion of blame from
+    Findler and Felleisen's contracts to a system similar to Siek and Taha's
+    gradual types and Flanagan's hybrid types. We characterise where
+    positive and negative blame can arise by decomposing the usual notion of
+    subtype into positive and negative subtypes, and show that these
+    recombine to yield naive subtypes. Naive subtypes previously appeared in
+    type systems that are unsound, but we believe this is the first time
+    naive subtypes play a role in establishing type soundness.",
+}
+
+@InProceedings{SiekT2006,
+  author = 	 "Jeremy G. Siek and Walid Taha",
+  title = 	 "Gradual typing for functional languages",
+  booktitle = SFP2006,
+  pages = 	 "81--92",
+  year = 	 2006,
+  address = 	 SFP2006addr,
+  month = 	 SFP2006date,
+  abstract =
+   "Static and dynamic type systems have well-known strengths and
+    weaknesses, and each is better suited for different programming
+    tasks. There have been many efforts to integrate static and dynamic
+    typing and thereby combine the benefits of both typing disciplines
+    in the same language. The flexibility of static typing can be improved
+    by adding a type Dynamic and a typecase form. The safety
+    and performance of dynamic typing can be improved by adding
+    optional type annotations or by performing type inference (as in
+    soft typing). However, there has been little formal work on type
+    systems that allow a programmer-controlled migration between dynamic
+    and static typing. Thatte proposed Quasi-Static Typing, but
+    it does not statically catch all type errors in completely annotated
+    programs. Anderson and Drossopoulou defined a nominal type system
+    for an object-oriented language with optional type annotations.
+    However, developing a sound, gradual type system for functional
+    languages with structural types is an open problem.
+    \par
+    In this paper we present a solution based on the intuition that the
+    structure of a type may be partially known/unknown at compile time
+    and the job of the type system is to catch incompatibilities
+    between the known parts of types. We define the static and dynamic
+    semantics of a $\lambda$-calculus with optional type annotations and we
+    prove that its type system is sound with respect to the simply-typed
+    $\lambda$-calculus for fully-annotated terms. We prove that this calculus
+    is type safe and that the cost of dynamism is ``pay-as-you-go''.",
+}
+
+
+
 @InProceedings{HermanTF2007,
   author = 	 "David Herman and Aaron Tomb and Cormac Flanagan",
   title = 	 "Space-efficient gradual typing",
@@ -3138,8 +3298,8 @@
   abstract =
    "Gradual type systems offer a smooth continuum between static and dynamic
     typing by permitting the free mixture of typed and untyped code. The
-    runtime systems for these languages—and other languages with hybrid type
-    checking—typically enforce function types by dynamically generating
+    runtime systems for these languages---and other languages with hybrid type
+    checking---typically enforce function types by dynamically generating
     function proxies. This approach can result in unbounded growth in the
     number of proxies, however, which drastically impacts space efficiency and
     destroys tail recursion.
@@ -3153,6 +3313,32 @@
     earlier than prior work.",
 }
 
+
+
+@InProceedings{SiekT2007,
+  author = 	 "Siek, Jeremy and Taha, Walid",
+  title = 	 "Gradual typing for objects",
+  booktitle = ECOOP2007,
+  pages = 	 "2--27",
+  year = 	 2007,
+  address = 	 ECOOP2007addr,
+  month = 	 ECOOP2007date,
+  abstract =
+   "Static and dynamic type systems have well-known strengths and
+    weaknesses. In previous work we developed a gradual type system for a
+    functional calculus named $\lambda^?_\rightarrow$. Gradual typing provides
+    the benefits of both static and dynamic checking in a single language by
+    allowing the programmer to control whether a portion of the program is type
+    checked at compile-time or run-time by adding or removing type annotations
+    on variables. Several object-oriented scripting languages are preparing to
+    add static checking. To support that work this paper develops Ob$^?_{<:}$,
+    a gradual type system for object-based languages, extending the Ob$_{<:}$
+    calculus of Abadi and Cardelli. Our primary contribution is to show that
+    gradual typing and subtyping are orthogonal and can be combined in a
+    principled fashion. We also develop a small-step semantics, provide a
+    machine-checked proof of type safety, and improve the space efficiency of
+    higher-order casts.",
+}
 
 
 @InProceedings{SiekV2008,
@@ -3196,7 +3382,7 @@
     lambda calculus with casts and a dynamic type. Such a calculus is the
     target intermediate language of the gradually typed lambda calculus but it
     is also interesting in its own right. In light of diverse requirements for
-    casts, we develop a modular semantic framework, based on Henglein’s
+    casts, we develop a modular semantic framework, based on Henglein's
     Coercion Calculus, that instantiates a number of space-efficient,
     blame-tracking calculi, varying in what errors they detect and how they
     assign blame. Several of the resulting calculi extend work from the
@@ -3209,41 +3395,79 @@
 }
 
 
-@InProceedings{SiekT2006,
-  author = 	 "Jeremy G. Siek and Walid Taha",
-  title = 	 "Gradual typing for functional languages",
-  booktitle = SFP2006,
-  pages = 	 "81--92",
-  year = 	 2006,
-  address = 	 SFP2006addr,
-  month = 	 SFP2006date,
-  abstract =
-   "Static and dynamic type systems have well-known strengths and
-    weaknesses, and each is better suited for different programming
-    tasks. There have been many efforts to integrate static and dynamic
-    typing and thereby combine the benefits of both typing disciplines
-    in the same language. The flexibility of static typing can be improved
-    by adding a type Dynamic and a typecase form. The safety
-    and performance of dynamic typing can be improved by adding
-    optional type annotations or by performing type inference (as in
-    soft typing). However, there has been little formal work on type
-    systems that allow a programmer-controlled migration between dynamic
-    and static typing. Thatte proposed Quasi-Static Typing, but
-    it does not statically catch all type errors in completely annotated
-    programs. Anderson and Drossopoulou defined a nominal type system
-    for an object-oriented language with optional type annotations.
-    However, developing a sound, gradual type system for functional
-    languages with structural types is an open problem.
-    \par
-    In this paper we present a solution based on the intuition that the
-    structure of a type may be partially known/unknown at compiletime
-    and the job of the type system is to catch incompatibilities
-    between the known parts of types.We define the static and dynamic
-    semantics of a $\lambda$-calculus with optional type annotations and we
-    prove that its type system is sound with respect to the simply-typed
-    $\lambda$-calculus for fully-annotated terms. We prove that this calculus is
-    type safe and that the cost of dynamism is ``pay-as-you-go''.",
+@InProceedings{SiekW2009,
+  author = 	 "Jeremy G. Siek and Philip Wadler",
+  title = 	 "Threesomes, with and without blame",
+  booktitle = STOP2009,
+  pages = 	 "34--46",
+  year = 	 2009,
+  address = 	 STOP2009addr,
+  month = 	 STOP2009date,
+  supersededby = "SiekW2010"
 }
+
+
+@InProceedings{SiekW2010,
+  author = 	 "Jeremy G. Siek and Philip Wadler",
+  title = 	 "Threesomes, with and without blame",
+  booktitle =    POPL2010,
+  NEEDpages = 	 "*",
+  year = 	 2010,
+  address = 	 POPL2010addr,
+  month = 	 POPL2010date,
+  abstract =
+   "How to integrate static and dynamic types? Recent work focuses
+    on casts to mediate between the two. However, adding casts may
+    degrade tail calls into a non-tail calls, increasing space consumption
+    from constant to linear in the depth of calls.
+    \par
+    We present a new solution to this old problem, based on the
+    notion of a threesome. A cast is specified by a source and a target
+    type---a twosome. Any twosome factors into a downcast from the
+    source to an intermediate type, followed by an upcast from the
+    intermediate to the target---a threesome. Any chain of threesomes
+    collapses to a single threesome, calculated by taking the greatest
+    lower bound of the intermediate types. We augment this solution
+    with blame labels to map any failure of a threesome back to the
+    offending twosome in the source program.
+    \par
+    Herman, Tomb, and Flanagan (2007) solve the space problem
+    by representing casts with the coercion calculus of Henglein
+    (1994). While they provide a theoretical limit on the space overhead,
+    there remains the practical question of how best to implement
+    coercion reduction. The threesomes presented in this paper
+    provide a streamlined data structure and algorithm for representing
+    and normalizing coercions. Furthermore, threesomes provide a
+    typed-based explanation of coercion reduction."
+}
+
+
+
+@InProceedings{TobinHochstadtF2006,
+  author = 	 "Sam Tobin-Hochstadt and Matthias Felleisen",
+  title = 	 "Interlanguage migration: From scripts to programs",
+  booktitle = DLS2006,
+  NEEDpages = 	 "*",
+  year = 	 2006,
+  address = 	 DLS2006addr,
+  month = 	 DLS2006date,
+  abstract =
+   "As scripts grow into full-fledged applications, programmers should want to
+    port portions of their programs from scripting languages to languages with
+    sound and rich type systems.  This form of interlanguage migration ensures
+    type-safety and provides minimal guarantees for reuse in other
+    applications, too.
+    \par
+    In this paper, we present a framework for expressing this form of
+    interlanguage migration. Given a program that consists of modules in the
+    untyped lambda calculus, we prove that rewriting one of them in a simply
+    typed lambda calculus produces an equivalent program and adds the expected
+    amount of type safety, i.e., code in typed modules can't go wrong. To
+    ensure these guarantees, the migration process infers constraints from the
+    statically typed module and imposes them on the dynamically typed modules
+    in the form of behavioral contracts.",
+}
+
 
 
 @InProceedings{TobinHochstadtF2008,
@@ -3273,32 +3497,6 @@
     with the implementation suggest that Typed Scheme naturally accommodates
     the programming style of the underlying scripting language,
     at least for the first few thousand lines of ported code.",
-}
-
-
-@InProceedings{TobinHochstadtF2006,
-  author = 	 "Sam Tobin-Hochstadt and Matthias Felleisen",
-  title = 	 "Interlanguage migration: From scripts to programs",
-  booktitle = DLS2006,
-  NEEDpages = 	 "*",
-  year = 	 2006,
-  address = 	 DLS2006addr,
-  month = 	 DLS2006date,
-  abstract =
-   "As scripts grow into full-fledged applications, programmers should want to
-    port portions of their programs from scripting languages to languages with
-    sound and rich type systems.  This form of interlanguage migration ensures
-    type-safety and provides minimal guarantees for reuse in other
-    applications, too.
-    \par
-    In this paper, we present a framework for expressing this form of
-    interlanguage migration. Given a program that consists of modules in the
-    untyped lambda calculus, we prove that rewriting one of them in a simply
-    typed lambda calculus produces an equivalent program and adds the expected
-    amount of type safety, i.e., code in typed modules can’t go wrong. To
-    ensure these guarantees, the migration process infers constraints from the
-    statically typed module and imposes them on the dynamically typed modules
-    in the form of behavioral contracts.",
 }
 
 
@@ -4123,6 +4321,34 @@
   year = 	 2002,
   note = 	 "\url{http://haskell.org/onlinereport/}",
 }
+
+@InProceedings{Meijer2007,
+  author = 	 "Meijer, Erik",
+  title = 	 "Confessions of a used programming language salesman:  Getting the masses hooked on {Haskell}",
+  booktitle = OOPSLA2007companion,
+  pages = 	 "677--694",
+  year = 	 2007,
+  address = 	 OOPSLA2007addr,
+  month = 	 OOPSLA2007date,
+  abstract =
+   "For many years I had been fruitlessly trying to sell functional
+   programming and Haskell to solve real world problems such as scripting
+   and data-intensive three-tier distributed web applications. The lack of
+   widespread adoption of Haskell is a real pity. Functional programming
+   concepts are key to curing many of the headaches that plague the
+   majority of programmers, who today are forced to use imperative
+   languages. If the mountain won't come to Mohammed, Mohammed must go to
+   the mountain, and so I left academia to join industry. Instead of trying
+   to convince imperative programmers to forget everything they already
+   know and learn something completely new, I decided to infuse existing
+   imperative object-oriented programming languages with functional
+   programming features. As a result, functional programming has finally
+   reached the masses, except that it is called Visual Basic 9 instead of
+   Haskell 98.",
+}
+
+
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
