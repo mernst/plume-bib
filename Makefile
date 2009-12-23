@@ -2,7 +2,7 @@
 # Make will silently continue if that file does not exist.
 -include Makefile.user
 
-BIB_ABBREVIATE := ~mernst/bin/share/bib-abbreviate
+BIB_ABBREVIATE ?= ./bib-abbreviate.pl
 
 all: bibstring-unabbrev.bib bibstring-abbrev.bib bibroot
 
