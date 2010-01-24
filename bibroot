@@ -1,13 +1,10 @@
 % File for finding bibliography items.
 
-\include{6846.bib}
 \include{ajmani-upgrades.bib}
 \include{algorithms.bib}
 \include{alias.bib}
 \include{common-subexpr.bib}
 \include{compiler.bib}
-\include{compiler-bibs.bib}
-\include{compiler-seminar.bib}
 \include{concurrency.bib}
 \include{continuoustesting.bib}
 \include{cryptography.bib}
