@@ -264,6 +264,355 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Alias analysis
+%%%
+
+@InProceedings{CWZ:APS,
+  author =       "David R. Chase and Mark Wegman and F. Kenneth Zadeck",
+  title =        "Analysis of Pointers and Structures",
+  booktitle =    PLDI90,
+  month =        jun,
+  year =         1990,
+  address =      pldi90addr,
+  pages =        "296--310",
+}
+
+@InProceedings{LandiWilli1992a,
+  author =       "William Landi and Barbara G. Ryder",
+  title =        "A safe approximate algorithm for interprocedural
+                 pointer aliasing",
+  booktitle =    PLDI92,
+  address =	 pldi92addr,
+  pages =	 "235--248",
+  year =         1992,
+  abstracturl =  "file://cs.rutgers.edu/pub/technical-reports/lcsr-tr-168.abstract",
+  url =          "file://cs.rutgers.edu/pub/technical-reports/lcsr-tr-168.ps.Z",
+  month =        PLDI92date,
+}
+
+
+@TechReport{LandiR91:TR,
+  author =       "William Landi and Barbara G. Ryder",
+  title =        "A Safe Approximation Algorithm for Interprocedural
+                 Pointer Aliasing",
+  institution =  "Rutgers University",
+  year = 	 1991,
+  number =	 "LCSR-TR-168",
+  month =	 sep
+}
+
+
+@InProceedings{pldi94*242,
+  author =       "Maryam Emami and Rakesh Ghiya and Laurie J. Hendren",
+  title =        "Context-Sensitive Interprocedural Points-to Analysis
+                 in the Presence of Function Pointers",
+  pages =        "242--256",
+  ISBN =         "0-89791-662-X",
+  booktitle =    PLDI94,
+  address =	 pldi94addr,
+  month =        jun,
+  year =         1994,
+}
+
+
+@InProceedings{Wilson:1995:ECP,
+  author =       "Robert P. Wilson and Monica S. Lam",
+  title =        "Efficient context-sensitive pointer analysis for {C}
+                 programs",
+  booktitle =    PLDI95,
+  address =      pldi95addr,
+  month =        jun,
+  year =         1995,
+  ISSN =         "0362-1340",
+  pages =        "1--12",
+  coden =        "SINODQ",
+  ISSN =         "0362-1340",
+  abstract =     "This paper proposes an efficient technique for
+                 context-sensitive pointer analysis that is applicable
+                 to real C programs. For efficiency, we summarize the
+                 effects of procedures using partial transfer functions.
+                 A partial transfer function (PTF) describes the
+                 behavior of a procedure assuming that certain alias
+                 relationships hold when it is called. We can reuse a
+                 PTF in many calling contexts as long as the aliases
+                 among the inputs to the procedure are the same. Our
+                 empirical results demonstrate that this technique is
+                 successful-a single PTF per procedure is usually
+                 sufficient to obtain completely context-sensitive
+                 results. Because many C programs use features such as
+                 type casts and pointer arithmetic to circumvent the
+                 high-level type system, our algorithm is based on a
+                 low-level representation of memory locations that
+                 safely handles all the features of C. We have
+                 implemented our algorithm in the SUIF compiler system
+                 and we show that it runs efficiently for a set of C
+                 benchmarks. (16 Refs.)",
+  affiliation =  "Comput. Syst. Lab., Stanford Univ., CA, USA",
+  classification = "C6140D (High level languages); C6150C (Compilers,
+                 interpreters and other processors)",
+  keywords =     "Alias relationships; C benchmarks; C programs;
+                 Compiler system; Context-sensitive pointer analysis;
+                 High-level type system; Memory locations; Partial
+                 transfer functions; Pointer arithmetic; Procedure call;
+                 SUIF; Type casts",
+  thesaurus =    "C language; Program compilers; Remote procedure
+                 calls",
+}
+
+
+
+@InProceedings{popl93*232,
+  author =       "Jong-Deok Choi and Michael Burke and Paul Carini",
+  title =        "Efficient Flow-Sensitive Interprocedural Computation
+                 of Pointer-Induced Aliases and Side Effects",
+  pages =        "232--245",
+  ISBN =         "0-89791-560-7",
+  booktitle =    POPL93,
+  address =      popl93addr,
+  month =        popl93date,
+  year =         1993,
+}
+
+
+@InProceedings{Deutsch94a,
+  author =       "Alain Deutsch",
+  title =        "Interprocedural May-Alias Analysis for Pointers:
+                 Beyond {$k$}-Limiting",
+  pages =        "230--241",
+  booktitle =    PLDI94,
+  year =         1994,
+  address =      pldi94addr,
+  month =        jun,
+  note =         "SIGPLAN Notices, 29(6)",
+  abstract =     "Existing methods for alias analysis of recursive
+                 pointer data structures are based on two approximation
+                 techniques: {\em $k$-limiting}, which blurs distinction
+                 between sub-objects below depth $k$; and {\em
+                 store-based\/} (or equivalently location or
+                 region-based) approximations, which blur distinction
+                 between elements of recursive data structures. Although
+                 notable progress in interprocedural alias analysis has
+                 been recently accomplished, very little progress in the
+                 precision of analysis of recursive pointer data
+                 structures has been seen since the inception of these
+                 approximation techniques by Jones and Muchnick a decade
+                 ago. As a result, optimizing, verifying and
+                 parallelizing programs with pointers has remained
+                 difficult. We present a new parametric framework for
+                 analyzing recursive pointer data structures which can
+                 express a new natural class of alias information not
+                 accessible to existing methods. The key idea is to
+                 represent alias information by pairs of {\em symbolic
+                 access paths\/} which are qualified by symbolic
+                 descriptions of the positions for which the alias pair
+                 holds. Based on this result, we present an algorithm
+                 for interprocedural may-alias analysis with pointers
+                 which on numerous examples that occur in practice is
+                 much more precise than recently published algorithms.",
+}
+
+
+@InProceedings{Deutsch95,
+  author =       "Alain Deutsch",
+  title =        "Semantic Models and Abstract Interpretation Techniques
+                 for Inductive Data Structures and Pointers",
+  booktitle =    PEPM95,
+  address =      pepm95addr,
+  month =        PEPM95date,
+  year =         1995,
+  pages =        "226--229",
+}
+
+
+@InProceedings{POPL::Steensgaard1996,
+  title =        "Points-to Analysis in Almost Linear Time",
+  author =       "Bjarne Steensgaard",
+  pages =        "32--41",
+  booktitle =    POPL96,
+  month =        POPL96date,
+  year =         1996,
+  address =      popl96addr
+}
+
+
+@InProceedings{Steensgaard96,
+  author = 	 "Bjarne Steensgaard",
+  title = 	 "Points-to analysis by type inference of programs with
+		  structures and unions",
+  booktitle =    CC96,
+  address =	 CC96addr,
+  coden =        "LNCSD9",
+  ISBN =         "3-540-61053-7 (paperback)",
+  ISSN =         "0302-9743",
+  LCCN =         "QA76.76.C65 I52 1996",
+  OMITseries =       LNCS,
+  OMITvolume =       1060,
+  year =	 1996,
+  month =	 CC96date
+}
+
+
+@InProceedings{Jones:Muchnick:acm:popl:1982,
+  author =       "Neil D. Jones and Stephen S. Muchnick",
+  title =        "A Flexible Approach to Interprocedural Data Flow
+                 Analysis and Programs with Recursive Data Structures",
+  booktitle =    POPL82,
+  month =        jan,
+  year =         1982,
+  pages =        "66--74",
+  abstract =     "A new approach to data flow analysis of procedural
+                 programs and programs with recursive data structures is
+                 described. The method depends on simulation of the
+                 interpreter for the subject programming language using
+                 a retrieval function to approximate a program's data
+                 structures.",
+}
+
+@InProceedings{POPL79*244,
+  author =       "Neil D. Jones and Steven S. Muchnick",
+  title =        "Flow analysis and optimization of {LISP}-like
+                 structures",
+  pages =        "244--256",
+  booktitle =    POPL79,
+  month =        jan,
+  address =      "New York, USA",
+  year =         "1979",
+}
+
+
+@InProceedings{Ruf:1995:CAA,
+  author =       "Erik Ruf",
+  title =        "Context-insensitive alias analysis reconsidered",
+  booktitle =    PLDI95,
+  address =      pldi95addr,
+  month =        jun,
+  year =         1995,
+  ISSN =         "0362-1340",
+  pages =        "13--22",
+  coden =        "SINODQ",
+  ISSN =         "0362-1340",
+  abstract =     "Recent work on alias analysis in the presence of
+                 pointers has concentrated on context-sensitive
+                 interprocedural analyses, which treat multiple calls to
+                 a single procedure independently rather than
+                 constructing a single approximation to a procedure's
+                 effect on all of its callers. While context-sensitive
+                 modeling offers the potential for greater precision by
+                 considering only realizable call-return paths, its
+                 empirical benefits have yet to be measured. This paper
+                 compares the precision of a simple, efficient,
+                 context-insensitive points-to analysis for the C
+                 programming language with that of a maximally
+                 context-sensitive version of the same analysis. We
+                 demonstrate that, for a number of pointer-intensive
+                 benchmark programs, context-insensitivity exerts little
+                 to no precision penalty. We also describe techniques
+                 for using the output of context-insensitive analysis to
+                 improve the efficiency of context-sensitive analysis
+                 without affecting precision. (23 Refs.)",
+  affiliation =  "Microsoft Corp., Redmond, WA, USA",
+  classification = "C6110 (Systems analysis and programming); C6150C
+                 (Compilers, interpreters and other processors); C6150N
+                 (Distributed systems software)",
+  keywords =     "C programming language; Call-return paths; Compilers;
+                 Context-insensitive alias analysis; Context-insensitive
+                 analysis; Context-insensitivity; Context-sensitive
+                 analysis; Context-sensitive interprocedural analyses;
+                 Context-sensitive modeling; Multiple procedure calls;
+                 Pointer-intensive benchmark programs; Pointers;
+                 Precision penalty",
+  thesaurus =    "C language; Data flow analysis; Program compilers;
+                 Remote procedure calls; Software performance
+                 evaluation",
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Shape analysis
+%%%
+
+@InProceedings{HendrenHumNic92,
+  author =       "Laurie J. Hendren and Joseph Hummel and Alexandru
+                 Nicolau",
+  title =        "Abstractions for Recursive Pointer Data Structures:
+                 Improving the Analysis and Transformation of Imperative
+                 Programs",
+  booktitle =    PLDI92,
+  address =      PLDI92addr,
+  month =        PLDI92date,
+  year =         1992,
+  pages =        "249--260",
+  url =          "ftp://ftp-acaps.cs.mcgill.ca/pub/doc/papers/PLDI92.ps.gz",
+}
+
+
+@Article{Ghiya:1996:CAP,
+  author =       "Rakesh Ghiya and Laurie J. Hendren",
+  title =        "Connection Analysis: A Practical Interprocedural
+                 Heap Analysis for {C}",
+  journal =      "International Journal of Parallel Programming",
+  volume =       "24",
+  number =       "6",
+  pages =        "547--578",
+  month =        dec,
+  year =         "1996",
+  coden =        "IJPPE5",
+  ISSN =         "0885-7458",
+  affiliation =  "McGill Univ",
+  affiliationaddress = "Que, Can",
+  classification = "722.4; 723.1; 723.1.1; 723.5; 922.2; C4240P
+                 (Parallel programming and algorithm theory); C6110P
+                 (Parallel programming); C6120 (File organisation);
+                 C6140D (High level languages); C6150C (Compilers,
+                 interpreters and other processors)",
+  corpsource =   "Sch. of Comput. Sci., McGill Univ., Montreal, Que.,
+                 Canada",
+  journalabr =   "Int J Parallel Program",
+  keywords =     "array dependence; C (programming language); C
+                 language; C programs; Computer aided analysis;
+                 Connection analysis; connection analysis; connection
+                 matrices; connection relationships; conservative
+                 estimate; context sensitive interprocedural analysis;
+                 Context sensitive languages; disjoint objects;
+                 dynamically allocated arrays; heap access
+                 disambiguation; heap allocated objects; Heap analysis
+                 technique; heap directed pointers; interference
+                 analysis; McCAT optimizing/parallelizing C compiler;
+                 optimising compilers; Parallel processing systems;
+                 parallel programming; parallelising compilers;
+                 parallelizing compilers; Pointer disambiguation;
+                 points-to analysis; Program compilers; program control
+                 structures; program point; scientific programs;
+                 Statistical methods; storage management",
+  treatment =    "P Practical",
+}
+
+
+@InProceedings{POPL::GhiyaH1996,
+  title =        "Is it a Tree, a {DAG}, or a Cyclic Graph? {A} Shape
+                 Analysis for Heap-Directed Pointers in~{C}",
+  author =       "Rakesh Ghiya and Laurie J. Hendren",
+  pages =        "1--15",
+  booktitle =    POPL96,
+  address =      popl96addr,
+  month =        jan # "~21--24,",
+  year =         1996,
+}
+
+
+@InProceedings{POPL::FradetM1997,
+  title =        "Shape Types",
+  author =       "Pascal Fradet and Daniel Le M{\'e}tayer",
+  pages =        "27--39",
+  booktitle =    POPL97,
+  month =        POPL97date,
+  year =         1997,
+  address =      popl97addr,
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Everything else
 %%%
 

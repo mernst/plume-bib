@@ -2845,6 +2845,32 @@
 
 
 
+@InProceedings{OlmosV2003,
+  author = 	 "Karina Olmos and Eelco Visser",
+  title = 	 "Turning dynamic typing into static typing by program specialization in a compiler front-end for {Octave}",
+  booktitle = SCAM2003,
+  NEEDpages = 	 "*",
+  year = 	 2003,
+  address = 	 SCAM2003addr,
+  month = 	 SCAM2003date,
+  abstract =
+   "Array processing languages such as APL, Matlab and Octave rely on dynamic
+    typechecking by the interpreter rather than static typechecking and are
+    designed for user convenience with a syntax close to mathematical
+    notation. Functions and operators are highly overloaded. The price to be
+    paid for this flexibility is computational performance, since the run-time
+    system is responsible for type checking, array shape determination,
+    function call dispatching, and handling possible run-time errors. In order
+    to produce effecient code, an Octave compiler should address those issues
+    at compile-time as much as possible. In particular, static type and shape
+    inferencing can improve the quality of the generated code. In this paper we
+    discuss how overloading in dynamically typed Octave programs can be
+    resolved by program specialization. We discuss the typing issues in
+    compilation of Octave programs and give an overview of the implementation
+    of the specializer in the transformation language Stratego.",
+}
+
+
 
 %%%
 %%% Adding a "Dynamic" type to a statically typed language
@@ -3499,6 +3525,45 @@
     at least for the first few thousand lines of ported code.",
 }
 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Other static analyses
+%%%
+
+
+@InProceedings{OCallahan97a,
+  author =       "Robert O'Callahan and Daniel Jackson",
+  title =        "Lackwit: A Program Understanding Tool Based on Type
+                 Inference",
+  booktitle =    ICSE97,
+  address =      ICSE97addr,
+  year =         1997,
+  pages =        "338--348",
+  month =        ICSE97date,
+  abstract =
+   "By determining, statically, where the structure of a program requires sets
+    of variables to share a common representation, we can identify abstract
+    data types, detect abstraction violations, find unused variables,
+    functions, and fields of data structures, detect simple errors in
+    operations on abstract datatypes, and locate sites of possible references
+    to a value.  We compute representation sharing with type inference, using
+    types to encode representations.  The method is efficient, fully automatic,
+    and smoothly integrates pointer aliasing and higher-order functions.  We
+    show how we used a prototype tool to answer a user's questions about a
+    17,000 line program written in C.",
+}
+
+
+@TechReport{OCallahanJ96,
+  author = 	 "Robert O'Callahan and Daniel Jackson",
+  title = 	 "Practical program understanding with type inference",
+  institution =  "School of Computer Science, Carnegie Mellon University",
+  year = 	 1996,
+  number =	 "CMU-CS-96-130",
+  address =	 "Pittsburgh, PA",
+  month =	 may
+}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

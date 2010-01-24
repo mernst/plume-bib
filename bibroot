@@ -5,6 +5,7 @@
 \include{algorithms.bib}
 \include{alias.bib}
 \include{common-subexpr.bib}
+\include{compiler.bib}
 \include{compiler-bibs.bib}
 \include{compiler-seminar.bib}
 \include{concurrency.bib}
