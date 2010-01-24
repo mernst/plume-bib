@@ -2137,6 +2137,83 @@ Year={1979}
 
 
 
+@InProceedings{vonDincklageD2009,
+  author = 	 "von Dincklage, Daniel and Diwan, Amer",
+  title = 	 "Optimizing programs with intended semantics",
+  booktitle = OOPSLA2009,
+  pages = 	 "409--424",
+  year = 	 2009,
+  address = 	 OOPSLA2009addr,
+  month = 	 OOPSLA2009date,
+  abstract =
+   "Modern object-oriented languages have complex features that cause
+    programmers to overspecify their programs. This overspecification hinders
+    automatic optimizers, since they must preserve the overspecified
+    semantics. If an optimizer knew which semantics the programmer intended, it
+    could do a better job.
+    \par
+    Making a programmer clarify his intentions by placing assumptions into the
+    program is rarely practical. This is because the programmer does not know
+    which parts of the programs' overspecified semantics hinder the
+    optimizer. Therefore, the programmer has to guess which assumption to
+    add. Since the programmer can add many different assumptions to a large
+    program, he will need to place many such assumptions before he guesses
+    right and helps the optimizer.
+    \par
+    We present IOpt, a practical optimizer that uses a specification of the
+    programmers' intended semantics to enable additional optimizations. That
+    way, our optimizer can significantly improve the performance of a
+    program. We present case studies in which we use IOpt to speed up two
+    programs by a factor of 2.
+    \par
+    To make specifying the intended semantics practical, IOpt communicates with
+    the programmer. IOpt identifies which assumptions the programmer
+    \emph{should} place, and where he should place them. IOpt ranks each
+    assumption by (i) the likelyhood that the assumption conforms to the
+    programmers' intended semantics and (ii) how much the assumption will help
+    IOpt improve the programs' performance. IOpt proposes ranked assumptions to
+    the programmer, who just picks those that conform to his intended
+    semantics.With this approach, IOpt keeps the programmers' specification
+    burden low. In our case studies, programmers had to add just a few
+    assumptions to realize significant performance speedups.",
+}
+
+@ARTICLE{       Jones:89:Mix,
+  AUTHOR        = "N.D. Jones and P. Sestoft and H. S{\o}ndergaard",
+  TITLE         = "Mix: A Self-Applicable Partial Evaluator for Experiments
+  in Compiler Generation",
+  JOURNAL       = "Lisp and Symbolic Computation",
+  YEAR          = "1989",
+  VOLUME        = "2",
+  NUMBER        = "1",
+  PAGES         = "9--50", 
+  ANNOTE = "A comprehensive discussion of partial evaluation, its
+applications to generation of compilers and compiler generators, and
+of engineering problems is given.  A fully automatic version of the
+partial evaluator discussed in \cite{Jones:85:AnExperiment} is
+described and results from its use are reported."
+}
+
+
+@InProceedings{Consel:93:Tutorial,
+  author = 	"C. Consel and O. Danvy",
+  title = 	"Tutorial Notes on Partial Evaluation",
+  booktitle = 	"Twentieth ACM Symposium on Principles of Programming
+		 Languages, Charleston, South Carolina, January 1993",
+  year = 	"1993",
+  pages = 	"493--501",
+}
+
+
+@Book{Jones:93:PartialEvaluation,
+  author = 	"N.D. Jones and C.K. Gomard and P. Sestoft",
+  title = 	"Partial Evaluation and Automatic Program Generation",
+  publisher = 	"Prentice Hall",
+  year = 	"1993"
+}
+
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% End
