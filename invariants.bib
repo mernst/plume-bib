@@ -168,7 +168,7 @@
     Recent work, in particular the Daikon system, has shown that it is possible
     to infer some contracts automatically from program executions. The main
     incentive has been an assumption that most programmers are reluctant to
-    invent the contracts themselves. The experience of contractsupporting
+    invent the contracts themselves. The experience of contract-supporting
     languages, notably Eiffel, disproves that assumption:  programmers will
     include contracts if given the right tools. That experience also shows,
     however, that the resulting contracts are generally partial and
@@ -177,7 +177,7 @@
     Contract-inference tools provide the opportunity for studying objectively
     the quality of programmer-written contracts, and for assessing of the
     respective roles of humans and tools. Working on an industrial base of
-    contractequipped software, we applied Daikon to infer contracts, and
+    contract-equipped software, we applied Daikon to infer contracts, and
     compared the results with the already present contracts.
     \par
     We found that a contract inference tool can be used to strengthen
@@ -1642,7 +1642,7 @@
     failures that do not necessarily cause service termination or crashes, but
     result in incorrect results.
     \par
-    In this paper, we propose a technique for developing selfprotecting
+    In this paper, we propose a technique for developing self-protecting
     systems. The technique proposed in this paper observes values at relevant
     program points. When the technique detects a software failure, it uses the
     collected information to identify the execution contexts that lead to the
@@ -1909,13 +1909,13 @@
   abstract =
    "This work presents a technique to compute symbolic polynomial
     approximations of the amount of dynamic memory required to safely execute a
-    method without running out of memory, for Javalike imperative programs. We
+    method without running out of memory, for Java-like imperative programs. We
     consider object allocations and deallocations made by the method and the
     methods it transitively calls. More precisely, given an initial
     configuration of the stack and the heap, the peak memory consumption is the
     maximum space occupied by newly created objects in all states along a run
     from it. We over-approximate the peak memory consumption using a
-    scopedmemory management where objects are organized in regions associated
+    scoped-memory management where objects are organized in regions associated
     with the lifetime of methods. We model the problem of computing the maximum
     memory occupied by any region configuration as a parametric polynomial
     optimization problem over a polyhedral domain and resort to Bernstein basis
@@ -8935,33 +8935,39 @@ pages = "1--39"
 %  LocalWords:  Tamraparni Dasu Muthukrushnan Vladislav Shkapeyuk Ihab OO Cova
 %  LocalWords:  Panayiotis Tsaparas Ilyas Volker Markl Ashraf Aboulnaga Kruegel
 %  LocalWords:  Larus screenshots BoshernitsanDS Boshernitsan Roongko app Vigna
-%  LocalWords:  Doong Savoia FeiM Midkiff Rosenblum PreProcessor TRCS Urs
-%  LocalWords:  jContractor Karaorman Holzle KaraormanHB ClassLoader Malo
+%  LocalWords:  Doong Savoia FeiM Midkiff Rosenblum PreProcessor TRCS Urs Ciupa
+%  LocalWords:  jContractor Karaorman Holzle KaraormanHB ClassLoader Malo ETHZ
 %  LocalWords:  Ostrand SFENDP Sigsoft CRL PetersP Yoonsik Cheon Chalin Malware
-%  LocalWords:  ENCS SPV Rioux Neno Medvidovic Nenad Rothermel Rui Liu Ko
-%  LocalWords:  OSU CISRC HutchinsFGOS RothermelH HarroldRSWY Sayre Tarak
-%  LocalWords:  Goradia controlflow WeissDSAAJ Blackdown evelopment inux
+%  LocalWords:  ENCS SPV Rioux Neno Medvidovic Nenad Rothermel Rui Liu Ko Arati
+%  LocalWords:  OSU CISRC HutchinsFGOS RothermelH HarroldRSWY Sayre Tarak Vinod
+%  LocalWords:  Goradia controlflow WeissDSAAJ Blackdown evelopment inux Ilinca
 %  LocalWords:  O'Reilly Sebastopol BennettLMRRHR Avraham Leff Mikalsen malware
-%  LocalWords:  Rayfield Rouvellou Hahm Rasmus DyC Philipose Eggers Aung
-%  LocalWords:  CockrellQuals OLDnote Thaung JacksonW Waingold classfiles
-%  LocalWords:  Womble OMT Womble's Gorlick Balachander Krishnamurthy GCP
-%  LocalWords:  Hempstead FCTL Laung AraragiK Tadashi Araragi Kogure CTL
-%  LocalWords:  CLIMA Erdos ASA Araragi's NTT Hikaridai Seika cho Souraku
-%  LocalWords:  araragi DemskyR lhs Progol sProgol GiffinJM Giffin Somesh
-%  LocalWords:  Jha applets Globus SETI RPCs NFA mutithreading gzip SOSP
-%  LocalWords:  procmail Sobalvarro Schlansker JohnsonSch SIGMICRO Das Dy
-%  LocalWords:  Jazayeri Schauer LukoitWSH Kazimiras Lukoit Stowell Guido
-%  LocalWords:  TraceGraph PythonReferenceManual Rossum Romer Voelker SPE
-%  LocalWords:  PythonLibraryReference Wolman Bershad SrivastavaE Amitabh
-%  LocalWords:  Srivastava Eustace SrivastavaW LarusS Schnarr USENIXWinNT
-%  LocalWords:  RomerVLWWLBC BrueningDA Duesterwald FDDO IconHashing Cha
-%  LocalWords:  designpatterns Vlissides Multiversion LevesonCKS Shimeall
-%  LocalWords:  FTCS Deok ShimeallL Waddell diffs Holtle DZS DeLine Ewan
+%  LocalWords:  Rayfield Rouvellou Hahm Rasmus DyC Philipose Eggers Aung Baliga
+%  LocalWords:  CockrellQuals OLDnote Thaung JacksonW Waingold classfiles Liviu
+%  LocalWords:  Womble OMT Womble's Gorlick Balachander Krishnamurthy GCP ACSAC
+%  LocalWords:  Hempstead FCTL Laung AraragiK Tadashi Araragi Kogure CTL Iftode
+%  LocalWords:  CLIMA Erdos ASA Araragi's NTT Hikaridai Seika cho Souraku Pezze
+%  LocalWords:  araragi DemskyR lhs Progol sProgol GiffinJM Giffin Somesh EFSMs
+%  LocalWords:  Jha applets Globus SETI RPCs NFA mutithreading gzip SOSP FFTV
+%  LocalWords:  procmail Sobalvarro Schlansker JohnsonSch SIGMICRO Das Dy EE de
+%  LocalWords:  Jazayeri Schauer LukoitWSH Kazimiras Lukoit Stowell Guido MVC
+%  LocalWords:  TraceGraph PythonReferenceManual Rossum Romer Voelker SPE Boehm
+%  LocalWords:  PythonLibraryReference Wolman Bershad SrivastavaE Amitabh Abts
+%  LocalWords:  Srivastava Eustace SrivastavaW LarusS Schnarr USENIXWinNT FTfJP
+%  LocalWords:  RomerVLWWLBC BrueningDA Duesterwald FDDO IconHashing Cha FCEyN
+%  LocalWords:  designpatterns Vlissides Multiversion LevesonCKS Shimeall UBA
+%  LocalWords:  FTCS Deok ShimeallL Waddell diffs Holtle DZS DeLine Ewan ndez
 %  LocalWords:  Zelesnik UniCon BiddleMMWT Tempero SSR gdb tk Dyno eval CovaBFV
-%  LocalWords:  MillerWilliamsBT AmmannK Ammann Trans Blum HindPioliSAS
-%  LocalWords:  Pioli Hellerstein Avnur Hidber Olston Vijayshankar Raman
-%  LocalWords:  Tali lawyering Cyclomatic Lindholm Yellin LindholmY Aggarwal
+%  LocalWords:  MillerWilliamsBT AmmannK Ammann Trans Blum HindPioliSAS webpage
+%  LocalWords:  Pioli Hellerstein Avnur Hidber Olston Vijayshankar Raman ISMM
+%  LocalWords:  Tali lawyering Cyclomatic Lindholm Yellin LindholmY Aggarwal se
 %  LocalWords:  NOpublisher NOyear ArnoldGH Stucki Garlan Ambriola Schach
 %  LocalWords:  Tortora Glenford MotwaniR Motwani Halevy ChristodorescuJK
 % LocalWords:  Christodorescu isTrivialComponent malwares Symantec Balzarotti
-% LocalWords:  Viktoria Felmetsger Swaddler
+% LocalWords:  Viktoria Felmetsger Swaddler overapproximations KuzminaPGC
+% LocalWords:  ContExt PolikarpovaCM Polikarpova ETHZaddr instrumenter Andreas
+% LocalWords:  CsallnerSX SchulerDZ Schuler Dallmeier JAVALANCHE OPTcategory
+% LocalWords:  OPTbasefilename OPTsummary BaligaGI Ganapathy rootkits rootkit
+% LocalWords:  OPTsupersededby OLDdownloads OTHERdownloads addItemToCart
+% LocalWords:  IEEESoftware Ockerbloom interoperability MarianiPP Departamento
+% LocalWords:  Computaci BrabermanFGY

@@ -56,7 +56,22 @@ For consistency, please start a new bibliography entry with @ in the first
 column, and end the entry with "}" or ")" on its own line.
 
 
-SETUP
+SETUP -- if you use a Makefile to process your paper
+-----
+
+Add the following rules to your Makefile, and add "plume-bib-update" as a
+dependency for the rule that calls bibtex:
+
+export BIBINPUTS ?= .:plume-bib
+
+plume-bib:
+	hg clone https://plume-bib.googlecode.com/hg/ plume-bib  
+.PHONY: plume-bib-update
+plume-bib-update: plume-bib
+	cd plume-bib && hg pull -u && make
+
+
+SETUP -- non-Makefile version
 -----
 
 Obtain the bibliographies by running the command
@@ -68,6 +83,10 @@ Then, add the "plume-bib" directory to your BIBINPUTS environment variable.
     export BIBINPUTS=.:PATHTOPLUMEBIB:..:
   csh syntax:
     setenv BIBINPUTS .:PATHTOPLUMEBIB:..:
+
+
+SETUP -- miscellaneous details
+-----
 
 For the bibfind command, see http://code.google.com/p/uwisdom/wiki/README .
 It uses the "bibroot" file in the repository.
