@@ -59,16 +59,16 @@ column, and end the entry with "}" or ")" on its own line.
 SETUP -- if you use a Makefile to process your paper
 -----
 
-Add the following rules to your Makefile, and add "plume-bib-update" as a
+Add the following rules to your Makefile, and add "bib-update" as a
 dependency for the rule that calls bibtex:
 
-export BIBINPUTS ?= .:plume-bib
+export BIBINPUTS ?= .:bib
 
-plume-bib:
-	hg clone https://plume-bib.googlecode.com/hg/ plume-bib  
-.PHONY: plume-bib-update
-plume-bib-update: plume-bib
-	cd plume-bib && hg pull -u && make
+bib:
+	hg clone https://plume-bib.googlecode.com/hg/ bib
+.PHONY: bib-update
+bib-update: bib
+	cd bib && hg pull -u && make
 
 
 SETUP -- non-Makefile version
@@ -76,7 +76,7 @@ SETUP -- non-Makefile version
 
 Obtain the bibliographies by running the command
 
-  hg clone https://plume-bib.googlecode.com/hg/ plume-bib  
+  hg clone https://plume-bib.googlecode.com/hg/ bib
 
 Then, add the "plume-bib" directory to your BIBINPUTS environment variable.
   bash syntax:
