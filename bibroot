@@ -1,6 +1,5 @@
 % File for finding bibliography items.
 
-\include{ajmani-upgrades.bib}
 \include{algorithms.bib}
 \include{alias.bib}
 \include{common-subexpr.bib}
@@ -38,4 +37,5 @@
 \include{soft-eng.bib}
 \include{testing.bib}
 \include{types.bib}
+\include{upgrades-ajmani.bib}
 \include{upgrades-mde.bib}
