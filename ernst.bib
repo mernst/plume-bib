@@ -5575,16 +5575,30 @@ http://pag.csail.mit.edu/javari/javarifier/ Javarifier implementation",
 }
 
 
-@TechReport{PotatinLZE2009,
-  author =   {Alex Potanin and Paley Li and Yoav Zibin and Michael D. Ernst},
-  title =    {{F}eatherweight {O}wnership and {I}mmutability {G}eneric
-                  {J}ava {(FOIGJ)}},
-  institution =  {School of Engineering and Computer Science, VUW},
-  year =     2009,
-  number =   {09-13},
-  note =
-                  {\url{http://ecs.victoria.ac.nz/Main/TechnicalReportSeries}}
+
+@TechReport{PotaninLZE2009,
+  author = 	 "Alex Potanin and Paley Li and Yoav Zibin and Michael D. Ernst",
+  title = 	 "Featherweight Ownership and Immutability Generic Java (FOIGJ)",
+  institution =  "School of Engineering and Computer Science, VUW",
+  year = 	 2009,
+  number = 	 "09-13",
+  address = 	 "Wellington, New Zealand",
+  month = 	 dec # "~14,",
+  abstract =
+   "This technical report presents the full set of formal rules and proofs
+   that accompany our paper called ``Ownership and Immutability in Generic
+   Java (OIGJ)''. Questions regarding this technical report should be
+   directed to Alex Potanin ({\tt alex@ecs.vuw.ac.nz}).",
+  omitfromcv = 1,
+  basefilename = "ownership-immutability-tr0913",
+  downloadsnonlocal = "http://ecs.victoria.ac.nz/twiki/pub/Main/TechnicalReportSeries/ECSTR09-13.pdf PDF",
+  category =  "Programming language design",
+  summary =
+   "This paper prestents a formalism and proofs of a type system (OIGJ)
+   that combines ownership with immutablity.  This report has since been
+   superseded.",
 }
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -5647,7 +5661,62 @@ http://pag.csail.mit.edu/javari/javarifier/ Javarifier implementation",
   address = 	 UWCSEaddr,
   monthANDDAY = 	 feb # "~6,",
   month = 	 feb # "~6,",
+  basefilename = "field-initialization-tr100201",
+  downloadsnonlocal = "ftp://ftp.cs.washington.edu/tr/2010/02/UW-CSE-10-02-01.PDF PDF",
+  EVENTUALLYsupersededby = "*",
+  category =  "Static analysis",
+  summary =
+   "This paper presents a flow-sensitive, exception-aware static analysis that 
+    infers what program variables might hold not-yet-fully-initialized objects.
+    Such an object might violate its object invariants, until its
+    initialization is complete.",
 }
+
+
+@TechReport{BrunHEN2010:TR,
+  author = 	 "Yuriy Brun and Reid Holmes and Michael D. Ernst and David Notkin",
+  title = 	 "Speculative identification of merge conflicts and non-conflicts",
+  institution =  UWCSE,
+  year = 	 2010,
+  number = 	 "UW-CSE-10-03-01",
+  address = 	 UWCSEaddr,
+  month = 	 mar,
+  abstract =
+   "Most software is built by multiple people, and a version control
+    system integrates evolving individual contributions into a whole.
+    Every engineer makes decisions about when to incorporate other team
+    members' changes, and when to share changes with other team members.
+    Sometimes, an engineer performs these tasks too early, and in other
+    cases performs them too late.  In this paper we address several
+    questions to determine if there are enough situations in practice where
+    an individual could benefit from explicit knowledge about the
+    relationship between their view of the software with respect to other
+    views of the software.  In particular, we speculate (in principle) at
+    each moment in time about whether unrecognized conflicts with
+    teammates exist and whether there are unnoticed opportunities for
+    straightforward merging among teammates.
+    \par
+    To determine whether there are sufficient potential opportunities ---
+    needed to justify the design, implementation, and evaluation of a
+    speculative tool --- we analyze existing source code repositories.
+    Across several open-source projects, we compute and report results
+    including how long conflicts persist before they are resolved (a mean
+    of 9.8 days) and how long opportunities for a non-conflicting textual
+    merge persist (a mean of 11 days).  In addition, for one of the
+    projects, we compare the persistence of textual conflicts
+    vs.\ compilation conflicts vs.\ testing conflicts.  Our data show that
+    there is ample opportunity to benefit from speculative version
+    control, justifying a tool design and implementation effort.",
+  basefilename = "speculative-merge-tr100301",
+  downloadsnonlocal = "ftp://ftp.cs.washington.edu/tr/2010/03/UW-CSE-10-03-01.PDF PDF",
+  category =  "Software engineering",
+  summary =
+   "Are software engineers sometimes unaware that their work conflicts with
+   that of their teammates?  Are they sometimes unaware that the work has
+   no conflicts?  We investigate how often a tool could provide this
+   information, which could help to avoid deviations or wasted work.",
+}
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -5793,9 +5862,6 @@ http://pag.csail.mit.edu/javari/javarifier/ Javarifier implementation",
     of the important benefits of binary-level and source-level analysis,
     and case studies of dynamic analyses built using the approach.",
 }
-
-
-
 
 
 
