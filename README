@@ -59,8 +59,8 @@ column, and end the entry with "}" or ")" on its own line.
 SETUP -- if you use a Makefile to process your paper
 -----
 
-Add the following rules to your Makefile, and add "bib-update" as a
-dependency for the rule that calls bibtex:
+1. Add "bib-update" as a dependency for the rule that calls bibtex.
+2. Add the following rules to your Makefile.
 
 export BIBINPUTS ?= .:bib
 
