@@ -353,6 +353,10 @@
 @string{CCS2007addr = "Alexandria, VA, USA" = ""}
 @string{CCS2007date = oct # "~29--" # nov # "~2," = oct # "/" # nov}
 
+@string{CHI2004 = "Proceedings of the SIGCHI Conference on Human Factors in Computing Systems" = "CHI"}
+@string{CHI2004addr = "Vienna, Austria" = ""}
+@string{CHI2004date = apr # "~27--29," = apr}
+
 @string{CMSR2004 = "Eighth Euromicro Working Conference on Software Maintenance and Reengineering" = "CMSR"}
 @string{CMSR2004addr = "Tampere, Finland" = ""}
 @string{CMSR2004date = mar # "~24--26," = mar}
@@ -2194,6 +2198,7 @@ Needed:
 %% A problem with this after-save-hook is that it blows away any existing
 %% *compilation* buffer.  Let's hope this isn't too big an annoyance.
 %%% Local Variables: 
+%%% auto-fill-function: nil
 %%% eval: (make-local-variable 'after-save-hook)
 %%% eval: (add-hook 'after-save-hook '(lambda () (save-window-excursion (let ((compilation-ask-about-save nil)) (compile "make")))))
 %%% End: 

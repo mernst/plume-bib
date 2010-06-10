@@ -297,6 +297,10 @@
 @string{CCS2007addr = ""}
 @string{CCS2007date = oct # "/" # nov}
 
+@string{CHI2004 = "CHI"}
+@string{CHI2004addr = ""}
+@string{CHI2004date = apr}
+
 @string{CMSR2004 = "CMSR"}
 @string{CMSR2004addr = ""}
 @string{CMSR2004date = mar}
@@ -1786,6 +1790,7 @@ Needed:
 %% A problem with this after-save-hook is that it blows away any existing
 %% *compilation* buffer.  Let's hope this isn't too big an annoyance.
 %%% Local Variables: 
+%%% auto-fill-function: nil
 %%% eval: (make-local-variable 'after-save-hook)
 %%% eval: (add-hook 'after-save-hook '(lambda () (save-window-excursion (let ((compilation-ask-about-save nil)) (compile "make")))))
 %%% End: 
