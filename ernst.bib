@@ -4028,7 +4028,7 @@ endgame.",
     "http://www.cs.washington.edu/homes/mernst/pubs/groupthink-2006-2up.ps 2-up PostScript;
      http://www.cs.washington.edu/homes/mernst/pubs/groupthink-specification-exercise.zip activity materials;
      http://www.cs.washington.edu/homes/mernst/software/UpopVote.zip optional voting software;
-     http://vital.cs.ohiou.edu/groupthink.html Second Life version",
+     http://vital.cs.ohiou.edu/vitalwiki/index.php/Aid_for_Groupthink Second Life version",
   category =     "Software engineering",
   summary =
    "The Groupthink specification exercise is a fun group activity that
@@ -4036,6 +4036,7 @@ endgame.",
     This paper describes both the goals of the activity (along with an
     assessment of it), and the mechanics of how to run it.",
 }
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -4120,7 +4121,7 @@ endgame.",
     checking or undirected random generation.",
   basefilename = "feedback-testgen-icse2007",
   downloads = 
-   "http://people.csail.mit.edu/cpacheco/randoop/ Randoop implementation",
+   "http://code.google.com/p/randoop/ Randoop implementation",
   downloadsnonlocal =
     "http://www.cs.washington.edu/homes/mernst/pubs/feedback-testgen-icse2007.pdf PDF",
   category =  "Testing",
@@ -4492,7 +4493,7 @@ endgame.",
     configuration parameters that affect Randoop's behavior and output.",
   basefilename = "pacheco-randoop-oopsla2007",
   downloads = 
-   "http://people.csail.mit.edu/cpacheco/randoop/ Randoop implementation",
+   "http://code.google.com/p/randoop/ Randoop implementation",
   downloadsnonlocal = 
    "http://www.cs.washington.edu/homes/mernst/pubs/pacheco-randoop-oopsla2007.pdf PDF;
     http://www.cs.washington.edu/homes/mernst/pubs/pacheco-randoop-oopsla2007.ps PostScript",
@@ -5594,6 +5595,7 @@ http://pag.csail.mit.edu/javari/javarifier/ Javarifier implementation",
   basefilename = "ownership-immutability-tr0913",
   downloadsnonlocal = "http://ecs.victoria.ac.nz/twiki/pub/Main/TechnicalReportSeries/ECSTR09-13.pdf PDF",
   category =  "Programming language design",
+  supersededby = "Zibin2010",
   summary =
    "This paper prestents a formalism and proofs of a type system (OIGJ)
    that combines ownership with immutablity.  This report has since been
@@ -5718,6 +5720,90 @@ http://pag.csail.mit.edu/javari/javarifier/ Javarifier implementation",
    information, which could help to avoid deviations or wasted work.",
 }
 
+
+@InProceedings{BuHBE2010,
+  author = 	 "Yingyi Bu and Bill Howe and Magdalena Balazinska and Michael D. Ernst",
+  title = 	 "{HaLoop}: Efficient Iterative Data Processing on Large Clusters",
+  booktitle = VLDB2010,
+  NEEDpages = 	 "*",
+  year = 	 2010,
+  address = 	 VLDB2010addr,
+  month = 	 VLDB2010date,
+  abstract =
+   "The growing demand for large-scale data mining and data
+    analysis applications has led both industry and academia to design
+    new types of highly scalable data-intensive computing
+    platforms. MapReduce and Dryad are two popular platforms in which the
+    dataflow takes the form of a directed acyclic graph of operators.
+    However, these new platforms do not have built-in support for
+    iterative programs, which arise naturally in many applications
+    including data mining, web ranking, graph processing, model fitting,
+    and so on.  In this paper, we present HaLoop, a modified version of
+    the Hadoop MapReduce framework, designed to serve these applications.
+    HaLoop not only extends MapReduce with programming support for
+    iterative applications, but also dramatically improves their
+    efficiency by making the task scheduler loop-aware and by adding
+    various caching mechanisms.  We evaluate HaLoop on real queries and
+    real datasets and find that, on average, HaLoop reduces query
+    runtimes by 1.85 compared with Hadoop, and shuffles only 4\%
+    of the data between mappers and reducers compared with Hadoop.",
+  basefilename = "haloop-vldb2010",
+  TODOdownloads = "*",
+  TODOdownloadsnonlocal = "*",
+  TODOsupersededby = "*",
+  category =  "Databases",
+  summary =
+   "An iterative job may repeat similar work on each iteration.  This paper
+    shows how to avoid repeating work in iterative MapReduce jobs,
+    substantially improving performance.",
+}
+
+
+@InProceedings{ZibinPLAE2010,
+  author = 	 "Yoav Zibin and Alex Potanin and Paley Li and Mahmood Ali and Michael D. Ernst",
+  title = 	 "Ownership and immutability in generic {Java}",
+  booktitle = OOPSLA2010,
+  NEEDpages = 	 "*",
+  year = 	 2010,
+  address = 	 OOPSLA2010addr,
+  month = 	 OOPSLA2010date,
+  abstract =
+   "The Java language lacks the important notions of \emph{ownership} (an
+    object owns its representation to prevent unwanted aliasing) and
+    \emph{immutability} (the division into mutable, immutable, and readonly
+    data and references).  Programmers are prone to design errors such as
+    representation exposure or violation of immutability contracts.  This paper
+    presents \emph{Ownership Immutability Generic Java} (OIGJ), a
+    backward-compatible purely-static language extension supporting ownership
+    and immutability.  We formally defined a core calculus for OIGJ, based on
+    Featherweight Java, and proved it sound.  We also implemented OIGJ and
+    performed case studies on 33,000 lines of code.
+    \par
+    Creation of immutable cyclic structures requires a ``\emph{cooking phase}''
+    in which the structure is mutated but the outside world cannot observe this
+    mutation.  OIGJ uses \emph{ownership} information to facilitate creation of
+    \emph{immutable} cyclic structures, by safely prolonging the cooking phase
+    even after the constructor finishes.
+    \par
+    OIGJ is easy for a programmer to use, and it is easy to implement
+    (flow-insensitive, using only 15 rules).  Yet, OIGJ is more expressive than
+    previous ownership languages, in the sense that it can type-check more good
+    code.  OIGJ can express the factory and visitor patterns, and OIGJ can
+    type-check Sun's \texttt{java.util} collections (except for the
+    \texttt{clone} method) without refactoring and with only a small number of
+    annotations.  Previous work required major refactoring of existing code in
+    order to fit its ownership restrictions.  Forcing refactoring of
+    well-designed code is undesirable because it costs programmer effort,
+    degrades the design, and hinders adoption in the mainstream community.",
+  basefilename = "oigj-oopsla2010",
+  downloads = 
+   "http://types.cs.washington.edu/checker-framework/#oigj-checker implementation",
+  category =  "Programming language design",
+  summary =
+   "This paper shows how to combine ownership and immutability, producing a
+   result that is more expressive and safe than previous attempts.  The paper
+   includes both a proof of soundness and an implementation with case studies.",
+}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -5862,6 +5948,11 @@ http://pag.csail.mit.edu/javari/javarifier/ Javarifier implementation",
     of the important benefits of binary-level and source-level analysis,
     and case studies of dynamic analyses built using the approach.",
 }
+
+
+
+
+
 
 
 
