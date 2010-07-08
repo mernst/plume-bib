@@ -1129,6 +1129,41 @@
 }
 
 
+@InProceedings{ShachamVY2009,
+  author = 	 "Shacham, Ohad and Vechev, Martin and Yahav, Eran",
+  title = 	 "Chameleon: adaptive selection of collections",
+  booktitle = PLDI2009,
+  pages = 	 "408--418",
+  year = 	 2009,
+  address = 	 PLDI2009addr,
+  month = 	 PLDI2009date,
+  abstract =
+   "Languages such as Java and C#, as well as scripting languages like Python,
+    and Ruby, make extensive use of Collection classes.
+    \par
+    A collection implementation represents a fixed choice in the dimensions of
+    operation time, space utilization, and synchronization. Using the
+    collection in a manner not consistent with this fixed choice can cause
+    significant performance degradation.
+    \par
+    In this paper, we present Chameleon, a low-overhead automatic tool that
+    assists the programmer in choosing the appropriate collection
+    implementation for her application. During program execution, Chameleon
+    computes elaborate trace and heap-based metrics on collection
+    behavior. These metrics are consumed on-thefly by a rules engine which
+    outputs a list of suggested collection adaptation strategies. The tool can
+    apply these corrective strategies automatically or present them to the
+    programmer.
+    \par
+    We have implemented Chameleon on top of a IBM's J9 production JVM, and
+    evaluated it over a small set of benchmarks. We show that for some
+    applications, using Chameleon leads to a significant improvement of the
+    memory footprint of the application.",
+}
+
+
+
+
 % LocalWords: InCollection KaehlerK Kaehler Krasner Booktitle Parberry PocketPC
 % LocalWords: Smalltalk SIGACT LaTeX'ed ftp EATCS apr BlumFPRT Blum os Trompler
 % LocalWords: Rivest Tarjan CormenLR Cormen Leiserson CLR AjtaiKS Koml hlh Minh

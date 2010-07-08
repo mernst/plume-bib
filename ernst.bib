@@ -5721,6 +5721,43 @@ http://pag.csail.mit.edu/javari/javarifier/ Javarifier implementation",
 }
 
 
+@InProceedings{Ernst2010:TAP,
+  author = 	 "Michael D. Ernst",
+  title = 	 "How tests and proofs impede one another: The need for always-on static and dynamic feedback",
+  booktitle = TAP2010,
+  pages = 	 "1--2",
+  year = 	 2010,
+  address = 	 TAP2010addr,
+  month = 	 TAP2010date,
+  abstract =
+   "Dynamic and static feedback provide complementary benefits, and neither one
+    dominates the other.  Sometimes, sound global static checking is most
+    useful.  At other times, running tests is most useful.  Unfortunately,
+    current languages impose too rigid a model of the development process:
+    they favor either static or dynamic tools, which prevents the programmer
+    from freely using the other variety.  I propose a new approach, in which
+    the developer always has access to immediate execution feedback, and always
+    has access to sound static feedback.
+    \par
+    The aim is to permit developers to work the way they find most natural and
+    effective, which will improve reliability and reduce cost.  Developers will
+    create software that is more reliable than that created in an environment
+    that favors dynamic analysis.  Developers will work faster than they can in
+    an environment that favors static analysis.",
+  basefilename = "staticdynamic-tap2010",
+  downloads =
+   "http://malaga2010.lcc.uma.es/tv/tools5.html Video",
+  downloadsnonlocal =
+   "http://www.cs.washington.edu/homes/mernst/pubs/staticdynamic-tap2010-slides.pdf Slides (PDF);
+    http://www.cs.washington.edu/homes/mernst/pubs/staticdynamic-tap2010-slides.pptx Slides (Powerpoint)",
+  category =  "Dynamic analysis",
+  summary =
+   "This talk proposes a way to obtain the rapid development of a
+   dynamically-typed language, and the reliability and comprehensibility of
+   a statically-typed language, via two views of the program during development.",
+}
+
+
 @InProceedings{BuHBE2010,
   author = 	 "Yingyi Bu and Bill Howe and Magdalena Balazinska and Michael D. Ernst",
   title = 	 "{HaLoop}: Efficient Iterative Data Processing on Large Clusters",
@@ -5795,9 +5832,10 @@ http://pag.csail.mit.edu/javari/javarifier/ Javarifier implementation",
     order to fit its ownership restrictions.  Forcing refactoring of
     well-designed code is undesirable because it costs programmer effort,
     degrades the design, and hinders adoption in the mainstream community.",
-  basefilename = "oigj-oopsla2010",
+  basefilename = "ownership-immutability-oopsla2010",
   downloads = 
-   "http://types.cs.washington.edu/checker-framework/#oigj-checker implementation",
+   "http://www.cs.washington.edu/homes/mernst/pubs/ownership-immutability-oopsla2010-draft.pdf DRAFT (comments welcome);
+    http://types.cs.washington.edu/checker-framework/#oigj-checker implementation",
   category =  "Programming language design",
   summary =
    "This paper shows how to combine ownership and immutability, producing a
