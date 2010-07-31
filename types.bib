@@ -2090,14 +2090,31 @@
 
 @InProceedings{LeinoMW2008,
   author = 	 "Leino, K. Rustan M. and M{\"u}ller, Peter and Wallenburg, Angela",
-  authorASCII =	 "Leino, K. Rustan M. and M{\"u}ller, Peter and Wallenburg, Angela",
+  authorASCII =	 "Leino, K. Rustan M. and Muller, Peter and Wallenburg, Angela",
   title = 	 "Flexible immutability with frozen objects",
   booktitle = VSTTE2008,
   pages = 	 "192--208",
   year = 	 2008,
   address = 	 VSTTE2008addr,
   month = 	 VSTTE2008date,
+  abstract =
+   "Object immutability is a familiar concept that allows safe sharing of
+    objects. Existing language support for immutability is based on immutable
+    classes. However, class-based approaches are restrictive because
+    programmers can neither make instances of arbitrary classes immutable, nor
+    can they control when an instance becomes immutable. These restrictions
+    prevent many interesting applications where objects of mutable classes go
+    through a number of modifications before they become immutable.
+    \par
+    This paper presents a flexible technique to enforce the immutability of
+    individual objects by transferring their ownership to a special freezer
+    object, which prevents further modification. The paper demonstrates how
+    immutability facilitates program verification by extending the Boogie
+    methodology for object invariants to immutable objects. The technique is
+    based on Spec#’s dynamic ownership, but the concepts also apply to other
+    ownership systems that support transfer."
 }
+
 
 
 @MastersThesis{Nageli2006,

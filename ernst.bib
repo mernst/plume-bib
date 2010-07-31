@@ -5745,11 +5745,12 @@ http://pag.csail.mit.edu/javari/javarifier/ Javarifier implementation",
     that favors dynamic analysis.  Developers will work faster than they can in
     an environment that favors static analysis.",
   basefilename = "staticdynamic-tap2010",
-  downloads =
-   "http://malaga2010.lcc.uma.es/tv/tools5.html Video",
+  downloads = "",
   downloadsnonlocal =
-   "http://www.cs.washington.edu/homes/mernst/pubs/staticdynamic-tap2010-slides.pdf Slides (PDF);
-    http://www.cs.washington.edu/homes/mernst/pubs/staticdynamic-tap2010-slides.pptx Slides (Powerpoint)",
+   "http://www.cs.washington.edu/homes/mernst/pubs/staticdynamic-tap2010.pdf extended abstract (PDF);
+    http://www.cs.washington.edu/homes/mernst/pubs/staticdynamic-tap2010-slides.pdf Slides (PDF);
+    http://www.cs.washington.edu/homes/mernst/pubs/staticdynamic-tap2010-slides.pptx Slides (Powerpoint);
+   http://malaga2010.lcc.uma.es/tv/tools5.html Video",
   category =  "Dynamic analysis",
   summary =
    "This talk proposes a way to obtain the rapid development of a
@@ -5767,27 +5768,24 @@ http://pag.csail.mit.edu/javari/javarifier/ Javarifier implementation",
   address = 	 VLDB2010addr,
   month = 	 VLDB2010date,
   abstract =
-   "The growing demand for large-scale data mining and data
-    analysis applications has led both industry and academia to design
-    new types of highly scalable data-intensive computing
-    platforms. MapReduce and Dryad are two popular platforms in which the
-    dataflow takes the form of a directed acyclic graph of operators.
-    However, these new platforms do not have built-in support for
-    iterative programs, which arise naturally in many applications
-    including data mining, web ranking, graph processing, model fitting,
-    and so on.  In this paper, we present HaLoop, a modified version of
-    the Hadoop MapReduce framework, designed to serve these applications.
-    HaLoop not only extends MapReduce with programming support for
-    iterative applications, but also dramatically improves their
-    efficiency by making the task scheduler loop-aware and by adding
-    various caching mechanisms.  We evaluate HaLoop on real queries and
-    real datasets and find that, on average, HaLoop reduces query
-    runtimes by 1.85 compared with Hadoop, and shuffles only 4\%
-    of the data between mappers and reducers compared with Hadoop.",
+   "The growing demand for large-scale data mining and data analysis
+    applications has led both industry and academia to design new types of
+    highly scalable data-intensive computing platforms. MapReduce and Dryad
+    are two popular platforms in which the dataflow takes the form of a
+    directed acyclic graph of operators.  These platforms lack built-in
+    support for iterative programs, which arise naturally in many applications
+    including data mining, web ranking, graph analysis, model fitting, and so
+    on.  This paper presents HaLoop, a modified version of the Hadoop
+    MapReduce framework that is designed to serve these applications.  HaLoop
+    not only extends MapReduce with programming support for iterative
+    applications, it also dramatically improves their efficiency by making the
+    task scheduler loop-aware and by adding various caching mechanisms.  We
+    evaluated HaLoop on real queries and real datasets.  Compared with Hadoop,
+    on average, HaLoop reduces query runtimes by 1.85, and shuffles only 4\%
+    of the data between mappers and reducers.",
   basefilename = "haloop-vldb2010",
-  TODOdownloads = "*",
-  TODOdownloadsnonlocal = "*",
-  TODOsupersededby = "*",
+  downloadsnonlocal =
+   "http://www.cs.washington.edu/homes/mernst/pubs/haloop-vldb2010.pdf PDF",
   category =  "Databases",
   summary =
    "An iterative job may repeat similar work on each iteration.  This paper
@@ -5835,6 +5833,7 @@ http://pag.csail.mit.edu/javari/javarifier/ Javarifier implementation",
   basefilename = "ownership-immutability-oopsla2010",
   downloads = 
    "http://www.cs.washington.edu/homes/mernst/pubs/ownership-immutability-oopsla2010-draft.pdf DRAFT (comments welcome);
+    http://www.cs.washington.edu/homes/mernst/pubs/ownership-immutability-oopsla2010-draft.pdf TR with proofs;
     http://types.cs.washington.edu/checker-framework/#oigj-checker implementation",
   category =  "Programming language design",
   summary =
@@ -5906,7 +5905,6 @@ http://pag.csail.mit.edu/javari/javarifier/ Javarifier implementation",
    "Correct functioning of a component can depend on the component's methods
     being called in the correct order.  This paper simplifies and improves on
     previous techniques for determining the legal call sequences.",
-  omitfromcv = 1,
   usesDaikon = 1,
 }
 
@@ -5990,6 +5988,59 @@ http://pag.csail.mit.edu/javari/javarifier/ Javarifier implementation",
 
 
 
+
+
+
+
+
+
+@Misc{BeschastnikhCEB2010,
+  author = 	 "Ivan Beschastnikh and Slava Chernyak and Michael D. Ernst and Yuriy Brun",
+  title = 	 "Synoptic: Summarizing system logs with refinement",
+  OPTcrossref =  "",
+  OPTkey = 	 "",
+  OPTbooktitle = "",
+  OPTpages = 	 "",
+  OPTyear = 	 "",
+  OPTeditor = 	 "",
+  OPTvolume = 	 "",
+  OPTnumber = 	 "",
+  OPTseries = 	 "",
+  OPTaddress = 	 "",
+  OPTmonth = 	 "",
+  OPTorganization = "",
+  OPTpublisher = "",
+  OPTnote = 	 "",
+  OPTannote = 	 "",
+  abstract =
+   "Distributed systems are often difficult to debug and understand.  A
+    typical way of gaining insight into system behavior is by inspecting its
+    execution logs.  Manual inspection of logs is arduous, and few tools can
+    analyze an arbitrary system log out of the box. To support this task we
+    developed \emph{Synoptic}.  Synoptic outputs a concise graph
+    representation of logged events that captures important temporal event
+    invariants mined from the log.  Synoptic makes no assumptions about the
+    system, and requires no system modifications.
+    \par
+    In contrast to prior approaches, Synoptic uses refinement instead of
+    coarsening to explore the space of representations. Additionally, it
+    infers temporal event invariants to capture distributed system semantics
+    that are often present in system logs. These invariants drive the
+    coarsening process, and are preserved in the final representation.
+    \par
+    In experiments on synthetic and real distributed system logs, Synoptic
+    had reasonable overhead for an offline analysis tool, and it augmented a
+    distributed system designer's understanding of system behavior.",
+  OPTusesDaikon = "",
+  OPTusesDaikonAsTestSubject = "",
+  OPTomitfromcv = "",
+  OPTbasefilename = "",
+  OPTdownloads = "",
+  OPTdownloadsnonlocal = "",
+  OPTsupersededby = "",
+  OPTcategory =  "",
+  OPTsummary = 	 "",
+}
 
 
 
