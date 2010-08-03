@@ -276,6 +276,31 @@
 }
 
 
+@InProceedings{HaackP2009,
+  author = 	 "Haack, Christian and Poll, Erik",
+  title = 	 "Type-Based Object Immutability with Flexible Initialization",
+  booktitle = ECOOP2009,
+  pages = 	 "520-545",
+  year = 	 2009,
+  address = 	 ECOOP2009addr,
+  month = 	 ECOOP2009date,
+  abstract =
+   "We present a type system for checking object immutability, read-only
+    references, and class immutability in an open or closed world. To allow
+    object initialization outside object constructors (which is often needed in
+    practice), immutable objects are initialized in lexically scoped
+    regions. The system is simple and direct; its only type qualifiers specify
+    immutability properties. No auxiliary annotations, e.g., ownership types,
+    are needed, yet good support for deep immutability is provided. To express
+    object confinement, as required for class immutability in an open world, we
+    use qualifier polymorphism. The system has two versions: one with explicit
+    specification commands that delimit the object initialization phase, and
+    one where such commands are implicit and inferred. In the latter version,
+    all annotations are compatible with Java's extended annotation syntax, as
+    proposed in JSR 308.",
+}
+
+
 %%%
 %%% Interning (aka canonicalization, hash-consing)
 %%%

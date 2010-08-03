@@ -4991,7 +4991,7 @@ http://pag.csail.mit.edu/javari/javarifier/ Javarifier implementation",
     applications.",
   basefilename = "bugs-webapps-issta2008",
   NOdownloads = "IBM proprietary tool",
-  TODOsupersededby = "ArtziKDTDPE2010",
+  supersededby = "ArtziKDTDPE2010",
   downloadsnonlocal =
     "http://www.cs.washington.edu/homes/mernst/pubs/bugs-webapps-issta2008.pdf PDF;
      http://www.cs.washington.edu/homes/mernst/pubs/bugs-webapps-issta2008.ps PostScript",
@@ -5295,7 +5295,7 @@ http://pag.csail.mit.edu/javari/javarifier/ Javarifier implementation",
   basefilename = "bugs-webapps-tr2009",
   downloadsnonlocal =
     "http://www.cs.washington.edu/homes/mernst/pubs/bugs-webapps-tr2009.pdf PDF",
-  TOBEsupersededby = "ArtziKDTDPE2010",
+  supersededby = "ArtziKDTDPE2010",
   category =  "Testing",
   summary =
    "This paper extends dynamic test generation, based on interleaved
@@ -5609,52 +5609,6 @@ http://pag.csail.mit.edu/javari/javarifier/ Javarifier implementation",
 %%%
 
 
-@Article{ArtziKDTDPE2010,
-  author = 	 "Shay Artzi and Adam Kie{\.z}un and Julian Dolby and Frank Tip and Danny Dig and Amit Paradkar and Michael D. Ernst",
-  authorASCII = 	 "Shay Artzi and Adam Kiezun and Julian Dolby and Frank Tip and Danny Dig and Amit Paradkar and Michael D. Ernst",
-  title = 	 "Finding bugs in dynamic web applications",
-  journal = 	 TSE,
-  year = 	 2010,
-  OPTkey = 	 "",
-  OPTvolume = 	 "",
-  OPTnumber = 	 "",
-  OPTpages = 	 "",
-  OPTmonth = 	 "",
-  OPTnote = 	 "",
-  OPTannote = 	 "",
-  abstract =
-   "Web script crashes and malformed dynamically-generated web pages are common
-    errors, and they seriously impact the usability of web applications.
-    Current tools for web-page validation cannot handle the dynamically
-    generated pages that are ubiquitous on today's Internet.  We present a
-    dynamic test generation technique for the domain of dynamic web
-    applications.  The technique utilizes both combined concrete and symbolic
-    (concolic) execution and explicit-state model checking.  The technique
-    generates tests automatically, runs the tests capturing logical constraints
-    on inputs, and minimizes the conditions on the inputs to failing tests, so
-    that the resulting bug reports are small and useful in finding and
-    fixing the underlying faults.
-    \par
-    Our tool Apollo implements the technique for the PHP programming language.
-    Apollo generates test inputs for a web application, monitors the
-    application for crashes, and validates that the output conforms to the HTML
-    specification.  This paper presents Apollo's algorithms and implementation,
-    and an experimental evaluation that revealed 302 faults in 6 PHP web
-    applications.",
-  omitfromcv = "1",
-  OPTbasefilename = "",
-  OPTdownloads = "",
-  OPTdownloadsnonlocal = "",
-  OPTsupersededby = "",
-  category =  "Testing",
-  summary =
-   "This paper extends dynamic test generation, based on combined
-    concrete and symbolic execution, to the new domain of web applications,
-    and finds 302 bugs in 6 PHP web applications.",
-}
-
-
-
 @TechReport{SpotoE2010:TR,
   author = 	 "Fausto Spoto and Michael D. Ernst",
   title = 	 "Inference of field initialization",
@@ -5756,6 +5710,46 @@ http://pag.csail.mit.edu/javari/javarifier/ Javarifier implementation",
    "This talk proposes a way to obtain the rapid development of a
    dynamically-typed language, and the reliability and comprehensibility of
    a statically-typed language, via two views of the program during development.",
+}
+
+
+@Article{ArtziKDTDPE2010,
+  author = 	 "Shay Artzi and Adam Kie{\.z}un and Julian Dolby and Frank Tip and Danny Dig and Amit Paradkar and Michael D. Ernst",
+  authorASCII = 	 "Shay Artzi and Adam Kiezun and Julian Dolby and Frank Tip and Danny Dig and Amit Paradkar and Michael D. Ernst",
+  title = 	 "Finding bugs in web applications using dynamic test generation and explicit state model checking",
+  journal = 	 TSE,
+  year = 	 2010,
+  volume = 	 36,
+  number = 	 4,
+  pages = 	 "474--494",
+  month = 	 jul # "/" # aug,
+  abstract =
+   "Web script crashes and malformed dynamically-generated web pages are common
+    errors, and they seriously impact the usability of web applications.
+    Current tools for web-page validation cannot handle the dynamically
+    generated pages that are ubiquitous on today's Internet.  We present a
+    dynamic test generation technique for the domain of dynamic web
+    applications.  The technique utilizes both combined concrete and symbolic
+    execution and explicit-state model checking.  The technique generates tests
+    automatically, runs the tests capturing logical constraints on inputs, and
+    minimizes the conditions on the inputs to failing tests, so that the
+    resulting bug reports are small and useful in finding and fixing the
+    underlying faults.
+    \par
+    Our tool Apollo implements the technique for the PHP programming language.
+    Apollo generates test inputs for a web application, monitors the
+    application for crashes, and validates that the output conforms to the HTML
+    specification.  This paper presents Apollo's algorithms and implementation,
+    and an experimental evaluation that revealed 673 faults in 6 PHP web
+    applications.",
+  basefilename = "bugs-webapps-tse2010",
+  downloadsnonlocal =
+    "http://www.cs.washington.edu/homes/mernst/pubs/bugs-webapps-tse2010.pdf PDF",
+  category =  "Testing",
+  summary =
+   "This paper extends dynamic test generation, based on combined
+    concrete and symbolic execution, to the new domain of web applications,
+    and finds 673 bugs in 6 PHP web applications.",
 }
 
 
@@ -6001,7 +5995,7 @@ http://pag.csail.mit.edu/javari/javarifier/ Javarifier implementation",
   OPTkey = 	 "",
   OPTbooktitle = "",
   OPTpages = 	 "",
-  OPTyear = 	 "",
+  year = 	 2010,
   OPTeditor = 	 "",
   OPTvolume = 	 "",
   OPTnumber = 	 "",
@@ -6033,7 +6027,7 @@ http://pag.csail.mit.edu/javari/javarifier/ Javarifier implementation",
     distributed system designer's understanding of system behavior.",
   OPTusesDaikon = "",
   OPTusesDaikonAsTestSubject = "",
-  OPTomitfromcv = "",
+  omitfromcv = "1",
   OPTbasefilename = "",
   OPTdownloads = "",
   OPTdownloadsnonlocal = "",
@@ -6041,7 +6035,6 @@ http://pag.csail.mit.edu/javari/javarifier/ Javarifier implementation",
   OPTcategory =  "",
   OPTsummary = 	 "",
 }
-
 
 
 
