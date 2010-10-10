@@ -2712,7 +2712,7 @@
 
 
 
-@Proceedings{STOP2009,
+@Proceedings{STOP2009proceedings,
   key =          "STOP2009",
   title = 	 STOP2009,
   year = 	 2009,
@@ -2749,8 +2749,6 @@
  issn = {1477-8424},
  pages = {48--62},
  doi = {http://dx.doi.org/10.1016/j.cl.2008.06.003},
- publisher = {Elsevier Science Publishers B. V.},
- address = {Amsterdam, The Netherlands, The Netherlands},
  }
 
 
@@ -2776,18 +2774,16 @@
 @InProceedings{WrightAndr1994a,
   author =       "Andrew K. Wright and Robert Cartwright",
   booktitle =    "Conference on Lisp and Functional programming",
-  title =        "{A} Practical Soft Type System for Scheme",
+  title =        "A Practical Soft Type System for {Scheme}",
   year =         "1994",
   url =          "ftp://cs.rice.edu/public/languages/tr93-218.dvi.Z",
-  scope =        "imptype",
 }
 
 
 @Article{Wright:1997:PST,
   author =       "Andrew K. Wright and Robert Cartwright",
   title =        "A Practical Soft Type System for {Scheme}",
-  journal =      "ACM Transactions on Programming Languages and
-                 Systems",
+  journal =      TOPLAS,
   volume =       19,
   number =       1,
   pages =        "87--152",
@@ -2899,11 +2895,11 @@
   author = 	 "Nystr{\"o}m, Sven-Olof",
   authorASCII =	 "Nystrom, Sven-Olof",
   title = 	 "A soft-typing system for {Erlang}",
-  booktitle = "ERLANG '03: Proceedings of the 2003 ACM SIGPLAN workshop on Erlang",
+  booktitle =    Erlang2003,
   pages = 	 "56--71",
   year = 	 2003,
-  address = 	 "Uppsala, Sweden",
-  month = 	 aug # "~29,",
+  address = 	 Erlang2003addr,
+  month = 	 Erlang2003date,
   abstract =
    "This paper presents a soft-typing system for the programming language
     Erlang. The system is based on two concepts; a (forward) data flow analysis
@@ -2920,40 +2916,28 @@
 @InProceedings{Aycock2000,
   author = 	 "John Aycock",
   title = 	 "Aggressive type inference",
-  OPTcrossref =  "",
-  OPTkey = 	 "",
   booktitle =    "International Python Conference",
-  OPTpages = 	 "",
-  year = 	 "2000",
-  OPTeditor = 	 "",
-  OPTvolume = 	 "",
-  OPTnumber = 	 "",
-  OPTseries = 	 "",
-  OPTaddress = 	 "",
-  OPTmonth = 	 "",
+  NEEDpages = 	 "*",
+  year = 	 2000,
+  NEEDaddress = 	 "*",
+  NEEDmonth = 	 "*",
 }
 
 
 @InProceedings{HolknerH2009,
   author = 	 "Alex Holkner and James Harland",
-  title = 	 "Evaluating the dynamic behavior of Python applications",
-  OPTcrossref =  "",
-  OPTkey = 	 "",
-  booktitle =    "Australasian Computer Science Conference (ACSC)",
-  OPTpages = 	 "",
-  year = 	 "2009",
-  OPTeditor = 	 "",
-  OPTvolume = 	 "",
-  OPTnumber = 	 "",
-  OPTseries = 	 "",
-  OPTaddress = 	 "",
-  OPTmonth = 	 "",
+  title = 	 "Evaluating the dynamic behavior of {Python} applications",
+  booktitle =    ACSC2009,
+  NEEDpages = 	 "*",
+  year = 	 2009,
+  NEEDaddress = 	 "*",
+  NEEDmonth = 	 "*",
 }
 
 
 @MastersThesis{Salib2004,
   author = 	 "Michael Salib",
-  title = 	 "Starkiller: A static type inferencer and compiler for Python",
+  title = 	 "Starkiller: A static type inferencer and compiler for {Python}",
   school = 	 MITEECS,
   year = 	 2004,
   address = 	 MITAddr,
@@ -3386,11 +3370,11 @@
 @InProceedings{AndersonD2003,
   author = 	 "Christopher Anderson and Sophia Drossopoulou",
   title = 	 "{BabyJ}: From object based to class based programming via types ",
-  booktitle = "WOOD2003, Workshop on Object Oriented Developments",
+  booktitle =    WOOD2003,
   pages = 	 "53--81",
   year = 	 2003,
-  address = 	 "Warsaw, Poland",
-  month = 	 oct,
+  address = 	 WOOD2003addr,
+  month = 	 WOOD2003date,
   abstract =
    "Object oriented programming can be classified into the object based, and
     the class based paradigm. Object based languages typically are weakly typed
@@ -3582,7 +3566,7 @@
 @InProceedings{HermanTF2007,
   author = 	 "David Herman and Aaron Tomb and Cormac Flanagan",
   title = 	 "Space-efficient gradual typing",
-  booktitle = "Trends in Functional Programming (TFP)",
+  booktitle =    TFP2007,
   NEEDpages = 	 "*",
   year = 	 2007,
   NEEDaddress = 	 "*",
@@ -4206,8 +4190,8 @@
 
 
 
-@InProceedings{Hannenburg2009:PLATEAU,
-  author = 	 "Stefan Hannenberg",
+@InProceedings{Hanenburg2009:PLATEAU,
+  author = 	 "Stefan Hanenberg",
   title = 	 "What is the impact of static type systems on programming time?  Preliminary empirical results",
   booktitle = "International Workshop on Evaluation and Usability of Programming Languages and Tools (PLATEAU) at Onward 2009",
   year = 	 2009,
@@ -4217,25 +4201,37 @@
 
 
 
-@InProceedings{Hannenburg2010:ECOOP,
-  author = 	 "Stefan Hannenberg",
+@InProceedings{Hanenburg2010:ECOOP,
+  author = 	 "Stefan Hanenberg",
   title = 	 "Doubts about the Positive Impact of Static Type Systems on Programming Tasks in Single Developer Projects - An Empirical Study",
   booktitle = ECOOP2010,
   NEEDpages = 	 "*",
   year = 	 2010,
   address = 	 ECOOP2010addr,
   month = 	 ECOOP2010date,
-  supersededby = "Hannenberg2010:OOPSLA"
+  supersededby = "Hanenberg2010:OOPSLA"
 }
 
-@InProceedings{Hannenberg2010:OOPSLA,
-  author = 	 "Stefon Hannenberg",
-  title = 	 "???",
-  OPTcrossref =  "",
-  OPTkey = 	 "",
+@InProceedings{Hanenberg2010:OOPSLA,
+  author = 	 "Stefon Hanenberg",
+  title = 	 "An experiment about static and dynamic type systems:
+   Doubts about the positive impact of static type systems on development time",
   booktitle = OOPSLA2010,
   NEEDpages = 	 "*",
   year = 	 2010,
+  address = 	 OOPSLA2010addr,
+  month = 	 OOPSLA2010date,
+}
+
+
+@InProceedings{Hanenberg2010:onward,
+  author = 	 "Stefan Hanenberg",
+  title = 	 "Faith, Hope, and Love:  A criticism of software science's carelessness with regard to the human factor",
+  OPTcrossref =  "",
+  OPTkey = 	 "",
+  booktitle =    Onward2010,
+  NEEDpages = 	 "*",
+  OPTyear = 	 "2010",
   OPTeditor = 	 "",
   OPTvolume = 	 "",
   OPTnumber = 	 "",
@@ -4257,8 +4253,6 @@
   OPTcategory =  "",
   OPTsummary = 	 "",
 }
-
-
 
 % ACM cite key is 968162
 @InProceedings{TorgersenPHEvdABG2004,
@@ -4853,7 +4847,7 @@
 % LocalWords:  Lanet Requet FMCO javac MarkstrumMEM Esquivel CSD JavaChecker VM
 % LocalWords:  TermWare monomorphic Krishnamurthi Birka ChongM Chong CSF AOP Tk
 % LocalWords:  MyersSZ Declassificaiton SabelfeldS EichbergM pointcut FASE HOL
-% LocalWords:  middleware HartmannAvRF ENTCS SafeTSA GrantMPCE coden Hindley
+% LocalWords:  middleware HartmannAvRF ENTCS SafeTSA GrantMPCE coden Hindley UU
 % LocalWords:  Fagan WrightAndr Henglein Tobin Hochstadt typecase discriminator
 % LocalWords:  PLT Redex BRL FME Araki Gnesi Mandrioli PSurl gpt csfw D'Argenio
 % LocalWords:  Rezk cardis Applets gmg sefm acc Julien FTfJP BBCGHLPR pdfurl
@@ -4875,4 +4869,7 @@
 % LocalWords:  Strongtalk Bracha's Soler Baltasar García Schofield Gijón Ortin
 % LocalWords:  OrtinZPSG Zapico Shofield IET StaDyn invokedynamic CodeDom DLR
 % LocalWords:  namespace José Redondo ICSOFT Ousterhout Tcl Haldiman Niklaus
-% LocalWords:  Denker Nierstrasz
+% LocalWords:  Denker Nierstrasz HaackP OLDdownloads opensource TypePlug CCured
+% LocalWords:  CartwrightF uncurried AnconaLZ Lagorio ICTCS NEEDaddress Hage
+% LocalWords:  KiezunETF CamphuijsenHH Camphuijsen Jurriaan Holdermans urlpdf
+% LocalWords:  OMITaddress LagorioZ Nystr Olof Erlang Aycock

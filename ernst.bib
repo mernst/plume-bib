@@ -764,7 +764,7 @@ endgame.",
     workshop will include a mix of presentation and discussion periods to
     facilitate interaction.",
   basefilename = "ir95-proceedings",
-  downloads =    "http://www.cs.washington.edu/homes/mernst/ir95/ workshop website;
+  downloads =    "http://www.cs.washington.edu/homes/mernst/meetings/ir95/ workshop website;
 		  http://portal.acm.org/toc.cfm?id=202530 ACM proceedings",
   category = "Programming language design",
   summary =
@@ -1815,7 +1815,6 @@ endgame.",
   address =	 "Baltimore, Maryland",
   month =	 jan # "~11,",
   supersededby = "WilmerE02",
-  omitfromcv = 1,
   nonPAG = 1,
 }
 
@@ -2801,7 +2800,7 @@ endgame.",
   month =	 OOPSLA2004date,
   basefilename = "ref-immutability-oopsla2004",
   downloads =
-    "http://pag.csail.mit.edu/javari/ Javari implementation",
+    "http://types.cs.washington.edu/javari/ Javari implementation",
   downloadsnonlocal =
     "http://www.cs.washington.edu/homes/mernst/pubs/ref-immutability-oopsla2004.pdf PDF;
      http://www.cs.washington.edu/homes/mernst/pubs/ref-immutability-oopsla2004.ps PostScript;
@@ -3111,7 +3110,9 @@ endgame.",
     programs.  The inputs it selects as fault-revealing are an order of
     magnitude as likely to reveal a fault as all generated inputs.",
   basefilename = "classify-tests-ecoop2005",
-  downloads = "http://pag.csail.mit.edu/eclat/ Eclat implementation",
+  downloads =
+   "http://pag.csail.mit.edu/eclat/ Eclat implementation;
+    http://code.google.com/p/randoop/ Randoop implementation",
   downloadsnonlocal =
    "http://www.cs.washington.edu/homes/mernst/pubs/classify-tests-ecoop2005.pdf PDF",
   category =     "Testing",
@@ -3173,7 +3174,7 @@ endgame.",
   alsosee = "Tschantz2006",
   downloads = 
    "http://pag.csail.mit.edu/pubs/tschantz-refimmut-mengthesis.pdf extended version (PDF);
-    http://pag.csail.mit.edu/javari/ Javari implementation",
+    http://types.cs.washington.edu/javari/ Javari implementation",
   downloadsnonlocal =
    "http://www.cs.washington.edu/homes/mernst/pubs/ref-immutability-oopsla2005.pdf PDF;
     http://www.cs.washington.edu/homes/mernst/pubs/ref-immutability-oopsla2005-slides.ppt slides (PowerPoint)",
@@ -3248,7 +3249,7 @@ endgame.",
   address =	 PASTE2005addr,
   month =	 PASTE2005date,
   basefilename = "paste2005-proceedings",
-  downloads =    "http://pag.csail.mit.edu/paste2005/ workshop website",
+  downloads =    "http://www.cs.washington.edu/homes/mernst/meetings/paste2005/ workshop website",
   category =     "Software engineering",
   summary =
    "PASTE 2005 brought together the program analysis, software tools, and
@@ -4429,7 +4430,7 @@ endgame.",
     existing Java programs.",
   basefilename = "refimmut-tools-oopsla2007",
   downloads = 
-   "http://pag.csail.mit.edu/javari/ Javari implementation",
+   "http://types.cs.washington.edu/javari/ Javari implementation",
   downloadsnonlocal = 
    "http://www.cs.washington.edu/homes/mernst/pubs/refimmut-tools-oopsla2007.pdf PDF",
   supersededby = "QuinonezTE2008 A tool description",
@@ -4851,8 +4852,9 @@ endgame.",
     In case studies, Javarifier correctly inferred mutability over Java programs
     of up to 110 KLOC.",
   basefilename = "infer-refimmutability-ecoop2008",
-  downloads = "http://pag.csail.mit.edu/pubs/infer-refimmutability-quinonez-mengthesis.pdf Quinonez thesis;
-http://pag.csail.mit.edu/javari/javarifier/ Javarifier implementation",
+  downloads =
+   "http://pag.csail.mit.edu/pubs/infer-refimmutability-quinonez-mengthesis.pdf Quinonez thesis;
+    http://types.cs.washington.edu/javari/javarifier/ Javarifier implementation",
   downloadsnonlocal =
    "http://www.cs.washington.edu/homes/mernst/pubs/infer-refimmutability-ecoop2008.pdf PDF",
   category =  "Immutability (side effects)",
@@ -5591,11 +5593,10 @@ http://pag.csail.mit.edu/javari/javarifier/ Javarifier implementation",
    that accompany our paper called ``Ownership and Immutability in Generic
    Java (OIGJ)''. Questions regarding this technical report should be
    directed to Alex Potanin ({\tt alex@ecs.vuw.ac.nz}).",
-  omitfromcv = 1,
   basefilename = "ownership-immutability-tr0913",
   downloadsnonlocal = "http://ecs.victoria.ac.nz/twiki/pub/Main/TechnicalReportSeries/ECSTR09-13.pdf PDF",
   category =  "Programming language design",
-  supersededby = "Zibin2010",
+  TOBEsupersededby = "Zibin2010",
   summary =
    "This paper prestents a formalism and proofs of a type system (OIGJ)
    that combines ownership with immutablity.  This report has since been
@@ -5618,6 +5619,28 @@ http://pag.csail.mit.edu/javari/javarifier/ Javarifier implementation",
   address = 	 UWCSEaddr,
   monthANDDAY = 	 feb # "~6,",
   month = 	 feb # "~6,",
+  abstract =
+   "A raw object is partially initialized, with only some of its fields
+    set to legal values. A raw object may violate its object invariants,
+    such as that a given field is non-\texttt{null}. Programs often need to
+    manipulate partially-initialized objects, but they must do so with
+    care. Furthermore, analyses must be aware of rawness. For instance,
+    software verification cannot depend on object invariants for
+    raw objects.
+    \par
+    We present a static analysis that infers a safe over-approximation
+    of the program variables, fields, or array elements that, at runtime,
+    might hold non-fully initialized objects. Our formalization
+    is flow-sensitive and considers the exception flow in the analyzed
+    programs. We have proved the analysis to be sound.
+    \par
+    We have also implemented our analysis, in a tool called Julia
+    that computes both nullness and rawness information. We have
+    evaluated Julia on over 50K lines of code. We have compared its
+    output to manually-written nullness and rawness information, and
+    to an independently-written type-checking tool that checks nullness
+    and rawness. Julia’s output is accurate and, we believe, useful
+    both to programmers and to static analyses.",
   basefilename = "field-initialization-tr100201",
   downloadsnonlocal = "ftp://ftp.cs.washington.edu/tr/2010/02/UW-CSE-10-02-01.PDF PDF",
   EVENTUALLYsupersededby = "*",
@@ -5699,12 +5722,13 @@ http://pag.csail.mit.edu/javari/javarifier/ Javarifier implementation",
     that favors dynamic analysis.  Developers will work faster than they can in
     an environment that favors static analysis.",
   basefilename = "staticdynamic-tap2010",
-  downloads = "",
+  downloads =
+   "http://malaga2010.lcc.uma.es/tv/tools5.html Video;
+    http://code.google.com/p/ductilej/ Implementation",
   downloadsnonlocal =
    "http://www.cs.washington.edu/homes/mernst/pubs/staticdynamic-tap2010.pdf extended abstract (PDF);
     http://www.cs.washington.edu/homes/mernst/pubs/staticdynamic-tap2010-slides.pdf Slides (PDF);
-    http://www.cs.washington.edu/homes/mernst/pubs/staticdynamic-tap2010-slides.pptx Slides (Powerpoint);
-   http://malaga2010.lcc.uma.es/tv/tools5.html Video",
+    http://www.cs.washington.edu/homes/mernst/pubs/staticdynamic-tap2010-slides.pptx Slides (Powerpoint)",
   category =  "Dynamic analysis",
   summary =
    "This talk proposes a way to obtain the rapid development of a
@@ -5788,6 +5812,46 @@ http://pag.csail.mit.edu/javari/javarifier/ Javarifier implementation",
 }
 
 
+@InProceedings{BeschastnikhCEB2010,
+  author = 	 "Sigurd Schneider and Ivan Beschastnikh and Slava Chernyak and Michael D. Ernst and Yuriy Brun",
+  title = 	 "Synoptic: Summarizing system logs with refinement",
+  booktitle = SLAML2010,
+  NEEDpages = 	 "*",
+  year = 	 "2010",
+  address = 	 SLAML2010addr,
+  month = 	 SLAML2010date,
+  abstract =
+   "Distributed systems are often difficult to debug and understand.  A
+    typical way of gaining insight into system behavior is by inspecting its
+    execution logs.  Manual inspection of logs is arduous, and few tools can
+    analyze an arbitrary system log out of the box. To support this task we
+    developed \emph{Synoptic}.  Synoptic outputs a concise graph
+    representation of logged events that captures important temporal event
+    invariants mined from the log.  Synoptic makes no assumptions about the
+    system, and requires no system modifications.
+    \par
+    In contrast to prior approaches, Synoptic uses refinement instead of
+    coarsening to explore the space of representations. Additionally, it
+    infers temporal event invariants to capture distributed system semantics
+    that are often present in system logs. These invariants drive the
+    coarsening process, and are preserved in the final representation.
+    \par
+    In experiments on synthetic and real distributed system logs, Synoptic
+    had reasonable overhead for an offline analysis tool, and it augmented a
+    distributed system designer's understanding of system behavior.",
+  basefilename = "synoptic-slaml2010",
+  downloads =
+   "http://code.google.com/p/synoptic/ implementation",
+  OPTdownloadsnonlocal = "",
+  OPTsupersededby = "",
+  category =  "Dynamic analysis",
+  summary =
+   "Synoptic produces a small graph that summarizes a distributed system log.
+    Synoptic starts from the smallest possible graph and iteratively expands,
+    and it mines then enforces invariants from the original logs.",
+}
+
+
 @InProceedings{ZibinPLAE2010,
   author = 	 "Yoav Zibin and Alex Potanin and Paley Li and Mahmood Ali and Michael D. Ernst",
   title = 	 "Ownership and immutability in generic {Java}",
@@ -5800,13 +5864,13 @@ http://pag.csail.mit.edu/javari/javarifier/ Javarifier implementation",
    "The Java language lacks the important notions of \emph{ownership} (an
     object owns its representation to prevent unwanted aliasing) and
     \emph{immutability} (the division into mutable, immutable, and readonly
-    data and references).  Programmers are prone to design errors such as
-    representation exposure or violation of immutability contracts.  This paper
-    presents \emph{Ownership Immutability Generic Java} (OIGJ), a
-    backward-compatible purely-static language extension supporting ownership
-    and immutability.  We formally defined a core calculus for OIGJ, based on
-    Featherweight Java, and proved it sound.  We also implemented OIGJ and
-    performed case studies on 33,000 lines of code.
+    data and references).  Programmers are prone to design errors, such as
+    representation exposure or violation of immutability contracts.  This
+    paper presents \emph{Ownership Immutability Generic Java} (OIGJ), a
+    backward-compatible purely-static language extension supporting
+    ownership and immutability.  We formally defined a core calculus for
+    OIGJ, based on Featherweight Java, and proved it sound.  We also
+    implemented OIGJ and performed case studies on 33,000 lines of code.
     \par
     Creation of immutable cyclic structures requires a ``\emph{cooking phase}''
     in which the structure is mutated but the outside world cannot observe this
@@ -5815,19 +5879,21 @@ http://pag.csail.mit.edu/javari/javarifier/ Javarifier implementation",
     even after the constructor finishes.
     \par
     OIGJ is easy for a programmer to use, and it is easy to implement
-    (flow-insensitive, using only 15 rules).  Yet, OIGJ is more expressive than
-    previous ownership languages, in the sense that it can type-check more good
-    code.  OIGJ can express the factory and visitor patterns, and OIGJ can
-    type-check Sun's \texttt{java.util} collections (except for the
-    \texttt{clone} method) without refactoring and with only a small number of
-    annotations.  Previous work required major refactoring of existing code in
-    order to fit its ownership restrictions.  Forcing refactoring of
-    well-designed code is undesirable because it costs programmer effort,
-    degrades the design, and hinders adoption in the mainstream community.",
+    (flow-insensitive, adding only 14 rules to those of Java).  Yet, OIGJ is
+    more expressive than previous ownership languages, in the sense that it can
+    type-check more good code.  OIGJ can express the factory and visitor
+    patterns, and OIGJ can type-check Sun's \texttt{java.util} collections
+    (except for the \texttt{clone} method) without refactoring and with only a
+    small number of annotations.  Previous work required major refactoring of
+    existing code in order to fit its ownership restrictions.  Forcing
+    refactoring of well-designed code is undesirable because it costs
+    programmer effort, degrades the design, and hinders adoption in the
+    mainstream community.",
   basefilename = "ownership-immutability-oopsla2010",
-  downloads = 
-   "http://www.cs.washington.edu/homes/mernst/pubs/ownership-immutability-oopsla2010-draft.pdf DRAFT (comments welcome);
-    http://www.cs.washington.edu/homes/mernst/pubs/ownership-immutability-oopsla2010-draft.pdf TR with proofs;
+  downloadsnonlocal = 
+   "http://www.cs.washington.edu/homes/mernst/pubs/ownership-immutability-oopsla2010.pdf PDF",
+  downloads =
+   "http://ecs.victoria.ac.nz/twiki/pub/Main/TechnicalReportSeries/ECSTR10-16.pdf TR with proofs;
     http://types.cs.washington.edu/checker-framework/#oigj-checker implementation",
   category =  "Programming language design",
   summary =
@@ -5835,6 +5901,84 @@ http://pag.csail.mit.edu/javari/javarifier/ Javarifier implementation",
    result that is more expressive and safe than previous attempts.  The paper
    includes both a proof of soundness and an implementation with case studies.",
 }
+
+
+@InProceedings{BrunHEN2010:FOSER,
+  author = 	 "Yuriy Brun and Reid Holmes and Michael D. Ernst and David Notkin",
+  title = 	 "Speculative analysis:  Exploring future development states of software",
+  booktitle = FOSER2010,
+  NEEDpages = 	 "*",
+  year = 	 2010,
+  address = 	 FOSER2010addr,
+  month = 	 FOSER2010date,
+  abstract =
+   "Most software tools and environments help developers analyze the present
+    and past development states of their software systems.  Few approaches
+    have investigated the potential consequences of \emph{future} actions the
+    developers may perform. The commoditization of hardware, multi-core
+    architectures, and cloud computing provide new potential for delivering
+    apparently-instantaneous feedback to developers, informing them of the
+    effects of changes that they may be considering to the software.
+    \par
+    For example, modern IDEs often provide ``quick fix'' suggestions for
+    resolving compilation errors.  Developers must scan this list and select
+    the option they think will resolve the problem.  Instead, we propose that
+    the IDE should speculatively perform each of the suggestions in the
+    background and provide information that helps developers select the best
+    option for the given context. We believe the feedback enabled by
+    speculative operations can improve developer productivity and software
+    quality.",
+  basefilename = "speculation-foser2010",
+  OPTdownloads = "",
+  OPTdownloadsnonlocal = "",
+  OPTsupersededby = "",
+  category =  "Software engineering",
+  summary =
+   "This paper proposes that tools should analyze program versions that do not
+    exist yet but that a developer might create.  This may help the developer
+    decide in advance whether or not to create that particular version.",
+}
+
+
+@InProceedings{SchillerE2010,
+  author = 	 "Todd W. Schiller and Michael D. Ernst",
+  title = 	 "Rethinking the economics of software engineering",
+  booktitle = FOSER2010,
+  NEEDpages = 	 "*",
+  year = 	 2010,
+  address = 	 FOSER2010addr,
+  month = 	 FOSER2010date,
+  abstract =
+   "Reliance on skilled developers reduces the return on investment for
+    important software engineering tasks such as establishing program
+    correctness.  This position paper introduces \emph{adaptive
+      semi-automated} (ASA) tools as a means to enable less-skilled workers
+    to perform aspects of software engineering tasks. In an ASA tool, a task
+    is decomposed and the computationally difficult subtasks are performed by
+    less-skilled workers using an adaptive user interface, reducing or
+    eliminating the skilled developer's effort.
+    \par
+    We describe strategies for decomposing a software engineering task and
+    propose design principles to maximize the cost effectiveness of ASA tools
+    in the presence of imperfect decomposition.  Though the approach can be
+    applied to many different types of tasks, this paper focuses on and
+    provides examples for the software correctness tasks of test generation,
+    program verification, and program synthesis. Additionally, we address the
+    auxiliary challenges of latency, intellectual property risk, and worker
+    error.",
+  basefilename = "economics-foser2010",
+  OPTdownloads = "",
+  OPTdownloadsnonlocal = "",
+  OPTsupersededby = "",
+  category =  "Software engineering",
+  summary =
+   "We propose to build tools that permit less-skilled workers to perform
+    certain tasks currently done by developers.  This frees developers to do
+    tasks that only they can do, and overall makes software less expensive.",
+}
+
+
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -5848,7 +5992,7 @@ http://pag.csail.mit.edu/javari/javarifier/ Javarifier implementation",
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% Submitted
+%%% Abandoned
 %%%
 
 
@@ -5980,61 +6124,159 @@ http://pag.csail.mit.edu/javari/javarifier/ Javarifier implementation",
 }
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Submitted
+%%%
 
 
-
-
-
-
-
-
-@Misc{BeschastnikhCEB2010,
-  author = 	 "Ivan Beschastnikh and Slava Chernyak and Michael D. Ernst and Yuriy Brun",
-  title = 	 "Synoptic: Summarizing system logs with refinement",
-  OPTcrossref =  "",
-  OPTkey = 	 "",
-  OPTbooktitle = "",
-  OPTpages = 	 "",
-  year = 	 2010,
-  OPTeditor = 	 "",
-  OPTvolume = 	 "",
-  OPTnumber = 	 "",
-  OPTseries = 	 "",
-  OPTaddress = 	 "",
-  OPTmonth = 	 "",
-  OPTorganization = "",
-  OPTpublisher = "",
-  OPTnote = 	 "",
-  OPTannote = 	 "",
+@Misc{SpotoE2011,
+  author = 	 "Fausto Spoto and Michael D. Ernst",
+  title = 	 "Inference of field initialization",
+  month = 	 aug,
+  year = 	 2011,
   abstract =
-   "Distributed systems are often difficult to debug and understand.  A
-    typical way of gaining insight into system behavior is by inspecting its
-    execution logs.  Manual inspection of logs is arduous, and few tools can
-    analyze an arbitrary system log out of the box. To support this task we
-    developed \emph{Synoptic}.  Synoptic outputs a concise graph
-    representation of logged events that captures important temporal event
-    invariants mined from the log.  Synoptic makes no assumptions about the
-    system, and requires no system modifications.
+   "A \emph{raw} object is partially initialized, with only some fields set
+    to legal values.  It may violate its object invariants, such as that a
+    given field is non-\texttt{null}.  Programs often manipulate
+    partially-initialized objects, but they must do so with care.
+    Furthermore, analyses must be aware of field initialization.  For
+    instance, proving the absence of null pointer dereferences or of
+    division by zero, or proving that object invariants are satisfied,
+    requires information about initialization.
     \par
-    In contrast to prior approaches, Synoptic uses refinement instead of
-    coarsening to explore the space of representations. Additionally, it
-    infers temporal event invariants to capture distributed system semantics
-    that are often present in system logs. These invariants drive the
-    coarsening process, and are preserved in the final representation.
-    \par
-    In experiments on synthetic and real distributed system logs, Synoptic
-    had reasonable overhead for an offline analysis tool, and it augmented a
-    distributed system designer's understanding of system behavior.",
-  OPTusesDaikon = "",
-  OPTusesDaikonAsTestSubject = "",
-  omitfromcv = "1",
-  OPTbasefilename = "",
-  OPTdownloads = "",
-  OPTdownloadsnonlocal = "",
-  OPTsupersededby = "",
-  OPTcategory =  "",
-  OPTsummary = 	 "",
+    We present a static analysis that infers a safe over-approximation of
+    the program variables, fields, or array elements that, at run time,
+    might hold raw objects.  Our formalization is flow-sensitive and
+    interprocedural, and it considers the exception flow in the analyzed
+    program.  We have proved the analysis sound and implemented it in a
+    tool called Julia that computes initialization and nullness
+    information.  We have evaluated Julia on over 160K lines of code.  We
+    have compared its output to manually-written initialization and
+    nullness information, and to an independently-written type-checking
+    tool that checks initialization and nullness.  Julia's output is
+    accurate and, we believe, useful both to programmers and to static
+    analyses.",
+  usesDaikonAsTestSubject = 1,
+  omitfromcv = 1,
+  underreview = "ICSE 2010",
+  category =  "Static analysis",
+  summary =
+   "This paper presents a flow-sensitive, exception-aware static analysis that 
+    infers what program variables might hold not-yet-fully-initialized objects.
+    Such an object might violate its object invariants, until its
+    initialization is complete.",
 }
+
+
+
+@Misc{BayneCE2011,
+  author = 	 "Michael Bayne and Richard Cook and Michael D. Ernst",
+  title = 	 "Always-available static and dynamic feedback",
+  month = 	 aug,
+  year = 	 2011,
+  abstract =
+   "Developers who write code in a statically typed language are denied the
+    ability to obtain dynamic feedback by executing their code during periods
+    when it fails to type-check. They are further confined to the static
+    typing discipline during times in the development process where it does
+    not yield the highest productivity. If they opt instead to use a dynamic
+    language, they forgo the many benefits of static typing. We present a
+    novel approach to giving developers the benefits of both static and
+    dynamic typing, throughout the development process, and without the
+    burden of manually separating their program into statically- and
+    dynamically-typed parts.
+    \par
+    Our approach relaxes the static type system and provides a semantics for
+    many type-incorrect programs. We implemented our approach in a publicly
+    available tool, DuctileJ, for the Java language. In case studies,
+    DuctileJ conferred benefits both during prototyping and during the
+    evolution of existing code.",
+  omitfromcv = 1,
+  underreview = "ICSE 2010",
+  category =  "Programming language design",
+  downloads =
+    "http://code.google.com/p/ductilej/ Implementation",
+  summary =
+   "The DuctileJ language enables the rapid development and flexibility of a
+    dynamically-typed language, and the reliability and comprehensibility of a
+    statically-typed language, via two views of the program during development.",
+}
+
+
+@Misc{BrunHEN2011,
+  author = 	 "Yuriy Brun and Reid Holmes and Michael D. Ernst and David Notkin",
+  title = 	 "Proactive detection of collaboration conflicts",
+  month = 	 aug,
+  year = 	 2011,
+  abstract =
+   "Most software is built by multiple people.  Each developer makes
+    decisions about when to incorporate other team members' changes, and when
+    to share changes with other team members.  A mistake in these decisions
+    --- performing these tasks too early or too late --- can lead to delays
+    in development, wasted work, or re-work.
+    \par
+    This paper presents Crystal, a tool that proactively alerts a developer
+    to: inconsistencies with teammates' work and opportunities to synchronize
+    without suffering conflicts.
+    First, we show that developers make suboptimal choices about when to
+    synchronize their work by analyzing the histories of eight collaborative,
+    real-world, open-source projects.  Crystal could let developers know
+    about conflicts, on average, 10 days earlier than they are being resolved
+    today.  Crystal could also improve developer confidence that
+    conflict-free changes can be merged safely, on average, 11 days earlier.
+    Second, we perform a systematic study of the space of information that
+    can assist developers in making better-informed decisions, identify and
+    classify the pertinent information, and design a Crystal interface that
+    allows developers to quickly recognize projects and relationships with
+    collaborators that likely required attention.  We have deployed Crystal
+    to a handful of developers and used their feedback to improve both the
+    interface and our understanding of collaborative development
+    interactions.",
+  omitfromcv = 1,
+  underreview = "ICSE 2010",
+  category =  "Software engineering",
+  downloads =
+    "http://www.cs.washington.edu/homes/brun/research/crystal/ Implementation",
+  summary =
+   "The Crystal tool informs a developer when his individual work can be
+    safely merged with his co-workers' changes, and when his individual work
+    conflicts with co-workers, by speculatively performing version control
+    system operations in the background.",
+}
+
+
+
+@Misc{RobinsonEPAL2011,
+  author = 	 "Brian Robinson and Michael D. Ernst and Jeff H. Perkins and Vinay Augustine and Nuo Li",
+  title = 	 "Automatically generating maintainable regression tests",
+  month = 	 aug,
+  year = 	 2011,
+  abstract =
+   "A regression test suite must be effective at detecting defects, and it
+    must be maintainable.  A suite that misses too many defects is useless
+    for testing.  However, a suite that issues too many hard-to-interpret
+    false positives, or requires substantial editing to accommodate changes in
+    the system under test, will be too hard to maintain and will be quickly
+    abandoned.  Furthermore, because many legacy systems lack regression
+    tests, it should be possible to generate a regression test suite without
+    human interaction, and without assuming a formal specification or test
+    oracle.
+    \par
+    This paper presents an automatic technique for generating maintainable
+    regression unit tests.  In experiments using an industrial system, the
+    generated tests achieved good coverage and mutation kill score, were
+    readable by the product's developers, and required few edits as the
+    system under test evolved.",
+  omitfromcv = 1,
+  underreview = "ICSE 2010",
+  category =  "Testing",
+  summary =
+   "This paper shows how to apply automatic test generation to the domain of
+    programs (not just libraries), and how to make the resulting test suite
+    maintainable (easy to understand and to adapt to changes in the program).",
+}
+
+
 
 
 
