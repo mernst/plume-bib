@@ -1718,13 +1718,54 @@
 }
 
 
-@phdthesis{PachecoPhD:2009,
-   author = {Carlos Pacheco},
-   title = {Directed Random Testing},
-   school = MITEECS,
-   address = MITaddr,
-   month = jun,
-   year = {2009}
+
+
+@PhdThesis{PachecoPhD:2009,
+  author = 	 "Carlos Pacheco",
+  title = 	 "Directed Random Testing",
+  school = 	 MITEECS,
+  year = 	 2009,
+  address = 	 MITaddr,
+  month = 	 jun,
+  abstract =
+   "Random testing can quickly generate many tests, is easy to implement,
+    scales to large software applications, and reveals software errors. But it
+    tends to generate many tests that are illegal or that exercise the same
+    parts of the code as other tests, thus limiting its effectiveness. Directed
+    random testing is a new approach to test generation that overcomes these
+    limitations, by combining a bottom-up generation of tests with runtime
+    guidance. A directed random test generator takes a collection of operations
+    under test and generates new tests incrementally, by randomly selecting
+    operations to apply and finding arguments from among previously-constructed
+    tests. As soon as it generates a new test, the generator executes it, and
+    the result determines whether the test is redundant, illegal,
+    error-revealing, or useful for generating more tests. The technique outputs
+    failing tests pointing to potential errors that should be corrected, and
+    passing tests that can be used for regression testing. The thesis also
+    contributes auxiliary techniques that post-process the generated tests,
+    including a simplification technique that transforms a failing test into a
+    smaller one that better isolates the cause of failure, and a
+    branch-directed test generation technique that aims to increase the code
+    coverage achieved by the set of generated tests.
+    \par
+    Applied to 14 widely-used libraries (including the Java JDK and the core
+    .NET framework libraries), directed random testing quickly reveals many
+    serious, previously unknown errors in the libraries. And compared with
+    other test generation tools (model checking, symbolic execution, and
+    traditional random testing), it reveals more errors and achieves higher
+    code coverage. In an industrial case study, a test team at Microsoft using
+    the technique discovered in fifteen hours of human effort as many errors as
+    they typically discover in a person-year of effort using other testing
+    methods.",
+  basefilename = "randomtesting-pacheco-phdthesis",
+  TODOdownloads = "*",
+  downloadsnonlocal =
+   "http://sdg.csail.mit.edu/pubs/theses/pacheco-phd-thesis.pdf PDF",
+  category =  "Testing",
+  summary =
+   "Directed random testing combines random testing with model-based testing,
+    resulting in better coverage and fewer illegal inputs.  Experiments
+    confirm its utility, finding bugs in the Java JDK, .NET framework, etc.",
 }
 
 
