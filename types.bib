@@ -815,6 +815,40 @@
 
 
 
+
+@Article{ChalinJR2008,
+  author = 	 "P. Chalin and P.R. James and F. Rioux",
+  title = 	 "Reducing the use of nullable types through non-null by default and monotonic non-null",
+  journal = 	 "IET Software",
+  year = 	 2008,
+  volume = 	 2,
+  number = 	 6,
+  pages = 	 "515-531",
+  month = 	 dec,
+  abstract =
+   "With Java 5 annotations, the authors note a marked increase in tools that
+    can statically detect potential null dereferences. To be effective, such
+    tools require that developers annotate declarations with nullity modifiers
+    and have annotated API libraries. Unfortunately, in the experience of the
+    authors, specifying moderately large code bases, the use of non-null
+    annotations is more labour intensive than it should be. Motivated by this
+    experience, the authors conducted an empirical study of five open source
+    projects totalling 700K lines-of-code, which confirms that, on average, 75%
+    of reference declarations are meant to be non-null, by design. Guided by
+    these results, the authors propose the adoption of non-null-by-default
+    semantics. This new default has advantages of better matching general
+    practice, lightening developer annotation burden and being safer. The
+    authors also describe the Eclipse Java Modelling Language (JML) Java
+    Development Tooling (JDT), a tool supporting the new semantics, including
+    the ability to read the extensive API library specifications written in the
+    JML. Issues of backwards compatibility are addressed. In a second phase of
+    the empirical study, the authors analysed the uses of null and noted that
+    over half of the nullable field references are only assigned non-null
+    values. For this category of reference, the authors introduce the concept
+    of monotonic non-null type and illustrate the benefits of its use.",
+}
+
+
 @TechReport{ChalinJK2007,
   author = 	 "Patrice Chalin and Perry R. James and George Karabotsos",
   title = 	 "The architecture of {JML4}, a proposed integrated verification environment for {JML}",
@@ -1195,6 +1229,7 @@
     been made void-safe. This presentation describes the principles of Eiffel’s
     void safety, their implementation and the lessons gained.",
 }
+
 
 
 %%%
