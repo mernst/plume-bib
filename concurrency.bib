@@ -1,0 +1,227 @@
+%%% concurrency.bib -- Bibliography for concurrency
+
+
+
+@InProceedings{BallCR2001,
+  author = 	 "Thomas Ball and Sagar Chaki and Sriram K. Rajamani",
+  title = 	 "Parameterized verification of multithreaded software libraries",
+  booktitle =	 TACAS2001,
+  pages =	 "158--173",
+  year =	 2001,
+  address =	 TACAS2001addr,
+  month =	 TACAS2001date,
+  abstract =
+   "The growing popularity of multi-threading has led to a great number of
+    software libraries that support access by multiple threads. We present
+    Local/Global Finite State Machines (LGFSMs) as a model for a certain class
+    of multithreaded libraries. We have developed a tool called Beacon that
+    does parameterized model checking of LGFSMs. We demonstrate the
+    expressiveness of LGFSMs as models, and the effectiveness of Beacon as a
+    model checking tool by (1) modeling a multithreaded memory manager Rockall
+    developed at Microsoft Research as an LGFSM, and (2) using Beacon to check
+    a critical safety property of Rockall.",
+}
+
+
+@Article{Demartini:1999:DDT,
+  author =       "Claudio Demartini and Radu Iosif and Riccardo Sisto",
+  title =        "A deadlock detection tool for concurrent {Java} programs",
+  journal =      "Software --- Practice and Experience",
+  volume =       29,
+  number =       7,
+  pages =        "577--603",
+  month =        jun,
+  year =         1999,
+  url =          "http://www3.interscience.wiley.com/cgi-bin/fulltext?ID=62003577&;PLACEBO=IE.pdf;
+                 http://www3.interscience.wiley.com/cgi-bin/abstract?ID=62003577",
+  abstract =
+   "This paper presents some issues related to the design and implementation of
+    a concurrency analysis tool able to detect deadlock situations in Java
+    programs that make use of multithreading mechanisms. An abstract formal
+    model is generated from the Java source using the Java2Spin translator. The
+    model is expressed in the PROMELA language, and the SPIN tool is used to
+    perform its formal analysis. The paper mainly focuses on the design of the
+    Java2Spin translator. A set of experiments, carried out to evaluate the
+    performances of the analysis tool, is also presented.",
+}
+
+
+@Book{Lea96,
+  author =	 "Doug Lea",
+  title = 	 "Concurrent Programming in Java: Design Principles and Patterns",
+  publisher = 	 "Addison-Wesley",
+  year = 	 1996,
+  supersededby = Lea99
+}
+
+@Book{Lea99,
+  author =	 "Doug Lea",
+  title = 	 "Concurrent Programming in Java: Design Principles and Patterns",
+  edition =      "second",
+  publisher = 	 "Addison-Wesley",
+  year = 	 1999
+}
+
+@InProceedings{vonPraunG2003,
+  author = 	 "Christoph von Praun and Thomas Gross",
+  title = 	 "Static Conflict Analysis for Multi-Threaded Object-Oriented Programs",
+  booktitle =	 PLDI2003,
+  pages =	 "115--128",
+  year =	 2003,
+  address =	 PLDI2003addr,
+  month =	 PLDI2003date,
+  abstract =
+   "A compiler for multi-threaded object-oriented programs needs information
+    about the sharing of objects for a variety of reasons: to implement
+    optimizations, to issue warnings, to add instrumentation to detect access
+    violations that occur at runtime. An Object Use Graph (OUG) statically
+    captures accesses from different threads to objects. An OUG extends the
+    Heap Shape Graph (HSG), which is a compile-time abstraction for runtime
+    objects (nodes) and their reference relations (edges). An OUG specifies for
+    a specific node in the HSG a partial order of events relevant to the
+    corresponding runtime object(s). Relevant events include read and write
+    access, object escape, thread start and join.
+    \par
+    OUGs have been implemented in a Java compiler. Initial experience shows
+    that OUGs are effective to identify object accesses that potentially
+    conflict at runtime and isolate accesses that never cause a problem at
+    runtime. The capabilities of OUGs are compared with an advanced program
+    analysis that has been used for lock elimination. For the set of benchmarks
+    investigated here, OUGs report only a fraction of shared objects as
+    conflicting and reduce the number of compile-time reports in terms of
+    allocation sites of conflicting objects by 28-92\% (average 64\%). For
+    benchmarks of up to 30 KLOC, the time taken to construct OUGs is, with one
+    exception, in the order of seconds.
+    \par
+    The information collected in the OUG has been used to instrument Java
+    programs with checks for object races. OUGs provide precise information
+    about object sharing and static protection, so runtime instrumentation that
+    checks those cases that cannot be disambiguated at compile-time is sparse,
+    and the total runtime overhead of checking for object races is only 3-86\%
+    (average 47\%)."
+}
+
+
+
+
+
+
+@InProceedings{Boehm2005,
+  author = 	 "Hans-J. Boehm",
+  title = 	 "Threads cannot be implemented as a library",
+  booktitle =	 PLDI2005,
+  pages = 	 "261--268",
+  year =	 2005,
+  address =	 PLDI2005addr,
+  month =	 PLDI2005date,
+  abstract =
+   "In many environments, multi-threaded code is written in a language that was
+    originally designed without thread support (e.g. C), to which a library of
+    threading primitives was subsequently added. There appears to be a general
+    understanding that this is not the right approach. We provide specific
+    arguments that a pure library approach, in which the compiler is designed
+    independently of threading issues, cannot guarantee correctness of the
+    resulting code.
+    \par
+    We first review why the approach almost works, and then examine some of the
+    surprising behavior it may entail. We further illustrate that there are
+    very simple cases in which a pure library-based approach seems incapable of
+    expressing an efficient parallel algorithm.
+    \par
+    Our discussion takes place in the context of C with Pthreads, since it is
+    commonly used, reasonably well specified, and does not attempt to ensure
+    type-safety, which would entail even stronger constraints. The issues we
+    raise are not specific to that context.",
+}
+
+
+@InProceedings{NaikAW2006,
+  author = 	 "Mayur Naik and Alex Aiken and John Whaley",
+  title = 	 "Effective static race detection for {Java}",
+  booktitle = PLDI2006,
+  pages = 	 "308--319",
+  year = 	 2006,
+  address = 	 PLDI2006addr,
+  month = 	 PLDI2006date,
+}
+
+@inproceedings{1040299,
+ author = {Cormac Flanagan and Stephen N. Freund and Marina Lifshin},
+ title = {Type inference for atomicity},
+ booktitle = {TLDI '05: Proceedings of the 2005 ACM SIGPLAN international workshop on Types in languages design and implementation},
+ year = {2005},
+ isbn = {1-58113-999-3},
+ pages = {47--58},
+ location = {Long Beach, California, USA},
+ doi = {http://doi.acm.org/10.1145/1040294.1040299},
+ publisher = {ACM Press},
+ address = {New York, NY, USA},
+ }
+
+
+@inproceedings{tiar,
+  author    = {Cormac Flanagan and
+               Stephen N. Freund},
+  title = {Type inference against races},
+  booktitle = {Static Analysis Symposium},
+  year      = {2004},
+  pages     = {116-132},
+  ee        = {http://springerlink.metapress.com/openurl.asp?genre=article{\&}issn=0302-9743{\&}volume=3148{\&}spage=116},
+  bibsource = {DBLP, http://dblp.uni-trier.de},
+}
+
+
+@InProceedings{OCallahanC2003,
+  author = 	 "Robert O'Callahan and Jong-Deok Choi",
+  title = 	 "Hybrid dynamic data race detection",
+  booktitle = PPOPP2003,
+  pages = 	 "167--178",
+  year = 	 2003,
+  address = 	 PPOPP2003addr,
+  month = 	 PPOPP2003date,
+  doi = {http://doi.acm.org/10.1145/781498.781528},
+}
+
+
+@Book{Goetz2006,
+  author = 	 "Brian Goetz and Tim Peierls and Joshua Bloch and Joseph Bowbeer and David Holmes and Doug Lea",
+  title = 	 "Java Concurrency in Practice",
+  publisher = 	 "Addison-Wesley",
+  year = 	 2006,
+  NEEDaddress = 	 "*",
+}
+
+
+@InProceedings{JulaTZC2008,
+  author = 	 "Horatiu Jula and Daniel Tralamazza and Cristian Zamfir and George Candea",
+  title = 	 "Deadlock Immunity: Enabling Systems To Defend Against Deadlocks
+",
+  booktitle = OSDI2008,
+  pages = 	 "295-308",
+  year = 	 2008,
+  address = 	 OSDI2008addr,
+  month = 	 OSDI2008date,
+  abstract =
+   "Deadlock immunity is a property by which programs, once afflicted by a
+    given deadlock, develop resistance against future occurrences of that
+    and similar deadlocks. We describe a technique that enables programs to
+    automatically gain such immunity without assistance from programmers or
+    users. We implemented the technique for both Java and POSIX threads and
+    evaluated it with several real systems, including MySQL, JBoss, SQLite,
+    Apache ActiveMQ, Limewire, and Java JDK. The results demonstrate
+    effectiveness against real deadlock bugs, while incurring modest
+    performance overhead and scaling to 1024 threads. We therefore conclude
+    that deadlock immunity offers programmers and users an attractive tool
+    for coping with elusive deadlocks.",
+}
+
+
+
+
+% @Comment LocalWords: InProceedings BallCR Sagar Chaki Sriram Rajamani TACAS
+% @Comment LocalWords: multithreaded booktitle addr LGFSMs Rockall LGFSM PLS IE
+% @Comment LocalWords: Demartini Radu Iosif Riccardo Sisto jun url pdf PROMELA
+% @Comment LocalWords: multithreading JCAT HTTP supersededby vonPraunG von OUG
+% @Comment LocalWords: Christoph Praun HSG OUGs KLOC lifephases Ruf ie mtrt tsp
+% @Comment LocalWords: monte hedc mol Cilk Guang Ien Mingdong Feng Boehm mutex
+% @Comment LocalWords: NEEDpages Pthreads pthread pthreads
