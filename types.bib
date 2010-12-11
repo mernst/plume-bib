@@ -2205,7 +2205,7 @@
     object, which prevents further modification. The paper demonstrates how
     immutability facilitates program verification by extending the Boogie
     methodology for object invariants to immutable objects. The technique is
-    based on Spec\#’s dynamic ownership, but the concepts also apply to other
+    based on Spec#’s dynamic ownership, but the concepts also apply to other
     ownership systems that support transfer."
 }
 
@@ -3143,6 +3143,18 @@
 }
 
 
+@inproceedings{An:2009,
+  author = {Jong-hoon (David) An and Avik Chaudhuri and Jeffrey S. Foster},
+  title = {Static Typing for Ruby on Rails},
+  booktitle = {ASE '09: Proceedings of the 24th IEEE/ACM Conference on Automated Software Engineering},
+  year = {2009},
+  pages = {590--594},
+  location = {Auckland, New Zealand},
+  OMITdoi = {http://dx.doi.org/10.1109/ASE.2009.80},
+  publisher = {IEEE},
+  address = {Washington, DC, USA},
+}
+
 
 @InProceedings{AndersonGD2005,
   author = 	 "Christopher Anderson and Paola Giannini and Sophia Drossopoulou1",
@@ -3432,6 +3444,13 @@
     number of compiler-inserted casts is very small or zero on all our
     benchmarks.",
 }
+
+
+@misc{KnowlesTGFF2007:TR,
+author = {Kenneth Knowles and Aaron Tomb and Jessica Gronski and Stephen N. Freund and Cormac Flanagan}, 
+title = {SAGE: Unified hybrid checking for first-class types, general refinement types, and {\texttt{Dynamic}} (extended report)},
+}
+
 
 
 @InProceedings{Thatte90,
@@ -3894,6 +3913,83 @@
   address =	 "Pittsburgh, PA",
   month =	 may
 }
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Reflection
+%%%
+
+@InProceedings{Tatsubori2004,
+  author = 	 "Michiaki Tatsubori",
+  title = 	 "Living with Reflection: Towards Coexistence of Program Transformation by Middleware and Reflection in {Java} Applications",
+  booktitle = PPL2004,
+  NEEDpages = 	 "*",
+  year = 	 2004,
+  address = 	 PPL2004addr,
+  month = 	 PPL2004date,
+  abstract =
+   "Reflection in Java allows handling classes and members as first-class
+    objects to create new instances and access members, while allowing
+    application programmers to define their own class loading
+    behavior. However, the program analyzing and rewriting middleware faces
+    serious restrictions when these reflective mechanisms are used in
+    application programs. We have created a framework called EMPL, which 1)
+    allows program analysis/rewriting software to detect and replace indirect
+    method invocations that are not written in a visible way in application
+    programs, and 2) makes analysis and rewriting by middleware mandatory and
+    transparent for the modified application programs so that the
+    transformation by the middleware is always sure to be performed on the
+    application programs. Instead of giving a perfect, precise and static
+    analysis of a reflective program, the proposed framework provides a
+    comprehensive ``net'' for capturing uses of reflective computation in
+    application programs at runtime. This is implemented as a customized class
+    loader for the standard Java virtual machine.",
+}
+
+
+@InProceedings{McGacheyHM2009,
+  author = 	 "Phil McGachey and Antony L. Hosking and J. Eliot B. Moss",
+  title = 	 "Pervasive Load-Time Transformation for Transparently Distributed {Java}",
+  booktitle = Bytecode2009,
+  NEEDpages = 	 "*",
+  year = 	 2009,
+  address = 	 Bytecode2009addr,
+  month = 	 Bytecode2009date,
+  abstract =
+   "The transformation of large, off-the-shelf Java applications to support
+    complex new functionality essentially requires generation of an entirely
+    new application that retains the execution semantics of the original. We
+    describe such a whole-program modification in the context of RuggedJ, a
+    dynamic transparent Java distribution system. We discuss the proxy-based
+    object model that allows remote Java objects to be referenced in the same
+    way as those residing on the current virtual machine, the optimizations
+    that allow us to bypass proxies in the case of purely local or remote
+    object, and the mechanisms needed to guarantee that static data remain
+    unique in a distributed system. We then detail some of the more interesting
+    features involved when implementing this object model in rewritten
+    bytecode, including transformations required within method bodies and
+    coordination between bytecode and the run-time system that distributes an
+    application across the network.",
+}
+
+
+@InProceedings{ReisDWDE2006,
+  author = 	 "Charles Reis and John Dunagan and Helen J. Wang and Opher Dubrovsky and Saher Esmeir",
+  title = 	 "{BrowserShield}: Vulnerability-Driven Filtering of Dynamic {HTML}",
+  booktitle = OSDI2006,
+  NEEDpages = 	 "*",
+  year = 	 2006,
+  address = 	 OSDI2006addr,
+  month = 	 OSDI2006date,
+}
+
+
+
+
+
+
+
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -4797,8 +4893,6 @@
   address = 	 OOPSLA2008addr,
   month = 	 OOPSLA2008date,
 }
-
-
 
 
 
