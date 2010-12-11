@@ -5980,6 +5980,93 @@ endgame.",
 
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% 2011
+%%%
+
+@InProceedings{SpotoE2011,
+  author = 	 "Fausto Spoto and Michael D. Ernst",
+  title = 	 "Inference of field initialization",
+  booktitle = ICSE2011,
+  NEEDpages = 	 "*",
+  year = 	 2011,
+  address = 	 ICSE2011addr,
+  month = 	 ICSE2011date,
+  abstract =
+   "A \emph{raw} object is partially initialized, with only some fields set
+    to legal values.  It may violate its object invariants, such as that a
+    given field is non-\texttt{null}.  Programs often manipulate
+    partially-initialized objects, but they must do so with care.
+    Furthermore, analyses must be aware of field initialization.  For
+    instance, proving the absence of null pointer dereferences or of
+    division by zero, or proving that object invariants are satisfied,
+    requires information about initialization.
+    \par
+    We present a static analysis that infers a safe over-approximation of
+    the program variables, fields, or array elements that, at run time,
+    might hold raw objects.  Our formalization is flow-sensitive and
+    interprocedural, and it considers the exception flow in the analyzed
+    program.  We have proved the analysis sound and implemented it in a
+    tool called Julia that computes initialization and nullness
+    information.  We have evaluated Julia on over 160K lines of code.  We
+    have compared its output to manually-written initialization and
+    nullness information, and to an independently-written type-checking
+    tool that checks initialization and nullness.  Julia's output is
+    accurate and, we believe, useful both to programmers and to static
+    analyses.",
+  usesDaikonAsTestSubject = 1,
+  basefilename = "initialization-icse2011",
+  downloads =
+    "http://www.cs.washington.edu/homes/mernst/pubs/initialization-icse2011-draft.pdf Draft (comments are welcome)",
+  OPTdownloadsnonlocal = "",
+  category =  "Static analysis",
+  summary =
+   "This paper presents a flow-sensitive, exception-aware static analysis that 
+    infers what program variables might hold not-yet-fully-initialized objects.
+    Such an object might violate its object invariants, until its
+    initialization is complete.",
+}
+
+
+@InProceedings{BayneCE2011,
+  author = 	 "Michael Bayne and Richard Cook and Michael D. Ernst",
+  title = 	 "Always-available static and dynamic feedback",
+  booktitle = ICSE2011,
+  NEEDpages = 	 "*",
+  year = 	 2011,
+  address = 	 ICSE2011addr,
+  month = 	 ICSE2011date,
+  abstract =
+   "Developers who write code in a statically typed language are denied the
+    ability to obtain dynamic feedback by executing their code during periods
+    when it fails to type-check. They are further confined to the static
+    typing discipline during times in the development process where it does
+    not yield the highest productivity. If they opt instead to use a dynamic
+    language, they forgo the many benefits of static typing. We present a
+    novel approach to giving developers the benefits of both static and
+    dynamic typing, throughout the development process, and without the
+    burden of manually separating their program into statically- and
+    dynamically-typed parts.
+    \par
+    Our approach relaxes the static type system and provides a semantics for
+    many type-incorrect programs. We implemented our approach in a publicly
+    available tool, DuctileJ, for the Java language. In case studies,
+    DuctileJ conferred benefits both during prototyping and during the
+    evolution of existing code.",
+  basefilename = "ductile-icse2011",
+  downloads =
+    "http://www.cs.washington.edu/homes/mernst/pubs/ductile-icse2011-draft.pdf Draft (comments are welcome);
+     http://code.google.com/p/ductilej/ Implementation",
+  category =  "Programming language design",
+  summary =
+   "The DuctileJ language enables the rapid development and flexibility of a
+    dynamically-typed language, and the reliability and comprehensibility of a
+    statically-typed language, via two views of the program during development.",
+}
+
+
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% To appear, no date known yet
@@ -6127,80 +6214,6 @@ endgame.",
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Submitted
 %%%
-
-
-@Misc{SpotoE2011,
-  author = 	 "Fausto Spoto and Michael D. Ernst",
-  title = 	 "Inference of field initialization",
-  month = 	 aug,
-  year = 	 2011,
-  abstract =
-   "A \emph{raw} object is partially initialized, with only some fields set
-    to legal values.  It may violate its object invariants, such as that a
-    given field is non-\texttt{null}.  Programs often manipulate
-    partially-initialized objects, but they must do so with care.
-    Furthermore, analyses must be aware of field initialization.  For
-    instance, proving the absence of null pointer dereferences or of
-    division by zero, or proving that object invariants are satisfied,
-    requires information about initialization.
-    \par
-    We present a static analysis that infers a safe over-approximation of
-    the program variables, fields, or array elements that, at run time,
-    might hold raw objects.  Our formalization is flow-sensitive and
-    interprocedural, and it considers the exception flow in the analyzed
-    program.  We have proved the analysis sound and implemented it in a
-    tool called Julia that computes initialization and nullness
-    information.  We have evaluated Julia on over 160K lines of code.  We
-    have compared its output to manually-written initialization and
-    nullness information, and to an independently-written type-checking
-    tool that checks initialization and nullness.  Julia's output is
-    accurate and, we believe, useful both to programmers and to static
-    analyses.",
-  usesDaikonAsTestSubject = 1,
-  omitfromcv = 1,
-  underreview = "ICSE 2011",
-  category =  "Static analysis",
-  summary =
-   "This paper presents a flow-sensitive, exception-aware static analysis that 
-    infers what program variables might hold not-yet-fully-initialized objects.
-    Such an object might violate its object invariants, until its
-    initialization is complete.",
-}
-
-
-
-@Misc{BayneCE2011,
-  author = 	 "Michael Bayne and Richard Cook and Michael D. Ernst",
-  title = 	 "Always-available static and dynamic feedback",
-  month = 	 aug,
-  year = 	 2011,
-  abstract =
-   "Developers who write code in a statically typed language are denied the
-    ability to obtain dynamic feedback by executing their code during periods
-    when it fails to type-check. They are further confined to the static
-    typing discipline during times in the development process where it does
-    not yield the highest productivity. If they opt instead to use a dynamic
-    language, they forgo the many benefits of static typing. We present a
-    novel approach to giving developers the benefits of both static and
-    dynamic typing, throughout the development process, and without the
-    burden of manually separating their program into statically- and
-    dynamically-typed parts.
-    \par
-    Our approach relaxes the static type system and provides a semantics for
-    many type-incorrect programs. We implemented our approach in a publicly
-    available tool, DuctileJ, for the Java language. In case studies,
-    DuctileJ conferred benefits both during prototyping and during the
-    evolution of existing code.",
-  omitfromcv = 1,
-  underreview = "ICSE 2011",
-  category =  "Programming language design",
-  downloads =
-    "http://code.google.com/p/ductilej/ Implementation",
-  summary =
-   "The DuctileJ language enables the rapid development and flexibility of a
-    dynamically-typed language, and the reliability and comprehensibility of a
-    statically-typed language, via two views of the program during development.",
-}
 
 
 @Misc{BrunHEN2011,
