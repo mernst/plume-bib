@@ -5639,7 +5639,7 @@ endgame.",
     evaluated Julia on over 50K lines of code. We have compared its
     output to manually-written nullness and rawness information, and
     to an independently-written type-checking tool that checks nullness
-    and rawness. Julia’s output is accurate and, we believe, useful
+    and rawness. Julia's output is accurate and, we believe, useful
     both to programmers and to static analyses.",
   basefilename = "field-initialization-tr100201",
   downloadsnonlocal = "ftp://ftp.cs.washington.edu/tr/2010/02/UW-CSE-10-02-01.PDF PDF",
@@ -6017,7 +6017,8 @@ endgame.",
   usesDaikonAsTestSubject = 1,
   basefilename = "initialization-icse2011",
   downloads =
-    "http://www.cs.washington.edu/homes/mernst/pubs/initialization-icse2011-draft.pdf Draft (comments are welcome)",
+    "http://www.cs.washington.edu/homes/mernst/pubs/initialization-icse2011-draft.pdf Draft (comments are welcome);
+     http://julia.scienze.univr.it/ implementation",
   OPTdownloadsnonlocal = "",
   category =  "Static analysis",
   summary =
@@ -6056,7 +6057,7 @@ endgame.",
   basefilename = "ductile-icse2011",
   downloads =
     "http://www.cs.washington.edu/homes/mernst/pubs/ductile-icse2011-draft.pdf Draft (comments are welcome);
-     http://code.google.com/p/ductilej/ Implementation",
+     http://code.google.com/p/ductilej/ implementation",
   category =  "Programming language design",
   summary =
    "The DuctileJ language enables the rapid development and flexibility of a
@@ -6065,7 +6066,47 @@ endgame.",
 }
 
 
-
+@InProceedings{DietlDEMS2011,
+  author = 	 "Werner Dietl and Stephanie Dietzel and Michael D. Ernst and K{\i}van{\c{c}} Mu{\c{s}}lu and Todd Schiller",
+  authorASCII = 	 "Werner Dietl and Stephanie Dietzel and Michael D. Ernst and Kivanc Muslu and Todd Schiller",
+  title = 	 "Building and using pluggable type-checkers",
+  booktitle = ICSE2011,
+  NEEDpages = 	 "*",
+  year = 	 2011,
+  address = 	 ICSE2011addr,
+  month = 	 ICSE2011date,
+  abstract =
+   "This paper describes practical experience writing and using pluggable
+    type-checkers.  A pluggable type-checker refines (strengthens) the
+    built-in type system of a programming language.  This permits programmers
+    to detect and prevent, at compile time, defects that would otherwise have
+    been manifested as run-time errors.  The prevented defects may be
+    generally applicable to all programs, such as null pointer dereferences.
+    Or, an application-specific pluggable type system may be designed for a
+    single application.
+    \par
+    We have built and evaluated a series of pluggable type checkers on nearly
+    2.1 million lines of code, finding hundreds of bugs in the process.  In
+    addition to these studies, we observed 28 first-year computer science
+    students use a checker to eliminate null pointer errors in their course
+    projects.
+    \par
+    Along with describing the checkers and characterizing the bugs we found,
+    we report the insights we had throughout the process.  Overall, we found
+    that the type checkers were easy to write, easy for novices to
+    productively use, and effective in finding real bugs and verifying
+    program properties, even for widely tested and used open source projects.",
+  basefilename = "pluggable-checkers-icse2011",
+  downloads =
+    "http://www.cs.washington.edu/homes/mernst/pubs/pluggable-checkers-icse2011-draft.pdf Draft (comments are welcome);
+     http://types.cs.washington.edu/checker-framework/ implementation",
+  category =  "Programming language design",
+  summary =
+   "This paper evaluates the ease of pluggable type-checking with the Checker
+    Framework.  The type checkers were easy to write, easy for novices to
+    use, and effective in finding hundreds of errors in case studies of 2
+    million lines of code.",
+}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
