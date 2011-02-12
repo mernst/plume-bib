@@ -52,8 +52,13 @@ When adding new bibliography entries, please use bibliography strings
 rather than hard-coding conference/journal/institution names, locations,
 and dates.  Add the new abbreviations to bibstring-master.bib as necessary.
 
-For consistency, please start a new bibliography entry with @ in the first
-column, and end the entry with "}" or ")" on its own line.
+For consistency, please start each new bibliography entry with "@" in the
+first column, and end the entry with "}" or ")" on its own line.
+
+If you make changes but you lack write access to the Mercurial repository
+at https://plume-bib.googlecode.com/hg/, then please email a patch (a diff
+file) with your changes to Michael Ernst <mernst@cs.washington.edu>.
+Thanks for your contributions!
 
 
 SETUP -- if you use a Makefile to process your paper
