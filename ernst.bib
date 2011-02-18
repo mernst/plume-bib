@@ -5994,32 +5994,29 @@ endgame.",
   address = 	 ICSE2011addr,
   month = 	 ICSE2011date,
   abstract =
-   "A \emph{raw} object is partially initialized, with only some fields set
-    to legal values.  It may violate its object invariants, such as that a
-    given field is non-\texttt{null}.  Programs often manipulate
-    partially-initialized objects, but they must do so with care.
-    Furthermore, analyses must be aware of field initialization.  For
-    instance, proving the absence of null pointer dereferences or of
-    division by zero, or proving that object invariants are satisfied,
-    requires information about initialization.
+   "A \emph{raw} object is partially initialized, with only some fields set to
+    legal values.  It may violate its object invariants, such as that a given
+    field is non-\texttt{null}.  Programs often manipulate partially-initialized
+    objects, but they must do so with care.  Furthermore, analyses must be
+    aware of field initialization.  For instance, proving the absence of
+    null pointer dereferences or of division by zero, or proving that object
+    invariants are satisfied, requires information about initialization.
     \par
-    We present a static analysis that infers a safe over-approximation of
-    the program variables, fields, or array elements that, at run time,
-    might hold raw objects.  Our formalization is flow-sensitive and
-    interprocedural, and it considers the exception flow in the analyzed
-    program.  We have proved the analysis sound and implemented it in a
-    tool called Julia that computes initialization and nullness
-    information.  We have evaluated Julia on over 160K lines of code.  We
-    have compared its output to manually-written initialization and
-    nullness information, and to an independently-written type-checking
-    tool that checks initialization and nullness.  Julia's output is
-    accurate and, we believe, useful both to programmers and to static
+    We present a static analysis that infers a safe over-approximation of the
+    program variables, fields, and array elements that, at run time, might hold
+    raw objects.  Our formalization is flow-sensitive and interprocedural, and
+    it considers the exception flow in the analyzed program.  We have proved
+    the analysis sound and implemented it in a tool called Julia that computes
+    initialization and nullness information.  We have evaluated Julia on over
+    160K lines of code.  We have compared its output to manually-written
+    initialization and nullness information, and to an independently-written
+    type-checking tool that checks initialization and nullness.  Julia's
+    output is accurate and useful both to programmers and to static
     analyses.",
   usesDaikonAsTestSubject = 1,
   basefilename = "initialization-icse2011",
   downloads =
-    "http://www.cs.washington.edu/homes/mernst/pubs/initialization-icse2011-draft.pdf Draft (comments are welcome);
-     http://julia.scienze.univr.it/ implementation",
+    "http://julia.scienze.univr.it/ implementation",
   OPTdownloadsnonlocal = "",
   category =  "Static analysis",
   summary =
@@ -6041,24 +6038,29 @@ endgame.",
   abstract =
    "Developers who write code in a statically typed language are denied the
     ability to obtain dynamic feedback by executing their code during periods
-    when it fails to type-check. They are further confined to the static
-    typing discipline during times in the development process where it does
-    not yield the highest productivity. If they opt instead to use a dynamic
-    language, they forgo the many benefits of static typing. We present a
-    novel approach to giving developers the benefits of both static and
-    dynamic typing, throughout the development process, and without the
-    burden of manually separating their program into statically- and
-    dynamically-typed parts.
+    when it fails the static type checker. They are further confined to the
+    static typing discipline during times in the development process where it
+    does not yield the highest productivity. If they opt instead to use a
+    dynamic language, they forgo the many benefits of static typing,
+    including machine-checked documentation, improved correctness and
+    reliability, tool support (such as for refactoring), and better runtime
+    performance.
     \par
-    Our approach relaxes the static type system and provides a semantics for
-    many type-incorrect programs. We implemented our approach in a publicly
-    available tool, DuctileJ, for the Java language. In case studies,
-    DuctileJ conferred benefits both during prototyping and during the
-    evolution of existing code.",
+    We present a novel approach to giving developers the benefits of both
+    static and dynamic typing, throughout the development process, and
+    without the burden of manually separating their program into statically-
+    and dynamically-typed parts.  Our approach, which is intended for
+    temporary use during the development process, relaxes the static type
+    system and provides a semantics for many type-incorrect programs.  It
+    defers type errors to run time, or suppresses them if they do not affect
+    runtime semantics.
+    \par
+    We implemented our approach in a publicly available tool, DuctileJ, for
+    the Java language. In case studies, DuctileJ conferred benefits both
+    during prototyping and during the evolution of existing code.",
   basefilename = "ductile-icse2011",
   downloads =
-    "http://www.cs.washington.edu/homes/mernst/pubs/ductile-icse2011-draft.pdf Draft (comments are welcome);
-     http://code.google.com/p/ductilej/ implementation",
+    "http://code.google.com/p/ductilej/ implementation",
   category =  "Programming language design",
   summary =
    "The DuctileJ language enables the rapid development and flexibility of a
@@ -6077,7 +6079,7 @@ endgame.",
   address = 	 ICSE2011addr,
   month = 	 ICSE2011date,
   abstract =
-   "This paper describes practical experience writing and using pluggable
+   "This paper describes practical experience building and using pluggable
     type-checkers.  A pluggable type-checker refines (strengthens) the
     built-in type system of a programming language.  This permits programmers
     to detect and prevent, at compile time, defects that would otherwise have
@@ -6086,11 +6088,10 @@ endgame.",
     Or, an application-specific pluggable type system may be designed for a
     single application.
     \par
-    We have built and evaluated a series of pluggable type checkers on nearly
-    2.1 million lines of code, finding hundreds of bugs in the process.  In
-    addition to these studies, we observed 28 first-year computer science
-    students use a checker to eliminate null pointer errors in their course
-    projects.
+    We built a series of pluggable type checkers using the Checker Framework,
+    and evaluated them on 2 million lines of code, finding hundreds of bugs
+    in the process.  We also observed 28 first-year computer science students
+    use a checker to eliminate null pointer errors in their course projects.
     \par
     Along with describing the checkers and characterizing the bugs we found,
     we report the insights we had throughout the process.  Overall, we found
@@ -6099,8 +6100,7 @@ endgame.",
     program properties, even for widely tested and used open source projects.",
   basefilename = "pluggable-checkers-icse2011",
   downloads =
-    "http://www.cs.washington.edu/homes/mernst/pubs/pluggable-checkers-icse2011-draft.pdf Draft (comments are welcome);
-     http://types.cs.washington.edu/checker-framework/ implementation",
+    "http://types.cs.washington.edu/checker-framework/ implementation",
   usesDaikonAsTestSubject = 1,
   category =  "Programming language design",
   summary =
