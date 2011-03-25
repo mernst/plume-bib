@@ -481,6 +481,37 @@
 
 
 
+
+@Article{FosterJKA2006,
+  author = 	 "Jeffrey S. Foster and Robert Johnson and John Kodumal and Alex Aiken ",
+  title = 	 "Flow-insensitive type qualifiers",
+  journal = 	 TOPLAS,
+  year = 	 2006,
+  volume = 	 28,
+  number = 	 6,
+  pages = 	 "1035--1087",
+  month = 	 nov,
+  abstract =
+   "We describe flow-insensitive type qualifiers, a lightweight, practical
+    mechanism for specifying and checking properties not captured by
+    traditional type systems. We present a framework for adding new,
+    user-specified type qualifiers to programming languages with static type
+    systems, such as C and Java. In our system, programmers add a few type
+    qualifier annotations to their program, and automatic type qualifier
+    inference determines the remaining qualifiers and checks the annotations
+    for consistency. We describe a tool CQual for adding type qualifiers to the
+    C programming language. Our tool CQual includes a visualization component
+    for displaying browsable inference results to the programmer. Finally, we
+    present several experiments using our tool, including inferring const
+    qualifiers, finding security vulnerabilities in several popular C programs,
+    and checking initialization data usage in the Linux kernel. Our results
+    suggest that inference and visualization make type qualifiers lightweight,
+    that type qualifier inference scales to large programs, and that type
+    qualifiers are applicable to a wide variety of problems.",
+}
+
+
+
 @InProceedings{foster:pldi02,
   author =    {Jeffrey S. Foster and Tachio Terauchi and Alex Aiken},
   title =     "Flow-sensitive type qualifiers",
@@ -1230,6 +1261,90 @@
     mechanism is fully implemented and major libraries and applications have
     been made void-safe. This presentation describes the principles of Eiffel's
     void safety, their implementation and the lessons gained.",
+}
+
+
+
+@Misc{julia-web-interface,
+  key =          {Julia},
+  title = 	 {Web interface to the Julia analyzer},
+  howpublished = {\url{http://julia.scienze.univr.it}}
+}
+
+@InProceedings{Spoto10:LPAR,
+  author = 	 {Spoto, F.},
+  title = 	 {The Nullness Analyser of {Julia}},
+  booktitle =    LPAR2010,
+  NEEDpages = 	 "*",
+  year = 	 2010,
+  address = 	 LPAR2010addr,
+  month = 	 LPAR2010date,
+}
+
+
+@Article{SpotoMP09,
+  author = 	 {Spoto, Fausto and Mesnard, Fred and Payet, {\'E}tienne},
+  authorASCII = 	 {Spoto, Fausto and Mesnard, Fred and Payet, Etienne},
+  title =        {A Termination Analyser for {Java} Bytecode Based on Path-Length},
+  journal = 	 TOPLAS,
+  year = 	 2010,
+  volume =       32,
+  number =       3
+}
+
+@inproceedings{PayetS07,
+  author    = {Payet, {\'E}tienne and Spoto, Fausto},
+  authorASCII    = {Payet, Etienne and Spoto, Fausto},
+  title     = {Magic-Sets Transformation for the Analysis of {Java} Bytecode},
+  booktitle = SAS2007,
+  year      = 2007,
+  pages     = {452--467},
+  address   = SAS2007addr,
+  month     = SAS2007date,
+}
+
+@Article{Spoto10,
+  author = 	 {Spoto, Fausto},
+  title = 	 {Precise null-Pointer Analysis},
+  journal = 	 {Software and Systems Modeling},
+  year =         2010
+}
+
+
+@inproceedings{AlbertAGPZ07,
+  author    = {Albert, E. and
+               Arenas, P. and
+               Genaim, S. and
+               Puebla, G. and
+               Zanardini, D.},
+  authorNOTE = "The paper uses the authors' initials rather than first names.",
+  title     = {Cost Analysis of {Java} Bytecode},
+  booktitle = ESOP2007,
+  year      = 2007,
+  pages     = {157--172},
+  address =      ESOP2007addr,
+  month =        ESOP2007date,
+}
+
+@article{KleinN06,
+  author    = {Klein, Gerwin and Nipkow, Tobias},
+  title     = {A Machine-Checked Model for a {Java}-like Language, Virtual
+               Machine, and Compiler},
+  journal   = TOPLAS,
+  volume    = 28,
+  number    = 4,
+  year      = 2006,
+  pages     = {619--695}
+}
+
+@Article{Bryant86,
+  author =       {Bryant, Randal E.},
+  title =        {Graph-Based Algorithms for {Boolean} Function Manipulation},
+  journal =      IEEETC,
+  year =         {1986},
+  volume =       {35},
+  number =       {8},
+  pages =        {677--691}
 }
 
 

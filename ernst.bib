@@ -6111,6 +6111,46 @@ endgame.",
 }
 
 
+@InProceedings{DietlEM2011,
+  author = 	 "Werner M. Dietl and Michael D. Ernst and Peter M{\"u}ller",
+  authorASCII =	 "Werner M. Dietl and Michael D. Ernst and Peter Muller",
+  authorASCII =	 "Werner M. Dietl and Michael D. Ernst and Peter Mueller",
+  title = 	 "Tunable static inference for {Generic} {Universe} {Types}",
+  booktitle = ECOOP2011,
+  NEEDpages = 	 "*",
+  year = 	 2011,
+  address = 	 ECOOP2011addr,
+  month = 	 ECOOP2011date,
+  abstract =
+   "Object ownership is useful for many applications, including program
+    verification, thread synchronization, and memory management.  However, even
+    lightweight ownership type systems impose considerable annotation overhead,
+    which hampers their widespread application.  This paper addresses this
+    issue by presenting a tunable static type inference for Generic Universe
+    Types.  In contrast to classical type systems, ownership types have no
+    single most general typing.  Our inference chooses among the legal typings
+    via heuristics.  Our inference is tunable: users can indicate a preference
+    for certain typings by adjusting the heuristics or by supplying partial
+    annotations for the program.  We present how the constraints of Generic
+    Universe Types can be encoded as a boolean satisfiability (SAT) problem and
+    how a weighted Max-SAT solver finds a correct Universe typing that
+    optimizes the weights.  Our implementation provides the static inference
+    tools as a set of command-line tools and Eclipse plug-ins, which we used to
+    experiment with the proposed workflow and the quality of our inference. We
+    used the tool on four real-world applications and inferred interesting
+    ownership structures.",
+  basefilename = "tunable-typeinf-ecoop2011",
+  OPTdownloads = "",
+  OPTdownloadsnonlocal = "",
+  OPTsupersededby = "",
+  category =  "Programming language design",
+  summary =
+   "Type inference for ownershup types is underconstrained:  many different
+    solutions are legal.  This paper transforms the inference problem into an
+    instance of Weighted Max-SAT to find a good inference solution.",
+}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% To appear, no date known yet
 %%%

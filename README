@@ -64,8 +64,10 @@ Thanks for your contributions!
 SETUP -- if you use a Makefile to process your paper
 -----
 
-1. Add "bib-update" as a dependency for the rule that calls bibtex.
-2. Add the following rules to your Makefile.
+1. Add "bib" as a dependency for the rule that calls bibtex; for example,
+make "bib" a dependency for the myfile.bbl target.
+2. Add "bib-update" as a dependency of your default target (such as "all").
+3. Add the following rules to your Makefile.
 
 export BIBINPUTS ?= .:bib
 
@@ -73,7 +75,10 @@ bib:
 	hg clone https://plume-bib.googlecode.com/hg/ bib
 .PHONY: bib-update
 bib-update: bib
+# To skip running the hg command, invoke make like this:  make NOHG=t ...
+ifndef NOHG
 	cd bib && hg pull -u && make
+endif
 
 
 SETUP -- non-Makefile version
