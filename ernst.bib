@@ -5267,6 +5267,50 @@ endgame.",
 
 
 
+@Article{ArtziQKE2009,
+  author = 	 "Shay Artzi and Jaime Quinonez and Adam Kie{\.z}un and Michael D. Ernst",
+  pseudoauthor = "David Glasser",
+  title = 	 "Parameter reference immutability: Formal definition, inference tool, and comparison",
+  journal = 	 JASE,
+  year = 	 2009,
+  volume = 	 "16",
+  number = 	 "1",
+  pages = 	 "145--192",
+  month = 	 mar,
+  abstract =
+   "Knowing which method parameters may be mutated during a method's 
+    execution is useful for many software engineering tasks. 
+    A parameter reference is \emph{immutable} if it cannot be used to modify the
+     state of its referent object during the method's execution.
+    We formally define this notion, in a core object-oriented language. 
+    Having the formal definition enables determining correctness and accuracy
+    of tools approximating this definition and unbiased comparison of analyses
+    and tools that approximate similar definitions.
+    \par
+    We present Pidasa, a tool for classifying parameter reference immutability.
+    Pidasa combines several
+    lightweight, scalable analyses in stages, with each stage
+    refining the overall result.  The resulting analysis is scalable and
+    combines the strengths of its component analyses.  As one of the
+    component analyses, we present a novel dynamic mutability analysis
+    and show how its results can be improved by random input generation.
+    Experimental results on programs of up to~185 kLOC show that,
+    compared to previous approaches, Pidasa increases both run-time performance
+    and overall accuracy of immutability inference.",
+  basefilename = "mutability-jase2009",
+  TODOdownloads = "*",
+  downloadsnonlocal =
+   "http://www.cs.washington.edu/homes/mernst/pubs/mutability-jase2009.pdf PDF",
+  category = "Immutability (side effects)",
+  summary =
+    "This paper defines reference immutability formally and precisely.  The
+     paper gives new algorithms for inferring immutability that are more
+     scalable and precise than previous approaches.  The paper compares our
+     algorithms, previous algorithms, and the formal definition.",
+}
+
+
+
 @TechReport{ArtziKDTDPE2009,
   author = 	 "Shay Artzi and Adam Kie{\.z}un and Julian Dolby and Frank Tip and Danny Dig and Amit Paradkar and Michael D. Ernst",
   authorASCII = 	 "Shay Artzi and Adam Kiezun and Julian Dolby and Frank Tip and Danny Dig and Amit Paradkar and Michael D. Ernst",
@@ -5441,50 +5485,6 @@ endgame.",
 }
 
 
-@Article{ArtziQKE2009,
-  author = 	 "Shay Artzi and Jaime Quinonez and Adam Kie{\.z}un and Michael D. Ernst",
-  pseudoauthor = "David Glasser",
-  title = 	 "A formal definition and evaluation of parameter immutability",
-  journal = 	 JASE,
-  year = 	 2009,
-  volume = 	 "16",
-  number = 	 "1",
-  pages = 	 "145--192",
-  NEEDmonth = 	 "*",
-  abstract =
-   "Knowing which method parameters may be mutated during a method's 
-    execution is useful for many software engineering tasks. 
-    A parameter reference is \emph{immutable} if it cannot be used to modify the
-    state of its referent object during the method's execution.
-    We formally define this notion, in a core object-oriented language. 
-    Having the formal definition enables determining correctness and accuracy
-    of tools approximating this definition and unbiased comparison of analyses
-    and tools that approximate similar definitions.
-    \par
-    We present Pidasa, a tool for classifying parameter reference immutability.
-    Pidasa combines several
-    lightweight, scalable analyses in stages, with each stage
-    refining the overall result.  The resulting analysis is scalable and
-    combines the strengths of its component analyses.  As one of the
-    component analyses, we present a novel dynamic mutability analysis
-    and show how its results can be improved by random input generation.
-    Experimental results on programs of up to~185 kLOC show that,
-    compared to previous approaches, Pidasa increases both run-time performance
-    and overall accuracy of immutability inference.",
-  basefilename = "mutability-jase2009",
-  TODOdownloads = "*",
-  downloadsnonlocal =
-   "http://www.cs.washington.edu/homes/mernst/pubs/mutability-jase2009.pdf PDF",
-  category = "Immutability (side effects)",
-  summary =
-    "This paper defines reference immutability formally and precisely.  The
-     paper gives new algorithms for inferring immutability that are more
-     scalable and precise than previous approaches.  The paper compares our
-     algorithms, previous algorithms, and the formal definition.",
-}
-
-
-
 @TechReport{TipFKEBDS2009,
   author = 	 "Frank Tip and Robert M. Fuhrer and Adam Kiezun and Michael D. Ernst and Ittai Balaban and Bjorn De Sutter",
   title = 	 "Refactoring using type constraints",
@@ -5518,6 +5518,55 @@ endgame.",
    "A program is one solution to the type constraints that are imposed by its
     interfaces and use of libraries.  Other solutions may be possible, and
     they represent legal refactiorings of the program."
+}
+
+
+@InProceedings{Ernst2009:SCAM,
+  author = 	 "Michael D. Ernst",
+  title = 	 "How analysis can hinder source code manipulation --- and what to do about it",
+  booktitle = SCAM2009,
+  NEEDpages = 	 "*",
+  year = 	 2009,
+  address = 	 SCAM2009addr,
+  month = 	 SCAM2009date,
+  abstract =
+   "Source code analysis is a prerequisite to source code manipulation.  An
+    understanding of what the code does --- that is, a model of its behavior --- is
+    needed in order to propose or to verify a transformation, to enable
+    subsequent analyses, and for other purposes.  The research community is
+    justifiably proud of its many successful analysis techniques and
+    applications.
+    \par
+    However, in some cases an analysis can hinder source code manipulation.
+    Simple examples are a type system, style checker, or analysis that forbids,
+    or cannot handle, certain code idioms.  Every programmer is familiar with
+    adjusting coding style to the limitations of a language, framework, build
+    system, etc.  Similar limitations apply to automated program manipulation.
+    \par
+    Related problems arise when analyzing legacy code.  A programmer may have
+    chosen among multiple designs with similar qualities.  Later, when an
+    analysis reveals a reason that one of them was preferable, the cost of
+    reworking the program may be prohibitive, particularly if the
+    transformation is not justified on correctness grounds.
+    \par
+    I will explore these and related problems in the context of type inference,
+    type checking, and testing --- drawing connections and highlighting
+    differences among them.  I will illustrate both the strengths of these
+    activities and also some ways that they are less useful than they could be.
+    I will suggest lifting some of their strictures, either temporarily and
+    permanently, in an effort to give programmers the best of all worlds.",
+  basefilename = "staticdynamic-scam2009",
+  downloads =
+   "http://code.google.com/p/ductilej/ Implementation",
+  downloadsnonlocal =
+   "http://www.cs.washington.edu/homes/mernst/pubs/staticdynamic-scam2009-slides.pdf Slides (PDF);
+    http://www.cs.washington.edu/homes/mernst/pubs/staticdynamic-scam2009-slides.pptx Slides (Powerpoint)",
+  supersededby = "BayneCE2011",
+  category =  "Dynamic analysis",
+  summary =
+   "This talk proposes a way to obtain the rapid development of a
+   dynamically-typed language, and the reliability and comprehensibility of
+   a statically-typed language, via two views of the program during development.",
 }
 
 
@@ -5730,6 +5779,7 @@ endgame.",
    "http://www.cs.washington.edu/homes/mernst/pubs/staticdynamic-tap2010.pdf extended abstract (PDF);
     http://www.cs.washington.edu/homes/mernst/pubs/staticdynamic-tap2010-slides.pdf Slides (PDF);
     http://www.cs.washington.edu/homes/mernst/pubs/staticdynamic-tap2010-slides.pptx Slides (Powerpoint)",
+  supersededby = "BayneCE2011",
   category =  "Dynamic analysis",
   summary =
    "This talk proposes a way to obtain the rapid development of a
@@ -6151,6 +6201,152 @@ endgame.",
 }
 
 
+@InProceedings{BrunHEN2011,
+  author = 	 "Yuriy Brun and Reid Holmes and Michael D. Ernst and David Notkin",
+  title = 	 "Proactive detection of collaboration conflicts",
+  booktitle =    FSE2011,
+  NEEDpages = 	 "*",
+  year = 	 2011,
+  address = 	 FSE2011addr,
+  month = 	 FSE2011date,
+  OPTnote = 	 "",
+  OPTannote = 	 "",
+  abstract =
+   "Collaborative development can be hampered when developers have
+    inconsistent views of a shared project.  Conflicts arise from
+    inconsistencies and these conflicts are often costly.  Preventing the
+    possibility of conflicts is impractical:  it would prevent concurrent
+    work.  Instead, we present an approach to help developers identify and
+    resolve conflicts early, before they fester and propagate, and before
+    relevant changes fade away in the developers' memories.  This paper
+    presents three sets of results.
+    First, a study of over three
+    million lines of open-source systems establishes quantitatively
+    that in practice inconsistencies are frequent, persistent, and appear in
+    build and test activities as well as in overlapping textual edits.
+    Second, we identify previously-unexploited information that precisely
+    diagnoses important classes of conflicts; we compute these conflicts
+    using the novel technique of speculative analysis over version control
+    operations.
+    Third, we describe the design of Crystal, a publicly-available tool that
+    uses speculative analysis to make concrete advice unobtrusively available
+    to developers, helping them identify, manage, and prevent conflicts.
+    We compare and contrast our approach to related research results,
+    including awareness tools and continuous development.",
+  basefilename = "vc-conflicts-fse2011",
+  downloads =
+    "http://www.cs.washington.edu/homes/brun/research/crystal/ Implementation",
+  category =  "Software engineering",
+  summary =
+   "The Crystal tool informs a developer when his individual work can be
+    safely merged with his co-workers' changes, and when his individual work
+    conflicts with co-workers, by speculatively performing version control
+    system operations in the background.",
+}
+
+
+@InProceedings{BeschastnikhBSSE2011,
+  author = 	 "Ivan Beschastnikh and Yuriy Brun and Sigurd Schneider and Michael Sloan and Michael D. Ernst",
+  title = 	 "Leveraging existing instrumentation to automatically infer invariant-constrained models",
+  booktitle =    FSE2011,
+  NEEDpages = 	 "*",
+  year = 	 2011,
+  address = 	 FSE2011addr,
+  month = 	 FSE2011date,
+  abstract =
+   "Computer systems are often difficult to debug and understand.  A
+    common way of gaining insight into system behavior is to inspect
+    execution logs and documentation. Unfortunately, manual inspection
+    of logs is an arduous process and documentation is often incomplete
+    and out of sync with the implementation.
+    \par
+    This paper presents \emph{Synoptic}, a tool that helps developers by
+    inferring a concise and accurate system model. Unlike most related
+    work, Synoptic does not require developer-written scenarios,
+    specifications, negative execution examples, or other complex user
+    input. Synoptic processes the logs most systems already produce and
+    requires developers only to specify a set of regular expressions for
+    parsing the logs.
+    \par
+    Synoptic has two unique features.  First, the model it produces
+    satisfies temporal invariants mined from the logs, improving
+    accuracy over related approaches.  Second, Synoptic uses refinement
+    and coarsening to explore the model space.  This improves model
+    efficiency and precision, compared to using just one approach.
+    \par
+    In this paper, we formally prove that Synoptic always produces a
+    model that satisfies exactly the temporal invariants that hold in
+    the log, and we argue that it does so efficiently. We empirically
+    evaluate Synoptic through two user experience studies, one with a
+    developer of a large, real-world system and another with 45 students
+    in a distributed systems course.  Developers used Synoptic-generated
+    models to verify known bugs, diagnose new bugs, and increase their
+    confidence in the correctness of their systems.  None of the
+    developers in our evaluation had a background in formal methods but
+    were able to easily use Synoptic and detect implementation bugs in
+    as little as a few minutes.",
+  OPTbasefilename = "",
+  downloads =
+    "http://code.google.com/p/synoptic/ Implementation",
+  OPTdownloadsnonlocal = "",
+  OPTsupersededby = "",
+  category =  "Software engineering",
+  summary =
+   "The Crystal tool informs a developer when his individual work can be
+    safely merged with his co-workers' changes, and when his individual work
+    conflicts with co-workers, by speculatively performing version control
+    system operations in the background.",
+}
+
+
+
+@InProceedings{ZhangSBE2011,
+  author = 	 "Sai Zhang and David Saff and Yingyi Bu and Michael D. Ernst",
+  title = 	 "Combined Static and Dynamic Automated Test Generation",
+  booktitle =    ISSTA2011,
+  NEEDpages = 	 "*",
+  year = 	 "2011",
+  address = 	 ISSTA2011addr,
+  month = 	 ISSTA2011date,
+  abstract =
+   "In an object-oriented program, a unit test often consists of a sequence of
+    method calls that create and mutate objects, then use them as arguments to
+    a method under test.  It is challenging to automatically generate sequences
+    that are \textit{legal} and \textit{behaviorally-diverse}, that is,
+    reaching as many different program states as possible.
+    \par
+    This paper proposes a combined static and dynamic automated test generation
+    approach to address these problems, for code without a formal
+    specification. Our approach first uses dynamic analysis to infer a call
+    sequence model from a sample execution, then uses static analysis to
+    identify method dependence relations based on the fields they may read or
+    write. Finally, both the dynamically-inferred model (which tends to be
+    accurate but incomplete) and the statically-identified dependence
+    information (which tends to be conservative) guide a random test generator
+    to create legal and behaviorally-diverse tests.
+    \par
+    Our Palus tool implements this testing approach. We compared its
+    effectiveness with a pure random approach, a dynamic-random approach
+    (without a static phase), and a static-random approach (without a dynamic
+    phase) on several popular open-source Java programs. Tests generated by
+    Palus achieved higher structural coverage and found more bugs.
+    \par
+    Palus is also internally used in Google. It has found 22 previously-unknown
+    bugs in four well-tested Google products.",
+  basefilename = "palus-testgen-issta2011",
+  OPTdownloads = "",
+  OPTdownloadsnonlocal = "",
+  OPTsupersededby = "",
+  category =  "Testing",
+  summary =
+   "The Palus tool performs constraint-based random test generations, using
+    constraints learned from dynamic executions and from static analysis of
+    method coupling.  Palus outperforms all other known test generation
+    approaches, and found real bugs in well-tested commercial software.",
+}
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% To appear, no date known yet
 %%%
@@ -6294,51 +6490,14 @@ endgame.",
 }
 
 
+
+
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Submitted
 %%%
-
-
-@Misc{BrunHEN2011,
-  author = 	 "Yuriy Brun and Reid Holmes and Michael D. Ernst and David Notkin",
-  title = 	 "Proactive detection of collaboration conflicts",
-  month = 	 aug,
-  year = 	 2011,
-  abstract =
-   "Most software is built by multiple people.  Each developer makes
-    decisions about when to incorporate other team members' changes, and when
-    to share changes with other team members.  A mistake in these decisions
-    --- performing these tasks too early or too late --- can lead to delays
-    in development, wasted work, or re-work.
-    \par
-    This paper presents Crystal, a tool that proactively alerts a developer
-    to: inconsistencies with teammates' work and opportunities to synchronize
-    without suffering conflicts.
-    First, we show that developers make suboptimal choices about when to
-    synchronize their work by analyzing the histories of eight collaborative,
-    real-world, open-source projects.  Crystal could let developers know
-    about conflicts, on average, 10 days earlier than they are being resolved
-    today.  Crystal could also improve developer confidence that
-    conflict-free changes can be merged safely, on average, 11 days earlier.
-    Second, we perform a systematic study of the space of information that
-    can assist developers in making better-informed decisions, identify and
-    classify the pertinent information, and design a Crystal interface that
-    allows developers to quickly recognize projects and relationships with
-    collaborators that likely required attention.  We have deployed Crystal
-    to a handful of developers and used their feedback to improve both the
-    interface and our understanding of collaborative development
-    interactions.",
-  omitfromcv = 1,
-  underreview = "ICSE 2011",
-  category =  "Software engineering",
-  downloads =
-    "http://www.cs.washington.edu/homes/brun/research/crystal/ Implementation",
-  summary =
-   "The Crystal tool informs a developer when his individual work can be
-    safely merged with his co-workers' changes, and when his individual work
-    conflicts with co-workers, by speculatively performing version control
-    system operations in the background.",
-}
 
 
 
@@ -6364,7 +6523,7 @@ endgame.",
     readable by the product's developers, and required few edits as the
     system under test evolved.",
   omitfromcv = 1,
-  underreview = "ICSE 2011",
+  underreview = "ASE 2011",
   category =  "Testing",
   summary =
    "This paper shows how to apply automatic test generation to the domain of
