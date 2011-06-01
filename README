@@ -1,4 +1,4 @@
-Directory of BibTeX bibliography files.
+plume-bib:  collection of BibTeX bibliography files.
 
 This is a set of BibTeX bibliographies.  You can re-use them rather than
 having to re-type or download.  Re-typing or downloading is a notorious
@@ -10,7 +10,8 @@ Here are some other features:
  # Short and long versions of names, locations, and dates for conferences,
    journals, etc.  The short (abbreviated) version is convenient if your
    paper is nearing its page limit.  Changing between the two versions only
-   requires a two-character change to your LaTeX file (see below).
+   requires a two-character change to your LaTeX file (see below), and no
+   changes to any bib files.
  # Detailed dates.  Dates contain days of the month, which give the dates
    of just the appropriate track rather than the whole conference.  The
    abbreviated version omits the day of the month, though.
@@ -21,8 +22,15 @@ Here are some other features:
  # Searchable via the bibfind tool.  For instance, 
      bibfind keyword1 keyword2
    displays all the bibliographies with all the keywords, either in the
-   entries in the comments.  (This is why there are no line breaks in the
-   comments, though we may lift that restriction in the future.)
+   entries in the comments.  (This is why there are no blank lines in the
+   comments that abut some bib entries:  the search tool considers each
+   blank line to start a new entry.  We may lift that restriction in the
+   future.)
+
+You can obtain the bibliographies by running the command
+  hg clone https://plume-bib.googlecode.com/hg/ bib
+but you don't need to -- see below for how to set your build system to
+automatically obtain and/or update a copy.
 
 
 USAGE
@@ -35,10 +43,10 @@ bibliography strings, use one of these commands in your LaTeX file:
 
 When using the bibliographies, add near the top of your LaTeX document:
   \usepackage{url}
-This defines the \url command used in the bibliographies.  To make it use
-a slightly smaller font (the regular tt font is very big), do either
+This defines the \url command used in the bibliographies.  To make URLs use
+a slightly narrower font (the regular tt font is very wide), use:
   \usepackage{pslatex}
-or
+or, to use a smaller font, use:
   \usepackage{relsize}
   \def\UrlFont{\smaller\ttfamily}
 
@@ -75,7 +83,7 @@ bib:
 	hg clone https://plume-bib.googlecode.com/hg/ bib
 .PHONY: bib-update
 bib-update: bib
-# To skip running the hg command, invoke make like this:  make NOHG=t ...
+# To skip running the hg command, invoke make like this:  make NOHG=1 ...
 ifndef NOHG
 	cd bib && hg pull -u && make
 endif
@@ -88,7 +96,7 @@ Obtain the bibliographies by running the command
 
   hg clone https://plume-bib.googlecode.com/hg/ bib
 
-Then, add the "plume-bib" directory to your BIBINPUTS environment variable.
+Then, add the "bib" directory to your BIBINPUTS environment variable.
   bash syntax:
     export BIBINPUTS=.:PATHTOPLUMEBIB:..:
   csh syntax:
@@ -99,7 +107,11 @@ SETUP -- miscellaneous details
 -----
 
 For the bibfind command, see http://code.google.com/p/uwisdom/wiki/README .
-It uses the "bibroot" file in the repository.
+It uses the "bibroot" file in the plume-bib directory.
+
+If you wish to have only a single copy of the bibliographies on your
+computer, you can clone the repository just once and make a symbolic link
+to any directories where you are writing a paper.
 
 Note for miktex users:
 The bibtex that is supplied with miktex (the popular Windows implementation)
