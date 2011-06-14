@@ -5511,6 +5511,7 @@ endgame.",
     work.",
   basefilename = "refactoring-type-constraints-rc24804",
   TODOdownloads = "*",
+  supersededby = "TipFKEBDS2011",
   downloadsnonlocal =
    "http://www.cs.washington.edu/homes/mernst/pubs/refactoring-type-constraints-rc24804.pdf PDF",
   category =  "Refactoring",
@@ -5557,7 +5558,7 @@ endgame.",
     permanently, in an effort to give programmers the best of all worlds.",
   basefilename = "staticdynamic-scam2009",
   downloads =
-   "http://code.google.com/p/ductilej/ Implementation",
+   "http://code.google.com/p/ductilej/ implementation",
   downloadsnonlocal =
    "http://www.cs.washington.edu/homes/mernst/pubs/staticdynamic-scam2009-slides.pdf Slides (PDF);
     http://www.cs.washington.edu/homes/mernst/pubs/staticdynamic-scam2009-slides.pptx Slides (Powerpoint)",
@@ -5693,7 +5694,7 @@ endgame.",
     both to programmers and to static analyses.",
   basefilename = "field-initialization-tr100201",
   downloadsnonlocal = "ftp://ftp.cs.washington.edu/tr/2010/02/UW-CSE-10-02-01.PDF PDF",
-  EVENTUALLYsupersededby = "*",
+  supersededby = "SpotoE2011",
   category =  "Static analysis",
   summary =
    "This paper presents a flow-sensitive, exception-aware static analysis that 
@@ -5739,6 +5740,7 @@ endgame.",
     control, justifying a tool design and implementation effort.",
   basefilename = "speculative-merge-tr100301",
   downloadsnonlocal = "ftp://ftp.cs.washington.edu/tr/2010/03/UW-CSE-10-03-01.PDF PDF",
+  supersededby = "BrunHEN2011",
   category =  "Software engineering",
   summary =
    "Are software engineers sometimes unaware that their work conflicts with
@@ -5774,7 +5776,7 @@ endgame.",
   basefilename = "staticdynamic-tap2010",
   downloads =
    "http://malaga2010.lcc.uma.es/tv/tools5.html Video;
-    http://code.google.com/p/ductilej/ Implementation",
+    http://code.google.com/p/ductilej/ implementation",
   downloadsnonlocal =
    "http://www.cs.washington.edu/homes/mernst/pubs/staticdynamic-tap2010.pdf extended abstract (PDF);
     http://www.cs.washington.edu/homes/mernst/pubs/staticdynamic-tap2010-slides.pdf Slides (PDF);
@@ -6035,6 +6037,39 @@ endgame.",
 %%% 2011
 %%%
 
+
+@Article{TipFKEBDS2011,
+  author = 	 "Tip, Frank and Fuhrer, Robert M. and Kie{\.z}un, Adam and Michael D. Ernst and Balaban, Ittai and Sutter, Bjorn De",
+  title = 	 "Refactoring using type constraints",
+  journal = 	 TOPLAS,
+  year = 	 2011,
+  volume = 	 33,
+  number = 	 3,
+  pages = 	 "9:1--9:47",
+  month = 	 may,
+  abstract =
+   "Type constraints express subtype relationships between the types of program
+    expressions, for example, those relationships that are required for type
+    correctness. Type constraints were originally proposed as a convenient
+    framework for solving type checking and type inference problems. This paper
+    shows how type constraints can be used as the basis for practical
+    refactoring tools. In our approach, a set of type constraints is derived
+    from a type-correct program P\@. The main insight behind our work is the
+    fact that P constitutes just one solution to this constraint system, and
+    that alternative solutions may exist that correspond to refactored versions
+    of P\@. We show how a number of refactorings for manipulating types and
+    class hierarchies can be expressed naturally using type
+    constraints. Several refactorings in the standard distribution of Eclipse
+    are based on our work.",
+  basefilename = "refactoring-type-constraints-toplas2011",
+  category =  "Refactoring",
+  summary =
+   "A program is one solution to the type constraints that are imposed by its
+    interfaces and use of libraries.  Other solutions may be possible, and
+    they represent legal refactiorings of the program."
+}
+
+
 @InProceedings{SpotoE2011,
   author = 	 "Fausto Spoto and Michael D. Ernst",
   title = 	 "Inference of field initialization",
@@ -6190,7 +6225,7 @@ endgame.",
     used the tool on four real-world applications and inferred interesting
     ownership structures.",
   basefilename = "tunable-typeinf-ecoop2011",
-  OPTdownloads = "",
+  TODOdownloads = "http://www.cs.washington.edu/homes/wmdietl/inference/ Implementation and experiments",
   OPTdownloadsnonlocal = "",
   OPTsupersededby = "",
   category =  "Programming language design",
@@ -6235,7 +6270,7 @@ endgame.",
     including awareness tools and continuous development.",
   basefilename = "vc-conflicts-fse2011",
   downloads =
-    "http://www.cs.washington.edu/homes/brun/research/crystal/ Implementation",
+    "http://www.cs.washington.edu/homes/brun/research/crystal/ implementation",
   category =  "Software engineering",
   summary =
    "The Crystal tool informs a developer when his individual work can be
@@ -6287,7 +6322,7 @@ endgame.",
     as little as a few minutes.",
   OPTbasefilename = "",
   downloads =
-    "http://code.google.com/p/synoptic/ Implementation",
+    "http://code.google.com/p/synoptic/ implementation",
   OPTdownloadsnonlocal = "",
   OPTsupersededby = "",
   category =  "Software engineering",
@@ -6334,7 +6369,7 @@ endgame.",
     Palus is also internally used in Google. It has found 22 previously-unknown
     bugs in four well-tested Google products.",
   basefilename = "palus-testgen-issta2011",
-  OPTdownloads = "",
+  downloads = "http://code.google.com/p/tpalus/ implementation",
   OPTdownloadsnonlocal = "",
   OPTsupersededby = "",
   category =  "Testing",
@@ -6344,6 +6379,7 @@ endgame.",
     method coupling.  Palus outperforms all other known test generation
     approaches, and found real bugs in well-tested commercial software.",
 }
+
 
 
 
