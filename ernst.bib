@@ -6317,13 +6317,44 @@ endgame.",
     including awareness tools and continuous development.",
   basefilename = "vc-conflicts-fse2011",
   downloads =
-    "http://www.cs.washington.edu/homes/brun/research/crystal/ implementation",
+    "http://www.cs.washington.edu/homes/brun/research/crystal/ implementation;
+     http://www.cs.washington.edu/homes/mernst/pubs/vc-conflicts-fse2011-tooldemo.pdf tool demo paper (PDF)",
   category =  "Software engineering",
   summary =
    "The Crystal tool informs a developer when his individual work can be
     safely merged with his co-workers' changes, and when his individual work
     conflicts with co-workers, by speculatively performing version control
     system operations in the background.",
+}
+
+
+@InProceedings{BrunHEN2011:tooldemo,
+  author = 	 "Yuriy Brun and Reid Holmes and Michael D. Ernst and David Notkin",
+  title = 	 "Crystal: Precise and unobtrusive conflict warnings",
+  booktitle = FSE2011,
+  NEEDpages = 	 "*",
+  year = 	 2011,
+  address = 	 FSE2011addr,
+  month = 	 FSE2011date,
+  abstract =
+   "During collaborative development, individual developers can create
+    conflicts in their copies of the code. Such conflicting edits are
+    frequent in practice, and resolving them can be costly. We present
+    Crystal, a tool that proactively examines developers’ code and precisely
+    identifies and reports on textual, compilation, and behavioral
+    conflicts. When conflicts are present, Crystal enables developers
+    to resolve them more quickly, and therefore at a lesser cost. When
+    conflicts are absent, Crystal increases the developers’ confidence
+    that it is safe to merge their code. Crystal uses an unobtrusive interface
+    to deliver pertinent information about conflicts. It informs
+    developers about actions that would address the conflicts and about
+    people with whom they should communicate.",
+  supersededby = "BrunHEN2011 A tool demonstration",
+  category =  "Software engineering",
+  summary =
+   "This tool demo describes the Crystal tool, which speculatively performs
+    version control operations in the background, to help a developer know
+    when it is safe and desirable to share changes with other developers.",
 }
 
 
@@ -6369,15 +6400,41 @@ endgame.",
     as little as a few minutes.",
   basefilename = "synoptic-fse2011",
   downloads =
-    "http://code.google.com/p/synoptic/ implementation",
+    "http://code.google.com/p/synoptic/ implementation;
+     http://www.cs.washington.edu/homes/mernst/pubs/synoptic-fse2011-tool-demo.pdf tool demo paper (PDF)",
   OPTdownloadsnonlocal = "",
   OPTsupersededby = "",
   category =  "Software engineering",
   summary =
-   "The Crystal tool informs a developer when his individual work can be
-    safely merged with his co-workers' changes, and when his individual work
-    conflicts with co-workers, by speculatively performing version control
-    system operations in the background.",
+   "Synoptic infers, from system logs, a finite state machine model of the
+    system.  Synoptic's novel inference algorithm efficiently leads to compact
+    but accurate models.  Programmers found Synoptic useful for bug detection
+    and other tasks.",
+}
+
+
+@InProceedings{BeschastnikhABE2011,
+  author = 	 "Ivan Beschastnikh and Jenny Abrahamson and Yuriy Brun and Michael D. Ernst",
+  title = 	 "Synoptic: Studying logged behavior with inferred models",
+  booktitle = FSE2011,
+  NEEDpages = 	 "*",
+  year = 	 2011,
+  address = 	 FSE2011addr,
+  month = 	 FSE2011date,
+  abstract =
+   "Logging is a powerful method for capturing program activity and state
+    during an execution. However, log inspection remains a tedious
+    activity, with developers often piecing together what went on from
+    multiple log lines and across many files. This paper describes
+    Synoptic, a tool that takes logs as input and outputs a finite state
+    machine that models the process generating the logs. The paper
+    overviews the model inference algorithms.  Then, it describes the
+    Synoptic tool, which is designed to support a rich log exploration
+    workflow.",
+  basefilename = "synoptic-fse2011-tool-demo",
+  supersededby = "BeschastnikhBSSE2011 A tool demo",
+  category =  "Software engineering",
+  NEEDsummary = 	 "*",
 }
 
 
