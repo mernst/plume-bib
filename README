@@ -119,3 +119,54 @@ does not support the BIBINPUTS variable. You need to modify the miktex
 configuration.  In file ...\miktex\config\miktex.ini, edit this entry:
  Input Dirs=searchpath 
 (search path for BibTeX input files -- both databases and style files).
+
+
+ALTERNATIVES: @string vs. crossref
+------------
+
+plume-bib's .bib files use @string for each of the fields of a containing
+work such as a proceedings volume, as in:
+  @string{FSE2011 = "Proceedings of ESEC/FSE 2011" = "ESEC/FSE 2011"}
+  @string{FSE2011date = }
+  @string{FSE2011addr = "Szeged, Hungary" = ""}
+  ...
+  @InProceedings{MyConferencePaper,
+    ...
+    booktitle =  FSE2011,
+    year =       2011,
+    address =    FSE2011addr,
+    month =      FSE2011date,
+  }
+
+You could instead use BibTeX's crossref feature:
+  @Proceedings{BrunHEN2011,
+    ...
+    title =      "Proceedings of ESEC/FSE 2011" = "ESEC/FSE 2011",
+    year =       2011,
+    address =    "Szeged, Hungary" = "",
+    month =      sep # "~7--9," = sep,
+  }
+  ...
+  @InProceedings{BrunHEN2011,
+    ...
+    crossref =   "FSE2011",
+  }
+
+This leads to a slightly smaller .bib file.  However, by default it
+produces output like
+  [1] Brun et al.  Paper title.  In [2].
+  [2] Proceedings of ESEC/FSE 2011.  Szeged, Hungary, Sep. 7--9, 2011.
+
+rather than the (usually) preferable
+  [1] Brun et al.  Paper title.  In Proceedings of ESEC/FSE 2011.  Szeged,
+      Hungary, Sep. 7--9, 2011.
+
+You can get around this problem by passing the -min-crossrefs=9999
+command-line option to BibTeX; for example:
+  bibtex -min-crossrefs=9999 mypaper
+
+Whereas plume-bib is written using the @string approach, it would be
+possible to adapt it to accommodate the crossref approach, while retaining
+the other benefits of plume-bib.  One advantage of the @string approach is
+that it is less error-prone:  authors commonly forget to use
+"-min-crossrefs=9999" when running BibTeX.
