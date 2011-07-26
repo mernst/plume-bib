@@ -5076,6 +5076,7 @@ endgame.",
     educate software developers on how to parallelize sequential programs, and
     can provide hints for tool vendors about what transformations are worth
     automating.",
+  supersededby = "DigME2011",
   basefilename = "concurrent-history-tr053",
   downloadsnonlocal =
    "http://dspace.mit.edu/bitstream/handle/1721.1/42832/MIT-CSAIL-TR-2008-053.pdf PDF;
@@ -6197,6 +6198,43 @@ endgame.",
 }
 
 
+@InProceedings{DigME2011,
+  author = 	 "Danny Dig and John Marrero and Michael D. Ernst",
+  title = 	 "How do programs become more concurrent?  A story of program transformations",
+  booktitle = "Proceedings of the 4th International Workshop on Multicore Software Engineering",
+  pages = 	 "43--50",
+  year = 	 2011,
+  address = 	 ICSE2011addr,
+  month = 	 May # "~21,",
+  abstract =
+   "In the multi-core era, programmers need to resort to parallelism if they
+    want to improve program performance. Thus, a major maintenance task will be
+    to make sequential programs more concurrent. Must concurrency be designed
+    into a program, or can it be retrofitted later? What are the most common
+    transformations to retrofit concurrency into sequential programs? Are these
+    transformations random, or do they belong to certain categories? How can we
+    automate these transformations?
+    \par
+    To answer these questions we analyzed the source code of five open-source
+    Java projects and looked at a total of 14 versions. We analyzed
+    qualitatively and quantitatively the concurrency-related
+    transformations. We found that these transformations belong to four
+    categories: transformations that improve the responsiveness, the
+    throughput, the scalability, or correctness of the applications. In 73.9%
+    of these transformations, concurrency was retrofitted on existing program
+    elements. In 20.5% of the transformations, concurrency was designed into
+    new program elements. Our findings educate software developers on how to
+    parallelize sequential programs, and provide hints for tool vendors about
+    what transformations are worth automating.",
+  basefilename = "concurrent-history-iwmse2011",
+  category =  "Refactoring",
+  summary =
+   "This paper is a historical analysis of the transformations that
+    programmers used to convert sequential programs into concurrent versions.",
+}
+
+
+
 @InProceedings{ZhangSBE2011,
   author = 	 "Sai Zhang and David Saff and Yingyi Bu and Michael D. Ernst",
   title = 	 "Combined Static and Dynamic Automated Test Generation",
@@ -6272,7 +6310,7 @@ endgame.",
     used the tool on four real-world applications and inferred interesting
     ownership structures.",
   basefilename = "tunable-typeinf-ecoop2011",
-  TODOdownloads = "http://www.cs.washington.edu/homes/wmdietl/inference/ Implementation and experiments",
+  downloads = "http://www.cs.washington.edu/homes/wmdietl/inference/ Implementation and experiments",
   OPTdownloadsnonlocal = "",
   OPTsupersededby = "",
   category =  "Programming language design",
@@ -6441,6 +6479,123 @@ endgame.",
 
 
 
+@InProceedings{ZhangZE2011,
+  author = 	 "Sai Zhang aand Cheng Zhang and Michael D. Ernst",
+  title = 	 "Automated documentation inference to explain failed tests",
+  booktitle = ASE2011,
+  NEEDpages = 	 "*",
+  year = 	 2011,
+  address = 	 ASE2011addr,
+  month = 	 ASE2011date,
+  abstract =
+   "A failed test reveals a potential bug in the tested code. Developers need
+    to understand which parts of the test are relevant to the failure before
+    they start bug-fixing.
+    \par
+    This paper presents a fully-automated technique (and its tool
+    implementation, called FailureDoc) to explain a failed test.  FailureDoc
+    augments the failed test with explanatory documentation in the form of code
+    comments. The comments indicate changes to the test that would cause it to
+    pass, helping programmers understand why the test fails.
+    \par
+    We evaluated FailureDoc on five real-world programs.  FailureDoc generated
+    meaningful comments for most of the failed tests. The inferred comments
+    were concise and revealed important debugging clues.  We further conducted
+    a user study. The results showed that FailureDoc is useful in understanding
+    failed tests and fixing bugs.",
+  basefilename = "test-documentation-ase2011",
+  downloads = 
+   "http://code.google.com/p/failuredoc/ implementation",
+  category =  "Testing",
+  summary =
+   "When a test fails, debugging begins.  The FailureDoc tool indicates which
+    parts of a failed test are most relevant to the failure, which helps
+    programmers to understand and fix the failure.",
+}
+
+
+@InProceedings{RobinsonEPAL2011,
+  author = 	 "Brian Robinson and Michael D. Ernst and Jeff H. Perkins and Vinay Augustine and Nuo Li",
+  title = 	 "Automatically generating maintainable regression tests",
+  booktitle = ASE2011,
+  NEEDpages = 	 "*",
+  year = 	 2011,
+  address = 	 ASE2011addr,
+  month = 	 ASE2011date,
+  abstract =
+   "A regression test suite must be effective at detecting defects, and it
+    must be maintainable.  A suite that misses too many defects is useless
+    for testing.  However, a suite that issues too many hard-to-interpret
+    false positives, or requires substantial editing to accommodate changes in
+    the system under test, will be too hard to maintain and will be quickly
+    abandoned.  Furthermore, because many legacy systems lack regression
+    tests, it should be possible to generate a regression test suite without
+    human interaction, and without assuming a formal specification or test
+    oracle.
+    \par
+    This paper presents an automatic technique for generating maintainable
+    regression unit tests.  In experiments using an industrial system, the
+    generated tests achieved good coverage and mutation kill score, were
+    readable by the product's developers, and required few edits as the
+    system under test evolved.",
+  basefilename = "maintainable-tests-ase2011",
+  downloads = 
+   "http://code.google.com/p/randoop/ Randoop implementation",
+  category =  "Testing",
+  summary =
+   "This paper shows how to apply automatic test generation to the domain of
+    programs (not just libraries), and how to make the resulting test suite
+    maintainable (easy to understand and to adapt to changes in the program).",
+}
+
+
+
+@InProceedings{BeschastnikhBEKA2011,
+  author = 	 "Ivan Beschastnikh and Yuriy Brun and Michael Ernst and Arvind Krishnamurthy and Tom Anderson",
+  title = 	 "Mining invariants from partially ordered logs",
+  OPTcrossref =  "",
+  OPTkey = 	 "",
+  booktitle = SLAML2011,
+  NEEDpages = 	 "*",
+  year = 	 2011,
+  OPTeditor = 	 "",
+  OPTvolume = 	 "",
+  OPTnumber = 	 "",
+  OPTseries = 	 "",
+  address = 	 SLAML2011addr,
+  month = 	 SLAML2011date,
+  OPTorganization = "",
+  OPTpublisher = "",
+  OPTnote = 	 "",
+  OPTannote = 	 "",
+  abstract =
+   "A common assumption made in log analysis research is that the
+    underlying log is totally ordered.  For concurrent systems, this
+    assumption constrains the generated log to either exclude concurrency
+    altogether, or to capture a particular interleaving of concurrent
+    events. This paper argues that capturing concurrency as a partial
+    order is useful and often indispensable for answering important
+    questions about concurrent systems.  To this end, we motivate a family
+    of event ordering invariants over partially ordered event traces, 
+    give two algorithms for mining these invariants from logs, 
+    and evaluate their scalability on simulated 
+    distributed system logs.",
+  OPTusesDaikon = "",
+  OPTusesDaikonAsTestSubject = "",
+  OPTomitfromcv = "",
+  basefilename = "mining-po-logs-slaml2011",
+  OPTdownloads = "",
+  OPTdownloadsnonlocal = "",
+  OPTsupersededby = "",
+  category =  "Software engineering",
+  summary =
+   "Totally ordered (linear) logs have been well-studied in the invariant
+    mining community, but many real logs (e.g., from distributed systems) are
+    partially ordered.  This paper gives algorithms for mining invariants from
+    partially ordered logs.",
+}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% To appear, no date known yet
 %%%
@@ -6594,36 +6749,6 @@ endgame.",
 %%%
 
 
-
-@Misc{RobinsonEPAL2011,
-  author = 	 "Brian Robinson and Michael D. Ernst and Jeff H. Perkins and Vinay Augustine and Nuo Li",
-  title = 	 "Automatically generating maintainable regression tests",
-  month = 	 aug,
-  year = 	 2011,
-  abstract =
-   "A regression test suite must be effective at detecting defects, and it
-    must be maintainable.  A suite that misses too many defects is useless
-    for testing.  However, a suite that issues too many hard-to-interpret
-    false positives, or requires substantial editing to accommodate changes in
-    the system under test, will be too hard to maintain and will be quickly
-    abandoned.  Furthermore, because many legacy systems lack regression
-    tests, it should be possible to generate a regression test suite without
-    human interaction, and without assuming a formal specification or test
-    oracle.
-    \par
-    This paper presents an automatic technique for generating maintainable
-    regression unit tests.  In experiments using an industrial system, the
-    generated tests achieved good coverage and mutation kill score, were
-    readable by the product's developers, and required few edits as the
-    system under test evolved.",
-  omitfromcv = 1,
-  underreview = "ASE 2011",
-  category =  "Testing",
-  summary =
-   "This paper shows how to apply automatic test generation to the domain of
-    programs (not just libraries), and how to make the resulting test suite
-    maintainable (easy to understand and to adapt to changes in the program).",
-}
 
 
 
