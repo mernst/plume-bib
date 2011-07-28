@@ -4726,6 +4726,115 @@
 
 
 
+@InProceedings{GabelS2008,
+  author = 	 "Mark Gabel and Zhendong Su",
+  title = 	 "Javert: fully automatic mining of general temporal properties from dynamic traces",
+  booktitle = FSE2008,
+  pages = 	 "339--349",
+  year = 	 2008,
+  address = 	 FSE2008addr,
+  month = 	 FSE2008date,
+  abstract =
+   "Program specifications are important for many tasks during software design,
+    development, and maintenance. Among these, temporal specifications are
+    particularly useful. They express formal correctness requirements of an
+    application's ordering of specific actions and events during execution,
+    such as the strict alternation of acquisition and release of locks. Despite
+    their importance, temporal specifications are often missing, incomplete, or
+    described only informally. Many techniques have been proposed that mine
+    such specifications from execution traces or program source code. However,
+    existing techniques mine only simple patterns, or they mine a single
+    complex pattern that is restricted to a particular set of manually selected
+    events. There is no practical, automatic technique that can mine general
+    temporal properties from execution traces.
+    \par
+    In this paper, we present Javert, the first general specification mining
+    framework that can learn, fully automatically, complex temporal properties
+    from execution traces. The key insight behind Javert is that real, complex
+    specifications can be formed by composing instances of small generic
+    patterns, such as the alternating pattern ($(ab)*$) and the resource usage
+    pattern ($(ab*c)*$). In particular, Javert learns simple generic patterns and
+    composes them using sound rules to construct large, complex
+    specifications. We have implemented the algorithm in a practical tool and
+    conducted an extensive empirical evaluation on several open source software
+    projects. Our results are promising; they show that Javert is scalable,
+    general, and precise. It discovered many interesting, nontrivial
+    specifications in real-world code that are beyond the reach of existing
+    automatic techniques.",
+}
+
+
+
+@Article{BiermannF1972,
+  author = 	 "A. W. Biermann and J. A. Feldman",
+  title = 	 "On the synthesis of finite-state machines from samples of their behavior",
+  journal = 	 ieeetc,
+  year = 	 1972,
+  volume = 	 "C-21",
+  number = 	 6,
+  pages = 	 "592--597",
+  month = 	 jun,
+  abstract =
+   "The Nerode realization technique for synthesizing finite-state machines
+    from their associated right-invariant equivalence relations is modified to
+    give a method for synthesizing machines from finite subsets of their
+    input-output behavior. The synthesis procedure includes a parameter that
+    one may adjust to obtain machines that represent the desired behavior with
+    varying degrees of accuracy and that consequently have varying
+    complexities. We discuss some of the uses of the method, including an
+    application to a sequential learning problem.",
+}
+
+
+
+
+
+
+@InProceedings{LoMP2009,
+  author = 	 "David Lo and Leonardo Mariani and Mauro Pezz\`{e}",
+  authorASCII =	 "David Lo and Leonardo Mariani and Mauro Pezze",
+  title = 	 "Automatic steering of behavioral model inference",
+  booktitle = FSE2009,
+  pages = 	 "345--354",
+  year = 	 2009,
+  address = 	 FSE2009addr,
+  month = 	 FSE2009date,
+  abstract =
+   "Many testing and analysis techniques use finite state models to validate
+    and verify the quality of software systems. Since the specification of such
+    models is complex and time-consuming, researchers defined several
+    techniques to extract finite state models from code and
+    traces. Automatically generating models requires much less effort than
+    designing them, and thus eases the verification and validation of large
+    software systems. However, when models are inferred automatically, the
+    precision of the mining process is critical. Behavioral models mined with
+    imprecise processes can include many spurious behaviors, and can thus
+    compromise the results of testing and analysis techniques that use those
+    models.
+    \par
+    In this paper, we increase the precision of automata inferred from
+    execution traces, by leveraging two learning techniques. We first mine
+    execution traces to infer statistically significant temporal properties
+    that capture relations between non consecutive and possibly distant
+    events. We then incrementally refine a simple initial automaton by merging
+    likely equivalent states. We identify equivalent states by analyzing set of
+    consecutive events, and we use the inferred temporal properties to evaluate
+    whether two equivalent states can be merged or not. We merge equivalent
+    states only if the merging does violate any temporal property, since a
+    merging that violates temporal properties is likely to introduce an
+    imprecise generalization. Our generalization process that preserves
+    temporal properties while merging states avoids breaking non-local
+    relations, and thus solves one of the major cause of overgeneralized
+    models. Thus, mined properties steer the learning of behavioral models. The
+    technique is completely automated and generates an automaton that both
+    accepts the input traces and satisfies the mined temporal properties.
+    \par
+    We evaluated our solution by comparing models inferred with and without
+    checking mined temporal properties. Results show that our steering process
+    can significantly improve precision without noticeable loss of recall.",
+  doi = {http://doi.acm.org/10.1145/1595696.1595761},
+}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Statically checking invariants (theorem proving)
@@ -8655,6 +8764,7 @@ pages = "1--39"
   address =	 FSE2002addr,
   month =	 FSE2002date
 }
+
 
 
 
