@@ -5471,7 +5471,7 @@ endgame.",
     programs using systematic testing; and compare HAMPI with another
     string solver.  HAMPI's source code,
     documentation, and the experimental data are available at
-    \url{http://people.csail.mit.edu/akiezun/hampi}.",
+    \url{http://people.csail.mit.edu/akiezun/hampi/}.",
   basefilename = "string-solver-tr004",
   downloads =
    "http://people.csail.mit.edu/akiezun/hampi/ HAMPI implementation and experiments",
@@ -6145,7 +6145,7 @@ endgame.",
     during prototyping and during the evolution of existing code.",
   basefilename = "ductile-icse2011",
   downloads =
-    "http://code.google.com/p/ductilej/ implementation",
+    "http://code.google.com/p/ductilej/ DuctileJ implementation",
   category =  "Programming language design",
   summary =
    "The DuctileJ language enables the rapid development and flexibility of a
@@ -6320,7 +6320,7 @@ endgame.",
   author = 	 "Yuriy Brun and Reid Holmes and Michael D. Ernst and David Notkin",
   title = 	 "Proactive detection of collaboration conflicts",
   booktitle =    FSE2011,
-  NEEDpages = 	 "*",
+  pages = 	 "168--178",
   year = 	 2011,
   address = 	 FSE2011addr,
   month = 	 FSE2011date,
@@ -6366,7 +6366,7 @@ endgame.",
   author = 	 "Yuriy Brun and Reid Holmes and Michael D. Ernst and David Notkin",
   title = 	 "Crystal: Precise and unobtrusive conflict warnings",
   booktitle = FSE2011,
-  NEEDpages = 	 "*",
+  pages = 	 "267--277",
   year = 	 2011,
   address = 	 FSE2011addr,
   month = 	 FSE2011date,
@@ -6512,28 +6512,28 @@ endgame.",
 
 @InProceedings{RobinsonEPAL2011,
   author = 	 "Brian Robinson and Michael D. Ernst and Jeff H. Perkins and Vinay Augustine and Nuo Li",
-  title = 	 "Automatically generating maintainable regression tests",
+  title = 	 "Scaling up automated test generation: Automatically generating maintainable regression unit tests for programs",
   booktitle = ASE2011,
   NEEDpages = 	 "*",
   year = 	 2011,
   address = 	 ASE2011addr,
   month = 	 ASE2011date,
   abstract =
-   "A regression test suite must be effective at detecting defects, and it
-    must be maintainable.  A suite that misses too many defects is useless
-    for testing.  However, a suite that issues too many hard-to-interpret
-    false positives, or requires substantial editing to accommodate changes in
-    the system under test, will be too hard to maintain and will be quickly
-    abandoned.  Furthermore, because many legacy systems lack regression
-    tests, it should be possible to generate a regression test suite without
-    human interaction, and without assuming a formal specification or test
-    oracle.
-    \par
-    This paper presents an automatic technique for generating maintainable
-    regression unit tests.  In experiments using an industrial system, the
-    generated tests achieved good coverage and mutation kill score, were
-    readable by the product's developers, and required few edits as the
-    system under test evolved.",
+   "This paper presents an automatic technique for generating maintainable
+    regression unit tests for programs.  We found previous test generation
+    techniques inadequate for two main reasons.  First. they were designed
+    for and evaluated upon libraries rather than applications.  Second, they
+    were designed to find bugs rather than to create maintainable regression
+    test suites:  the test suites that they generated were brittle and hard
+    to understand.
+    This paper presents a suite of techniques that address these problems by
+    enhancing an existing unit test generation system.  In experiments using
+    an industrial system, the generated tests achieved good coverage and
+    mutation kill score, were readable by the product's developers, and
+    required few edits as the system under test evolved.
+    While our evaluation is in the context of one test generator, we are
+    aware of many research systems that suffer similar limitations, so our
+    approach and observations are more generally relevant.",
   basefilename = "maintainable-tests-ase2011",
   downloads = 
    "http://code.google.com/p/randoop/ Randoop implementation",
@@ -6548,25 +6548,25 @@ endgame.",
 
 @InProceedings{BeschastnikhBEKA2011,
   author = 	 "Ivan Beschastnikh and Yuriy Brun and Michael D. Ernst and Arvind Krishnamurthy and Thomas E. Anderson",
-  title = 	 "Mining invariants from partially ordered logs",
+  title = 	 "Mining temporal invariants from partially ordered logs",
   booktitle = SLAML2011,
   NEEDpages = 	 "*",
   year = 	 2011,
   address = 	 SLAML2011addr,
   month = 	 SLAML2011date,
   abstract =
-   "A common assumption made in log analysis research is that the
-    underlying log is totally ordered.  For concurrent systems, this
-    assumption constrains the generated log to either exclude concurrency
-    altogether, or to capture a particular interleaving of concurrent
-    events. This paper argues that capturing concurrency as a partial
-    order is useful and often indispensable for answering important
-    questions about concurrent systems.  To this end, we motivate a family
-    of event ordering invariants over partially ordered event traces, 
-    give two algorithms for mining these invariants from logs, 
-    and evaluate their scalability on simulated 
-    distributed system logs.",
+   "A common assumption made in log analysis research is that the underlying
+    log is totally ordered.  For concurrent systems, this assumption constrains
+    the generated log to either exclude concurrency altogether, or to capture a
+    particular interleaving of concurrent events. This paper argues that
+    capturing concurrency as a partial order is useful and often indispensable
+    for answering important questions about concurrent systems.  To this end,
+    we motivate a family of event ordering invariants over partially ordered
+    event traces, give three algorithms for mining these invariants from logs,
+    and evaluate their scalability on simulated distributed system logs.",
   basefilename = "mining-po-logs-slaml2011",
+  downloads = 
+   "http://code.google.com/p/synoptic/ Synoptic implementation",
   category =  "Software engineering",
   summary =
    "Totally ordered (linear) logs have been well-studied in the invariant
