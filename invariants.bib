@@ -1265,8 +1265,34 @@
 }
 
 
-
-
+@Article{BaligaGI2011,
+  author = 	 "Arati Baliga and Vinod Ganapathy and Liviu Iftode",
+  title = 	 "Detecting kernel-level rootkits using data structure invariants",
+  journal = 	 TDSC,
+  year = 	 2011,
+  volume = 	 8,
+  number = 	 5,
+  pages = 	 "670--684",
+  month = 	 sep # "/" # oct,
+  abstract =
+   "Rootkits affect system security by modifying kernel data structures to
+    achieve a variety of malicious goals. While early rootkits modified control
+    data structures, such as the system call table and values of function
+    pointers, recent work has demonstrated rootkits that maliciously modify
+    noncontrol data. Most prior techniques for rootkit detection have focused
+    solely on detecting control data modifications and, therefore, fail to
+    detect such rootkits. This paper presents a novel technique to detect
+    rootkits that modify both control and noncontrol data. The main idea is to
+    externally observe the execution of the kernel during an inference phase
+    and hypothesize invariants on kernel data structures. A rootkit detection
+    phase uses these invariants as specifications of data structure
+    integrity. During this phase, violation of invariants indicates an
+    infection. We have implemented Gibraltar, a prototype tool that infers
+    kernel data structure invariants and uses them to detect
+    rootkits. Experiments show that Gibraltar can effectively detect previously
+    known rootkits, including those that modify noncontrol data structures.",
+  usesDaikon = 1,
+}
 
 
 %%%
@@ -7498,8 +7524,6 @@ month = may
   year =         2000,
   address =	 "Boston, MA",
   edition = 	 "Second",
-  keywords =     "Java, Sun, book, text, computer, programming language
-                 definition, PLD, object oriented, OOP, OO, zz1097",
   ISBN     =     "0-201-63451-1",
 }
 
@@ -7510,10 +7534,19 @@ month = may
   year =         2005,
   address =	 "Boston, MA",
   edition = 	 "Third",
-  keywords =     "Java, Sun, book, text, computer, programming language
-                 definition, PLD, object oriented, OOP, OO, zz1097",
 }
 
+
+@Book{GoslingJSBB2011,
+  author =       "James Gosling and Bill Joy and Guy Steele and Gilad Bracha and Alex Buckley",
+  title =        "The Java Language Specification",
+  OMITpublisher =    "Addison Wesley",
+  publisher =    "\url{http://download.oracle.com/javase/7/specs/jls/JLS-JavaSE7.pdf}",
+  year =         2011,
+  OMITaddress =	 "Boston, MA",
+  edition = 	 "{Java SE 7}",
+  note = 	 "``2011-07-15 Full'' version",
+}
 
 @Book{ArnoldGH2000,
   author =	 "Ken Arnold and James Gosling and David Holmes",
