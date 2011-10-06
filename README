@@ -1,8 +1,11 @@
 plume-bib:  collection of BibTeX bibliography files.
 
+To obtain the bibliographies, run
+  hg clone https://plume-bib.googlecode.com/hg/ bib
+
 This is a set of BibTeX bibliographies.  You can re-use them rather than
-having to re-type or download.  Re-typing or downloading is a notorious
-source of errors in bibliographies.  For example, even the ACM Digital
+having to re-type or download.  Re-typing or downloading bibliography
+entries is a notorious source of errors.  For example, even the ACM Digital
 Library often has incorrect capitalization, or gives a SIGPLAN Notices
 reference when the conference proceedings would be more appropriate.
 
