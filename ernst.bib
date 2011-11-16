@@ -5687,7 +5687,7 @@ endgame.",
     both to programmers and to static analyses.",
   basefilename = "field-initialization-tr100201",
   downloadsnonlocal = "ftp://ftp.cs.washington.edu/tr/2010/02/UW-CSE-10-02-01.PDF PDF",
-  supersededby = "SpotoE2011",
+  supersededby = "SpotoE2011 a previous version with some additional details",
   category =  "Static analysis",
   summary =
    "This paper presents a flow-sensitive, exception-aware static analysis that 
@@ -5850,7 +5850,8 @@ endgame.",
   basefilename = "haloop-vldb2010",
   downloadsnonlocal =
    "http://www.cs.washington.edu/homes/mernst/pubs/haloop-vldb2010.pdf PDF",
-  category =  "Databases",
+  FUTUREcategory =  "Databases",
+  category =  "Miscellaneous",
   summary =
    "An iterative job may repeat similar work on each iteration.  This paper
     shows how to avoid repeating work in iterative MapReduce jobs,
@@ -6029,6 +6030,43 @@ endgame.",
 %%%
 
 
+@TechReport{LiE2011,
+  author = 	 "Jingyue Li and Michael D. Ernst",
+  title = 	 "{CBCD}: {Cloned} {Buggy} {Code} {Detector}",
+  institution =  UWCSE,
+  year = 	 2011,
+  number = 	 "UW-CSE-11-05-02",
+  address = 	 UWCSEaddr,
+  month = 	 may # "~2,",
+  note = 	 "Revised " # oct # " 2011",
+  abstract =
+   "Developers often copy, or clone, code in order to reuse or modify
+    functionality.  When they do so, they also clone any bugs in the original
+    code.  Or, different developers may independently make the same mistake.
+    As one example of a bug, multiple products in a product line may use a
+    component in a similar wrong way.  This paper makes two contributions.
+    First, it presents an empirical study of cloned buggy code.  In a large
+    industrial product line, about 4% of the bugs are duplicated across more
+    than one product or file.  In three open source projects (the Linux kernel,
+    the Git version control system, and the PostgreSQL database) we found 282,
+    33, and 33 duplicated bugs, respectively.  Second, this paper presents a
+    tool, CBCD, that searches for code that is semantically identical to given
+    buggy code.  CBCD tests graph isomorphism over the Program Dependency Graph
+    (PDG) representation and uses four optimizations.  We evaluated CBCD by
+    searching for known clones of buggy code segments in the three projects and
+    compared the results with text-based, token-based, and AST-based code clone
+    detectors, namely Simian, CCFinder, and CloneDr.  The results of the
+    evaluation show that CBCD is applicable for its principal use: it is fast
+    when searching for possible clones of the buggy code in a large system and
+    it is more precise than the other code clone detectors.",
+  basefilename = "buggy-clones-tr110502",
+  category =  "Software engineering",
+  summary =
+   "When programmers clone code, they also clone bugs.  This paper presents a
+    technique to find clones of just-fixed bugs, so the clones can also be fixed.",
+}
+
+
 @Article{TipFKEBDS2011,
   author = 	 "Tip, Frank and Fuhrer, Robert M. and Kie{\.z}un, Adam and Michael D. Ernst and Balaban, Ittai and Sutter, Bjorn De",
   title = 	 "Refactoring using type constraints",
@@ -6059,6 +6097,43 @@ endgame.",
     interfaces and use of libraries.  Other solutions may be possible, and
     they represent legal refactiorings of the program."
 }
+
+
+@InProceedings{DigME2011,
+  author = 	 "Danny Dig and John Marrero and Michael D. Ernst",
+  title = 	 "How do programs become more concurrent?  A story of program transformations",
+  booktitle = "Proceedings of the 4th International Workshop on Multicore Software Engineering",
+  pages = 	 "43--50",
+  year = 	 2011,
+  address = 	 ICSE2011addr,
+  month = 	 May # "~21,",
+  abstract =
+   "In the multi-core era, programmers need to resort to parallelism if they
+    want to improve program performance. Thus, a major maintenance task will be
+    to make sequential programs more concurrent. Must concurrency be designed
+    into a program, or can it be retrofitted later? What are the most common
+    transformations to retrofit concurrency into sequential programs? Are these
+    transformations random, or do they belong to certain categories? How can we
+    automate these transformations?
+    \par
+    To answer these questions we analyzed the source code of five open-source
+    Java projects and looked at a total of 14 versions. We analyzed
+    qualitatively and quantitatively the concurrency-related
+    transformations. We found that these transformations belong to four
+    categories: transformations that improve the responsiveness, the
+    throughput, the scalability, or correctness of the applications. In 73.9%
+    of these transformations, concurrency was retrofitted on existing program
+    elements. In 20.5% of the transformations, concurrency was designed into
+    new program elements. Our findings educate software developers on how to
+    parallelize sequential programs, and provide hints for tool vendors about
+    what transformations are worth automating.",
+  basefilename = "concurrent-history-iwmse2011",
+  category =  "Refactoring",
+  summary =
+   "This paper is a historical analysis of the transformations that
+    programmers used to convert sequential programs into concurrent versions.",
+}
+
 
 
 @InProceedings{SpotoE2011,
@@ -6092,7 +6167,8 @@ endgame.",
   usesDaikonAsTestSubject = 1,
   basefilename = "initialization-icse2011",
   downloads =
-    "http://julia.scienze.univr.it/ implementation",
+    "http://julia.scienze.univr.it/ implementation;
+     ftp://ftp.cs.washington.edu/tr/2010/02/UW-CSE-10-02-01.PDF earlier TR with additional details",
   OPTdownloadsnonlocal = "",
   category =  "Static analysis",
   summary =
@@ -6185,43 +6261,6 @@ endgame.",
     use, and effective in finding hundreds of errors in case studies of 2
     million lines of code.",
 }
-
-
-@InProceedings{DigME2011,
-  author = 	 "Danny Dig and John Marrero and Michael D. Ernst",
-  title = 	 "How do programs become more concurrent?  A story of program transformations",
-  booktitle = "Proceedings of the 4th International Workshop on Multicore Software Engineering",
-  pages = 	 "43--50",
-  year = 	 2011,
-  address = 	 ICSE2011addr,
-  month = 	 May # "~21,",
-  abstract =
-   "In the multi-core era, programmers need to resort to parallelism if they
-    want to improve program performance. Thus, a major maintenance task will be
-    to make sequential programs more concurrent. Must concurrency be designed
-    into a program, or can it be retrofitted later? What are the most common
-    transformations to retrofit concurrency into sequential programs? Are these
-    transformations random, or do they belong to certain categories? How can we
-    automate these transformations?
-    \par
-    To answer these questions we analyzed the source code of five open-source
-    Java projects and looked at a total of 14 versions. We analyzed
-    qualitatively and quantitatively the concurrency-related
-    transformations. We found that these transformations belong to four
-    categories: transformations that improve the responsiveness, the
-    throughput, the scalability, or correctness of the applications. In 73.9%
-    of these transformations, concurrency was retrofitted on existing program
-    elements. In 20.5% of the transformations, concurrency was designed into
-    new program elements. Our findings educate software developers on how to
-    parallelize sequential programs, and provide hints for tool vendors about
-    what transformations are worth automating.",
-  basefilename = "concurrent-history-iwmse2011",
-  category =  "Refactoring",
-  summary =
-   "This paper is a historical analysis of the transformations that
-    programmers used to convert sequential programs into concurrent versions.",
-}
-
 
 
 @InProceedings{ZhangSBE2011,
@@ -6467,6 +6506,51 @@ endgame.",
 
 
 
+
+@TechReport{GordonEG2011,
+  author = 	 "Colin S. Gordon and Michael D. Ernst and Dan Grossman",
+  title = 	 "Static lock capabilities for deadlock freedom",
+  institution =  UWCSE,
+  year = 	 2011,
+  number = 	 "UW-CSE-11-10-01",
+  address = 	 UWCSEaddr,
+  month = 	 oct,
+  abstract =
+   "We present a technique --- lock capabilities --- for statically verifying
+    that multithreaded programs with locks will not deadlock.  Most previous
+    work is built around a strict total order on all locks held simultaneously
+    by a thread, but such an invariant often does not hold with fine-grained
+    locking, especially when data-structure mutations change the order locks
+    are acquired.  Lock capabilities support idioms that use fine-grained
+    locking, such as mutable binary trees, circular lists, and arrays where
+    each element has a different lock.
+    \par
+    Lock capabilities do not enforce a total order and do not prevent external
+    references to data-structure nodes.  Instead, the technique reasons about
+    static capabilities, where a thread already holding locks can attempt to
+    acquire another lock only if its capabilities allow it.  Acquiring one lock
+    may grant a capability to acquire further locks, and in data-structures
+    where heap shape affects safe locking orders, we can use the heap structure
+    to induce the capability-granting relation.  Deadlock-freedom follows from
+    ensuring that the capability-granting relation is acyclic.  Where
+    necessary, we restrict aliasing with a variant of unique references to
+    allow strong updates to the capability-granting relation, while still
+    allowing other aliases that are used only to acquire locks while holding no
+    locks.
+    \par
+    We formalize our technique as a type-and-effect system, demonstrate it
+    handles realistic challenging idioms, and use syntactic techniques (type
+    preservation) to show it soundly prevents deadlock.",
+  basefilename = "lock-capabilities-tr111001",
+  TOBEsupersededby = "*",
+  category =  "Static analysis",
+  summary =
+   "This paper prevents deadlock by forcing the locking discipline to follow
+    pointers in the heap (or any other tree structure).  It permits fine-grained
+    locking, arbitrary lock acquisition orders, changing the locking order, etc.",
+}
+
+
 @InProceedings{ZhangZE2011,
   author = 	 "Sai Zhang and Cheng Zhang and Michael D. Ernst",
   title = 	 "Automated documentation inference to explain failed tests",
@@ -6538,7 +6622,7 @@ endgame.",
 
 
 
-@InProceedings{BeschastnikhBEKA2011,
+@InProceedings{BeschastnikhBEKA2011:SLAML,
   author = 	 "Ivan Beschastnikh and Yuriy Brun and Michael D. Ernst and Arvind Krishnamurthy and Thomas E. Anderson",
   title = 	 "Mining temporal invariants from partially ordered logs",
   booktitle = SLAML2011,
@@ -6565,6 +6649,27 @@ endgame.",
     mining community, but many real logs (e.g., from distributed systems) are
     partially ordered.  This paper gives algorithms for mining invariants from
     partially ordered logs.",
+}
+
+
+@InProceedings{BeschastnikhBEKA2011:SOSP-WIP,
+  author = 	 "Ivan Beschastnikh and Yuriy Brun and Michael D. Ernst and Arvind Krishnamurthy and Thomas E. Anderson",
+  title = 	 "Bandsaw: Log-powered test scenario generation for distributed systems",
+  booktitle = SOSPWIP2011,
+  NEEDpages = 	 "*",
+  year = 	 2011,
+  address = 	 SOSP2011addr,
+  month = 	 SOSP2011date,
+  NOabstract =  "*",
+  basefilename = "log-test-gen-sospwip2011",
+  OPTdownloads = "",
+  OPTdownloadsnonlocal = "",
+  OPTsupersededby = "",
+  category =  "Software engineering",
+  summary =
+   "This short paper proposes a way to automatically generate test scenarios
+    (and eventually full tests), by mining existing logs, modeling the results,
+    and generating new traces from the models.",
 }
 
 
