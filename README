@@ -1,7 +1,7 @@
 plume-bib:  collection of BibTeX bibliography files.
 
 To obtain the bibliographies, run
-  hg clone https://plume-bib.googlecode.com/hg/ bib
+  hg clone https://code.google.com/p/plume-bib/ bib
 
 This is a set of BibTeX bibliographies.  You can re-use them rather than
 having to re-type or download.  Re-typing or downloading bibliography
@@ -31,7 +31,7 @@ Here are some other features:
    future.)
 
 You can obtain the bibliographies by running the command
-  hg clone https://plume-bib.googlecode.com/hg/ bib
+  hg clone https://code.google.com/p/plume-bib/ bib
 but you don't need to -- see below for how to set your build system to
 automatically obtain and/or update a copy.
 
@@ -67,7 +67,7 @@ For consistency, please start each new bibliography entry with "@" in the
 first column, and end the entry with "}" or ")" on its own line.
 
 If you make changes but you lack write access to the Mercurial repository
-at https://plume-bib.googlecode.com/hg/, then please email a patch (a diff
+at https://code.google.com/p/plume-bib/, then please email a patch (a diff
 file) with your changes to Michael Ernst <mernst@cs.washington.edu>.
 Thanks for your contributions!
 
@@ -83,7 +83,7 @@ make "bib" a dependency for the myfile.bbl target.
 export BIBINPUTS ?= .:bib
 
 bib:
-	hg clone https://plume-bib.googlecode.com/hg/ bib
+	hg clone https://code.google.com/p/plume-bib/ bib
 .PHONY: bib-update
 bib-update: bib
 # To skip running the hg command, invoke make like this:  make NOHG=1 ...
@@ -97,7 +97,7 @@ SETUP -- non-Makefile version
 
 Obtain the bibliographies by running the command
 
-  hg clone https://plume-bib.googlecode.com/hg/ bib
+  hg clone https://code.google.com/p/plume-bib/ bib
 
 Then, add the "bib" directory to your BIBINPUTS environment variable.
   bash syntax:
