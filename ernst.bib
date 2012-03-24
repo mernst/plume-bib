@@ -2000,12 +2000,12 @@ endgame.",
 @InProceedings{Ernst2003:WODA,
   author = 	 "Michael D. Ernst",
   title = 	 "Static and dynamic analysis:  Synergy and duality",
-  booktitle =	 "WODA 2003: ICSE Workshop on Dynamic Analysis",
+  booktitle =	 WODA2003,
   pages =	 "24--27",
   year =	 2003,
   OMITeditor =	 "Jonathan E. Cook and Michael D. Ernst",
-  address =	 "Portland, OR",
-  month =	 may # "~9,",
+  address =	 WODA2003addr,
+  month =	 WODA2003date,
   basefilename = "staticdynamic-woda2003",
   downloadsnonlocal =
    "http://www.cs.washington.edu/homes/mernst/pubs/staticdynamic-woda2003.pdf PDF;
@@ -3212,7 +3212,7 @@ endgame.",
    "http://www.cs.washington.edu/homes/mernst/pubs/deadlock-library-ecoop2005.pdf PDF;
     http://www.cs.washington.edu/homes/mernst/pubs/deadlock-library-ecoop2005.ps PostScript",
   category =     "Static analysis",
-  csetags = "mernst,mernst-Static-analysis,plse",
+  csetags = "mernst,mernst-Static-analysis,plse,plse-lockcaps",
   summary =
    "This paper gives a technique for determining whether any invocation of
     a library can lead to deadlock in the client program; it can also be
@@ -4228,14 +4228,12 @@ endgame.",
    "Automatic bug finding tools tend to have high false positive rates: most
     warnings do not indicate real bugs.  Usually bug finding tools prioritize
     each warning category (such as the priority of ``overflow'' is 1 or the
-  csetags = *****,
     priority of ``jumbled incremental'' is 3), but the tools' prioritization is
     not very effective.
     \par
     In this paper, we prioritize warning categories by analyzing the software
     change history. The underlying intuition is that if warnings from a
     category are resolved quickly by developers, the warnings in the category
-  csetags = *****,
     are important. Experiments with three bug finding tools (FindBugs, JLint,
     and PMD) and two open source projects (Columba and jEdit) indicate that
     different warning categories have very different lifetimes. Based on that
@@ -4449,7 +4447,6 @@ endgame.",
     algorithm by mining warning fix experience that is recorded in
     the software change history. The underlying intuition is that if
     warnings from a category are eliminated by fix-changes, the
-  csetags = *****,
     warnings are important. Our prioritization algorithm improves
     warning precision to 17\%, 25\%, and 67\% respectively.",
   basefilename = "prioritize-warnings-fse2007",
@@ -5580,11 +5577,11 @@ endgame.",
     string solver.  HAMPI's source code,
     documentation, and the experimental data are available at
     \url{http://people.csail.mit.edu/akiezun/hampi/}.",
-  basefilename = "string-solver-tr004",
+  basefilename = "string-solver-issta2009",
   downloads =
    "http://people.csail.mit.edu/akiezun/hampi/ HAMPI implementation and experiments",
   downloadsnonlocal =
-   "http://www.cs.washington.edu/homes/mernst/pubs/string-solver-tr004.pdf PDF",
+   "http://www.cs.washington.edu/homes/mernst/pubs/string-solver-issta2009.pdf PDF",
   TODOsupersededby = "*",
   category =  "Static analysis",
   csetags = "mernst,mernst-Static-analysis,plse",
@@ -6015,7 +6012,7 @@ endgame.",
   OPTdownloadsnonlocal = "",
   OPTsupersededby = "",
   category =  "Dynamic analysis",
-  csetags = "ivanb,mernst,brun,mernst-Dynamic-analysis,plse-synoptic,plse",
+  csetags = "ivanb,mernst,brun,mernst-Dynamic-analysis,proj-synoptic,plse",
   summary =
    "Synoptic produces a small graph that summarizes a distributed system log.
     Synoptic starts from the smallest possible graph and iteratively expands,
@@ -6145,7 +6142,7 @@ endgame.",
   OPTdownloadsnonlocal = "",
   OPTsupersededby = "",
   category =  "Software engineering",
-  csetags = "tws,mernst,mernst-Software-engineering,plse",
+  csetags = "tws,mernst,mernst-Software-engineering,plse,proj-veriweb",
   summary =
    "We propose to build tools that permit less-skilled workers to perform
     certain tasks currently done by developers.  This frees developers to do
@@ -6438,12 +6435,63 @@ endgame.",
   OPTdownloadsnonlocal = "",
   OPTsupersededby = "",
   category =  "Testing",
-  csetags = "szhang,ybu,mernst,mernst-Testing,plse",
+  csetags = "szhang,ybu,mernst,mernst-Testing,plse,proj-testgen",
   summary =
    "The Palus tool performs constraint-based random test generations, using
     constraints learned from dynamic executions and from static analysis of
     method coupling.  Palus outperforms all other known test generation
     approaches, and found real bugs in well-tested commercial software.",
+}
+
+
+@InProceedings{GaneshKAGHE2011,
+  author = 	 "Vijay Ganesh and Adam Kie{\.z}un and Shay Artzi and Philip J. Guo and Pieter Hooimeijer and Michael Ernst",
+  authorASCII = 	 "Vijay Ganesh and Adam Kiezun and Shay Artzi and Philip J. Guo and Pieter Hooimeijer and Michael Ernst",
+  title = 	 "HAMPI: a string solver for testing, analysis and vulnerability detection",
+  booktitle = CAV2011,
+  pages = 	 "1--19",
+  year = 	 2011,
+  series = 	 CAV2011addr,
+  address = 	 CAV2011date,
+  abstract =
+   "Many automatic testing, analysis, and verification techniques for programs
+    can effectively be reduced to a constraint-generation phase followed by a
+    constraint-solving phase. This separation of concerns often leads to more
+    effective and maintainable software reliability tools. The increasing
+    efficiency of offthe-shelf constraint solvers makes this approach even more
+    compelling. However, there are few effective and sufficiently expressive
+    off-the-shelf solvers for string constraints generated by analysis of
+    string-manipulating programs, and hence researchers end up implementing
+    their own ad-hoc solvers. Thus, there is a clear need for an effective and
+    expressive string-constraint solver that can be easily integrated into a
+    variety of applications.
+    \par
+    To fulfill this need, we designed and implemented Hampi, an efficient and
+    easy-to-use string solver. Users of the Hampi string solver specify
+    constraints using membership predicate over regular expressions,
+    context-free grammars, and equality/dis-equality between string
+    terms. These terms are constructed out of string constants, bounded string
+    variables, and typical string operations such as concatenation and
+    substring extraction. Hampi takes such a constraint as input and decides
+    whether it is satisfiable or not. If an input constraint is satisfiable,
+    Hampi generates a satsfying assignment for the string variables that occur
+    in it.
+    \par
+    We demonstrate Hampi's expressiveness and efficiency by applying it to
+    program analysis and automated testing: We used Hampi in static and dynamic
+    analyses for finding SQL injection vulnerabilities in Web applications with
+    hundreds of thousands of lines of code.We also used Hampi in the context of
+    automated bug finding in C programs using dynamic systematic testing (also
+    known as concolic testing). Hampi's source code, documentation, and
+    experimental data are available at
+    http://people.csail.mit.edu/akiezun/hampi",
+  supersededby = "KiezunGGHE2009 a tutorial and paper",
+  category =  "Static analysis",
+  csetags = "mernst,mernst-Static-analysis,plse",
+  summary =
+   "This invited paper accompanies a tutorial and further describes the HAMPI solver
+    (decision procedure) for string constraints such as language membership.
+    Such a solver is useful when analyzing programs that manipulate strings.",
 }
 
 
@@ -6545,11 +6593,11 @@ endgame.",
    "During collaborative development, individual developers can create
     conflicts in their copies of the code. Such conflicting edits are
     frequent in practice, and resolving them can be costly. We present
-    Crystal, a tool that proactively examines developers’ code and precisely
+    Crystal, a tool that proactively examines developers' code and precisely
     identifies and reports on textual, compilation, and behavioral
     conflicts. When conflicts are present, Crystal enables developers
     to resolve them more quickly, and therefore at a lesser cost. When
-    conflicts are absent, Crystal increases the developers’ confidence
+    conflicts are absent, Crystal increases the developers' confidence
     that it is safe to merge their code. Crystal uses an unobtrusive interface
     to deliver pertinent information about conflicts. It informs
     developers about actions that would address the conflicts and about
@@ -6611,7 +6659,7 @@ endgame.",
   OPTdownloadsnonlocal = "",
   OPTsupersededby = "",
   category =  "Software engineering",
-  csetags = "ivanb,brun,mernst,mgsloan,mernst-Software-engineering,plse-synoptic,plse",
+  csetags = "ivanb,brun,mernst,mgsloan,mernst-Software-engineering,proj-synoptic,plse",
   summary =
    "Synoptic infers, from system logs, a finite state machine model of the
     system.  Synoptic's novel inference algorithm efficiently leads to compact
@@ -6641,11 +6689,9 @@ endgame.",
   basefilename = "synoptic-fse2011-tool-demo",
   supersededby = "BeschastnikhBSSE2011 A tool demo",
   category =  "Software engineering",
-  csetags = "ivanb,jabrah,brun,mernst,mernst-Software-engineering,plse-synoptic,plse",
+  csetags = "ivanb,jabrah,brun,mernst,mernst-Software-engineering,proj-synoptic,plse",
   NEEDsummary = 	 "*",
 }
-
-
 
 
 
@@ -6687,7 +6733,7 @@ endgame.",
   basefilename = "lock-capabilities-tr111001",
   TOBEsupersededby = "*",
   category =  "Static analysis",
-  csetags = "csgordon,mernst,djg,mernst-Static-analysis,plse",
+  csetags = "csgordon,mernst,djg,mernst-Static-analysis,plse,plse-lockcaps",
   summary =
    "This paper prevents deadlock by forcing the locking discipline to follow
     pointers in the heap (or any other tree structure).  It permits fine-grained
@@ -6723,7 +6769,7 @@ endgame.",
   downloads = 
    "http://code.google.com/p/failuredoc/ FailureDoc implementation",
   category =  "Testing",
-  csetags = "szhang,mernst,mernst-Testing,plse",
+  csetags = "szhang,mernst,mernst-Testing,plse,proj-failuredoc",
   summary =
    "When a test fails, debugging begins.  The FailureDoc tool indicates which
     parts of a failed test are most relevant to the failure, which helps
@@ -6791,7 +6837,7 @@ endgame.",
    "http://code.google.com/p/synoptic/ Synoptic implementation",
   supersededby = "BeschastnikhBEKA2011:OSR",
   category =  "Software engineering",
-  csetags = "ivanb,brun,mernst,arvind,tom,mernst-Software-engineering,plse-synoptic,plse",
+  csetags = "ivanb,brun,mernst,arvind,tom,mernst-Software-engineering,proj-synoptic,plse",
   summary =
    "Totally ordered (linear) logs have been well-studied in the invariant
     mining community, but many real logs (e.g., from distributed systems) are
@@ -6814,7 +6860,7 @@ endgame.",
   OPTdownloadsnonlocal = "",
   OPTsupersededby = "",
   category =  "Software engineering",
-  csetags = "ivanb,brun,mernst,arvind,tom,mernst-Software-engineering,plse-synoptic,plse",
+  csetags = "ivanb,brun,mernst,arvind,tom,mernst-Software-engineering,proj-synoptic,plse",
   summary =
    "This short paper proposes a way to automatically generate test scenarios
     (and eventually full tests), by mining existing logs, modeling the results,
@@ -6847,7 +6893,7 @@ endgame.",
   OMITdownloads_because_synoptic_does_not_yet_handle_partially_ordered_logs = 
    "http://code.google.com/p/synoptic/ Synoptic implementation",
   category =  "Software engineering",
-  csetags = "ivanb,brun,mernst,arvind,tom,mernst-Software-engineering,plse-synoptic,plse",
+  csetags = "ivanb,brun,mernst,arvind,tom,mernst-Software-engineering,proj-synoptic,plse",
   summary =
    "Totally ordered (linear) logs have been well-studied in the invariant
     mining community, but many real logs (e.g., from distributed systems) are
@@ -6864,33 +6910,29 @@ endgame.",
   author = 	 "Yuriy Brun and K{\i}van{\c{c}} Mu{\c{s}}lu and Reid Holmes and Michael D. Ernst and David Notkin",
   authorASCII =  "Yuriy Brun and Kivanc Muslu and Reid Holmes and Michael D. Ernst and David Notkin",
   title = 	 "Predicting Development Trajectories to Prevent Collaboration Conflicts",
-  OPTcrossref =  "",
-  OPTkey = 	 "",
   booktitle = FutureCSD2012,
   NEEDpages = 	 "*",
   year = 	 2012,
-  OPTeditor = 	 "",
-  OPTvolume = 	 "",
-  OPTnumber = 	 "",
-  OPTseries = 	 "",
   address = 	 FutureCSD2012addr,
   month = 	 FutureCSD2012date,
-  OPTorganization = "",
-  OPTpublisher = "",
-  OPTnote = 	 "",
-  OPTannote = 	 "",
-  OPTabstract =  "",
-  OPTusesDaikon = "",
-  OPTusesDaikonAsTestSubject = "",
-  omitfromcv = "TODO: add later",
-  OPTbasefilename = "",
-  OPTdownloads = "",
-  OPTdownloadsnonlocal = "",
-  OPTsupersededby = "",
-  OPTcategory =  "",
+  abstract =
+   "The benefits of collaborative development are reduced by the cost of
+    resolving conflicts.  We posit that reducing the time between when
+    developers introduce and learn about conflicts reduces this cost.  We
+    outline the state-of-the-practice of managing and resolving conflicts and
+    describe how it can be improved by available state-of-the-art tools.  Then,
+    we describe our vision for future tools that can predict likely conflicts
+    before they are even created, warning developers and allowing them to avoid
+    potentially costly situations.",
+  basefilename = "speculate-predict-fcsd2012",
+  category =  "Software engineering",
   csetags = "brun,kivanc,mernst,notkin,mernst-Software-engineering,plse,plse-speculation",
-  OPTsummary = 	 "",
+  summary =
+   "Rather than dealing with source code conflicts when a developer notices,
+    or using a tool to detect them as soon as they arise, it would be better
+    to predict and prevent them before they happen.",
 }
+
 
 
 @InProceedings{LiE2012,
@@ -6906,21 +6948,20 @@ endgame.",
     functionality. When they do so, they also clone any bugs in the original
     code. Or, different developers may independently make the same mistake. As
     one example of a bug, multiple products in a product line may use a
-    component in a similar wrong way. This paper makes two
-    contributions. First, it presents an empirical study of cloned buggy
-    code. In a large industrial product line, about 4\% of the bugs are
-    duplicated across more than one product or file. In three open source
-    projects (the Linux kernel, the Git version control system, and the
-    PostgreSQL database) we found 282, 33, and 33 duplicated bugs,
-    respectively. Second, this paper presents a tool, CBCD, that searches for
-    code that is semantically identical to given buggy code. CBCD tests graph
-    isomorphism over the Program Dependency Graph (PDG) representation and uses
-    four optimizations. We evaluated CBCD by searching for known clones of
-    buggy code segments in the three projects and compared the results with
-    text-based, token-based, and AST-based code clone detectors, namely Simian,
-    CCFinder, and CloneDr. The results of the evaluation show that CBCD is
-    applicable for its principal use: it is fast when searching for possible
-    clones of the buggy code in a large system and it is more precise than the
+    component in a similar wrong way. This paper makes two contributions.
+    First, it presents an empirical study of cloned buggy code. In a large
+    industrial product line, about 4\% of the bugs are duplicated across more
+    than one product or file. In three open source projects (the Linux kernel,
+    the Git version control system, and the PostgreSQL database) we found 282,
+    33, and 33 duplicated bugs, respectively. Second, this paper presents a
+    tool, CBCD, that searches for code that is semantically identical to given
+    buggy code. CBCD tests graph isomorphism over the Program Dependency Graph
+    (PDG) representation and uses four optimizations. We evaluated CBCD by
+    searching for known clones of buggy code segments in the three projects and
+    compared the results with text-based, token-based, and AST-based code clone
+    detectors, namely Simian, CCFinder, Deckard, and CloneDR\@. The evaluation
+    shows that CBCD is fast when searching for possible clones of the buggy
+    code in a large system, and it is more precise for this purpose than the
     other code clone detectors.",
   basefilename = "buggy-clones-icse2012",
   downloads =
@@ -6934,9 +6975,6 @@ endgame.",
 
 
 
-
-
-
 @InProceedings{MusluBHEN2012,
   author = 	 "K{\i}van{\c{c}} Mu{\c{s}}lu and Yuriy Brun and Reid Holmes and Michael D. Ernst and David Notkin",
   authorASCII =  "Kivanc Muslu and Yuriy Brun and Reid Holmes and Michael D. Ernst and David Notkin",
@@ -6947,21 +6985,19 @@ endgame.",
   address = 	 ICSE2012addr,
   month = 	 ICSE2012date,
   abstract =
-   "Modern integrated development environments (IDEs) offer recommendations to 
+   "Modern integrated development environments (IDEs) offer recommendations to
     aid development, such as auto-completions, refactorings, and fixes for
     compilation errors.  Recommendations for each code location are typically
-    computed independently of the other locations.  
-    We propose that an IDE should consider the whole
-    codebase, not just the local context, before offering recommendations for a
-    particular location.  We show this is a problem by presenting four concrete
-    scenarios in which the Eclipse IDE fails to provide proper Quick Fixes at relevant
-    locations, even though it is aware of those fixes for other locations.  
-    We describe a technique that can augment an 
-    existing IDE's recommendations to account for global information.  When the best
-    fix for a given problem is identified by the IDE for a different location, this
-    approach presents the information where the developer needs it.  When some
-    compilation errors depend on others, our technique eases the developer burden of
-    identifying which errors to resolve first.",
+    computed independently of the other locations.  We propose that an IDE
+    should consider the whole codebase, not just the local context, before
+    offering recommendations for a particular location.  We demonstrate the
+    potential benefits of our technique by presenting four concrete scenarios
+    in which the Eclipse IDE fails to provide proper Quick Fixes at relevant
+    locations, even though it offers those fixes at other locations.  We
+    describe a technique that can augment an existing IDE's recommendations to
+    account for non-local information.  For example, when some compilation
+    errors depend on others, our technique helps the developer decide which
+    errors to resolve first.",
   basefilename = "global-recommendations-icsenier2012",
   OPTdownloads = "",
   OPTdownloadsnonlocal = "",
@@ -6973,6 +7009,39 @@ endgame.",
     current recommendation systems by performing global analysis of the
     consequences of each suggestion.",
 }
+
+
+@InProceedings{HuangDME2012,
+  author = 	 "Wei Huang and Werner Dietl and Ana Milanova and Michael D. Ernst",
+  title = 	 "Inference and Checking of Object Ownership",
+  booktitle = ECOOP2012,
+  NEEDpages = 	 "*",
+  year = 	 2012,
+  address = 	 ECOOP2012addr,
+  month = 	 ECOOP2012date,
+  abstract =
+   "Ownership type systems describe a heap topology and enforce an
+    encapsulation discipline; they have been applied for various program
+    correctness and understanding tasks.
+    However, the annotation overhead of ownership type systems has
+    hindered their widespread use.
+    We present a unified framework for type inference and type checking
+    of ownership type systems and instantiate the framework for two such 
+    systems: Universe Types and Ownership Types.
+    We present a general optimality argument that applies to these type systems,
+    and develop an inference approach that gives an optimal typing for a program.
+    The programmer can influence the inference by adding partial
+    annotations to the program.
+    We implemented the approach on top of the Checker Framework and
+    present the results of an experimental evaluation.",
+  basefilename = "infer-ownership-ecoop2012",
+  category =  "Static analysis",
+  summary =
+   "This paper generalizes previous work on ownership inference, showing how
+    a single algorithm can apply to multiple ownership type systems and choose
+    a desirable typing among many possible ones.",
+}
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
