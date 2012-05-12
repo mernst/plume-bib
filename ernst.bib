@@ -5972,6 +5972,7 @@ endgame.",
   basefilename = "haloop-vldb2010",
   downloadsnonlocal =
    "http://www.cs.washington.edu/homes/mernst/pubs/haloop-vldb2010.pdf PDF",
+  supersededby = "BuHBErnst2012",
   FUTUREcategory =  "Databases",
   category =  "Miscellaneous",
   csetags = "ybu,billhowe,magda,mernst,mernst-Miscellaneous,plse",
@@ -7011,6 +7012,83 @@ endgame.",
 }
 
 
+
+
+
+@InProceedings{SpishakDE2012,
+  author = 	 "Eric Spishak and Werner Dietl and Michael D. Ernst",
+  title = 	 "A type system for regular expressions",
+  booktitle = FTFJP2012,
+  NEEDpages = 	 "*",
+  year = 	 2012,
+  address = 	 FTFJP2012addr,
+  month = 	 FTFJP2012date,
+  abstract =
+   "Regular expressions are used to match and extract text.  It is easy for
+    developers to make syntactic mistakes when writing regular expressions,
+    because regular expressions are often complex and different across
+    programming languages.  Such errors result in exceptions at runtime and
+    there is currently no static support for preventing them.
+    \par
+    This paper describes practical experience designing and using a type
+    system for regular expressions.  This type system validates regular
+    expression syntax and capturing group usage at compile time instead of
+    at run time --- ensuring the absence of \texttt{PatternSyntaxException}s
+    from invalid syntax and \texttt{IndexOutOfBoundsException}s from accessing
+    invalid capturing groups.
+    \par
+    Our implementation is publicly available and supports the full Java
+    language.  In an evaluation on five open-source Java applications
+    (480kLOC), the type system was easy to use, required less than one
+    annotation per thousand lines, and found 50 previously-unknown bugs.",
+  basefilename = "regex-types-ftfjp2012",
+  category =  "Programming language design",
+  csetags = "espishak,wmdietl,mernst,mernst-Programming-language-design,plse",
+  summary =
+   "A program that uses regular expressions can fail at run time due to improper
+    regex syntax or due to access of a non-existent capturing group.  This paper
+    presents a type system that detects and prevents such errors at compile time."
+}
+
+
+@InProceedings{DietlDEMWCPP2012,
+  author = 	 "Werner Dietl and Stephanie Dietzel and Michael D. Ernst and Nathaniel Mote and Brian Walker and Seth Cooper and Timothy Pavlik and Zoran Popovi{\'c}",
+  authorASCII = 	 "Werner Dietl and Stephanie Dietzel and Michael D. Ernst and Nathaniel Mote and Brian Walker and Seth Cooper and Timothy Pavlik and Zoran Popovic",
+  title = 	 "Verification games: Making verification fun",
+  booktitle = FTFJP2012,
+  NEEDpages = 	 "*",
+  year = 	 2012,
+  address = 	 FTFJP2012addr,
+  month = 	 FTFJP2012date,
+  abstract =
+   "Program verification is the only way to be certain that a given piece
+    of software is free of (certain types of) errors --- errors that could
+    otherwise disrupt operations in the field.  To date, formal
+    verification has been done manually, by specially-trained engineers.
+    Labor costs have heretofore made formal verification too costly to
+    apply beyond small, critical software components.
+    \par
+    Our goal is to make verification more cost-effective by reducing the
+    skill set required for program verification and increasing the pool of
+    people capable of performing program verification.  Our approach is to
+    transform the verification task (a program and a goal property) into a
+    visual puzzle task --- a game --- that gets solved by people. The
+    solution of the puzzle is then translated back into a proof of
+    correctness.  The puzzle is engaging and intuitive enough that ordinary
+    people can through game-play become experts.
+    \par
+    This paper presents a status report on the Verification Games project
+    and our Pipe Jam prototype game.",
+  basefilename = "verigames-ftfjp2012",
+  category =  "Verification",
+  csetags = "wmdietl,sdietzel,mernst,nmote,bdwalker,scooper,pavlik,zoran,mernst-verification,plse,graphics",
+  summary =
+   "This paper presents a system that takes as input a program and a property,
+    and produces as output a game.  When a player finishes a level of the game,
+    the final configuration of board elements can be translated to a proof of
+    the property."
+}
+
 @InProceedings{HuangDME2012,
   author = 	 "Wei Huang and Werner Dietl and Ana Milanova and Michael D. Ernst",
   title = 	 "Inference and checking of object ownership",
@@ -7040,6 +7118,140 @@ endgame.",
     a desirable typing among many possible ones.",
 }
 
+
+
+
+@InProceedings{Ernst2012:ICST,
+  author = 	 "Michael D. Ernst",
+  title = 	 "Reproducible tests?  Non-duplicable results in testing and verification",
+  booktitle = ICST2012,
+  NEEDpages = 	 "*",
+  year = 	 2012,
+  address = 	 ICST2012addr,
+  month = 	 ICST2012date,
+  abstract =
+   "Reproducibility is a central tenet of testing.  Randomization in test
+    outputs could mask the signal that indicates correctness, so engineers work
+    to ensure that test execution is consistent.  Proofs, too, must be
+    reproducible:  a proof is of little value unless it can be independently
+    verified.
+    \par
+    Evaluation of tools and processes does not meet the standards that
+    engineers expect in their software.  Random testing is sometimes found to
+    be superior to, sometimes inferior to, systematic testing.  High
+    test-coverage goals are adopted by one organization but abandoned by
+    another.  Test-first development strategies help one project but cripple
+    another.  Formal development methods (based on specification and
+    verification) sometimes reduce costs but other times increase them, with
+    varying correlation to quality.  Programmers sing the praises of improved
+    productivity when adopting languages with strong type systems -- or
+    languages without static typing.  There are also rifts between techniques
+    that are shown effective in research laboratories and those that are
+    adopted in practice:  research experiments are often not indicative of
+    effectiveness in the field.  These discordant observations hold back our
+    field by sowing confusion among researchers and doubt among practitioners,
+    and by preventing common ground within or between the communities.  The
+    divergences continue to occur despite our best intentions, and despite our
+    increasing sophistication in tool-building, evaluation, realistic
+    codebases, education, bridging communities, and the like.
+    \par
+    This talk will illustrate the scope of the problem with examples of
+    conflicting results and experiences in the testing, verification, and
+    validation community.  It will discuss reasons for non-reproducibility --
+    some of which are standard and acknowledged, and others of which are more
+    subtle and easily overlooked.  It will discuss ways to avoid or mitigate
+    the problems.  This talk aims to help the audience to recognize
+    non-reproducible results in their own work or that of others, and to avoid
+    them whether in research or in practice.",
+  basefilename = "unreproducible-tests-icst-2012",
+  category =  "Software engineering",
+  summary =
+   "This keynote talk is a call to arms to the community to treat research more
+    like software:  it deserves to be tested and replicable."
+}
+
+
+
+@Article{BuHBErnst2012,
+  author = 	 "Yingyi Bu and Bill Howe and Magdalena Balazinska and Michael D. Ernst",
+  title = 	 "The {HaLoop} approach to large-scale iterative data analysis",
+  journal = 	 "The VLDB Journal",
+  year = 	 2012,
+  volume = 	 21,
+  number = 	 2,
+  pages = 	 "169--190",
+  abstract =
+   "The growing demand for large-scale data mining and data analysis
+    applications has led both industry and academia to design new types of
+    highly scalable data-intensive computing platforms. MapReduce has enjoyed
+    particular success. However, MapReduce lacks built-in support for iterative
+    programs, which arise naturally in many applications including data mining,
+    web ranking, graph analysis, and model fitting. This paper (This is an
+    extended version of the VLDB 2010 paper “HaLoop: Efficient Iterative Data
+    Processing on Large Clusters” PVLDB 3(1):285–296, 2010.) presents HaLoop, a
+    modified version of the Hadoop MapReduce framework, that is designed to
+    serve these applications. HaLoop allows iterative applications to be
+    assembled from existing Hadoop programs without modification, and
+    significantly improves their efficiency by providing inter-iteration
+    caching mechanisms and a loop-aware scheduler to exploit these
+    caches. HaLoop retains the fault-tolerance properties of MapReduce through
+    automatic cache recovery and task re-execution. We evaluated HaLoop on a
+    variety of real applications and real datasets. Compared with Hadoop, on
+    average, HaLoop improved runtimes by a factor of 1.85 and shuffled only 4 %
+    as much data between mappers and reducers in the applications that we
+    tested.",
+  basefilename = "haloop-vldb2012",
+  downloadsnonlocal =
+   "http://www.cs.washington.edu/homes/mernst/pubs/haloop-vldb2012.pdf PDF",
+  FUTUREcategory =  "Databases",
+  category =  "Miscellaneous",
+  csetags = "ybu,billhowe,magda,mernst,mernst-Miscellaneous,plse",
+  summary =
+   "An iterative job may repeat similar work on each iteration.  This paper
+    shows how to avoid repeating work in iterative MapReduce jobs,
+    substantially improving performance.",
+}
+
+
+@InProceedings{ZhangLE2012,
+  author = 	 "Sai Zhang and Hao L{\"u} and Michael D. Ernst",
+  authorASCII =	 "Sai Zhang and Hao Lu and Michael D. Ernst",
+  title = 	 "Finding errors in multithreaded {GUI} applications",
+  booktitle = ISSTA2012,
+  NEEDpages = 	 "*",
+  year = 	 2012,
+  address = 	 ISSTA2012addr,
+  month = 	 ISSTA2012date,
+  abstract =
+   "To keep a Graphical User Interface (GUI) responsive and active, a GUI
+    application often has a main \textit{UI thread} (or \textit{event
+    dispatching thread}) and spawns separate threads to handle lengthy
+    operations in the background, such as expensive computation, I/O tasks, and
+    network requests.  Many GUI frameworks require all GUI objects to be
+    accessed exclusively by the UI thread. If a GUI object is accessed through
+    a non-UI thread, an \textit{invalid thread access} error occurs and the
+    whole application may abort.
+    \par
+    This paper presents a general technique to find such \textit{invalid thread
+    access} errors in multithreaded GUI applications. We formulate finding
+    invalid thread access errors as a call graph reachability problem with
+    thread spawning as the sources and GUI object accessing as the sinks.
+    Standard call graph construction algorithms fail to build a good call graph
+    for some modern GUI applications, because of heavy use of reflection.
+    Thus, our technique builds reflection-aware call graphs.
+    \par
+    We implemented our technique and instantiated it for four popular Java GUI
+    frameworks: SWT, the Eclipse plugin framework, Swing, and Android. In an
+    evaluation on 10 programs comprising 99458 LOC, our technique found 5
+    previously-known errors and 7 new ones.",
+  basefilename = "gui-thread-issta-2012",
+  csetags = "mernst,mernst-Testing,plse,plse-testing,szhang",
+  category =  "Testing",
+  summary =
+   "In a GUI program, only the main thread (event thread) should access GUI
+    objects.  Our analysis verifies this property, and found crashing errors
+    in Android, Eclipse plugin, Swing, and SWT applications.",
+}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -7188,22 +7400,9 @@ endgame.",
 
 
 
-
-
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Submitted
 %%%
-
-
-
-
-
-
-
-
-
 
 
 
