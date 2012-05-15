@@ -7024,11 +7024,12 @@ endgame.",
   address = 	 FTFJP2012addr,
   month = 	 FTFJP2012date,
   abstract =
-   "Regular expressions are used to match and extract text.  It is easy for
-    developers to make syntactic mistakes when writing regular expressions,
-    because regular expressions are often complex and different across
-    programming languages.  Such errors result in exceptions at runtime and
-    there is currently no static support for preventing them.
+   "Regular expressions are used to match and extract text.  It is easy
+    for developers to make syntactic mistakes when writing regular
+    expressions, because regular expressions are often complex and
+    different across programming languages.  Such errors result in
+    exceptions at run time, and there is currently no static support for
+    preventing them.
     \par
     This paper describes practical experience designing and using a type
     system for regular expressions.  This type system validates regular
@@ -7037,10 +7038,11 @@ endgame.",
     from invalid syntax and \texttt{IndexOutOfBoundsException}s from accessing
     invalid capturing groups.
     \par
-    Our implementation is publicly available and supports the full Java
-    language.  In an evaluation on five open-source Java applications
-    (480kLOC), the type system was easy to use, required less than one
-    annotation per thousand lines, and found 50 previously-unknown bugs.",
+    Our implementation is publicly available and supports the full Java language.
+    In an evaluation on five open-source Java
+    applications (480kLOC), the type system was
+    easy to use, required less than one annotation per two thousand lines, and
+    found 56 previously-unknown bugs.",
   basefilename = "regex-types-ftfjp2012",
   category =  "Programming language design",
   csetags = "espishak,wmdietl,mernst,mernst-Programming-language-design,plse",
@@ -7061,33 +7063,36 @@ endgame.",
   address = 	 FTFJP2012addr,
   month = 	 FTFJP2012date,
   abstract =
-   "Program verification is the only way to be certain that a given piece
-    of software is free of (certain types of) errors --- errors that could
-    otherwise disrupt operations in the field.  To date, formal
-    verification has been done manually, by specially-trained engineers.
-    Labor costs have heretofore made formal verification too costly to
-    apply beyond small, critical software components.
+   "Program verification is the only way to be certain that a given piece of
+    software is free of (certain types of) errors --- errors that could
+    otherwise disrupt operations in the field.  To date, formal verification
+    has been done by specially-trained engineers.  Labor costs have heretofore
+    made formal verification too costly to apply beyond small, critical
+    software components.
     \par
-    Our goal is to make verification more cost-effective by reducing the
-    skill set required for program verification and increasing the pool of
-    people capable of performing program verification.  Our approach is to
-    transform the verification task (a program and a goal property) into a
-    visual puzzle task --- a game --- that gets solved by people. The
-    solution of the puzzle is then translated back into a proof of
-    correctness.  The puzzle is engaging and intuitive enough that ordinary
-    people can through game-play become experts.
+    Our goal is to make verification more cost-effective by reducing the skill
+    set required for program verification and increasing the pool of people
+    capable of performing program verification.  Our approach is to transform
+    the verification task (a program and a goal property) into a visual puzzle
+    task --- a game --- that gets solved by people. The solution of the puzzle
+    is then translated back into a proof of correctness.  The puzzle is
+    engaging and intuitive enough that ordinary people can through game-play
+    become experts.
     \par
-    This paper presents a status report on the Verification Games project
-    and our Pipe Jam prototype game.",
+    This paper presents a status report on the Verification Games project and
+    our Pipe Jam prototype game.",
   basefilename = "verigames-ftfjp2012",
+  downloads = 
+   "http://www.cs.washington.edu/verigames/ project homepage",
   category =  "Verification",
-  csetags = "wmdietl,sdietzel,mernst,nmote,bdwalker,scooper,pavlik,zoran,mernst-verification,plse,graphics",
+  csetags = "wmdietl,sdietzel,mernst,nmote,bdwalker,scooper,pavlik,zoran,mernst-verification,plse,graphics,plse-verigames",
   summary =
    "This paper presents a system that takes as input a program and a property,
     and produces as output a game.  When a player finishes a level of the game,
     the final configuration of board elements can be translated to a proof of
     the property."
 }
+
 
 @InProceedings{HuangDME2012,
   author = 	 "Wei Huang and Werner Dietl and Ana Milanova and Michael D. Ernst",
@@ -7117,7 +7122,6 @@ endgame.",
     a single algorithm can apply to multiple ownership type systems and choose
     a desirable typing among many possible ones.",
 }
-
 
 
 
