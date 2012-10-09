@@ -6732,7 +6732,7 @@ endgame.",
     handles realistic challenging idioms, and use syntactic techniques (type
     preservation) to show it soundly prevents deadlock.",
   basefilename = "lock-capabilities-tr111001",
-  TOBEsupersededby = "*",
+  supersededby = "GordonEG2012",
   category =  "Static analysis",
   csetags = "csgordon,mernst,djg,mernst-Static-analysis,plse,plse-lockcaps",
   summary =
@@ -6906,6 +6906,49 @@ endgame.",
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% 2012
 %%%
+
+@InProceedings{GordonEG2012,
+  author = 	 "Colin S. Gordon and Michael D. Ernst and Dan Grossman",
+  title = 	 "Static lock capabilities for deadlock freedom",
+  booktitle = TLDI2012,
+  NEEDpages = 	 "67--78",
+  year = 	 2012,
+  address = 	 TLDI2012addr,
+  month = 	 TLDI2012date,
+  abstract =
+   "We present a technique --- lock capabilities --- for statically verifying
+    that multithreaded programs with locks will not deadlock.  Most previous
+    work on deadlock prevention requires a strict total order on all locks held
+    simultaneously by a thread, but such an invariant often does not hold with
+    fine-grained locking, especially when data-structure mutations change the
+    order locks are acquired.  Lock capabilities support idioms that use
+    fine-grained locking, such as mutable binary trees, circular lists, and
+    arrays where each element has a different lock.
+    \par
+    Lock capabilities do not enforce a total order and do not prevent external
+    references to data-structure nodes.  Instead, the technique reasons about
+    static capabilities, where a thread already holding locks can attempt to
+    acquire another lock only if its capabilities allow it.  Acquiring one lock
+    may grant a capability to acquire further locks; in data-structures where
+    heap shape affects safe locking orders, the heap structure can induce the
+    capability-granting relation.  Deadlock-freedom follows from ensuring that
+    the capability-granting relation is acyclic.  Where necessary, we restrict
+    aliasing with a variant of unique references to allow strong updates to the
+    capability-granting relation, while still allowing other aliases that are
+    used only to acquire locks while holding no locks.
+    \par
+    We formalize our technique as a type-and-effect system, demonstrate it
+    handles realistic challenging idioms, and use syntactic techniques (type
+    preservation) to show it soundly prevents deadlock.",
+  basefilename = "lock-capabilities-tldi2012",
+  category =  "Static analysis",
+  csetags = "csgordon,mernst,djg,mernst-Static-analysis,plse,plse-lockcaps",
+  summary =
+   "This paper prevents deadlock by forcing the locking discipline to follow
+    pointers in the heap (or any other tree structure).  It permits fine-grained
+    locking, arbitrary lock acquisition orders, changing the locking order, etc.",
+}
+
 
 @InProceedings{BrunMHEN2012,
   author = 	 "Yuriy Brun and K{\i}van{\c{c}} Mu{\c{s}}lu and Reid Holmes and Michael D. Ernst and David Notkin",
