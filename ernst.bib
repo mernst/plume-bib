@@ -5295,7 +5295,7 @@ endgame.",
     speedup.",
   basefilename = "concurrent-refactoring-tr057",
   downloads =
-   "https://netfiles.uiuc.edu/dig/RefactoringInfo/tools/Concurrencer/index.html Concurrencer implementation",
+   "http://refactoring.info/tools/Concurrencer/ Concurrencer implementation",
   downloadsnonlocal =
    "http://dspace.mit.edu/bitstream/handle/1721.1/42841/MIT-CSAIL-TR-2008-057.pdf PDF;
     http://dspace.mit.edu/bitstream/handle/1721.1/42841/MIT-CSAIL-TR-2008-057.ps PS",
@@ -5485,7 +5485,7 @@ endgame.",
     and the converted code exhibits good speedup.",
   basefilename = "concurrent-refactoring-icse2009",
   downloads =
-   "https://netfiles.uiuc.edu/dig/RefactoringInfo/tools/Concurrencer/ Concurrencer implementation",
+   "http://refactoring.info/tools/Concurrencer/ Concurrencer implementation",
   downloadsnonlocal =
    "http://homes.cs.washington.edu/~mernst/pubs/concurrent-refactoring-icse2009.pdf PDF",
   category =  "Refactoring",
@@ -6011,7 +6011,7 @@ endgame.",
   downloads =
    "http://code.google.com/p/synoptic/ implementation",
   OPTdownloadsnonlocal = "",
-  OPTsupersededby = "",
+  supersededby = "BeschastnikhBSSE2011",
   category =  "Dynamic analysis",
   csetags = "ivanb,mernst,brun,mernst-Dynamic-analysis,proj-synoptic,plse",
   summary =
@@ -7331,7 +7331,7 @@ endgame.",
     previously published algorithms. Finally, InvariMint’s declarative approach
     can outperform equivalent procedural algorithms.",
   basefilename = "invarimint-tr120802",
-  TOBEsupersededby = "*",
+  supersededby = "BeschastnikhBAEK2013",
   category =  "Software engineering",
   csetags = "ivanb,brun,mernst,arvind,mernst-Software-engineering,proj-synoptic,plse",
   summary =
@@ -7467,7 +7467,87 @@ endgame.",
 }
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% 2013
+%%%
 
+
+
+
+
+@InProceedings{ZhangE2013,
+  author = 	 "Sai Zhang and Michael D. Ernst",
+  title = 	 "Automated diagnosis of software configuration errors",
+  booktitle = ICSE2013,
+  NEEDpages = 	 "*",
+  year = 	 2013,
+  address = 	 ICSE2013addr,
+  month = 	 ICSE2013date,
+  abstract =
+   "The behavior of a software system often depends on how that system is
+    configured.  Small configuration errors can lead to hard-to-diagnose
+    undesired behaviors.  We present a technique (and its tool implementation,
+    called ConfDiagnoser) to identify the root cause of a configuration error
+    --- a single configuration option that can be changed to produce desired
+    behavior.  Our technique uses static analysis, dynamic profiling, and
+    statistical analysis to link the undesired behavior to specific
+    configuration options.  It differs from existing approaches in two key
+    aspects: it does not require users to provide a testing oracle (to check
+    whether the software functions correctly) and thus is fully-automated; and
+    it can diagnose both crashing and non-crashing errors.
+    \par
+    We evaluated ConfDiagnoser on 5 non-crashing configuration errors and 9
+    crashing configuration errors from 5 configurable software systems written
+    in Java.  On average, the root cause was ConfDiagnoser's fifth-ranked
+    suggestion; in 10 out of 14 errors, the root cause was one of the top 3
+    suggestions; and more than half of the time, the root cause was the first
+    suggestion.",
+  basefilename = "configuration-errors-icse2013",
+  OPTdownloads = "",
+  OPTdownloadsnonlocal = "",
+  category =  "Testing",
+  csetags = "mernst,mernst-Testing,plse,plse-testing,szhang",
+  summary =
+   "Sometimes, incorrect software behavior is not due to a bug, but to supplying
+    an incorrect configuration option.  The ConfDiagnoser tool suggests a
+    configuration option to change so that the software produces desired behavior.",
+}
+
+
+
+
+@InProceedings{BeschastnikhBAEK2013,
+  author = 	 "Ivan Beschastnikh and Yuriy Brun and Jenny Abrahamson and Michael D. Ernst and Arvind Krishnamurthy",
+  title = 	 "Unifying {FSM}-inference algorithms through declarative specification",
+  booktitle = ICSE2013,
+  NEEDpages = 	 "*",
+  year = 	 2013,
+  address = 	 ICSE2013addr,
+  month = 	 ICSE2013date,
+  abstract =
+   "Logging system behavior is a staple development practice. Numerous powerful
+    model inference algorithms have been proposed to aid developers in log
+    analysis and system understanding.  Unfortunately, existing algorithms are
+    difficult to understand, extend, and compare. This paper presents
+    InvariMint, an approach to specify model inference algorithms
+    declaratively. We apply InvariMint to two model inference algorithms and
+    present evaluation results to illustrate that InvariMint (1) leads to new
+    fundamental insights and better understanding of existing algorithms, (2)
+    simplifies creation of new algorithms, including hybrids that extend
+    existing algorithms, and (3) makes it easy to compare and contrast
+    previously published algorithms. Finally, InvariMint's declarative approach
+    can outperform equivalent procedural algorithms.",
+  basefilename = "fsm-inference-declarative-icse2013",
+  OPTdownloads = "",
+  OPTdownloadsnonlocal = "",
+  category =  "Software engineering",
+  csetags = "ivanb,brun,mernst,jabrah,arvind,mernst-Software-engineering,proj-synoptic,plse",
+  summary =
+   "Model inference algorithms summarize a log to make it easier to understand.
+    But the algorithm itself can be hard to understand, especially if specified
+    procedurally.  InvariMint gives a declarative and efficient way to specify
+    model inference algorithms.",
+}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
