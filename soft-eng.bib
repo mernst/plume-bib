@@ -855,7 +855,7 @@
   booktitle = OOPSLA2009companion,
   pages = 	 "557--572",
   year = 	 2009,
-  address = 	 OOPSLA2009,
+  address = 	 OOPSLA2009addr,
   month = 	 OOPSLA2009date,
 }
 
@@ -901,7 +901,7 @@
   NEEDpages = 	 "*",
   year = 	 1997,
   address = 	 ICSE97addr,
-  NEEDmonth = 	 "*",
+  month = 	 ICSE97date,
 }
 
 
@@ -920,13 +920,13 @@
 
 @Article{Rochkind75,
   author = 	 "Marc J. Rochkind",
-  title = 	 "Mining metrics to predict component failures",
+  title = 	 "The Source Code Control System",
   journal = 	 IEEETSE,
   year = 	 1975,
   volume = 	 1,
   number = 	 4,
   pages = 	 "364-370",
-  NEEDmonth = 	 "*",
+  month = 	 dec,
 }
 
 
@@ -1029,6 +1029,19 @@
 
 
 
+
+
+@inproceedings{JB10,
+Author = {Kevin Jalbert and Jeremy S. Bradbury},
+Title = {Using Clone Detection to Identify Bugs in Concurrent Software},
+Booktitle = {Proc. of 26th IEEE International Conference on Software Maintenance (ICSM 2010)},
+Month = {Sept.},
+Year = {2010}}
+Abstract:
+We use clone detection, a technique for finding duplicated source code, and rule evaluation as the foundation for detecting bug patterns in concurrent software. If we can identify a bug pattern as being duplicated then we can localize our regression testing effort to the exploration of interleavings relevant to the potential bug. If the potential bug is indeed an actual bug, then targeting specific thread interleavings instead of examining all possible executions will increase the probability of the bug being detected sooner.
+Possible related work for CBCD.
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % LocalWords: GhezziJM Ghezzi Mehdi Jazayeri Mandrioli NJ ISBN Belady BasitRJ Xu
@@ -1036,7 +1049,7 @@
 % LocalWords: Vandevoorde booktitle dec StreckenbachS Mirko Gregor al Basit XVCL
 % LocalWords: Streckenbach Snelting KABA addr Kataoka ICSM KataokaEGN Damith TSE
 % LocalWords: Kataoka's Kremenek Ashcraft Junfeng Engler FSE KremenekAYE ErnstBN
-% LocalWords: Rajapakse Jarzabek NEEDpages CCFinder HenkelD Henkel Bod Balzer
+% LocalWords: Rajapakse Jarzabek NEEDpages CCFinder HenkelD Henkel Bod Balzer '
 % LocalWords: Amer Diwan CatchUp BCELMethod MandelinXBK Mandelin Bodik Cheatham
 % LocalWords: Rastislav Kimmelman authorSEARCHABLE Jungloid jungloid SW Boehm
 % LocalWords: jungloids composable int TRW's jul BalzerCG nov sep Walkthroughs
@@ -1066,8 +1079,44 @@
 % LocalWords:  Whyline timeline JFrame prefast JonesH totalpassed totalfailed
 % LocalWords:  RenierisR Renieris Reiss iComment Gopal Radatz issn doi ADT isbn
 % LocalWords:  JeongKZ Jeong Gaeul Sunghun WalradS Walrad Strom SCM BallKPS Siy
-% LocalWords:  NagappanBZ Nagappan Nachiappan Rochkind IEEETSE SCCS BaconCPR
-% LocalWords:  Yiling Parkes Rao Malvika Sakthivel CACM apr FritzM subtable
+% LocalWords:  NagappanBZ Nagappan Nachiappan Rochkind IEEETSE SCCS BaconCPR 'e
+% LocalWords:  Yiling Parkes Rao Malvika Sakthivel CACM apr FritzM subtable 3M
 % LocalWords:  DSketch Cossette ApelLBLK2011 Apel Jorg Liebig Brandl Lengauer
 % LocalWords:  Putnam78 BalzerCG83 Kastner Semistructured FSE2011 FSE2011addr
-% LocalWords:  FSE2011date semistructured FSTGENERATOR FSTMERGE
+% LocalWords:  FSE2011date semistructured FSTGENERATOR FSTMERGE 1990's Boehm87
+% LocalWords:  top10 Griswold91 Opdyke92 Fowler2000 Parr94 CC94 CC94addr ICSM96
+% LocalWords:  CC94date MensT2004 StreckenbachS2004 OOPSLA2004 OOPSLA2004addr
+% LocalWords:  OOPSLA2004date KataokaEGN01 HenkelD2005 ICSE2005 ICSE2005addr ek
+% LocalWords:  ICSE2005date Perkins2005 MurphyHillPB2009 ICSE2009 ICSE2009addr
+% LocalWords:  ICSE2009date researchers' Borland2004 ChowN96 ICSM96addr FSE2005
+% LocalWords:  ICSM96date MandelinXBK2005 PLDI2005 PLDI2005addr PLDI2005date AO
+% LocalWords:  RutarAF2004 ISSRE2004 ISSRE2004addr ISSRE2004date tradeoffs 500K
+% LocalWords:  KimSNM2005 FSE2005addr FSE2005date GhezziJM91 Lamb88 1996a 60K
+% LocalWords:  Pressman92 VandevoordeG94 runtime KremenekAYE2004 FSE2004 Przyby
+% LocalWords:  FSE2004addr FSE2004date BasitRJ2005 parameterization ErnstBN2002
+% LocalWords:  BasitJ2005 Baker95 MayrandLM96 dependences LivshitsZ2005 AOP OOP
+% LocalWords:  SullivanGSCSTR2005 Przybylek2011 Przybylek FASE2011 FASE2011addr
+% LocalWords:  FASE2011date modularizing modularizable modularized refactored
+% LocalWords:  LOC LCOM OO LiZ2005 84K Simon96 Braude2003 Budgen2003 KuhnGG2005
+% LocalWords:  Winograd1996 CoplienS1995 FelleisenFFK2001 CohoonD2005 PCODA2005
+% LocalWords:  PCODA2005addr PCODA2005date dimensionality ISSRE'00 GreevyD2005
+% LocalWords:  EisenbarthKS2003 CMSR2005 CMSR2005addr CMSR2005date GreevyDG2005
+% LocalWords:  ICSM2005 ICSM2005addr ICSM2005date WongGH2000 ZaidmanCDP2005 ASE
+% LocalWords:  HaRDRCRW2007 PLDI2007 PLDI2007addr PLDI2007date backtrace Orso
+% LocalWords:  unscalable LaTeX's ApiwattanapongOH2004 Alessandro Harrold 800M
+% LocalWords:  differencing ASE2004 ASE2004addr ASE2004date XuRTQ2007 FSE2007
+% LocalWords:  ApiwattanapongOH2007 checkpointing FSE2007addr FSE2007date Ko 7b
+% LocalWords:  DwyerKE2007 ICSE2007 ICSE2007addr ICSE2007date KoM2008 ICSE2008
+% LocalWords:  ICSE2008addr ICSE2008date Weise's JonesH2005 ASE2005 ASE2005addr
+% LocalWords:  ASE2005date RenierisR2003 unexamined NLP 10M 8M OOPSLA2009 Ko Ko
+% LocalWords:  OOPSLA2009companion OOPSLA2009date Downcasts equational AWT '97
+% LocalWords:  downcasts Cook2009 OOPSLA2009addr Brooks1975 JeongKZ2009 FSE2009
+% LocalWords:  FSE2009addr FSE2009date WalradS2002 BallKPS97 ICSE97addr Zeller
+% LocalWords:  ICSE97date NagappanBZ2006 Andreas ICSE2006 ICSE2006addr ICSE2010
+% LocalWords:  ICSE2006date Rochkind75 BaconCPR2009 Sakthivel2007 FritzM2010 Ko
+% LocalWords:  ICSE2010addr ICSE2010date panopticon Norman90 PTRSLB Khaled El
+% LocalWords:  Emam Saida Benlarbi Nishith Goel Shesh Rai rg stner ost Bj orn
+% LocalWords:  Regnell Claes Wohlin Runeson PSP Pankratius Scala Goues Vogt Yeh
+% LocalWords:  LeGouesDVFW2012 Weimer Westley ICSE2012 ICSE2012addr Tsung Roehm
+% LocalWords:  ICSE2012date Hsiang Sikuli filenames Tobias Tiarks Rainer Walid
+% LocalWords:  Maalej I2
