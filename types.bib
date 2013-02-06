@@ -4114,7 +4114,7 @@ title = {SAGE: Unified hybrid checking for first-class types, general refinement
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% Other static analyses
+%%% Abstract types
 %%%
 
 
@@ -4192,6 +4192,48 @@ title = {SAGE: Unified hybrid checking for first-class types, general refinement
     The unification of type and storage inferencing yields new insights into
     the meaning of ``aggregate type'', which should prove valuable in the
     design of future type systems.",
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Units of measure
+%%%
+
+@InProceedings{AntoniuSKNF,
+  author = 	 "Tudor Antoniu and Paul Steckler and Shriram Krishnamurthi
+                  and Erich Neuwirth and Matthias Felleisen",
+  title = 	 "Validating the unit correctness of spreadsheet programs",
+  booktitle =	 ICSE2004,
+  pages = 	 "439--448",
+  year =	 2004,
+  address =	 ICSE2004addr,
+  month =	 ICSE2004date,
+  abstract =
+   "Financial companies, engineering firms and even scientists create
+    increasingly larger spreadsheets and spreadsheet programs. The creators of
+    large spreadsheets make errors and must track them down. One common class
+    of errors concerns unit errors, because spreadsheets often employ formulas
+    with physical or monetary units.
+    \par
+    In this paper, we describe XeLda, our tool for unit checking Excel
+    spreadsheets. The tool highlights cells if their formulas process values
+    with incorrect units and if derived units clash with unit annotations. In
+    addition, it draws arrows to the sources of the formulas for debugging. The
+    tool is sensitive to many of the intricacies of Excel spreadsheets
+    including tables, matrices, and even circular references. Using XeLda, we
+    have detected errors in some published scientific spreadsheets.",
+}
+
+
+
+@InProceedings{ErwigB2002,
+  author = 	 {Martin Erwig and Margaret M. Burnett},
+  title = 	 {Adding Apples and Oranges},
+  pages =        "171--191",
+  booktitle = 	 PADL2002,
+  year =	 2002,
+  address =	 PADL2002addr,
+  month =	 PADL2002date
 }
 
 
@@ -4656,31 +4698,6 @@ keywords = "FindBugs"
 
 
 
-@InProceedings{AntoniuSKNF,
-  author = 	 "Tudor Antoniu and Paul Steckler and Shriram Krishnamurthi
-                  and Erich Neuwirth and Matthias Felleisen",
-  title = 	 "Validating the unit correctness of spreadsheet programs",
-  booktitle =	 ICSE2004,
-  pages = 	 "439--448",
-  year =	 2004,
-  address =	 ICSE2004addr,
-  month =	 ICSE2004date,
-  abstract =
-   "Financial companies, engineering firms and even scientists create
-    increasingly larger spreadsheets and spreadsheet programs. The creators of
-    large spreadsheets make errors and must track them down. One common class
-    of errors concerns unit errors, because spreadsheets often employ formulas
-    with physical or monetary units.
-    \par
-    In this paper, we describe XeLda, our tool for unit checking Excel
-    spreadsheets. The tool highlights cells if their formulas process values
-    with incorrect units and if derived units clash with unit annotations. In
-    addition, it draws arrows to the sources of the formulas for debugging. The
-    tool is sensitive to many of the intricacies of Excel spreadsheets
-    including tables, matrices, and even circular references. Using XeLda, we
-    have detected errors in some published scientific spreadsheets.",
-}
-
 
 
 
@@ -4997,16 +5014,6 @@ keywords = "FindBugs"
   editor =	 "G{\'e}rard Huet",
   address =	 "Reading, Massachusetts",
   publisher =	 "Addison-Wesley"
-}
-
-@InProceedings{ErwigB2002,
-  author = 	 {Martin Erwig and Margaret M. Burnett},
-  title = 	 {Adding Apples and Oranges},
-  pages =        "171--191",
-  booktitle = 	 PADL2002,
-  year =	 2002,
-  address =	 PADL2002addr,
-  month =	 PADL2002date
 }
 
 
