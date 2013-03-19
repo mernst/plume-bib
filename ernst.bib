@@ -1271,7 +1271,8 @@ endgame.",
   downloadsnonlocal =
     "http://homes.cs.washington.edu/~mernst/pubs/invariants-tse2001.pdf PDF",
   downloads =
-    "http://homes.cs.washington.edu/~mernst/pubs/invariants-icse99-slides.ppt ICSE 1999 talk slides (PowerPoint);
+    "http://homes.cs.washington.edu/~mernst/pubs/invariants-icse99.pdf ICSE 1999 paper (PDF);
+     http://homes.cs.washington.edu/~mernst/pubs/invariants-icse99-slides.ppt ICSE 1999 talk slides (PowerPoint);
      http://homes.cs.washington.edu/~mernst/pubs/invariants-icse99-slides.ps ICSE 1999 talk slides (PostScript);
      http://pag.csail.mit.edu/daikon/ Daikon implementation",
   category = "Invariant detection",
@@ -6485,7 +6486,7 @@ endgame.",
     automated bug finding in C programs using dynamic systematic testing (also
     known as concolic testing). Hampi's source code, documentation, and
     experimental data are available at
-    http://people.csail.mit.edu/akiezun/hampi",
+    \url{http://people.csail.mit.edu/akiezun/hampi/}",
   supersededby = "KiezunGGHE2009 a tutorial and paper",
   category =  "Static analysis",
   csetags = "mernst,mernst-Static-analysis,plse",
@@ -7240,8 +7241,8 @@ endgame.",
     particular success. However, MapReduce lacks built-in support for iterative
     programs, which arise naturally in many applications including data mining,
     web ranking, graph analysis, and model fitting. This paper (This is an
-    extended version of the VLDB 2010 paper “HaLoop: Efficient Iterative Data
-    Processing on Large Clusters” PVLDB 3(1):285–296, 2010.) presents HaLoop, a
+    extended version of the VLDB 2010 paper ``HaLoop: Efficient Iterative Data
+    Processing on Large Clusters'' PVLDB 3(1):285--296, 2010.) presents HaLoop, a
     modified version of the Hadoop MapReduce framework, that is designed to
     serve these applications. HaLoop allows iterative applications to be
     assembled from existing Hadoop programs without modification, and
@@ -7250,7 +7251,7 @@ endgame.",
     caches. HaLoop retains the fault-tolerance properties of MapReduce through
     automatic cache recovery and task re-execution. We evaluated HaLoop on a
     variety of real applications and real datasets. Compared with Hadoop, on
-    average, HaLoop improved runtimes by a factor of 1.85 and shuffled only 4 %
+    average, HaLoop improved runtimes by a factor of 1.85 and shuffled only 4\%
     as much data between mappers and reducers in the applications that we
     tested.",
   basefilename = "haloop-vldb2012",
@@ -7328,7 +7329,7 @@ endgame.",
     fundamental insights and better understanding of existing algorithms, (2)
     simplifies creation of new algorithms, including hybrids that extend
     existing algorithms, and (3) makes it easy to compare and contrast
-    previously published algorithms. Finally, InvariMint’s declarative approach
+    previously published algorithms. Finally, InvariMint's declarative approach
     can outperform equivalent procedural algorithms.",
   basefilename = "invarimint-tr120802",
   supersededby = "BeschastnikhBAEK2013",
@@ -7506,12 +7507,14 @@ endgame.",
     (also known as concolic testing). We then compared Hampi with another
     string solver, CFGAnalyzer, and show that Hampi is several times
     faster. Hampi's source code, documentation, and experimental data are
-    available at \url{http://people.csail.mit.edu/akiezun/hampi}",
+    available at \url{http://people.csail.mit.edu/akiezun/hampi/}",
   OPTomitfromcv = "",
-  OPTbasefilename = "",
-  OPTdownloads = "",
+  basefilename = "string-solver-tosem2012",
+  downloads =
+   "http://people.csail.mit.edu/akiezun/hampi/ HAMPI implementation and experiments",
+  downloadsnonlocal =
+   "http://homes.cs.washington.edu/~mernst/pubs/string-solver-tosem2012.pdf PDF",
   OPTdownloadsnonlocal = "",
-  OPTsupersededby = "",
   category =  "Static analysis",
   csetags = "mernst,mernst-Static-analysis,plse",
   summary =
@@ -7535,32 +7538,65 @@ endgame.",
   month = 	 ICSE2013date,
   abstract =
    "The behavior of a software system often depends on how that system is
-    configured.  Small configuration errors can lead to hard-to-diagnose
-    undesired behaviors.  We present a technique (and its tool implementation,
+    configured. Small configuration errors can lead to hard-to-diagnose
+    undesired behaviors. We present a technique (and its tool implementation,
     called ConfDiagnoser) to identify the root cause of a configuration error
     --- a single configuration option that can be changed to produce desired
-    behavior.  Our technique uses static analysis, dynamic profiling, and
+    behavior. Our technique uses static analysis, dynamic profiling, and
     statistical analysis to link the undesired behavior to specific
-    configuration options.  It differs from existing approaches in two key
+    configuration options. It differs from existing approaches in two key
     aspects: it does not require users to provide a testing oracle (to check
-    whether the software functions correctly) and thus is fully-automated; and
+    whether the software functions correctly) and thus is fully automated; and
     it can diagnose both crashing and non-crashing errors.
     \par
     We evaluated ConfDiagnoser on 5 non-crashing configuration errors and 9
     crashing configuration errors from 5 configurable software systems written
-    in Java.  On average, the root cause was ConfDiagnoser's fifth-ranked
+    in Java. On average, the root cause was ConfDiagnoser's fifth-ranked
     suggestion; in 10 out of 14 errors, the root cause was one of the top 3
     suggestions; and more than half of the time, the root cause was the first
     suggestion.",
   basefilename = "configuration-errors-icse2013",
-  OPTdownloads = "",
+  downloads = "http://config-errors.googlecode.com ConfDiagnoser implementation",
   OPTdownloadsnonlocal = "",
   category =  "Testing",
   csetags = "mernst,mernst-Testing,plse,plse-testing,szhang",
   summary =
    "Sometimes, incorrect software behavior is not due to a bug, but to supplying
     an incorrect configuration option.  The ConfDiagnoser tool suggests a
-    configuration option to change so that the software produces desired behavior.",
+    configuration option to change so that the software behaves as desired.",
+}
+
+
+@TechReport{BeschastnikhBAEK2013TR,
+  author = 	 "Ivan Beschastnikh and Yuriy Brun and Jenny Abrahamson and Michael D. Ernst and Arvind Krishnamurthy",
+  title = 	 "Unifying {FSM}-inference algorithms through declarative specification",
+  institution =  UWCSE,
+  year = 	 2013,
+  number = 	 "UW-CSE-13-03-01",
+  address = 	 UWCSEaddr,
+  month = 	 mar,
+  abstract =
+   "Logging system behavior is a staple development practice. Numerous powerful
+    model inference algorithms have been proposed to aid developers in log
+    analysis and system understanding. Unfortunately, existing algorithms are
+    difficult to understand, extend, and compare. This paper presents
+    InvariMint, an approach to specify model inference algorithms
+    declaratively. We apply InvariMint to two model inference algorithms and
+    present evaluation results to illustrate that InvariMint (1) leads to new
+    fundamental insights and better understanding of existing algorithms, (2)
+    simplifies creation of new algorithms, including hybrids that extend
+    existing algorithms, and (3) makes it easy to compare and contrast
+    previously published algorithms. Finally, InvariMint's declarative approach
+    can outperform equivalent procedural algorithms.",
+  basefilename = "invarimint-tr120802",
+  supersededby = "BeschastnikhBAEK2013 An extended version with proofs",
+  category =  "Software engineering",
+  csetags = "ivanb,brun,mernst,arvind,mernst-Software-engineering,proj-synoptic,plse",
+  summary =
+   "Model inference algorithms are typically defined procedurally, which makes
+    it hard to understand their properties and to define new algorithms with
+    specific properties.  InvariMint is a declarative approach that permits an
+    algorithm designer to specify the properties of the final algorithm.",
 }
 
 
@@ -7575,7 +7611,7 @@ endgame.",
   abstract =
    "Logging system behavior is a staple development practice. Numerous powerful
     model inference algorithms have been proposed to aid developers in log
-    analysis and system understanding.  Unfortunately, existing algorithms are
+    analysis and system understanding. Unfortunately, existing algorithms are
     difficult to understand, extend, and compare. This paper presents
     InvariMint, an approach to specify model inference algorithms
     declaratively. We apply InvariMint to two model inference algorithms and
@@ -7586,7 +7622,9 @@ endgame.",
     previously published algorithms. Finally, InvariMint's declarative approach
     can outperform equivalent procedural algorithms.",
   basefilename = "fsm-inference-declarative-icse2013",
-  OPTdownloads = "",
+  downloads =
+    "http://homes.cs.washington.edu/~mernst/pubs/fsm-inference-declarative-tr130301.pdf TR 13-03-01;
+     http://synoptic.googlecode.com/ InvariMint implementation",
   OPTdownloadsnonlocal = "",
   category =  "Software engineering",
   csetags = "ivanb,brun,mernst,jabrah,arvind,mernst-Software-engineering,proj-synoptic,plse",
@@ -7595,6 +7633,37 @@ endgame.",
     But the algorithm itself can be hard to understand, especially if specified
     procedurally.  InvariMint gives a declarative and efficient way to specify
     model inference algorithms.",
+}
+
+
+@InCollection{PotaninOZE2013,
+  author = 	 "Alex Potanin and Johan {\"O}stlund and Yoav Zibin and Michael Ernst",
+  authorASCII =  "Alex Potanin and Johan Ostlund and Yoav Zibin and Michael Ernst",
+  title = 	 "Immutability",
+  booktitle = 	 "Aliasing in Object-Oriented Programming",
+  publisher = 	 "Springer-Verlag",
+  year = 	 "2013",
+  volume = 	 "7850",
+  series = 	 "LNCS",
+  pages = 	 "233-269",
+  month = 	 apr,
+  abstract =
+   "One of the main reasons aliasing has to be controlled, as highlighted in
+    another chapter of this book, is the possibility that a variable can
+    unexpectedly change its value without the referrer's knowledge. This book
+    will not be complete without a discussion of the impact of immutability on
+    reference-abundant imperative object-oriented languages. In this chapter we
+    briefly survey possible definitions of immutability and present recent work
+    by the authors on adding immutability to object-oriented languages and how
+    it impacts aliasing.",
+  basefilename = "immutability-aliasing-2013",
+  OPTdownloads = "",
+  OPTdownloadsnonlocal = "",
+  category = "Immutability (side effects)",
+  csetags = "mernst,mernst-Static-analysis,plse",
+  summary =
+   "This review chapter discusses immutability in object-oriented
+   languages, with particular focus on how it impacts aliasing.",
 }
 
 
@@ -7645,45 +7714,45 @@ endgame.",
 }
 
 
-
-@InBook{PotaninOZE2013,
-  author = 	 "Alex Potanin and Johan {\"O}stlund and Yoav Zibin and Michael Ernst",
-  authorASCII = 	 "Alex Potanin and Johan Ostlund and Yoav Zibin and Michael Ernst",
-  ALTeditor = 	 "",
-  title = 	 "Aliasing in Object-Oriented Programming",
-  chapter = 	 "Immutability",
-  publisher = 	 "Springer-Verlag",
-  year = 	 "2013",
+@InProceedings{GordonDEG2013,
+  author = 	 "Colin S. Gordon and Werner Dietl and Michael D. Ernst and Dan Grossman",
+  title = 	 "{JavaUI}: Effects for Controlling {UI} Object Access",
+  OPTcrossref =  "",
   OPTkey = 	 "",
-  volume = 	 "7850",
-  OPTnumber = 	 "",
-  series = 	 "LNCS",
-  OPTtype = 	 "",
-  OPTaddress = 	 "",
-  OPTedition = 	 "",
-  OPTmonth = 	 "",
-  pages = 	 "233-269",
-  OPTnote = 	 "",
-  OPTannote = 	 "",
+  booktitle = ECOOP2013,
+  year = 	 2013,
+  NEEDpages = 	 "*",
+  month = 	 ECOOP2013date,
+  address = 	 ECOOP2013addr,
   abstract =
-   "One of the main reasons aliasing has to be controlled, as highlighted in
-    another chapter of this book, is the possibility that a variable can
-    unexpectedly change its value without the referrer’s knowledge. This book
-    will not be complete without a discussion of the impact of immutability on
-    reference-abundant imperative object-oriented languages. In this chapter we
-    briefly survey possible definitions of immutability and present recent work
-    by the authors on adding immutability to object-oriented languages and how
-    it impacts aliasing.",
-  basefilename = "immutability-aliasing-2013",
+   "Most graphical user interface (GUI) libraries forbid accessing UI elements
+    from threads other than the UI event loop thread.  Violating this
+    requirement leads to a program crash or an inconsistent UI\@.  Unfortunately,
+    such errors are all too common in GUI programs.
+    \par
+    We present the first type and effect system that prevents non-UI threads
+    from accessing UI objects or invoking UI-thread-only methods. The type
+    system still permits non-UI threads to hold and pass references to UI
+    objects.  We implemented this type system for Java and annotated 8 Java
+    programs (over 140KLOC) for the type system, including several of the most
+    popular Eclipse plugins.  We confirmed bugs found by unsound prior work,
+    found an additional bug and code smells, and demonstrated that the
+    annotation burden is low.
+    \par
+    We also describe code patterns our effect system handles less gracefully or
+    not at all, which we believe offers lessons for those applying other effect
+    systems to existing code.",
+  basefilename = "gui-thread-ecoop-2013",
   OPTdownloads = "",
   OPTdownloadsnonlocal = "",
-  OPTsupersededby = "",
-  category = "Immutability (side effects)",
-  csetags = "mernst,mernst-Static-analysis,plse",
+  category =  "Static analysis",
+  csetags = "csgordon,wmdietl,mernst,djg,mernst-Static-analysis,plse,plse-lockcaps",
   summary =
-   "This review chapter discusses immutability in object-oriented
-   languages, with particular focus on how it impacts aliasing.",
+   "In a GUI program, only the main thread (event thread) should access GUI
+    objects.  Our sound static analysis verifies this property through an
+    effect system, and scaled to 140KLOC.",
 }
+
 
 
 
