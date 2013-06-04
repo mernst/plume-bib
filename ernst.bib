@@ -5756,7 +5756,7 @@ endgame.",
    Java (OIGJ)''. Questions regarding this technical report should be
    directed to Alex Potanin ({\tt alex@ecs.vuw.ac.nz}).",
   basefilename = "ownership-immutability-tr0913",
-  downloadsnonlocal = "http://ecs.victoria.ac.nz/twiki/pub/Main/TechnicalReportSeries/ECSTR09-13.pdf PDF",
+  downloadsnonlocal = "http://ecs.victoria.ac.nz/foswiki/pub/Main/TechnicalReportSeries/ECSTR09-13.pdf PDF",
   category =  "Programming language design",
   csetags = "mernst,mernst-Programming-language-design,plse",
   TOBEsupersededby = "Zibin2010",
@@ -6063,7 +6063,7 @@ endgame.",
   downloadsnonlocal = 
    "http://homes.cs.washington.edu/~mernst/pubs/ownership-immutability-oopsla2010.pdf PDF",
   downloads =
-   "http://ecs.victoria.ac.nz/twiki/pub/Main/TechnicalReportSeries/ECSTR10-16.pdf TR with proofs",
+   "http://ecs.victoria.ac.nz/foswiki/pub/Main/TechnicalReportSeries/ECSTR10-16.pdf TR with proofs",
   TODOdownloads = ";
     http://types.cs.washington.edu/checker-framework/#oigj-checker implementation",
   category =  "Programming language design",
@@ -7755,6 +7755,139 @@ endgame.",
 }
 
 
+@InProceedings{ZhangHE2013,
+  author = 	 "Sai Zhang and Hao L{\"u} and Michael D. Ernst",
+  authorASCII =	 "Sai Zhang and Hao Lu and Michael D. Ernst",
+  title = 	 "Automatically repairing broken workflows for evolving {GUI} applications",
+  booktitle = ISSTA2013,
+  year = 	 2013,
+  NEEDpages = 	 "*",
+  month = 	 ISSTA2013date,
+  address = 	 ISSTA2013addr,
+  abstract =
+   "A workflow is a sequence of UI actions to complete a specific task.  In the
+    course of a GUI application's evolution, changes ranging from a simple GUI
+    refactoring to a complete rearchitecture can break an end-user's
+    well-established workflow.  It can be challenging to find a replacement
+    workflow. To address this problem, we present a technique (and its tool
+    implementation, called FlowFixer) that repairs a broken workflow.
+    FlowFixer uses dynamic profiling, static analysis, and random testing to
+    suggest a replacement UI action that fixes a broken workflow.
+    \par
+    We evaluated FlowFixer on 16 broken workflows from 5 real-world GUI
+    applications written in Java.  In 13 workflows, the correct replacement
+    action was FlowFixer's first suggestion.  In 2 workflows, the correct
+    replacement action was FlowFixer's second suggestion.  The remaining
+    workflow was un-repairable.  Overall, FlowFixer produced significantly
+    better results than two alternative approaches.",
+  basefilename = "repair-workflow-issta2013",
+  category =  "Testing",
+  csetags = "mernst,mernst-Testing,plse,plse-testing,szhang,hlv",
+  summary =
+   "When a UI changes, a user's workflow must also change.  The FlowFixer
+   tool automatically translates an old workflow into one that works on the
+   new UI.",
+}
+
+
+
+@InProceedings{MusluBEN2013,
+  author = 	 "K{\i}van{\c{c}} Mu{\c{s}}lu and Yuriy Brun and Michael D. Ernst and David Notkin",
+  authorASCII =  "Kivanc Muslu and Yuriy Brun and Michael D. Ernst and David Notkin",
+  title = 	 "Making offline analyses continuous",
+  booktitle = FSE2013,
+  year = 	 2013,
+  NEEDpages = 	 "*",
+  month = 	 FSE2013date,
+  address = 	 FSE2013addr,
+  abstract =
+   "It is beneficial for a developer to know whether a code change affects the
+    results of some analysis. Often, the developer must explicitly run each
+    analysis.  This interrupts the developer's workflow and/or lengthens the
+    delay between the time when the developer makes a change and when the
+    developer learns its effects and implications. The situation is even worse
+    for an impure analysis --- one that modifies the code on which it runs ---
+    because such an analysis blocks the developer from working on the code.
+    \par
+    This paper presents a novel approach to easily converting an offline
+    analysis --- even an impure one --- into a continuous analysis that informs
+    the developer of the implications of recent changes as quickly as possible
+    after the change is made. Our approach copies the developer's codebase,
+    incrementally keeps this codebase in sync with the developer's copy, and
+    makes that copy available for offline analyses to run without disturbing
+    the developer, and without the developer's changes disturbing the analyses.
+    \par
+    We have implemented our approach in Solstice, an open-source,
+    publicly-available Eclipse plug-in for implementing continuous analyses.
+    We used Solstice to convert three offline analyses --- FindBugs, PMD, and
+    unit testing --- into continuous ones. Each conversion required only 700
+    LoC (600 LoC NCSL) and took, on aver- age, 18 hours by a single developer
+    (who was experienced in using Solstice). Solstice-based analyses experience
+    under 3 milliseconds in runtime overhead per developer action, which is
+    negligible in practice.",
+  basefilename = "offline-continuous-esecfse2013",
+  category =  "Software Engineering",
+  csetags = "kivanc,brun,notkin,mernst,mernst-Software-engineering,plse,plse-speculation",
+  summary =
+   "An offline program analysis runs when the developer invokes it.  A
+    continuous analysis operates automatically on the current codebase and
+    asynchronously informs the developer of results.  By using a shadow copy of
+    the codebase, an offline analysis can be made continuous.",
+}
+
+
+
+
+@InProceedings{BurgBKE2013,
+  author = 	 "Brian Burg and Richard Bailey and Andrew J. Ko and Michael D. Ernst",
+  title = 	 "Interactive record/replay for web application debugging",
+  OPTcrossref =  "",
+  OPTkey = 	 "",
+  booktitle = UIST2013,
+  year = 	 "2013",
+  OPTeditor = 	 "",
+  OPTvolume = 	 "",
+  OPTnumber = 	 "",
+  OPTseries = 	 "",
+  NEEDpages = 	 "*",
+  month = 	 UIST2013date,
+  address = 	 UIST2013addr,
+  OPTorganization = "",
+  OPTpublisher = "",
+  OPTnote = 	 "",
+  OPTannote = 	 "",
+  abstract =
+   "During debugging, a developer must repeatedly and manually reproduce errant
+    behavior in order to inspect different facets of the program’s
+    execution. Existing tools for reproducing such behaviors prevent the use of
+    debugging aids such as breakpoints and logging, and are not designed for
+    interactive, random-access exploration of recorded behavior. This paper
+    presents Timelapse, a tool for quickly recording, reproducing, and
+    debugging interactive behaviors in web applications.  Developers can use
+    Timelapse to browse, visualize, and seek within recorded program executions
+    while simultaneously using familiar debugging tools such as breakpoints and
+    logging.  Testers and end-users can use Timelapse to demonstrate failures
+    in situ and share recorded behaviors with developers, improving bug report
+    quality by obviating the need for detailed reproduction steps. Timelapse is
+    built on Dolos, a novel record/replay infrastructure that records and
+    replays program inputs. Dolos introduces negligible overhead and does not
+    interfere with breakpoints and logging. Together, the Dolos infrastructure
+    and Timelapse developer tool support systematic bug reporting and debugging
+    practices.",
+  OPTusesDaikon = "",
+  OPTusesDaikonAsTestSubject = "",
+  OPTomitfromcv = "",
+  OPTbasefilename = "",
+  OPTdownloads = "record-replay-uist2013",
+  OPTdownloadsnonlocal = "",
+  OPTsupersededby = "",
+  OPTcategory =  "",
+  csetags = "burg,rjacob,ajko,mernst,mernst-Software-engineering,plse",
+  summary =
+   "This paper presents a record-replay infrastructure for web applications.
+    It features lightweight recording, and its replay is compatible with 
+    debuggers and logging.  This enables new developer debugging tools.",
+}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -7974,4 +8107,5 @@ endgame.",
 % LocalWords:  KiezunGGHE Vijay Hooimeijer HAMPI HAMPI's jase TODOdownloads ayy
 % LocalWords:  TipFKEBDS Ittai Balaban Sutter refactiorings Saman Bachrach Weng
 % LocalWords:  PerkinsKLABCPSSSWZEP Carbin Stelios Sidiroglou SOSP OPTabstract
-% LocalWords:  OPTbasefilename ClearView elyv concolic
+% LocalWords:  OPTbasefilename ClearView elyv concolic Ernst89a csetags
+%  LocalWords:  mitacmug1989
