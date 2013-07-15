@@ -9,7 +9,7 @@
 %%% 1989
 %%%
 
-@inproceedings{Ernst89a,
+@InProceedings{Ernst89a,
   author="Michael D. Ernst",
   title="ML typechecking is not efficient",
   booktitle="Papers of the MIT ACM Undergraduate Conference",
@@ -913,7 +913,7 @@ endgame.",
 %%% 1997
 %%%
 
-@inproceedings{ernst-ijcai97,
+@InProceedings{ernst-ijcai97,
   author=       "Michael D. Ernst and Todd D. Millstein and Daniel S. Weld",
   title=        "Automatic {SAT}-compilation of planning problems",
   booktitle=    IJCAI97,
@@ -2795,53 +2795,6 @@ endgame.",
 }
 
 
-@InProceedings{DonovanKTE2004,
-  author =	 "Alan Donovan and Adam Kie{\.z}un and Matthew S. Tschantz and Michael D. Ernst",
-  authorASCII =  "Adam Kiezun",
-  title =	 "Converting {Java} programs to use generic libraries",
-  booktitle =	 OOPSLA2004,
-  pages = 	 "15--34",
-  year =	 2004,
-  address =	 OOPSLA2004addr,
-  month =	 OOPSLA2004date,
-  abstract =
-   "Java 1.5 will include a type system (called JSR-14) that supports
-    \emph{parametric polymorphism}, or \emph{generic} classes.  This will bring
-    many benefits to Java programmers, not least because current Java practice
-    makes heavy use of logically-generic classes, including container classes.
-    \par
-    Translation of Java source code into semantically equivalent JSR-14 source
-    code requires two steps: parameterization (adding type parameters to class
-    definitions) and instantiation (adding the type arguments at each use of a
-    parameterized class).  Parameterization need be done only once for a class,
-    whereas instantiation must be performed for each client, of which there are
-    potentially many more.  Therefore, this work focuses on the instantiation
-    problem.  We present a technique to determine sound and precise JSR-14
-    types at each use of a class for which a generic type specification is
-    available.  Our approach uses a precise and context-sensitive pointer
-    analysis to determine possible types at allocation sites, and a
-    set-constraint-based analysis (that incorporates guarded, or conditional,
-    constraints) to choose consistent types for both allocation and declaration
-    sites.  The technique handles all features of the JSR-14 type system,
-    notably the raw types that provide backward compatibility.  We have
-    implemented our analysis in a tool that automatically inserts type
-    parameters into Java code, and we report its performance when applied to a
-    number of real-world Java programs.",
-  basefilename = "instantiating-generics-oopsla2004",
-  downloadsnonlocal =
-    "http://homes.cs.washington.edu/~mernst/pubs/instantiating-generics-oopsla2004.pdf PDF;
-     http://homes.cs.washington.edu/~mernst/pubs/instantiating-generics-oopsla2004.ps PostScript;
-     http://homes.cs.washington.edu/~mernst/pubs/instantiating-generics-oopsla2004-slides.pdf slides (PDF)",
-  category =     "Refactoring",
-  csetags = "mernst,mernst-Refactoring,plse",
-  summary =
-   "When type parameters are added to library code, client code should be
-    upgraded to supply parameters at each use of library classes.  This
-    paper presents a sound and precise combined pointer and type-based
-    analysis that does so.",
-}
-
-
 @InProceedings{BirkaE2004,
   author = 	 "Adrian Birka and Michael D. Ernst",
   title = 	 "A practical type system and language for reference immutability",
@@ -2892,47 +2845,50 @@ endgame.",
 }
 
 
-@InProceedings{PerkinsE2004,
-  author =	 "Jeff H. Perkins and Michael D. Ernst",
-  title =	 "Efficient incremental algorithms for dynamic detection of
-                  likely invariants",
-  booktitle =	 FSE2004,
-  pages = 	 "23--32",
+@InProceedings{DonovanKTE2004,
+  author =	 "Alan Donovan and Adam Kie{\.z}un and Matthew S. Tschantz and Michael D. Ernst",
+  authorASCII =  "Adam Kiezun",
+  title =	 "Converting {Java} programs to use generic libraries",
+  booktitle =	 OOPSLA2004,
+  pages = 	 "15--34",
   year =	 2004,
-  address =	 FSE2004addr,
-  month =	 FSE2004date,
-  basefilename = "invariants-incremental-fse2004",
-  downloads = "http://pag.csail.mit.edu/daikon/ Daikon implementation",
-  downloadsnonlocal =
-    "http://homes.cs.washington.edu/~mernst/pubs/invariants-incremental-fse2004.pdf PDF;
-     http://homes.cs.washington.edu/~mernst/pubs/invariants-incremental-fse2004.ps PostScript;
-     http://homes.cs.washington.edu/~mernst/pubs/invariants-incremental-fse2004-slides.pdf slides (PDF)",
-  category = "Invariant detection",
-  csetags = "mernst,mernst-Invariant-detection,plse",
-  summary =
-   "This paper shows how to perform dynamic invariant detection both
-    incrementally, efficiently, and without using only a trivial grammar;
-    previous implementations suffered from one or more such problems.",
+  address =	 OOPSLA2004addr,
+  month =	 OOPSLA2004date,
   abstract =
-   "Dynamic detection of likely invariants is a program analysis that
-    generalizes over observed values to hypothesize program properties.  The
-    reported program properties are a set of likely invariants over the
-    program, also known as an operational abstraction.  Operational
-    abstractions are useful in testing, verification, bug detection,
-    refactoring, comparing behavior, and many other tasks.
+   "Java 1.5 will include a type system (called JSR-14) that supports
+    \emph{parametric polymorphism}, or \emph{generic} classes.  This will bring
+    many benefits to Java programmers, not least because current Java practice
+    makes heavy use of logically-generic classes, including container classes.
     \par
-    Previous techniques for dynamic invariant detection scale poorly or
-    report too few properties.  Incremental algorithms are attractive because
-    they process each observed value only once and thus scale well with data
-    sizes.  Previous incremental algorithms only checked and reported a small
-    number of properties.  This paper takes steps toward correcting this
-    problem.  The paper presents two new incremental algorithms for invariant
-    detection and compares them analytically and experimentally to two
-    existing algorithms.  Furthermore, the paper presents four optimizations
-    and shows how to implement them in the context of incremental algorithms.
-    The result is more scalable invariant detection that does not sacrifice
-    functionality.",
-  usesDaikonAsTestSubject = 1,
+    Translation of Java source code into semantically equivalent JSR-14 source
+    code requires two steps: parameterization (adding type parameters to class
+    definitions) and instantiation (adding the type arguments at each use of a
+    parameterized class).  Parameterization need be done only once for a class,
+    whereas instantiation must be performed for each client, of which there are
+    potentially many more.  Therefore, this work focuses on the instantiation
+    problem.  We present a technique to determine sound and precise JSR-14
+    types at each use of a class for which a generic type specification is
+    available.  Our approach uses a precise and context-sensitive pointer
+    analysis to determine possible types at allocation sites, and a
+    set-constraint-based analysis (that incorporates guarded, or conditional,
+    constraints) to choose consistent types for both allocation and declaration
+    sites.  The technique handles all features of the JSR-14 type system,
+    notably the raw types that provide backward compatibility.  We have
+    implemented our analysis in a tool that automatically inserts type
+    parameters into Java code, and we report its performance when applied to a
+    number of real-world Java programs.",
+  basefilename = "instantiating-generics-oopsla2004",
+  downloadsnonlocal =
+    "http://homes.cs.washington.edu/~mernst/pubs/instantiating-generics-oopsla2004.pdf PDF;
+     http://homes.cs.washington.edu/~mernst/pubs/instantiating-generics-oopsla2004.ps PostScript;
+     http://homes.cs.washington.edu/~mernst/pubs/instantiating-generics-oopsla2004-slides.pdf slides (PDF)",
+  category =     "Refactoring",
+  csetags = "mernst,mernst-Refactoring,plse",
+  summary =
+   "When type parameters are added to library code, client code should be
+    upgraded to supply parameters at each use of library classes.  This
+    paper presents a sound and precise combined pointer and type-based
+    analysis that does so.",
 }
 
 
@@ -2977,6 +2933,50 @@ endgame.",
     predicting problems caused by component upgrades.  It presents an outline
     for a proof that the technique permits only sound upgrades.",
   usesDaikon = 1,
+}
+
+
+@InProceedings{PerkinsE2004,
+  author =	 "Jeff H. Perkins and Michael D. Ernst",
+  title =	 "Efficient incremental algorithms for dynamic detection of
+                  likely invariants",
+  booktitle =	 FSE2004,
+  pages = 	 "23--32",
+  year =	 2004,
+  address =	 FSE2004addr,
+  month =	 FSE2004date,
+  basefilename = "invariants-incremental-fse2004",
+  downloads = "http://pag.csail.mit.edu/daikon/ Daikon implementation",
+  downloadsnonlocal =
+    "http://homes.cs.washington.edu/~mernst/pubs/invariants-incremental-fse2004.pdf PDF;
+     http://homes.cs.washington.edu/~mernst/pubs/invariants-incremental-fse2004.ps PostScript;
+     http://homes.cs.washington.edu/~mernst/pubs/invariants-incremental-fse2004-slides.pdf slides (PDF)",
+  category = "Invariant detection",
+  csetags = "mernst,mernst-Invariant-detection,plse",
+  summary =
+   "This paper shows how to perform dynamic invariant detection both
+    incrementally, efficiently, and without using only a trivial grammar;
+    previous implementations suffered from one or more such problems.",
+  abstract =
+   "Dynamic detection of likely invariants is a program analysis that
+    generalizes over observed values to hypothesize program properties.  The
+    reported program properties are a set of likely invariants over the
+    program, also known as an operational abstraction.  Operational
+    abstractions are useful in testing, verification, bug detection,
+    refactoring, comparing behavior, and many other tasks.
+    \par
+    Previous techniques for dynamic invariant detection scale poorly or
+    report too few properties.  Incremental algorithms are attractive because
+    they process each observed value only once and thus scale well with data
+    sizes.  Previous incremental algorithms only checked and reported a small
+    number of properties.  This paper takes steps toward correcting this
+    problem.  The paper presents two new incremental algorithms for invariant
+    detection and compares them analytically and experimentally to two
+    existing algorithms.  Furthermore, the paper presents four optimizations
+    and shows how to implement them in the context of incremental algorithms.
+    The result is more scalable invariant detection that does not sacrifice
+    functionality.",
+  usesDaikonAsTestSubject = 1,
 }
 
 
@@ -3222,6 +3222,50 @@ endgame.",
 
 
 
+@InProceedings{Ernst2005:VSTTE,
+  author = 	 "Michael D. Ernst",
+  title = 	 "Verification for legacy programs",
+  booktitle =	 VSTTE2005,
+  year =	 2005,
+  address =	 VSTTE2005addr,
+  month =	 VSTTE2005date,
+  abstract =
+   "In the long run, programs should be written from the start with
+    verification in mind.  Programs written in such a way are likely to be much
+    easier to verify.  They will avoid hard-to-verify features, may have better
+    designs, will be accompanied by full formal specifications, and may be
+    annotated with verification information.  However, even if programs
+    \emph{should} be written this way, not all of them will.  In the short run,
+    it is crucial to verify the legacy programs that make up our existing
+    computing infrastructure, and to provide tools that assist programmers in
+    performing verification tasks and --- equally importantly --- in shifting
+    their mindset to one of program verification.  I propose approaches to
+    verification that may assist in reaching these goals.
+    \par
+    The key idea underlying the approaches is specification inference.  This is
+    a machine learning technique that produces, from an existing program, a
+    (likely) specification of that program.  Specifications are very frequently
+    missing from real-world programs, but are required for verification.  The
+    inferred specification can serve as a goal for verification.  I discuss
+    three different approaches that can use such inferred specifications.  One
+    uses a heavyweight proof assistant, one uses an automated theorem prover,
+    and one requires no user interaction but provides no guarantee.",
+  basefilename = "legacy-verification-vstte2005",
+  downloadsnonlocal =
+    "http://homes.cs.washington.edu/~mernst/pubs/legacy-verification-vstte2005.pdf PDF;
+     http://homes.cs.washington.edu/~mernst/pubs/legacy-verification-vstte2005.ps PostScript;
+     http://homes.cs.washington.edu/~mernst/pubs/legacy-verification-vstte2005-slides.pdf slides (PDF);
+     http://homes.cs.washington.edu/~mernst/pubs/legacy-verification-vstte2005-slides.ps slides (PostScript)",
+  category =     "Verification",
+  csetags = "mernst,mernst-Verification,plse",
+  summary =
+   "Legacy (under-documented and -specified) code will be with us forever.  This
+    paper suggests ways to cope with such systems, both to ameliorate short-term
+    problems and to advance toward a future in which all code is verified."
+}
+
+
+
 @InProceedings{TschantzE2005,
   author =	 "Matthew S. Tschantz and Michael D. Ernst",
   title =	 "Javari: Adding reference immutability to {Java}",
@@ -3337,49 +3381,6 @@ endgame.",
     \item issues in scaling analyses and user interfaces to deal with large
     systems
     \end{itemize}"
-}
-
-
-@InProceedings{Ernst2005:VSTTE,
-  author = 	 "Michael D. Ernst",
-  title = 	 "Verification for legacy programs",
-  booktitle =	 VSTTE2005,
-  year =	 2005,
-  address =	 VSTTE2005addr,
-  month =	 VSTTE2005date,
-  abstract =
-   "In the long run, programs should be written from the start with
-    verification in mind.  Programs written in such a way are likely to be much
-    easier to verify.  They will avoid hard-to-verify features, may have better
-    designs, will be accompanied by full formal specifications, and may be
-    annotated with verification information.  However, even if programs
-    \emph{should} be written this way, not all of them will.  In the short run,
-    it is crucial to verify the legacy programs that make up our existing
-    computing infrastructure, and to provide tools that assist programmers in
-    performing verification tasks and --- equally importantly --- in shifting
-    their mindset to one of program verification.  I propose approaches to
-    verification that may assist in reaching these goals.
-    \par
-    The key idea underlying the approaches is specification inference.  This is
-    a machine learning technique that produces, from an existing program, a
-    (likely) specification of that program.  Specifications are very frequently
-    missing from real-world programs, but are required for verification.  The
-    inferred specification can serve as a goal for verification.  I discuss
-    three different approaches that can use such inferred specifications.  One
-    uses a heavyweight proof assistant, one uses an automated theorem prover,
-    and one requires no user interaction but provides no guarantee.",
-  basefilename = "legacy-verification-vstte2005",
-  downloadsnonlocal =
-    "http://homes.cs.washington.edu/~mernst/pubs/legacy-verification-vstte2005.pdf PDF;
-     http://homes.cs.washington.edu/~mernst/pubs/legacy-verification-vstte2005.ps PostScript;
-     http://homes.cs.washington.edu/~mernst/pubs/legacy-verification-vstte2005-slides.pdf slides (PDF);
-     http://homes.cs.washington.edu/~mernst/pubs/legacy-verification-vstte2005-slides.ps slides (PostScript)",
-  category =     "Verification",
-  csetags = "mernst,mernst-Verification,plse",
-  summary =
-   "Legacy (under-documented and -specified) code will be with us forever.  This
-    paper suggests ways to cope with such systems, both to ameliorate short-term
-    problems and to advance toward a future in which all code is verified."
 }
 
 
@@ -7298,9 +7299,11 @@ endgame.",
     frameworks: SWT, the Eclipse plugin framework, Swing, and Android. In an
     evaluation on 9 programs comprising 89273 LOC, our technique found 5
     previously-known errors and 5 new ones.",
-  basefilename = "gui-thread-issta-2012",
+  basefilename = "gui-thread-issta2012",
   csetags = "mernst,mernst-Testing,plse,plse-testing,szhang",
   downloads = "http://guierrordetector.googlecode.com/ implementation",
+  downloadsnonlocal =
+   "http://homes.cs.washington.edu/~mernst/pubs/gui-thread-tr130401.pdf PDF",
   category =  "Testing",
   summary =
    "In a GUI program, only the main thread (event thread) should access GUI
@@ -7742,7 +7745,7 @@ endgame.",
     We also describe code patterns our effect system handles less gracefully or
     not at all, which we believe offers lessons for those applying other effect
     systems to existing code.",
-  basefilename = "gui-thread-ecoop-2013",
+  basefilename = "gui-thread-ecoop2013",
   downloads =
    "https://github.com/csgordon/javaui JavaUI implementation",
   OPTdownloadsnonlocal = "",
@@ -7761,7 +7764,7 @@ endgame.",
   title = 	 "Automatically repairing broken workflows for evolving {GUI} applications",
   booktitle = ISSTA2013,
   year = 	 2013,
-  NEEDpages = 	 "*",
+  pages = 	 "45--55",
   month = 	 ISSTA2013date,
   address = 	 ISSTA2013addr,
   abstract =
@@ -7785,10 +7788,9 @@ endgame.",
   csetags = "mernst,mernst-Testing,plse,plse-testing,szhang,hlv",
   summary =
    "When a UI changes, a user's workflow must also change.  The FlowFixer
-   tool automatically translates an old workflow into one that works on the
-   new UI.",
+    tool automatically translates an old workflow into one that works on the
+    new UI.",
 }
-
 
 
 @InProceedings{MusluBEN2013,
@@ -7858,7 +7860,7 @@ endgame.",
   OPTannote = 	 "",
   abstract =
    "During debugging, a developer must repeatedly and manually reproduce errant
-    behavior in order to inspect different facets of the program’s
+    behavior in order to inspect different facets of the program's
     execution. Existing tools for reproducing such behaviors prevent the use of
     debugging aids such as breakpoints and logging, and are not designed for
     interactive, random-access exploration of recorded behavior. This paper
@@ -7877,11 +7879,11 @@ endgame.",
   OPTusesDaikon = "",
   OPTusesDaikonAsTestSubject = "",
   OPTomitfromcv = "",
-  OPTbasefilename = "",
-  OPTdownloads = "record-replay-uist2013",
+  basefilename = "record-replay-uist2013",
+  OPTdownloads = "",
   OPTdownloadsnonlocal = "",
   OPTsupersededby = "",
-  OPTcategory =  "",
+  category =  "Software engineering",
   csetags = "burg,rjacob,ajko,mernst,mernst-Software-engineering,plse",
   summary =
    "This paper presents a record-replay infrastructure for web applications.
