@@ -31,8 +31,7 @@ bibtest-aux-clean:
 
 bibtest.tex: *.bib
 	@rm -f $@
-# Remove leading "@" to try to debug permission problem at CSAIL.
-	ls -1 *.bib | perl -p -e 'BEGIN { print "\\documentclass{report}\n\\usepackage{url}\n\\usepackage{fullpage}\n\\usepackage{relsize}\n\\begin{document}\\hbadness=10000\n\n\\bibliographystyle{alpha}\n\\nocite{*}\n\n\\bibliography{bibstring-unabbrev"; } END { print "}\n\n\\end{document}\n"; } if (/^bibstring/) { $$_=""; next; }; s:^(.*)\.bib\n:,$$1:;' > $@
+	@ls -1 *.bib | perl -p -e 'BEGIN { print "\\documentclass{report}\n\\usepackage{url}\n\\usepackage{fullpage}\n\\usepackage{relsize}\n\\begin{document}\\hbadness=10000\n\n\\bibliographystyle{alpha}\n\\nocite{*}\n\n\\bibliography{bibstring-unabbrev"; } END { print "}\n\n\\end{document}\n"; } if (/^bibstring/) { $$_=""; next; }; s:^(.*)\.bib\n:,$$1:;' > $@
 	@chmod -w $@
 # This must be phony because a file might be old, but not listed in bibroot.
 .PHONY: bibtest.tex
