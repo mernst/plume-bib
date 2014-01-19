@@ -8049,7 +8049,12 @@ endgame.",
     computing material nor the problems need to be ``dumbed down''.  At the end
     of the term students were amazed and delighted at the real data analysis
     that they could perform.  They were excited about applying computation in
-    their work and about learning more.",
+    their work and about learning more.
+    \par
+    The special session contains a mix of activities, including comparative
+    analysis of introductory classes; group discussion of curriculum design; a
+    mini-panel discussing how the approach has worked in practice; and
+    brainstorming about example assignments and curriculum revision.",
   basefilename = "data-programming-sigcse2014",
   downloads =
   "http://homes.cs.washington.edu/~mernst/teaching/data-programming/ Data Programming class at UW",
@@ -8062,6 +8067,155 @@ endgame.",
     a different type of student.  Each assignment uses a real-world dataset
     and answers a real question from science, engineering, business, etc."
 }
+
+
+
+@InProceedings{BeschastnikhBEK2014,
+  author = 	 "Ivan Beschastnikh and Yuriy Brun and Michael D. Ernst and Arvind Krishnamurthy",
+  title = 	 "Inferring models of concurrent systems from logs of their behavior with {CSight}",
+  booktitle = ICSE2014,
+  year = 	 2014,
+  NEEDpages = 	 "*",
+  month = 	 ICSE2014date,
+  address = 	 ICSE2014addr,
+  abstract =
+   "Concurrent systems are notoriously difficult to debug and understand. A
+    common way of gaining insight into system behavior is to inspect
+    execution logs and documentation. Unfortunately, manual inspection of
+    logs is an arduous process, and documentation is often incomplete and
+    out of sync with the implementation.
+    \par
+    To provide developers with more insight into \networked systems, we
+    developed CSight.  CSight mines logs of a system's executions to infer a
+    concise and accurate model of that system's behavior, in the form of a
+    communicating finite state machine (CFSM).
+    \par
+    Engineers can use the inferred CFSM model to understand complex behavior,
+    detect anomalies, debug, and increase confidence in the correctness of
+    their implementations.  CSight's only requirement is that the logged events
+    have vector timestamps. We provide a tool that automatically adds vector
+    timestamps to system logs.  Our tool prototypes are available at
+    \url{http://synoptic.googlecode.com/}.
+    \par
+    This paper presents algorithms for inferring CFSM models from traces
+    of concurrent systems, proves them correct, provides an
+    implementation, and evaluates the implementation in two ways: by
+    running it on logs from three different networked systems and via a
+    user study that focused on bug finding. Our evaluation finds that 
+    CSight infers accurate models that can help developers find bugs.",
+  basefilename = "concurrent-models-icse2014",
+  downloads =
+    "http://synoptic.googlecode.com/ CSight implementation",
+  category =  "Invariant detection",
+  csetags = "ivanb,brun,mernst,arvind,mernst-Software-engineering,proj-synoptic,plse",
+  summary =
+   "This paper provides a new approach to inferring a communicating finite state
+    machine (CFSM) from executions of a concurrent system.  The paper also proves
+    its techniques correct and evaluates an implementation on system logs and a
+    user study.",
+}
+
+
+@InProceedings{ZhangE2014,
+  author = 	 "Sai Zhang and Michael D. Ernst",
+  title = 	 "Which configuration option should {I} change?",
+  booktitle = ICSE2014,
+  year = 	 2014,
+  NEEDpages = 	 "*",
+  month = 	 ICSE2014date,
+  address = 	 ICSE2014addr,
+  abstract =
+   "Modern software often exposes configuration options for users to
+    customize its behavior. During software evolution,
+    developers may change how the configuration options behave.
+    When upgrading to a new software version,
+    users may need to re-configure the software
+    by changing values of certain configuration options.
+    \par
+    This paper addresses a central question during the evolution
+    of a configurable software system: which configuration options
+    should a user change to maintain the software's desired behavior?
+    We present a technique (and its tool implementation,
+    called ConfSuggester) to troubleshoot configuration errors
+    caused by software evolution. 
+    ConfSuggester uses dynamic profiling, execution trace
+    comparison, and static analysis to link the undesired
+    behavior to its root cause --- a single configuration option
+    whose value can be changed to produce desired behavior on the new
+    software version.
+    \par
+    We evaluated ConfSuggester on 8 configuration errors
+    from 6 configurable software systems written in Java.
+    In 6 errors, the root-cause configuration option was
+    ConfSuggester's first suggestion. In 1 error, the root cause
+    was ConfSuggester's third suggestion. The root cause
+    of the remaining error was ConfSuggester's sixth suggestion.
+    Overall, ConfSuggester produced significantly better results
+    than two existing techniques. ConfSuggester runs in only a few
+    minutes, making it an attractive alternative to manual debugging.",
+  basefilename = "confsuggester-icse2014",
+  downloads = "http://config-errors.googlecode.com ConfSuggester implementation",
+  NEEDdownloadsnonlocal = "*",
+  category =  "Testing",
+  csetags = "mernst,mernst-Testing,plse,plse-testing,szhang",
+  summary =
+   "A new version of a system may require different configuration options than a
+    previous version did.  This paper gives an automated technique for suggesting
+    which configuration options to change.  It outperforms previous approaches.",
+}
+
+
+@InProceedings{SchillerDCE2014,
+  author = 	 "Todd W. Schiller and Kellen Donohue and Forrest Coward and Michael D. Ernst",
+  title = 	 "Writing and enforcing contract specifications",
+  booktitle = ICSE2014,
+  year = 	 2014,
+  NEEDpages = 	 "*",
+  month = 	 ICSE2014date,
+  address = 	 ICSE2014addr,
+  abstract =
+   "Contracts are a popular tool for specifying the functional behavior of
+    software. 
+    This paper characterizes the contracts that developers write, the
+    contracts that developers could write, and how developers react when
+    shown the difference.
+    \par
+    This paper makes three research contributions based on an
+    investigation of projects' use of Code Contracts.
+    First, we characterize Code Contract usage in practice.
+    For example, approximately three-fourths of the Code Contracts
+    are basic checks for the presence of data.  We discuss similarities and
+    differences in usage across the projects, and we identify annotation burden,
+    tool support, and training as possible explanations based on
+    developer interviews.
+    Second, based on contracts automatically inferred for the projects,
+    we find that developers 
+    underutilize contracts for expressing state updates, object state
+    indicators, and conditional properties (implications).
+    Third, we performed user studies to learn how developers decide which
+    contracts to enforce.  Developers use contract suggestions to support their
+    existing use cases with more expressive contracts.  However, the
+    suggestions do not make developers experiment with other use cases for which
+    contracts are better-suited.
+    \par
+    In support of the research contributions, the paper presents two engineering
+    contributions: 
+    (1) Celeriac, a tool for generating traces of .NET
+    programs compatible with the Daikon invariant detection tool, and
+    (2) Contract Inserter, a Visual Studio add-in for discovering and
+    inserting likely invariants as Code Contracts.",
+  basefilename = "contract-specifications-icse2014",
+  downloads = "http://homes.cs.washington.edu/~tws/code-contracts/ data
+  and tools",
+  category =  "Invariant detection",
+  csetags = "tws,mernst,mernst-Software-engineering,plse,proj-daikon",
+  summary =
+   "How do developers use Code Contracts in practice?  How does developers' use
+    of Code Contracts compare to true contracts that they could have written?
+    How do developers react when shown the difference?  This paper answers these
+    questions."
+}
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
