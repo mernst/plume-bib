@@ -1,0 +1,157 @@
+
+
+
+@InProceedings{KatzBassettMASSvWAK2010,
+  author = 	 "Ethan Katz-Bassett and Harsha V. Madhyasthay and Vijay Kumar Adhikariz and Colin Scott and Justine Sherry and Peter van Wesep and Thomas Anderson and Arvind Krishnamurthy",
+  title = 	 "Reverse traceroute",
+  booktitle = NSDI2010,
+  year = 	 2010,
+  address = 	 NSDI2010addr,
+  month = 	 NSDI2010date,
+  abstract =
+   "Traceroute is the most widely used Internet diagnostic tool today. Network
+    operators use it to help identify routing failures, poor performance, and
+    router misconfigurations.  Researchers use it to map the Internet, predict
+    performance, geolocate routers, and classify the performance of
+    ISPs. However, traceroute has a fundamental limitation that affects all
+    these applications: it does not provide reverse path information. Although
+    various public traceroute servers across the Internet provide some
+    visibility, no general method exists for determining a reverse path from an
+    arbitrary destination.
+    \par
+    In this paper, we address this longstanding limitation by building a
+    reverse traceroute system. Our system provides the same information as
+    traceroute, but for the reverse path, and it works in the same case as
+    traceroute, when the user may lack control of the destination. We use a
+    variety of measurement techniques to incrementally piece together the path
+    from the destination back to the source. We deploy our system on PlanetLab
+    and compare reverse traceroute paths with traceroutes issued from the
+    destinations. In the median case our tool finds 87\% of the hops seen in a
+    directly measured traceroute along the same path, versus only 38\% if one
+    simply assumes the path is symmetric, a common fallback given the lack of
+    available tools. We then illustrate how we can use our reverse traceroute
+    system to study previously unmeasurable aspects of the Internet: we present
+    a case study of how a content provider could use our tool to troubleshoot
+    poor path performance, we uncover more than a thousand peer-to-peer AS
+    links invisible to current topology mapping efforts, and we measure the
+    latency of individual backbone links with average error under a
+    millisecond.",
+}
+
+
+
+@article{Lamport78,
+	author		= "Lamport, Leslie",
+	title		= "Time, Clocks, and the Ordering of Events in a
+			   Distributed System",
+	journal		= CACM,
+	volume		= 21,
+	number		= 7,
+	month		= jul,
+	year		= 1978,
+	pages		= "558--565"
+}
+
+
+
+
+@InProceedings{Fidge1988,
+  author = 	 "Colin J. Fidge",
+  title = 	 "Timestamps in message-passing systems that preserve the partial ordering",
+  booktitle = "Proc. of the 11th Australian Computer Science Conference (ACSC'88)",
+  pages = 	 "56-66",
+  year = 	 1988,
+  month = 	 feb,
+}
+
+
+@InProceedings{Mattern1988,
+  author = 	 "Friedemann Mattern",
+  title = 	 "Virtual time and global states of distributed systems",
+  booktitle = "Proc. Workshop on Parallel and Distributed Algorithms",
+  pages = 	 "120--131",
+  year = 	 1988,
+  address = 	 "Chateau de Bonas, Gers, France",
+  month = 	 oct # "~3--6,",
+}
+
+
+
+@InProceedings{Stone88,
+  author = 	 "Stone, Janice M.",
+  title = 	 "A graphical representation of concurrent processes",
+  booktitle =    PADD88,
+  pages = 	 "226--235",
+  year = 	 1988,
+  address = 	 PADD88addr,
+  month = 	 PADD88date,
+  abstract =
+   "This paper describes a graphical representation called a concurrency
+    map. It provides a succinct representation of the potentially large
+    collection of possible correct event-orderings for a set of concurrent
+    processes. The normal problems of monitoring, debugging and analyzing
+    performance of single-process programs are compounded for programs with
+    concurrent processes. Although we can observe the behavior of each separate
+    process, we do not know what is occurring concurrently in the various
+    processes during successive moments as execution progresses. Furthermore,
+    unknown timing delays among the processes may cause different program
+    behavior when we rerun the program. The relative time-ordering of events in
+    different concurrent processes is not, in general, fixed, and events that
+    occurred in one order on one occasion on which the program performed
+    correctly might occur in another order on another occasion, with equal
+    correctness. We need to know both how the program behaved during execution
+    and how that behavior might have differed under normal variations of
+    concurrent execution. The concurrency map aids in solving these problems.",
+}
+
+
+
+@InProceedings{ConsensHM1994,
+  author = 	 "Consens, Mariano C. and Hasan, Masum Z. and Mendelzon, Alberto O.",
+  title = 	 "Debugging Distributed Programs by Visualizing and Querying Event Traces",
+  booktitle = "Applications of Databases, First International Conference, ADB-94",
+  pages = 	 "181--183",
+  year = 	 1994,
+  address = 	 "Vadstena, Sweden",
+  month = 	 jun # "~21--23,",
+}
+
+
+@InProceedings{TanPKGN2008,
+  author = 	 "Jiaqi Tan and Xinghao Pan and Soila Kavulya and Rajeev Gandhi and Priya Narasimhan",
+  title = 	 "{SALSA}: analyzing logs as state machines",
+  booktitle = WASL2008,
+  year = 	 2008,
+  address = 	 WASL2008addr,
+  month = 	 WASL2008date,
+  abstract =
+   "SALSA examines system logs to derive state-machine views of the sytem's
+    execution, along with controlflow, data-flow models and related
+    statistics. Exploiting SALSA's derived views and statistics, we can
+    effectively construct higher-level useful analyses. We demonstrate SALSA's
+    approach by analyzing system logs generated in a Hadoop cluster, and then
+    illustrate SALSA's value by developing visualization and failure-diagnosis
+    techniques, for three different Hadoop workloads, based on our derived
+    state-machine views and statistics.",
+}
+
+
+@inproceedings{tan_mochi_hotcloud_2009,
+    abstract = {Mochi, a new visual, log-analysis based debugging tool correlates Hadoop's behavior in space, time and volume, and extracts a causal, unified control- and data-flow model of Hadoop across the nodes of a cluster. Mochi's analysis produces visualizations of Hadoop's behavior using which users can reason about and debug performance issues. We provide examples of Mochi's value in revealing a Hadoop job's structure, in optimizing real-world workloads, and in identifying anomalous Hadoop behavior, on the Yahoo! M45 Hadoop cluster.},
+    address = {Berkeley, CA, USA},
+    author = {Tan, Jiaqi and Pan, Xinghao and Kavulya, Soila and Gandhi, Rajeev and Narasimhan, Priya},
+    booktitle = {Proceedings of the 2009 conference on Hot topics in cloud computing},
+    citeulike-article-id = {9081308},
+    citeulike-linkout-0 = {http://dl.acm.org/citation.cfm?id=1855551},
+    citeulike-linkout-1 = {http://dl.acm.org/citation.cfm?id=1855551},
+    keywords = {dist-debug, dist-visualization, hadoop, to-read},
+    location = {San Diego, California},
+    pages = {18},
+    posted-at = {2011-03-30 23:32:45},
+    priority = {2},
+    publisher = {USENIX Association},
+    series = {HotCloud'09},
+    title = {Mochi: visual log-analysis based tools for debugging {Hadoop}},
+    url = {http://dl.acm.org/citation.cfm?id=1855551},
+    year = {2009}
+}

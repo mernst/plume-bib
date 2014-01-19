@@ -1,0 +1,4455 @@
+%%% testing.bib -- Testing bibliography (selective)
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Impact and cost of testing
+%%%
+
+@TechReport{NIST02-3,
+  author = 	 "{Research Triangle Institute}",
+  title = 	 "The Economic Impacts of Inadequate Infrastructure for Software Testing",
+  institution =  "National Institute of Standards and Technology",
+  year = 	 "2002",
+  OPTkey = 	 "",
+  type = 	 "NIST Planning Report",
+  number = 	 "02-3",
+  OPTaddress = 	 "",
+  month = 	 may,
+  OPTnote = 	 "",
+  OPTannote = 	 ""
+}
+
+
+@InProceedings{Hartman2002,
+  author = 	 "A. Hartman",
+  title = 	 "Is {ISSTA} research relevant to industry?",
+  booktitle =	 ISSTA2002,
+  pages =	 "205--206",
+  year =	 2002,
+  address =	 ISSTA2002addr,
+  month =	 ISSTA2002date
+}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Empirical evaluation of unit testing & TDD (test-driven development)
+%%%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Software reliability and fault injection models
+%%%
+
+
+@Article{goel85a,
+ key     = "goel85a",
+ author  = "Amrit L. Goel",
+ title   = "Software Reliability Models: Assumptions, Limitations, and
+          Applicability",
+ journal = TSE,
+ month   = dec,
+ year    = "1985",
+ volume  = "SE-11",
+ number  = "12",
+ pages   = "1411--1423"
+}
+
+
+
+
+
+@InProceedings{1989:icse:ohba,
+  author =       "Mitsuru Ohba and Xiao-Mei Chou",
+  title =        "Does Imperfect Debugging Affect Software Reliability
+                 Growth?",
+  booktitle =    ICSE89,
+  address =      ICSE89addr,
+  month =        ICSE89date,
+  year =         "1989",
+  ISSN =         "0270-5257",
+  ISBN =         "0-89791-258-6 (IEEE), 0-8186-1941-4 (ACM)",
+  pages =        "237--244",
+  genterms =     "DESIGN, LANGUAGES, MEASUREMENT, RELIABILITY",
+  categories =   "D.2.5 Software, SOFTWARE ENGINEERING, Testing and
+                 Debugging. D.2.8 Software, SOFTWARE ENGINEERING,
+                 Metrics, Performance measures.",
+  abstract =     "This paper discusses the improvement of conventional
+                 software reliability growth models by elimination of
+                 the unreasonable assumption that errors or faults in a
+                 program can be perfectly removed when they are
+                 detected. The results show that exponential-type
+                 software reliability growth models that deal with
+                 error-counting data could be used even if the perfect
+                 debugging assumption were not held, in which case the
+                 interpretation of the model parameters should be
+                 changed. An analysis of real project data is
+                 presented.",
+  annote =       "incomplete",
+}
+
+
+
+@Article{EickGKMM2001,
+  author = 	 "Stephen G. Eick and Todd L. Graves and Alan F. Karr and J. S. Marron and Audris Mockus",
+  title = 	 "Does code decay? Assessing the evidence from change
+                  management data",
+  journal = 	 TSE,
+  year = 	 2001,
+  volume =	 27,
+  number =	 1,
+  pages =	 "1--12",
+  month =	 jan,
+  abstract =
+   "A central feature of the evolution of large software systems is that change
+    --- which is necessary to add new functionality, accommodate new hardware
+    and repair faults --- becomes increasingly difficult over time. In this
+    paper we approach this phenomenon, which we term code decay, scientifically
+    and statistically. We define code decay, and propose a number of
+    measurements (code decay indices) on software, and on the organizations
+    that produce it, that serve as symptoms, risk factors and predictors of
+    decay. Using an unusually rich data set (the fifteen-plus year change
+    history of the millions of lines of software for a telephone switching
+    system), we find mixed but on the whole persuasive statistical evidence of
+    code decay, which is corroborated by developers of the code. Suggestive,
+    but not yet fully assimilated, indications that perfective maintenance can
+    retard code decay are also discussed.",
+}
+
+
+@Article{GravesKMS2000,
+  author = 	 "Todd L. Graves and Alan F. Karr and J. S. Marron and Harvey Siy",
+  title = 	 "Predicting fault incidence using software change history",
+  journal = 	 TSE,
+  year = 	 2000,
+  volume = 	 26,
+  number = 	 7,
+  pages =	 "653--661",
+  month =	 jul,
+  abstract =
+   "This paper is an attempt to understand the processes by which software
+    ages. We define code to be aged or decayed if its structure makes it too
+    difficult to understand or change, and we measure the extent of decay by
+    counting the number of faults in code in a period of time. Using change
+    management data from a very large, long-lived software system, we explore
+    the extent to which measurements from the change history are successful in
+    predicting the distribution over modules of these incidences of faults. In
+    general, process measures based on the change history are more useful in
+    predicting fault rates than product metrics of the code: for instance, the
+    number of times code has been changed is a better indication of how many
+    faults it will contain than is its length. We also compare the fault rates
+    of code of various ages, finding that if a module is on the average a year
+    older than an otherwise similar module, the older module will have roughly
+    a third fewer faults. Our most successful model measures the fault
+    potential of a module as a sum of contributions from all of the times the
+    module has been changed, with large, recent changes receiving the most
+    weight."
+}
+
+
+@Article{ChristensonH96,
+  author = 	 "Dennis A. Christenson and Steel T. Huang",
+  title = 	 "Estimating the fault content of software using the fix-on-fix model",
+  journal = 	 "Bell Labs Technical Journal",
+  year = 	 1996,
+  volume =	 1,
+  number =	 1,
+  pages =	 "130--137",
+  month =	 "Summer",
+  abstract =
+   "In statistical theory, the percentage of defects in a randomly
+    drawn sample is an estimate of the percentage of defects in the
+    entire population.  When this concept is applied to the process of
+    fixing faults during software development, a new fix-on-fix model
+    results. Such a model can predict the number of software faults,
+    thus providing a useful quality assessment. The model discussed in
+    this paper implements the concepts of BF and FOF, which have been
+    used in the 5ESS\textregistered-2000 switch project for several years.  The FOF
+    model is similar to error seeding models in which predetermined
+    errors are planted in the code. The number of remaining errors can
+    be predicted based on the number of original errors seeded and the
+    number of both seeded and nonseeded errors found during
+    testing. The model may initiate a new approach to software quality
+    prediction, and it has the advantage of being independent of
+    testing intensity, methodology, and environment. The FOF model is
+    applicable to any software product in which BF and FOF rates can be
+    measured from source-code management systems.",
+}
+
+
+@Article{YuSD88,
+  author = 	 "T.-J. Yu and V. Y. Shen and H. E. Dunsmore",
+  title = 	 "An analysis of several software defect models",
+  journal = 	 TSE,
+  year = 	 1988,
+  volume =	 14,
+  number =	 9,
+  pages =	 "1261--1270",
+  month =	 sep,
+  abstract =
+   "Results are presented of an analysis of several defect models using data
+    collected from two large commercial projects. Traditional models typically
+    use either program matrices (i.e. measurements from software products) or
+    testing time or combinations of these as independent variables. The
+    limitations of such models have been well-documented. The models considered
+    use the number of defects detected in the earlier phases of the development
+    process as the independent variable. This number can be used to predict the
+    number of defects to be detected later, even in modified software
+    products. A strong correlation between the number of earlier defects and
+    that of later ones was found. Using this relationship, a mathematical model
+    was derived which may be used to estimate the number of defects remaining
+    in software. This defect model may also be used to guide software
+    developers in evaluating the effectiveness of the software development and
+    testing processes.",
+}
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Effectiveness of various testing strategies
+%%%
+
+@Article{1998:tse:frankl,
+  title =        "Evaluating Testing Methods by Delivered Reliability",
+  author =       "Phyllis G. Frankl and Richard G. Hamlet and Bev
+                 Littlewood and Lorenzo Strigini",
+  pages =        "586--601",
+  journal =      TSE,
+  ISSN =         "0098-5589",
+  year =         "1998",
+  volume =       "24",
+  month =        aug,
+  number =       "8",
+  abstract =     "There are two main goals in testing software: 1) to
+                 achieve adequate quality (\emph{debug testing}); the
+                 objective is to probe the software for defects so that
+                 these can be removed and 2) to assess existing quality
+                 (\emph{operational testing}); the objective is to gain
+                 confidence that the software is reliable. The names are
+                 arbitrary, and most testing techniques address both
+                 goals to some degree. However, debug methods tend to
+                 ignore random selection of test data from an
+                 operational profile, while for operational methods this
+                 selection is all-important. Debug methods are thought,
+                 without any real proof, to be good at uncovering
+                 defects so that these can be repaired, but having done
+                 so they do not provide a technically defensible
+                 assessment of the reliability that results. On the
+                 other hand, operational methods provide accurate
+                 assessment, but may not be as useful for achieving
+                 reliability. This paper examines the relationship
+                 between the two testing goals, using a probabilistic
+                 analysis. We define simple models of programs and their
+                 testing, and try to answer theoretically the question
+                 of how to attain program reliability: Is it better to
+                 test by probing for defects as in debug testing, or to
+                 assess reliability directly as in operational testing,
+                 uncovering defects by accident, so to speak? There is
+                 no simple answer, of course. Testing methods are
+                 compared in a model where program failures are detected
+                 and the software changed to eliminate them. The
+                 ``better'' method delivers higher reliability after all
+                 test failures have been eliminated. This comparison
+                 extends previous work, where the measure was the
+                 probability of detecting a failure. Revealing special
+                 cases are exhibited in which each kind of testing is
+                 superior. Preliminary analysis of the distribution of
+                 the delivered reliability indicates that even simple
+                 models have unusual statistical properties, suggesting
+                 caution in interpreting theoretical comparisons.",
+  keywords =     "Reliability, debugging, software testing, statistical
+                 testing theory",
+  correctedby =  "\cite{1999:tse:frankl}",
+  note =         "Special Section: International Conference on Software
+                 Engineering (ICSE~'97)",
+  annote =       "incomplete",
+}
+
+@Article{1999:tse:frankl,
+  title =        "Correction to: Evaluating Testing Methods by Delivered
+                 Reliability",
+  author =       "Phyllis Frankl and Dick Hamlet and Bev Littlewood and
+                 Lorenzo Strigini",
+  pages =        "286",
+  journal =      TSE,
+  ISSN =         "0098-5589",
+  year =         "1999",
+  volume =       "25",
+  month =        mar # "/" # apr,
+  number =       "2",
+  corrects =     "\cite{1998:tse:frankl}",
+  references =   "\cite{1998:tse:frankl}",
+  annote =       "checked",
+}
+
+
+@misc{ irvine-effectiveness,
+  author = "A. Irvine and A. Offutt",
+  title = "The Effectiveness of Category-Partition Testing of Object-Oriented Software",
+  text = "Alisa Irvine and A. Jefferson Offutt, The Effectiveness of Category-Partition
+    Testing of Object-Oriented Software, ISSE Department George Mason University,
+    Fairfax, VA 22030.",
+  url = "citeseer.nj.nec.com/irvine95effectiveness.html"
+}
+
+@misc{ tewary-empirical,
+    author = "A. Jefferson Offutt, Kanupriya Tewary",
+    title = "Empirical Comparisons of Data Flow and Mutation Testing",
+    url = "citeseer.nj.nec.com/offutt92empirical.html"
+}
+
+@misc{ offutt94experiments,
+    author = "A. Offutt and J. Pan and K. Tewary and T. Zhang",
+    title = "Experiments with data flow and mutation testing",
+    text = "A. J. Offutt, J. Pan, K. Tewary, and T. Zhang. Experiments with
+	    data flow and mutation testing. Technical Report
+	    ISSE-TR-94-105, Department of Information and Software Systems
+	    Engineering, George Mason University, Fairfax, Virginia, 1994.",
+    year = "1994",
+    url = "citeseer.nj.nec.com/offutt94experiments.html"
+}
+
+
+@Article{HowdenH95,
+  author = 	 "W. E. Howden and Yudong Huang",
+  title = 	 "Software trustability analysis",
+  journal = 	 TOSEM,
+  year = 	 1995,
+  volume =	 4,
+  number =	 1,
+  pages =	 "36--64",
+  month =	 jan
+}
+
+
+%%%
+%%% Random testing
+%%%
+
+
+
+@InCollection{Hamlet94,
+  author = 	 "Dick Hamlet",
+  title = 	 "Random Testing",
+  booktitle = 	 "Encyclopedia of Software Engineering",
+  publisher =    "John Wiley and Sons",
+  year =         1994
+}
+
+
+@Article{1990:tse:hamlet,
+  title =        "Partition Testing Does Not Inspire Confidence",
+  author =       "Dick Hamlet and Ross Taylor",
+  pages =        "1402--1411",
+  journal =      TSE,
+  ISSN =         "0098-5589",
+  year =         "1990",
+  volume =       "16",
+  month =        dec,
+  number =       "12",
+  referencedby = "\cite{1997:icse:bernot}, \cite{1997:icse:frankl},
+                 \cite{1998:tse:frankl}, \cite{1999:tosem:podgurski}",
+  annote =       "incomplete",
+  abstract =     "Partition testing, in which a program's input domain is
+		  divided according to some rule and tests conducted within
+		  the subdomains, enjoys a good reputation.  However,
+		  comparison between testing that observes subdomain
+		  boundaries and random sampling that ignores the partition
+		  gives the counterintuitive result that partitioning is of
+		  little value.  In this paper we improve the negative
+		  results published about partition testing, and try to
+		  reconcile them with its intuitive value.
+		  Theoretical models allow us to study partition testing in
+		  the abstract, and to describe the circumstances under
+		  which it should perform well at failure detection.
+		  Partition testing is shown to be more valuable when the
+		  partitions are narrowly based on expected failures and
+		  there is a good chance that failures occur.  For gaining
+		  confidence from successful tests, partition testing as
+		  usually practiced has little value."
+}
+
+
+@Article{1984:tse:duran,
+  title =        "An Evaluation of Random Testing",
+  author =       "Joe W. Duran and Simeon C. Ntafos",
+  pages =        "438--444",
+  journal =      TSE,
+  ISSN =         "0098-5589",
+  year =         "1984",
+  volume =       "10",
+  month =        jul,
+  number =       "4",
+  referencedby = "\cite{1997:icse:bernot}, \cite{1997:icse:frankl},
+                 \cite{1998:tse:frankl}, \cite{1999:tosem:podgurski}",
+  annote =       "incomplete",
+}
+
+
+
+
+@Article{MillerMNPNMV92,
+  author = 	 "Keith W. Miller and Larry J. Morell and Robert E. Noonan
+                  and Stephen K. Park and David M. Nichol and Branson
+                  W. Murrill and Jeffrey M. Voas",
+  title = 	 "Estimating the probability of failure when testing reveals
+                  no failures",
+  journal = 	 TSE,
+  year = 	 1992,
+  volume =	 18,
+  number =	 1,
+  pages =	 "33--43",
+  month =	 jan
+}
+
+
+
+
+
+
+
+
+
+@Article{MillerFS90,
+  author = 	 "Barton P. Miller and Louis Fredriksen and Bryan So",
+  title = 	 "An empirical study of the reliability of {UNIX} utilities",
+  journal = 	 CACM,
+  year = 	 1990,
+  volume =	 33,
+  number =	 12,
+  pages =	 "32--44",
+  month =	 dec,
+  doi =	 	 "http://doi.acm.org/10.1145/96267.96279",
+}
+
+
+
+@InProceedings{Xie2006,
+  author = 	 "Tao Xie",
+  title = 	 "Augmenting automatically generated unit-test suites with
+                  regression oracle checking",
+  booktitle =    ECOOP2006,
+  pages = 	 "380--403",
+  year = 	 2006,
+  address = 	 ECOOP2006addr,
+  month = 	 ECOOP2006date,
+}
+
+
+
+
+
+
+
+
+
+
+
+@Article{SoaresGSM2010,
+  author = 	 "Soares, Gustavo and Gheyi, Rohit and Serey, Dalton and Massoni, Tiago",
+  title = 	 "Making program refactoring safer",
+  journal = 	 "IEEE Software",
+  year = 	 2010,
+  volume = 	 27,
+  number = 	 4,
+  pages = 	 "52--57",
+  month = 	 jul # "/" # aug,
+}
+
+
+@InProceedings{KleinFF2010,
+  author = 	 "Klein, Casey and Flatt, Matthew and Findler, Robert Bruce",
+  title = 	 "Random testing for higher-order, stateful programs",
+  booktitle = OOPSLA2010,
+  pages = 	 "555--566",
+  year = 	 2010,
+  address = 	 OOPSLA2010addr,
+  month = 	 OOPSLA2010date,
+}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Specification-based test suite generation
+%%%
+
+
+@PhdThesis{Meudec98,
+  author = 	 "Christophe Meudec",
+  title = 	 "Automatic Generation of Software Test Cases From Formal
+		  Specifications",
+  school = 	 "Queen's University of Belfast",
+  year = 	 1998,
+  OPTkey = 	 "",
+  OPTtype = 	 "",
+  OPTaddress = 	 "",
+  OPTmonth = 	 "",
+  OPTnote = 	 "",
+  OPTannote = 	 "",
+  abstract =     "Software testing consumes a large percentage of total
+		  software development costs. Yet, it is still usually
+		  performed manually in a non rigorous fashion. While
+		  techniques, and limited automatic support, for the
+		  generation of test data from the actual code of the
+		  system under test have been well researched, test cases
+		  generation from a high level specification of the
+		  intended behaviour of the system being developed has
+		  hardly been addressed. In this thesis we present a
+		  rationale for using tests derived from high level formal
+		  specifications and then set to find an efficient
+		  technique for the generation of adequate test sets from
+		  specifications written in our study language, VDM-SL. In
+		  this..."
+}
+
+@InProceedings{ChangR99,
+  author =       "Juei Chang and Debra J. Richardson",
+  title =        "Structural Specification-Based Testing: Automated
+                 Support and Experimental Evaluation",
+  pages =        "285--302",
+  ISBN =         "3-540-66538-2",
+  booktitle =    FSE99,
+  address =      FSE99addr,
+  month =        FSE99date,
+  year =         "1999",
+  abstract =     "In this paper, we describe a testing technique, called
+		  structural specification-based testing (SST), which
+		  utilizes the formal specification of a program unit as
+		  the basis for test selection and test coverage
+		  measurement. We also describe an automated testing tool,
+		  called ADLscope, which supports SST for program units
+		  specified in Sun Microsystems' Assertion Definition
+		  Language (ADL). ADLscope automatically generates coverage
+		  conditions from a program's ADL specification. While the
+		  program is tested, ADLscope determines which of these
+		  conditions are covered by the tests. An uncovered
+		  condition exhibits aspects of the specification
+		  inadequately exercised during testing. The tester uses
+		  this information to develop new test data to exercise the
+		  uncovered conditions.
+		  \par
+		  We provide an overview of SST's specification-based test
+		  criteria and describe the design and implementation of
+		  ADLscope.  Specification-based testing is guided by a
+		  specification, whereby the testing activity is directly
+		  related to what a component under test is supposed to do,
+		  rather than what it actually does. Specification-based
+		  testing is a significant advance in testing, because it
+		  is often more straightforward to accomplish and it can
+		  reveal failures that are often missed by traditional
+		  code-based testing techniques. As an initial evaluation
+		  of the capabilities of specification-based testing, we
+		  conducted an experiment to measure defect detection
+		  capabilities, code coverage and usability of
+		  SST/ADLscope; we report here on the results."
+}
+
+
+@InProceedings{ChangRS96:ISSTA,
+  author =       "Juei Chang and Debra J. Richardson and Sriram Sankar",
+  title =        "Structural Specification-based Testing with {ADL}",
+  OPTeditor =       "Steven J. Ziel",
+  booktitle =    ISSTA96,
+  year =         1996,
+  ISBN =         "0-89791-787-1",
+  pages =        "62--70",
+  url =          "http://www.acm.org/pubs/articles/proceedings/issta/229000/p62-chang/p62-chang.pdf",
+  genterms =     "DESIGN, VERIFICATION",
+  categories =   "D.2.1 Software, SOFTWARE ENGINEERING,
+                 Requirements/Specifications. D.2.5 Software, SOFTWARE
+                 ENGINEERING, Testing and Debugging. F.3.1 Theory of
+                 Computation, LOGICS AND MEANINGS OF PROGRAMS,
+                 Specifying and Verifying and Reasoning about Programs,
+                 Specification techniques.",
+  annote =       "incomplete",
+  abstract =     "This paper describes a specification-based black-box
+		  technique for testing program units. The main
+		  contribution is the method that we have developed to
+		  derive test conditions, which are descriptions of test
+		  cases, from the formal specification of each program
+		  unit. The derived test conditions are used to guide test
+		  selection and to measure comprehensiveness of existing
+		  test suites. Our technique complements traditional
+		  code-based techniques such as statement coverage and
+		  branch coverage. It allows the tester to quickly develop
+		  a black-box test suite.
+		  \par
+		  In particular, this paper presents techniques for
+		  deriving test conditions from specifications written in
+		  the Assertion Definition Language (ADL) [SH94], a
+		  predicate logic-based language that is used to describe
+		  the relationships between inputs and outputs of a program
+		  unit. Our technique is fully automatable, and we are
+		  currently implementing a tool based on the techniques
+		  presented in this paper."
+}
+
+
+@TechReport{HayesS94,
+  author = 	 "Roger Hayes and Sriram Sankar",
+  title = 	 "Specifying and Testing Software Components using {ADL}",
+  institution =  "Sun Microsystems Research",
+  year = 	 1994,
+  number =	 "TR-94-23",
+  address =	 "Palo Alto, CA, USA",
+  month =	 apr,
+  abstract =     "This paper presents a novel approach to unit testing of
+                  software components. This approach uses the specification
+                  language ADL, that is particularly well-suited for
+                  testing, to formally document the intended behavior of
+                  software components. Another related language, TDD, is
+                  used to systematically describe the test-data on which
+                  the software components will be tested.
+                  \par
+                  This paper gives a detailed overview of the ADL language,
+                  and a brief presentation of the TDD language.  Some
+                  details of the actual test system are also presented,
+                  along with some significant results.",
+  URL =          "http://www.sun.com/research/techrep/1994/smli_tr-94-23.ps"
+}
+
+
+@InProceedings{1989:tav:balcer,
+  author =       "Marc J. Balcer and William M. Hasling and Thomas J.
+                 Ostrand",
+  title =        "Automatic Generation of Test Scripts from Formal Test
+                 Specifications",
+  OMITeditor =   "Richard A. Kemmerer",
+  booktitle =    TAV89,
+  year =         "1989",
+  month =        TAV89date,
+  ISBN =         "0-89791-342-6",
+  pages =        "210--218",
+  genterms =     "LANGUAGES, RELIABILITY, VERIFICATION",
+  categories =   "I.2.2 Computing Methodologies, ARTIFICIAL
+                 INTELLIGENCE, Automatic Programming, Program
+                 transformation. D.2.5 Software, SOFTWARE ENGINEERING,
+                 Testing and Debugging, Testing tools (e.g., data
+                 generators, coverage testing).",
+  annote =       "incomplete",
+}
+
+
+
+
+@InProceedings{RichardsonOT89:TAV,
+  author =       "Debra J. Richardson and Owen O'Malley and Cindy
+                 Tittle",
+  title =        "Approaches to Specification-Based Testing",
+  IGNOREeditor =       "Richard A. Kemmerer",
+  booktitle =    TAV89,
+  year =         "1989",
+  month =        TAV89date,
+  ISBN =         "0-89791-342-6",
+  pages =        "86--96",
+  genterms =     "LANGUAGES, RELIABILITY, VERIFICATION",
+  categories =   "D.3.2 Software, PROGRAMMING LANGUAGES, Language
+                 Classifications, Larch. D.2.1 Software, SOFTWARE
+                 ENGINEERING, Requirements/Specifications, ANNA. D.2.1
+                 Software, SOFTWARE ENGINEERING,
+                 Requirements/Specifications, Languages. D.2.5 Software,
+                 SOFTWARE ENGINEERING, Testing and Debugging. D.2.4
+                 Software, SOFTWARE ENGINEERING, Software/Program
+                 Verification, Validation.",
+  annote =       "incomplete",
+  abstract =     "Current software testing practices focus, almost
+		 exclusively, on the implementation, despite widely
+		 acknowledged benefits of testing based on software
+		 specifications.  We propose approaches to
+		 specification-based testing by extending a wide variety of
+		 implementation-based testing techniques to be applicable
+		 to formal specification languages.  We demonstrate these
+		 approaches for the Anna and Larch specification languages."
+}
+
+@Article{Offutt:1999:DDR,
+  author =       "A. Jefferson Offutt and Zhenyi Jin and Jie Pan",
+  title =        "The dynamic domain reduction procedure for test data
+                 generation",
+  journal =      j-SPE,
+  volume =       "29",
+  number =       "2",
+  pages =        "167--193",
+  month =        feb,
+  year =         "1999",
+  coden =        "SPEXBL",
+  ISSN =         "0038-0644",
+  bibdate =      "Thu Jul 29 15:12:12 MDT 1999",
+  url =          "http://www3.interscience.wiley.com/cgi-bin/fulltext?ID=55000306&;PLACEBO=IE.pdf;
+                 http://www3.interscience.wiley.com/cgi-bin/abstract?ID=55000306",
+  acknowledgement = ack-nhfb,
+}
+
+@Article{1991:jsi:offutt,
+  author =       "A. Jefferson Offutt",
+  title =        "An integrated automatic test data generation system",
+  journal =      "Journal of Systems Integration",
+  volume =       "1",
+  year =         "1991",
+  number =       "3",
+  month =        nov,
+  pages =        "391--409",
+  referencedby = "\cite{1992:tosem:offutt}, \cite{1993:tosem:demillo}",
+  annote =       "incomplete",
+  abstract =
+   "The Godzilla automatic test data generator is an integrated collection of
+    tools that implements a relatively new test data generation method,
+    constraint-based testing, that is based on mutation
+    analysis. Constraint-based testing integrates mutation analysis with
+    several other testing techniques, including statement coverage, branch
+    coverage, domain perturbation and symbolic evaluation. Because Godzilla
+    uses a rule-based approach to generate test data, it is easily extendible
+    to allow new testing techniques to be integrated into the current
+    system. This paper describes the system that has been built to implement
+    constraint-based testing. Godzilla's design emphasizes orthogonality and
+    modularity, allowing relatively easy extensions. Godzilla's internal
+    structure and algorithms are described with emphasis on internal structures
+    of the system, and the engineering problems that were solved during the
+    implementation.",
+}
+
+@Article{OffuttL99,
+  author =       "A. Jefferson Offutt and Shaoying Liu",
+  title =        "Generating test data from {SOFL} specifications",
+  journal =      "The Journal of Systems and Software",
+  volume =       "49",
+  number =       "1",
+  pages =        "49--62",
+  day =          "15",
+  month =        dec,
+  year =         "1999",
+  coden =        "JSSODM",
+  ISSN =         "0164-1212",
+  bibdate =      "Tue Oct 10 10:06:05 MDT 2000",
+  url =          "http://www.elsevier.nl/inca/publications/store/5/0/5/7/3/2/505732.pub.htt",
+  acknowledgement = ack-nhfb,
+  abstract =     "Software testing can only be formalized and quantified
+		 when a solid basis for test generation can be defined.
+		 Tests are commonly generated from the source code,
+		 control flow graphs, design representations, and
+		 specifications/requirements. Formal specifications
+		 represent a significant opportunity for testing because
+		 they precisely describe what functions the software is
+		 supposed to provide in a form that can be easily
+		 manipulated. This paper presents a new method for
+		 generating tests from formal specifications. This method
+		 is comprehensive in specification coverage, applies at
+		 several levels of abstraction, and can be highly
+		 automated.  The paper applies the method to SOFL
+		 specifications, describes the technique, and demonstrates
+		 the application on a case study. A preliminary evaluation
+		 using a code-level coverage criterion (mutation testing),
+		 indicates that the method can result in very effective
+		 tests."
+}
+
+
+
+@TechReport{Burton99,
+  author = 	 "Simon Burton",
+  title = 	 "Towards automated unit testing of statechart implementations",
+  institution =  "Department of Computer Science, University of York, UK",
+  year = 	 "1999",
+  OPTkey = 	 "",
+  OPTtype = 	 "",
+  OPTnumber = 	 "YCS 319",
+  OPTaddress = 	 "",
+  OPTmonth = 	 aug # "~2,",
+  OPTnote = 	 "",
+  OPTannote = 	 "",
+  url =          "http://www.cs.york.ac.uk/ftpdir/reports/YCS-99-319.ps.gz",
+  abstract =     "This report describes an automated method of unit test
+		  design based on requirements specified in a subset of the
+		  statechart notation.  The behaviour under test is first
+		  extracted from the requirements and specified in the Z
+		  notation.  Existing methods and tools are then applied to
+		  this specification to derive the tests.  Using Z to model
+		  the requirements and specify the tests allows for a
+		  deductive approach to verifying test satisfiability, test
+		  result correctness and certain properties of the
+		  requirements.  An examination of the specification
+		  coverage achieved by the tests is provided and the report
+		  concludes with an evaluation of the work to date and a
+		  set of directions for future work.",
+}
+
+@InProceedings{Donat97,
+  author = {Michael R. Donat},
+  year = 1997,
+  month = apr,
+  title = {Automating Formal Specification-based Testing},
+  booktitle = TAPSOFT97,
+  OPTeditor = {Michel Bidoit and Max Dauchet},
+  OPTseries = {Lecture Notes in Computer Science},
+  OPTvolume = 1214,
+  pages = {833--847},
+  publisher = {Springer-Verlag},
+  abstract = "This paper presents a technique for automatically generating
+	      logical schemata that specify groups of black-box test cases
+	      from formal specifications containing universal and
+	      existential quantification. These schemata are called test
+	      frames.  Previous automated techniques have dealt with
+	      languages based on propositional logic. Since this new
+	      technique deals with quantification it can be applied to more
+	      expressive specifications. This makes the technique
+	      applicable to specifications written at the system
+	      requirements level. The limitations imposed by quantification
+	      are discussed. Industrial needs are addressed by the
+	      capabilities of recognizing and augmenting existing test
+	      frames and by accommodating a range of specification-coverage
+	      schemes. The coverage scheme taxonomy introduced in this
+	      paper provides a standard for controlling the number of test
+	      frames produced. This technique is intended to automate
+	      portions of what is done manually by practitioners. Basing
+	      this technique on formal rules of logical derivation ensures
+	      that the test frames produced are logical consequences of the
+	      specification. It is expected that deriving test frames
+	      automatically will offset the cost of developing a formal
+	      specification. This tangible product makes formal
+	      specification more economically feasible for industry."
+}
+
+
+@InProceedings{TothDJoyce96,
+  author = 	 "Kalman C. Toth and Michael R. Donat and Jeffrey J. Joyce",
+  title = 	 "Generating Test Cases From Formal Specifications",
+  booktitle = 	 INCOSE96,
+  year =	 1996,
+  address =	 "Boston",
+  month =	 jul,
+  abstract =     "This paper describes the possible process elements and
+		  benefits of applying ``Formal Methods'' to the
+		  specification and testing of software requirements. It is
+		  argued that the overall effort required to generate test
+		  cases can be significantly reduced by applying these
+		  methods. Ambiguities and inconsistencies are identified
+		  and removed from the specifications through the use of
+		  formal methods. This paper provides a sketch of a
+		  theoretic foundation for generating test cases from
+		  formalized software requirements specifications thereby
+		  reducing test development effort and providing developers
+		  and testers with a consistent interpretation of
+		  requirements. Preliminary work also supports the thesis
+		  that test case generation can be automated."
+}
+
+
+
+@InProceedings{DickF93,
+  author = 	 "J. Dick and A. Faivre",
+  title = 	 "Automating the generating and sequencing of test cases
+		  from model-based specifications",
+  booktitle = 	 FME93,
+  OPTcrossref =  "",
+  OPTkey = 	 "",
+  pages = 	 "268--284",
+  year = 	 1993,
+  OPTeditor = 	 "J.C.P. Woodcock and P.G. Larsen",
+  OPTvolume = 	 "670",
+  OPTnumber = 	 "",
+  OPTseries = 	 lncs,
+  OPTaddress = 	 "",
+  OPTmonth = 	 "",
+  OPTorganization = "",
+  OPTpublisher = "",
+  OPTnote = 	 "",
+  OPTannote = 	 ""
+}
+
+
+@Article{BernotGM91:SEJ,
+  author =       "Gilles Bernot and Marie Claude Gaudel and Bruno Marre",
+  title =        "Software testing based on formal specifications: a
+                 theory and a tool",
+  journal =      "IEE Software Engineering Journal",
+  month =        nov,
+  volume =       "6",
+  year =         "1991",
+  keyword =      "Prolog, software engineering",
+}
+
+@Article{HoffmanSW99,
+  author = 	 "Daniel Hoffman and Paul Strooper and Lee White",
+  title = 	 "Boundary Values and Automated Component Testing",
+  journal = 	 "Software Testing, Verification, and Reliability",
+  year = 	 1999,
+  volume =	 9,
+  number =	 1,
+  pages =	 "3--26",
+  month =	 mar,
+  abstract =     "Structural coverage approaches to software engineering
+		  are mature, having been thoroughly studied for decades.
+		  Significant tool support, in the form of instrumentation
+		  for statement or branch coverage, is available in
+		  commercial compilers. While structural coverage is
+		  sensitive to which code structures are covered, it is
+		  insensitive to the values of the variables when those
+		  structures are executed. Data coverage approaches, e.g.,
+		  boundary value coverage, are far less mature. They are
+		  known to practitioners mostly as a few useful heuristics
+		  with very little support for automation. Because of its
+		  sensitivity to variable values, data coverage has
+		  significant potential, especially when used in
+		  combination with structural coverage. This paper
+		  generalizes the traditional notion of boundary coverage,
+		  and formalizes it with two new data coverage
+		  measures. These measures are used to automatically
+		  generate test cases, and from these, sophisticated test
+		  suites for functions from the C++ Standard Template
+		  Library.  Finally, the test suites are evaluated with
+		  respect to both structural coverage and discovery of
+		  seeded faults."
+}
+
+
+
+@InProceedings{HoffmanS00,
+  author =	 "Daniel Hoffman and Paul Strooper",
+  title =	 "Tools and Techniques for {Java} {API} Testing",
+  booktitle = 	 "Proceedings of the 2000 Australian Software Engineering
+		  Conference",
+  OPTcrossref =  "",
+  OPTkey = 	 "",
+  pages = 	 "235--245",
+  year = 	 "2000",
+  OPTeditor = 	 "",
+  OPTvolume = 	 "",
+  OPTnumber = 	 "",
+  OPTseries = 	 "",
+  OPTaddress = 	 "",
+  OPTmonth = 	 "",
+  OPTorganization = "",
+  OPTpublisher = "",
+  OPTnote = 	 "",
+  OPTannote = 	 "",
+  abstract =     "With the advent of object-oriented languages and the
+		  portability of Java APIs, the development and use of
+		  reusable software components is becoming a
+		  reality. Effective component reuse depends on component
+		  reliability, which in turn depends on thorough
+		  testing. The literature, however, provides few approaches
+		  to component testing that are practical for the input
+		  generation and output checking of the large number of
+		  test cases required. In this paper, we present the Roast
+		  tool and techniques for the testing of Java APIs. The
+		  tool and techniques are illustrated on two non-trivial
+		  components and quantitative results are presented to
+		  substantiate the practicality and effectiveness of the
+		  approach."
+}
+
+
+
+@Article{HoffmanS97,
+  author = 	 "Daniel Hoffman and Paul Strooper",
+  title = 	 "ClassBench: a framework for automated class testing",
+  journal = 	 SPE,
+  year = 	 1997,
+  volume = 	 27,
+  number = 	 5,
+  pages = 	 "573--597",
+}
+
+
+@InProceedings{GrieskampGSV2002,
+  author = 	 "Wolfgang Grieskamp and Yuri Gurevich and Wolfram Schulte and Margus Veanes",
+  title = 	 "Generating finite state machines from abstract state machines",
+  booktitle =	 ISSTA2002,
+  pages =	 "112--122",
+  year =	 2002,
+  address =	 ISSTA2002addr,
+  month =	 ISSTA2002date,
+ doi = {http://doi.acm.org/10.1145/566172.566190},
+}
+
+
+% This entry written by Carlos
+@Manual{AsmL,
+  title = 	 "Documentation for AsmL 2",
+  author = 	 "",
+  organization = "Foundations of Software Engineering group",
+  address = 	 "Microsoft Research",
+  edition = 	 "",
+  month = 	 "",
+  year = 	 "2003",
+  note = 	 "\url{http://research.microsoft.com/fse/asml}",
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Coverage criteria
+%%%
+
+@Article{ZhuHM97,
+  author = 	 "Hong Zhu and Patrick A. V. Hall and John H. R. May",
+  title = 	 "Software unit test coverage and adequacy",
+  journal = 	 "ACM Computing Surveys",
+  year = 	 1997,
+  volume =	 29,
+  number =	 4,
+  pages =	 "366--427",
+  month =	 dec,
+  abstract =
+   "Objective measurement of test quality is one of the key issues in software
+    testing. It has been a major research focus for the last two decades. Many
+    test criteria have been proposed and studied for this purpose. Various
+    kinds of rationales have been presented in support of one criterion or
+    another. We survey the research work in this area. The notion of adequacy
+    criteria is examined together with its role in software dynamic testing. A
+    review of criteria classification is followed by a summary of the methods
+    for comparison and assessment of criteria."
+}
+
+
+
+@Article{Hamlet87,
+  author = 	 "Richard G. Hamlet",
+  title = 	 "Probable correctness theory",
+  journal = 	 "Information Processing Letters",
+  year = 	 1987,
+  volume =	 25,
+  number =	 1,
+  pages =	 "17--25",
+  month =	 apr # "~20,"
+}
+
+
+@InProceedings{WangER2007,
+  author = 	 "Zhimin Wang and Sebastian Elbaum and David S. Rosenblum",
+  title = 	 "Automated generation of context-aware tests",
+  booktitle = ICSE2007,
+  pages = 	 "406--415",
+  year = 	 2007,
+  address = 	 ICSE2007addr,
+  month = 	 ICSE2007date,
+}
+
+
+@InProceedings{BernerWK2007,
+  author = 	 "Stefan Berner and Roland Weber and Rudolf K. Keller",
+  title = 	 "Enhancing software testing by judicious use of code coverage information",
+  booktitle = ICSE2007,
+  pages = 	 "612-620",
+  year = 	 2007,
+  address = 	 ICSE2007addr,
+  month = 	 ICSE2007date,
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Category partition method
+%%%
+
+@Article{Ostrand:1988:CPM,
+  author =       "T. J. Ostrand and M. J. Balcer",
+  title =        "The Category-Partition Method for Specifying and
+                 Generating Functional Tests",
+  journal =      CACM,
+  volume =       "31",
+  number =       "6",
+  pages =        "676--686",
+  month =        jun,
+  year =         "1988",
+  coden =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Thu May 30 09:41:10 MDT 1996",
+  url =          "http://www.acm.org/pubs/toc/Abstracts/0001-0782/62964.html",
+  keywords =     "design; performance",
+  subject =      "{\bf D.2.5}: Software, SOFTWARE ENGINEERING, Testing
+                 and Debugging. {\bf K.6.3}: Computing Milieux,
+                 MANAGEMENT OF COMPUTING AND INFORMATION SYSTEMS,
+                 Software Management.",
+  abstract =     "A method for creating functional test suites has been
+		  developed in which a test engineer analyzes the system
+		  specification, writes a series of formal test
+		  specifications, and then uses a generator tool to produce
+		  test descriptions from which test scripts are
+		  written. The advantages of this method are that the
+		  tester can easily modify the test specification when
+		  necessary, and can control the complexity and number of
+		  the tests by annotating the tests specification with
+		  constraints."
+}
+
+
+@Article{GoodenoughG75:TSE,
+  author = 	 "John B. Goodenough and Susan L. Gerhart",
+  title = 	 "Toward a theory of test data selection",
+  journal = 	 TSE,
+  year = 	 1975,
+  volume =	 1,
+  number =	 2,
+  pages =	 "156--173",
+  month =	 jun
+}
+
+@InProceedings{1975:icrs:goodenough,
+  author =       "John B. Goodenough and Susan L. Gerhart",
+  title =        "Toward a theory of test data selection",
+  booktitle =    "Proceedings of the 1975 International Conference on
+                 Reliable Software",
+  year =         "1975",
+  pages =        "493--510",
+  referencedby = "\cite{1975:ncse:wasserman}",
+  annote =       "incomplete",
+}
+
+@Article{1975:tse:goodenough:b,
+  title =        "Correction to ``{Toward} a Theory of Test Data
+                 Selection''",
+  author =       "John B. Goodenough and Susan L. Gerhart",
+  pages =        "425",
+  journal =      TSE,
+  ISSN =         "0098-5589",
+  year =         "1975",
+  volume =       "1",
+  month =        dec,
+  number =       "4",
+  corrects =     "\cite{1975:tse:goodenough:a}",
+  annote =       "incomplete",
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Other use of specifications in testing
+%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Test minimization
+%%%
+
+@InProceedings{LeitnerOZCM2007,
+  author = 	 "Andreas Leitner and Manuel Oriol and Andreas Zeller and Ilinca Ciupa and Bertrand Meyer",
+  title = 	 "Efficient unit test case minimization",
+  booktitle = ASE2007,
+  pages = 	 "417--420",
+  year = 	 2007,
+  address = 	 ASE2007addr,
+  month = 	 ASE2007date,
+  abstract =
+   "Randomized unit test cases can be very effective in detecting
+   defects. In practice, however, failing test cases often comprise long
+   sequences of method calls that are tiresome to reproduce and debug. We
+   present a combination of static slicing and delta debugging that
+   automatically minimizes the sequence of failure-inducing method
+   calls. In a case study on the EiffelBase library, the strategy minimizes
+   failing unit test cases on average by 96\%.
+   \par
+   This approach improves on the state of the art by being far more
+   efficient: in contrast to the approach of Lei and Andrews, who use delta
+   debugging alone, our case study found slicing to be 50 times faster,
+   while providing comparable results. The combination of slicing and delta
+   debugging gives the best results and is 11 times faster.",
+}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Mutation analysis (mutation testing)
+%%%
+
+
+
+
+
+@Article{DeMilloLS78,
+  author = 	 "R. DeMillo and R. Lipton and F. Sayward",
+  title = 	 "Hints on test data selection: Help for the practicing programmer",
+  journal = 	 "IEEE Computer",
+  year = 	 1978,
+  volume =	 4,
+  number =	 11,
+  pages =	 "34--41",
+  month =	 apr
+}
+
+@InProceedings{OffuttU2000,
+  author = 	 "Jeff Offutt and Roland H. Untch",
+  title = 	 "Mutation 2000: Uniting the Orthogonal",
+  booktitle =	 "Mutation 2000: Mutation Testing in the Twentieth and the Twenty First Centuries",
+  pages =	 "45--55",
+  year =	 2000,
+  address =	 "San Jose, CA",
+  month =	 oct,
+  abstract =
+   "Mutation testing is a powerful, but computationally expensive, technique
+    for unit testing software. This expense has prevented mutation from
+    becoming widely used in practical situations, but recent engineering
+    advances have given us techniques and algorithms for significantly reducing
+    the cost of mutation testing. These techniques include a new algorithmic
+    execution technique called schema-based mutation, an approximation
+    technique called weak mutation, a reduction technique called selective
+    mutation, heuristics for detecting equivalent mutants, and algorithms for
+    automatic test data generation. This paper reviews experimentation with
+    these advances and outlines a design for a system that will approximate
+    mutation, but in a way that will be accessible to everyday programmers. We
+    envision a system to which a programmer can submit a program unit, and get
+    back a set of input/output pairs that are guaranteed to form an effective
+    test of the unit by being close to mutation adequate. We believe this
+    system will be efficient enough to be adopted by leading-edge software
+    developers. Full automation in unit testing has the potential to
+    dramatically change the economic balance between testing and development,
+    by reducing the cost of testing from the major part of the total
+    development cost to a small fraction.",
+}
+
+
+
+
+@TechReport{AgrawalDHHHKMMS2006,
+  author = 	 "Hiralal Agrawal and Richard A. DeMillo and Bob Hathaway and William Hsu and Wynne Hsu and E. W. Krauser and R. J. Martin and Aditya P. Mathur and Eugene Spafford",
+  title = 	 "Design of Mutant Operators for the {C} Programming Language",
+  institution =  "Department of Computer Science, Purdue University",
+  year = 	 2006,
+  number = 	 "SERC-TR-41-P",
+  address = 	 "Lafayette, Indiana",
+  month = 	 apr,
+  note = 	 "version 1.04",
+}
+
+
+
+@Article{BarbosaMV2001,
+  author = 	 "Ellen Francine Barbosa and Jos\'e Carlos Maldonado and Auri Marcelo Rizzo Vincenzi",
+  title = 	 "Toward the Determination of Sufficient Mutant Operators for {C}",
+  journal = 	 "Software Testing, Verification and Reliability",
+  year = 	 2001,
+  volume = 	 11,
+  pages = 	 "113-136",
+  month = 	 jun,
+}
+
+
+
+@Article{KimCM2001,
+  author = 	 "Sun-Woo Kim and John A. Clark and John A. McDermid",
+  title = 	 "Investigating the effectiveness of object-oriented testing strategies using the mutation method",
+  journal = 	 "Software Testing, Verification and Reliability",
+  year = 	 2001,
+  volume = 	 11,
+  number = 	 4,
+  pages = 	 "207-225",
+  month = 	 dec,
+}
+
+
+@Article{GhoshM2001,
+  author = 	 "S. Ghosh and A. P. Mathur",
+  title = 	 "Interface mutation",
+  journal = 	 "Software Testing, Verification and Reliability",
+  year = 	 2001,
+  volume = 	 11,
+  number = 	 4,
+  pages = 	 "227-247",
+  month = 	 dec,
+}
+
+@Article{VincenziMXD2001,
+  author = 	 "A. M. R. Vincenzi and J. C. Maldonado and E. F. Barbosa and M. E. Delamaro",
+  title = 	 "Unit and integration testing strategies for {C} programs using mutation",
+  journal = 	 "Software Testing, Verification and Reliability",
+  year = 	 2001,
+  volume = 	 11,
+  number = 	 4,
+  pages = 	 "249-268",
+  month = 	 dec,
+}
+
+
+
+
+
+@InCollection{BlackOY2001,
+  author = 	 "Black, Paul E. and Okun, Vadim and Yesha, Yaacov",
+  title = 	 "Mutation of model checker specifications for test generation and evaluation",
+  booktitle = 	 "Mutation testing for the new century",
+  pages = 	 "14--2",
+  publisher = "Kluwer Academic Publishers",
+  year = 	 2001,
+}
+
+@InProceedings{BlackOY2000,
+  author = 	 "Black, Paul E. and Okun, Vadim and Yesha, Yaacov",
+  title = 	 "Mutation operators for specifications",
+  booktitle = ASE2000,
+  pages = 	 "81--88",
+  year = 	 2000,
+  address = 	 ASE2000addr,
+  month = 	 ASE2000date,
+}
+
+@Article{AmmannB2001,
+  author = 	 "Paul E. Ammann and Paul E. Black",
+  title = 	 "A specification-based coverage metric to evaluate test sets",
+  journal = 	 "International Journal of Reliability, Quality and Safety Engineering",
+  year = 	 2001,
+  volume =	 8,
+  number =	 4,
+  pages =	 "275--299",
+  abstract =
+   "Software developers use a variety of formal and informal methods, including
+    testing, to argue that their systems are suitable for building high
+    assurance applications. In this paper, we develop another connection
+    between formal methods and testing by defining a specification-based
+    coverage metric to evaluate test sets. Formal methods in the form of a
+    model checker supply the necessary automation to make the metric
+    practical. The metric gives the software developer assurance that a given
+    test set is sufficiently sensitive to the structure of an application's
+    specification. We also develop the necessary foundation for the metric and
+    then illustrate the metric on an example."
+}
+
+
+@InProceedings{KnightA85,
+  author = 	 "John C. Knight and Paul E. Ammann",
+  title = 	 "An experimental evaluation of simple methods for seeding
+                  program errors",
+  booktitle =	 ICSE85,
+  pages =	 "337--342",
+  year =	 1985,
+  address =	 ICSE85addr,
+  month =	 ICSE85date
+}
+
+
+
+
+@InProceedings{AndrewsBL2005,
+  author = 	 "J. H. Andrews and L. C. Briand and Y. Labiche",
+  title = 	 "Is mutation an appropriate tool for testing experiments?",
+  booktitle =	 ICSE2005,
+  pages =	 "402--411",
+  year =	 2005,
+  address =	 ICSE2005addr,
+  month =	 ICSE2005date,
+  abstract =
+   "The empirical assessment of test techniques plays an important role in
+    software testing research. One common practice is to instrument faults,
+    either manually or by using mutation operators.  The latter allows the
+    systematic, repeatable seeding of large numbers of faults; however, we do
+    not know whether empirical results obtained this way lead to valid,
+    representative conclusions.  This paper investigates this important
+    question based on a number of programs with comprehensive pools of test
+    cases and known faults. It is concluded that, based on the data available
+    thus far, the use of mutation operators is yielding trustworthy results
+    (generated mutants are similar to real faults). Mutants appear however to
+    be different from hand-seeded faults that seem to be harder to detect than
+    real faults.",
+}
+
+
+
+
+@Article{Offutt92,
+  author = 	 "A. Jefferson Offutt",
+  title = 	 "Investigations of the software testing coupling effect",
+  journal = 	 TOSEM,
+  year = 	 1992,
+  volume =	 1,
+  number =	 1,
+  pages =	 "5--20",
+  month =	 jan,
+  abstract =
+   "Fault-based testing strategies test software by focusing on specific,
+    common types of faults. The coupling effect hypothesizes that test data
+    sets that detect simple types of faults are sensitive enough to detect more
+    complex types of faults. This paper describes empirical investigations into
+    the coupling effect over a specific class of software faults. All of the
+    results from this investigation support the validity of the coupling
+    effect. The major conclusion from this investigation is the fact that by
+    explicitly testing for simple faults, we are also implicitly testing for
+    more complicated faults, giving us confidence that fault-based testing is
+    an effective way to test software.",
+}
+
+
+
+@Article{AndrewsBLN2006,
+  author = 	 "J. H. Andrews and L. C. Briand and Y. Labiche and A. S. Namin",
+  title = 	 "Using mutation analysis for assessing and comparing testing coverage criteria",
+  journal = 	 IEEETSE,
+  year = 	 2006,
+  volume = 	 32,
+  number = 	 8,
+  pages = 	 "608-624",
+  month = 	 aug,
+}
+
+
+%%% Uses of mutation testing, as opposed to contributions in mutation
+%%% testing per se.
+
+
+@Article{Woodward93,
+  author = 	 "M. R. Woodward",
+  title = 	 "Errors in algebraic specifications and an experimental mutation testing tool",
+  journal = 	 "Software Eng. Journal",
+  year = 	 1993,
+  NEEDvolume = 	 "*",
+  NEEDnumber = 	 "*",
+  pages = 	 "211-224",
+  month = 	 jul,
+}
+
+
+
+
+
+
+@Article{MaOK2005,
+  author = 	 "Ma, Yu-Seung and Offutt, Jeff and Kwon, Yong Rae",
+  title = 	 "{MuJava}: An automated class mutation system",
+  journal = 	 STVR,
+  year = 	 2005,
+  volume = 	 15,
+  number = 	 2,
+  pages = 	 "97--133",
+  month = 	 jun,
+}
+
+@InProceedings{SmithW2007,
+  author = 	 "Ben H. Smith and Laurie Williams",
+  title = 	 "An empirical evaluation of the {MuJava} mutation operators",
+  booktitle =    TAICPART2007,
+  pages = 	 "193--202",
+  year = 	 2007,
+  address = 	 TAICPART2007addr,
+  month = 	 TAICPART2007date,
+}
+
+
+@MastersThesis{Umar2006,
+  author = 	 "Maryam Umar",
+  title = 	 "An Evaluation of Mutation Operators for Equivalent Mutants",
+  school = 	 "King's College",
+  year = 	 2006,
+  type = 	 "{MS} Project",
+  address = 	 "London",
+  month = 	 sep # "~1,",
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Generating test cases
+%%%
+
+
+
+
+@InProceedings{GuptaMS98,
+  author = 	 "Neelam Gupta and Aditya P. Mathur and Mary Lou Soffa",
+  title = 	 "Automated test data generation using an iterative
+                  relaxation method",
+  booktitle =	 fse98,
+  pages =	 "231--244",
+  year =	 1998,
+  address =	 fse98addr,
+  month =	 fse98date
+}
+
+
+@InProceedings{ClaessenH2000,
+  author = 	 "Koen Claessen and John Hughes",
+  title = 	 "{QuickCheck}: A lightweight tool for random testing of
+                  {Haskell} programs",
+  booktitle =	 ICFP2000,
+  pages =	 "268--279",
+  year =	 2000,
+  address =	 ICFP2000addr,
+  month =	 ICFP2000date,
+  abstract =
+   "QuickCheck is a tool which aids the Haskell programmer in formulating and
+    testing properties of programs. Properties are described as Haskell
+    functions, and can be automatically tested on random input, but it is also
+    possible to define custom test data generators. We present a number of case
+    studies, in which the tool w as successfully used, and also point out some
+    pitfalls to avoid. Random testing is especially suitable for functional
+    programs because properties can be stated at a fine grain. When a function
+    is built from separately tested components, then random testing suffices to
+    obtain good coverage of the definition under test."
+}
+
+
+@InProceedings{ClaessenH2002,
+  author = 	 "Koen Claessen and John Hughes",
+  title = 	 "Testing monadic code with {QuickCheck}",
+  booktitle =	 "ACM SIGPLAN 2002 Haskell Workshop",
+  pages =	 "65--77",
+  year =	 2002,
+  address =	 "Pittsburgh, PA, USA",
+  month =	 oct # "~3,",
+  abstract =
+   "QuickCheck is a previously published random testing tool for Haskell
+    programs. In this paper we show how to use it for testing monadic code, and
+    in particular imperative code written using the ST monad. QuickCheck tests
+    a program against a specification: we show that QuickCheck's specification
+    language is sufficiently powerful to represent common forms of
+    specifications: algebraic, model-based (both functional and relational),
+    and pre-/post-conditional. Moreover, all these forms of specification can
+    be used directly for testing. We define a new language of monadic
+    properties, and make a link between program testing and the notion of
+    observational equivalence."
+}
+
+
+@Manual{Jtest,
+  title = 	 "Jtest version 4.5",
+  OPTkey = 	 "",
+  OPTauthor = 	 "",
+  organization = "Parasoft Corporation",
+  OPTaddress = 	 "",
+  OPTedition = 	 "",
+  OPTmonth = 	 "",
+  OPTyear = 	 "",
+  note = 	 "\url{http://www.parasoft.com/}",
+  OPTannote = 	 ""
+}
+
+
+@Article{WeyukerGS94,
+  author = 	 "Elaine Weyuker and Tarak Goradia and Ashutosh Singh",
+  title = 	 "Automatically generating test data from a {Boolean} specification",
+  journal = 	 TSE,
+  year = 	 1994,
+  volume =	 20,
+  number =	 5,
+  pages =	 "353--363",
+  month =	 may,
+  abstract =
+   "This paper presents a family of strategies for automatically generating
+    test data for any implementation intended to satisfy a given specification
+    that is a Boolean formula.  The fault detection effectiveness of these
+    strategies is investigated both analytically and empirically, and the
+    costs, assessed in terms of test set size, are compared."
+}
+
+
+@Article{CsallnerS:JCrasher,
+  author = 	 "Christoph Csallner and Yannis Smaragdakis",
+  title = 	 "{JCrasher}: an automatic robustness tester for {Java}",
+  journal = 	 SPE,
+  year = 	 2004,
+  volume =	 34,
+  number =	 11,
+  pages =	 "1025--1050",
+  month =	 sep,
+  abstract =
+   "JCrasher is an automatic robustness testing tool for Java code. JCrasher
+    examines the type information of a set of Java classes and constructs code
+    fragments that will create instances of different types to test the behavior
+    of public methods under random data. JCrasher attempts to detect bugs by
+    causing the program under test to ``crash'', that is, to throw an undeclared
+    runtime exception. Although in general the random testing approach has many
+    limitations, it also has the advantage of being completely automatic: no
+    supervision is required except for off-line inspection of the test cases
+    that have caused a crash. Compared to other similar commercial and research
+    tools, JCrasher offers several novelties: it transitively analyzes methods,
+    determines the size of each tested method's parameter-space and selects
+    parameter combinations and therefore test cases at random, taking into
+    account the time allocated for testing; it defines heuristics for
+    determining whether a Java exception should be considered a program bug or
+    the JCrasher supplied inputs have violated the code's preconditions; it
+    includes support for efficiently undoing all the state changes introduced by
+    previous tests; it produces test files for JUnit --- a popular Java testing
+    tool; and can be integrated in the Eclipse IDE."
+}
+
+@InProceedings{CsallnerS2005,
+  author = 	 "Christoph Csallner and Yannis Smaragdakis",
+  title = 	 "{Check 'n' Crash}:  Combining static checking and testing",
+  booktitle =	 ICSE2005,
+  pages = 	 "422--431",
+  year =	 2005,
+  address =	 ICSE2005addr,
+  month =	 ICSE2005date,
+  abstract =
+   "We present an automatic error-detection approach that combines static
+    checking and concrete test-case generation. Our approach consists of taking
+    the abstract error conditions inferred using theorem proving techniques by
+    a static checker (ESC/Java), deriving specific error conditions using a
+    constraint solver, and producing concrete test cases (with the JCrasher
+    tool) that are executed to determine whether an error truly exists. The
+    combined technique has advantages over both static checking and automatic
+    testing individually. Compared to ESC/Java, we eliminate spurious warnings
+    and improve the ease-of-comprehension of error reports through the
+    production of Java counterexamples. Compared to JCrasher, we eliminate the
+    blind search of the input space, thus reducing the testing time and
+    increasing the test quality.",
+  usesDaikon = 1,
+  downloads = "http://www.cs.umass.edu/~yannis/cnc-final.pdf PDF",
+}
+
+
+
+
+@InProceedings{TombBV2007,
+  author = 	 "Aaron Tomb and Guillaume Brat and Willem Visser",
+  title = 	 "Variably interprocedural program analysis for runtime error detection",
+  booktitle =    ISSTA2007,
+  pages = 	 "97--107",
+  year = 	 2007,
+  address = 	 ISSTA2007addr,
+  month = 	 ISSTA2007date,
+  abstract =
+   "This paper describes an analysis approach based on a combination of
+    static and dynamic techniques to find run-time errors in Java code. It
+    uses symbolic execution to find constraints under which an error (e.g.,
+    a null pointer dereference, array out of bounds access, or assertion
+    violation) may occur and then solves these constraints to find test
+    inputs that may expose the error. It only alerts the user to the
+    possibility of a real error when it detects the expected exception
+    during a program run.
+    \par
+    The analysis is customizable in two important ways. First, we can
+    adjust how deeply to follow calls from each top-level method. Second,
+    we can adjust the path termination condition for the symbolic execution
+    engine to be either a bound on the path condition length or a bound on
+    the number of times each instruction can be revisited.
+    \par
+    We evaluated the tool on a set of benchmarks from the literature as
+    well as a number of real-world systems that range in size from a few
+    thousand to 50,000 lines of code. The tool discovered all known errors
+    in the benchmarks (as well as some not previously known) and reported
+    on average 8 errors per 1000 lines of code for the industrial
+    examples. In both cases the interprocedural call depth played little
+    role in the error detection. That is, an intraprocedural analysis seems
+    adequate for the class of errors we detect.",
+}
+
+
+
+@InProceedings{GodefroidKS2005,
+  author = 	 "Patrice Godefroid and Nils Klarlund and Koushik Sen",
+  title = 	 "{DART}: Directed automated random testing",
+  booktitle =    PLDI2005,
+  year = 	 2005,
+  address = 	 PLDI2005addr,
+  month = 	 PLDI2005date,
+}
+
+
+
+
+@InProceedings{Godefroid2007,
+  author = 	 "Patrice Godefroid",
+  title = 	 "Compositional dynamic test generation",
+  booktitle = POPL2007,
+  pages = 	 "47--54",
+  year = 	 2007,
+  address = 	 POPL2007addr,
+  month = 	 POPL2007date,
+}
+
+
+
+@InProceedings{VisserPP2006,
+  author = 	 "Willem Visser and Corina S. P\u{a}s\u{a}reanu and Radek Pel\'{a}nek",
+  authorASCII =  "Willem Visser and Corina S. Pasareanu and Radek Pelanek",
+  title = 	 "Test input generation for {Java} containers using state matching",
+  booktitle = ISSTA2006,
+  pages = 	 "37--48",
+  year = 	 2006,
+  address = 	 ISSTA2006addr,
+  month = 	 ISSTA2006date,
+}
+
+
+@InProceedings{VisserPK2004,
+  author = 	 "Willem Visser and Corina S. P\u{a}s\u{a}reanu and Sarfraz Khurshid",
+  authorASCII =  "Willem Visser and Corina S. Pasareanu and Sarfraz Khurshid",
+  title = 	 "Test input generation with {Java PathFinder}",
+  booktitle = ISSTA2004,
+  pages = 	 "97--107",
+  year = 	 2004,
+  address = 	 ISSTA2004addr,
+  month = 	 ISSTA2004date,
+}
+
+
+
+
+@InProceedings{SenMA2005,
+  author = 	 "Koushik Sen and Darko Marinov and Gul Agha",
+  title = 	 "{CUTE}: A Concolic Unit Testing Engine for {C}",
+  booktitle = FSE2005,
+  pages = 	 "263--272",
+  year = 	 2005,
+  address = 	 FSE2005addr,
+  month = 	 FSE2005date,
+}
+
+@InProceedings{SenA2006,
+  author = 	 "Koushik Sen and Gul Agha",
+  title = 	 "{CUTE} and {jCUTE}: Concolic unit testing and explicit path model-checking tools",
+  booktitle = CAV2006,
+  pages = 	 "419--423",
+  year = 	 2006,
+  address = 	 CAV2006addr,
+  month = 	 CAV2006date,
+}
+
+
+@InProceedings{QuR2011,
+  author = 	 "Xiao Qu and Brian Robinson",
+  title = 	 "A case study of concolic testing tools and their limitations",
+  booktitle = ESEM2011,
+  NEEDpages = 	 "*",
+  year = 	 2011,
+  address = 	 ESEM2011addr,
+  month = 	 ESEM2011date,
+}
+
+
+@InProceedings{YuanX2006,
+  author = 	 "Hai Yuan and Tao Xie",
+  title = 	 "Substra: A framework for automatic generation of integration tests",
+  booktitle = AST2006,
+  pages = 	 "64--70",
+  year = 	 2006,
+  address = 	 AST2006addr,
+  month = 	 AST2006date,
+  abstract =
+   "A component-based software system consists of well-encapsulated components
+    that interact with each other via their interfaces.  Software integration
+    tests are generated to test the interactions among different components.
+    These tests are usually in the form of sequences of interface method calls.
+    Although many components are equipped with documents that provide informal
+    specifications of individual interface methods, few documents specify
+    component interaction constraints on the usage of these interface methods,
+    including the order in which these methods should be called and the
+    constraints on the method arguments and returns across multiple methods.
+    In this paper, we propose Substra, a framework for automatic generation of
+    software integration tests based on call-sequence constraints inferred from
+    dynamic executions.  Two types of sequencing constraints are inferred:
+    shared subsystem states and object define-use relationships.  The inferred
+    constraints are used to guide automatic generation of integration tests.
+    We have implemented Substra with a tool and applied the tool on an ATM
+    example.  The preliminary results show that the tool can effectively
+    generate integration tests that exercise new program behaviors.",
+  usesDaikon = 1,
+  downloads = "http://people.engr.ncsu.edu/txie/publications/ast06-substra.pdf PDF",
+}
+
+
+
+@InProceedings{YuanM2007,
+  author = 	 "Xun Yuan and Atif M. Memon",
+  title = 	 "Using {GUI} run-time state as feedback to generate test cases",
+  booktitle = ICSE2007,
+  pages = 	 "396--405",
+  year = 	 2007,
+  address = 	 ICSE2007addr,
+  month = 	 ICSE2007date,
+  abstract =
+   "This paper presents a new automated model-driven technique to generate test
+    cases by using feedback from the execution of a ``seed test suite'' on an
+    application under test (AUT). The test cases in the seed suite are designed
+    to be generated automatically and executed very quickly. During their
+    execution, feedback obtained from the AUT's run-time state is used to
+    generate new, ``improved'' test cases. The new test cases subsequently
+    become part of the seed suite.  This ``anytime technique'' continues
+    iteratively, generating and executing additional test cases until resources
+    are exhausted or testing goals have been met.
+    \par
+    The feedback-based technique is demonstrated for automated testing of
+    graphical user interfaces (GUIs). An existing abstract model of the GUI is
+    used to automatically generate the seed test suite. It is executed; during
+    its execution, state changes in the GUI pinpoint important relationships
+    between GUI events, which evolve the model and help to generate new test
+    cases. Together with a reverse-engineering algorithm used to obtain the
+    initial model and seed suite, the feedback-based technique yields a fully
+    automatic, end-to-end GUI testing process. A feasibility study on four
+    large fielded open-source software (OSS) applications demonstrates that
+    this process is able to significantly improve existing techniques and help
+    identify/report serious problems in the OSS. In response, these problems
+    have been fixed by the developers of the OSS in subsequent versions.",
+}
+
+
+@Article{CohenDFP97,
+  author = 	 "David M. Cohen and Siddhartha R. Dalal and Michael L. Fredman and Gardner C. Patton",
+  title = 	 "The {AETG} system: An approach to testing based on combinatorial design",
+  journal = 	 TSE,
+  year = 	 1997,
+  volume = 	 23,
+  number = 	 7,
+  pages = 	 "437--444",
+  month = 	 jul,
+  abstract =
+   "This paper describes a new approach to testing that uses combinatorial
+    designs to generate tests that cover the pair-wise, triple or n-way
+    combinations of a system's test parameters. These are the parameters that
+    determine the system's test scenarios. Examples are system configuration
+    parameters, user inputs and other external events. We implemented this new
+    method in the AETG system.
+    The AETG system uses new combinatorial algorithms to generate test sets
+    that cover all valid n-way parameter combinations. The size of an AETG test
+    set grows logarithmically in the number of test parameters. This allows
+    testers to define test models with dozens of parameters.
+    The AETG system is used in a variety of applications for unit, system, and
+    interoperability testing. It has generated both high-level test plans and
+    detailed test cases. In several applications, it greatly reduced the cost
+    of test plan development.",
+}
+
+
+
+%%%
+%%% Record and replay
+%%%
+
+@inproceedings{949442,
+ author = {Meszaros,, Gerard},
+ title = {Agile regression testing using record \& playback},
+ booktitle = {OOPSLA '03: Companion of the 18th annual ACM SIGPLAN conference on Object-oriented programming, systems, languages, and applications},
+ year = {2003},
+ isbn = {1-58113-751-6},
+ pages = {353--360},
+ location = {Anaheim, CA, USA},
+ doi = {http://doi.acm.org/10.1145/949344.949442},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ abstract =
+   "There are times when it is not practical to hand-script automated tests
+    for an existing system before one starts to modify it (whether to
+    refactor it to permit automated testing or to add new functionality). In
+    these circumstances, the use of ``record & playback'' testing may be a
+    viable alternative to handwriting all the tests.This paper describes
+    experiences using this approach and summarizes key learnings applicable
+    to other projects.",
+}
+
+
+@InProceedings{ClauseO2007,
+  author = 	 "James Clause and Alessandro Orso",
+  title = 	 "A technique for enabling and supporting debugging of field failures",
+  booktitle = ICSE2007,
+  pages = 	 "261--270",
+  year = 	 2007,
+  address = 	 ICSE2007addr,
+  month = 	 ICSE2007date,
+  abstract =
+   "It is difficult to fully assess the quality of software inhouse, outside
+    the actual time and context in which it will execute after deployment. As a
+    result, it is common for software to manifest field failures, failures that
+    occur on user machines due to untested behavior. Field failures are
+    typically difficult to recreate and investigate on developer platforms, and
+    existing techniques based on crash reporting provide only limited support
+    for this task. In this paper, we present a technique for recording,
+    reproducing, and minimizing failing executions that enables and supports
+    inhouse debugging of field failures. We also present a tool that implements
+    our technique and an empirical study that evaluates the technique on a
+    widely used e-mail client.",
+ doi = {http://dx.doi.org/10.1109/ICSE.2007.10},
+}
+
+
+@InProceedings{ElbaumCDD2006,
+  author = 	 "Sebastian Elbaum and Hui Nee Chin and Matthew B. Dwyer and Jonathan Dokulil",
+  title = 	 "Carving differential unit test cases from system test cases",
+  booktitle = FSE2006,
+  pages = 	 "253--264",
+  year = 	 2006,
+  address = 	 FSE2006addr,
+  month = 	 FSE2006date,
+  abstract =
+   "Unit test cases are focused and efficient. System tests are effective
+   at exercising complex usage patterns. \emph{Differential unit tests} (DUT)
+   are a hybrid of unit and system tests. They are generated by carving the
+   system components, while executing a system test case, that influence
+   the behavior of the target unit, and then re-assembling those components
+   so that the unit can be exercised as it was by the system test. We
+   conjecture that DUTs retain some of the advantages of unit tests, can be
+   automatically and inexpensively generated, and have the potential for
+   revealing faults related to intricate system executions. In this paper
+   we present a framework for automatically carving and replaying DUTs that
+   accounts for a wide-variety of strategies, we implement an instance of
+   the framework with several techniques to mitigate test cost and enhance
+   flexibility, and we empirically assess the efficacy of carving and
+   replaying DUTs.",
+}
+
+
+
+
+@InProceedings{JoshiO2007,
+  author = 	 "Shrinivas Joshi and Alessandro Orso",
+  title = 	 "{SCARPE}:  A technique and tool for selective capture and replay of program executions",
+  booktitle = ICSM2007,
+  pages = 	 "234--243",
+  year = 	 2008,
+  address = 	 ICSM2007addr,
+  month = 	 ICSM2007date,
+  abstract =
+   "Because of software's increasing dynamism and the heterogeneity of
+    execution environments, the results of in-house testing and maintenance
+    are often not representative of the way the software behaves in the
+    field. To alleviate this problem, we present a technique for capturing
+    and replaying partial executions of deployed software. Our technique can
+    be used for various applications, including generation of test cases
+    from user executions and post-mortem dynamic analysis. We present our
+    technique and tool, some possible applications, and a preliminary
+    empirical evaluation that provides initial evidence of the feasibility
+    of our approach.",
+}
+
+
+
+
+@InProceedings{LeitnerCOMF2007,
+  author = 	 "Andreas Leitner and Ilinca Ciupa and Manuel Oriol and Bertrand Meyer and Arno Fiva",
+  title = 	 "{Contract Driven Development} = {Test Driven Development} $-$ writing test cases",
+  booktitle = FSE2007,
+  pages = 	 "425--434",
+  year = 	 2007,
+  address = 	 FSE2007addr,
+  month = 	 FSE2007date,
+}
+
+
+@InProceedings{ChoiH98,
+  author = 	 "Jong-Deok Choi and Harini Srinivasan",
+  title = 	 "Deterministic replay of {Java} multithreaded applications",
+  booktitle =	 SPDT98,
+  pages =	 "48--59",
+  year =	 1998,
+  address =	 SPDT98addr,
+  month =	 SPDT98date,
+  doi = {http://doi.acm.org/10.1145/281035.281041},
+}
+
+
+
+@InProceedings{StevenCFP2000,
+  author = 	 "John Steven and Pravir Chandra and Bob Fleck and Andy Podgurski",
+  title = 	 "{jRapture}: A Capture/Replay tool for observation-based testing",
+  booktitle = ISSTA2000,
+  pages = 	 "158--167",
+  year = 	 2000,
+  address = 	 ISSTA2000addr,
+  month = 	 ISSTA2000date,
+  abstract =
+   "We describe the design of jRapture: a tool for capturing and replaying
+    Java program executions in the field. jRapture works with Java binaries
+    (byte code) and any compliant implementation of the Java virtual
+    machine. It employs a lightweight, transparent capture process that
+    permits unobtrusive capture of a Java programs executions. jRapture
+    captures interactions between a Java program and the system, including
+    GUI, file, and console inputs, among other types, and on replay it
+    presents each thread with exactly the same input sequence it saw during
+    capture. In addition, jRapture has a profiling interface that permits a
+    Java program to be instrumented for profiling ---  after its executions have
+    been captured. Using an XML-based profiling specification language a
+    tester can specify various forms of profiling to be carried out during
+    replay.",
+}
+
+
+
+@InProceedings{NarayanasamyPC2005,
+  author = 	 "Satish Narayanasamy and Gilles Pokam and Brad Calder",
+  title = 	 "{BugNet}: Continuously recording program execution for deterministic replay debugging",
+  booktitle = ISCA2005,
+  pages = 	 "284--295",
+  year = 	 2005,
+  address = 	 ISCA2005addr,
+  month = 	 ISCA2005date,
+  abstract =
+   "Significant time is spent by companies trying to reproduce and fix the
+    bugs that occur for released code. To assist developers, we propose the
+    BugNet architecture to continuously record information on production
+    runs. The information collected before the crash of a program can be used
+    by the developers working in their execution environment to
+    deterministically replay the last several million instructions executed
+    before the crash. BugNet is based on the insight that recording the
+    register file contents at any point in time, and then recording the load
+    values that occur after that point can enable deterministic replaying of a
+    program's execution. BugNet focuses on being able to replay the
+    application's execution and the libraries it uses, but not the operating
+    system. But our approach provides the ability to replay an application's
+    execution across context switches and interrupts. Hence, BugNet obviates
+    the need for tracking program I/O, interrupts and DMA transfers, which
+    would have otherwise required more complex hardware support. In addition,
+    BugNet does not require a final core dump of the system state for
+    replaying, which significantly reduces the amount of data that must be
+    sent back to the developer.",
+}
+
+
+@Article{NarayanasamyPC2006,
+  author = 	 "Satish Narayanasamy and Gilles Pokam and Brad Calder",
+  title = 	 "{BugNet}: Recording application-level execution for deterministic replay debugging",
+  journal = 	 "IEEE Micro",
+  year = 	 2006,
+  volume = 	 26,
+  number = 	 1,
+  pages = 	 "100-109",
+  abstract =
+   "With software's increasing complexity, providing efficient hardware
+    support for software debugging is critical. Hardware support is
+    necessary to observe and capture, with little or no overhead, the exact
+    execution of a program.  Providing this ability to developers will
+    allow them to deterministically replay and debug an application to
+    pin-point the root cause of a bug.",
+}
+
+
+@InProceedings{GeelsASS2006,
+  author = 	 "Dennis Geels and Gautam Altekar and Scott Shenker and Ion Stoica",
+  title = 	 "Replay debugging for distributed applications",
+  booktitle = USENIX2006,
+  pages = 	 "289--300",
+  year = 	 2006,
+  address = 	 USENIX2006addr,
+  month = 	 USENIX2006date,
+  abstract =
+   "We have developed a new replay debugging tool, liblog, for distributed
+    C/C++ applications. It logs the execution of deployed application processes
+    and replays them deterministically, faithfully reproducing race conditions
+    and non-deterministic failures, enabling careful offline analysis. To our
+    knowledge, liblog is the first replay tool to address the requirements of
+    large distributed systems: lightweight support for long-running programs,
+    consistent replay of arbitrary subsets of application nodes, and operation
+    in a mixed environment of logging and non-logging processes. In addition,
+    it requires no special hardware or kernel patches, supports unmodified
+    application executables, and integrates GDB into the replay mechanism for
+    simultaneous source-level debugging of multiple processes. This paper
+    presents liblog's design, an evaluation of its runtime overhead, and a
+    discussion of our experience with the tool to date.",
+}
+
+
+@InProceedings{XuBH2003,
+  author = 	 "Min Xu and Rastislav Bodik and Mark D. Hill",
+  title = 	 "A ``flight data recorder'' for enabling full-system multiprocessor deterministic replay",
+  booktitle = ISCA2003,
+  pages = 	 "122--135",
+  year = 	 2003,
+  address = 	 ISCA2003addr,
+  month = 	 ISCA2003date,
+}
+
+
+@InProceedings{DunlapKCBC2002,
+  author = 	 "George W. Dunlap and Samuel T. King and Sukru Cinar and Murtaza A. Basrai and Peter M. Chen",
+  title = 	 "{ReVirt}: Enabling intrusion analysis through virtual-machine logging and replay",
+  booktitle = OSDI2002,
+  pages = 	 "211--224",
+  year = 	 2002,
+  address = 	 OSDI2002addr,
+  month = 	 OSDI2002date,
+  abstract = 
+   "Current system loggers have two problems: they depend on the integrity of
+    the operating system being logged, and they do not save sufficient
+    information to replay and analyze attacks that include any
+    non-deterministic events. ReVirt removes the dependency on the target
+    operating system by moving it into a virtual machine and logging below
+    the virtual machine. This allows ReVirt to replay the system's execution
+    before, during, and after an intruder compromises the system, even if the
+    intruder replaces the target operating system. ReVirt logs enough
+    information to replay a long-term execution of the virtual machine
+    instruction-by-instruction. This enables it to provide arbitrarily
+    detailed observations about what transpired on the system, even in the
+    presence of non-deterministic attacks and executions. ReVirt adds
+    reasonable time and space overhead. Overheads due to virtualization are
+    imperceptible for interactive use and CPU-bound workloads, and 13--58\%
+    for kernel-intensive workloads. Logging adds 0--8\% overhead, and logging
+    traffic for our workloads can be stored on a single disk for several
+    months.",
+}
+
+
+@InProceedings{deOliveriaCWWSC2006,
+  author = 	 "Daniela A. S. de Oliveira and Jedidiah R. Crandall and Gary Wassermann and S. Felix Wu and Zhendong Su and Frederic T. Chong",
+  title = 	 "{ExecRecorder}: {VM}-based full-system replay for attack analysis and system recovery",
+  booktitle = ASID2006,
+  pages = 	 "66--71",
+  year = 	 2006,
+  address = 	 ASID2006addr,
+  month = 	 ASID2006date,
+ abstract= 
+   "Log-based recovery and replay systems are important for system
+    reliability, debugging and postmortem analysis/recovery of malware
+    attacks. These systems must incur low space and performance overhead,
+    provide full-system replay capabilities, and be resilient against
+    attacks. Previous approaches fail to meet these requirements: they replay
+    only a single process, or require changes in the host and guest OS, or do
+    not have a fully-implemented replay component. This paper studies
+    full-system replay for uniprocessors by logging and replaying
+    architectural events. To limit the amount of logged information, we
+    identify architectural nondeterministic events, and encode them
+    compactly. Here we present ExecRecorder, a full-system, VM-based, log and
+    replay framework for post-attack analysis and recovery. ExecRecorder can
+    replay the execution of an entire system by checkpointing the system state
+    and logging architectural nondeterministic events, and imposes low
+    performance overhead (less than 4\% on average).  In our evaluation its
+    log files grow at about 5.4 GB/hour (arithmetic mean). Thus it is
+    practical to log on the order of hours or days between checkpoints. It can
+    also be integrated naturally with an IDS and a post-attack analysis tool
+    for intrusion analysis and recovery.",
+}
+
+
+
+@Article{LeBlancC1987,
+  author = 	 "T. J. LeBlanc and J. M. Mellor-Crummey",
+  title = 	 "Debugging parallel programs with instant replay",
+  journal = 	 IEEETC,
+  year = 	 1987,
+  volume = 	 36,
+  number = 	 4,
+  pages = 	 "471--482",
+  month = 	 apr,
+  abstract =
+   "The debugging cycle is the most common methodology for finding and
+    correcting errors in sequential programs. Cyclic debugging is effective
+    because sequential programs are usually deterministic. Debugging parallel
+    programs is considerably more difficult because successive executions of
+    the same program often do not produce the same results.  During program
+    execution we save the relative order of significant events as they occur,
+    not the data associated with such events. As a result, our approach
+    requires less time and space to save the information needed for program
+    replay than other methods. Our technique is not dependent on any
+    particular form of interprocess communication. It provides for replay of
+    an entire program, rather than individual processes in isolation . No
+    centralized bottlenecks are introduced and there is no need for
+    synchronized clocks or a globally-consistent logical time. The authors
+    describe a prototype implementation of Instant Replay on the BBN Butterfly
+    Parallel Processor, and discuss how it can be incorporated into the
+    debugging cycle for parallel programs.",
+}
+
+
+
+
+@InProceedings{SrinivasanKAZ2004,
+  author = 	 "Sudarshan M. Srinivasan and Srikanth Kandula and Christopher R. Andrews and Yuanyuan Zhou",
+  title = 	 "Flashback: A lightweight extension for rollback and deterministic replay for software debugging",
+  booktitle = USENIX2004,
+  pages = 	 "29--44",
+  year = 	 2004,
+  address = 	 USENIX2004addr,
+  month = 	 USENIX2004date,
+  abstract =
+   "Software robustness has significant impact on system
+    availability. Unfortunately, finding software bugs is a very challenging
+    task because many bugs are hard to reproduce.  While debugging a program,
+    it would be very useful to rollback a crashed program to a previous
+    execution point and deterministically re-execute the buggy code region.
+    However, most previous work on rollback and replay support was designed to
+    survive hardware or operating system failures, and is therefore too
+    heavyweight for the fine-grained rollback and replay needed for software
+    debugging.
+    \par
+    This paper presents Flashback, a lightweight OS extension that provides
+    fine-grained rollback and replay to help debug software. Flashback uses
+    shadow processes to efficiently roll back in-memory state of a process,
+    and logs a process' interactions with the system to support deterministic
+    replay. Both shadow processes and logging of system calls are implemented
+    in a lightweight fashion specifically designed for the purpose of software
+    debugging.
+    \par
+    We have implemented a prototype of Flashback in the Linux operating
+    system. Our experimental results with micro-benchmarks and real
+    applications show that Flashback adds little overhead and can quickly roll
+    back a debugged program to a previous execution point and
+    deterministically replay from that point.",
+}
+
+
+
+@InProceedings{TanejaX2008,
+  author = 	 "Kunal Taneja and Tao Xie",
+  title = 	 "{DiffGen}: Automated Regression Unit-Test Generation",
+  booktitle =    ASE2008,
+  pages = 	 "407--410",
+  year = 	 2008,
+  address = 	 ASE2008addr,
+  month = 	 ASE2008date,
+  abstract =
+   "Software programs continue to evolve throughout their lifetime. Maintenance
+    of such evolving programs, including regression testing, is one of the most
+    expensive activities in software development. We present an approach and
+    its implementation called DiffGen for automated regression unit-test
+    generation and checking for Java programs. Given two versions of a Java
+    class, our approach instruments the code by adding new branches such that
+    if these branches can be covered by a test generation tool, behavioral
+    differences between the two class versions are exposed. DiffGen then uses a
+    coverage-based test generation tool to generate test inputs for covering
+    the added branches to expose behavioral differences. We have evaluated
+    DiffGen on finding behavioral differences between 21 classes and their
+    versions. Experimental results show that our approach can effectively
+    expose many behavioral differences that cannot be exposed by
+    state-of-the-art techniques.",
+}
+
+
+
+%%%
+%%% Clark and Tracey and University of York
+%%%
+
+
+
+@InProceedings{1998:ase:tracey,
+  author =       "Nigel Tracey and John Clark and Keith Mander and John McDermid",
+  title =        "An Automated Framework for Structural Test-Data Generation",
+  booktitle =    ASE98,
+  address =      ASE98addr,
+  month =        ASE98date,
+  year =         1998,
+  pages =        "285--288",
+}
+
+
+
+
+
+
+
+
+@Article{FergusonK96,
+  author = 	 "Roger Ferguson and Bogdan Korel",
+  title = 	 "The chaining approach for software test data generation",
+  journal = 	 TOSEM,
+  year = 	 1996,
+  volume =	 5,
+  number =	 1,
+  pages =	 "63--86",
+  month =	 jan
+}
+
+
+
+
+
+@InProceedings{226319,
+ author = {Bogdan Korel},
+ title = {Automated test data generation for programs with procedures},
+ booktitle = {Proceedings of the 1996 ACM SIGSOFT international symposium on Software testing and analysis},
+ year = {1996},
+ ISBN = {0-89791-787-1},
+ pages = {209--215},
+ location = {San Diego, California, United States},
+ doi = {http://doi.acm.org/10.1145/229000.226319},
+ publisher = {ACM Press},
+ }
+
+
+@Article{Korel90,
+  author = 	 "Bogdan Korel",
+  title = 	 "Automated software test data generation",
+  journal = 	 TSE,
+  year = 	 1990,
+  volume =	 16,
+  number =	 8,
+  pages =	 "870--879",
+  month =	 aug
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Regression test selection and prioritization
+%%%
+
+@InProceedings{KimPR2000,
+  author =       {Jung-Min Kim and Adam Porter and Gregg Rothermel},
+  title =        {An empirical study of regression test application frequency},
+  booktitle =    ICSE2000,
+  pages =        {126--135},
+  year =         2000,
+  address =      ICSE2000addr,
+  month =        ICSE2000date
+}
+
+
+@Article{HarroldGS93:TOSEM,
+  author =       "Mary Jean Harrold and Rajiv Gupta and Mary Lou Soffa",
+  title =        "A methodology for controlling the size of a test suite",
+  year =         1993,
+  journal =      TOSEM,
+  volume =       2,
+  pages =        "270--285",
+  abstract =     "This paper presents a technique to select a
+                 representative set of test cases from a test suite that
+                 provides the same coverage as the entire test suite.
+                 This selection is performed by identifying, and then
+                 eliminating, the redundant and obsolete test cases in
+                 the test suite. The representative set replaces the
+                 original test suite and thus, potentially produces a
+                 smaller test suite. The representative set can also be
+                 used to identify those test cases that should be rerun
+                 to test the program after it has been changed. Our
+                 technique is independent of the testing methodology and
+                 only requires an association between a testing
+                 requirement and the test cases that satisfy the
+                 requirement. We illustrate the technique using the data
+                 flow testing methodology. The reduction that is
+                 possible with our technique is illustrated by
+                 experimental results.",
+  keywords =     "Hitting Set; Maintenance; regression testing; software
+                 maintenance; software engineering; test suite
+                 reduction; testing",
+  number =       3,
+  month =        jul,
+  references =   18,
+}
+
+@Article{RothermelH96,
+  author = 	 "Gregg Rothermel and Mary Jean Harrold",
+  title = 	 "Analyzing regression test selection techniques",
+  journal = 	 TSE,
+  year = 	 1996,
+  volume =	 22,
+  number =	 8,
+  pages =	 "529--551",
+  month =	 aug
+}
+
+@InProceedings{LeungW89,
+  author = 	 "Hareton K. N. Leung and Lee White",
+  title = 	 "Insights into regression testing",
+  booktitle =	 ICSM89,
+  pages =	 "60--69",
+  year =	 1989,
+  address =	 ICSM89addr,
+  month =	 ICSM89date
+}
+
+
+
+
+
+@InProceedings{1998:icsm:vokolos,
+  author =       "Filippos I. Vokolos and Phyllis G. Frankl",
+  title =        "Empirical evaluation of the textual differencing
+                 regression testing technique",
+  booktitle =    ICSM98,
+  year =         1998,
+  address =	 ICSM98addr,
+  month =	 ICSM98date,
+  ISBN =         "0-7803-5255-6, 0-8186-8779-7, 0-8186-8795-9",
+  pages =        "44--53",
+  annote =       "incomplete",
+}
+
+
+
+
+
+
+@Article{PasquiniCM96,
+  author = 	 "Alberto Pasquini and Adalberto Nobiato Crespo and Paolo Matrella",
+  title = 	 "Sensitivity of reliability-growth models to operational
+                  profile errors vs testing accuracy",
+  journal = 	 "IEEE Transactions on Reliability",
+  year = 	 1996,
+  volume =	 "45",
+  number =	 4,
+  pages =	 "531--540",
+  month =	 dec,
+  abstract =
+   "This paper investigates: 1) the sensitivity of reliability-growth models to
+    errors in the estimate of the operational profile (OP); and 2) the relation
+    between this sensitivity and the testing accuracy for computer
+    software. The investigation is based on the results of a case study in
+    which several reliability-growth models are applied during the testing
+    phase of a software system. The faults contained in the system are known in
+    advance; this allows measurement of the software reliability-growth and
+    comparison with the estimates provided by the models. Measurement and
+    comparison are repeated for various OPs, thus giving information about the
+    effect of a possible error in the estimate of the OP. The results show
+    that: 1) the predictive accuracy of the models is not heavily affected by
+    errors in the estimate of the OP; and 2) this relation depends on the
+    accuracy with which the software system has been tested."
+}
+
+@Article{PasquiniCM97,
+  author = 	 "Alberto Pasquini and Adalberto Nobiato Crespo and Paolo Matrella",
+  title = 	 "Changes to:  Sensitivity of reliability-growth models to
+                  operational profile errors vs testing accuracy",
+  journal = 	 "IEEE Transactions on Reliability",
+  year = 	 1997,
+  volume =	 "46",
+  number =	 1,
+  pages =	 "68",
+  month =	 mar,
+}
+
+
+@Article{Graves:2001:ESR,
+  author =       "Todd L. Graves and Mary Jean Harrold and Jung-Min Kim
+                 and Adam Porter and Gregg Rothermel",
+  title =        "An empirical study of regression test selection
+                 techniques",
+  journal =      TOSEM,
+  volume =       "10",
+  number =       "2",
+  pages =        "184--208",
+  month =        apr,
+  year =         "2001",
+  coden =        "ATSMER",
+  ISSN =         "1049-331X",
+  bibdate =      "Fri Apr 20 08:21:35 MDT 2001",
+  url =          "http://www.acm.org/pubs/articles/journals/tosem/2001-10-2/p184-graves/p184-graves.pdf;
+                 http://www.acm.org/pubs/citations/journals/tosem/2001-10-2/p184-graves/",
+  abstract =     "Regression testing is the process of validating
+                 modified software to detect whether new errors have
+                 been introduced into previously tested code and to
+                 provide confidence that modifications are correct.
+                 Since regression testing is an expensive process,
+                 researchers have proposed regression test selection
+                 techniques as a way to reduce some of this expense.
+                 These techniques attempt to reduce costs by selecting
+                 and running only a subset of the test cases in a
+                 program's existing test suite. Although there have been
+                 some analytical and empirical evaluations of individual
+                 techniques, to our knowledge only one comparative
+                 study, focusing on one aspect of two of these
+                 techniques, has been reported in the literature. We
+                 conducted an experiment to examine the relative costs
+                 and benefits of several regression test selection
+                 techniques. The experiment examined five techniques for
+                 reusing test cases, focusing on their relative
+                 abilities to reduce regression testing effort and
+                 uncover faults in modified programs. Our results
+                 highlight several differences between the techniques,
+                 and expose essential trade-offs that should be
+                 considered when choosing a technique for practical
+                 application.",
+  acknowledgement = ack-nhfb,
+  keywords =     "empirical study; regression testing; selective
+                 retest",
+  subject =      "Software --- Software Engineering --- Testing and
+                 Debugging (D.2.5): {\bf Testing tools (e.g., data
+                 generators, coverage testing)}; Software --- Software
+                 Engineering --- Testing and Debugging (D.2.5): {\bf
+                 Debugging aids}",
+}
+
+
+@InProceedings{SrivastavaT2002:ISSTA,
+  author = 	 "Amitabh Srivastava and Jay Thiagarajan",
+  title = 	 "Effectively Prioritizing Tests in Development Environment",
+  booktitle =	 ISSTA2002,
+  pages =	 "97--106",
+  year =	 2002,
+  address =	 ISSTA2002addr,
+  month =	 ISSTA2002date,
+  abstract =
+   "Software testing helps ensure not only that the software under development
+    has been implemented correctly, but also that further development does not
+    break it. If developers introduce new defects into the software, these
+    should be detected as early and inexpensively as possible in the
+    development cycle. To help optimize which tests are run at what points in
+    the design cycle, we have built Echelon, a test prioritization system,
+    which prioritizes the application?s given set of tests, based on what
+    changes have been made to the program. Echelon builds on the previous work
+    on test prioritization and proposes a practical binary code based approach
+    that scales well to large systems. Echelon utilizes a binary matching
+    system that can accurately compute the differences at a basic block
+    granularity between two versions of the program in binary form. Echelon
+    utilizes a fast, simple and intuitive heuristic that works well in practice
+    to compute what tests will cover the affected basic blocks in the
+    program. Echelon orders the given tests to maximally cover the affected
+    program so that defects are likely to be found quickly and
+    inexpensively. Although the primary focus in Echelon is on program changes,
+    other criteria can be added in computing the priorities. Echelon is part of
+    a test effectiveness infrastructure that runs under the Windows
+    environment. It is currently being integrated into the Microsoft software
+    development process. Echelon has been tested on large Microsoft product
+    binaries. The results show that Echelon is effective in ordering tests
+    based on changes between two program versions."
+}
+
+
+@InProceedings{WongHLA97,
+  author = 	 "W. Eric Wong and Joseph R. Horgan and Saul London and Hira Agrawal",
+  title = 	 "A study of effective regression testing in practice",
+  booktitle =	 ISSRE97,
+  pages =	 "264--274",
+  year =	 1997,
+  address =	 ISSRE97addr,
+  month =	 ISSRE97date
+}
+
+
+
+@Article{RothermelUCH2001,
+  author = 	 "Gregg Rothermel and Roland H. Untch and Chengyun Chu and
+                  Mary Jean Harrold",
+  title = 	 "Prioritizing test cases for regression testing",
+  journal = 	 TSE,
+  year = 	 2001,
+  volume =	 27,
+  number =	 10,
+  pages =	 "929--948",
+  month =	 oct
+}
+
+
+@InProceedings{ElbaumMR2000,
+  author = 	 "Sebastian Elbaum and Alexey G. Malishevsky and Gregg Rothermel",
+  title = 	 "Prioritizing test cases for regression testing",
+  booktitle =	 ISSTA2000,
+  pages =	 "102--112",
+  year =	 2000,
+  address =	 ISSTA2000addr,
+  month =	 ISSTA2000date
+}
+
+
+
+@InProceedings{ElbaumMR2001,
+  author = 	 "Sebastian Elbaum and Alexey Malishevsky and Gregg Rothermel",
+  title = 	 "Incorporating varying test costs and fault severities
+                  into test case prioritization",
+  booktitle =	 ICSE2001,
+  pages =	 "329--338",
+  year =	 2001,
+  address =	 ICSE2001addr,
+  month =	 ICSE2001date
+}
+
+
+@InProceedings{RothermelUCH1999,
+  author = 	 "Gregg Rothermel and Roland H. Untch and Chengyun Chu and Mary Jean Harrold",
+  title = 	 "Test case prioritization: An empirical study",
+  booktitle =	 ICSM99,
+  pages =	 "179--",
+  year =	 1999,
+  address =	 ICSM99addr,
+  month =	 ICSM99date,
+  supersededby = "RothermelUCH2001",
+  abstract =
+   "Test case prioritization techniques schedule test cases for regression
+    testing in an order that increases their ability to meet some performance
+    goal. One performance goal, rate of fault detection, measures how quickly
+    faults are detected within the testing process. In previous work we
+    provided a metric, APFD, for measuring rate of fault detection, and
+    techniques for prioritizing test cases to improve APFD, and reported the
+    results of experiments using those techniques. This metric and these
+    techniques, however, applied only in cases in which test costs and fault
+    severity are uniform. In this paper, we present a new metric for assessing
+    the rate of fault detection of prioritized test cases, that incorporates
+    varying test case and fault costs. We present the results of a case study
+    illustrating the application of the metric. This study raises several
+    practical questions that might arise in applying test case prioritization;
+    we discuss how practitioners could go about answering these questions."
+}
+
+
+@article{1027093,
+ author = {Gregg Rothermel and Sebastian Elbaum and Alexey G. Malishevsky and Praveen Kallakuri and Xuemei Qiu},
+ title = {On test suite composition and cost-effective regression testing},
+ journal = TOSEM,
+ volume = {13},
+ number = {3},
+ year = {2004},
+ issn = {1049-331X},
+ pages = {277--331},
+ doi = {http://doi.acm.org/10.1145/1027092.1027093},
+ publisher = {ACM Press},
+ address = {New York, NY, USA},
+ }
+
+
+
+@Article{ElbaumMR2002,
+  author = 	 "Sebastian Elbaum and Alexy G. Malishevsky and Gregg Rothermel",
+  title = 	 "Test case prioritization: A family of empirical studies",
+  journal = 	 TSE,
+  year = 	 2002,
+  volume =	 28,
+  number =	 2,
+  pages =	 "159--182",
+  month =	 feb
+}
+
+
+@InProceedings{MalishevskyRE2002,
+  author = 	 "Alexey G. Malishevsky and Gregg Rothermel and Sebastian Elbaum",
+  title = 	 "Modeling the cost-benefits tradeoffs for regression
+                  testing techniques",
+  booktitle =	 ICSM2002,
+  pages =	 "204--213",
+  year =	 2002,
+  address =	 ICSM2002addr,
+  month =	 ICSM2002date,
+  abstract =
+   "Regression testing is an expensive activity that can account for a large
+    proportion of the software maintenance budget. Because engineers add tests
+    into test suites as software evolves, over time, increased test suite size
+    makes revalidation of the software more expensive. Regression test
+    selection, test suite reduction, and test case prioritization techniques
+    can help with this, by reducing the number of regression tests that must be
+    run and by helping testers meet testing objectives more quickly. These
+    techniques, however, can be expensive to employ and may not reduce overall
+    regression testing costs. Thus, practitioners and researchers could benefit
+    from cost models that would help them assess the cost-benefits of
+    techniques. Cost models have been proposed for this purpose, but some of
+    these models omit important factors, and others cannot truly evaluate
+    cost-effectiveness. In this paper, we present new cost-benefits models for
+    regression test selection, test suite reduction, and test case
+    prioritization, that capture previously omitted factors, and support
+    cost-benefits analyses where they were not supported before. We present the
+    results of an empirical study assessing these models.",
+}
+
+
+
+
+@InProceedings{JonesH01,
+  author = 	 "James A. Jones and Mary Jean Harrold",
+  title = 	 "Test-Suite Reduction and Prioritization for Modified Condition/Decision Coverage",
+  booktitle =	 ICSM2001,
+  pages =	 "92--101",
+  year =	 2001,
+  address =	 ICSM2001addr,
+  month =	 ICSM2001date,
+  abstract =
+   "Software testing is particularly expensive for developers of high-assurance
+    software, such as software that is produced for commercial airborne
+    systems. One reason for this expense is the Federal Aviation
+    Administration's requirement that test suites be modified
+    condition/decision coverage (MC/DC) adequate. Despite its cost, there is
+    evidence that MC/DC is an effective verification technique, and can help to
+    uncover safety faults. As the software is modified and new test cases are
+    added to the test suite, the test suite grows, and the cost of regression
+    testing increases. To address the test-suite size problem, researchers have
+    investigated the use of test-suite reduction algorithms, which identify a
+    reduced test suite that provides the same coverage of the software,
+    according to some criterion, as the original test suite, and test-suite
+    prioritization algorithms, which identify an ordering of the test cases in
+    the test suite according to some criteria or goals. Existing test-suite
+    reduction and prioritization techniques, however, may not be effective in
+    reducing or prioritizing MC/DC-adequate test suites because they do not
+    consider the complexity of the criterion. This paper presents new
+    algorithms for test-suite reduction and prioritization that can be tailored
+    effectively for use with MC/DC. The paper also presents the results of a
+    case study of the test-suite reduction algorithm."
+}
+
+
+@article{367881,
+ author = {Mary Jean Harrold and David Rosenblum and Gregg Rothermel and Elaine Weyuker},
+ title = {Empirical Studies of a Prediction Model for Regression Test Selection},
+ journal = TSE,
+ volume = {27},
+ number = {3},
+ year = {2001},
+ ISSN = {0098-5589},
+ pages = {248--263},
+ doi = {http://dx.doi.org/10.1109/32.910860},
+ publisher = {IEEE Press},
+ }
+
+
+@InProceedings{KimP2002,
+  author = 	 "Jung-Min Kim and Adam Porter",
+  title = 	 "A history-based test prioritization technique for
+                  regression testing in resource constrained environments",
+  booktitle =	 ICSE2002,
+  pages =	 "119--129",
+  year =	 2002,
+  address =	 ICSE2002addr,
+  month =	 ICSE2002date,
+  abstract =
+   "Regression testing is an expensive and frequently executed maintenance
+    process used to revalidate modified software. To improve it, regression
+    test selection (RTS) techniques strive to lower costs without overly
+    reducing effectiveness by carefully selecting a subset of the test
+    suite. Under certain conditions, some can even guarantee that the selected
+    test cases perform no worse than the original test suite.
+    \par
+    But this ignores certain software development realities such as resource
+    and time constraints that may prevent using RTS techniques as intended
+    (e.g., regression testing must be done overnight, but RTS selection returns
+    two days worth of tests). In practice, testers work around this by
+    prioritizing the test cases and running only those that fit within existing
+    constraints. Unfortunately this generally violates key RTS assumptions,
+    voiding RTS technique guarantees and making regression testing performance
+    unpredictable.
+    \par
+    Despite this, existing prioritization techniques are memoryless, implicitly
+    assuming that local choices can ensure adequate long run
+    performance. Instead, we proposed a new technique that bases prioritization
+    on historical execution data. We conducted an experiment to assess its
+    effects on the long run performance of resource constrained regression
+    testing. Our results expose essential tradeoffs that should be considered
+    when using these techniques over a series of software releases.",
+}
+
+
+@InProceedings{853227,
+ author = {D. Binkley},
+ title = {Reducing the cost of regression testing by semantics guided test case selection},
+ booktitle = {Proceedings of the International Conference on Software Maintenance},
+ year = {1995},
+ ISBN = {0-8186-7141-6},
+ pages = {251},
+ publisher = {IEEE Computer Society},
+ }
+
+
+
+@Article{Binkley97,
+  author = 	 "David Binkley",
+  title = 	 "Semantics Guided Regression Test Cost Reduction",
+  journal = 	 TSE,
+  year = 	 1997,
+  volume =	 23,
+  number =	 8,
+  pages =	 "498--516",
+  month =	 nov # "~9--12,"
+}
+
+
+@InProceedings{RenSTRC2004,
+  author = 	 "Xiaoxia Ren and Fenil Shah and Frank Tip and Barbara
+                  Ryder and Ophelia Chesley",
+  title = 	 "Chianti: A tool for change impact analysis of {Java} programs",
+  booktitle =	 OOPSLA2004,
+  pages = 	 "432--448",
+  year =	 2004,
+  address =	 OOPSLA2004addr,
+  month =	 OOPSLA2004date,
+  abstract =
+   "This paper reports on the design and implementation of Chianti, a change
+    impact analysis tool for Java that is implemented in the context of the
+    Eclipse environment. Chianti analyzes two versions of an application and
+    decomposes their difference into a set of atomic changes. Change impact is
+    then reported in terms of affected (regression or unit) tests whose
+    execution behavior may have been modified by the applied changes. For each
+    affected test, Chianti also determines a set of affecting changes that were
+    responsible for the test's modified behavior. This latter step of isolating
+    the changes that induce the failure of one specific test from those changes
+    that only affect other tests can be used as a debugging technique in
+    situations where a test fails unexpectedly after a long editing
+    session. We evaluated Chianti on a year (2002) of CVS data from M. Ernst's
+    Daikon system, and found that, on average, 52\% of Daikon's unit tests are
+    affected. Furthermore, each affected unit test, on average, is affected by
+    only 3.95\% of the atomic changes. These findings suggest that our change
+    impact analysis is a promising technique for assisting developers with
+    program understanding and debugging.",
+  usesDaikonAsTestSubject = 1,
+  downloadsnonlocal = "http://prolangs.cs.vt.edu/refs/docs/oopsla04.pdf PDF",
+}
+
+
+
+@TechReport{RenSTRC2004:TR,
+  author = 	 "Xiaoxia Ren and Fenil Shah and Frank Tip and Barbara
+                  Ryder and Ophelia Chesley",
+  title = 	 "Chianti: A tool for change impact analysis of {Java} programs",
+  institution =  "Rutgers University Department of Computer Science",
+  year = 	 2004,
+  number =	 "DCS-TR-551",
+  NEEDaddress = 	 "",
+  month =	 apr,
+  supersededby = "RenSTRC2004",
+  usesDaikonAsTestSubject = 1,
+}
+
+
+@TechReport{RenSTRCD2003,
+  author = 	 "Xiaoxia Ren and Fenil Shah and Frank Tip and Barbara
+                  Ryder and Ophelia Chesley and Julian Dolby",
+  title = 	 "Chianti: A prototype change impact analysis tool for {Java}",
+  institution =  "Rutgers University Department of Computer Science",
+  year = 	 2003,
+  number =	 "DCS-TR-533",
+  NEEDaddress = 	 "",
+  month =	 sep,
+  supersededby = "RenSTRC2004:TR",
+  usesDaikonAsTestSubject = 1,
+}
+
+
+
+
+@InProceedings{StoerzerRRT2006,
+  author = 	 "Maximilian Stoerzer and Barbara G. Ryder and Xiaoxia Ren and Frank Tip",
+  title = 	 "Finding failure-inducing changes in {Java} programs using change classification",
+  booktitle = FSE2006,
+  pages = 	 "57--68",
+  year = 	 2006,
+  address = 	 FSE2006addr,
+  month = 	 FSE2006date,
+  usesDaikonAsTestSubject = 1,
+  downloads = "http://domino.research.ibm.com/comm/research_people.nsf/pages/tip.fse2006.html/$FILE/fse2006.pdf PDF",
+  ignorethisfield = "close the ``$'' in the downloads field",
+  abstract =
+   "Testing and code editing are interleaved activities during program
+    development. When tests fail unexpectedly, the changes that caused
+    the failure(s) are not always easy to find. We explore how change
+    classification can focus programmer attention on failure-inducing
+    changes by automatically labeling changes Red, Yellow, or Green,
+    indicating the likelihood that they have contributed to a test failure.
+    We implemented our change classification tool JUnit/CIA as an extension
+    to the JUnit component within Eclipse, and evaluated its
+    effectiveness in two case studies. Our results indicate that change
+    classification is an effective technique for finding failure-inducing
+    changes.",
+}
+
+
+@TechReport{StoerzerRRT2005,
+  author = 	 "Maximilian Stoerzer and Barbara G. Ryder and Xiaoxia Ren and Frank Tip",
+  title = 	 "Finding failure-inducing changes using change classification",
+  institution =  "Rutgers University Department of Computer Science",
+  year = 	 2005,
+  number = 	 "DCS-TR-582",
+  month = 	 sep,
+  usesDaikonAsTestSubject = 1,
+  supersededby = "StoerzerRRT2006",
+}
+
+
+
+@InProceedings{SinhaOH2004,
+  author = 	 "Saurabh Sinha and Alessandro Orso and Mary Jean Harrold",
+  title = 	 "Automated support for development, maintenance, and
+                  testing in the presence of implicit control flow",
+  booktitle =	 ICSE2004,
+  pages = 	 "336--345",
+  year =	 2004,
+  address =	 ICSE2004addr,
+  month =	 ICSE2004date,
+  abstract =
+   "Although object-oriented languages can improve programming practices, their
+    characteristics may introduce new problems for software engineers. One
+    important problem is the presence of implicit control flow caused by
+    exception handling and polymorphism. Implicit control flow causes complex
+    interactions, and can thus complicate software-engineering tasks. To
+    address this problem, we present a systematic and structured approach, for
+    supporting these tasks, based on the static and dynamic analyses of
+    constructs that cause implicit control flow. Our approach provides software
+    engineers with information for supporting and guiding development and
+    maintenance tasks. We also present empirical results to illustrate the
+    potential usefulness of our approach. Our studies show that, for the
+    subjects considered, complex implicit control flow is always present and is
+    generally not adequately exercised.",
+  usesDaikonAsTestSubject = 1,
+  downloadsnonlocal =
+    "http://www.cc.gatech.edu/~orso/papers/sinha.orso.harrold.ICSE04.pdf PDF",
+}
+
+
+@InProceedings{OrsoSH2004,
+  author = 	 "Alessandro Orso and Nanjuan Shi and Mary Jean Harrold",
+  title = 	 "Scaling regression testing to large software systems",
+  booktitle =	 FSE2004,
+  pages =	 "241--251",
+  year =	 2004,
+  address =	 FSE2004addr,
+  month =	 FSE2004date,
+  abstract =
+   "When software is modified, during development and maintenance, it is
+    \emph{regression tested} to provide confidence that the changes did not
+    introduce unexpected errors and that new features behave as expected. One
+    important problem in regression testing is how to select a subset of test
+    cases, from the test suite used for the original version of the software,
+    when testing a modified version of the software. Regression-test-selection
+    techniques address this problem. Safe regression-test-selection techniques
+    select every test case in the test suite that may behave differently in the
+    original and modified versions of the software. Among existing safe
+    regression testing techniques, efficient techniques are often too imprecise
+    and achieve little savings in testing effort, whereas precise techniques
+    are too expensive when used on large systems. This paper presents a new
+    regression-test-selection technique for Java programs that is safe,
+    precise, and yet scales to large systems. It also presents a tool that
+    implements the technique and studies performed on a set of subjects ranging
+    from 70 to over 500 KLOC. The studies show that our technique can
+    efficiently reduce the regression testing effort and, thus, achieve
+    considerable savings.",
+  usesDaikonAsTestSubject = 1,
+  downloads = "http://www.cc.gatech.edu/~orso/papers/orso.shi.harrold.FSE04.pdf PDF",
+}
+
+
+@InProceedings{LeonP2003,
+  author = 	 "David Leon and Andy Podgurski",
+  title = 	 "A comparison of coverage-based and distribution-based
+                  techniques for filtering and prioritizing test cases",
+  booktitle =	 ISSRE2003,
+  pages =	 "442--453",
+  year =	 2003,
+  address =	 ISSRE2003addr,
+  month =	 ISSRE2003date,
+  abstract =
+   "This paper presents an empirical comparison of four different techniques
+    for filtering large test suites: test suite minimization, prioritization by
+    additional coverage, cluster filtering with one-per-cluster sampling, and
+    failure pursuit sampling. The first two techniques are based on selecting
+    subsets that maximize code coverage as quickly as possible, while the
+    latter two are based on analyzing the distribution of the tests' execution
+    profiles. These techniques were compared with data sets obtained from three
+    large subject programs: the GCC, Jikes, and javac compilers. The results
+    indicate that distribution-based techniques can be as efficient or more
+    efficient for revealing defects than coverage-based techniques, but that
+    the two kinds of techniques are also complementary in the sense that they
+    find different defects. Accordingly, some simple combinations of these
+    techniques were evaluated for use in test case prioritization. The results
+    indicate that these techniques can create more efficient prioritizations
+    than those generated using prioritization by additional coverage."
+}
+
+
+@InProceedings{LeonMP2005,
+  author = 	 "David Leon and Wes Masri and Andy Podgurski",
+  title = 	 "An empirical evaluation of test case filtering techniques
+                  based on exercising complex information flows",
+  booktitle =	 ICSE2005,
+  pages =	 "412--421",
+  year =	 2005,
+  address =	 ICSE2005addr,
+  month =	 ICSE2005date,
+  abstract =
+   "Some software defects trigger failures only when certain complex
+    information flows occur within the software. Profiling and analyzing such
+    flows therefore provides a potentially important basis for filtering test
+    cases. We report the results of an empirical evaluation of several test
+    case filtering techniques that are based on exercising complex information
+    flows. Both coverage-based and profile-distribution-based filtering
+    techniques are considered. They are compared to filtering techniques based
+    on exercising basic blocks, branches, function calls, and def-use pairs,
+    with respect to their effectiveness for revealing defects."
+}
+
+
+@InProceedings{MarianiPP2007,
+  author = 	 "Leonardo Mariani and Sofia Papagiannakis and Mauro Pezz{\`e}",
+  authorASCII =  "Leonardo Mariani and Sofia Papagiannakis and Mauro Pezze",
+  title = 	 "Compatibility and regression testing of {COTS}-component-based software",
+  booktitle =    ICSE2007,
+  pages = 	 "85--95",
+  year = 	 2007,
+  address = 	 ICSE2007addr,
+  month = 	 ICSE2007date,
+  usesDaikon = 1,
+  usesDaikon =	 1,
+  downloads =    "http://www.lta.disco.unimib.it/lta/uploads/papers/Mariani-COTS-ICSE-2007.pdf PDF",
+}
+
+
+
+
+@InProceedings{QuCR2008,
+  author = 	 "Xiao Qu and Myra B. Cohen and Gregg Rothermel",
+  title = 	 "Configuration-aware regression testing: an empirical study of sampling and prioritization",
+  booktitle = ISSTA2008,
+  pages = 	 "75--86",
+  year = 	 2008,
+  address = 	 ISSTA2008addr,
+  month = 	 ISSTA2008date,
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Continuous testing
+%%%
+
+
+@InProceedings{HendersonW85,
+  author = 	 "Peter Henderson and Mark Weiser",
+  title = 	 "Continuous execution:  The {VisiProg} environment",
+  booktitle =	 ICSE85,
+  pages =	 "68--74",
+  year =	 1985,
+  address =	 ICSE85addr,
+  month =	 ICSE85date
+}
+
+
+@InProceedings{plezbertdoes,
+  author = 	 "Michael P. Plezbert and Ron K. Cytron",
+  title = 	 "Does ``Just in Time'' = ``Better Late Than Never''?",
+  booktitle =	 POPL97,
+  pages =	 "120--131",
+  year =	 1997,
+  address =	 POPL97addr,
+  month =	 POPL97date
+}
+
+@InProceedings{poplar,
+  author = 	 "James H. Morris and Eric Schmidt and Philip Wadler",
+  title = 	 "Experience with an applicative string processing language",
+  booktitle =    POPL80,
+  pages = 	 "32--46",
+  year = 	 1980,
+  address = 	 POPL80addr
+}
+
+
+@book{xpexplained,
+ title = {Extreme Programming Explained: Embrace Change},
+ author = {Kent Beck},
+ publisher = {Addison-Wesley},
+ year = {1999}
+}
+
+@book{tote,
+ title = {Plans and the Structure of Behavior},
+ author = {George A. Miller and Eugene Galanter and Karl H. Pribram},
+ publisher = {Holt, Rinehart and Winston, Inc.},
+ year = {1960}
+}
+
+@PhdThesis{Miller2002:PhD,
+  author = 	 "Robert C. Miller",
+  title = 	 "Lightweight Structure in Text",
+  school = 	 "Computer Science Department, School of Computer Science, Carnegie Mellon University",
+  year = 	 2002,
+  address =	 "Pittsburgh, PA",
+  month =	 may,
+  note =	 "Also available as CMU Computer Science technical report CMU-CS-02-134 and CMU Human-Computer Interaction Institute technical report CMU-HCII-02-103"
+}
+
+@Article{Nix85,
+  author = 	 "Robert P. Nix",
+  title = 	 "Editing by example",
+  journal = 	 TOPLAS,
+  year = 	 1985,
+  volume =	 7,
+  number =	 4,
+  pages =	 "600--621",
+  month =	 oct
+}
+
+@Book{Siegel96,
+  author =	 "Shel Siegel",
+  title = 	 "Object-Oriented Software Testing: A Hierarchical Approach",
+  publisher = 	 "John Wiley \& Sons",
+  year = 	 1996
+}
+
+@InProceedings{OrsoLHL2002,
+  author = 	 "Alessandro Orso and Donglin Liang and Mary Jean Harrold
+                  and Richard Lipton",
+  title = 	 "Gamma System: Continuous Evolution of Software after
+                  Deployment",
+  booktitle =	 ISSTA2002,
+  pages =	 "65--69",
+  year =	 2002,
+  address =	 ISSTA2002addr,
+  month =	 ISSTA2002date
+}
+
+
+
+@InProceedings{OrsoAH2003,
+  author = 	 "Alessandro Orso and Taweesup Apiwattanapong
+                  and Mary Jean Harrold",
+  title = 	 "Leveraging field data for impact analysis and regression
+                  testing",
+  booktitle =	 FSE2003,
+  OPTpages = 	 "",
+  year =	 2003,
+  address =	 FSE2003addr,
+  month =	 FSE2003date,
+  abstract =
+   "Software products are often released with missing functionality, errors,
+    or incompatibilities that may result in failures, inferior performances,
+    or, more generally, user dissatisfaction. In previous work, we presented
+    the Gamma approach, which facilitates remote analysis and measurement of
+    deployed software and allows for gathering program-execution data from the
+    field. In this paper, we investigate the use of the Gamma approach to
+    support and improve two fundamental tasks performed by software engineers
+    during maintenance: impact analysis and regression testing. We present a
+    new approach that leverages field data to perform these two tasks. We also
+    present a set of empirical studies that we performed to assess the
+    usefulness of the approach. The studies were performed on a real subject
+    and on a real user population. The results of the studies show that the use
+    of field data is effective and, for the cases considered, can considerably
+    affect the results of dynamic analyses. Moreover, the empirical studies
+    show that the approach is also efficient: the kind of field data that we
+    consider requires very limited space and little instrumentation to be
+    collected.",
+}
+
+
+@InProceedings{LawR2003,
+  author = 	 "James Law and Gregg Rothermel",
+  title = 	 "Incremental dynamic impact analysis for evolving software systems",
+  booktitle = ISSRE2003,
+  OPTpages = 	 "",
+  year = 	 2003,
+  address = 	 ISSRE2003addr,
+  month = 	 ISSRE2003date,
+  abstract =
+   "Impact analysis -- determining the potential effects of changes on a
+    software system -- plays an important role in helping engineers re-validate
+    modified software. In previous work we presented a new impact analysis
+    technique, PathImpact, for performing dynamic impact analysis at the level
+    of procedures, and we showed empirically that the technique can be
+    cost-effective in comparison to prominent prior techniques. A drawback of
+    that approach as presented, however, is that when attempting to apply the
+    technique to a new version of a system as that system and its test suite
+    evolves, the process of recomputing the data required by the technique for
+    that version can be excessively expensive. In this paper, therefore, we
+    present algorithms that allow the data needed by PathImpact to be collected
+    incrementally. We present the results of a controlled experiment
+    investigating the costs and benefits of this incremental approach relative
+    to the approach of completely recomputing prerequisite data."
+}
+
+
+@Misc{junit,
+  key = "JUnit",
+  title = "{JUnit}",
+  howpublished = "\url{http://www.junit.org}",
+  URL = "http://www.junit.org"
+}
+
+@Misc{quilt,
+  key = "JUnit Quilt",
+  title = "JUnit Quilt",
+  howpublished = "\url{http://quilt.sourceforge.net}",
+  URL = "http://quilt.sourceforge.net"
+}
+
+@Misc{SoffaContinuousTesting,
+  author =	 "Mary Lou Soffa",
+  title =	 "Continuous testing",
+  howpublished = "Personal communication",
+  month =	 feb,
+  year =	 2003
+}
+
+
+
+@InProceedings{JohnsonKACMMZD2003,
+  author = 	 "Philip M. Johnson and Hongbing Kou and Joy M. Agustin and
+                  Christopher Chan and Carleton A. Moore and Jitender
+                  Miglani and Shenyan Zhen and William E. Doane",
+  title = 	 "Beyond the {Personal Software Process}: Metrics
+                  collection and analysis for the differently disciplined",
+  booktitle =	 ICSE2003,
+  pages =	 "641--646",
+  year =	 2003,
+  address =	 ICSE2003addr,
+  month =	 ICSE2003date,
+  abstract =
+   "Pedagogies such as the Personal Software Process (PSP) shift metrics
+    definition, collection, and analysis from the organizational level to the
+    individual level. While case study research indicates that the PSP can
+    provide software engineering students with empirical support for improving
+    estimation and quality assurance, there is little evidence that many
+    students continue to use the PSP when no longer required to do so. Our
+    research suggests that this ``PSP adoption problem'' may be due to two
+    problems: the high overhead of PSP-style metrics collection and analysis,
+    and the requirement that PSP users ``context switch'' between product
+    development and process recording. This paper overviews our initial PSP
+    experiences, our first attempt to solve the PSP adoption problem with the
+    LEAP system, and our current approach called Hackystat. This approach fully
+    automates both data collection and analysis, which eliminates overhead and
+    context switching. However, Hackystat changes the kind of metrics data that
+    is collected, and introduces new privacy-related adoption issues of its
+    own."
+}
+
+@Article{Boehm1976,
+  author = 	 "B. W. Boehm",
+  title = 	 "Software Engineering",
+  journal = 	 {IEEE Transactions on Computers},
+  year = 	 1976,
+  volume =	 "C-25",
+  number =	 12,
+  pages =	 "1226--1241"
+}
+
+
+@Book{Boehm1981,
+  author =	 "Barry W. Boehm",
+  title = 	 "Software Engineering Economics",
+  publisher = 	 "Prentice-Hall",
+  year = 	 1981,
+  OMITseries = 	 "Advances in Computing Science \& Technology"
+}
+
+
+@InProceedings{baziuk1995,
+  author = "Walter Baziuk",
+  title = {{BNR/NORTEL}: Path to Improve Product Quality, Reliability,
+                  and Customer Satisfaction},
+  booktitle = ISSRE95,
+  address = ISSRE95addr,
+  year = 1995,
+  month = ISSRE95date
+}
+
+
+
+@InProceedings{PhongpaibulB2006,
+  author = 	 "Monvorath Phongpaibul and Barry Boehm",
+  title = 	 "An empirical comparison between pair development and software inspection in {Thailand}",
+  booktitle = ISESE2006,
+  pages = 	 "85--94",
+  year = 	 2006,
+  address = 	 ISESE2006addr,
+  month = 	 ISESE2006date,
+  abstract =
+   "Although pair programming and software inspection have the common aim of
+    minimizing the defects of the software product, each practice has its
+    strengths and weaknesses. We need to understand their costs and benefits
+    under given conditions to be able to select a practice to execute in a
+    development project. The objective of this study is to compare the
+    commonalities and differences between pair development and software
+    inspection as verification techniques in Thailand. One classroom experiment
+    and one industry experiment were conducted. The development effort and
+    effect of quality were investigated with some additional calendar time
+    comparisons. The classroom results showed that average development effort
+    of the pair development group was 24\% less than inspection group with the
+    improved product quality. The industry experiment showed pair development
+    to have about 4\% more effort but about 40\% fewer major defects. In
+    addition, the impacts of cultural differences to the adoption of pair
+    programming or software inspection in Thailand are discussed.",
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Delta debugging
+%%%
+
+@InProceedings{Zeller1999,
+  author = 	 "Andreas Zeller",
+  title = 	 "Yesterday, my program worked. {Today}, it does not. {Why}?",
+  booktitle =	 FSE99,
+  pages =	 "253--267",
+  year =	 1999,
+  address =	 FSE99addr,
+  month =	 FSE99date
+}
+
+
+@InProceedings{Zeller2002,
+  author = 	 "Andreas Zeller",
+  title = 	 "Isolating cause-effect chains from computer programs",
+  booktitle =	 FSE2002,
+  pages =	 "1--10",
+  year =	 2002,
+  address =	 FSE2002addr,
+  month =	 FSE2002date
+}
+
+
+@InProceedings{CleveZ2005,
+  author = 	 "Holger Cleve and Andreas Zeller",
+  title = 	 "Locating causes of program failures",
+  booktitle =	 ICSE2005,
+  pages = 	 "342--351",
+  year =	 2005,
+  address =	 ICSE2005addr,
+  month =	 ICSE2005date
+}
+
+
+@Article{ZellerH02,
+  author = 	 "Andreas Zeller and Ralf Hildebrandt",
+  title = 	 "Simplifying and Isolating Failure-Inducing Input",
+  journal = 	 TSE,
+  year = 	 2002,
+  volume =	 28,
+  number =	 3,
+  pages =	 "183--200",
+  month =	 feb
+}
+
+
+@InProceedings{Zeller2005,
+  author = 	 "Andreas Zeller",
+  title = 	 "When abstraction fails",
+  booktitle =	 CC2005,
+  year =	 2005,
+  address =	 CC2005addr,
+  month = 	 apr,
+  abstract =
+   "Reasoning about programs is mostly deduction: the reasoning from the
+    abstract model to the concrete run. Deduction is useful because it allows
+    us to predict properties of future runs --- up to the point that a program
+    will never fail its specification. However, even such a 100\% correct
+    program may still show a problem: the specification itself may be
+    problematic, or deduction required us to abstract away some relevant
+    property. To handle such problems, deduction is not the right
+    answer --- especially in a world where programs reach a complexity that
+    makes them indistinguishable from natural phenomena. Instead, we should
+    enrich our portfolio by methods proven in natural sciences, such as
+    observation, induction, and in particular experimentation. In my talk, I
+    will show how systematic experimentation automatically reveals the causes
+    of program failures --- in the input, in the program state, or in the
+    program code.",
+}
+
+
+@InProceedings{DallmeierLZ2005,
+  author = 	 "Valentin Dallmeier and Christian Lindig and Andreas Zeller",
+  title = 	 "Lightweight defect localization for {Java}",
+  booktitle =	 ECOOP2005,
+  pages = 	 "528--550",
+  year =	 2005,
+  address =	 ECOOP2005addr,
+  month =	 ECOOP2005date,
+  abstract =
+   "A common method to localize defects is to compare the coverage of passing
+    and failing program runs: A method executed only in failing runs, for
+    instance, is likely to point to the defect. Some failures, though, come to
+    be only through a specific \emph{sequence} of method calls, such as
+    multiple deallocation of the same resource. Such sequences can be collected
+    from arbitrary Java programs at low cost; comparing object-specific
+    sequences predicts defects better than simply comparing coverage. In a
+    controlled experiment, our technique pinpointed the defective class in 36\%
+    of all test runs.",
+}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Other topics
+%%%
+
+@InProceedings{Parnas94,
+  author = 	 "David L. Parnas",
+  title = 	 "Software aging",
+  booktitle = 	 ICSE94,
+  pages =	 "279--287",
+  year =	 1994,
+  address =	 icse94addr,
+  month =	 icse94date
+}
+
+
+@Article{1980:tse:white,
+  title =        "A Domain Strategy for Computer Program Testing",
+  author =       "Lee J. White and Edward I. Cohen",
+  pages =        "247--257",
+  journal =      TSE,
+  ISSN =         "0098-5589",
+  year =         "1980",
+  volume =       "6",
+  month =        may,
+  number =       "3",
+  referencedby = "\cite{1992:tosem:zeil}, \cite{1997:tse:gallagher}",
+  note =         "Special Collection on Program Testing",
+  annote =       "incomplete",
+}
+
+
+
+@Article{Whittaker97,
+  author = 	 "James A. Whittaker",
+  title = 	 "Stochastic software testing",
+  journal = 	 AnnalsSE,
+  year = 	 "1997",
+  OPTkey = 	 "",
+  volume = 	 "1",
+  number = 	 "4",
+  pages = 	 "115--131",
+  OPTmonth = 	 "",
+  OPTnote = 	 "",
+  OPTannote = 	 ""
+}
+
+
+
+
+
+
+
+
+
+@InProceedings{BoyapatiKM2002:ISSTA,
+  author = 	 "Chandrasekhar Boyapati and Sarfraz Khurshid and Darko Marinov",
+  title = 	 "Korat: Automated Testing Based on {Java} Predicates",
+  booktitle =	 ISSTA2002,
+  pages =	 "123--133",
+  year =	 2002,
+  address =	 ISSTA2002addr,
+  month =	 ISSTA2002date
+}
+
+
+@InProceedings{MarinovK2001,
+  author = 	 "Darko Marinov and Sarfraz Khurshid",
+  title = 	 "{TestEra}: A novel framework for automated testing of {Java} programs",
+  booktitle =	 ASE2001,
+  pages =	 "22--34",
+  year =	 2001,
+  address =	 ASE2001addr,
+  month =	 ASE2001date,
+  abstract =
+   "We present TestEra, a novel framework for automated testing of Java
+    programs. TestEra automatically generates all non-isomorphic test cases,
+    within a given input size, and evaluates correctness criteria. As an
+    enabling technology,TestEra uses Alloy, a first-order relational language,
+    and the Alloy Analyzer. Checking a program with TestEra involves modeling
+    the correctness criteria for the program in Alloy and specifying
+    abstraction and concretization translations between instances of Alloy
+    models and Java data structures. TestEra produces concrete Java inputs as
+    counterexamples to violated correctness criteria. This paper discusses
+    TestEra's analyses of several case studies: methods that manipulate singly
+    linked lists and red-black trees, a naming architecture, and a part of the
+    Alloy Analyzer.",
+}
+
+
+
+
+@InProceedings{WhaleyML2002:ISSTA,
+  author = 	 "John Whaley and Michael Martin and Monica Lam",
+  title = 	 "Automatic extraction of object-oriented component interfaces",
+  booktitle =	 ISSTA2002,
+  pages =	 "218--228",
+  year =	 2002,
+  address =	 ISSTA2002addr,
+  month =	 ISSTA2002date,
+  abstract =
+   "Component-based software design is a popular and effective approach to
+    designing large systems. While components typically have well-defined
+    interfaces, sequencing information---which calls must come in which
+    order---is often not formally specified. This paper proposes using multiple
+    finite state machine (FSM) submodels to model the interface of a class.  A
+    submodel includes a subset of methods that, for example, implement a Java
+    interface, or access some particular field. Each state-modifying method is
+    represented as a state in the FSM, and transitions of the FSMs represent
+    allowable pairs of consecutive methods. In addition, state-preserving
+    methods are constrained to execute only under certain states. We have
+    designed and implemented a system that includes static analyses to deduce
+    illegal call sequences in a program, dynamic instrumentation techniques to
+    extract models from execution runs, and a dynamic model checker that
+    ensures that the code conforms to the model. Extracted models can serve as
+    documentation; they can serve as constraints to be enforced by a static
+    checker; they can be studied directly by developers to determine if the
+    program is exhibiting unexpected behavior; or they can be used to determine
+    the completeness of a test suite. Our system has been run on several large
+    code bases, including the joeq virtual machine, the basic Java libraries,
+    and the Java 2 Enterprise Edition library code. Our experience suggests
+    that this approach yields useful information."
+}
+
+
+
+@InProceedings{AlurCMN2005,
+  author = 	 "Rajeev Alur and Pavol {\v{C}}ern{\'y} and P. Madhusadan and
+                  Wonhong Nam",
+  title = 	 "Synthesis of interface specifications for {Java} classes",
+  booktitle =	 POPL2005,
+  pages = 	 "98--109",
+  year =	 2005,
+  address =	 POPL2005addr,
+  month =	 POPL2005date
+}
+
+
+
+
+
+
+@InProceedings{PodgurskiLFMMSW03,
+  author = 	 "Andy Podgurski and David Leon and Patrick Francis and Wes
+        	  Masri and Melinda Minch and Jiayang Sun and Bin Wang",
+  title = 	 "Automated support for classifying software failure reports",
+  booktitle =    ICSE2003,
+  pages =	 "465--475",
+  year =	 2003,
+  address =	 ICSE2003addr,
+  month =	 ICSE2003date
+}
+
+
+
+@InProceedings{PavlopoulouY99,
+  author = 	 "Christina Pavlopoulou and Michal Young",
+  title = 	 "Residual test coverage monitoring",
+  booktitle =	 ICSE99,
+  pages =	 "277--284",
+  year =	 1999,
+  address =	 ICSE99addr,
+  month =	 ICSE99date,
+  abstract =
+   "Structural coverage criteria are often used as an indicator of the
+    thoroughness of testing, but complete satisfaction of a criterion is seldom
+    achieved. When a software product is released with less than 100\% coverage,
+    testers are explicitly or implicitly assuming that executions satisfying
+    the remaining test obligations (the residue) are either infeasible or occur
+    so rarely that they have negligible impact on quality. Violation of this
+    assumption indicates shortcomings in the testing process.
+    \par
+    Monitoring in the deployed environment, even in the beta test phase, is
+    typically limited to error and sanity checks. Monitoring the residue of
+    test coverage in actual use can provide additional useful information, but
+    it is unlikely to be accepted by users unless its performance impact is
+    very small. Experience with a prototype tool for residual test coverage
+    monitoring of Java programs suggests that, at least for statement coverage,
+    the simple strategy of removing all probes except those corresponding to
+    the residue of coverage testing reduces execution overhead to acceptably
+    low levels.",
+}
+
+
+
+
+
+
+
+@Article{HansonR85,
+  author = 	 "Stephen Jos{\'e} Hanson and Richard R. Rosinski",
+  title = 	 "Programmer perceptions of productivity and programming tools",
+  journal = 	 CACM,
+  year = 	 1985,
+  volume =	 28,
+  number =	 2,
+  pages =	 "180--189",
+  month =	 feb,
+  doi = {http://doi.acm.org/10.1145/2786.2791},
+  abstract =
+   "Psychometric scaling methods are applied to programmer productivity
+    assessments of 20 tools to recommend a set of minimal, as well as more
+    comprehensive, tools.",
+}
+
+
+
+
+
+@InProceedings{ChildersDS2003,
+  author = 	 "Bruce Childers and Jack W. Davidson and Mary Lou Soffa",
+  title = 	 "Continuous Compilation: A New Approach to Aggressive and
+                  Adaptive Code Transformation",
+  booktitle =	 IPDPS2003,
+  pages =	 "205--214",
+  year =	 2003,
+  address =	 IPDPS2003addr,
+  month =	 IPDPS2003date,
+  abstract =
+   "Over the past several decades, the compiler research community has
+    developed a number of sophisticated and powerful algorithms for a variety
+    of code improvements. While there are still promising directions for
+    particular optimizations, research on new or improved optimizations is
+    reaching the point of diminishing returns and new approaches are needed to
+    achieve significant performance improvements beyond traditional
+    optimizations. In this paper, we describe a new strategy based on a
+    continuous compilation system that constantly improves application code by
+    applying aggressive and adaptive code optimizations at all times, from
+    static optimization to online dynamic optimization. In this paper, we
+    describe our general approach and process for continuous compilation of
+    application code. We also present initial results from our research with
+    continuous compilation. These initial results include a new prediction
+    framework that can estimate the benefit of applying code transformations
+    without actually doing the transformation. We also describe results that
+    demonstrate the benefit of adaptively changing application code for
+    embedded systems to make trade-offs between code size, performance, and
+    power consumption."
+}
+
+
+
+
+@InProceedings{Magpie84,
+  author = 	 "Mayer D. Schwartz and Norman M. Delisle and Vimal S. Begwani",
+  title = 	 "Incremental compilation in {Magpie}",
+  booktitle =	 CC84,
+  pages =	 "122--131",
+  year =	 1984,
+  address =	 CC84addr,
+  month =	 CC84date,
+  doi = {http://doi.acm.org/10.1145/502874.502887},
+}
+
+
+
+@InProceedings{Karasick98,
+  author = 	 "Michael Karasick",
+  title = 	 "The architecture of {Montana}: an open and extensible programming environment with an incremental {C++} compiler",
+  booktitle =	 FSE98,
+  pages =	 "131--142",
+  year =	 1998,
+  address =	 FSE98addr,
+  month =	 FSE98date,
+  doi = {http://doi.acm.org/10.1145/288195.288284},
+}
+
+@book{test-driven-development,
+  title = {Test-Driven Development: By Example},
+  author = {Kent Beck},
+  publisher = {Addison-Wesley},
+  address = {Boston},
+  year = 2002,
+}
+
+
+
+
+@InProceedings{Weide2001,
+  author = 	 "Bruce W. Weide",
+  title = 	 "``Modular regression testing'': Connections to
+                  component-based software",
+  booktitle =	 CBSE2001,
+  pages =	 "47--51",
+  year =	 2001,
+  address =	 CBSE2001addr,
+  month =	 CBSE2001date,
+  abstract =
+   "Many have argued that software that is not designed to support modular
+    reasoning about its behavior is inherently fragile and costly to maintain,
+    and that software engineers should seek to achieve the modular reasoning
+    property to help overcome these problems. But some people resist these
+    claims, taking one of two contradictory positions:
+    \begin{enumerate}
+    \item Modular reasoning is
+    inherently limited to impractical purely functional programs where there is
+    no state and there are no side-effects.
+    \item Modular reasoning is possible
+    for any reasonably ``well-designed'' software system written in a modern
+    imperative object-oriented language that uses its sophisticated
+    encapsulation mechanisms.
+    \end{enumerate}
+    Explanations of why (1) is wrong have been relatively effective. We
+    suspect this is because both experimental and (more recently) commercial
+    software has been built in C++ in a disciplined way that supports modular
+    reasoning about its behavior, and it has (among other advantages)
+    dramatically lower defect rates than ``normal'' software of like
+    kind.
+    \par
+    Explanations of why (2) is wrong have been less effective. We suspect this
+    is because they have been based on synthetic examples that appear to be
+    pathological and therefore of little practical consequence. Using a thought
+    experiment involving regression testing of systems having features that no
+    one should doubt are just like ``real'' software, we make another stab at
+    giving a convincing argument on this point."
+}
+
+
+@article{WildeS95,
+ author = {Norman Wilde and Michael C. Scully},
+ title = {Software reconnaissance: mapping program features to code},
+ journal = {Journal of Software Maintenance},
+ volume = {7},
+ number = {1},
+ year = {1995},
+ ISSN = {1040-550X},
+ pages = {49--62},
+ publisher = {John Wiley \& Sons, Inc.},
+ }
+
+
+@InProceedings{StottsLA2002,
+  author = 	 "David Stotts and Mark Lindsey and Angus Antley",
+  title = 	 "An informal formal method for systematic {JUnit} test
+                  case generation",
+  booktitle =    XPAU2002,
+  pages = 	 "131--143",
+  year =	 2002,
+  address =	 XPAU2002addr,
+  month =	 XPAU2002date,
+  abstract =
+   "The JUnit testing tool is widely used to support the central XP concept of
+    test first software development.  While JUnit provides Java classes for
+    expressing test cases and test suites, it does not provide or proscribe per
+    se any guidelines for deciding what test cases are good ones for any
+    particular class.  We have developed a method for systematically creating
+    complete and consistent test classes for JUnit. Called JAX (for Junit
+    Axioms), the method is based on Guttag's algebraic specification of
+    abstract data types.  We demonstrate an informal use of ADT semantics for
+    guiding JUnit test method generation; the programmer uses no formal
+    notation other than Java, and the procedure meshes with XP test-as-design
+    principles.  Preliminary experiments show that informal JAX-based testing
+    finds more errors than an ad hoc form of JUnit testing.",
+}
+
+
+@Article{BeckG98,
+  author = 	 "Kent Beck and Erich Gamma",
+  title = 	 "{JUnit} test infected: Programmers love writing tests",
+  journal = 	 "Java Report",
+  year = 	 1998,
+  volume = 	 3,
+  number = 	 7,
+  NEEDpages = 	 "",
+  month = 	 jul
+}
+
+
+
+@InProceedings{BeyerCHJM2004,
+  author = 	 "Dirk Beyer and Adam J. Chlipala and Thomas A. Henzinger
+                  and Ranjit Jhala and Rupak Majumdar",
+  title = 	 "Generating tests from counterexamples",
+  booktitle =	 ICSE2004,
+  pages = 	 "326--335",
+  year =	 2004,
+  address =	 ICSE2004addr,
+  month =	 ICSE2004date,
+  abstract =
+   "We have extended the software model checker Blast to automatically generate
+    test suites that guarantee full coverage with respect to a given
+    predicate. More precisely, given a C program and a target predicate p,
+    Blast determines the set L of program locations which program execution can
+    reach with p true, and automatically generates a set of test vectors that
+    exhibit the truth of p at all locations in L\@.  We have used Blast to
+    generate test suites and to detect dead code in C programs with up to 30K
+    lines of code. The analysis and test-vector generation is fully automatic
+    (no user intervention) and exact (no false positives)."
+}
+
+
+
+
+
+@Article{ChillaregeBCHMRW92,
+  author = 	 "Ram Chillarege and Inderpal S. Bhandari and Jarir
+                  K. Chaar and Michael J. Halliday and Diane S. Moebus and
+                  Bonnie K. Ray and Man-Yuen Wong",
+  title = 	 "Orthogonal defect classification---A concept for
+                  in-process measurements",
+  journal = 	 TSE,
+  year = 	 1992,
+  volume =	 18,
+  number =	 11,
+  month =	 nov,
+  abstract =
+   "Orthogonal defect classification (ODC), a concept that enables in-process
+    feedback to software developers by extracting signatures on the development
+    process from defects, is described. The ideas are evolved from an earlier
+    finding that demonstrates the use of semantic information from defects to
+    extract cause-effect relationships in the development process. This finding
+    is leveraged to develop a systematic framework for building measurement and
+    analysis methods. The authors define ODC and discuss the necessary and
+    sufficient conditions required to provide feedback to a developer;
+    illustrate the use of the defect type distribution to measure the progress
+    of a product through a process; illustrate the use of the defect trigger
+    distribution to evaluate the effectiveness and eventually the completeness
+    of verification processes such as inspection or testing; provides sample
+    results from pilot projects using ODC; and open the doors to a wide variety
+    of analysis techniques for providing effective and fast feedback based on
+    the concepts of ODC.",
+}
+
+
+@InProceedings{1007531,
+ author = {Kevin Sullivan and Jinlin Yang and David Coppit and Sarfraz Khurshid and Daniel Jackson},
+ title = {Software assurance by bounded exhaustive testing},
+ booktitle = {Proceedings of the 2004 ACM SIGSOFT international symposium on Software testing and analysis},
+ year = {2004},
+ ISBN = {1-58113-820-2},
+ pages = {133--142},
+ location = {Boston, Massachusetts, USA},
+ doi = {http://doi.acm.org/10.1145/1007512.1007531},
+ publisher = {ACM Press},
+ }
+
+
+
+
+
+@InProceedings{RuthruffBR2005,
+  author = 	 "Joseph R. Ruthruff and Margaret Burnett and Gregg Rothermel",
+  title = 	 "An empirical study of fault localization for end-user programmers",
+  booktitle =	 ICSE2005,
+  pages = 	 "352--361",
+  year =	 2005,
+  address =	 ICSE2005addr,
+  month =	 ICSE2005date
+}
+
+
+@InProceedings{XieMSN2005,
+  author = 	 "Tao Xie and Darko Marinov and Wolfram Schulte and David Notkin",
+  title = 	 "Symstra: A framework for generating object-oriented unit
+                  tests using symbolic execution",
+  booktitle =	 TACAS2005,
+  pages =	 "365--381",
+  year =	 2005,
+  address = 	 TACAS2005addr,
+  month = 	 TACAS2005date,
+  abstract =
+   "Object-oriented unit tests consist of sequences of method
+    invocations.  Behavior of an invocation depends on the method's
+    arguments and the state of the receiver at the beginning of the
+    invocation.  Correspondingly, generating unit tests involves two tasks:
+    generating method sequences that build relevant receiver-object states and
+    generating relevant method arguments.  This paper proposes Symstra, a
+    framework that achieves both test generation tasks using symbolic execution
+    of method sequences with symbolic arguments.  The paper defines symbolic
+    states of object-oriented programs and novel comparisons of states.  Given
+    a set of methods from the class under test and a bound on the length of
+    sequences, Symstra systematically explores the object-state space of the
+    class and prunes this exploration based on the state comparisons.
+    Experimental results show that Symstra generates unit tests that achieve
+    higher branch coverage faster than the existing test-generation techniques
+    based on concrete method arguments.",
+}
+
+@InProceedings{XieMN2004,
+  author = 	 "Tao Xie and Darko Marinov and David Notkin",
+  title = 	 "Rostra: A framework for detecting redundant
+                   object-oriented unit tests",
+  booktitle =	 ASE2004,
+  pages =	 "196--205",
+  year =	 2004,
+  address =	 ASE2004addr,
+  month =	 ASE2004date,
+  abstract =
+   "Object-oriented unit tests consist of sequences of method invocations.
+    Behavior of an invocation depends on the state of the receiver object and
+    method arguments at the beginning of the invocation.  Existing tools for
+    automatic generation of object-oriented test suites, such as Jtest and
+    JCrasher for Java, typically ignore this state and thus generate redundant
+    tests that exercise the same method behavior, which increases the testing
+    time without increasing the ability to detect faults.
+    \par
+    This paper proposes Rostra, a framework for detecting redundant unit tests,
+    and presents five fully automatic techniques within this framework.  We use
+    Rostra to assess and minimize test suites generated by test-generation
+    tools.  We also present how Rostra can be added to these tools to avoid
+    generation of redundant tests.  We have implemented the five Rostra
+    techniques and evaluated them on 11 subjects taken from a variety of
+    sources.  The experimental results show that Jtest and JCrasher generate a
+    high percentage of redundant tests and that Rostra can remove these
+    redundant tests without decreasing the quality of test suites.",
+}
+
+
+
+@InProceedings{XieN2004:ICFEM,
+  author = 	 "Tao Xie and David Notkin",
+  title = 	 "Automatic extraction of object-oriented observer
+                  abstractions from unit-test executions",
+  booktitle =	 ICFEM2004,
+  pages =	 "290--305",
+  year =	 2004,
+  address =	 ICFEM2004addr,
+  month =	 ICFEM2004date,
+  abstract =
+   "Unit testing has become a common step in software development.  Although
+    manually created unit tests are valuable, they are often insufficient;
+    therefore, programmers can use an automatic unit-test-generation tool to
+    produce a large number of additional tests for a class.  However, without a
+    priori specifications, programmers cannot practically inspect the execution
+    of each automatically generated test.  In this paper, we develop the
+    observer abstraction approach for automatically extracting
+    object-state-transition information of a class from unit-test executions,
+    without requiring a priori specifications.  Given a class and a set of its
+    initial tests generated by a third-party tool, we generate new tests to
+    augment the initial tests and produce the abstract state of an object based
+    on the return values of a set of observers (public methods with non-void
+    returns) invoked on the object.  From the executions of both the new and
+    initial tests, we automatically extract observer abstractions, each of
+    which is an object state machine (OSM): a state in the OSM represents an
+    abstract state and a transition in the OSM represents method calls.  We
+    have implemented the Obstra tool for the approach and have applied the
+    approach on complex data structures; our experiences suggest that this
+    approach provides useful object-state-transition information for
+    programmers to inspect unit-test executions effectively.",
+}
+
+
+@InProceedings{BowringRH2004,
+ author = {James F. Bowring and James M. Rehg and Mary Jean Harrold},
+ title = {Active learning for automatic classification of software behavior},
+ booktitle = ISSTA2004,
+ year = {2004},
+ ISBN = {1-58113-820-2},
+ pages = {195--205},
+ address = ISSTA2004addr,
+ month = ISSTA2004date,
+ doi = {http://doi.acm.org/10.1145/1007512.1007539},
+ }
+
+
+
+
+
+
+@InProceedings{TillmanS2005,
+  author = 	 "Nikolai Tillmann and Wolfram Schulte",
+  title = 	 "Parameterized unit tests",
+  booktitle =	 FSE2005,
+  pages =	 "253--262",
+  year =	 2005,
+  address =	 FSE2005addr,
+  month =	 FSE2005date,
+  abstract =
+   "Parameterized unit tests extend the current industry practice of using
+    closed unit tests defined as parameterless methods. Parameterized unit
+    tests separate two concerns:  1) They specify the external behavior of the
+    involved methods for all test arguments. 2) Test cases can be re-obtained
+    as traditional closed unit tests by instantiating the parameterized unit
+    tests. Symbolic execution and constraint solving can be used to
+    automatically choose a minimal set of inputs that exercise a parameterized
+    unit test with respect to possible code paths of the implementation. In
+    addition, parameterized unit tests can be used as symbolic summaries which
+    allows symbolic execution to scale for arbitrary abstraction levels. We
+    have developed a prototype tool which computes test cases from
+    parameterized unit tests. We report on its first use testing parts of the
+    .NET base class library.",
+}
+
+
+
+
+@InProceedings{DavisW81,
+  author = 	 "Martin D. Davis and Elaine J. Weyuker",
+  title = 	 "Pseudo-oracles for non-testable programs",
+  booktitle =	 "ACM 81: Proceedings of the ACM '81 conference",
+  pages =	 "254--257",
+  year =	 1981,
+  NEEDaddress = 	 "",
+  month = 	 nov # "~9--11,",
+  abstract =
+   "The most commonly used method of validating a program is by testing. The
+    programmer typically runs the program on some test cases, and if and when
+    they run correctly, the program is considered to be correct.
+    \par
+    We know that many difficult problems are associated with testing. One such
+    problem is that it is a fundamental part of the testing process to require
+    the ability to infer properties of a program by observing the program's
+    behavior on selected inputs. The most common property that one hopes to
+    infer through testing is correctness. But unless the program is run on the
+    entire input domain, there are infinitely many programs which produce the
+    correct output on the selected inputs, but produce incorrect output for
+    some other element of the domain."
+}
+
+
+@InProceedings{ElkarabliehZK2007,
+  author = 	 "Bassem Elkarablieh and Yehia Zayour and Sarfraz Khurshid",
+  title = 	 "Efficiently generating structurally complex inputs with thousands of objects",
+  booktitle = ECOOP2007,
+  pages = 	 "248-272",
+  year = 	 2007,
+  address = 	 ECOOP2007addr,
+  month = 	 ECOOP2007date,
+}
+
+
+@InProceedings{StaatsWH2011,
+  author = 	 "Matt Staats and Michael W. Whalen and Mats P.E. Heimdahl",
+  title = 	 "Programs, tests, and oracles: The foundations of testing revisited",
+  booktitle = ICSE2011,
+  pages = 	 "391--400",
+  year = 	 2011,
+  address = 	 ICSE2011addr,
+  month = 	 ICSE2011date,
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Unfiled
+%%%
+
+
+@article{ChenTseChen2001,
+ author = {Huo Yan Chen and T. H. Tse and T. Y. Chen},
+ title = {{TACCLE}: A methodology for object-oriented software testing at the class and cluster levels},
+ journal = TSE,
+ volume = {10},
+ number = {1},
+ year = {2001},
+ issn = {1049-331X},
+ pages = {56--109},
+ doi = {http://doi.acm.org/10.1145/366378.366380},
+}
+
+
+
+@InProceedings{DoongF91,
+  author = 	 "Roong-Ko Doong and Phyllis G. Frankl",
+  title = 	 "Case studies on testing object-oriented programs",
+  booktitle = TAV91,
+  pages = 	 "165--177",
+  year = 	 1991,
+  address = 	 TAV91addr,
+  month = 	 TAV91date,
+}
+
+@InProceedings{TurnerR93,
+  author = 	 "Christopher D. Turner and David J. Robson",
+  title = 	 "The State-Based Testing of Object-Oriented Programs",
+  booktitle = ICSM93,
+  pages = 	 "302--310",
+  year = 	 1993,
+  address = 	 ICSM93addr,
+  month = 	 ICSM93date,
+}
+
+@InProceedings{HarroldMF92,
+  author = 	 "Mary Jean Harrold and John D. McGregor and Kevin J. Fitzpatrick",
+  title = 	 "Incremental testing of object-oriented class structures",
+  booktitle = ICSE92,
+  pages = 	 "68--80",
+  year = 	 1992,
+  address = 	 ICSE92addr,
+  month = 	 ICSE92date,
+}
+
+@InProceedings{SouterPH99,
+  author = 	 "Amie L. Souter and Lori L. Pollock and Dixie Hisley",
+  title = 	 "Inter-class def-use analysis with partial class representations",
+  booktitle = PASTE99,
+  pages = 	 "47--56",
+  year = 	 1999,
+  address = 	 PASTE99addr,
+  month = 	 PASTE99date,
+}
+
+@inproceedings{martena02dec,
+  author =       {Vincenzo Martena and Alessandro Orso and Mauro Pezz{\`e}},
+  authorASCII =  "Mauro Pezze",
+  title =        {Interclass Testing of Object Oriented Software},
+  booktitle =    ICECCS2002,
+  address =      ICECCS2002addr,
+  pages =        {145--154},
+  month =        ICECCS2002date,
+  year =         {2002},
+}
+
+
+%% Possible duplicates below!
+
+@InProceedings{forrestermillerNt,
+  author = 	 "Justin E. Forrester and Barton P. Miller ",
+  title = 	 "An Empirical Study of the Robustness of {Windows NT} Applications Using Random Testing",
+  booktitle =    USENIXWindows2000,
+  year = 	 2000,
+  address = 	 USENIXWindows2000addr,
+  month = 	 USENIXWindows2000date,
+  pages = "59--68",
+}
+
+@inproceedings{kropp,
+ author = {N. P. Kropp and P. J. Koopman and D. P. Siewiorek},
+ title = {Automated Robustness Testing of Off-the-Shelf Software Components},
+ booktitle = {FTCS '98: Proceedings of the The Twenty-Eighth Annual International Symposium on Fault-Tolerant Computing},
+ year = {1998},
+ isbn = {0-8186-8470-4},
+ pages = {230},
+ publisher = {IEEE Computer Society},
+ address = {Washington, DC, USA},
+ }
+
+@InProceedings{Ntafos98,
+  author = 	 "Simeon Ntafos",
+  title = 	 "On random and partition testing",
+  booktitle = ISSTA98,
+  pages = 	 "42--48",
+  year = 	 1998,
+  address = 	 ISSTA98addr,
+  month = 	 ISSTA98date,
+}
+
+
+@InProceedings{Tonella2004,
+  author = 	 "Paolo Tonella",
+  title = 	 "Evolutionary testing of classes",
+  booktitle = ISSTA2004,
+  pages = 	 "119--128",
+  year = 	 2004,
+  address = 	 ISSTA2004addr,
+  month = 	 ISSTA2004date,
+}
+
+@inproceedings{WapplerLammerman2005,
+ author = {Stefan Wappler and Frank Lammermann},
+ title = {Using evolutionary algorithms for the unit testing of object-oriented software},
+ booktitle = {GECCO '05: Proceedings of the 2005 conference on Genetic and evolutionary computation},
+ year = {2005},
+ isbn = {1-59593-010-8},
+ pages = {1053--1060},
+ location = {Washington DC, USA},
+ doi = {http://doi.acm.org/10.1145/1068009.1068187},
+ }
+
+@InProceedings{GTCSV05,
+  author =       {Wolfgang Grieskamp and Nikolai Tillmann and Colin Campbell and Wolfram Schulte and Margus Veanes},
+  title =        {Action Machines -- Towards a Framework for Model Composition, Exploration and Conformance Testing Based on Symbolic Computation},
+  booktitle =    QSIC2005,
+  year =         2005,
+  month =        sep,
+  url =     {http://research.microsoft.com/research/pubs/view.aspx?type=Technical%20Report&id=913},
+}
+
+@TechReport{MarinovADKR2003,
+    author = "D. Marinov and A. Andoni and D. Daniliuc and S. Khurshid and M. Rinard",
+    title = "An evaluation of exhaustive testing for data structures",
+    institution =  MITLCS,
+    year = "2003",
+    month = sep,
+    number = "MIT/LCS/TR-921",
+}
+
+
+
+
+@InProceedings{YorshBS2006,
+  author = 	 "Greta Yorsh and Thomas Ball and Mooly Sagiv",
+  title = 	 "Testing, abstraction, theorem proving: Better together!",
+  booktitle = ISSTA2006,
+  pages = 	 "145--155",
+  year = 	 2006,
+  address = 	 ISSTA2006addr,
+  month = 	 ISSTA2006date,
+  abstract =
+   "We present a method for static program analysis that leverages tests and
+    concrete program executions. State abstractions generalize the set of
+    program states obtained from concrete executions. A theorem prover then
+    checks that the generalized set of concrete states covers all potential
+    executions and satisfies additional safety properties. Our method finds the
+    same potential errors as the most-precise abstract interpreter for a given
+    abstraction and is potentially more efficient. Additionally, it provides a
+    new way to tune the performance of the analysis by alternating between
+    concrete execution and theorem proving. We have implemented our technique
+    in a prototype for checking properties of C# programs.",
+}
+
+
+
+@Misc{Hartman2006,
+  author = 	 "Alan Hartman",
+  howpublished = "Personal communication",
+  month = 	 jul,
+  day = 	 jul # "~20,",
+  year = 	 2006,
+}
+
+
+
+@InProceedings{HartmanN2004,
+  author = 	 "A. Hartman and K. Nagin",
+  title = 	 "The {AGEDIS} tools for model based testing",
+  booktitle = ISSTA2004,
+  pages = 	 "129--132",
+  year = 	 2004,
+  address = 	 ISSTA2004addr,
+  month = 	 ISSTA2004date,
+}
+
+@inproceedings{torx,
+ author = {Jan Tretmans and Ed Brinksma},
+ title = {{TorX}: Automated model based testing},
+ booktitle = {1st European Conference on Model Driven Software Engineering},
+ year = {2003},
+ pages = {31-43},
+ location = {Nuremberg, Germany},
+}
+
+
+@misc{reactis,
+ author = "{Reactive Systems, Inc.}",
+ title = "Reactis",
+ howpublished = "\url{http://www.reactive-systems.com/}",
+ }
+
+
+@misc{conformiq,
+ author = "Conformiq",
+ title = "Conformiq test generator",
+ howpublished = "\url{http://www.conformiq.com/}",
+ }
+
+
+@inproceedings{jartege,
+  author    = {Catherine Oriat},
+  title     = {{J}artege: A Tool for Random Generation of Unit Tests for
+               {Java} Classes},
+  booktitle = {QoSA/SOQUA},
+  year      = {2005},
+  month     = sep,
+  pages     = {242--256},
+}
+
+
+
+@article{JPF,
+ author = {Willem Visser and Klaus Havelund and Guillaume Brat and Seungjoon Park and Flavio Lerda},
+ title = {Model Checking Programs},
+ journal = ASEjournal,
+ volume = {10},
+ number = {2},
+ year = {2003},
+ issn = {0928-8910},
+ pages = {203--232},
+ doi = {http://dx.doi.org/10.1023/A:1022920129859},
+ OMITpublisher = {Kluwer Academic Publishers},
+ OMITqaddress = {Hingham, MA, USA},
+ }
+
+
+
+
+@inproceedings{groceHeuristics02,
+ author = {Alex Groce and Willem Visser},
+ title = {Model checking {Java} programs using structural heuristics},
+ booktitle = ISSTA2002,
+ year = {2002},
+ isbn = {1-58113-562-9},
+ pages = {12--21},
+ location = ISSTA2002addr,
+ month = ISSTA2002date,
+ doi = {http://doi.acm.org/10.1145/566172.566175},
+ }
+
+@article{groceHeuristics04,
+  author    = {Alex Groce and
+               Willem Visser},
+  title     = {Heuristics for model checking {Java} programs},
+  journal   = STTT,
+  volume    = {6},
+  number    = {4},
+  year      = {2004},
+  pages     = {260--276},
+  ee        = {http://www.springerlink.com/index/10.1007/s10009-003-0130-9},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+}
+
+
+@inproceedings{autotest,
+  author = {Ilinca Ciupa and Andreas Leitner},
+  title = {Automatic Testing Based on Design by Contract},
+  booktitle = {Workshop on Software Quality (SOQUA)},
+  year = {2005},
+  pages = {545-557},
+  month = sep # "~19--22,",
+  note = "SOQUA 2005 proceedings were published in the book Proceedings
+    of Net.ObjectDays 2005",
+}
+
+
+@InProceedings{Ball2004:PCT,
+  author = 	 "Thomas Ball",
+  title = 	 "A Theory of Predicate-Complete Test Coverage and Generation",
+  booktitle = FMCO2004,
+  pages = 	 "1--22",
+  year = 	 2004,
+  address = 	 FMCO2004addr,
+  month = 	 FMCO2004date,
+}
+
+
+@book{myersArt,
+ author = {Glenford J. Myers and Corey Sandler},
+ title = {The Art of Software Testing},
+ year = {2004},
+ isbn = {0471469122},
+ publisher = {John Wiley \& Sons},
+ }
+
+
+@InProceedings{BaahGH2006,
+  author = 	 "George K. Baah and Alexander Gray and Mary Jean Harrold",
+  title = 	 "On-line anomaly detection of deployed software:  A statistical machine learning approach",
+  booktitle = "SOQUA '06: Proceedings of the 3rd international workshop on Software quality assurance",
+  pages = 	 "70--77",
+  year = 	 2006,
+  address = 	 "Portland, Oregon",
+}
+
+
+@Article{Runeson2006,
+  author = 	 "Per Runeson",
+  title = 	 "A Survey of Unit Testing Practices",
+  journal = 	 IEEESoftware,
+  year = 	 2006,
+  volume = 	 23,
+  number = 	 4,
+  pages = 	 "22--29",
+  month = 	 jul,
+}
+
+
+
+@InProceedings{MusluSW2011,
+  author =       "K{\i}van{\c{c}} Mu{\c{s}}lu and Bilge Soran and Jochen Wuttke",
+  authorASCII =  "Kivanc Muslu and Bilge Soran and Jochen Wuttke",
+  title = 	 "Finding bugs by isolating unit tests",
+  booktitle = FSE2011 # ", New Ideas Track",
+  pages = 	 "496--499",
+  year = 	 2011,
+  address = 	 FSE2011addr,
+  month = 	 FSE2011date,
+}
+
+
+
+
+@Article{YuLCZ2012,
+  author = 	 "Yu, Kai and Lin, Mengxiang and Chen, Jin and Zhang, Xiangyu",
+  title = 	 "Towards automated debugging in software evolution: Evaluating delta debugging on real regression bugs from the developers' perspectives",
+  journal = 	 "J. Syst. Softw.",
+  year = 	 2012,
+  volume = 	 85,
+  number = 	 10,
+  pages = 	 "2305--2317",
+  month = 	 oct,
+  abstract =
+   "Delta debugging has been proposed to isolate failure-inducing changes when
+    regressions occur. In this work, we focus on evaluating delta debugging in
+    practical settings from developers' perspectives. A collection of real
+    regressions taken from medium-sized open source programs is used in our
+    evaluation. Towards automated debugging in software evolution, a tool based
+    on delta debugging is created and both the limitations and costs are
+    discussed.
+    \par
+    We have evaluated two variants of delta debugging. Different from
+    successful isolation in Zeller's initial studies, the results in our
+    experiments vary wildly. Two thirds of isolated changes in studied programs
+    provide direct or indirect clues in locating regression bugs. The remaining
+    results are superfluous changes or even wrong isolations. In the case of
+    wrong isolations, the isolated changes cause the same behaviour of the
+    regression but are failure-irrelevant. Moreover, the hierarchical variant
+    does not yield definite improvements in terms of the efficiency and
+    accuracy.",
+}
+
+
+%%%
+%%% end
+%%%
+
+% LocalWords: TechReport NIST OPTkey OPTaddress OPTnote OPTannote Karr TombBV
+% LocalWords: Inspec Marron Audris Mockus goel Amrit TSE dec NHPP Rong ClauseO
+% LocalWords: Yamada Tokuno Osaki Huei Hou Sy Kuo Yi Soochow HGDM Ohba inhouse
+% LocalWords: ISSRE InProceedings Mitsuru Xiao Mei Chou booktitle addr Ilinca
+% LocalWords: ISSN ISBN genterms annote Eick Trans GravesKMS Siy jul Csallner's
+% LocalWords: ChristensonH BF FOF ESS nonseeded Yu Shen Dunsmore Bev Oriol kLOC
+% LocalWords: Frankl Littlewood Strigini aug correctedby apr misc ISSE BernerWK
+% LocalWords: irvine Offutt url tewary Kanupriya offutt Zhang TR jan Berner IP
+% LocalWords: HowdenH Howden Yudong trustability Ntafos Michal Simeon Lawrance
+% LocalWords: InCollection pseudorandom referencedby subdomains Morell Namin UI
+% LocalWords: subdomain nonhomogeneity Podgurski MillerMNPNMV Noonan Palulu DUT
+% LocalWords: Nichol Branson Murrill Voas Bingchiang Jeng pp Weyuker Palulu's
+% LocalWords: MillerFS Fredriksen doi PhdThesis Meudec Christophe VDM MarianiPP
+% LocalWords: OPTtype OPTmonth behaviour SL ChangR Juei sep SST ADL UC Mariani
+% LocalWords: ADLscope Microsystems SST's Nierstrasz Lemoine SEN ISSTA Roos NT
+% LocalWords: ChangRS ADLT HayesS API UCI Sriram Sankar OPTeditor Ziel Saff MDE
+% LocalWords: automatable SCT minterm Palo TDD ACL Balcer Hasling TAV ElbaumCDD
+% LocalWords: Ostrand Kemmerer TSL Stuppy Reinig Rea CIS RichardsonOT Dwyer se
+% LocalWords: O'Malley IGNOREeditor Zhenyi Jin Jie feb coden SPEXBL IE Dokulil
+% LocalWords: bibdate pdf ack nhfb nov dvi Mothra DeMillo Guindi Liu Kapfhammer
+% LocalWords: OffuttL Shaoying SOFL JSSODM CDFDs statechart UK YCS MC DUTs
+% LocalWords: OPTnumber statecharts DC subterm Donat TOSEM TAPSOFT ij Saff's
+% LocalWords: detectability Bidoit Dauchet OPTseries OPTvolume BDDs OO SCARPE
+% LocalWords: TothDJoyce DNF Kalman Toth INCOSE DickF Faivre FME lncs Shrinivas
+% LocalWords: OPTcrossref OPTorganization OPTpublisher Odense BernotGM Joshi
+% LocalWords: SEJ Gilles Bernot Gaudel Marre IEE HoffmanSW Strooper OP subsytem
+% LocalWords: Citeseer HoffmanS pstroop dhoffman GrieskampGSV Gurevich Saarland
+% LocalWords: Grieskamp Schulte Margus Veanes ASML ZhuHM Zhu Zweben's webpages
+% LocalWords: Proc jun CACMA GoodenoughG Goodenough Gerhart Weyuker's
+% LocalWords: Elbaum EASOF DeMilloLS Sayward OffuttU McDermid Doong FL
+% LocalWords: Frankl's Kirani Tsai's Kung al's Mothra's Ghosh Mathur minimality
+% LocalWords: ADT CORBA DCOM RMI Jini Vincenzi Barbosa Delamaro Offut
+% LocalWords: Rothermel Zapf Untch Vadim Okum Yaacov Yesha CTL AmmannB
+% LocalWords: SMV KnightA Ammann San oct GuptaMS Neelam Aditya Soffa EiffelBase
+% LocalWords: fse ClaessenH Koen Claessen QuickCheck ICFP QuickCheck's
+% LocalWords: Jtest OPTauthor Parasoft OPTedition OPTyear DbC atsign
+% LocalWords: WeyukerGS Tarak Goradia Ashutosh Singh Leveson's TCAS PL
+% LocalWords: SPE CsallnerS JCrasher Christoph Csallner Yannis mernst
+% LocalWords: Smaragdakis ESEC pre OPTpages IllegalArgumentException
+% LocalWords: IllegalStateException NullPointerException HarroldGS OPs
+% LocalWords: UniqueBoundedStack Harrold Rajiv LeungW RothermelH Leung
+% LocalWords: Hareton ICSM rothermel Filippos Vokolos Pasquini Crespo
+% LocalWords: Matrella PasquiniCM Adalberto Nobiato Paolo ATSMER Hira
+% LocalWords: SrivastavaT Amitabh Srivastava Thiagarajan WongHLA Chu
+% LocalWords: RothermelUCH Horgan Agrawal Chengyun ElbaumMR Alexy CNF
+% LocalWords: Malishevsky MalishevskyRE Alexey JonesH isNumber arSt CC
+% LocalWords: arnumber ared arAuthor Rosenblum Binkley RenSTRC Xiaoxia
+% LocalWords: Ren Fenil Chesley usesDaikonAsTestSubject ren oopsla DCS
+% LocalWords: downloadsnonlocal NEEDaddress supersededby RenSTRCD Orso
+% LocalWords: SinhaOH Saurabh Sinha Alessandro HendersonW Weiser CMU
+% LocalWords: VisiProg plezbertdoes Plezbert Cytron Wadler xpexplained
+% LocalWords: Galanter Pribram HCII TOPLAS Siegel Shel OrsoLHL Donglin
+% LocalWords: Liang OrsoAH Taweesup Apiwattanapong LawR PathImpact dag
+% LocalWords: DAGs junit howpublished SoffaContinuousTesting ChildersS
+% LocalWords: Childers ChildersDS JohnsonKACMMZD Hongbing Kou Jitender
+% LocalWords: Miglani Shenyan Zhen Doane PSP Hackystat csdl Boehm BNR
+% LocalWords: baziuk NORTEL KimFreq Parnas icse Zeller Andreas SIGSOFT
+% LocalWords: ZellerH Ralf Hildebrandt vol BoyapatiKM Boyapati Sarfraz
+% LocalWords: Khurshid Darko Marinov Korat sortedness repOK WhaleyML
+% LocalWords: Whaley FSM submodels submodel FSMs joeq lastRet AlurCMN
+% LocalWords: Rajeev Alur Pavol ern Madhusadan Wonhong NEEDpages DFA
+% LocalWords: ServerTableEntry prev Nicol PodgurskiLFMMSW Wes Masri XP
+% LocalWords: Minch Jiayang gcc jikes javac PavlopoulouY Pavlopoulou
+% LocalWords: ASQ EMF HansonR Jos Rosinski subprojects nonmetric IPDPS
+% LocalWords: Delisle Vimal Begwani Karasick Weide CBSE int WildeS JAX
+% LocalWords: Scully StottsLA Stotts Antley XPAU Guttag's BeckG Beyer
+% LocalWords: BeyerCHJM Chlipala Henzinger Ranjit Jhala Rupak Majumdar
+% LocalWords: Comput Sci Coll IESEDJ retesting ChillaregeBCHMRW Jarir
+% LocalWords: Chillarege Inderpal Bhandari Chaar Halliday Moebus Yuen
+% LocalWords: ODC lifecycle overclaims Jinlin Coppit mathematize jac
+% LocalWords: njt Mander ASE followon Korel Optimisation IFIP DCIA CFG
+% LocalWords: Toyn ICFEM FergusonK Bogdan abs GCD ESC CnC JABA JML OSM
+% LocalWords: intraprocedural OrsoSH Nanjuan Shi KLOC superclasses PDG
+% LocalWords: checkins dfej OMITseries CleveZ Holger Cleve Zeller's BB
+% LocalWords: Brun argc RuthruffBR Ruthruff Rothermel's NC AnnalsSE al
+% LocalWords: EickGKMM YuSD OMITeditor DallmeierLZ Dallmeier Lindig Su
+% LocalWords: NanoXML XieMSN Symstra TACAS XieMN WholeSeq ModifyingSeq
+% LocalWords: WholeState MonitorEquals PairwiseEquals XieN Obstra AsmL
+% LocalWords: Tassey EuroStar StarEast AndrewsBL Briand Labiche KimPR
+% LocalWords: APFD addtl FEP stmt MarinovK TestEra Rehg TestEra's RTS
+% LocalWords: concretization BowringRH Bowring KimP revalidate LRU def
+% LocalWords: LeonP LeonMP Godefroid Klarlund Koushik Sen enum MCP BBE
+% LocalWords: DUP IFP SliceP APIs Ince testee Abhik Roychoudhury Xie
+% LocalWords: Korel's prioritizations Khurshid's TillmanS Tillmann HDD
+% LocalWords: PUTs wangtao DavisW Ghassan Misherghi Zhendong mal Qiu
+% LocalWords: GodefroidKS Praveen Kallakuri Xuemei issn NY Panzl Xie's
+% LocalWords: EqualsBuilder reflectionEquals Jtest's Unfiled VisserPP
+% LocalWords: ClassBench Visser val DART's reanu Radek Pel nek Pelanek
+% LocalWords: authorASCII Pasareanu VisserPK PathFinder SenMA Gul Agha
+% LocalWords: Concolic SenA jCUTE CAV YuanX Hai Substra ATM usesDaikon
+% LocalWords: substra Substra's StoerzerRRT Stoerzer YuanM Xun Atif LeitnerOZCM
+% LocalWords: Memon AUT AUT's OSS HiveMind PachecoLET PhongpaibulB Huo
+% LocalWords: Monvorath Phongpaibul ISESE ChenTseChen Yan Tse TACCLE Ko
+% LocalWords: DoongF Roong TurnerR HarroldMF SouterPH Souter Hisley WA
+% LocalWords: inproceedings martena Vincenzo Pezz Pezze ICECCS kropp ee
+% LocalWords: forrestermillerNt Forrester Koopman Siewiorek FTCS isbn
+% LocalWords: Tonella WapplerLammerman Wappler Lammermann GECCO GTCSV
+% LocalWords: QSIC MarinovADKR Andoni Daniliuc MITLCS YorshBS Yorsh JPF
+% LocalWords: Mooly Sagiv HartmanN Nagin AGEDIS torx Tretmans Brinksma
+% LocalWords: TorX reactis conformiq jartege Oriat artege QoSA SOQUA
+% LocalWords: Erfurt Havelund Guillaume Seungjoon Flavio Lerda Kluwer
+% LocalWords: ASEjournal OMITpublisher OMITqaddress Hingham Groce STTT
+% LocalWords: groceHeuristics bibsource DBLP WangER Zhimin middleware
+% LocalWords: TourApp Salber Dey Abowd Yuan CohenDFP Siddhartha Dalal
+% LocalWords: Fredman AETG autotest Ciupa Leitner ObjectDays ballPCT
+% LocalWords: PCT FMCO myersArt Glenford Sandler BaahGH Baah Papagiannakis

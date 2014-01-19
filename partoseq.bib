@@ -1,0 +1,556 @@
+% -*- Mode: BibTeX -*-
+% Bibliography for a paper on parallel-to-sequential transformation.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SEQUENTIALIZING PARALLEL PROGRAMS
+%
+
+@TECHREPORT{AllenK86,
+    AUTHOR = "Randy Allen and Ken Kennedy",
+    TITLE = "Vector Register Allocation",
+    INSTITUTION = "Rice University",
+    ADDRESS = "Houston, Texas",
+    MONTH = APR,
+    YEAR = 1986, 
+    Note = "Revised March 1988."
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% FINITE DIFFERENCING
+%
+
+
+
+
+
+
+
+@Article{Earley75,
+  author = 	"J. Earley",
+  title = 	"High level iterators and a method for automatically
+		 designing data structure representation",
+  journal = 	"Computer Languages",
+  year = 	"1975",
+  volume = 	"1",
+  number = 	"4",
+  pages = 	"321--342"
+}
+
+
+@TechReport{PaigeK80,
+  author = 	"Robert Paige and Shaye Koenig",
+  title = 	"Finite differencing of computable expressions",
+  institution =	"Rutgers University Laboratory for Computer Science Research",
+  year = 	"1980",
+  number = 	"LCSR-TR-8",
+  address = 	"New Brunswick, New Jersey",
+  month = 	aug,
+  note = 	"Revised December, 1981"
+}
+
+@Article{PaigeK82,
+  author = 	"Robert Paige and Shaye Koenig",
+  title = 	"Finite differencing of computable expressions",
+  journal = 	toplas,
+  year = 	"1982",
+  volume = 	"4",
+  number = 	"3",
+  pages = 	"402--454",
+  month = 	jul
+}
+
+@InProceedings{PaigeS77,
+  author = 	"Bob Paige and J. T. Schwartz",
+  title = 	"Expression continuity and the formal differentiation of
+		 algorithms",
+  booktitle = 	"Conference Record of the Fourth ACM Symposium on Principles
+		 of Programming Languages",
+  year = 	"1977",
+  pages = 	"58--71",
+  address = 	"Los Angeles, California",
+  month = 	jan # "~17--19,"
+}
+
+@TechReport{Paige82,
+  author = 	"Robert Paige",
+  title = 	"Transformational programming:  applications to algorithms
+		 and systems",
+  institution = 	"Rutgers University Department of Computer Science",
+  year = 	"1982",
+  number = 	"DCS-TR-118",
+  address = 	"New Brunswick, New Jersey",
+  month = 	sep
+}
+
+@Book{Paige81,
+  author = 	 "Robert A. Paige",
+  title = 	 "Formal Differentiation:  A Program Synthesis Technique",
+  publisher = 	 "UMI Research Press",
+  year = 	 1981,
+  address =	 "Ann Arbor, Michigan"
+}
+
+@InProceedings{FongU76,
+  author = 	"Amelia C. Fong and Jeffrey D. Ullman",
+  title = 	"Induction variables in very high level languages",
+  booktitle = 	"Conference Record of the Third ACM Symposium on Principles
+		 of Programming Languages",
+  year = 	"1976",
+  pages = 	"104--112",
+  address = 	"Atlanta, Georgia",
+  month = 	jan # "~19--21,"
+}
+
+@InProceedings{Fong79,
+  author = 	"Amelia C. Fong",
+  title = 	"Inductively computable constructs in very high level languages",
+  booktitle = 	"Conference Record of the Sixth ACM Symposium on Principles
+		 of Programming Languages",
+  year = 	"1979",
+  pages = 	"21--28",
+  address = 	"San Antonio, Texas",
+  month = 	jan # "~29--31,"
+}
+
+@TechReport{Schwartz74,
+  author = 	 "J. T. Schwartz",
+  title = 	 "On Programming:  An Interim Report on the {SETL} Project,
+		  {Installments I and II}",
+  institution =  "Courant Institute of Mathematical Sciences,
+		  New York University",
+  year = 	 1974,
+  address = 	"New York, New York"
+}
+
+@Unpublished{Dewar78,
+  author =	 "Robert B. K. Dewar",
+  title =	 "The {SETL} Programming Language",
+  year =	 1978,
+  note = 	 "Manuscript"
+}
+
+
+@TechReport{CORNELLCS//TR95-1551,
+  bibdate =      "November 7, 1995",
+  type =         "Technical Report",
+  number =       "TR95-1551",
+  institution =  "Cornell University, Computer Science",
+  title =        "Incremental Computation: {A} Semantics-Based
+                 Systematic Transformational Approach",
+  year =         "1995",
+  month =        oct # " 31,",
+  pages =        "134",
+  author =       "Yanhong Annie Liu",
+  abstract =     "Incremental computation takes advantage of repeated
+                 computations on inputs that differ slightly from one
+                 another, computing each new output incrementally by
+                 making use of the previous output rather than from
+                 scratch. This thesis concerns the theory, design, and
+                 implementation of a general approach to incremental
+                 computation. It also elucidates the essence of
+                 improving the efficiency of computations by relating it
+                 to incremental computation. Our general approach allows
+                 incremental computation to be obtained systematically
+                 from non-incremental computation and program efficiency
+                 to be systematically improved. This research focuses on
+                 identifying the fundamentals of efficient incremental
+                 computation out of domain-specific properties and
+                 language-specific features, devising a general
+                 framework that accommodates these fundamentals, and
+                 developing a systematic approach based on the framework
+                 that exploits program semantics. Three fundamental
+                 aspects of incremental computation are identified:
+                 avoiding repeated identical computations, caching
+                 useful intermediate results, and discovering
+                 appropriate auxiliary information. Given a program
+                 \$f\$ and an operation \$\oplus\$, an incremental
+                 program is developed to compute \$f(x\oplus y)\$
+                 efficiently by using \$f(x)\$, the intermediate results
+                 computed in computing \$f(x)\$, and auxiliary
+                 information about \$x\$ that can be inexpensively
+                 maintained. The approach in this thesis is formalized
+                 for a simple functional language, but the underlying
+                 principles also apply to other programming languages.
+                 It exploits program semantics to discover
+                 incrementality that is not directly embedded in
+                 primitive operators and takes into consideration
+                 properties of application domains as well. It is
+                 composed of step-wise program analysis and
+                 transformation modules that can, for the most part, be
+                 mechanized. Since every non-trivial computation
+                 proceeds by iteration (or recursion), the approach is
+                 used straightforwardly for achieving efficient
+                 computation in general, by computing each iteration
+                 incrementally using an appropriate incremental program.
+                 This method is applied to problems in interactive
+                 systems, optimizing compilers, transformational program
+                 development, {\it etc}. The design and implementation
+                 of a prototype system, CACHET, for obtaining
+                 incremental programs is also described.",
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% INCREASING GRAIN/THREAD/CHUNK SIZE
+%
+
+@TechReport{Traub88,
+  author = 	"Kenneth R. Traub",
+  title = 	"Sequential Implementation of Lenient Programming Languages",
+  institution = MITLCS,
+  address =	 "Cambridge, Massachusetts",
+  year = 	"1988",
+  number = 	"LCS-TR-417",
+  month = 	oct
+}
+
+
+
+@TechReport{Chatterjee91,
+  author = 	"Siddhartha Chatterjee",
+  title = 	"Compiling data-parallel programs for efficient execution
+                 on shared-memory multiprocessors",
+  institution = "Carnegie Mellon University",
+  year = 	{1991},
+  number = 	"CMU-CS-91-189",
+  address = 	"Pittsburgh, Pennsylvania",
+  month = 	oct
+}
+
+
+@InProceedings{ChatterjeeBF91,
+  author = 	"Siddhartha Chatterjee and Guy E. Blelloch and Allan L. Fisher",
+  title = 	"Size and access inference for data-parallel programs",
+  booktitle = 	"Proceedings of the ACM SIGPLAN '91 Conference on
+		 Programming Language Design and Implementation",
+  year = 	{1991},
+  organization = 	"ACM",
+  month = 	jun # "~26--28,",
+  pages = 	"130--144"
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% LOOP UNROLLING
+%
+
+
+@TechReport{Culler90,
+  author = 	"David E. Culler",
+  title = 	"Managing parallelism and resources in scientific dataflow
+              programs",
+  institution = 	MITLCS,
+  year = 	"1990",
+  number = 	"MIT-LCS-TR-446",
+  address =	"Cambridge, Massachusetts",
+  month = 	mar
+}
+
+
+@InProceedings{Cytron87,
+  author = 	"Ron Cytron",
+  title = 	"Limited processor scheduling of doacross loops",
+  booktitle = 	"Proceedings of the 1987 International Conference on
+		 Parallel Processing",
+  year = 	"1987",
+  pages = 	"226--234",
+  month = 	aug
+}
+
+@InProceedings{Cytron86,
+  author = 	"Ron Cytron",
+  title = 	"Doacross: Beyond Vectorization for Multiprocessors.",
+  booktitle = 	"Proceedings of the 1986 International Conference on
+		 Parallel Processing",
+  year = 	"1986",
+  pages = 	"836--844",
+  month = 	aug
+}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% STENCIL
+%
+
+@InProceedings{BromleyHMS91,
+  author = 	"Mark Bromley and Steven Heller and Tim McNerney and Guy L.
+		 {Steele Jr.}",
+  title = 	"Fortran at Ten Gigaflops:  The {Connection Machine}
+		 Convolution Compiler",
+  booktitle = 	"Proceedings of the ACM SIGPLAN '91 Conference on
+		 Programming Language Design and Implementation",
+  year = 	"1991",
+  pages = 	"145--156",
+  month = 	jun # "~26--28,"
+}
+
+
+@InProceedings{MyczkowskiS91,
+  author = 	 "Jacek Myczkowski and Guy L. {Steele Jr.}",
+  title = 	 "Seismic modeling at 14 gigaflops on the {Connection}
+		  {Machine}",
+  pages =	 "316--326",
+  booktitle =	 "Proceedings, Supercomputing '91",
+  year =	 1991,
+  address =	 "Albuquerque, New Mexico",
+  month =	 Nov # "~18--22,"
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% NUMERIC STABILITY
+%
+
+
+@Book{Knuth81,
+  author = 	 "Donald E. Knuth",
+  title = 	 "Seminumerical Algorithms",
+  publisher = 	 "Addison-Wesley",
+  year = 	 1981,
+  volume =	 2,
+  series =	 "The Art of Computer Programming",
+  address =	 "Reading, Massachusetts",
+  edition =	 "Second"
+}
+
+
+@Booklet{IEEE754,
+  title = 	 "{IEEE} Standard for Binary Floating-Point Arithmetic",
+  author =	 "{Institute of Electrical and Electronics Engineers}",
+  address =	 "345 East 47th Street, New York, NY 10017",
+  month =	 Aug # "~12,",
+  year =	 1985,
+  note =	 "IEEE Standard 754-1985"
+}
+
+
+@Article{Coonen80,
+  author = 	 "Jerome T. Coonen",
+  title = 	 "An Implementation Guide to a Proposed Standard for
+		  Floating-Point Arithmetic",
+  journal =	 "IEEE Computer",
+  year =	 1980,
+  volume =	 13,
+  number =	 1,
+  pages =	 "68--79",
+  month =	 Jan,
+  note =	 "Errata appear in {\em IEEE Computer}, 14(3):61, March 1981."
+}
+
+
+@Article{IEEE754-8.0,
+  author = 	 "{Institute of Electrical and Electronics Engineers
+		  Computer Society}",
+  title = 	 "A Proposed Standard for Binary Floating-Point Arithmetic:
+                  Draft 8.0 of {IEEE} {Task} {P754}",
+  journal =	 "IEEE Computer",
+  year =	 1981,
+  volume =	 14,
+  number =	 3,
+  pages =	 "51--62",
+  month =	 Mar
+}
+
+
+@Article{Cody81,
+  author = 	 "W. J. Cody",
+  title = 	 "Analysis of Proposals for the Floating-Point Standard",
+  journal =	 "IEEE Computer",
+  year =	 1981,
+  volume =	 14,
+  number =	 3,
+  pages =	 "63--68",
+  month =	 Mar
+}
+
+
+@Article{Hough81,
+  author = 	 "David Hough",
+  title = 	 "Applications of the Proposed {IEEE} 754 Standard for
+		  Floating-Point Arithmetic",
+  journal =	 "IEEE Computer",
+  year =	 1981,
+  volume =	 14,
+  number =	 3,
+  pages =	 "70--74",
+  month =	 Mar
+}
+
+
+@Article{Coonen81,
+  author = 	 "Jerome T. Coonen",
+  title = 	 "Underflow and the Denormalized Numbers",
+  journal =	 "IEEE Computer",
+  year =	 1981,
+  volume =	 14,
+  number =	 3,
+  pages =	 "75--87",
+  month =	 Mar
+}
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ETC
+%
+
+@Book{RichW86,
+  title = 	"Readings in Artificial Intelligence and Software Engineering",
+  publisher = 	"Morgan Kaufmann",
+  year = 	"1986",
+  editor = 	"Charles Rich and Richard C. Waters",
+  address = 	"Los Altos, CA"
+}
+
+@TechReport{FerranteM84,
+  author = 	 "Jeanne Ferrante and Mary Mace",
+  title = 	 "On linearizing parallel code",
+  institution =  "IBM T. J. Watson Research Center",
+  year = 	 1984,
+  type =	 "Computer Science",
+  number =	 "RC 10926 (\#48479)",
+  address =	 "Yorktown Heights, NY 10598",
+  month =	 nov # "~5,"
+}
+
+
+@InProceedings{AgarwalLKK90,
+  author = 	 "Anant Agarwal and Beng-Hong Lim and David Kranz and John
+                  Kubiatowicz",
+  title = 	 "{APRIL}:  A Processor Architecture for Multiprocessing",
+  pages =	 "104--114",
+  booktitle =	 "Proceedings, 17th Annual International Symposium on
+		  Computer Architecture",
+  year =	 1990,
+  address =	 "Seattle, Washington",
+  month =	 May
+}
+
+@TechReport{ChaikenLN90,
+  author = 	 "David Chaiken and Beng-Hong Lim and Dan Nussbaum",
+  title = 	 "{ASIM} Users Manual",
+  institution =  MITLCS,
+  year = 	 1990,
+  type =	 "Alewife Systems Memo",
+  number =	 13,
+  address =	 "Cambridge, Massachusetts",
+  month =	 Aug,
+  note = 	 "9 pages; revised November 26, 1991."
+}
+
+@TechReport{Nussbaum91,
+  author = 	 "Dan Nussbaum",
+  title = 	 "{ASIM} Reference Manual",
+  institution =  MITLCS,
+  year = 	 1991,
+  type =	 "Alewife Systems Memo",
+  number =	 28,
+  address =	 "Cambridge, Massachusetts",
+  month =	 Jan,
+  note =	 "17 pages; revised November 26, 1991."
+}
+
+
+@InProceedings{BradyY92,
+  author = 	 "Martin L. Brady and Whanki Yong",
+  title = 	 "Parallel discrete approximation algorithms for the
+		  {Radon} transform",
+  pages =	 "91--99",
+  booktitle =	 "Proceedings of SPAA '92:  The 4th Annual ACM Symposium on
+		  Parallel Algorithms and Architectures",
+  year =	 1992,
+  address =	 "San Diego, California",
+  month =	 Jun # "~29--" # Jul # "~1,"
+}
+
+
+@Manual{Johnson91,
+  title = 	 "Using the {LALR} parser generator",
+  author =	 "Kirk Johnson",
+  year =	 1991,
+  month =	 Sep # "~19,",
+  note = 	 "Documentation version 0.9."
+}
+
+
+@Misc{Horwat92p,
+  author =	 "Waldemar Horwat",
+  howpublished = "Personal communication",
+  year =	 1992
+}
+
+
+@Manual{GNUEmacsLisp,
+  title = 	 "{GNU} Emacs Lisp Reference Manual",
+  author =	 "Bil Lewis and Dan LaLiberte and {the GNU Manual Group}",
+  organization = "Free Software Foundation",
+  address =	 "Cambridge, Massachusetts",
+  year =	 1990,
+  month =	 Dec,
+  note = 	 "Version 1.03"
+}
+
+@Misc{ZawinskiF92,
+  author =	 "Jamie Zawinski and Hallvard Furuseth",
+  title =	 "Compilation of {Lisp} code into byte code",
+  howpublished = "{\tt bytecomp.el}",
+  year =	 1992,
+  month =	 Mar # "~9,",
+  note =	 "Version 2.05"
+}
+
+@Manual{LaLiberte92,
+  title = 	 "Edebug User Manual:  A Source Level Debugger for {GNU
+		  Emacs Lisp}",
+  author =	 "Daniel LaLiberte",
+  year =	 1992,
+  month =	 Mar,
+  note =	 "Edition 1.2"
+}
+
+@InCollection{AllenC72,
+  author = 	 "F. E. Allen and J. Cocke",
+  title = 	 "A Catalogue of Optimizing Transformations",
+  booktitle =	 "Design and Optimization of Compilers",
+  publisher =	 "Prentice-Hall",
+  editor =	 "R. Rustin",
+  year =	 1972,
+  pages =	 "1--30",
+  address =	 "Englewood Cliffs, New Jersey"
+}
+
+@TechReport{StandishHKN76,
+  author = 	"T. A. Standish and D. C. Harriman and D. F. Kilber
+		 and J. M. Neighbors",
+  title = 	"The {I}rvine Program Transformation Catalogue",
+  institution = 	"University of California at Irvine",
+  year = 	"1976",
+  number = 	"161",
+  address = 	"Department of Information and Computer Science",
+  month = 	Jan
+}
+
+@Misc{Steele92p,
+  author =	 "Guy L. {Steele Jr.}",
+  howpublished = "Personal communication",
+  year =	 1992
+}

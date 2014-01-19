@@ -1,0 +1,1445 @@
+%%% Alias and pointer analysis bibliography
+% Also some other interprocedural analysis.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% From Michael Wolfe
+%%%
+
+
+
+
+
+
+
+@INCOLLECTION{jones.muchnick.81,
+   author = "Neil D. Jones and Steven S. Muchnick",
+   title = "Flow Analysis and Optimization of {L}isp-like Structures",
+   pages = "102--131",
+   editor = "Steven S. Muchnick and Neil D. Jones",
+   booktitle = "Program Flow Analysis: Theory and Applications",
+   publisher = "Prentice Hall",
+   year = 1981,
+ }
+
+@INPROCEEDINGS{landi.popl.91,
+   author = "William Landi and Barbara G. Ryder",
+   title = "Pointer-Induced Aliasing: A Problem Classification",
+   pages = "93--103",
+   booktitle = POPL91,
+   address = "Orlando, Fla.",
+   month = jan,
+   year = 1991,
+ }
+
+@INPROCEEDINGS{chase.pldi.90,
+   author = "David R. Chase and Mark Wegman and F. Kenneth Zadeck",
+   title = "Analysis of Pointers and Structures",
+   pages = "296--310",
+   booktitle = pldi90,
+   address = "White Plains, N.Y.",
+   month = jun,
+   year = 1990,
+ }
+
+@INPROCEEDINGS{larus.pldi.88,
+   author = "James R. Larus and Paul N. Hilfinger",
+   title = "Detecting Conflicts Between Structure Accesses",
+   pages = "21--34",
+   booktitle = pldi88,
+   address = "White Plains, N.Y.",
+   month = jun,
+   year = 1988,
+ }
+
+@INPROCEEDINGS{emami.pldi.94,
+   author = "Maryam Emami and Rakesh Ghiya and Laurie J. Hendren",
+   title = "Context-Sensitive Interprocedural Points-to Analysis in the Presence of Function Pointers",
+   pages = "242--256",
+   booktitle = pldi94,
+   address = "Orlando, Fla.",
+   month = jun,
+   year = 1994,
+ }
+
+@INPROCEEDINGS{hendren.ics.89,
+   author = "Laurie J. Hendren and Alexandru Nicolau",
+   title = "Interference Analysis Tools for Parallelizing Programs with Recursive Data Structures",
+   pages = "205--214",
+   booktitle = ics89,
+   address = "Crete, Greece",
+   month = jun,
+   year = 1989,
+ }
+
+@ARTICLE{hendren.tpds.90,
+   author = "Laurie J. Hendren and Alexandru Nicolau",
+   title = "Parallelizing Programs with Recursive Data Structures",
+   pages = "35--47",
+   journal = tpds,
+   year = 1990,
+   volume = 1,
+   number = 1,
+   month = jan,
+ }
+
+@inproceedings{horwitz.pldi.89,
+   author = "Susan Horwitz and Phil Pfeiffer and Thomas Reps",
+   title = "Dependence Analysis for Pointer Variables",
+   booktitle = pldi89,
+   pages = "28--40",
+   address = "Portland, Ore.",
+   month = jun,
+   year = 1989,
+ }
+
+@INPROCEEDINGS{loeliger.super.91,
+   author = "Jon Loeliger and Robert Metzger and Mark Seligman and Sean Stroud",
+   title = "Pointer Target Tracking: An Empirical Study",
+   pages = "14--23",
+   booktitle = supercomputing91,
+   address = "Albuquerque, N.M.",
+   month = nov,
+   year = 1991,
+ }
+
+@INPROCEEDINGS{smith.super.91,
+   author = "Lauren L. Smith",
+   title = "Vectorizing {C} Compilers: How Good Are They?",
+   pages = "544--553",
+   booktitle = supercomputing91,
+   address = "Albuquerque, N.M.",
+   month = nov,
+   year = 1991,
+ }
+
+@INPROCEEDINGS{guarna.icpp.88,
+   author = "Guarna, Jr., Vincent A.",
+   title = "A Technique for Analyzing Pointer and Structure References in Parallel Restructuring Compilers",
+   pages = "212--220",
+   booktitle = icpp88,
+   volume = "II",
+   month = aug,
+   year = 1988,
+   address = "St.\ Charles, Ill.",
+ }
+
+@INPROCEEDINGS{landi.pldi.92,
+   author = "William Landi and Barbara G. Ryder",
+   title = "A Safe Approximate Algorithm for Interprocedural Pointer Aliasing",
+   pages = "235--248",
+   booktitle = pldi92,
+   address = "San Francisco, Calif.",
+   month = jun,
+   year = 1992,
+ }
+
+
+
+@InProceedings{landi.pldi.93,
+  author = 	 "William Landi and Barbara G. Ryder and Sean Zhang",
+  title = 	 "Interprocedural modification side effect analysis with pointer aliasing",
+  booktitle = PLDI93,
+  pages = 	 "56--67",
+  year = 	 1993,
+  address = 	 PLDI93addr,
+  month = 	 PLDI93date,
+  abstract =
+   "We present a new interprocedural modification side effects
+    algorithm for C programs, that can discern side effects through
+    general-purpose pointer usage. Ours is the first complete design and
+    implementation of such an algorithm. Preliminary performance findings
+    support the practicality of the technique, which is based on our
+    previous approximation algorithm for pointer aliases [LR92]. Each
+    indirect store through a pointer variable is found, on average, to
+    correspond to a store into 1.2 locations. This indicates that our
+    program-point-specific pointer aliasing information is quite precise
+    when used to determine the effects of these stores.",
+}
+
+
+@Article{RyderLSZA2001,
+  author = 	 "Barbara G. Ryder and William A. Landi and Philip A. Stocks and Sean Zhang and Rita Altucher",
+  title = 	 "A schema for interprocedural modification side-effect analysis with pointer aliasing",
+  journal = 	 TOPLAS,
+  year = 	 2001,
+  volume = 	 23,
+  number = 	 2,
+  pages = 	 "105--186",
+  month = 	 mar,
+  abstract =
+   "The first interprocedural modification side-effects analysis for C (MODC)
+    that obtains better than worst-case precision on programs with
+    general-purpose pointer usage is presented with empirical results. The
+    analysis consists of an algorithm schema corresponding to a family of MODC
+    algorithms with two independent phases: one for determining
+    pointer-induced aliases and a subsequent one for propagating
+    interprocedural side effects. These MODC algorithms are parameterized by
+    the aliasing method used. The empirical results compare the performance of
+    two dissimilar MODC algorithms: MODC(FSAlias) uses a flow-sensitive,
+    calling-context-sensitive interprocedural alias analysis; MODC(FIAlias
+    uses a flow-insensitive, calling-context-insensitive alias analysis which
+    is much faster, but less accurate. These two algorithms were profiled on
+    45 programs ranging in size from 250 to 30,000 lines of C code, and the
+    results demonstrate dramatically the possible cost-precision
+    trade-offs. This first comparative implementation of MODC analyses offers
+    insight into the differences between flow-/context-sensitive and
+    flow-/context-insensitive analyses. The analysis cost versus precision
+    trade-offs in side-effect information obtained are reported. The results
+    show surprisingly that the precision of flow-sensitive side-effect
+    analysis is not always prohibitive in cost, and that the precision of
+    flow-insensitive analysis is substantially better than worst-case
+    estimates and seems sufficient for certain applications. On average
+    MODC(FSAlias) for procedures and calls is in the range of 20\% more precise
+    than MODC(FIAlias); however, the performance was found to be at least an
+    order of magnitude slower than MODC(FIAlias).",
+}
+
+
+
+
+@INPROCEEDINGS{choi.popl.93,
+   author = "Jong-Deok Choi and Michael Burke and Paul Carini",
+   title = "Efficient Flow-Sensitive Interprocedural Computation of Pointer-Induced Aliases and Side Effects",
+   pages = "232--245",
+   booktitle = popl93,
+   address = popl93addr,
+   year = 1993,
+   month = popl93date,
+ }
+
+
+@ARTICLE{marlowe.sigplan.93,
+   author = "Thomas J. Marlowe and William G. Landi and Barbara G. Ryder and Jong-Deok Choi and Michael G. Burke and Paul Carini",
+   title = "Pointer-Induced Aliasing: A Clarification",
+   journal = "SIGPLAN Notices",
+   year = 1993,
+   volume = 28,
+   number = 9,
+   pages = "67--70",
+   month = sep,
+ }
+
+@INPROCEEDINGS{hendren.pldi.92,
+   author = "Laurie J. Hendren and Joseph Hummel and Alexandru Nicolau",
+   title = "Abstractions for Recursive Pointer Data Structures: Improving the Analysis and Transformation of Imperative Programs",
+   pages = "249--260",
+   booktitle = pldi92,
+   address = "San Francisco, Calif.",
+   month = jun,
+   year = 1992,
+ }
+
+@ARTICLE{hummel.loplas.92,
+   author = "Joseph Hummel and Laurie J. Hendren and Alexandru Nicolau",
+   title = "Abstract Description of Pointer Data Structures: An Approach for Improving the Analysis and Optimization of Imperative Programs",
+   pages = "243--260",
+   journal = loplas,
+   year = 1992,
+   volume = 1,
+   number = 3,
+   month = sep,
+ }
+
+@INPROCEEDINGS{hummel.ipps.94,
+   author = "Joseph Hummel and Laurie J. Hendren and Alexandru Nicolau",
+   title = "A Language for Conveying the Aliasing Properties of Dynamic, Pointer-Based Data Structures",
+   pages = "208--216",
+   booktitle = ispp94,
+   address = "Cancun, Mexico",
+   month = apr,
+   year = 1994,
+ }
+
+@INPROCEEDINGS{hummel.pldi.94,
+   author = "Joseph Hummel and Laurie J. Hendren and Alexandru Nicolau",
+   title = "A General Data Dependence Test for Dynamic, Pointer-Based Data Structures",
+   pages = "218--229",
+   booktitle = pldi94,
+   address = "Orlando, Fla.",
+   month = jun,
+   year = 1994,
+ }
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Alias analysis
+%%%
+
+@InProceedings{CWZ:APS,
+  author =       "David R. Chase and Mark Wegman and F. Kenneth Zadeck",
+  title =        "Analysis of Pointers and Structures",
+  booktitle =    PLDI90,
+  month =        jun,
+  year =         1990,
+  address =      pldi90addr,
+  pages =        "296--310",
+}
+
+@InProceedings{LandiWilli1992a,
+  author =       "William Landi and Barbara G. Ryder",
+  title =        "A safe approximate algorithm for interprocedural
+                 pointer aliasing",
+  booktitle =    PLDI92,
+  address =	 pldi92addr,
+  pages =	 "235--248",
+  year =         1992,
+  abstracturl =  "file://cs.rutgers.edu/pub/technical-reports/lcsr-tr-168.abstract",
+  url =          "file://cs.rutgers.edu/pub/technical-reports/lcsr-tr-168.ps.Z",
+  month =        PLDI92date,
+}
+
+
+@TechReport{LandiR91:TR,
+  author =       "William Landi and Barbara G. Ryder",
+  title =        "A Safe Approximation Algorithm for Interprocedural
+                 Pointer Aliasing",
+  institution =  "Rutgers University",
+  year = 	 1991,
+  number =	 "LCSR-TR-168",
+  month =	 sep
+}
+
+
+@InProceedings{pldi94*242,
+  author =       "Maryam Emami and Rakesh Ghiya and Laurie J. Hendren",
+  title =        "Context-Sensitive Interprocedural Points-to Analysis
+                 in the Presence of Function Pointers",
+  pages =        "242--256",
+  ISBN =         "0-89791-662-X",
+  booktitle =    PLDI94,
+  address =	 pldi94addr,
+  month =        jun,
+  year =         1994,
+}
+
+
+@InProceedings{Wilson:1995:ECP,
+  author =       "Robert P. Wilson and Monica S. Lam",
+  title =        "Efficient context-sensitive pointer analysis for {C}
+                 programs",
+  booktitle =    PLDI95,
+  address =      pldi95addr,
+  month =        jun,
+  year =         1995,
+  ISSN =         "0362-1340",
+  pages =        "1--12",
+  coden =        "SINODQ",
+  ISSN =         "0362-1340",
+  abstract =     "This paper proposes an efficient technique for
+                 context-sensitive pointer analysis that is applicable
+                 to real C programs. For efficiency, we summarize the
+                 effects of procedures using partial transfer functions.
+                 A partial transfer function (PTF) describes the
+                 behavior of a procedure assuming that certain alias
+                 relationships hold when it is called. We can reuse a
+                 PTF in many calling contexts as long as the aliases
+                 among the inputs to the procedure are the same. Our
+                 empirical results demonstrate that this technique is
+                 successful-a single PTF per procedure is usually
+                 sufficient to obtain completely context-sensitive
+                 results. Because many C programs use features such as
+                 type casts and pointer arithmetic to circumvent the
+                 high-level type system, our algorithm is based on a
+                 low-level representation of memory locations that
+                 safely handles all the features of C. We have
+                 implemented our algorithm in the SUIF compiler system
+                 and we show that it runs efficiently for a set of C
+                 benchmarks. (16 Refs.)",
+  affiliation =  "Comput. Syst. Lab., Stanford Univ., CA, USA",
+  classification = "C6140D (High level languages); C6150C (Compilers,
+                 interpreters and other processors)",
+  keywords =     "Alias relationships; C benchmarks; C programs;
+                 Compiler system; Context-sensitive pointer analysis;
+                 High-level type system; Memory locations; Partial
+                 transfer functions; Pointer arithmetic; Procedure call;
+                 SUIF; Type casts",
+  thesaurus =    "C language; Program compilers; Remote procedure
+                 calls",
+}
+
+
+
+@InProceedings{popl93*232,
+  author =       "Jong-Deok Choi and Michael Burke and Paul Carini",
+  title =        "Efficient Flow-Sensitive Interprocedural Computation
+                 of Pointer-Induced Aliases and Side Effects",
+  pages =        "232--245",
+  ISBN =         "0-89791-560-7",
+  booktitle =    POPL93,
+  address =      popl93addr,
+  month =        popl93date,
+  year =         1993,
+}
+
+
+@InProceedings{Deutsch94a,
+  author =       "Alain Deutsch",
+  title =        "Interprocedural May-Alias Analysis for Pointers:
+                 Beyond {$k$}-Limiting",
+  pages =        "230--241",
+  booktitle =    PLDI94,
+  year =         1994,
+  address =      pldi94addr,
+  month =        jun,
+  note =         "SIGPLAN Notices, 29(6)",
+  abstract =     "Existing methods for alias analysis of recursive
+                 pointer data structures are based on two approximation
+                 techniques: {\em $k$-limiting}, which blurs distinction
+                 between sub-objects below depth $k$; and {\em
+                 store-based\/} (or equivalently location or
+                 region-based) approximations, which blur distinction
+                 between elements of recursive data structures. Although
+                 notable progress in interprocedural alias analysis has
+                 been recently accomplished, very little progress in the
+                 precision of analysis of recursive pointer data
+                 structures has been seen since the inception of these
+                 approximation techniques by Jones and Muchnick a decade
+                 ago. As a result, optimizing, verifying and
+                 parallelizing programs with pointers has remained
+                 difficult. We present a new parametric framework for
+                 analyzing recursive pointer data structures which can
+                 express a new natural class of alias information not
+                 accessible to existing methods. The key idea is to
+                 represent alias information by pairs of {\em symbolic
+                 access paths\/} which are qualified by symbolic
+                 descriptions of the positions for which the alias pair
+                 holds. Based on this result, we present an algorithm
+                 for interprocedural may-alias analysis with pointers
+                 which on numerous examples that occur in practice is
+                 much more precise than recently published algorithms.",
+}
+
+
+@InProceedings{Deutsch95,
+  author =       "Alain Deutsch",
+  title =        "Semantic Models and Abstract Interpretation Techniques
+                 for Inductive Data Structures and Pointers",
+  booktitle =    PEPM95,
+  address =      pepm95addr,
+  month =        PEPM95date,
+  year =         1995,
+  pages =        "226--229",
+}
+
+
+@InProceedings{POPL::Steensgaard1996,
+  title =        "Points-to Analysis in Almost Linear Time",
+  author =       "Bjarne Steensgaard",
+  pages =        "32--41",
+  booktitle =    POPL96,
+  month =        POPL96date,
+  year =         1996,
+  address =      popl96addr
+}
+
+
+@InProceedings{Steensgaard96,
+  author = 	 "Bjarne Steensgaard",
+  title = 	 "Points-to analysis by type inference of programs with
+		  structures and unions",
+  booktitle =    CC96,
+  address =	 CC96addr,
+  coden =        "LNCSD9",
+  ISBN =         "3-540-61053-7 (paperback)",
+  ISSN =         "0302-9743",
+  LCCN =         "QA76.76.C65 I52 1996",
+  OMITseries =       LNCS,
+  OMITvolume =       1060,
+  year =	 1996,
+  month =	 CC96date
+}
+
+
+@InProceedings{Jones:Muchnick:acm:popl:1982,
+  author =       "Neil D. Jones and Stephen S. Muchnick",
+  title =        "A Flexible Approach to Interprocedural Data Flow
+                 Analysis and Programs with Recursive Data Structures",
+  booktitle =    POPL82,
+  month =        jan,
+  year =         1982,
+  pages =        "66--74",
+  abstract =     "A new approach to data flow analysis of procedural
+                 programs and programs with recursive data structures is
+                 described. The method depends on simulation of the
+                 interpreter for the subject programming language using
+                 a retrieval function to approximate a program's data
+                 structures.",
+}
+
+@InProceedings{POPL79*244,
+  author =       "Neil D. Jones and Steven S. Muchnick",
+  title =        "Flow analysis and optimization of {LISP}-like
+                 structures",
+  pages =        "244--256",
+  booktitle =    POPL79,
+  month =        jan,
+  address =      "New York, USA",
+  year =         "1979",
+}
+
+
+@InProceedings{Ruf:1995:CAA,
+  author =       "Erik Ruf",
+  title =        "Context-insensitive alias analysis reconsidered",
+  booktitle =    PLDI95,
+  address =      pldi95addr,
+  month =        jun,
+  year =         1995,
+  ISSN =         "0362-1340",
+  pages =        "13--22",
+  coden =        "SINODQ",
+  ISSN =         "0362-1340",
+  abstract =     "Recent work on alias analysis in the presence of
+                 pointers has concentrated on context-sensitive
+                 interprocedural analyses, which treat multiple calls to
+                 a single procedure independently rather than
+                 constructing a single approximation to a procedure's
+                 effect on all of its callers. While context-sensitive
+                 modeling offers the potential for greater precision by
+                 considering only realizable call-return paths, its
+                 empirical benefits have yet to be measured. This paper
+                 compares the precision of a simple, efficient,
+                 context-insensitive points-to analysis for the C
+                 programming language with that of a maximally
+                 context-sensitive version of the same analysis. We
+                 demonstrate that, for a number of pointer-intensive
+                 benchmark programs, context-insensitivity exerts little
+                 to no precision penalty. We also describe techniques
+                 for using the output of context-insensitive analysis to
+                 improve the efficiency of context-sensitive analysis
+                 without affecting precision. (23 Refs.)",
+  affiliation =  "Microsoft Corp., Redmond, WA, USA",
+  classification = "C6110 (Systems analysis and programming); C6150C
+                 (Compilers, interpreters and other processors); C6150N
+                 (Distributed systems software)",
+  keywords =     "C programming language; Call-return paths; Compilers;
+                 Context-insensitive alias analysis; Context-insensitive
+                 analysis; Context-insensitivity; Context-sensitive
+                 analysis; Context-sensitive interprocedural analyses;
+                 Context-sensitive modeling; Multiple procedure calls;
+                 Pointer-intensive benchmark programs; Pointers;
+                 Precision penalty",
+  thesaurus =    "C language; Data flow analysis; Program compilers;
+                 Remote procedure calls; Software performance
+                 evaluation",
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Shape analysis
+%%%
+
+@InProceedings{HendrenHumNic92,
+  author =       "Laurie J. Hendren and Joseph Hummel and Alexandru
+                 Nicolau",
+  title =        "Abstractions for Recursive Pointer Data Structures:
+                 Improving the Analysis and Transformation of Imperative
+                 Programs",
+  booktitle =    PLDI92,
+  address =      PLDI92addr,
+  month =        PLDI92date,
+  year =         1992,
+  pages =        "249--260",
+  url =          "ftp://ftp-acaps.cs.mcgill.ca/pub/doc/papers/PLDI92.ps.gz",
+}
+
+
+@Article{Ghiya:1996:CAP,
+  author =       "Rakesh Ghiya and Laurie J. Hendren",
+  title =        "Connection Analysis: A Practical Interprocedural
+                 Heap Analysis for {C}",
+  journal =      "International Journal of Parallel Programming",
+  volume =       "24",
+  number =       "6",
+  pages =        "547--578",
+  month =        dec,
+  year =         "1996",
+  coden =        "IJPPE5",
+  ISSN =         "0885-7458",
+  affiliation =  "McGill Univ",
+  affiliationaddress = "Que, Can",
+  classification = "722.4; 723.1; 723.1.1; 723.5; 922.2; C4240P
+                 (Parallel programming and algorithm theory); C6110P
+                 (Parallel programming); C6120 (File organisation);
+                 C6140D (High level languages); C6150C (Compilers,
+                 interpreters and other processors)",
+  corpsource =   "Sch. of Comput. Sci., McGill Univ., Montreal, Que.,
+                 Canada",
+  journalabr =   "Int J Parallel Program",
+  keywords =     "array dependence; C (programming language); C
+                 language; C programs; Computer aided analysis;
+                 Connection analysis; connection analysis; connection
+                 matrices; connection relationships; conservative
+                 estimate; context sensitive interprocedural analysis;
+                 Context sensitive languages; disjoint objects;
+                 dynamically allocated arrays; heap access
+                 disambiguation; heap allocated objects; Heap analysis
+                 technique; heap directed pointers; interference
+                 analysis; McCAT optimizing/parallelizing C compiler;
+                 optimising compilers; Parallel processing systems;
+                 parallel programming; parallelising compilers;
+                 parallelizing compilers; Pointer disambiguation;
+                 points-to analysis; Program compilers; program control
+                 structures; program point; scientific programs;
+                 Statistical methods; storage management",
+  treatment =    "P Practical",
+}
+
+
+@InProceedings{POPL::GhiyaH1996,
+  title =        "Is it a Tree, a {DAG}, or a Cyclic Graph? {A} Shape
+                 Analysis for Heap-Directed Pointers in~{C}",
+  author =       "Rakesh Ghiya and Laurie J. Hendren",
+  pages =        "1--15",
+  booktitle =    POPL96,
+  address =      popl96addr,
+  month =        jan # "~21--24,",
+  year =         1996,
+}
+
+
+@InProceedings{POPL::FradetM1997,
+  title =        "Shape Types",
+  author =       "Pascal Fradet and Daniel Le M{\'e}tayer",
+  pages =        "27--39",
+  booktitle =    POPL97,
+  month =        POPL97date,
+  year =         1997,
+  address =      popl97addr,
+}
+
+
+@InProceedings{GolanGuetaBARSY2011,
+  author = 	 "Guy Golan-Gueta and Nathan Bronson and Alex Aiken and G. Ramalingam and Mooly Sagiv and Eran Yahav",
+  title = 	 "Automatic fine-grain locking using shape properties",
+  booktitle = OOPSLA2011,
+  pages = 	 "225--242",
+  year = 	 2011,
+  address = 	 OOPSLA2011addr,
+  month = 	 OOPSLA2011date,
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Everything else
+%%%
+
+
+@InProceedings{LandiR91,
+  author = 	"William Landi and Barbara G. Ryder",
+  title = 	"Pointer-induced Aliasing: A Problem Classification",
+  booktitle = 	POPL91,
+  year = 	1991,
+  pages = 	"93--103",
+  publisher = 	"ACM Press",
+  month = 	jan,
+  sequence = 	27
+}
+
+
+@InProceedings{LandiR92,
+  author = 	 "William Landi and Barbara G. Ryder",
+  title = 	 "A safe approximate algorithm for interprocedural pointer
+		  aliasing",
+  pages =	 "235--248",
+  year =	 1992,
+  booktitle = 	 PLDI92,
+  address =	 PLDI92addr,
+  month =        PLDI92date
+}
+
+@InProceedings{ChaseWZ90,
+  author = 	"David R. Chase and Mark Wegman and F. Kenneth Zadeck",
+  title = 	"Analysis of Pointers and Structures",
+  booktitle = 	PLDI90,
+  year = 	1990,
+  pages = 	"296--310",
+  month = 	jun # "~20--22,",
+  address =	"White Plains, NY"
+}
+
+@Article{HendrenN90,
+  author = 	"Laurie J. Hendren and Alexandru Nicolau",
+  title = 	"Parallelizing Programs with Recursive Data Structures",
+  journal = 	"IEEE Transactions on Parallel and Distributed Systems",
+  year = 	1990,
+  volume = 	1,
+  number = 	1,
+  pages = 	"35--47",
+  month = 	jan
+}
+
+@InCollection{JonesM81,
+  author = 	 "Neil D. Jones and Steven S. Muchnick",
+  title = 	 "Flow analysis and optimization of {Lisp}-like structures",
+  booktitle =    "Program Flow Analysis: Theory and Applications",
+  publisher =	 "Prentice-Hall",
+  address =      "Englewood Cliffs, N.J.",
+  year =	 1981,
+  OMITeditor =	 "Steven S. Muchnick and Neil D. Jones",
+  pages =        "102--131",
+  chapter = 	 4
+}
+
+
+@book{AdvancedCompiler,
+ author = {Steven S. Muchnick},
+ title = {Advanced Compiler Design and Implementation},
+ year = {1997},
+ isbn = {1-55860-320-4},
+ publisher = {Morgan Kaufmann Publishers Inc.},
+ address = {San Francisco, CA, USA},
+}
+
+
+@book{DataFlow,
+ author = {Steven S. Muchnick and N. D. Jones},
+ title = {Program Flow Analysis: Theory and Applications},
+ publisher = {Prentice-Hall},
+ year = {1981},
+ address = {Englewood Cliffs, New Jersey, USA},
+}
+
+
+@InProceedings{JonesM82,
+  author = 	 "Neil D. Jones and Steve S. Muchnick",
+  title = 	 "A Flexible Approach to Interprocedural Data Flow Analysis
+		  and Programs With Recursive Data Structures",
+  booktitle =	 POPL82,
+  pages = 	"66--74",
+  year =	 1982,
+  month =	 jan
+}
+
+@InProceedings{LarusH88:PLDI,
+  author = 	"James R. Larus and Paul N. Hilfinger",
+  title = 	"Detecting conflicts between structure accesses",
+  booktitle = 	PLDI88,
+  year = 	"1988",
+  pages = 	"21--34",
+  address = 	"Atlanta, Georgia",
+  month = 	jun
+}
+
+
+@InProceedings{LarusH88:PPEALS,
+  author = 	 "James R. Larus and Paul N. Hilfinger",
+  title = 	 "Restructuring {Lisp} Programs for Concurrent Execution",
+  pages =	 "100--110",
+  booktitle =	 "Proceedings of the ACM/SIGPLAN PPEALS 1988",
+  year =	 1988,
+  month =	 Jul # "~19--21,",
+  note =	 "SIGPLAN Notices 23, Volume II"
+}
+
+@Unpublished{BradleeH88,
+  author = 	 "David Bradlee and Dov Harel",
+  title = 	 "Flow insensitive aliasing and the memory reference graph",
+  note = 	 "Rough Draft",
+  year =	 1988,
+  month =	 nov # "~2,"
+}
+
+@TechReport{Ghiya92,
+  author = 	 "Rakesh Ghiya",
+  title = 	 "Interprocedural analysis in the presence of function pointers",
+  institution =  "McGill University School of Computer Science, Advanced
+		  Compilers, Architectures, and Parallel Systems Group",
+  year = 	 1992,
+  type =	 "ACAPS Technical Memo",
+  number =	 62,
+  address =	 Montreal,
+  month =	 Dec # "~28,"
+}
+
+@TechReport{HendrenEGV93,
+  author = 	 "Laurie J. Hendren and Maryam Emami and Rakesh Ghiya and
+		  Clark Verbrugge",
+  title = 	 "A practical context-sensitive interprocedural alias
+		  analysis framework for {C} compilers",
+  institution =  "McGill University School of Computer Science, Advanced
+		  Compilers, Architectures, and Parallel Systems Group",
+  year = 	 1993,
+  type =	 "ACAPS Technical Memo",
+  number =	 72,
+  address =	 Montreal,
+  month =	 Jul # "~24,"
+}
+
+
+@InProceedings{Weihl80,
+  author = 	 "William E. Weihl",
+  title = 	 "Interprocedural Data Flow Analysis in the Presence of
+		  Pointers, Procedure Variables, and Label Variables",
+  pages =	 "83--94",
+  booktitle =	 popl80,
+  year =	 1980,
+  month =	 Jan
+}
+
+
+@InProceedings{Hogg-oopsla91,
+  author =       "John Hogg",
+  title =        "Islands: Aliasing Protection in Object-Oriented Languages",
+  booktitle =    OOPSLA91,
+  pages =        "271--285",
+  month =        OOPSLA91date,
+  address =      OOPSLA91addr,
+  year =         "1991",
+  keywords =     "olit oopsla91",
+}
+
+
+
+
+@InProceedings{Almeida97,
+  author = 	 "Paulo Sergio Almeida",
+  title = 	 "Balloon types: Controlling sharing of state in data types",
+  booktitle =	 ECOOP97,
+  pages =	 "32--59",
+  year =	 1997,
+  address =	 ECOOP97addr,
+  month =	 ECOOP97date
+}
+
+
+@InProceedings{NobleVP98,
+  author = 	 "James Noble and Jan Vitek and John Potter",
+  title = 	 "Flexible Alias Protection",
+  booktitle = 	 ECOOP98,
+  pages = 	 "158--185",
+  year =	 1998,
+  address =	 ECOOP98addr,
+  month =	 ECOOP98date
+}
+
+
+@InProceedings{lu:2006:owner-accessiblity,
+  author = 	 "Yi Lu and John Potter",
+  title = 	 "On ownership and accessibility",
+  booktitle = ECOOP2006,
+  pages = 	 "99--123",
+  year = 	 2006,
+  address = 	 ECOOP2006addr,
+  month = 	 ECOOP2006date,
+}
+
+@Article{Baker95,
+  author =       "Henry G. Baker",
+  title =        "`{Use}-once' variables and linear objects -- storage
+                 management, reflection and multi-threading",
+  journal =      "SIGPLAN Notices",
+  year =         "1995",
+  volume =       "30",
+  number =       "1",
+  pages =        "45--52",
+  month =        jan,
+  note2 =        "HAR",
+  url =          "ftp://ftp.netcom.com/pub/hbaker/",
+  abstract =     "Programming languages should have 'use-once' variables
+                 in addition to the usual 'multiple-use' variables.
+                 'Use-once' variables are bound to linear (unshared,
+                 unaliased, or singly-referenced) objects. Linear
+                 objects are cheap to access and manage, because they
+                 require no synchronization or tracing garbage
+                 collection. Linear objects can elegantly and
+                 efficiently solve otherwise difficult problems of
+                 functional/mostly-functional systems-e.g., in-place
+                 updating and the efficient initialization of functional
+                 objects. Use-once variables are ideal for directly
+                 manipulating resources reflective languages. A
+                 'use-once' variable must be dynamically referenced
+                 exactly once within its scope. Unreferenced use-once
+                 variables must be explicitly killed, and
+                 multiply-referenced use-once variables must be
+                 explicitly copied; this duplication and deletion is
+                 subject to the constraint that some linear data types
+                 do not support duplication and deletion methods.
+                 Use-once variables are bound only to linear objects,
+                 which may reference other linear or non-linear objects.
+                 Non-linear objects can reference other non-linear
+                 objects, but can reference a linear object only in a
+                 way that ensures mutual exclusion. Although
+                 implementations have long had implicit use-once
+                 variables and linear objects, most languages do not
+                 provide the programmer any help for their utilization.
+                 For example, use-once variables allow for the
+                 safe/controlled use of reified language implementation
+                 objects like single-use continuations. Linear objects
+                 and use-once variables map elegantly into dataflow
+                 models of concurrent computation, and the graphical
+                 representations of dataflow models make an appealing
+                 visual linear programming language.",
+}
+
+
+
+
+
+@InProceedings{ChirimarJa1992a,
+  author =       "Jawahar Chirimar and Carl A. Gunter and Jon G.
+                 Riecke",
+  booktitle =    "Conference on Lisp and Functional programming",
+  title =        "Proving Memory Management Invariants for a Language
+                 Based on Linear Logic",
+  year =         "1992",
+  abstracturl =  "http://www.research.att.com:80/orgs/ssr/people/riecke/abstracts/linear-logic-lfp.html",
+  url =          "ftp://ftp.research.att.com/dist/riecke/linear-logic-lfp.ps.gz",
+  pages =        "139--150",
+  publisher =    "ACM Press",
+}
+
+
+
+@Unpublished{GeniusTZ97,
+  author = 	 "Daniela Genius and Martin Trapp and Wolf Zimmermann",
+  title = 	 "An approach to improve locality using sandwich types",
+  note = 	 "Submission to OOPSLA '98 (?)",
+  year =	 1997
+}
+
+
+
+
+@InProceedings{POPL::ShapiroH1997,
+  title =        "Fast and Accurate Flow-Insensitive Points-To Analysis",
+  author =       "Marc Shapiro and Susan Horwitz",
+  pages =        "1--14",
+  booktitle =    POPL97,
+  month =        POPL97date,
+  year =         "1997",
+  address =      POPL97addr,
+  references =   "\cite{PLDI::AustinBS1994} \cite{POPL::ChoiBC1993}
+                 \cite{PLDI::ChaseWZ1990} \cite{POPL::Deutsch1990}
+                 \cite{PLDI::Deutsch1994} \cite{PLDI::EmamiGH1994}
+                 \cite{POPL::GhiyaH1996} \cite{PLDI::HorwitzPR1989}
+                 \cite{PLDI::LandiR1992} \cite{PLDI::LandiRZ1993}
+                 \cite{PLDI::Ruf1995} \cite{POPL::SagivRW1996}
+                 \cite{POPL::Steensgaard1996} \cite{POPL::Weihl1980}
+                 \cite{PLDI::WilsonL1995}",
+}
+
+
+
+@InProceedings{AldrichKC2002,
+  author = 	 "Jonathan Aldrich and Valentin Kostadinov and Craig Chambers",
+  title = 	 "Alias annotations for program understanding",
+  booktitle =	 OOPSLA2002,
+  pages =	 "311--330",
+  year =	 2002,
+  address =	 OOPSLA2002addr,
+  month =	 OOPSLA2002date
+}
+
+
+@InProceedings{AldrichC2004,
+  author = 	 "Jonathan Aldrich and Craig Chambers",
+  title = 	 "Ownership domains: Separating aliasing policy from mechanism",
+  booktitle = ECOOP2004,
+  pages = 	 "1-25",
+  year = 	 2004,
+  address = 	 ECOOP2004addr,
+  month = 	 ECOOP2004date,
+  abstract =
+   "Ownership types promise to provide a practical mechanism for enforcing
+    stronger encapsulation by controlling aliasing in object-oriented
+    languages. However, previous ownership type proposals have tied the
+    aliasing policy of a system to the mechanism of ownership. As a result,
+    these proposals are too weak to express many important aliasing
+    constraints, yet also so restrictive that they prohibit many useful
+    programming idioms.
+    \par
+    In this paper, we propose ownership domains, which decouple encapsulation
+    policy from the mechanism of ownership in two key ways. First, developers
+    can specify multiple ownership domains for each object, permitting a
+    fine-grained control of aliasing compared to systems that provide only one
+    ownership domain for each object. Second, developers can specify the
+    permitted aliasing between each pair of domains in the system, providing
+    more flexibility compared to systems that enforce a fixed policy for
+    inter-domain aliasing. Because it decouples policy from mechanism, our
+    alias control system is both more precise and more flexible than previous
+    ownership type systems.",
+}
+
+
+@InProceedings{BoyapatiLS2003,
+  author = 	 "Chandrasekhar Boyapati and Barbara Liskov and Liuba Shrira",
+  title = 	 "Ownership types for object encapsulation",
+  booktitle =	 POPL2003,
+  pages =	 "213--223",
+  year =	 2003,
+  address =	 POPL2003addr,
+  month =	 POPL2003date
+}
+
+
+
+@PhdThesis{Boyapati2004:PhD,
+  author = 	 "Chandrasekhar Boyapati",
+  title = 	 "{SafeJava}: A Unified Type System for Safe Programming",
+  school = 	 MITEECS,
+  year = 	 2004,
+  address = 	 MITaddr,
+  month = 	 feb,
+}
+
+
+@InProceedings{Wadler90,
+  author = 	 "Philip Wadler",
+  title = 	 "Linear types can change the world!",
+  booktitle =	 "{IFIP {TC} 2} Working Conference on Programming Concepts and Methods",
+  pages =	 "347--359",
+  year =	 1990,
+  OMITeditor = 	 "M. Broy and C. Jones",
+  address =	 "Sea of Galilee, Israel",
+  month =	 apr,
+  abstract =
+   "The linear logic of J.-Y. Girard suggests a new type system for functional
+    languages, one which supports operations that ``change the world''. Values
+    belonging to a linear type must be used exactly once: like the world, they
+    cannot be duplicated or destroyed. Such values require no reference
+    counting or garbage collection, and safely admit destructive array
+    update. Linear types extend Schmidt's notion of single threading; provide
+    an alternative to Hudak and Bloss' update analysis; and offer a practical
+    complement to Lafont and Holmström's elegant linear languages."
+}
+
+
+@InProceedings{FahndrichD2002,
+  author = 	 "Manuel F{\"a}hndrich and Robert DeLine",
+  title = 	 "Adoption and focus: Practical linear types for imperative programming",
+  booktitle =	 PLDI2002,
+  pages =	 "13--24",
+  year =	 2002,
+  address =	 PLDI2002addr,
+  month =	 PLDI2002date
+}
+
+
+
+@Article{HindP2001,
+  author = 	 "Michael Hind and Anthony Pioli",
+  title = 	 "Evaluating the effectiveness of pointer alias analyses",
+  journal = 	 "Science of Computer Programming",
+  year = 	 2001,
+  volume =	 39,
+  number =	 1,
+  pages =	 "31--55",
+  month =	 jan
+}
+
+
+@InProceedings{RinardSB2004,
+  author = 	 "Martin Rinard and Alexandru S{\u{a}}lcianu and Suhabe Bugrara",
+  authorASCII =  "Alexandru Salcianu",
+  title = 	 "A classification system and analysis for aspect-oriented programs",
+  booktitle =	 FSE2004,
+  pages =	 "147--158",
+  year =	 2004,
+  address =	 FSE2004addr,
+  month =	 FSE2004date,
+  abstract =
+   "We present a new classification system for aspect-oriented programs. This
+    system characterizes the interactions between aspects and methods and
+    identifies classes of interactions that enable modular reasoning about the
+    crosscut program. We argue that this system can help developers structure
+    their understanding of aspect-oriented programs and promotes their ability
+    to reason productively about the consequences of crosscutting a program
+    with a given aspect.
+    \par
+    We have designed and implemented a program analysis system that
+    automatically classifies interactions between aspects and methods and have
+    applied this analysis to a set of benchmark programs. We found that our
+    analysis is able to 1) identify interactions with desirable properties
+    (such as lack of interference), 2) identify potentially problematic
+    interactions (such as interference caused by the aspect and the method both
+    writing the same field), and 3) direct the developer's attention to the
+    causes of such interactions.",
+}
+
+
+
+@InProceedings{SalcianuR2001,
+  author = 	 "Alexandru S{\u{a}}lcianu and Martin Rinard",
+  authorASCII =  "Alexandru Salcianu",
+  title = 	 "Pointer and escape analysis for multithreaded programs",
+  booktitle =	 PPOPP2001,
+  pages =	 "12--23",
+  year =	 2001,
+  address =	 PPOPP2001addr,
+  month =	 PPOPP2001date
+}
+
+
+
+@InProceedings{TkachukD03,
+  author = 	 "Oksana Tkachuk and Matthew B. Dwyer",
+  title = 	 "Adapting side effects analysis for modular program model checking",
+  booktitle = FSE2003,
+  pages = 	 "188--197",
+  year = 	 2003,
+  address = 	 FSE2003addr,
+  month = 	 FSE2003date,
+}
+
+
+
+
+@InProceedings{CahoonM2001,
+  author = 	 "Brendon Cahoon and Kathryn S. McKinley",
+  title = 	 "Data flow analysis for software prefetching linked data structures in {Java}",
+  booktitle = PACT2001,
+  pages = 	 "280--291",
+  year = 	 2001,
+  address = 	 PACT2001addr,
+  month = 	 PACT2001date,
+}
+
+
+@InProceedings{ParkG92,
+  author = 	 "Young Gil Park and Benjamin Goldberg",
+  title = 	 "Escape analysis on lists",
+  booktitle =	 PLDI92,
+  pages =	 "116--127",
+  year =	 1992,
+  address =	 PLDI92addr,
+  month =	 PLDI92date
+}
+
+
+
+@InProceedings{ChoiGSSM99,
+  author = 	 "Jong-Deok Choi and Manish Gupta and Mauricio J. Serrano and Vugranam C. Sreedhar and Samuel P. Midkiff",
+  title = 	 "Escape analysis for {Java}",
+  booktitle =	 OOPSLA99,
+  pages =	 "1--19",
+  year =	 1999,
+  address =	 OOPSLA99addr,
+  month =	 OOPSLA99date
+}
+
+
+
+@InProceedings{Minsky96,
+  author = 	 "Naftaly H. Minsky",
+  title = 	 "Towards alias-free pointers",
+  booktitle =	 ECOOP96,
+  pages =	 "189--209",
+  year =	 1996,
+  address =	 ECOOP96addr,
+  month =	 ECOOP96date
+}
+
+
+@InProceedings{aiken:pldi03,
+  author =    {Alex Aiken and Jeffrey S. Foster and John Kodumal and
+               Tachio Terauchi},
+  title =     "Checking and inferring local non-aliasing",
+  pages =     {129--140},
+  booktitle = PLDI2003,
+  year =      2003,
+  address =   PLDI2003addr,
+  month =     PLDI2003date
+}
+
+
+@InProceedings{AvotsDLL2005,
+  author = 	 "Dzintars Avots and Michael Dalton and V. Benjamin
+                  Livshits and Monica Lam",
+  title = 	 "Improving software security with a {C} pointer analysis",
+  booktitle =	 ICSE2005,
+  pages = 	 "332--341",
+  year =	 2005,
+  address =	 ICSE2005addr,
+  month =	 ICSE2005date
+}
+
+
+@InProceedings{KuncakLR2002,
+  author = 	 "Viktor Kuncak and Patrick Lam and Martin Rinard",
+  title = 	 "Role analysis",
+  booktitle =	 POPL2002,
+  pages =	 "17--32",
+  year =	 2002,
+  address =	 POPL2002addr,
+  month =	 POPL2002date
+}
+
+@InProceedings{Das:01:EISPAO,
+  author =	 {Manuvir Das and Ben Liblit and Manuel F\"ahndrich
+                  and Jakob Rehof},
+  title =	 {Estimating the Impact of Scalable Pointer Analysis
+                  on Optimization},
+  booktitle =	 SAS2001,
+  pages = 	 "260--278",
+  year =         2001,
+  address =      SAS2001addr,
+  month =        SAS2001date
+}
+
+@InProceedings{AvotsSLL2005,
+  author = 	 {Dzintars Avots and Michael Dalton and V. Benjamin Livshits and Monica S. Lam},
+  title = 	 {Improving Software Security with a {C} Pointer Analysis},
+  booktitle = 	 ICSE2005,
+  year =	 2005,
+  address =	 ICSE2005addr,
+  month =	 ICSE2005date
+}
+
+@InProceedings{WhaleyL2004,
+  author = 	 {John Whaley and Monica S. Lam},
+  title = 	 {Cloning-Based Context-Sensitive Pointer Alias Analysis Using Binary Decision Diagrams},
+  booktitle = 	 PLDI2004,
+  pages =        "131--144",
+  year =	 2005,
+  address =	 PLDI2004addr,
+  month =	 PLDI2004date
+}
+
+@InProceedings{HastiH98,
+  author = 	 {Rebecca Hasti and Susan Horwitz},
+  title = 	 {Using static single assignment form to improve flow-insensitive pointer analysis},
+  booktitle = 	 PLDI98,
+  year =	 1998,
+  address =	 PLDI98addr,
+  month =	 PLDI98date
+}
+
+@InProceedings{MockDCE2001,
+  author = 	 {Markus Mock and Manuvir Das and Craig Chambers and Susan Eggers},
+  title = 	 {Dynamic Points-To Sets: A Comparison with Static Analyses and Potential Applications in Program Understanding and Optimization},
+  booktitle = 	 PASTE2001,
+  pages =	 {66-72},
+  year =	 2001,
+  address =	 PASTE2001addr,
+  month =	 PASTE2001date,
+  abstract =
+   "In this paper, we compare the behavior of pointers in C programs, as
+   approximated by static pointer analysis algorithms, with the actual
+   behavior of pointers when these programs are run. In order to perform
+   this comparison, we have implemented several well known pointer
+   analysis algorithms, and we have built an instrumentation infrastructure
+   for tracking pointer values during program execution. Our
+   experiments show that for a number of programs from the Spec95 and
+   Spec2000 benchmark suites, the pointer information produced by
+   existing scalable static pointer analyses is far worse than the actual
+   behavior observed at run-time. These results have two
+   implications. First, a tool like ours can be used to supplement static
+   program understanding tools in situations where the static pointer
+   information is too coarse to be usable. Second, a feedback-directed
+   compiler can use profile data on pointer values to improve program
+   performance by ignoring aliases that do not arise at run time (and
+   inserting appropriate run-time checks to ensure safety). As an
+   example, we were able to obtain a factor of 6 speedup on a frequently
+   executed routine from m88ksim."
+}
+
+
+@InProceedings{FinkYDR2006,
+  author = 	 "Stephen Fink and Eran Yahav and Nurit Dor and G. Ramalingam and Emmanuel Geay",
+  title = 	 "Effective typestate verification in the presence of aliasing",
+  booktitle = ISSTA2006,
+  pages = 	 "133--144",
+  year = 	 2006,
+  address = 	 ISSTA2006addr,
+  month = 	 ISSTA2006date,
+}
+
+
+
+@InProceedings{RountevR2001,
+  author = 	 "Atanas Rountev and Barbara G. Ryder",
+  title = 	 "Points-to and side-effect analyses for programs built with precompiled libraries",
+  booktitle = CC2001,
+  pages = 	 "20--36",
+  year = 	 2001,
+  address = 	 CC2001addr,
+  month = 	 CC2001date,
+}
+
+
+@techreport{ RountevR2000,
+  author = "Atanas Rountev and Barbara Ryder",
+  title = "Practical points-to analysis for programs built with libraries",
+  number = "DCSTR-410",
+  institution = "Rutgers University",
+  month = feb,
+  year = 2000,
+ }
+
+
+@InProceedings{DiwanMM96,
+  author = 	 "Amer Diwan and J. Eliot B. Moss and Kathryn S. McKinley",
+  title = 	 "Simple and effective analysis of statically-typed object-oriented programs",
+  booktitle = OOPSLA96,
+  pages = 	 "292--305",
+  year = 	 1996,
+  address = 	 OOPSLA96addr,
+  month = 	 OOPSLA96date,
+}
+
+@InProceedings{Hind2001,
+  author = 	 "Michael Hind",
+  title = 	 "Pointer analysis: Haven't we solved this problem yet?",
+  booktitle = PASTE2001,
+  pages = 	 "54--61",
+  year = 	 2001,
+  address = 	 PASTE2001addr,
+  month = 	 PASTE2001date,
+}
+
+
+
+@InProceedings{MilanovaRR2002,
+  author = 	 "Ana Milanova and Atanas Rountev and Barbara G. Ryder",
+  title = 	 "Parameterized object sensitivity for points-to and side-effect analyses for {Java}",
+  booktitle =    ISSTA2002,
+  pages = 	 "1--11",
+  year = 	 2002,
+  address = 	 ISSTA2002addr,
+  month = 	 ISSTA2002date,
+}
+
+
+@InProceedings{RountevMR2001,
+  author = 	 "Atanas Rountev and Ana Milanova and Barbara G. Ryder",
+  title = 	 "Points-to analysis for {Java} based on annotated constraints",
+  booktitle = OOPSLA2001,
+  pages = 	 "43--55",
+  year = 	 2001,
+  address = 	 OOPSLA2001addr,
+  month = 	 OOPSLA2001date,
+}
+
+
+@InProceedings{DallmeierLWZ2006,
+  author = 	 "Valentin Dallmeier and Christian Lindig and Andrzej Wasylkowski and Andreas Zeller",
+  title = 	 "Mining object behavior with {ADABU}",
+  booktitle = WODA2006,
+  pages = 	 "17--24",
+  year = 	 2006,
+  address = 	 WODA2006addr,
+  month = 	 WODA2006date,
+}
+
+
+
+
+@InProceedings{NguyenX2005,
+  author = 	 "Phung Hua Nguyen and Jingling Xue",
+  title = 	 "Interprocedural side-effect analysis and optimisation in the presence of dynamic class loading",
+  booktitle = ACSC2005,
+  pages = 	 "9--18",
+  year = 	 2005,
+  address = 	 ACSC2005addr,
+  month = 	 ACSC2005date,
+}
+
+
+
+@article{Clausen97,
+  author    = "Lars R. Clausen",
+  title     = "A {Java} bytecode optimizer using side-effect analysis",
+  journal   = CPE,
+  volume    = 9,
+  number    = 11,
+  year      = 1997,
+  pages     = {1031-1045},
+  bibsource = {DBLP, http://dblp.uni-trier.de},
+  abstract =
+   "This paper describes Cream, an optimizer for Java bytecode using
+    side-effect analysis to improve the optimizations. Dead-code elimination
+    and loop-invariant removal are implemented and tested, as well as several
+    variations of the side-effect analysis. The optimizer is tested on
+    real-world applications such as itself and JavaSoft's Java
+    compiler. Results show that the optimizations benefit well from the
+    side-effect analysis. The best side-effect analysis gives five to ten times
+    as many optimizations as without an analysis, and, in one case, makes a
+    speed increase of 25\% possible.",
+}
+
+
+@InProceedings{ChowdhuryDCBM2004,
+  author = 	 "Rezaul Alam Chowdhury and Peter Djeu and Brendon Cahoon and James H. Burrill and Kathryn S. McKinley",
+  title = 	 "The limits of alias analysis for scalar optimizations",
+  booktitle = CC2004,
+  pages = 	 "24--38",
+  year = 	 2004,
+  address = 	 CC2004addr,
+  month = 	 CC2004date,
+  abstract =
+   "In theory, increasing alias analysis precision should improve compiler
+    optimizations on C programs. This paper compares alias analysis algorithms
+    on scalar optimizations, including an analysis that assumes no aliases, to
+    establish a very loose upper bound on optimization opportunities. We then
+    measure optimization opportunities on thirty-six C programs. In practice,
+    the optimizations are rarely inhibited due to the precision of the alias
+    analyses. Previous work finds similarly that the increased precision of
+    specific alias algorithms provide little benefit for scalar optimizations,
+    and that simple static alias algorithms find almost all dynamically
+    determined aliases. This paper, however, is the first to provide a static
+    methodology that indicates that additional precision is unlikely to yield
+    improvements for a set of optimizations. For clients with higher alias
+    accuracy demands, this methodology can help pinpoint the need for
+    additional accuracy.",
+}
+
+
+
+@InProceedings{MaF2007,
+  author = 	 "Kin-Keung Ma and Jeffrey S. Foster",
+  title = 	 "Inferring aliasing and encapsulation properties for {Java}",
+  booktitle = OOPSLA2007,
+  NEEDpages = 	 "*",
+  year = 	 2007,
+  address = 	 OOPSLA2007addr,
+  month = 	 OOPSLA2007date,
+}
+
+@InProceedings{QianXM2007,
+  author = 	 {Ju Qian and Baowen Xu and Hongbo Min},
+  title = 	 {Interstatement Must Aliases for Data Dependence Analysis of Heap Locations},
+  booktitle = 	 PASTE2007,
+  pages =	 "17--23",
+  year =	 2007,
+  address =	 PASTE2007addr,
+  month =	 PASTE2007date
+}
+
+
+
+
+
+% LocalWords:  mwolfe pgroup com Emami INCOLLECTION Muchnick isp booktitle jan
+% LocalWords:  INPROCEEDINGS Landi Wegman Zadeck pldi jun Larus Hilfinger Ghiya
+% LocalWords:  Maryam Rakesh Hendren Nicolau ics tpds inproceedings Horwitz nov
+% LocalWords:  Pfeiffer Loeliger Metzger Seligman Stroud supercomputing Guarna
+% LocalWords:  icpp aug InProceedings Zhang addr CooperK RyderLSZA Altucher Ruf
+% LocalWords:  TOPLAS MODC FSAlias FIAlias Pioli Choi Jong Deok Carini popl sep
+% LocalWords:  Hummel loplas ispp apr LandiR co Weihl Rudmik ChaseWZ NY SSG SSA
+% LocalWords:  SSGs inlining mycons HendrenN InCollection JonesM OMITeditor aka
+% LocalWords:  Muchnick's tm AdvancedCompiler isbn Kaufmann DataFlow LarusH PDG
+% LocalWords:  PPEALS Curare BradleeH Bradlee Dov Harel TechReport ACAPS Hogg
+% LocalWords:  HendrenEGV Verbrugge oopsla olit Almeida Paulo NobleVP Vitek Yi
+% LocalWords:  NoblePHV auther SkoglundW HAR url ChirimarJa Jawahar Chirimar CC
+% LocalWords:  Gunter Riecke abstracturl GeniusTZ Daniela Trapp Zimmermann LNCS
+% LocalWords:  precomputed AldrichKC Aldrich Kostadinov AliasJava Abiantouna
+% LocalWords:  AldrichC BoyapatiLS Boyapati Liuba Shrira PhdThesis SafeJava feb
+% LocalWords:  MITEECS MITaddr Wadler IFIP Broy Girard Hudak Bloss Lafont HindP
+% LocalWords:  Holmstr FahndrichD hndrich DeLine RinardSB lcianu Suhabe PPOPP
+% LocalWords:  authorASCII crosscut crosscutting SalcianuR multithreaded Oksana
+% LocalWords:  TkachukD Tkachuk Dwyer CahoonM Brendon Cahoon prefetching JOlden
+% LocalWords:  DaCapo ParkG ChoiGSSM Manish Vugranam Sreedhar Midkiff Naftaly
+% LocalWords:  aiken Kodumal Tachio Terauchi AvotsDLL Dzintars Avots Livshits
+% LocalWords:  Whaley bddbddb KuncakLR Das Liblit ahndrich Jakob Rehof SAS ksim
+% LocalWords:  AvotsSLL WhaleyL HastiH Hasti MockDCE Markus Eggers nonvariable
+% LocalWords:  FinkYDR Eran Yahav Nurit Dor Ramalingam typestate RountevR DCSTR
+% LocalWords:  Atanas Rountev precompiled rountev pointsto techreport DiwanMM
+% LocalWords:  Amer MilanovaRR Milanova RountevMR DallmeierLWZ Dallmeier Lindig
+% LocalWords:  Andrzej Wasylkowski ADABU WODA NguyenX Phung Hua Xue ACSC CPE
+% LocalWords:  optimisation bibsource DBLP JavaSoft LeLH Clausen's CHA Rezaul
+% LocalWords:  ChowdhuryDCBM Alam Chowdhury Djeu Burrill MaF Keung NEEDpages
+% LocalWords:  params

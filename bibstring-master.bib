@@ -1,0 +1,2583 @@
+%% BibTeX abbreviations -- master file
+%% Type "make" in the bib directory to process this with the bib-abbreviate
+%%   script, which creates bibstring-{un}abbrev.bib.
+%% Each string{...} entry may contain an extra ``= "..."'' element which is
+%%   used as the abbreviation.
+
+%%% See file mernst/abbreviations for the abbreviations available in the
+%%% standard BibTeX styles (abbrev, alpha, plain, unsrt).
+
+%%% Don't put cross references here; they should go after all references.
+%%% A problem with cross references is that they don't just provide
+%%% defaults:  the cross-referenced item shows up itself if it is
+%%% referenced more than once.
+
+
+%%% ========================================================================
+%%% Built-in abbreviations
+
+% The following abbreviations are available in the standard BibTeX
+% styles (abbrev, alpha, plain, unsrt).
+% acmcs:  ACM Computing Surveys; 
+%         ACM Comput. Surv.
+% acta:   Acta Informatica;
+%         Acta Inf.
+% cacm:   Communications of the ACM;
+%         Commun. ACM
+% ibmjrd: IBM Journal of Research and Development;
+%         IBM J. Res. Dev.
+% ibmsj:  IBM Systems Journal; 
+%         IBM Syst.~J.
+% ieeese: IEEE Transactions on Software Engineering; 
+%         IEEE Trans. Softw. Eng.
+% ieeetc: IEEE Transactions on Computers; 
+%         IEEE Trans. Comput.
+% ieeetcad: IEEE Transactions on Computer-Aided Design of Integrated Circuits; 
+%          IEEE Trans. Comput.-Aided Design Integrated Circuits
+% ipl:    Information Processing Letters;
+%         Inf. Process. Lett.
+% jacm:   Journal of the ACM;
+%         J.~ACM
+% jcss:   Journal of Computer and System Sciences;
+%         J.~Comput. Syst. Sci. 
+% scp:    Science of Computer Programming;
+%         Sci. Comput. Programming
+% sicomp: SIAM Journal on Computing;
+%         SIAM J. Comput.
+% tcs:    Theoretical Computer Science;
+%         Theor. Comput. Sci.
+% tocs:   ACM Transactions on Computer Systems;
+%         ACM Trans. Comput. Syst. 
+% tods:   ACM Transactions on Database Systems;
+%         ACM Trans. Database Syst.
+% tog:    ACM Transactions on Graphics;
+%         ACM Trans. Gr.
+% toms:   ACM Transactions on Mathematical Software;
+%         ACM Trans. Math. Softw.
+% toois:  ACM Transactions on Office Information Systems;
+%         ACM Trans. Office Inf. Syst.
+% toplas: ACM Transactions on Programming Languages and Systems;
+%         ACM Trans. Prog. Lang. Syst.
+
+
+%%% ========================================================================
+%%% Months
+
+% These are built into plain.bst.  I can override them here only if they
+% precede all uses of the macros later in this file.
+@string{jan = "January" = "Jan."}
+@string{feb = "February" = "Feb."}
+@string{mar = "March" = "Mar."}
+@string{apr = "April" = "Apr."}
+@string{may = "May" = "May"}
+@string{jun = "June" = "June"}
+@string{jul = "July" = "July"}
+@string{aug = "August" = "Aug."}
+@string{sep = "September" = "Sep."}
+@string{oct = "October" = "Oct."}
+@string{nov = "November" = "Nov."}
+@string{dec = "December" = "Dec."}
+
+
+%%% ========================================================================
+%%% Accented place names
+
+% These definitions must also precede uses later in the file.
+
+% The accents belong in French, but do not belong in English
+@string{Montreal = "Montreal, Canada"}
+% string{Montreal = "Montreal, QC, Canada"}
+% string{Montreal = "Montreal, Quebec, Canada"}
+% string{Montreal = "Montr{\'e}al, Canada"}
+% string{Montreal = "Montr{\'e}al, Qu{\'e}bec, Canada"}
+
+
+%%% ========================================================================
+%%% Proceedings of conferences and workshops
+
+@string{AAAI98 = "Proceedings of the Fifteenth National
+		  Conference on Artificial Intelligence" = "AAAI"}
+@string{AAAI2000 = "Proceedings of the Seventeenth National Conference on
+		  Artificial Intelligence and Twelfth Conference on
+		  Innovative Applications of Artificial Intelligence"
+		 = "AAAI/IAAI"}
+@string{AAAI2000date = jul # "~30--" # aug # "~3," = jul # "/" # aug}
+@string{AAAI2000addr = "Austin, TX"}
+
+@string{AADEBUG2003 = "AADEBUG'2003, Fifth International Workshop on
+                  Automated and Algorithmic Debugging" = "AADEBUG"}
+@string{AADEBUG2003date = sep # "~8--10," = sep}
+@string{AADEBUG2003addr = "Ghent, Belgium" = ""}
+
+@string{ACSAC2002 = "Proceedings of the 2002 Annual Computer Security Applications Conference" = "ACSAC"}
+@string{ACSAC2002addr = "Las Vegas, NV, USA" = ""}
+@string{ACSAC2002date = dec # "~11--13," = dec}
+@string{ACSAC2006 = "Proceedings of the 2006 Annual Computer Security Applications Conference" = "ACSAC"}
+@string{ACSAC2006addr = "Miami Beach, FL, USA" = ""}
+@string{ACSAC2006date = dec # "~12--14," = dec}
+@string{ACSAC2007 = "23rd Annual Computer Security Applications Conference" = "ACSAC"}
+@string{ACSAC2007addr = "Miami Beach, FL, USA" = ""}
+@string{ACSAC2007date = dec # "~12--14," = dec}
+@string{ACSAC2008 = "24th Annual Computer Security Applications Conference" = "ACSAC"}
+@string{ACSAC2008addr = "Anaheim, CA, USA" = ""}
+@string{ACSAC2008date = dec # "~10--12," = dec}
+@string{ACSAC2009 = "25th Annual Computer Security Applications Conference" = "ACSAC"}
+@string{ACSAC2009addr = "Honolulu, HI, USA" = ""}
+@string{ACSAC2009date = dec # "~9--11," = dec}
+
+@string{ACSC2005 = "ACSC '05: Proceedings of the Twenty-eighth Australasian Conference on Computer Science" = "ACSC"}
+@string{ACSC2005addr = "Newcastle, NSW, Australia" = ""}
+@string{ACSC2005date = feb # "~1--3," = feb}
+@string{ACSC2009 = "ACSC '09: Australasian Computer Science Conference" = "ACSC"}
+
+@string{AdaEurope99 = "Ada-Europe'99 International Conference on Reliable
+                  Software Technologies" = "Ada-Europe"}
+@string{AdaEurope99addr = "Santander, Spain" = ""}
+@string{AdaEurope99date = jun # "~8--10," = jun}
+@string{AdaEurope2004 = "Ada-Europe 2004 International Conference on Reliable
+                  Software Technologies" = "Ada-Europe"}
+@string{AdaEurope2004addr = "Palma de Mallorca" = ""}
+@string{AdaEurope2004date = jun # "~15--17," = jun}
+
+@string{AIFIPP92 = "Knowledge Oriented Software Design: Extended Papers from
+		  the IFIP TC 12 Workshop on Artificial Intelligence from
+		  the Information Processing Perspective, AIFIPP '92,
+		  Madrid, Spain, 14-15 September, 1992" = "AIFIPP '92"}
+
+@string{AIPL77 = "Proceedings of the ACM Symposium on Artificial
+                 Intelligence and Programming Languages"
+                 = "ACM Symposium on Artificial
+                 Intelligence and Programming Languages"}
+@string{AIPL77addr = "Rochester, NY" = ""}
+
+@string{AOSD2002 = "Proceedings of the First International Conference on
+                  Aspect-Oriented Software Development" = "AOSD"}
+@string{AOSD2002addr = "Enschede, The Netherlands" = ""}
+@string{AOSD2002date = apr # "~24-26," = apr}
+@string{AOSD2007 = "Proceedings of the Sixth International Conference on
+                  Aspect-Oriented Software Development" = "AOSD"}
+@string{AOSD2007addr = "Vancouver, BC, Canada" = ""}
+@string{AOSD2007date = mar # "~14-16," = mar}
+
+@string{APLAS2005 = "Third Asian Symposium on Programming Languages and Systems" = "APLAS"}
+@string{APLAS2005addr = "Tsukuba, Japan" = ""}
+@string{APLAS2005date = nov = ""}
+
+% APPSEM is a "thematic network", a program sponsored by the EU to
+% promote connections between PL researchers in Europe. Its workshops
+% draw participants in the project but are also open to the public.
+% Their notion of "applied" is still pretty theoretical by US standards.
+@string{APPSEMII2003 = "First Applied Semantics II (APPSEM-II) Workshop" = "APPSEM-II"}
+@string{APPSEMII2003addr = "Nottingham, UK" = ""}
+@string{APPSEMII2003date = may # "~26--28," = may}
+
+% The word "Journal" isn't in the title of the journal.
+@string{ASEjournal = "Automated Software Engineering Journal" = "ASE"}
+@string{JASE = "Automated Software Engineering" = "ASE"}
+
+@string{ASE98 = "Proceedings of the 13th Annual International Conference on
+		 Automated Software Engineering (ASE'98)" = "ASE"}
+@string{ASE98addr = "Honolulu, Hawaii" = ""}
+@string{ASE98date = oct # "~14--16," = oct}
+@string{ASE2000 = "ASE 2000: Proceedings of the 15th Annual International
+                  Conference on Automated Software Engineering" = "ASE"}
+@string{ASE2000addr = "Grenoble, France" = ""}
+@string{ASE2000date = sep # "~12--15," = sep}
+@string{ASE2001 = "ASE 2001: Proceedings of the 16th Annual International
+                  Conference on Automated Software Engineering" = "ASE"}
+@string{ASE2001addr = "San Diego, CA, USA" = ""}
+@string{ASE2001date = nov # "~27--29," = nov}
+@string{ASE2003 = "ASE 2003: Proceedings of the 18th Annual International
+                  Conference on Automated Software Engineering" = "ASE"}
+@string{ASE2003addr = Montreal = ""}
+@string{ASE2003date = oct # "~8--10," = oct}
+@string{ASE2004 = "ASE 2004: Proceedings of the 19th Annual International
+                  Conference on Automated Software Engineering" = "ASE"}
+@string{ASE2004addr = "Linz, Australia" = ""}
+@string{ASE2004date = sep # "~22--24," = sep}
+@string{ASE2005 = "ASE 2005: Proceedings of the 20th Annual International
+                  Conference on Automated Software Engineering" = "ASE"}
+@string{ASE2005addr = "Long Beach, CA, USA" = ""}
+@string{ASE2005date = nov # "~9--11," = nov}
+@string{ASE2005base = "ASE 2005: 20th Annual International
+                  Conference on Automated Software Engineering" = "ASE"}
+@string{ASE2005tutdate = nov # "~7," = nov}
+@string{ASE2006 = "ASE 2006: Proceedings of the 21st Annual International
+                  Conference on Automated Software Engineering" = "ASE"}
+@string{ASE2006addr = "Tokyo, Japan" = ""}
+@string{ASE2006date = sep # "~20--22," = sep}
+@string{ASE2007 = "ASE 2007: Proceedings of the 22nd Annual International
+                  Conference on Automated Software Engineering" = "ASE"}
+@string{ASE2007addr = "Atlanta, GA, USA" = ""}
+@string{ASE2007date = nov # "~7--9," = nov}
+@string{ASE2008 = "ASE 2008: Proceedings of the 23rd Annual International
+                  Conference on Automated Software Engineering" = "ASE"}
+@string{ASE2008addr = "L'Aquila, Italy" = ""}
+@string{ASE2008date = sep # "~17--19," = sep}
+@string{ASE2009 = "ASE 2009: Proceedings of the 24th Annual International
+                  Conference on Automated Software Engineering" = "ASE"}
+@string{ASE2009addr = "Auckland, NZ" = ""}
+@string{ASE2009date = nov # "~18--20," = nov}
+@string{ASE2010 = "ASE 2010: Proceedings of the 25th Annual International
+                  Conference on Automated Software Engineering" = "ASE"}
+@string{ASE2010addr = "Antwerp, Belgium" = ""}
+@string{ASE2010date = sep # "~22--24," = sep}
+@string{ASE2011 = "ASE 2011: Proceedings of the 26th Annual International
+                  Conference on Automated Software Engineering" = "ASE"}
+@string{ASE2011addr = "Lawrence, KS, USA" = ""}
+# Website says "Nov 6-10"; probably actually Nov 8-10
+@string{ASE2011date = nov}
+@string{ASE2012 = "ASE 2012: Proceedings of the 27th Annual International
+                  Conference on Automated Software Engineering" = "ASE"}
+@string{ASE2012addr = "Essen, Germany" = ""}
+@string{ASE2012date = sep # "~5--7," = sep}
+
+@string{ASEE2004 = "ASEE Annual Conference"}
+@string{ASEE2004addr = "Salt Lake City, Utah" = ""}
+@string{ASEE2004date = jun # "~20--23," = jun}
+
+@string{ASID2006 = "ASID '06: Proceedings of the 1st Workshop on Architectural and System Support for Improving Software Dependability" = "ASID"}
+@string{ASID2006addr = "San Jose, CA, USA" = ""}
+@string{ASID2006date = oct # "~21," = oct}
+
+@string{ASPLOS89 = "Proceedings of the Third International Conference
+		 on Architectural Support for Programming Languages
+		 and Operating Systems" = "ASPLOS"}
+@string{ASPLOS91 = "Proceedings of the Fourth International Conference
+		 on Architectural Support for Programming Languages
+		 and Operating Systems" = "ASPLOS"}
+@string{ASPLOS92 = "Proceedings of the Fifth International Conference
+		 on Architectural Support for Programming Languages
+		 and Operating Systems" = "ASPLOS"}
+@string{ASPLOS94 = "Proceedings of the Sixth International Conference
+		 on Architectural Support for Programming Languages
+		 and Operating Systems" = "ASPLOS"}
+@string{ASPLOS96 = "Proceedings of the Seventh International Conference
+		 on Architectural Support for Programming Languages
+		 and Operating Systems" = "ASPLOS"}
+@string{ASPLOS98 = "Proceedings of the Eighth International Conference on
+		 Architectural Support for Programming Languages and 
+                 Operating Systems" = "ASPLOS"}
+@string{ASPLOS98addr = "San Jose, CA" = ""}
+@string{ASPLOS98date = oct # "~4--7," = oct}
+@string{ASPLOS2004 = "Proceedings of the 11th International Conference on
+		      Architectural Support for Programming Languages and 
+                      Operating Systems" = "ASPLOS"}
+@string{ASPLOS2004addr = "Boston, Massachusetts, USA" = ""}
+@string{ASPLOS2004date = oct # "~7--13," = oct}
+@string{ASPLOS2008 = "Proceedings of the 13th International Conference on
+		      Architectural Support for Programming Languages and 
+                      Operating Systems" = "ASPLOS"}
+@string{ASPLOS2008addr = "Seattle, WA, USA" = ""}
+@string{ASPLOS2008date = mar # "~1--5," = mar}
+
+@string{AST2006 = "1st Workshop on Automation of Software Test (AST 2006)" = "AST Workshop"}
+@string{AST2006addr = "Shanghai, China" = ""}
+@string{AST2006date = may}
+
+@string{ASWEC2001 = "ASWEC'01: 13th Australian Software Engineering
+                  Conference" = "ASWEC"}
+@string{ASWEC2001addr = "Canberra, Australia" = ""}
+@string{ASWEC2001date = aug # "~27--28," = aug}
+
+@string{AVIS2003 = "Workshop on Automated Verification of Infinite-State Systems" = "AVIS"}
+@string{AVIS2003addr = "Warsaw, Poland" = ""}
+@string{AVIS2003date = apr # "~12," = apr}
+
+@string{BlackHatUSA2012 = "Black Hat USA"}
+@string{BlackHatUSA2012addr = "Las Vegas, NV, USA" = ""}
+@string{BlackHatUSA2012date = jul # "~25-26," = jul}
+
+@string{Bytecode2009 = "4th International Workshop on Bytecode Semantics, Verification, Analysis and Transformation" = "ByteCode 2009"}
+@string{ByteCode2009addr = "York, UK" = ""}
+@string{ByteCode2009date = mar # "~29," = mar}
+
+@string{CADE92 = "Proceedings of the 11th International Conference on
+                 Automated Deduction ({CADE}-11)" = "CADE"}
+@string{CADE92addr = "Saratoga Springs, NY, USA" = ""}
+@string{CADE92date = jun # "~14--18," = jun}
+@string{CADE2000 = "Proceedings of the 17th International Conference on
+                 Automated Deduction ({CADE}-17)" = "CADE"}
+@string{CADE2000addr = "Pittsburgh, PA, USA" = ""}
+@string{CADE2000date = jun # "~17--20," = jun}
+@string{CADE2011 = "Proceedings of the 23rd International Conference on
+                 Automated Deduction ({CADE}-23)" = "CADE"}
+@string{CADE2011addr = "Warsaw, Poland" = ""}
+@string{CADE2011date = aug # "~2--4," = aug}
+
+@string{CARDIS2004 = "Sixth Smart Card Research and Advanced Application IFIP Conference" = "CARDIS"}
+
+@string{CASCON1999 = "CASCON"}
+@string{CASCON1999addr = "Mississauga, Ontario, Canada" = ""}
+@string{CASCON1999date = nov # "~8--11," = nov}
+@string{CASCON2000 = "CASCON"}
+@string{CASCON2000addr = "Mississauga, Ontario, Canada" = ""}
+@string{CASCON2000date = nov # "~13--16," = nov}
+
+@string{CASSIS2004 = "Construction and Analysis of Safe, Secure, and Interoperable Smart Devices" = "CASSIS"}
+@string{CASSIS2004addr = "Marseille, France" = ""}
+@string{CASSIS2004date = mar # "~10--13," = mar}
+@string{CASSIS2005 = "Construction and Analysis of Safe, Secure, and Interoperable Smart Devices" = "CASSIS"}
+@string{CASSIS2005addr = "Nice, France" = ""}
+@string{CASSIS2005date = mar # "~8--11," = mar}
+
+@string{CAV95 = "Proceedings of the 7th International Conference On
+                  Computer Aided Verification" = "CAV"}
+@string{CAV95addr = "Liege, Belgium" = ""}
+@string{CAV95date = ""}
+@string{CAV96 = "Proceedings of the Eighth International Conference on
+                 Computer Aided Verification ({CAV})" = "CAV"}
+@string{CAV96addr = "New Brunswick, NJ, USA" = ""}
+@string{CAV96date = jul # "~31--" # aug # "~3," = ""}
+@string{CAV2001 = "13th International Conference on Computer Aided
+                  Verification" = "CAV"}
+@string{CAV2001addr = "Paris, France" = ""}
+@string{CAV2001date = jul}
+@string{CAV2006 = "18th International Conference on Computer Aided
+                  Verification" = "CAV"}
+@string{CAV2006addr = "Seattle, WA, USA" = ""}
+@string{CAV2006date = aug # "~17--20," = aug}
+@string{CAV2011 = "13rd International Conference on Computer Aided
+                  Verification" = "CAV"}
+@string{CAV2011addr = "Snowbird, UT, USA" = ""}
+@string{CAV2011date = jul # "~16--20," = jul}
+
+@string{CBSE2001 = "4th ICSE Workshop on Component-Based Software Engineering"
+		= "CBSE4"}
+@string{CBSE2001addr = "Toronto, Canada" = ""}
+@string{CBSE2001date = may # "~14--15," = may}
+
+% Compiler Construction (not to be confused with PLDI, which used to also
+% be called Compiler Construction)
+@string{CC94 = "Compiler Construction: 4th International Conference, CC'94"
+	     = "Compiler Construction '94"}
+@string{CC94addr = ""}
+@string{CC94date = apr = apr}
+@string{CC96 = "Compiler Construction: 6th International Conference, CC'96"
+	     = "Compiler Construction '96"}
+@string{CC96addr = "Linkoping, Sweden" = ""}
+@string{CC96date = apr # "~24--26," = apr}
+@string{CC98 = "Compiler Construction: 7th International Conference, CC'98"
+	     = "Compiler Construction '98"}
+@string{CC98addr = "Lisbon, Portugal" = ""}
+@string{CC2001 = "Compiler Construction: 10th International Conference, CC 2001"
+	     = "CC"}
+@string{CC2001addr = "Genova, Italy" = ""}
+@string{CC2001date = apr}
+@string{CC2002 = "Compiler Construction: 11th International Conference, CC 2002" = "CC"}
+@string{CC2002addr = "Grenoble, France" = ""}
+@string{CC2002date = apr # "~8--12," = apr}
+@string{CC2003 = "Compiler Construction: 12th International Conference, CC 2003" = "CC"}
+@string{CC2003addr = "Warsaw, Poland" = ""}
+@string{CC2003date = apr # "~7--11," = apr}
+@string{CC2004 = "Compiler Construction: 13th International Conference, CC 2004"
+	     = "CC"}
+@string{CC2004addr = "Barcelona, Spain" = ""}
+@string{CC2004date = mar # "/" # apr}
+@string{CC2005 = "Compiler Construction: 14th International Conference, CC 2005"
+	     = "CC"}
+@string{CC2005addr = "Edinburgh, Scotland" = ""}
+@string{CC2005date = apr}
+@string{CC2008 = "Compiler Construction: 14th International Conference, CC 2008"
+	     = "CC"}
+@string{CC2008addr = "Budapest, Hungary" = ""}
+@string{CC2008date = apr # "~3--4," = apr}
+
+@string{CCS2005 = "Proceedings of the 12th ACM Conference on Computer and Communications Security" = "CCS"}
+@string{CCS2005addr = "Alexandria, VA, USA" = ""}
+@string{CCS2005date = nov # "~7--11," = nov}
+@string{CCS2007 = "Proceedings of the 14th ACM Conference on Computer and Communications Security" = "CCS"}
+@string{CCS2007addr = "Alexandria, VA, USA" = ""}
+@string{CCS2007date = oct # "~29--" # nov # "~2," = oct # "/" # nov}
+@string{CCS2011 = "Proceedings of the 18th ACM Conference on Computer and Communications Security" = "CCS"}
+@string{CCS2011addr = "Chicago, IL, USA" = ""}
+@string{CCS2011date = oct # "~18--20," = oct}
+@string{CCS2012 = "Proceedings of the 19th ACM Conference on Computer and Communications Security" = "CCS"}
+@string{CCS2012addr = "Raleigh, NC, USA" = ""}
+@string{CCS2012date = oct # "~16--18," = oct}
+
+@string{CHASE2008 = "Cooperative and Human Aspects of Software Engineering" = "CHASE"}
+@string{CHASE2008addr = "Leipzig, Germany" = ""}
+@string{CHASE2008date = may}
+
+@string{CHI2004 = "Proceedings of the SIGCHI Conference on Human Factors in Computing Systems" = "CHI"}
+@string{CHI2004addr = "Vienna, Austria" = ""}
+@string{CHI2004date = apr # "~27--29," = apr}
+@string{CHI2007 = "Proceedings of the SIGCHI Conference on Human Factors in Computing Systems" = "CHI"}
+@string{CHI2007addr = "San Jose, CA, USA" = ""}
+@string{CHI2007date = apr # "~28--" # may # "~3," = apr}
+@string{CHI2011 = "Proceedings of the SIGCHI Conference on Human Factors in Computing Systems" = "CHI"}
+@string{CHI2011addr = "Vancouver, BC, Canada" = ""}
+@string{CHI2011date = may # "~9--12," = may}
+
+@string{CMSR2004 = "Eighth Euromicro Working Conference on Software Maintenance and Reengineering" = "CMSR"}
+@string{CMSR2004addr = "Tampere, Finland" = ""}
+@string{CMSR2004date = mar # "~24--26," = mar}
+@string{CMSR2005 = "Ninth European Conference on Software Maintenance and
+		Reengineering" = "CMSR"}
+@string{CMSR2005addr = "Manchester, UK" = ""}
+@string{CMSR2005date = mar # "~23--25," = mar}
+
+% The "S" didn't start standing for "and Systems" until 1998
+@string{COOTS97 = "Proceedings of the Third USENIX Conference on Object-Oriented Technologies" = "COOTS"}
+@string{COOTS97date = jun # "~16--20" = jun}
+@string{COOTS97addr = "Portland, OR, USA"}
+
+@string{CODES2001 = "Ninth International Symposium on Hardware/Software
+                  Codesign" = "CODES"}
+@string{CODES2001addr = "Copenhagen, Denmark" = ""}
+@string{CODES2001date = apr # "~25--27," = apr}
+
+@string{CONCUR2000 = "CONCUR 2000: Concurrency Theory" = "CONCUR"}
+@string{CONCUR2000addr = "State College, PA" = ""}
+@string{CONCUR2000date = aug}
+
+@string{CSFW2002 = "15th IEEE Computer Security Foundations Workshop" = "CSFW"}
+@string{CSFW2002date = jun # "~24-26," = jun}
+@string{CSFW2002addr = "Cape Breton, Nova Scotia, Canada" = ""}
+@string{CSFW2004 = "17th IEEE Computer Security Foundations Workshop" = "CSFW"}
+@string{CSFW2004date = jun # "~28-30," = jun}
+@string{CSFW2004addr = "Pacific Grove, California, USA" = ""}
+@string{CSFW2005 = "18th IEEE Computer Security Foundations Workshop" = "CSFW"}
+@string{CSFW2005date = jun # "~20-22," = jun}
+@string{CSFW2005addr = "Aix-en-Provence, France" = ""}
+@string{CSFW2006 = "19th IEEE Computer Security Foundations Workshop" = "CSFW"}
+@string{CSFW2006date = jul # "~5-6," = jul}
+@string{CSFW2006addr = "Venice, Italy" = ""}
+% CSF is the same conference as CSFW. They changed the "Workshop" to
+% "Symposium" and dropped the "W" from their acronym starting with the
+% 20th (2007) edition to better reflect their selectivity and impact.
+@string{CSF2008 = "21st IEEE Computer Security Foundations Symposium" = "CSF"}
+@string{CSF2008date = jun # "~23-25," = jun}
+@string{CSF2008addr = "Pittsburgh, PA, USA" = ""}
+
+@string{CSCW2004 = "Computer Supported Cooperative Work" = "CSCW"}
+@string{CSCW2004addr = "Chicago, IL, USA" = ""}
+@string{CSCW2004date = nov}
+
+@string{DAC99 = "Proceedings of the 36th ACM/IEEE Design
+                  Automation Conference" = "DAC"}
+@string{DAC99addr = "New Orleans, LA, USA" = ""}
+@string{DAC99date = jun # "~21--25," = jun}
+@string{DAC2005 = "Proceedings of the 42nd ACM/IEEE Design
+                  Automation Conference" = "DAC"}
+@string{DAC2005addr = "Anaheim, CA, USA" = ""}
+@string{DAC2005date = jun # "~13--17," = jun}
+
+@string{RDL2004 = "Workshop on Revival of Dynamic Languages" = "RDL"}
+% string{RDL2004addr = OOPSLA2004addr}
+@string{RDL2004date = oct # "~25," = oct}
+@string{DLS2006 = "Dynamic Languages Symposium" = "DLS"}
+@string{DLS2006addr = "Portland, OR, USA" = ""}
+@string{DLS2006date = oct # "~23," = oct}
+@string{DLS2007 = "Dynamic Languages Symposium" = "DLS"}
+% string{DLS2007addr = OOPSLA2007addr}
+@string{DLS2007date = oct # "~22," = oct}
+@string{DLS2008 = "Dynamic Languages Symposium" = "DLS"}
+@string{DLS2008addr = "Pathos, Cyprus"}
+@string{DLS2008date = jul # "~8," = jul}
+
+
+@string{DSN2003 = "DSN'03: International Conference on Dependable Systems
+                  and Networks" = "DSN"}
+@string{DSN2003addr = "San Fancisco, CA, USA" = ""}
+@string{DSN2003date = jun # "~22--25," = jun}
+
+
+@string{ECOOP91 = "ECOOP '91, the 5th European Conference on
+                  Object-Oriented Programming" = "ECOOP"}
+@string{ECOOP91addr = "Geneva, Switzerland" = ""}
+@string{ECOOP91date = jul # "~17--193," = jul}
+@string{ECOOP92 = "ECOOP '92, the 6th European Conference on
+                  Object-Oriented Programming" = "ECOOP"}
+@string{ECOOP92addr = "Utrecht, The Netherlands" = ""}
+@string{ECOOP92date = jun # "~29--" # jul # "~3," = jun # "/" # jul}
+@string{ECOOP93 = "ECOOP '93, the 7th European Conference on
+                  Object-Oriented Programming" = "ECOOP"}
+@string{ECOOP93addr = "Kaiserslautern, Germany" = ""}
+@string{ECOOP93date = jul # "~28--30," = jul}
+@string{ECOOP95 = "ECOOP '95, the 9th European Conference on
+                  Object-Oriented Programming" = "ECOOP"}
+@string{ECOOP95addr = "{\AA}arhus, Denmark" = ""}
+@string{ECOOP95date = aug # "~7--11," = aug}
+@string{ECOOP96 = "ECOOP '96, the 10th European Conference on
+                  Object-Oriented Programming" = "ECOOP"}
+@string{ECOOP96addr = "Linz, Austria" = ""}
+@string{ECOOP96date = jul # "~10--12," = jul}
+@string{ECOOP97 = "ECOOP '97, the 11th European Conference on
+                  Object-Oriented Programming" = "ECOOP"}
+@string{ECOOP97addr = "Jyv{\"{a}}skyl{\"{a}}, Finland" = ""}
+@string{ECOOP97date = jun # "~9--13," = jul}
+@string{ECOOP98 = "ECOOP '98, the 12th European Conference on
+                  Object-Oriented Programming" = "ECOOP"}
+@string{ECOOP98addr = "Brussels, Belgium" = ""}
+@string{ECOOP98date = jul # "~20-24," = jul}
+@string{ECOOP99 = "ECOOP'99 --- Object-Oriented Programming, 13th European
+		Conference" = "ECOOP"}
+@string{ECOOP99addr = "Lisbon, Portugal" = ""}
+@string{ECOOP99date = jun # " 16--18" = jun}
+@string{ECOOP2001 = "ECOOP 2001 --- Object-Oriented Programming, 15th European
+		Conference" = "ECOOP"}
+@string{ECOOP2001addr = "Budapest, Hungary" = ""}
+@string{ECOOP2001date = jun # "~18--22," = jun}
+@string{ECOOP2002 = "ECOOP 2002 --- Object-Oriented Programming, 16th European
+		Conference" = "ECOOP"}
+@string{ECOOP2002addr = "M{\'a}laga, Spain" = ""}
+@string{ECOOP2002date = jun # "~12--14," = jun}
+@string{ECOOP2003 = "ECOOP 2003 --- Object-Oriented Programming, 17th European
+		Conference" = "ECOOP"}
+@string{ECOOP2003addr = "Darmstadt, Germany" = ""}
+@string{ECOOP2003date = jul # "~23--25," = jul}
+@string{ECOOP2004 = "ECOOP 2004 --- Object-Oriented Programming, 18th European
+		Conference" = "ECOOP"}
+@string{ECOOP2004addr = "Oslo, Norway" = ""}
+@string{ECOOP2004date = jun # "~16--18," = jun}
+@string{ECOOP2005 = "ECOOP 2005 --- Object-Oriented Programming, 19th European
+		Conference" = "ECOOP"}
+@string{ECOOP2005addr = "Glasgow, Scotland" = ""}
+@string{ECOOP2005date = jul # "~27--29," = jul}
+@string{ECOOP2006 = "ECOOP 2006 --- Object-Oriented Programming, 20th European
+		Conference" = "ECOOP"}
+@string{ECOOP2006addr = "Nantes, France" = ""}
+@string{ECOOP2006date = jul # "~5--7," = jul}
+@string{ECOOP2007 = "ECOOP 2007 --- Object-Oriented Programming, 21st European
+		Conference" = "ECOOP"}
+@string{ECOOP2007addr = "Berlin, Germany" = ""}
+@string{ECOOP2007date = aug # "~1--3," = aug}
+@string{ECOOP2008 = "ECOOP 2008 --- Object-Oriented Programming, 22nd European
+		Conference" = "ECOOP"}
+@string{ECOOP2008addr = "Paphos, Cyprus" = ""}
+@string{ECOOP2008date = jul # "~9--11," = jul}
+@string{ECOOP2009 = "ECOOP 2009 --- Object-Oriented Programming, 23rd European
+		Conference" = "ECOOP"}
+@string{ECOOP2009addr = "Genova, Italy" = ""}
+@string{ECOOP2009date = jul # "~8--10," = jul}
+@string{ECOOP2010 = "ECOOP 2010 --- Object-Oriented Programming, 24th European
+		Conference" = "ECOOP"}
+@string{ECOOP2010addr = "Maribor, Svlovenia" = ""}
+@string{ECOOP2010date = jun # "~23--25," = jun}
+@string{ECOOP2011 = "ECOOP 2011 --- Object-Oriented Programming, 25th European
+		Conference" = "ECOOP"}
+@string{ECOOP2011addr = "Lancaster, UK" = ""}
+@string{ECOOP2011date = jul # "~27--29," = jul}
+@string{ECOOP2012 = "ECOOP 2012 --- Object-Oriented Programming, 26th European
+		Conference" = "ECOOP"}
+@string{ECOOP2012addr = "Bejing, China" = ""}
+@string{ECOOP2012date = jun # "~14--16," = jun}
+@string{ECOOP2013 = "ECOOP 2013 --- Object-Oriented Programming, 27th European
+		Conference" = "ECOOP"}
+@string{ECOOP2013addr = "Montpellier, France" = ""}
+@string{ECOOP2013date = jul # "~3--5," = jul}
+
+@string{ESEM2011 = "Proceedings of the 2011 International Symposium on Empirical Software Engineering and Measurement" = "ESEM"}
+@string{ESEM2011addr = "Banff, Alberta, Canada" = ""}
+@string{ESEM2011date = sep # "~22--23," = sep}
+
+% Sources vary on whether the "on" and the "in" in the title of ESORICS
+% should be capitalized; standard English usage would leave them
+% lowercase, but capitalizing them makes the intended acronym
+% clearer. Springer seems to like lowercase, as do the more recent web
+% sites.
+@string{ESORICS2005 = "Proceedings of the 10th European Symposium on Research in Computer Security (LNCS 3679)" = "ESORICS"}
+@string{ESORICS2005addr = "Milan, Italy" = ""}
+@string{ESORICS2005date = sep # "~12--14," = sep}
+
+% Identical to FSE99
+@string{ESEC99 = "Proceedings of the 7th European Software Engineering
+		 Conference and the 7th {ACM} {SIGSOFT} Symposium on the
+                 Foundations of Software Engineering" = "ESEC/FSE"}
+
+@string{ESOP90 = "3rd European Symposium on Programming" = "ESOP"}
+@string{ESOP2005 = "14th European Symposium on Programming" = "ESOP"}
+@string{ESOP2005addr = "Edinburgh, Scotland" = ""}
+@string{ESOP2005date = apr # "~7--9," = mar}
+@string{ESOP2006 = "15th European Symposium on Programming" = "ESOP"}
+@string{ESOP2006addr = "Vienna, Austria" = ""}
+@string{ESOP2006date = mar # "~27--28," = mar}
+@string{ESOP2007 = "16th European Symposium on Programming" = "ESOP"}
+@string{ESOP2007addr = "Braga, Portugal" = ""}
+@string{ESOP2007date = mar # "~28--30," = mar}
+@string{ESOP2009 = "18th European Symposium on Programming" = "ESOP"}
+@string{ESOP2009addr = "York, UK" = ""}
+@string{ESOP2009date = mar # "~25--27," = mar}
+
+@string{ECSCW2007 = "European Conference on Computer Supported Cooperative Work" = "ECSCW"}
+@string{ECSCW2007addr = "Limerick, Ireland" = ""}
+@string{ECSCW2007date = sep}
+
+@string{Erlang2003 = "ERLANG '03: Proceedings of the 2003 ACM SIGPLAN workshop on Erlang" = "ERLANG '03"}
+@string{Erlang2003addr = "Uppsala, Sweden" = ""}
+@string{Erlang2003date = aug # "~29," = aug}
+
+
+@string{ETX2004 = "2nd Eclipse Technology Exchange Workshop (eTX)"}
+@string{ETX2004addr = "Barcelona, Spain"}
+@string{ETX2004date = mar # "~30," = mar}
+
+% Contrary to Mihai Budiu's web site, I believe there's no umlaut in
+% "Munich", which is the English name, though there is one in
+% the German name "M?nchen".
+% But if there were, you'd write it M{\"u}nich, note the braces.
+@string{EuroPar2000 = "European Conference on Parallel Processing" = "Euro-Par"}
+@string{EuroPar2000addr = "Munich, Germany" = ""}
+@string{EuroPar2000date = aug # "~29--" # sep # "~1," = aug # "/" # sep}
+
+@string{FASE2007 = "Fundamental Approaches to Software Engineering" = "FASE"}
+@string{FASE2007addr = "Braga, Portugal" = ""}
+@string{FASE2007date = mar # "~27--30," = mar}
+@string{FASE2011 = "Fundamental Approaches to Software Engineering" = "FASE"}
+@string{FASE2011addr = "Saarbr{\"u}cken, Germany" = ""}
+@string{FASE2011date = mar # "~30--" # apr # "~1," = mar}
+
+@string{FAST2005 = "Third International Workshop on Formal Aspects in Security and Trust" = "FAST"}
+@string{FAST2005addr = "Newcastle upon Tyne, UK" = ""}
+@string{FAST2005date = jul # "~18-19," = jul}
+
+@string{FDDO2001 = "4th ACM Workshop on Feedback-Directed and Dynamic
+                  Optimization (FDDO)" = "FDDO"}
+@string{FDDO2001addr = "Austin, Texas" = ""}
+@string{FDDO2001date = dec # "~1," = dec}
+
+@string{FMCAD2010 = "Proceedings of the 2010 Conference on Formal Methods in Computer-Aided Design" = "FMCAD"}
+@string{FMCAD2010addr = "Lugano, Switzerland" = ""}
+@string{FMCAD2010date = oct # "~21--23," = oct}
+
+@string{FMCO2004 = "Third International Symposium on Formal Methods for Components and Objects" = "FMCO"}
+@string{FMCO2004addr = "Leiden, The Netherlands" = ""}
+@string{FMCO2004date = nov # "~2--5," = nov}
+@string{FMCO2006 = "Fifth International Symposium on Formal Methods for Components and Objects" = "FMCO"}
+@string{FMCO2006addr = "Amsterdam, The Netherlands" = ""}
+@string{FMCO2006date = oct # "~24--26," = oct}
+
+@string{FME93 = "FME '93: Industrial Strength Formal Methods, 5th
+		  International Symposium of Formal Methods Europe"
+              = "Formal Methods Europe"}
+@string{FME01 = "International Symposium of Formal Methods Europe 2001:
+		  Formal Methods for Increasing Software Productivity"
+	      = "Formal Methods Europe"}
+@string{FME01addr = "Berlin, Germany" = ""}
+@string{FME01date = mar}
+
+@string{FMICS03 = "Eighth International Workshop on Formal Methods for
+                  Industrial Critical Systems (FMICS 03)" = "FMICS"}
+@string{FMICS03addr = "Trondheim, Norway" = ""}
+@string{FMICS03date = jun # "~5--7," = jun}
+
+@string{FMOODS2008 = "10th International Conference on Formal Methods for Open Object-based Distributed Systems (FMOODS'08)" = "FMOODS"}
+@string{FMOODS2008addr = "Oslo, Norway" = ""}
+@string{FMOODS2008date = jun # "~4--6," = jun}
+
+@string{FOCS89 = "30th Annual Symposium on Foundations of Computer Science" = "FOCS"}
+@string{FOCS89addr = "Research Triangle Park, NC, USA" = ""}
+@string{FOCS89date = oct # "~30--" # nov # "~1," = oct # "/" # nov}
+
+@string{FOOL2001 = "Informal Proceeings of the Eighth International
+                  Workshop on Foundations of Object-Oriented Languages
+                  (FOOL 8)" = "FOOL"}
+@string{FOOL2001addr = "London"}
+@string{FOOL2001date = jan}
+@string{FOOL2003 = "Informal Proceeings of the Tenth International
+                  Workshop on Foundations of Object-Oriented Languages
+                  (FOOL 10)" = "FOOL"}
+@string{FOOL2003addr = "New Orleans, LA, USA"}
+@string{FOOL2003date = jan}
+@string{FOOL2005 = "Informal Proceeings of the Twelfth International
+                  Workshop on Foundations of Object-Oriented Languages
+                  (FOOL 12)" = "FOOL"}
+@string{FOOL2005addr = "Long Beach, CA, USA"}
+@string{FOOL2005date = jan # "~15," = jan}
+
+@string{FORTE2002 = "22nd IFIP WG 6.1 International Conference on Formal
+                  Techniques for Networked and Distributed Systems" = "FORTE"}
+@string{FORTE2002addr = "Houston, TX" = ""}
+@string{FORTE2002date = nov}
+
+@string{FOSER2010 = "Workshop on the Future of Software Engineering Research" = "FoSER"}
+@string{FOSER2010addr = "Santa Fe, NM, USA" = ""}
+@string{FOSER2010date = nov # "~7--8," = nov}
+
+@string{FPLCA  = "Functional Programming Languages and Computer Architecture"}
+
+@string{FPCA   = "Functional Programming and Computer Architecture"}
+@string{FPCA91 = "Functional Programming and Computer Architecture"}
+@string{FPCA93 = "Functional Programming Languages and Computer Architecture"}
+@string{FPCA93addr = "Copenhagen, Denmark" = ""}
+@string{FPCA93date = jun # "~9--11," = jun}
+
+@string{FSE94 = "Proceedings of the Second ACM SIGSOFT Symposium on
+		 Foundations of Software Engineering (SIGSOFT '94)" = "FSE"}
+@string{FSE94addr = "New Orleans, LA, USA" = ""}
+@string{FSE94date = dec # "~6--9," = dec}
+% string{fse94="Proceedings of SIGSOFT '94 Second ACM SIGSOFT Symposium
+% 	on the Foundations of Software Engineering" = "FSE"}
+@string{fse95="Proceedings of SIGSOFT '95 Third ACM SIGSOFT Symposium
+	on the Foundations of Software Engineering" = "FSE"}
+@string{FSE96="Proceedings of SIGSOFT '96 Fourth ACM SIGSOFT Symposium
+	on the Foundations of Software Engineering" = "FSE"} 
+@string{FSE96addr = "San Francisco, CA, USA" = ""}
+@string{FSE96date = oct # "~16--18," = oct}
+@string{FSE97 = "Proceedings of the Sixth European Software Engineering
+		  Conference and Fifth ACM SIGSOFT Symposium on the
+		  Foundations of Software Engineering (ESEC/FSE 97)"
+	      = "ESEC/FSE"}
+@string{FSE6 = "Proceedings of the Sixth European Software Engineering
+		  Conference and Fifth ACM SIGSOFT Symposium on the
+		  Foundations of Software Engineering (ESEC/FSE 97)"
+	      = "ESEC/FSE"}
+@string{FSE97addr = "Z{\"u}rich, Switzerland" = ""}
+@string{FSE97date = sep # "~22--25," = sep}
+@string{FSE98 = "FSE '98, Proceedings of the 6th ACM SIGSOFT International
+                  Symposium on Foundations of Software Engineering"
+	      = "FSE"}
+@string{fse98date = nov # "~3--5," = nov}
+@string{fse98addr = "Lake Buena Vista, FL, USA" = ""}
+% Identical to ESEC99
+@string{FSE99 = "Proceedings of the 7th European Software Engineering
+		 Conference and the 7th {ACM} {SIGSOFT} Symposium on the
+                 Foundations of Software Engineering" = "ESEC/FSE"}
+@string{FSE99date = sep # "~6--9," = sep}
+@string{FSE99addr = "Toulouse, France" = ""}
+@string{FSE00 = "Proceedings of the {ACM} {SIGSOFT} 8th International
+                 Symposium on the Foundations of Software Engineering
+                 (FSE 2000)" = "FSE"}
+@string{FSE2001 = "Proceedings of the 8th European Software Engineering
+		 Conference and the 9th {ACM} {SIGSOFT} Symposium on the
+                 Foundations of Software Engineering" = "ESEC/FSE"}
+@string{FSE2001date = sep # "~12--14," = sep}
+@string{FSE2001addr = "Vienna, Austria" = ""}
+@string{FSE2002 = "Proceedings of the {ACM} {SIGSOFT} 10th International
+                 Symposium on the Foundations of Software Engineering
+                 (FSE 2002)" = "FSE"}
+@string{FSE2002date = nov # "~20--22," = nov}
+@string{FSE2002addr = "Charleston, SC" = ""}
+@string{FSE2003 = "ESEC/FSE 2003: Proceedings of the 9th European Software Engineering
+		 Conference and the 11th {ACM} {SIGSOFT} Symposium on the
+                 Foundations of Software Engineering" = "ESEC/FSE"}
+@string{FSE2003date = sep # "~3--5," = sep}
+@string{FSE2003addr = "Helsinki, Finland" = ""}
+@string{FSE2004 = "Proceedings of the {ACM} {SIGSOFT} 12th Symposium on the
+                 Foundations of Software Engineering (FSE 2004)" = "FSE"}
+@string{FSE2004date = nov # "~2--4," = nov}
+@string{FSE2004addr = "Newport Beach, CA, USA" = ""}
+@string{FSE2005 = "ESEC/FSE 2005: Proceedings of the 10th European Software Engineering
+		 Conference and the 13th {ACM} {SIGSOFT} Symposium on the
+                 Foundations of Software Engineering" = "ESEC/FSE"}
+@string{FSE2005date = sep # "~7--9," = sep}
+@string{FSE2005addr = "Lisbon, Portugal" = ""}
+@string{FSE2006 = "Proceedings of the {ACM} {SIGSOFT} 14th Symposium on the
+                 Foundations of Software Engineering (FSE 2006)" = "FSE"}
+@string{FSE2006date = nov # "~7--9," = nov}
+@string{FSE2006addr = "Portland, OR, USA" = ""}
+@string{FSE2007 = "ESEC/FSE 2007: Proceedings of the 11th European Software Engineering
+		 Conference and the 15th {ACM} {SIGSOFT} Symposium on the
+                 Foundations of Software Engineering" = "ESEC/FSE"}
+@string{FSE2007date = sep # "~5--7," = sep}
+@string{FSE2007addr = "Dubrovnik, Croatia" = ""}
+@string{FSE2008 = "Proceedings of the {ACM} {SIGSOFT} 16th Symposium on the
+                 Foundations of Software Engineering (FSE 2008)" = "FSE"}
+@string{FSE2008date = nov # "~11--13," = nov}
+@string{FSE2008addr = "Atlanta, GA, USA" = ""}
+@string{FSE2009 = "ESEC/FSE 2009: The 7th joint meeting of 
+                   the European Software Engineering Conference (ESEC) and
+                   the ACM SIGSOFT Symposium on the Foundations of Software Engineering (FSE)" = "ESEC/FSE"}
+@string{FSE2009date = aug # "~26--28," = aug}
+@string{FSE2009addr = "Amsterdam, The Netherlands" = ""}
+@string{FSE2010 = "Proceedings of the {ACM} {SIGSOFT} 18th Symposium on the
+                 Foundations of Software Engineering (FSE 2010)" = "FSE"}
+@string{FSE2010date = nov # "~9--11," = nov}
+@string{FSE2010addr = "Santa Fe, NM, USA" = ""}
+@string{FSE2011 = "ESEC/FSE 2011: The 8th joint meeting of 
+                   the European Software Engineering Conference (ESEC) and
+                   the ACM SIGSOFT Symposium on the Foundations of Software Engineering (FSE)" = "ESEC/FSE"}
+@string{FSE2011date = sep # "~7--9," = sep}
+@string{FSE2011addr = "Szeged, Hungary" = ""}
+@string{FSE2012 = "Proceedings of the {ACM} {SIGSOFT} 20th Symposium on the
+                 Foundations of Software Engineering (FSE 2012)" = "FSE"}
+@string{FSE2012date = nov # "~13--15," = nov}
+@string{FSE2012addr = "Cary, NC, USA" = ""}
+@string{FSE2013 = "ESEC/FSE 2013: The 9th joint meeting of 
+                   the European Software Engineering Conference (ESEC) and
+                   the ACM SIGSOFT Symposium on the Foundations of Software Engineering (FSE)" = "ESEC/FSE"}
+@string{FSE2013date = aug # "~21--23," = aug}
+@string{FSE2013addr = "St.\ Petersburg, Russia" = ""}
+
+@string{FTFJP2001 = "FTfJP 2001: 3rd Workshop on Formal Techniques for
+                  Java-like Programs" = "FTfJP"}
+@string{FTFJP2001date = jun # "~18," = jun}
+@string{FTFJP2001addr = "Glasgow, Scotland" = ""}
+@string{FTFJP2005 = "FTfJP 2005: 7th Workshop on Formal Techniques for
+                  Java-like Programs" = "FTfJP"}
+@string{FTFJP2005date = jul # "~26," = jul}
+@string{FTFJP2005addr = "Glasgow, Scotland" = ""}
+@string{FTFJP2012 = "FTfJP 2012: 14th Workshop on Formal Techniques for
+                  Java-like Programs" = "FTfJP"}
+@string{FTFJP2012date = jun # "~12," = jun}
+@string{FTFJP2012addr = "Beijing, China" = ""}
+@string{FTFJP2013 = "FTfJP 2013: 14th Workshop on Formal Techniques for
+                  Java-like Programs" = "FTfJP"}
+@string{FTFJP2013date = jul # "~1," = jul}
+@string{FTFJP2013addr = "Montpellier, France" = ""}
+
+@string{FutureCSD2012 = "The Future of Collaborative Software Development" = "FutureCSD"}
+@string{FutureCSD2012date = feb # "~12," = feb}
+@string{FutureCSD2012addr = "Bellevue, WA, USA" = ""}
+
+@string{GD2001 = "9th International Symposium on Graph Drawing" = "GD"}
+@string{GD2001addr = "Vienna, Austria" = ""}
+@string{GD2001date = sep # "~23--26," = sep}
+@string{GD2007 = "15th International Symposium on Graph Drawing" = "GD"}
+@string{GD2007addr = "Sydney, Australia" = ""}
+@string{GD2007date = sep # "~23--26," = sep}
+
+% Software Engineering Notes 8:4 and SIGPLAN Notices 18:8 (1983)
+@string{HLD = "ACM SIGSOFT/SIGPLAN Software Engineering Symposium on 
+	       High-level Debugging"}
+
+@string{IandC   = "Information and Computation"}
+
+@string{ICAPS2005 = "ICAPS, International Conference on Automated Planning
+                  and Scheduling" = "ICAPS"}
+@string{ICAPS2005date = jun # "~8-10," = jun}
+@string{ICAPS2005addr = "Monterey, CA, USA" = ""}
+
+@string{ICECCS2002 = "International Conference on Engineering of Complex
+		Computer Systems" = "ICECCS"}
+@string{ICECCS2002date = dec}
+@string{ICECCS2002addr = "Greenbelt, MD, USA" = ""}
+@string{ICECCS2005 = "International Conference on Engineering of Complex
+		Computer Systems" = "ICECCS"}
+@string{ICECCS2005date = jun # "~16-20," = jun}
+@string{ICECCS2005addr = "Shanghai, China" = ""}
+
+@string{ICFEM2004 = "ICFEM 2004, Proceedings of the 6th International
+                  Conference on Formal Engineering Methods" = "ICFEM"}
+@string{ICFEM2004date = nov # "~8--12," = nov}
+@string{ICFEM2004addr = "Seattle, WA, USA"}
+@string{ICFEM2005 = "ICFEM 2005, Proceedings of the 7th International
+                  Conference on Formal Engineering Methods" = "ICFEM"}
+@string{ICFEM2005date = nov # "~1--4," = nov}
+@string{ICFEM2005addr = "Manchester, UK"}
+@string{ICFEM2006 = "ICFEM 2006, Proceedings of the 8th International
+                  Conference on Formal Engineering Methods" = "ICFEM"}
+@string{ICFEM2006date = nov # "~1--3," = nov}
+@string{ICFEM2006addr = "Macau, China"}
+
+@string{ICFP2000 = "ICFP '00, Proceedings of the fifth ACM SIGPLAN
+                  International Conference on Functional Programming"
+		  = "ICFP"}
+@string{ICFP2000date = sep # "~18--20," = sep}
+@string{ICFP2000addr = Montreal = ""}
+@string{ICFP2002 = "ICFP '02, Proceedings of the seventh ACM SIGPLAN
+                  International Conference on Functional Programming"
+		  = "ICFP"}
+@string{ICFP2002date = oct # "~4--6," = oct}
+@string{ICFP2002addr = "Pittsburgh, PA, USA" = ""}
+@string{ICFP2003 = "ICFP '03, Proceedings of the eighth ACM SIGPLAN
+                  International Conference on Functional Programming"
+		  = "ICFP"}
+@string{ICFP2003date = aug # "~25--27," = aug}
+@string{ICFP2003addr = "Uppsala, Sweden" = ""}
+@string{ICFP2004 = "ICFP '04, Proceedings of the ninth ACM SIGPLAN
+                  International Conference on Functional Programming"
+		  = "ICFP"}
+@string{ICFP2004date = sep # "~19--21," = sep}
+@string{ICFP2004addr = "Snowbird, UT, USA" = ""}
+@string{ICFP2006 = "ICFP '06, Proceedings of the ninth ACM SIGPLAN
+                  International Conference on Functional Programming"
+		  = "ICFP"}
+@string{ICFP2006date = sep # "~18--20," = sep}
+@string{ICFP2006addr = "Portland, OR, USA" = ""}
+@string{ICFP2010 = "Proceedings of the 15th ACM SIGPLAN
+                  International Conference on Functional Programming"
+		  = "ICFP"}
+@string{ICFP2010date = sep # "~27--29," = sep}
+@string{ICFP2010addr = "Baltimore, MD, USA" = ""}
+@string{ICFP2012 = "Proceedings of the 17th ACM SIGPLAN
+                  International Conference on Functional Programming"
+		  = "ICFP"}
+@string{ICFP2012date = sep # "~10--12," = sep}
+@string{ICFP2012addr = "Copenhagen, Denmark" = ""}
+
+@string{ICISC2005 = "8th International Conference on Information Security and Cryptology" = "ICISC"}
+@string{ICISC2005date = dec # "~1--2," = dec}
+@string{ICISC2005addr = "Seoul, Korea" = ""}
+% The organizers prefer the description "Seoul, Korea" for its location,
+% rather than "South Korea" or "Republic of Korea"; this seems sufficiently
+% unambiguous as AFAIK there is no Seoul in North Korea.
+
+@string{ICML = "International Conference on Machine Learning" = "ICML"}
+@string{ICML96 = "Proceedings of the Thirteenth International Conference on Machine Learning" = "ICML"}
+@string{ICML96addr = "Bari, Italy" = ""}
+@string{ICML96date = jul # "~3--6," = jul}
+@string{ICML97 = "Proceedings of the Fourteenth International Conference on Machine Learning" = "ICML"}
+@string{ICML97addr = "Nashville, TN, USA" = ""}
+@string{ICML97date = jul # "~8--11," = jul}
+
+
+@string{ISMM2008 = "International Symposium on Memory Management" = "ISMM"}
+@string{ISMM2008addr = "Tucson, AZ, USA" = ""}
+@string{ISMM2008date = jun # "~7--8," = jun}
+
+
+@string{ICPP86 = "Proceedings of the 1986 International Conference on
+		 Parallel Processing" = "ICPP"}
+@string{ICPP88 = "Proceedings of the 1988 International Conference on
+		 Parallel Processing" = "ICPP"}
+@string{ICPP89 = "Proceedings of the 1989 International Conference on
+		 Parallel Processing" = "ICPP"}
+@string{ISPP94 = "Proceedings of the 8th International Symposium on
+                  Parallel Processing" = "ISPP"}
+
+@string{ICS89 = "Proceedings of the International Conference of
+                  Supercomputing (ICS '89)" = "ICS"}
+
+@string{ICSE78 = "Proceedings of the 3rd International Conference on
+                 Software Engineering" = "ICSE"}
+@string{ICSE78addr = "Atlanta, GA, USA" = ""}
+@string{ICSE78date = may # "~10--12," = may}
+@string{ICSE79 = "Proceedings of the 3rd International Conference on
+                 Software Engineering" = "ICSE"}
+@string{ICSE79addr = "Munich, Germany" = ""}
+@string{ICSE79date = sep # "~17--19," = sep}
+@string{ICSE81 = "Proceedings of the 5th International Conference on
+                 Software Engineering" = "ICSE"}
+@string{ICSE81addr = "San Diego, CA, USA" = ""}
+@string{ICSE81date = mar # "~9--12," = mar}
+@string{ICSE85 = "Proceedings of the 8rd International Conference on
+                 Software Engineering" = "ICSE"}
+@string{ICSE85addr = "London" = ""}
+@string{ICSE85date = aug # "~28--30," = aug}
+@string{ICSE89 = "Proceedings of the 11th International Conference on
+                 Software Engineering" = "ICSE"}
+@string{ICSE89addr = "Pittsburgh, PA, USA" = ""}
+@string{ICSE89date = may # "~15--18," = may}
+@string{ICSE92 = "Proceedings of the 14th International Conference on
+                 Software Engineering" = "ICSE"}
+@string{ICSE92addr = "Melbourne, Australia" = ""}
+@string{ICSE92date = may}
+@string{ICSE94 = "Proceedings of the 16th International Conference on
+                 Software Engineering" = "ICSE"}
+@string{ICSE94addr = "Sorrento, Italy" = ""}
+@string{ICSE94date = may # "~16--21," = may}
+@string{ICSE96 = "Proceedings of the 18th International Conference on
+		Software Engineering" = "ICSE"}
+@string{ICSE96addr = "Berlin, Germany" = ""}
+@string{ICSE96date = mar # "~25--29," = mar}
+@string{ICSE97 = "Proceedings of the 19th International Conference on
+                 Software Engineering" = "ICSE"}
+@string{ICSE97addr = "Boston, MA" = ""}
+@string{ICSE97date = may}
+@string{ICSE98 = "Proceedings of the 20th International Conference on
+                 Software Engineering" = "ICSE"}
+@string{ICSE98addr = "Kyoto, Japan" = ""}
+@string{ICSE99 = "ICSE '99, Proceedings of the 21st International Conference on
+                 Software Engineering" = "ICSE"}
+@string{ICSE99addr = "Los Angeles, CA, USA" = ""}
+@string{ICSE99addrcomma = "Los Angeles, CA, USA, " = ""}
+@string{ICSE99date = may # "~19--21," = may}
+@string{ICSE2000 = "ICSE 2000, Proceedings of the 22nd International Conference on
+                 Software Engineering" = "ICSE"}
+@string{ICSE2000addr = "Limerick, Ireland" = ""}
+@string{ICSE2000date = jun # "~7--9," = jun}
+@string{ICSE2001 = "ICSE 2001, Proceedings of the 23rd International Conference on
+                 Software Engineering" = "ICSE"}
+@string{ICSE2001addr = Montreal = ""}
+@string{ICSE2001date = may # "~16--18," = may}
+@string{ICSE2002 = "ICSE'02, Proceedings of the 24th International Conference on
+                 Software Engineering" = "ICSE"}
+@string{ICSE2002addr = "Orlando, Florida" = ""}
+@string{ICSE2002date = may # "~22--24," = may}
+@string{ICSE2003 = "ICSE'03, Proceedings of the 25th International Conference on
+                 Software Engineering" = "ICSE"}
+@string{ICSE2003addr = "Portland, Oregon" = ""}
+@string{ICSE2003date = may # "~6--8," = may}
+@string{ICSE2004 = "ICSE'04, Proceedings of the 26th International Conference on
+                 Software Engineering" = "ICSE"}
+@string{ICSE2004addr = "Edinburgh, Scotland" = ""}
+@string{ICSE2004date = may # "~26--28," = may}
+@string{ICSE2004DSdate = may # "~24," = may}
+@string{ICSE2005 = "ICSE'05, Proceedings of the 27th International Conference on
+                 Software Engineering" = "ICSE"}
+@string{ICSE2005addr = "St.\ Louis, MO, USA" = ""}
+@string{ICSE2005date = may # "~18--20," = may}
+@string{ICSE2005education = "Software Engineering Education in the Modern
+Age: Challenges and Possibilities" = "Software Engineering Education in the Modern
+Age"}
+@string{ICSE2005educationlong = "Software Engineering Education in the Modern
+Age: Challenges and Possibilities, PostProceedings of ICSE '05 Education
+and Training Track" = "Software Engineering Education in the Modern
+Age: Challenges and Possibilities"}
+@string{ICSE2006 = "ICSE'06, Proceedings of the 28th International Conference on
+                 Software Engineering" = "ICSE"}
+@string{ICSE2006addr = "Shanghai, China" = ""}
+@string{ICSE2006date = may # "~24--26," = may}
+@string{ICSE2007 = "ICSE'07, Proceedings of the 29th International Conference on
+                 Software Engineering" = "ICSE"}
+@string{ICSE2007addr = "Minneapolis, MN, USA" = ""}
+@string{ICSE2007date = may # "~23--25," = may}
+@string{ICSE2008 = "ICSE'08, Proceedings of the 30th International Conference on
+                 Software Engineering" = "ICSE"}
+@string{ICSE2008addr = "Leipzig, Germany" = ""}
+@string{ICSE2008date = may # "~14--16," = may}
+@string{ICSE2009 = "ICSE'09, Proceedings of the 31st International Conference on
+                 Software Engineering" = "ICSE"}
+@string{ICSE2009addr = "Vancouver, BC, Canada" = ""}
+@string{ICSE2009date = may # "~20--22," = may}
+@string{ICSE2010 = "ICSE'10, Proceedings of the 32nd International Conference on
+                 Software Engineering" = "ICSE"}
+@string{ICSE2010addr = "Cape Town, South Africa" = ""}
+@string{ICSE2010date = may # "~5--7," = may}
+@string{ICSE2011 = "ICSE'11, Proceedings of the 33rd International Conference on
+                 Software Engineering" = "ICSE"}
+@string{ICSE2011addr = "Waikiki, Hawaii, USA" = ""}
+@string{ICSE2011date = may # "~25--27," = may}
+@string{ICSE2012 = "ICSE'12, Proceedings of the 34th International Conference on
+                 Software Engineering" = "ICSE"}
+@string{ICSENIER2012 = "ICSE'12 New Ideas and Emerging Results Track" = "ICSE NIER"}
+@string{ICSE2012addr = "Z{\"u}rich, Switzerland" = ""}
+@string{ICSE2012date = jun # "~6--8," = jun}
+@string{ICSE2013 = "ICSE'13, Proceedings of the 34th International Conference on
+                 Software Engineering" = "ICSE"}
+@string{ICSENIER2013 = "ICSE'13 New Ideas and Emerging Results Track" = "ICSE NIER"}
+@string{ICSE2013addr = "San Francisco, CA, USA" = ""}
+@string{ICSE2013date = may # "~22--24," = may}
+@string{ICSE2014 = "ICSE'14, Proceedings of the 34th International Conference on
+                 Software Engineering" = "ICSE"}
+@string{ICSENIER2014 = "ICSE'14 New Ideas and Emerging Results Track" = "ICSE NIER"}
+@string{ICSE2014addr = "Hyderabad, India" = ""}
+@string{ICSE2014date = jun # "~5--7," = jun}
+
+@string{ICSM89 = "Proceedings of the Conference on
+                 Software Maintenance" = "ICSM"}
+@string{ICSM89addr = "Miami, FL" = ""}
+@string{ICSM89date = oct # "~16--19," = oct}
+@string{ICSM93 = "Proceedings of the Conference on
+                 Software Maintenance" = "ICSM"}
+@string{ICSM93addr = "Montr{\'e}al, Quebec, Canada" = ""}
+@string{ICSM93date = sep}
+@string{ICSM96 = "Proceedings of the International Conference on Software
+                 Maintenance" = "ICSM"}
+@string{ICSM96addr = "Monterey, CA, USA" = ""}
+@string{ICSM96date = nov # "~4--8," = nov}
+@string{ICSM98 = "Proceedings of the International Conference on Software
+                 Maintenance" = "ICSM"}
+@string{ICSM98addr = "Bethesda, MD, USA" = ""}
+@string{ICSM98date = nov # "~16--19," = nov}
+@string{ICSM99 = "Proceedings of the International Conference on Software
+                 Maintenance" = "ICSM"}
+@string{ICSM99addr = "Oxford, England" = ""}
+@string{ICSM99date = aug # "~30--" # sep # "~3," = aug # "/" # sep}
+
+@string{ICSM2000 = "ICSM 2000, Proceedings of the International Conference on
+                 Software Maintenance" = "ICSM"}
+@string{ICSM2000addr = "San Jose, California" = ""}
+@string{ICSM2000date = oct # "~11--14," = oct}
+@string{ICSM2001 = "ICSM 2001, Proceedings of the International Conference on
+                 Software Maintenance" = "ICSM"}
+@string{ICSM2001addr = "Florence, Italy" = ""}
+@string{ICSM2001date = nov # "~6--10," = nov}
+@string{ICSM2002 = "ICSM 2002, Proceedings of the International Conference on
+                 Software Maintenance" = "ICSM"}
+@string{ICSM2002addr = Montreal = ""}
+@string{ICSM2002date = oct # "~3--6," = oct}
+@string{ICSM2004 = "ICSM 2004, Proceedings of the International Conference on
+                 Software Maintenance" = "ICSM"}
+@string{ICSM2004addr = "Chicago, Illinois" = ""}
+@string{ICSM2004date = sep # "~12--14," = sep}
+@string{ICSM2005 = "ICSM 2005, Proceedings of the International Conference on
+                 Software Maintenance" = "ICSM"}
+@string{ICSM2005addr = "Budapest, Hungary" = ""}
+@string{ICSM2005date = sep # "~27--29," = sep}
+@string{ICSM2007 = "ICSM 2007, Proceedings of the International Conference on
+                 Software Maintenance" = "ICSM"}
+@string{ICSM2007addr = "Paris, France" = ""}
+@string{ICSM2007date = oct # "~2--4," = sep}
+
+@string{ICST2012 = "Fifth International Conference on Software Testing, Verification and Validation (ICST)" = "ICST"}
+@string{ICST2012addr = Montreal = ""}
+@string{ICST2012date = apr # "~18--20," = apr}
+
+@string{ICWS2004 = "IEEE International Conference on Web Services (ICWS'2004)" = "ICWS"}
+@string{ICWS2004addr = "San Diego, California, USA" = ""}
+@string{ICWS2004date = jul}
+
+@string{ISESE2006 = "International Symposium on Empirical Software Engineering" = "ISESE"}
+@string{ISESE2006addr = "Rio de Janeiro, Brazil" = ""}
+@string{ISESE2006date = sep # "~21--22," = sep}
+
+@string{ISWC2002 = "First International Semantic Web Conference" = "ISWC"}
+@string{ISWC2002addr = "Sardinia, Italy" = ""}
+@string{ISWC2002date = jun # "~10--12," = jun}
+@string{ISWC2004 = "First International Semantic Web Conference" = "ISWC"}
+@string{ISWC2004addr = "Hiroshima, Japan" = ""}
+@string{ISWC2004date = nov # "~9--11," = nov}
+
+@string{IJCAI73 = "Proceedings of the 3rd International Joint Conference
+                 on Artificial Intelligence" = ""}
+@string{IJCAI73addr = "Stanford, CA" = ""}
+@string{IJCAI91 = "Proceedings of the 12th International Joint Conference
+                 on Artificial Intelligence" = "IJCAI"}
+@string{IJCAI91addr = "Sydney, Australia" = ""}
+@string{IJCAI91date = aug = aug}
+@string{IJCAI97 = "IJCAI-97, Proceedings of the Fifteenth International
+		  Joint Conference on Artificial Intelligence" = "IJCAI"}
+@string{IJCAI97addr = "Nagoya, Aichi, Japan" = ""}
+@string{IJCAI97date = aug # "~23--29," = aug}
+
+@string{INCOSE96 = "6th Annual Symposium of the International Council on
+		  Systems Engineering" = "INCOSE"}
+
+@string{IP71 = "Information Processing 71: Proceedings of IFIP Congress 71" = "Information Processing 71"}
+@string{IP71date = aug # "~23--28," = aug}
+@string{IP71addr = "Ljubljana, Yugoslavia" = ""}
+
+@string{IPDPS2003 = "International Parallel and Distributed Processing
+                  Symposium (IPDPS'03)" = "IPDPS"}
+@string{IPDPS2003addr = "Nice, France" = ""}
+@string{IPDPS2003date = apr # "~22--26," = apr}
+
+@string{ISCA92 = "Proceedings of the Nineteenth Annual International
+		 Symposium on Computer Architecture" = "ISCA"}
+@string{ISCA94 = "Proceedings of the 21st Annual International Symposium
+                 on Computer Architecture" = "ISCA"}
+@string{ISCA97 = "Proceedings of the 24th Annual International Symposium
+                 on Computer Architecture" = "ISCA"}
+@string{ISCA97addr = "Denver, CO" = ""}
+@string{ISCA99 = "Proceedings of the 26th Annual International Symposium
+                 on Computer Architecture" = "ISCA"}
+@string{ISCA2003 = "Proceedings of the 30th Annual International Symposium
+                 on Computer Architecture" = "ISCA"}
+@string{ISCA2003addr = "San Diego, CA, USA" = ""}
+@string{ISCA2003date = jun # "~9--11," = jun}
+@string{ISCA2005 = "Proceedings of the 32nd Annual International Symposium
+                 on Computer Architecture" = "ISCA"}
+@string{ISCA2005addr = "Madison, WI, USA" = ""}
+@string{ISCA2005date = jun # "~6--8," = jun}
+
+@string{ISOLA2006 = "2nd International Symposium on Leveraging Applications
+                     of Formal Methods, Verification and Validation" = "ISOLA"}
+@string{ISOLA2006addr = "Paphos, Cyprus" = ""}
+@string{ISOLA2006date = nov # "~15--19," = nov}
+
+@string{ISSRE95 = "Sixth International Symposium on Software Reliability
+                  Engineering" = "ISSRE"}
+@string{ISSRE95addr = "Toulouse, France" = ""}
+@string{ISSRE95date = oct # "~24--27," = oct}
+@string{ISSRE97 = "Eighth International Symposium on Software Reliability
+                  Engineering" = "ISSRE"}
+@string{ISSRE97addr = "Albuquerque, NM" = ""}
+@string{ISSRE97date = nov # "~2--5," = nov}
+@string{ISSRE2003 = "Fourteenth International Symposium on Software
+                  Reliability Engineering" = "ISSRE"}
+@string{ISSRE2003supplementary = "Fourteenth International Symposium on
+                  Software Reliability Engineering, Supplementary
+                  Proceedings" = "ISSRE Supplementary"}
+@string{ISSRE2003addr = "Denver, CO" = ""}
+@string{ISSRE2003date = nov # "~17--20," = nov}
+@string{ISSRE2004 = "Fifteenth International Symposium on Software
+                  Reliability Engineering" = "ISSRE"}
+@string{ISSRE2004addr = "Saint-Malo, France" = ""}
+@string{ISSRE2004date = nov # "~3--5," = nov}
+@string{ISSRE2007 = "Fifteenth International Symposium on Software
+                  Reliability Engineering" = "ISSRE"}
+@string{ISSRE2007addr = "Trollh{\"a}ttan, Sweden" = ""}
+@string{ISSRE2007date = nov # "~7--9," = nov}
+
+@string{ISSSE2006 = "IEEE International Symposium on Secure Software
+                  Engineering" = "ISSSE"}
+@string{ISSSE2006addr = "Arlington, VA, USA" = ""}
+% Strangely, many sources including a CFP list this as being in McLean,
+% an adjacent DC suburb. The most reliable-looking website I can find
+% lists the venue as the Sheraton National Hotel in Arlington.
+@string{ISSSE2006date = mar # "~13--15," = mar}
+
+@string{ISSTA93 = "Proceedings of the International Symposium on Software
+                 Testing and Analysis" = "ISSTA"}
+@string{ISSTA94 = "Proceedings of the 1994 ACM SIGSOFT International
+                  Symposium on Software Testing and Analysis"
+                = "ISSTA"}
+@string{ISSTA94addr = "Seattle, WA, USA" = ""}
+@string{ISSTA94date = aug # "~17--19," = aug}
+@string{ISSTA96 = "Proceedings of the 1996 International Symposium on
+                 Software Testing and Analysis ({ISSTA})"
+		= "ISSTA"}
+@string{ISSTA98 = "Proceedings of the 1998 ACM SIGSOFT International
+                  Symposium on Software Testing and Analysis"
+                = "ISSTA"}
+@string{ISSTA98addr = "Clearwater Beach, FL, USA" = ""}
+@string{ISSTA98date = mar # "~2--4," = mar}
+@string{ISSTA2002 = "ISSTA 2002, Proceedings of the 2002 International
+                  Symposium on Software Testing and Analysis"
+		= "ISSTA"}
+@string{ISSTA2000addr = "Portland, OR, USA" = ""}
+@string{ISSTA2000date = aug # "~22--25," = aug}
+@string{ISSTA2000 = "ISSTA 2000, Proceedings of the 2000 International
+                  Symposium on Software Testing and Analysis"
+		= "ISSTA"}
+@string{ISSTA2002addr = "Rome, Italy" = ""}
+@string{ISSTA2002date = jul # "~22--24," = jul}
+@string{ISSTA2004 = "ISSTA 2004, Proceedings of the 2004 International
+                  Symposium on Software Testing and Analysis"
+		= "ISSTA"}
+@string{ISSTA2004addr = "Boston, MA, USA" = ""}
+@string{ISSTA2004date = jul # "~12--14," = jul}
+@string{ISSTA2006 = "ISSTA 2006, Proceedings of the 2006 International
+                  Symposium on Software Testing and Analysis"
+		= "ISSTA"}
+@string{ISSTA2006addr = "Portland, ME, USA" = ""}
+@string{ISSTA2006date = jul # "~18--20," = jul}
+@string{ISSTA2007 = "ISSTA 2007, Proceedings of the 2007 International
+                  Symposium on Software Testing and Analysis"
+		= "ISSTA"}
+@string{ISSTA2007addr = "London, UK" = ""}
+@string{ISSTA2007date = jul # "~10--12," = jul}
+@string{ISSTA2008 = "ISSTA 2008, Proceedings of the 2008 International
+                  Symposium on Software Testing and Analysis"
+		= "ISSTA"}
+@string{ISSTA2008addr = "Seattle, WA, USA" = ""}
+@string{ISSTA2008date = jul # "~22--24," = jul}
+@string{ISSTA2009 = "ISSTA 2009, Proceedings of the 2009 International
+                  Symposium on Software Testing and Analysis"
+		= "ISSTA"}
+@string{ISSTA2009addr = "Chicago, IL, USA" = ""}
+@string{ISSTA2009date = jul # "~21--23," = jul}
+@string{ISSTA2010 = "ISSTA 2010, Proceedings of the 2010 International
+                  Symposium on Software Testing and Analysis"
+		= "ISSTA"}
+@string{ISSTA2010addr = "Trento, Italy" = ""}
+@string{ISSTA2010date = jul # "~14--16," = jul}
+@string{ISSTA2011 = "ISSTA 2011, Proceedings of the 2011 International
+                  Symposium on Software Testing and Analysis"
+		= "ISSTA"}
+@string{ISSTA2011addr = "Toronto, Canada" = ""}
+@string{ISSTA2011date = jul # "~19--21," = jul}
+@string{ISSTA2012 = "ISSTA 2012, Proceedings of the 2012 International
+                  Symposium on Software Testing and Analysis"
+		= "ISSTA"}
+@string{ISSTA2012addr = "Minneapolis, MN, USA" = ""}
+@string{ISSTA2012date = jul # "~17--19," = jul}
+@string{ISSTA2013 = "ISSTA 2013, Proceedings of the 2013 International
+                  Symposium on Software Testing and Analysis"
+		= "ISSTA"}
+@string{ISSTA2013addr = "Lugano, Switzerland" = ""}
+@string{ISSTA2013date = jul # "~16--18," = jul}
+
+@string{IVME2003 = "ACM SIGPLAN 2003 Workshop on Interpreters, Virtual Machines and Emulators" = "IVME"}
+@string{IVME2003addr = "San Diego, California, USA" = ""}
+@string{IVME2003date = jun # "~12," = jun}
+
+@string{IWAOOS99 = "Interontinental Workshop on Aliasing in Object-Oriented Systems" = "IWAOOS"}
+@string{IWAOOS99addr = "Lisbon, Portugal" = ""}
+@string{IWAOOS99date = jun # "~15," = jun}
+
+@string{IWACO2007 = "International Workshop on Aliasing, Confinement and Ownership in object-oriented programming" = "IWACO"}
+@string{IWACO2007addr = "Berlin, Germany" = ""}
+@string{IWACO2007date = jul # "~30," = jul}
+@string{IWACO2009 = "International Workshop on Aliasing, Confinement and Ownership in object-oriented programming" = "IWACO"}
+@string{IWACO2009addr = "Genova, Italy" = ""}
+@string{IWACO2009date = jul # "~6," = jul}
+
+@string{JavaGrande2002 = "Joint ACM-ISCOPE Java Grande Conference"
+		 = "Java Grande"}
+@string{JavaGrande2002addr = "Seattle, WA" = ""}
+@string{JavaGrande2002date = nov # "~3--5," = nov}
+
+@string{LCTES98 = "ACP SIGPLAN Workshop on Languages, Compilers, and Tools for Embedded Systems" = "LCTES"}
+@string{LCTES98addr = Montreal = ""}
+@string{LCTES98date = jun # "~19--20," = jun}
+
+@string{LFP90  = "Proc. 1990 ACM Conf. on Lisp and Functional Programming"
+	       = "LFP"}
+@string{LFP90addr = "Nice, France" = ""}
+@string{LFP90date = jun # "~27--29," = jun}
+@string{LFP92  = "Proc. 1992 ACM Conf. on Lisp and Functional Programming"
+	       = "LFP"}
+@string{LFP92addr = "San Francisco, CA, USA" = ""}
+@string{LFP92date = jun # "~22--24," = jun}
+
+@string{LICS92 = "Proceedings of the Seventh Annual IEEE Symposium on Logic
+                  in Computer Science" = "LICS"}
+@string{LICS92addr = "Santa Cruz, CA" = ""}
+@string{LICS92date = jun # "~22--25," = jun}
+@string{LICS2001 = "Proceedings of the Sixteenth Annual IEEE Symposium on Logic
+                  in Computer Science" = "LICS"}
+@string{LICS2001addr = "Boston, MA, USA" = ""}
+@string{LICS2001date = jun # "~16--19," = jun}
+
+@string{LPAR2010 = "Proceedings of the 16th International Conference on Logic for Programming, Artificial Intelligence, and Reasoning" = "LPAR"}
+@string{LPAR2010addr = "Dakar, Senegal" = ""}
+@string{LPAR2010date = apr # "~26--30," = apr}
+
+@string{MASPLAS2004 = "Mid-Atlantic Student Workshop on Programming
+                  Languages and Systems" = "MASPLAS"}
+@string{MASPLAS2004addr = "South Orange, NJ" = ""}
+@string{MASPLAS2004date = apr # "~3," = apr}
+
+@string{MEMOCODE2004 = "MEMOCODE 2004: Second ACM-IEEE International
+                  Conference on Formal Methods and Models for Codesign" =
+                  "MEMOCODE"}
+@string{MEMOCODE2004addr = "San Diego, CA, USA" = ""}
+@string{MEMOCODE2004date = jun # "~23-25," = jun}
+
+@string{MICRO94 = "Proceedings of the 24th Annual International Symposium
+                  on Microarchitecture" = "MICRO-94"}
+@string{MICRO96 = "Proceedings of the 26th Annual International Symposium
+                  on Microarchitecture" = "MICRO-96"}
+@string{MICRO97 = "Proceedings of the 27th Annual International Symposium
+                  on Microarchitecture (MICRO-97)" = "MICRO-97"}
+@string{MICRO97addr = "San Jose, CA" = ""}
+@string{MICRO99 = "Proceedings of the 32nd Annual International Symposium
+                  on Microarchitecture (MICRO-99)" = "MICRO-99"}
+@string{MICRO99addr = ""}
+@string{MICRO99date = nov}
+@string{MICRO2004 = "Proceedings of the 37th Annual {IEEE}/{ACM} International Symposium on Microarchitecture" = "MICRO-37"}
+@string{MICRO2004addr = "Portland, OR, USA" = ""}
+@string{MICRO2004date = dec # "~4--8," = dec}
+@string{MICRO2006 = "Proceedings of the 39th Annual {IEEE}/{ACM} International Symposium on Microarchitecture" = "MICRO-39"}
+@string{MICRO2006addr = "Orlando, FL, USA" = ""}
+@string{MICRO2006date = dec # "~9--13," = dec}
+
+@string{ML2006 = "ML '06: Proceedings of the 2006 workshop on ML" = "ML"}
+@string{ML2006addr = "Portland, OR, USA" = ""}
+@string{ML2006date = sep # "~16," = sep}
+
+@string{MobiSys2011 = "Proceedings of the 9th International Conference on Mobile Systems, Applications, and Services" = "MobiSys"}
+@string{MobiSys2011addr = "Bethesda, MD, USA" = ""}
+@string{MobiSys2011date = jun # "~29--" # jul # "~1," = jun}
+@string{MobiSys2012 = "Proceedings of the 10th International Conference on Mobile Systems, Applications, and Services" = "MobiSys"}
+@string{MobiSys2012addr = "Low Wood Bay, UK" = ""}
+@string{MobiSys2012date = jun # "~26--28," = jun}
+
+@string{MSR2007 = "MSR 2007: International Workshop on Mining Software
+		Repositories" = "MSR 2007"}
+@string{MSR2007addr = ICSE2007addr}
+@string{MSR2007date = may # "~19--20," = may}
+
+@string{MSR2008 = "MSR 2008: 5th Working Conference on Mining Software 
+                Repositories" = "MSR 2008"}
+@string{MSR2008addr = "Leipzig, Germany" = ""}
+@string{MSR2008date = may # "~10--11," = may}
+
+@string{MTOOS2006 = "M-TOOS 2006: 1st Workshop on Model-Based Testing and Object-Oriented
+		Systems" = "M-TOOS"}
+@string{MTOOS2006addr = "Portland, OR, USA" = ""}
+@string{MTOOS2006date = oct # "~23," = oct}
+
+@string{NDSS2005 = "Annual Symposium on Network and Distributed System Security" = "NDSS"}
+@string{NDSS2005addr = "San Diego, CA, USA" = ""}
+@string{NDSS2005date = feb # "~3--4," = feb}
+@string{NDSS2006 = "13th Annual Symposium on Network and Distributed System Security" = "NDSS"}
+@string{NDSS2006addr = "San Diego, CA, USA" = ""}
+@string{NDSS2006date = feb # "~2--3," = feb}
+@string{NDSS2011 = "18th Annual Symposium on Network and Distributed System Security" = "NDSS"}
+@string{NDSS2011addr = "San Diego, CA, USA" = ""}
+@string{NDSS2011date = feb # "~7--9," = feb}
+@string{NDSS2012 = "18th Annual Symposium on Network and Distributed System Security" = "NDSS"}
+@string{NDSS2012addr = "San Diego, CA, USA" = ""}
+@string{NDSS2012date = feb # "~6--8," = feb}
+
+@string{NSDI2007 = "4th USENIX Symposium on Networked Systems Design and Implementation" = "NSDI"}
+@string{NSDI2007addr = "Cambridge, MA, USA" = ""}
+@string{NSDI2007date = apr # "~11--13," = apr}
+@string{NSDI2010 = "7th USENIX Symposium on Networked Systems Design and Implementation" = "NSDI"}
+@string{NSDI2010addr = "Boston, MA, USA" = ""}
+@string{NSDI2010date = mar # "~30--" # apr # "~1," = mar # "/" # apr}
+
+@string{NSPW99 = "Proceedings of the 1999 New Security Paradigms Workshop" = "NSPW"}
+@string{NSPW99addr = "Caledon Hills, ON, Canada" = ""}
+@string{NSPW99date = sep # "~22--24," = sep}
+@string{NSPW2003 = "Proceedings of the 2003 New Security Paradigms Workshop" = "NSPW"}
+@string{NSPW2003addr = "Ascona, Switzerland" = ""}
+@string{NSPW2003date = aug # "~18--21," = aug}
+
+@string{oopsla86 = "Conference on Object-Oriented Programming
+                  Systems, Languages and Applications" = "OOPSLA"}
+@string{oopsla86addr = "Portland, OR, USA" = ""}
+@string{oopsla86date = jun}
+@string{oopsla87 = "Conference on Object-Oriented Programming
+                  Systems, Languages and Applications" = "OOPSLA"}
+@string{oopsla87addr = "Orlando, FL, USA" = ""}
+@string{oopsla87date = oct}
+@string{OOPSLA89 = "Conference on Object-Oriented Programming, Systems,
+		 Languages, and Applications" = "OOPSLA"}
+@string{OOPSLA89addr = "New Orleans, LA, USA" = ""}
+@string{OOPSLA89date = oct # "~1--6," = oct}
+@string{oopsla90 = "Conference on Object-Oriented Programming, Systems,
+                  Languages, and Applications and 4th European Conference
+                  on Object-Oriented Programming (OOPSLA/ECOOP '90)"
+		= "OOPSLA/ECOOP"}
+@string{oopsla90addr = "Ottawa, Canada" = ""}
+@string{oopsla90date = oct # "~21--25,"}
+@string{OOPSLA91 = "Conference on Object-Oriented Programming, Systems,
+		 Languages, and Applications" = "OOPSLA"}
+@string{OOPSLA91addr = "Phoeniz, AZ, USA" = ""}
+@string{OOPSLA91date = oct}
+@string{OOPSLA93 = "Conference on Object-Oriented Programming, Systems,
+		 Languages, and Applications" = "OOPSLA"}
+@string{OOPSLA93addr = "Washington, DC, USA" = ""}
+@string{OOPSLA93date = sep}
+@string{OOPSLA94 = "Conference on Object-Oriented Programming, Systems,
+		 Languages, and Applications" = "OOPSLA"}
+@string{OOPSLA94addr = "Portland, OR, USA" = ""}
+@string{OOPSLA94date = oct}
+@string{OOPSLA95 = "Conference on Object-Oriented Programming, Systems,
+		 Languages, and Applications" = "OOPSLA"}
+@string{OOPSLA95addr = "Austin, TX, USA" = ""}
+@string{OOPSLA95date = oct}
+@string{OOPSLA96 = "Conference on Object-Oriented Programming, Systems,
+		 Languages, and Applications" = "OOPSLA"}
+@string{OOPSLA96addr = "San Jose, CA, USA" = ""}
+@string{OOPSLA96date = oct # "~6--10," = oct}
+@string{oopsla97 = "Conference on Object-Oriented Programming, Systems,
+		 Languages, and Applications" = "OOPSLA"}
+@string{oopsla97addr = "Atlanta, GA, USA" = ""}
+@string{oopsla97date = oct # "~7--9," = oct}
+@string{OOPSLA98 = "Object-Oriented Programming Systems, Languages, and
+		  Applications (OOPSLA '98)" = "OOPSLA"}
+@string{oopsla98date = oct # "~20--22," = oct}
+@string{oopsla98addr = "Vancouver, BC, Canada" = ""}
+@string{OOPSLA99 = "Object-Oriented Programming Systems, Languages, and
+		  Applications (OOPSLA '99)" = "OOPSLA"}
+@string{oopsla99date = nov # "~3--5," = nov}
+@string{oopsla99addr = "Denver, Colorado" = ""}
+@string{OOPSLA2000 = "Object-Oriented Programming Systems, Languages, and
+		  Applications (OOPSLA 2000)" = "OOPSLA"}
+@string{OOPSLA2000companion = "Companion to Object-Oriented Programming Systems, Languages, and
+		  Applications (OOPSLA 2000)" = "OOPSLA Companion"}
+@string{OOPSLA2000date = oct # "~15--19," = oct}
+@string{OOPSLA2000addr = "Minneapolis, MN, USA" = ""}
+@string{OOPSLA2001 = "Object-Oriented Programming Systems, Languages, and
+		  Applications (OOPSLA 2001)" = "OOPSLA"}
+@string{OOPSLA2001date = oct # "~14--18," = oct}
+@string{OOPSLA2001addr = "Tampa Bay, FL, USA" = ""}
+@string{OOPSLA2002 = "Object-Oriented Programming Systems, Languages, and
+		  Applications (OOPSLA 2002)" = "OOPSLA"}
+@string{OOPSLA2002date = oct # "~28--30," = oct}
+@string{OOPSLA2002addr = "Seattle, WA, USA" = ""}
+@string{OOPSLA2003 = "Object-Oriented Programming Systems, Languages, and
+		  Applications (OOPSLA 2003)" = "OOPSLA"}
+@string{OOPSLA2003date = nov # "~6--8," = nov}
+@string{OOPSLA2003addr = "Anaheim, CA, USA" = ""}
+@string{OOPSLA2004 = "Object-Oriented Programming Systems, Languages, and
+		  Applications (OOPSLA 2004)" = "OOPSLA"}
+@string{OOPSLA2004companion = "Companion to Object-Oriented Programming Systems, Languages, and
+		  Applications (OOPSLA 2004)" = "OOPSLA Companion"}
+@string{OOPSLA2004date = oct # "~26--28," = oct}
+@string{OOPSLA2004addr = "Vancouver, BC, Canada" = ""}
+@string{OOPSLA2005 = "Object-Oriented Programming Systems, Languages, and
+		  Applications (OOPSLA 2005)" = "OOPSLA"}
+@string{OOPSLA2005companion = "Companion to Object-Oriented Programming Systems, Languages, and
+		  Applications (OOPSLA 2005)" = "OOPSLA Companion"}
+@string{OOPSLA2005date = oct # "~18--20," = oct}
+@string{OOPSLA2005addr = "San Diego, CA, USA" = ""}
+@string{OOPSLA2006 = "Object-Oriented Programming Systems, Languages, and
+		  Applications (OOPSLA 2006)" = "OOPSLA"}
+@string{OOPSLA2006companion = "Companion to Object-Oriented Programming Systems, Languages, and
+		  Applications (OOPSLA 2006)" = "OOPSLA Companion"}
+@string{OOPSLA2006date = oct # "~24--26," = oct}
+@string{OOPSLA2006addr = "Portland, OR, USA" = ""}
+@string{OOPSLA2007 = "Object-Oriented Programming Systems, Languages, and
+		  Applications (OOPSLA 2007)" = "OOPSLA"}
+@string{OOPSLA2007companion = "Companion to Object-Oriented Programming Systems, Languages, and
+		  Applications (OOPSLA 2007)" = "OOPSLA Companion"}
+@string{OOPSLA2007date = oct # "~23--25," = oct}
+@string{OOPSLA2007addr = "Montr{\'e}al, Canada" = ""}
+@string{OOPSLA2008 = "Object-Oriented Programming Systems, Languages, and
+		  Applications (OOPSLA 2008)" = "OOPSLA"}
+@string{OOPSLA2008companion = "Companion to Object-Oriented Programming Systems, Languages, and
+		  Applications (OOPSLA 2008)" = "OOPSLA Companion"}
+@string{OOPSLA2008date = oct # "~21--23," = oct}
+@string{OOPSLA2008addr = "Nashville, TN, USA" = ""}
+@string{OOPSLA2009 = "Object-Oriented Programming Systems, Languages, and
+		  Applications (OOPSLA 2009)" = "OOPSLA"}
+@string{OOPSLA2009companion = "Companion to Object-Oriented Programming Systems, Languages, and
+		  Applications (OOPSLA 2009)" = "OOPSLA Companion"}
+@string{OOPSLA2009date = oct # "~27--29," = oct}
+@string{OOPSLA2009addr = "Orlando, FL, USA" = ""}
+@string{OOPSLA2010 = "Object-Oriented Programming Systems, Languages, and
+		  Applications (OOPSLA 2010)" = "OOPSLA"}
+@string{OOPSLA2010companion = "Companion to Object-Oriented Programming Systems, Languages, and
+		  Applications (OOPSLA 2010)" = "OOPSLA Companion"}
+@string{OOPSLA2010date = oct # "~19--21," = oct}
+@string{OOPSLA2010addr = "Revo, NV, USA" = ""}
+@string{OOPSLA2011 = "Object-Oriented Programming Systems, Languages, and
+		  Applications (OOPSLA 2011)" = "OOPSLA"}
+@string{OOPSLA2011companion = "Companion to Object-Oriented Programming Systems, Languages, and
+		  Applications (OOPSLA 2011)" = "OOPSLA Companion"}
+@string{OOPSLA2011date = oct # "~25-27," = oct}
+@string{OOPSLA2011addr = "Portland, OR, USA" = ""}
+@string{OOPSLA2012 = "Object-Oriented Programming Systems, Languages, and
+		  Applications (OOPSLA 2012)" = "OOPSLA"}
+@string{OOPSLA2012companion = "Companion to Object-Oriented Programming Systems, Languages, and
+		  Applications (OOPSLA 2012)" = "OOPSLA Companion"}
+@string{OOPSLA2012date = oct # "~23-25," = oct}
+@string{OOPSLA2012addr = "Tucson, AZ, USA" = ""}
+
+@string{Onward2010 = "Onward!"}
+
+@string{OSDI96 = "USENIX 2nd Symposium on OS Design and Implementation" = "OSDI"}
+@string{OSDI96date = oct # "~29--31," = oct}
+@string{OSDI96addr = "Seattle, WA, USA" = ""}
+@string{OSDI2002 = "USENIX 5th Symposium on OS Design and Implementation" = "OSDI"}
+@string{OSDI2002date = dec # "~9--11," = dec}
+@string{OSDI2002addr = "Boston, MA, USA" = ""}
+@string{OSDI2006 = "USENIX 7th Symposium on OS Design and Implementation" = "OSDI"}
+@string{OSDI2006date = nov # "~6--8," = nov}
+@string{OSDI2006addr = "Seattle, WA, USA" = ""}
+@string{OSDI2008 = "USENIX 8th Symposium on OS Design and Implementation" = "OSDI"}
+@string{OSDI2008date = dec # "~8--10," = dec}
+@string{OSDI2008addr = "San Diego, CA, USA" = ""}
+@string{OSDI2010 = "USENIX 9th Symposium on OS Design and Implementation" = "OSDI"}
+@string{OSDI2010date = oct # "~4--6," = oct}
+@string{OSDI2010addr = "Vancouver, BC, Canada" = ""}
+
+@string{OSR = "SIGOPS Operating Systems Review" = "SIGOPS Oper. Syst. Rev."}
+
+@string{PACT2001 = "10th International Conference on Parallel Architectures and Compilation Techniques" = "PACT"}
+@string{PACT2001date = sep # "~10--12," = sep}
+@string{PACT2001addr = "Barcelona, Spain" = ""}
+@string{PACT2003 = "12th International Conference on Parallel Architectures and Compilation Techniques" = "PACT"}
+@string{PACT2003date = sep # "~27--" # oct # "~1," = sep # "/" # oct}
+@string{PACT2003addr = "New Orleans, LA, USA" = ""}
+
+@string{PADD88 = "PADD '88: Proceedings of the 1988 ACM SIGPLAN and SIGOPS workshop on Parallel and Distributed Debugging" = "PADD"}
+@string{PADD88date = nov}
+@string{PADD88addr = "Madison, WI, USA" = ""}
+
+@string{PADL2002 = "4th Internation Symposium on Practical Aspects of Declarative Languages (PADL '02)" = "PADL"}
+@string{PADL2002date = jan # "~19-20" = jan}
+@string{PADL2002addr = "Portland, OR, USA" = ""}
+
+@string{PASTE98 = "ACM SIGPLAN/SIGSOFT Workshop on Program Analysis for
+		  Software Tools and Engineering (PASTE '98)" = "PASTE"}
+@string{PASTE98date = jun # "~16," = jun}
+@string{PASTE98addr = Montreal = ""}
+@string{PASTE99 = "ACM SIGPLAN/SIGSOFT Workshop on Program Analysis for
+		  Software Tools and Engineering (PASTE '99)" = "PASTE"}
+@string{PASTE99date = sep # "~6," = sep}
+@string{PASTE99addr = "Toulouse, France" = ""}
+@string{PASTE2001 = "ACM SIGPLAN/SIGSOFT Workshop on Program Analysis for
+		  Software Tools and Engineering (PASTE'01)" = "PASTE"}
+@string{PASTE2001addr = "Snowbird, Utah, USA" = ""}
+@string{PASTE2001date = jun # "~18--19," = jun}
+@string{PASTE2002 = "ACM SIGPLAN/SIGSOFT Workshop on Program Analysis for
+		  Software Tools and Engineering (PASTE'02)" = "PASTE"}
+@string{PASTE2002addr = "Charleston, SC, USA" = ""}
+@string{PASTE2002date = nov # "~18--19," = nov}
+@string{PASTE2004 = "ACM SIGPLAN/SIGSOFT Workshop on Program Analysis for
+		  Software Tools and Engineering (PASTE'04)" = "PASTE"}
+@string{PASTE2004addr = "Washington, DC, USA" = ""}
+@string{PASTE2004date = jun # "~7--8," = jun}
+@string{PASTE2005 = "ACM SIGPLAN/SIGSOFT Workshop on Program Analysis for
+		  Software Tools and Engineering (PASTE 2005)" = "PASTE"}
+@string{PASTE2005addr = "Lisbon, Portugal" = ""}
+@string{PASTE2005date = sep # "~5--6," = sep}
+@string{PASTE2007 = "ACM SIGPLAN/SIGSOFT Workshop on Program Analysis for
+		  Software Tools and Engineering (PASTE 2007)" = "PASTE"}
+@string{PASTE2007addr = "San Diego, CA, USA" = ""}
+@string{PASTE2007date = jun # "~13--14," = jun}
+
+@string{PATMOS2008 = "International Workshop on Power and Timing Modeling, Optimization, and Simulation" = "PATMOS"}
+@string{PATMOS2008addr = "Lisbon, Portugal" = ""}
+@string{PATMOS2008date = sep # "~10--12," = sep}
+
+@string{PCODA2005 = "1st Workshop on Program Comprehension through Dynamic
+		Analysis" = "PCODA"}
+@string{PCODA2005addr = "Pittsburgh, Pennsylvania, USA" = ""}
+@string{PCODA2005date = nov # "~10," = nov}
+
+@string{PEPM92 = "Proc.\ ACM SIGPLAN Workshop on Partial Evaluation and
+		 Semantics-Based Program Manipulation"}
+@string{PEPM95 = "Proc.\ ACM SIGPLAN Workshop on Partial Evaluation and
+		 Semantics-Based Program Manipulation"}
+@string{pepm95addr = "La Jolla, CA" = ""}
+@string{PEPM95date = jun # " 21--23," = jun}
+@string{PEPM97 = "Proc.\ ACM SIGPLAN Workshop on Partial Evaluation and
+		 Semantics-Based Program Manipulation"}
+@string{PEPM97addr = "Amsterdam, The Netherlands" = ""}
+Needed:
+@string{PEPM97date = jun}
+
+@string{PLAS2006 = "PLAS 2006: ACM SIGPLAN Workshop on Programming Languages and Analysis for Security" = "PLAS"}
+@string{PLAS2006addr = "Ottawa, Canada" = ""}
+@string{PLAS2006date = jun # "~10," = jun}
+@string{PLAS2007 = "PLAS 2007: ACM SIGPLAN Workshop on Programming Languages and Analysis for Security" = "PLAS"}
+@string{PLAS2007addr = "San Diego, California, USA" = ""}
+@string{PLAS2007date = jun # "~14," = jun}
+@string{PLAS2008 = "PLAS 2008: ACM SIGPLAN Workshop on Programming Languages and Analysis for Security" = "PLAS"}
+@string{PLAS2008addr = "Tucson, Arizona, USA" = ""}
+@string{PLAS2008date = jun # "~8," = jun}
+@string{PLAS2009 = "PLAS 2009: ACM SIGPLAN Workshop on Programming Languages and Analysis for Security" = "PLAS"}
+@string{PLAS2009addr = "Dublin, Ireland" = ""}
+@string{PLAS2009date = jun # "~15," = jun}
+
+%% PLDI (formerly known as Compiler Construction)
+@STRING{CC82 = "Proceedings of the SIGPLAN '82 Symposium on
+                Compiler Construction"}
+@STRING{CC84 = "Proceedings of the ACM SIGPLAN '84 Symposium on 
+		Compiler Construction"}
+@STRING{CC84addr = Montreal = ""}
+@STRING{CC84date = jun # "~17--22," = jun}
+@STRING{CC86 = "Proceedings of the ACM SIGPLAN '86 Conference on
+		Compiler Construction"}
+@string{SOCC89 = "Proceedings of the SIGPLAN'89 Symposium on Compiler
+		 Construction"}
+@string{PLDI88 = "PLDI 1988, Proceedings of the SIGPLAN '88 Conference on
+		 Programming Language Design and Implementation" = "PLDI"}
+@string{PLDI88addr = "Atlanta, GA, USA" = ""}
+@string{PLDI88date = jun}
+@string{PLDI89 = "PLDI 1989, Proceedings of the ACM SIGPLAN 1989 Conference on
+		 Programming Language Design and Implementation" = "PLDI"}
+@string{PLDI89addr = "Portland, OR, USA"}
+@string{PLDI89date = jun # "~19--23," = jun}
+@string{PLDI90 = "PLDI 1990, Proceedings of the SIGPLAN '90 Conference on
+		 Programming Language Design and Implementation" = "PLDI"}
+@string{PLDI90addr = "White Plains, NY, USA" = ""}
+@string{PLDI90date = jun # "~20--22," = jun}
+@string{PLDI91 = "PLDI 1991, Proceedings of the SIGPLAN '91 Conference on
+		 Programming Language Design and Implementation" = "PLDI"}
+@string{PLDI91addr = "Toronto, ON, Canada" = ""}
+@string{PLDI91date = jun # "~26--28," = jun}
+@string{PLDI92 = "PLDI 1992, Proceedings of the SIGPLAN '92 Conference on
+		 Programming Language Design and Implementation" = "PLDI"}
+@string{PLDI92addr = "San Francisco, CA, USA" = ""}
+@string{PLDI92date = jun # "~17--19," = jun}
+@string{PLDI93 = "PLDI 1993, Proceedings of the SIGPLAN '93 Conference on
+		 Programming Language Design and Implementation" = "PLDI"}
+@string{PLDI93addr = "Albuquerque, NM, USA" = ""}
+@string{PLDI93date = jun # "~23--25," = jun}
+@string{PLDI94 = "PLDI 1994, Proceedings of the SIGPLAN '94 Conference on
+		 Programming Language Design and Implementation" = "PLDI"}
+@string{pldi94addr = "Orlando, FL, USA" = ""}
+@string{pldi94date = jun # "~20--24," = jun}
+@string{PLDI95 = "PLDI 1995, Proceedings of the SIGPLAN '95 Conference on
+		 Programming Language Design and Implementation" = "PLDI"}
+@string{pldi95addr = "La Jolla, CA, USA" = ""}
+@string{pldi95date = jun # "~18--21," = jun}
+@string{PLDI96 = "PLDI 1996, Proceedings of the SIGPLAN '96 Conference on
+		 Programming Language Design and Implementation" = "PLDI"}
+@string{PLDI96addr = "Philadelphia, PA, USA" = ""}
+@string{PLDI96date = may # "~21--24," = may}
+@string{PLDI97 = "PLDI 1997, Proceedings of the SIGPLAN '97 Conference on
+		 Programming Language Design and Implementation" = "PLDI"}
+@string{pldi97addr = "Las Vegas, NV, USA" = ""}
+@string{PLDI97date = jun # "~15--18," = jun}
+@string{PLDI98 = "PLDI 1998, Proceedings of the {ACM} {SIGPLAN}'98 Conference on
+                 Programming Language Design and Implementation" = "PLDI"}
+@string{pldi98addr = Montreal = ""}
+@string{pldi98date = jun # "~17--19" = jun}
+@string{PLDI99 = "PLDI 1999, Proceedings of the {ACM} {SIGPLAN} '99 Conference on
+                 Programming Language Design and Implementation" = "PLDI"}
+@string{pldi99addr = "Atlanta, GA, USA" = ""}
+@string{PLDI99date = may # "~1--4," = jun}
+@string{PLDI2000 = "PLDI 2000, Proceedings of the {ACM} {SIGPLAN} 2000 Conference on
+                 Programming Language Design and Implementation" = "PLDI"}
+@string{pldi2000addr = "Vancouver, BC, Canada" = ""}
+@string{PLDI2000date = jun # "~18--23," = jun}
+@string{PLDI2001 = "PLDI 2001, Proceedings of the {ACM} {SIGPLAN} 2001 Conference on
+                 Programming Language Design and Implementation" = "PLDI"}
+@string{pldi2001addr = "Snowbird, UT, USA" = ""}
+@string{PLDI2001date = jun # "~20--22," = jun}
+@string{PLDI2002 = "PLDI 2002, Proceedings of the {ACM} {SIGPLAN} 2002 Conference on
+                 Programming Language Design and Implementation" = "PLDI"}
+@string{PLDI2002addr = "Berlin, Germany" = ""}
+@string{PLDI2002date = jun # "~17--19," = jun}
+@string{PLDI2003 = "PLDI 2003, Proceedings of the {ACM} {SIGPLAN} 2003 Conference on
+                 Programming Language Design and Implementation" = "PLDI"}
+@string{PLDI2003addr = "San Diego, CA, USA" = ""}
+@string{PLDI2003date = jun # "~9--11," = jun}
+@string{PLDI2004 = "PLDI 2004, Proceedings of the {ACM} {SIGPLAN} 2004 Conference on
+                 Programming Language Design and Implementation" = "PLDI"}
+@string{PLDI2004addr = "Washington, DC, USA" = ""}
+@string{PLDI2004date = jun = jun}
+@string{PLDI2005 = "PLDI 2005, Proceedings of the {ACM} {SIGPLAN} 2005 Conference on
+                 Programming Language Design and Implementation" = "PLDI"}
+@string{PLDI2005addr = "Chicago, IL, USA" = ""}
+@string{PLDI2005date = jun # "~13--15," = jun}
+@string{PLDI2006 = "PLDI 2006, Proceedings of the {ACM} {SIGPLAN} 2006 Conference on
+                 Programming Language Design and Implementation" = "PLDI"}
+@string{PLDI2006addr = "Ottawa, Canada" = ""}
+@string{PLDI2006date = jun # "~12--14," = jun}
+@string{PLDI2007 = "PLDI 2007, Proceedings of the {ACM} {SIGPLAN} 2007 Conference on
+                 Programming Language Design and Implementation" = "PLDI"}
+@string{PLDI2007addr = "San Diego, CA, USA" = ""}
+@string{PLDI2007date = jun # "~11--13," = jun}
+@string{PLDI2008 = "PLDI 2008, Proceedings of the {ACM} {SIGPLAN} 2008 Conference on
+                 Programming Language Design and Implementation" = "PLDI"}
+@string{PLDI2008addr = "Tucson, AZ, USA" = ""}
+@string{PLDI2008date = jun # "~9--11," = jun}
+@string{PLDI2009 = "PLDI 2009, Proceedings of the {ACM} {SIGPLAN} 2009 Conference on
+                 Programming Language Design and Implementation" = "PLDI"}
+@string{PLDI2009addr = "Dublin, Ireland" = ""}
+@string{PLDI2009date = jun # "~16--18," = jun}
+@string{PLDI2010 = "PLDI 2010, Proceedings of the {ACM} {SIGPLAN} 2010 Conference on
+                 Programming Language Design and Implementation" = "PLDI"}
+@string{PLDI2010addr = "Toronto, Canada" = ""}
+@string{PLDI2010date = jun # "~7--9," = jun}
+@string{PLDI2013 = "PLDI 2013, Proceedings of the {ACM} {SIGPLAN} 2013 Conference on
+                 Programming Language Design and Implementation" = "PLDI"}
+@string{PLDI2013addr = "Seattle, WA, USA" = ""}
+@string{PLDI2013date = jun # "~17--19," = jun}
+
+@string{PLID2005 = "2nd International Workshop on Programming Language Interference and Dependence" = "PLID"}
+@string{PLID2005addr = "London, UK" = ""}
+@string{PLID2005date = sep # "~6," = sep}
+
+@string{PODC84 = "PODC '84: Proceedings of the third annual ACM symposium
+                  on Principles of distributed computing" = "PODC"}
+@string{PODC84addr = "Vancouver, BC, Canada" = ""}
+@string{PODC84date = aug # "~27--29," = aug}
+@string{PODC87 = "Proceedings of the 6th Annual {ACM} Symposium on
+                 Principles of Distributed Computing ({PODC})" = "PODC"}
+
+
+% Does "Annual" belong in POPL77?
+% Should all of the "Proceedings" be "Conference Record"?
+@STRING{POPL73 = "Conference Record of the ACM Symposium on Principles of
+		 Programming Languages" = "POPL"}
+@STRING{POPL76 = "Conference Record of the Third ACM Symposium on Principles
+		 of Programming Languages" = "POPL"}
+@string{POPL77 = "Proceedings of the Fourth Annual ACM Symposium on
+		 Principles of Programming Languages" = "POPL"}
+@string{POPL77addr = "Los Angeles, CA" = ""}
+@string{POPL78 = "Proceedings of the Fifth Annual ACM Symposium on
+		 Principles of Programming Languages" = "POPL"}
+@string{POPL79 = "Proceedings of the Sixth Annual ACM Symposium on
+		 Principles of Programming Languages" = "POPL"}
+@string{POPL80 = "Proceedings of the Seventh Annual ACM Symposium on
+		 Principles of Programming Languages" = "POPL"}
+@string{POPL80addr = "Las Vegas, Nevada" = ""}
+@string{POPL81 = "Proceedings of the Eighth Annual ACM Symposium on
+		 Principles of Programming Languages" = "POPL"}
+@string{POPL82 = "Proceedings of the Ninth Annual ACM Symposium on
+		 Principles of Programming Languages" = "POPL"}
+@string{POPL83 = "Proceedings of the Tenth Annual ACM Symposium on
+		 Principles of Programming Languages" = "POPL"}
+@string{POPL84 = "Proceedings of the Eleventh Annual ACM Symposium on
+		 Principles of Programming Languages" = "POPL"}
+@string{POPL85 =  "Proceedings of the Twelfth Annual ACM Symposium on
+		 Principles of Programming Languages" = "POPL"}
+@string{POPL86 = "Proceedings of the Thirteenth Annual ACM Symposium
+		 on Principles of Programming Languages" = "POPL"}
+@string{POPL87 = "Proceedings of the Fourteenth Annual ACM Symposium
+		 on Principles of Programming Languages" = "POPL"}
+@string{POPL88 = "Proceedings of the Fifteenth Annual ACM Symposium
+		 on Principles of Programming Languages" = "POPL"}
+@string{POPL88addr = "San Diego, CA" = ""}
+@string{POPL88date = jan}
+@string{POPL89 = "Proceedings of the Sixteenth Annual ACM Symposium
+		 on Principles of Programming Languages" = "POPL"}
+@string{POPL89addr = "Autstin, TX, USA" = ""}
+@string{POPL89date = jan}
+@string{POPL90 = "Proceedings of the Seventeenth Annual ACM Symposium
+		 on Principles of Programming Languages" = "POPL"}
+@string{POPL90addr = "San Francisco, CA, USA" = ""}
+@string{POPL90date = jan}
+@string{POPL91 = "Proceedings of the Eighteenth Annual ACM Symposium
+		 on Principles of Programming Languages" = "POPL"}
+@string{POPL91addr = "Orlando, FL" = ""}
+@string{POPL91date = jan}
+@string{POPL92 = "Proceedings of the Nineteenth Annual ACM Symposium
+		 on Principles of Programming Languages" = "POPL"}
+@string{POPL93 = "Proceedings of the Twentieth Annual ACM SIGPLAN-SIGACT
+		 Symposium on Principles of Programming Languages" = "POPL"}
+@string{popl93addr = "Charleston, SC, USA" = ""}
+@string{popl93date = jan}
+% Note the change to numbered, rather than spelled out, ordinals.
+@string{POPL94 = "Proceedings of the 21st Annual ACM SIGPLAN-SIGACT
+                 Symposium on Principles of Programming Languages" = "POPL"}
+@string{popl94addr = "Portland, OR" = ""}
+@string{POPL95 = "Proceedings of the 22nd Annual ACM SIGPLAN-SIGACT
+		 Symposium on Principles of Programming Languages" = "POPL"}
+@string{popl95addr = "San Francisco, CA" = ""}
+@string{popl95date = jan # "~23--25," = jan}
+@string{POPL96 = "Proceedings of the 23rd Annual ACM SIGPLAN-SIGACT
+		 Symposium on Principles of Programming Languages" = "POPL"}
+@string{popl96addr = "St.\ Petersburg Beach, FL" = ""}
+@string{POPL96date = jan # "~21--24," = jan}
+@string{POPL97 = "Proceedings of the 24th Annual ACM SIGPLAN-SIGACT
+		 Symposium on Principles of Programming Languages" = "POPL"}
+@string{popl97addr = "Paris, France" = ""}
+@string{popl97date = jan # "~15--17," = jan}
+@string{POPL98 = "Proceedings of the 25th Annual ACM SIGPLAN-SIGACT
+		 Symposium on Principles of Programming Languages" = "POPL"}
+@string{popl98addr = "San Diego, CA" = ""}
+@string{popl98date = jan # "~19--21," = jan}
+@string{POPL99 = "Proceedings of the 26th Annual ACM SIGPLAN-SIGACT
+		 Symposium on Principles of Programming Languages" = "POPL"}
+@string{popl99addr = "San Antonio, TX" = ""}
+@string{POPL99date = jan # "~20--22," = jan}
+@string{POPL2000 = "Proceedings of the 27th Annual ACM SIGPLAN-SIGACT
+		 Symposium on Principles of Programming Languages" = "POPL"}
+@string{POPL2000addr = "Boston, MA, USA" = ""}
+@string{POPL2000date = jan # " 19--21," = jan}
+@string{POPL2001 = "Proceedings of the 28th Annual ACM SIGPLAN-SIGACT
+		 Symposium on Principles of Programming Languages" = "POPL"}
+@string{POPL2001addr = "London, UK" = ""}
+@string{POPL2001date = jan # " 17--19," = jan}
+@string{POPL2002 = "Proceedings of the 29th Annual ACM SIGPLAN-SIGACT
+		 Symposium on Principles of Programming Languages" = "POPL"}
+@string{POPL2002date = jan # "~16--18," = jan}
+@string{POPL2002addr = "Portland, Oregon" = ""}
+@string{POPL2003 = "Proceedings of the 30th Annual ACM SIGPLAN-SIGACT
+		 Symposium on Principles of Programming Languages" = "POPL"}
+@string{POPL2003date = jan # "~15--17," = jan}
+@string{POPL2003addr = "New Orleans, LA" = ""}
+@string{POPL2004 = "Proceedings of the 31st Annual ACM SIGPLAN-SIGACT
+		 Symposium on Principles of Programming Languages" = "POPL"}
+@string{POPL2004date = jan # "~14--16," = jan}
+@string{POPL2004addr = "Venice, Italy" = ""}
+@string{POPL2005 = "Proceedings of the 32nd Annual ACM SIGPLAN-SIGACT
+		 Symposium on Principles of Programming Languages" = "POPL"}
+@string{POPL2005date = jan # "~12--14," = jan}
+@string{POPL2005addr = "Long Beach, CA, USA" = ""}
+@string{POPL2006 = "Proceedings of the 33rd Annual ACM SIGPLAN-SIGACT
+                 Symposium on Principles of Programming Languages"= "POPL"}
+@string{POPL2006date = jan # "~11--13," = jan}
+@string{POPL2006addr = "Charleston, SC, USA" = ""}
+@string{POPL2007 = "Proceedings of the 34th Annual ACM SIGPLAN-SIGACT
+                 Symposium on Principles of Programming Languages"= "POPL"}
+@string{POPL2007date = jan # "~17--19," = jan}
+@string{POPL2007addr = "Nice, France" = ""}
+@string{POPL2008 = "Proceedings of the 35th Annual ACM SIGPLAN-SIGACT
+                 Symposium on Principles of Programming Languages"= "POPL"}
+@string{POPL2008date = jan # "~10--12," = jan}
+@string{POPL2008addr = "San Francisco, CA, USA" = ""}
+@string{POPL2010 = "Proceedings of the 37th Annual ACM SIGPLAN-SIGACT
+                 Symposium on Principles of Programming Languages"= "POPL"}
+@string{POPL2010date = jan # "~20--22," = jan}
+@string{POPL2010addr = "Madrid, Spain" = ""}
+
+@string{PPOPP99 = "Proceedings of the 7th ACM SIGPLAN Symposium on
+		Principles and Practice of Parallel Programming (PPOPP'99)"
+		= "PPOPP"}
+@string{PPOPP99addr = "Atlanta, Georgia" = ""}
+@string{PPOPP99date = may # "~4--6" = may}
+@string{PPOPP2001 = "Proceedings of the 8th ACM SIGPLAN Symposium on
+		Principles and Practice of Parallel Programming"
+		= "PPOPP"}
+@string{PPOPP2001addr = "Snowbird, Utah" = ""}
+@string{PPOPP2001date = jun # "~18--20" = jun}
+@string{PPOPP2003 = "Proceedings of the 9th ACM SIGPLAN Symposium on
+		Principles and Practice of Parallel Programming"
+		= "PPOPP"}
+@string{PPOPP2003addr = "San Diego, CA, USA" = ""}
+@string{PPOPP2003date = jul # "~11--13" = jul}
+@string{PPOPP2005 = "Proceedings of the ACM SIGPLAN Symposium on
+		Principles and Practice of Parallel Programming"
+		= "PPOPP"}
+@string{PPOPP2005addr = "Chicago, IL, USA" = ""}
+@string{PPOPP2005date = jun # "~15--17" = jun}
+
+@string{PPL2004 = "6th JSSST Workshop on Programming and Programming Languages (PPL2004)" = "PPL"}
+@string{PPL2004addr = "Gamagohri, Aichi, Japan" = ""}
+@string{PPL2004date = mar # "~11--13," = mar}
+
+@string{PPPJ2006 = "Proceedings of the 4th International Symposium on Principles and Practice of Programming in Java" = "PPPJ"}
+@string{PPPJ2006addr = "Mannheim, Germany" = ""}
+@string{PPPJ2006date = aug # "~30--" # sep # "~1," = aug # "/" # sep}
+
+@string{Python2000 = "International Python Conference" = "Int'l Python Conf."}
+
+@string{QAPL2001 = "Proceedings of the Workshop on Quantitative Aspects of Programming Languages (ENTCS 59)" = "QAPL"}
+@string{QAPL2001date = sep # "~7," = sep}
+@string{QAPL2001addr = "Florence, Italy" = ""}
+% Some sources give this location as "Firenze", which is the Italian
+% name for Florence, but we prefer English place names.
+@string{QAPL2004 = "Proceedings of the 2nd Workshop on Quantitative Aspects of Programming Languages (ENTCS 112)" = "QAPL"}
+@string{QAPL2004date = mar # "~27--28," = mar}
+@string{QAPL2004addr = "Barcelona, Spain" = ""}
+
+@string{QSIC2005 = "QSIC 2005: Quality Software International Conference" = "QSIC"}
+
+@string{REM2007 = "The First International Workshop on Run Time Enforcement for Mobile and Distributed Systems" = "REM"}
+@string{REM2007date = sep # "~27," = sep}
+@string{REM2007addr = "Dresden, Germany" = ""}
+
+@string{RTA89 = "Proceedings of the 3rd International Conference on
+                  Rewriting Techniques and Applications" = "RTA-89"}
+@string{RTA89addr = "Chapel Hill, NC" = ""}
+@string{RTA89date = apr}
+
+@string{RV2001 = "Proceedings of RV'01, First Workshop on Runtime Verification"
+		= "RV"}
+@string{RV2003 = "Proceedings of the Third Workshop on Runtime Verification"
+		= "RV"}
+@string{RV2003addr = "Boulder, CO, USA" = ""}
+@string{RV2003date = jul # "~13," = jul}
+@string{RV2007 = "Proceedings of the Seventh Workshop on Runtime Verification"
+		= "RV"}
+@string{RV2007addr = "Vancouver, BC, Canada" = ""}
+@string{RV2007date = mar # "~13," = jul}
+
+@string{SAC2000 = "Proceedings of the 2000 ACM Symposium on Applied Computing" = "SAC"}
+@string{SAC2000addr = "Como, Italy" = ""}
+@string{SAC2000date = mar # "~19--21," = mar}
+@string{SAC2004 = "Proceedings of the 2004 ACM Symposium on Applied Computing" = "SAC"}
+@string{SAC2004addr = "Nicosia, Cyprus" = ""}
+@string{SAC2004date = mar # "~14--17," = mar}
+@string{SAC2005 = "Proceedings of the 2005 ACM Symposium on Applied Computing" = "SAC"}
+@string{SAC2005addr = "Santa Fe, NM, USA" = ""}
+@string{SAC2005date = mar # "~14--17," = mar}
+@string{SAC2006 = "Proceedings of the 2006 ACM Symposium on Applied Computing" = "SAC"}
+@string{SAC2006addr = "Dijon, France" = ""}
+@string{SAC2006date = apr # "~24--27," = apr}
+@string{SAC2009 = "Proceedings of the 2009 ACM Symposium on Applied Computing" = "SAC"}
+@string{SAC2009addr = "Honolulu, Hawaii, USA" = ""}
+@string{SAC2009date = mar # "~9--12," = mar}
+@string{SAC2010 = "Proceedings of the 2010 ACM Symposium on Applied Computing" = "SAC"}
+@string{SAC2010addr = "Sierre, Switzerland" = ""}
+@string{SAC2010date = mar # "~23--26," = mar}
+@string{SAC2012 = "Proceedings of the 2012 ACM Symposium on Applied Computing" = "SAC"}
+@string{SAC2012addr = "Trento, Italy" = ""}
+@string{SAC2012date = mar # "~27--30," = mar}
+
+@string{SAS95 = "Proceedings of the Second International Symposium on
+		  Static Analysis, SAS '95" = "SAS"}
+@string{sas95addr = "Glasgow, UK" = ""}
+@string{sas95date = sep # "~25--27," = sep}
+@string{SAS96 = "Proceedings of the Third International Symposium on
+		  Static Analysis, SAS '96" = "SAS"}
+@string{sas96addr = "Aachen, Germany" = ""}
+@string{sas96date = sep # "~24--26," = sep}
+@string{SAS97 = "Proceedings of the Fourth International Symposium on
+		  Static Analysis, SAS '97" = "SAS"}
+@string{sas97addr = "Paris, France" = ""}
+@string{SAS97date = sep # "~8--10," = sep}
+@string{SAS98 = "Proceedings of the Fifth International Symposium on
+		  Static Analysis, SAS '98" = "SAS"}
+@string{sas98addr = "Pisa, Italy" = ""}
+@string{SAS2000 = "Proceedings of the Seventh International Symposium on
+		  Static Analysis, SAS 2000" = "SAS"}
+@string{SAS2000addr = "Santa Barbara, CA, USA" = ""}
+@string{SAS2000date = jun}
+@string{SAS2001 = "Proceedings of the Eighth International Symposium on
+		  Static Analysis, SAS 2001" = "SAS"}
+@string{SAS2001addr = "Paris, France" = ""}
+@string{SAS2001date = jul # " 16--18," = jul}
+@string{SAS2003 = "Proceedings of the Tenth International Symposium on
+		  Static Analysis, SAS 2003" = "SAS"}
+@string{SAS2003addr = "San Diego, CA, USA" = ""}
+@string{SAS2003date = jun # "~11--13," = jun}
+@string{SAS2005 = "Proceedings of the Twelfth International Symposium on
+		  Static Analysis, SAS 2005" = "SAS"}
+@string{SAS2005addr = "London, UK" = ""}
+@string{SAS2005date = sep # "~7--9," = sep}
+@string{SAS2007 = "Proceedings of the Fourteenth International Symposium on
+		  Static Analysis, SAS 2009" = "SAS"}
+@string{SAS2007addr = "Kongens Lyngby, Denmark" = ""}
+@string{SAS2007date = aug # "~22--24," = aug}
+
+@string{SAVCBS2004 = "SAVCBS 2004: Specification and Verification of
+                  Component-Based Systems" = "SAVCBS"}
+@string{SAVCBS2004addr = "Newport Beach, CA, USA" = ""}
+@string{SAVCBS2004date = oct # "~31--" # nov # "~1," = oct # "/" # nov}
+
+@string{SC1995 = "Proceedings of the 1995 ACM/IEEE conference on
+                  Supercomputing" = "SC1995"}
+@string{SC1995addr = "San Diego, CA, USA" = ""}
+@string{SC1995date = dec # "~4--8," = nov}
+@string{SC2001 = "Proceedings of the 2001 ACM/IEEE conference on
+                  Supercomputing" = "SC2001"}
+@string{SC2001addr = "Denver, CO, USA" = ""}
+@string{SC2001date = nov # "~10--16," = nov}
+
+@string{SCAM2003 = "Third IEEE International Workshop on Source Code Analysis and Manipulation (SCAM'03)" = "SCAM"}
+@string{SCAM2003addr = "Amsterdam, The Netherlands" = ""}
+@string{SCAM2003date = sep}
+@string{SCAM2009 = "Ninth IEEE International Workshop on Source Code Analysis and Manipulation (SCAM'09)" = "SCAM"}
+@string{SCAM2009addr = "Edmonton, Canada" = ""}
+@string{SCAM2009date = sep # "~20--21," = sep}
+
+@string{SEFM2005 = "Proceedings of the Third IEEE International Conference on Software Engineering and Formal Methods" = "SEFM"}
+@string{SEFM2005addr = "Koblenz, Germany" = ""}
+@string{SEFM2005date = sep # "~7--9," = sep}
+@string{SEFM2008 = "Proceedings of the Third IEEE International Conference on Software Engineering and Formal Methods" = "SEFM"}
+@string{SEFM2008addr = "Cape Town, South Africa" = ""}
+@string{SEFM2008date = nov # "~11--14," = nov}
+
+@string{SFP2006 = "Workshop on Scheme and Functional Programming (SFP)" = "SFP"}
+@string{SFP2006addr = "Portland, OR, USA" = ""}
+@string{SFP2006date = sep # "~17," = sep}
+
+@string{SLAML2010 = "Workshop on Managing Systems via Log Analysis and Machine Learning Techniques (SLAML '10)" = "SLAML"}
+@string{SLAML2010addr = "Vancouver, BC, Canada" = ""}
+@string{SLAML2010date = oct # "~3," = oct}
+@string{SLAML2011 = "Workshop on Managing Large-Scale Systems via the Analysis of System Logs and the Application of Machine Learning Techniques (SLAML '11)" = "SLAML"}
+@string{SLAML2011addr = "Cascais, Portugal" = ""}
+@string{SLAML2011date = oct # "~23," = oct}
+
+@string{SIIT87 = "Proceedings of the Symposium on Interpreters and Interpretive Techniques" = "SIIT"}
+@string{SIIT87addr = "St. Paul, MN, USA" = ""}
+@string{SIIT87date = jun}
+
+@string{IEEESnP82 = "1982 IEEE Symposium on Security and Privacy" = "IEEE Security and Privacy"}
+@string{IEEESnP82addr = "Oakland, CA, USA" = ""}
+@string{IEEESnP82date = apr # "~26--28," = apr}
+@string{IEEESnP87 = "1987 IEEE Symposium on Security and Privacy" = "IEEE Security and Privacy"}
+@string{IEEESnP87addr = "Oakland, CA, USA" = ""}
+@string{IEEESnP87date = apr # "~27--29," = apr}
+@string{IEEESnP91 = "1991 IEEE Symposium on Research in Security and Privacy" = "IEEE Security and Privacy"}
+@string{IEEESnP91addr = "Oakland, CA, USA" = ""}
+@string{IEEESnP91date = may # "~20--22," = may}
+@string{IEEESnP94 = "1994 IEEE Symposium on Research in Security and Privacy" = "IEEE Security and Privacy"}
+@string{IEEESnP94addr = "Oakland, CA, USA" = ""}
+@string{IEEESnP94date = may # "~16--18," = may}
+@string{IEEESnP97 = "1997 IEEE Symposium on Security and Privacy" = "IEEE Security and Privacy"}
+@string{IEEESnP97addr = "Oakland, CA, USA" = ""}
+@string{IEEESnP97date = may # "~4--7," = may}
+@string{IEEESnP2003 = "2003 IEEE Symposium on Security and Privacy" = "IEEE Security and Privacy"}
+@string{IEEESnP2003addr = "Oakland, CA, USA" = ""}
+@string{IEEESnP2003date = may # "~12--14," = may}
+@string{IEEESnP2008 = "2008 IEEE Symposium on Security and Privacy" = "IEEE Security and Privacy"}
+@string{IEEESnP2008addr = "Oakland, CA, USA" = ""}
+@string{IEEESnP2008date = may # "~18--21," = may}
+@string{IEEESnP2009 = "2009 IEEE Symposium on Security and Privacy" = "IEEE Security and Privacy"}
+@string{IEEESnP2009addr = "Oakland, CA, USA" = ""}
+@string{IEEESnP2009date = may # "~17--20," = may}
+@string{IEEESnP2012 = "2012 IEEE Symposium on Security and Privacy" = "IEEE Security and Privacy"}
+@string{IEEESnP2012addr = "San Francisco, CA, USA" = ""}
+@string{IEEESnP2012date = may # "~21--23," = may}
+
+
+@string{IFIPSEC2005 = "20th IFIP International Information Security Conference" = "IFIP SEC 2005"}
+@string{IFIPSEC2005addr = "Chiba, Japan" = ""}
+@string{IFIPSEC2005date = may # "~30--" # jun # "~1," = may # "/" # jun}
+
+@string{SIGCSE = "Proceedings of the {SIGCSE} Technical Symposium
+                 on Computer Science Education" = "{SIGCSE}"}
+@string{SIGCSE98 = "Proceedings of the 29th {SIGCSE} Technical Symposium
+                 on Computer Science Education ({SIGCSE}-98)" = "{SIGCSE}"}
+@string{SIGCSE98date = feb # "~25--" # mar # "~1," = feb}
+@string{SIGCSE2000 = "Proceedings of the 31st {SIGCSE} Technical Symposium on
+		Computer Science Education ({SIGCSE}-00)" = "{SIGCSE}"}
+@string{SIGCSE2000date = mar # "~7--12," = mar}
+@string{SIGCSE2000addr = "Austin, TX" = ""}
+@string{SIGCSE2001 = "Proceedings of the 32nd {SIGCSE} Technical Symposium
+                on Computer Science Education ({SIGCSE}-01)" = "{SIGCSE}"}
+@string{SIGCSE2001date = feb # "~21--25," = feb}
+@string{SIGCSE2001addr = "Charlotte, NC, USA" = ""}
+@string{SIGCSE2014 = "Proceedings of the 45th ACM Technical Symposium
+                on Computer Science Education" = "{SIGCSE}"}
+@string{SIGCSE2014date = mar # "~5--8," = mar}
+@string{SIGCSE2014addr = "Atlanta, GA, USA" = ""}
+@string{ITCSE00 = "Proceedings of the 5th Annual SIGCSE/\discretionary{}{}{}SIGCUE Conference
+		on Innovation and Technology in Computer Science Education"}
+@string{ITCSE00addr = "Helsinki, Finland"}
+@string{ITCSE00date = jul # "~11--13," = jul}
+
+@string{SIPL93 = "SIPL '93:  ACM SIGPLAN Workshop on State in Programming
+		  Languages" = "SIPL '93"}
+@string{SIPL93trno = "YALEU/DCS/RR-968"}
+
+@string{SODA97 = "Proceedings of the Eighth Annual ACM-SIAM Symposium on Discrete Algorithms" = "SODA"}
+@string{SODA97addr = "New Orleans, LA, USA" = ""}
+@string{SODA97date = jan # "~5--7," = jan}
+
+@string{SOFSEM2005 = "31st Conference on Current Trends in Theory and Practice of Computer Science (SOFSEM)" = "SOFSEM"}
+@string{SOFSEM2005addr = "Liptovsk\'y J\'an, Slovakia" = ""}
+@string{SOFSEM2005date = jan # "~22--28," = jan}
+
+@string{SOSP93 = "Proceedings of the 14th ACM Symposium on Operating
+                  Systems Principles" = "SOSP"}
+@string{SOSP93addr = "Asheville, NC, USA" = ""}
+@string{SOSP93date = dec # "~5--8," = dec}
+@string{SOSP97 = "Proceedings of the 16th ACM Symposium on Operating
+                  Systems Principles" = "SOSP"}
+@string{SOSP97addr = "St. Malo, France" = ""}
+@string{SOSP97date = oct # "~5--8," = oct}
+@string{SOSP2001 = "Proceedings of the 18th ACM Symposium on Operating
+                  Systems Principles" = "SOSP"}
+@string{SOSP2001addr = "Banff, Alberta, Canada" = ""}
+@string{SOSP2001date = oct # "~21--24," = oct}
+@string{SOSP2003 = "Proceedings of the 19th ACM Symposium on Operating
+                  Systems Principles" = "SOSP"}
+@string{SOSP2003addr = "Bolton Landing, NY, USA" = ""}
+@string{SOSP2003date = oct # "~19--22," = oct}
+@string{SOSP2005 = "Proceedings of the 20th ACM Symposium on Operating
+                  Systems Principles" = "SOSP"}
+@string{SOSP2005addr = "Brighton, UK" = ""}
+@string{SOSP2005date = oct # "~23--26," = oct}
+@string{SOSP2007 = "Proceedings of the 21st ACM Symposium on Operating
+                  Systems Principles" = "SOSP"}
+@string{SOSP2007addr = "Stevenson, WA, USA" = ""}
+@string{SOSP2007date = oct # "~14--17," = oct}
+@string{SOSP2009 = "Proceedings of the 22nd ACM Symposium on Operating
+                  Systems Principles" = "SOSP"}
+@string{SOSP2009addr = "Big Sky, MT, USA" = ""}
+@string{SOSP2009date = oct # "~12--14," = oct}
+@string{SOSP2011 = "Proceedings of the 23rd ACM Symposium on Operating
+                  Systems Principles" = "SOSP"}
+@string{SOSP2011addr = "Cascais, Portugal" = ""}
+@string{SOSP2011date = oct # "~24--26," = oct}
+@string{SOSPWIP2011 = "SOSP Work In Progress" = "SOSP WIP"}
+
+
+@string{SPAA90 = "Proceedings of the 2nd ACM Symposium on Parallel
+		 Algorithms and Architectures"}
+
+@string{SPACE2004 = "Informal Proceedings of the Second Workshop on Semantics,
+                   Program Analysis, and Computing Environments for Memory
+                   Management (SPACE 2004)" = "SPACE"}
+@string{SPACE2004date = jan}
+@string{SPACE2004addr = "Venice, Italy" = ""}
+
+@string{SPDT98 = "Proceedings of the SIGMETRICS Symposium on Parallel and
+                  Distributed Tools (SPDT '98)" = "SPDT"}
+@string{SPDT98addr = "Welches, OR, USA" = ""}
+@string{SPDT98date = aug # "~3--4," = aug}
+
+@string{SPIN98 = "4th International SPIN Workshop" = "SPIN"}
+@string{SPIN98addr = "Paris, France" = ""}
+@string{SPIN98date = nov # "~2," = nov}
+@string{SPIN2001 = "8th International SPIN Workshop on Model Checking of
+                  Software" = "SPIN"}
+@string{SPIN2001addr = "Toronto, Ontario, Canada" = ""}
+@string{SPIN2001date = may # "~19--20," = may}
+@string{SPIN2003 = "10th International SPIN Workshop on Model Checking of
+                  Software" = "SPIN"}
+@string{SPIN2003addr = "Portland, Oregon" = ""}
+@string{SPIN2003date = may # "~9--10," = may}
+
+@string{SPSM2011 = "Proceedings of the 1st ACM Workshop on Security and Privacy in Smartphones and Mobile Devices" = "SPSM"}
+@string{SPSM2011addr = "Chicago, IL, USA" = ""}
+@string{SPSM2011date = oct # "~17," = oct}
+
+@string{Supercomputing91 = "Supercomputing '91: Proceedings of the 1991
+                  ACM/IEEE conference on Supercomputing" = "Supercomputing '91"}
+
+@string{SSR99 = "ACM Symposium on Software Reusability (ACM SSR'99)"
+                  = "ACM SSR'99"}
+@string{SSR99addr = "Los Angeles, CA, USA" = ""}
+@string{SSR99date = may # "~21--23," = may}
+
+@string{SSSW2004 = "AAAI Spring Symposium on Semantic Web Services"}
+@string{SSSW2004addr = "Palo Alto, CA" = ""}
+@string{SSSW2004date = mar # "~22--24," = mar}
+
+@string{STOC85 = "Proceedings of the Seventeenth ACM Symposium on
+		 Theory of Computing" = "STOC85"}
+@string{STOC93 = "Proceedings of the Twenty-Fifth Annual ACM Symposium on
+                  Theory of Computing" = "STOC"}
+@string{STOC93addr = "San Diego, CA, USA" = ""}
+@string{STOC93date = may # "~15--18," = may}
+
+@string{STOP2009 = "1st Workshop on Script to Program Evolution (STOP)" = "STOP"}
+@string{STOP2009addr = "Genova, Italy" = ""}
+@string{STOP2009date = jul # "~6," = jul}
+
+@string{STTT = "Software Tools for Technology Transfer" = "STTT"}
+
+@string{TACAS97 = "Proceedings of the Third International Workshop on Tools
+		  and Algorithms for the Construction and Analysis of
+		  Systems (TACAS '97)" = "TACAS '97"}
+@string{TACAS2001 = "Tools and Algorithms for the Construction and Analysis
+                  of Systems (TACAS)" = "TACAS"}
+@string{TACAS2001addr = "Genova, Italy" = ""}
+@string{TACAS2001date = apr # "~2--6," = apr}
+@string{TACAS2004 = "Tools and Algorithms for the Construction and Analysis
+                  of Systems (TACAS)" = "TACAS"}
+@string{TACAS2004addr = "Barcelona, Spain" = ""}
+@string{TACAS2004date = mar # "~29--" # apr # "~2," = mar # "/" # apr}
+@string{TACAS2005 = "Tools and Algorithms for the Construction and Analysis
+                  of Systems (TACAS)" = "TACAS"}
+@string{TACAS2005addr = "Edinburgh, UK" = ""}
+@string{TACAS2005date = apr # "~4--8," = apr}
+@string{TACAS2008 = "Tools and Algorithms for the Construction and Analysis
+                  of Systems (TACAS)" = "TACAS"}
+@string{TACAS2008addr = "Budapest, Hungary" = ""}
+@string{TACAS2008date = mar # "~31--" # apr # "~3," = apr}
+
+@string{TACOS2004 = "International Workshop on Test and Analysis of
+                  Component Based Systems" = "TACoS"}
+@string{TACOS2004addr = "Barcelona, Spain" = ""}
+@string{TACOS2004date = mar # "~27--28," = mar}
+
+@string{TACS   = "Proceedings of the International Conference on
+		 Theoretical Aspects of Computer Software"}
+
+@string{TAICPART2007 = "Testing: Academic and Industrial Conference Practice and Research Techniques - MUTATION" = "TAICPART-MUTATION 2007"}
+@string{TAICPART2007addr = "Windsor, UK" = ""}
+@string{TAICPART2007date = sep # "~12--14," = sep}
+
+@string{TAP2010 = "4th International Conference on Tests And Proofs (TAP)" = "TAP"}
+@string{TAP2010addr = "M\'alaga, Spain" = ""}
+@string{TAP2010date = jul # "~1--2," = jul}
+
+@string{TAPSOFT95 = "TAPSOFT '95: Theory and Practice of Software Development"
+                  = "TAPSOFT '95"}
+@string{tapsoft95addr = "Aarhus, Denmark" = ""}
+@string{tapsoft95date = may # "~22--26," = may}
+@string{TAPSOFT97 = "TAPSOFT '97: Theory and Practice of Software Development,
+	         7th International Joint Conference CAAP/FASE"
+		  = "TAPSOFT '97"}
+@string{tapsoft97addr = "Lille, France" = ""}
+@string{tapsoft97date = apr # "~14--18," = apr}
+
+@string{TAV89 = "Proceedings of the {ACM} {SIGSOFT}~'89 Third Symposium
+                 on Testing, Analysis, and Verification ({TAV3})" = "TAV3"}
+@string{TAV89date = dec}
+@string{TAV91 = "Proceedings of the {ACM} {SIGSOFT}~'91 Fourth Symposium
+                 on Testing, Analysis, and Verification ({TAV4})" = "TAV4"}
+@string{TAV91addr = "Victoria, BC, Canada" = ""}
+@string{TAV91date = oct # "~8--10," = oct}
+
+@string{TCS2004 = "3rd IFIP International Conference on Theoretical Computer Science" = "TCS"}
+@string{TCS2004addr = "Toulouse, France" = "Toulouse"}
+@string{TCS2004date = aug # "~23--26," = aug}
+
+@string{TCC2005 = "2nd Theory of Cryptography Conference" = "TCC"}
+@string{TCC2005addr = "Cambridge, MA, USA" = ""}
+@string{TCC2005date = feb # "~10--12," = feb}
+
+@string{TFP2007 = "Trends in Functional Programming (TFP)" = "TFP"}
+
+@string{TLDI2012 = "TLDI 2012: The seventh {ACM} {SIGPLAN} Workshop on Types in Language Design and Implementation" = "TLDI"}
+@string{TLDI2012addr = "Philadelphia, PA, USA" = ""}
+@string{TLDI2012date = jan # "~28," = jan}
+
+@string{TOOLSPacific2000 = "TOOLS Pacific"}
+@string{TOOLSPacific2000addr = "Sydney, Australia" = ""}
+@string{TOOLSPacific2000date = nov = ""}
+
+@string{TOOLS39 = "TOOLS 39: 39th International Conference and Exhibition
+                  on Technology of Object-Oriented Languages and Systems" = "TOOLS 39"}
+@string{TOOLS39addr = "Santa Barbara, CA, USA" = ""}
+@string{TOOLS39date = jul # "~29--" # aug # "~3," = jul # "/" # aug}
+
+@string{TOOLSEurope2008 = "Tools Europe"}
+@string{TOOLSEurope2008addr = "Zurich, Switzerland" = ""}
+@string{TOOLSEurope2008date = ""}
+
+@string{TRUST2012 = "Proceedings of the 5th International Conference on Trust and Trustworthy Computing" = "TRUST"}
+@string{TRUST2012addr = "Vienna, Austria" = ""}
+@string{TRUST2012date = jun # "~13--15," = jun}
+
+@string{UIST2013 = "UIST 2013: 23rd Symposium on User Interface Software and Technology" = "UIST"}
+@string{UIST2013addr = "St. Andrews, UK" = ""}
+@string{UIST2013date = oct # "~8--11," = oct}
+
+
+@string{UCPP = "Proceedings of the USENIX C++ Conference"}
+@string{USENIXCxx92 = "USENIX C++ Conference Proceedings" = "USENIX C++"}
+@string{USENIXCxx92addr = "Portland, OR, USA" = ""}
+@string{USENIXCxx92date = aug # "~10--13," = aug}
+@string{SumUSENIX = "Proceedings of the Summer USENIX Conference" = "USENIX"}
+@string{WinUSENIX = "Proceedings of the Winter USENIX Conference" = "USENIX"}
+@string{USENIX92Winter = "Proceedings of the Winter 1992 {USENIX} Conference"
+                   = "USENIX"}
+@string{USENIX92Winteraddr = "San Francisco, CA, USA" = ""}
+@string{USENIX92Winterdate = jan # "~20--24," = jan}
+@string{USENIX92Summer = "Proceedings of the Summer 1992 {USENIX} Conference"
+                   = "USENIX"}
+@string{USENIX92Summeraddr = "San Antonio, TX, USA" = ""}
+@string{USENIX92Summerdate = jun # "~8--12," = jun}
+@string{USENIX93Winter = "Proceedings of the Winter 1993 {USENIX} Conference"
+                   = "USENIX"}
+@string{USENIX93Winteraddr = "San Diego, CA, USA" = ""}
+@string{USENIX93Winterdate = jan # "~5--29," = jan}
+@string{USENIXWinNT97 = "USENIX Windows NT Workshop"}
+@string{USENIXWinNT97addr = "Seattle, Washington, USA" = ""}
+@string{USENIXWinNT97date = aug # "~11--13," = aug}
+@string{USENIX99 = "Proceedings of the 1999 USENIX Annual Technical
+                  Conference" = "USENIX"}
+@string{USENIX99addr = "Monterey, CA, USA"}
+@string{USENIX99date = jun # "~6--11," = jun}
+@string{USENIX2001 = "Proceedings of the 2001 USENIX Annual Technical Conference" = "USENIX"}
+@string{USENIX2001addr = "Boston, MA, USA" = ""}
+@string{USENIX2001date = jun # "~25--30," = jun}
+@string{FREENIX2001 = "Proceedings of the 2001 USENIX Annual Technical Conference (FREENIX Track)" = "FREENIX"}
+@string{USENIX2002 = "Proceedings of the 2002 USENIX Annual Technical Conference" = "USENIX"}
+@string{USENIX2002addr = "Monterey, CA, USA" = ""}
+@string{USENIX2002date = jun # "~13--15," = jun}
+@string{USENIX2003 = "Proceedings of the 2003 USENIX Annual Technical Conference" = "USENIX"}
+@string{USENIX2003addr = "San Antonio, TX, USA" = ""}
+@string{USENIX2003date = jun # "~12--14," = jun}
+@string{FREENIX2003 = "Proceedings of the 2003 USENIX Annual Technical Conference (FREENIX Track)" = "FREENIX"}
+@string{USENIX2004 = "Proceedings of the 2004 USENIX Annual Technical Conference" = "USENIX"}
+@string{USENIX2004addr = "Boston, MA, USA" = ""}
+@string{USENIX2004date = jun # "~28" # "--" # jul # "~2," = jun # "/" # jul}
+@string{USENIX2005 = "Proceedings of the 2005 USENIX Annual Technical Conference" = "USENIX"}
+@string{USENIX2005addr = "Anaheim, CA, USA" = ""}
+@string{USENIX2005date = apr # "~10--15," = apr}
+@string{USENIX2006 = "Proceedings of the 2006 USENIX Annual Technical Conference" = "USENIX"}
+@string{USENIX2006addr = "Boston, MA, USA" = ""}
+@string{USENIX2006date = jun # "~1--3," = jun}
+
+@string{USENIXFAST2005 = "4th USENIX Conference on File and Storage Technologies" = "USENIX FAST"}
+@string{USENIXFAST2005addr = "San Francisco, CA, USA" = ""}
+@string{USENIXFAST2005date = dec # "~14--16," = dec}
+
+@string{USENIXSec98 = "7th USENIX Security Symposium" = "USENIX Security"}
+@string{USENIXSec98addr = "Austin, TX, USA" = ""}
+@string{USENIXSec98date = jan # "~28--29," = jan}
+@string{USENIXSec2001 = "10th USENIX Security Symposium" = "USENIX Security"}
+@string{USENIXSec2001addr = "Washington, DC, USA" = ""}
+@string{USENIXSec2001date = aug # "~15--17," = aug}
+@string{USENIXSec2002 = "11th USENIX Security Symposium" = "USENIX Security"}
+@string{USENIXSec2002addr = "San Francisco, CA, USA" = ""}
+@string{USENIXSec2002date = aug # "~7--9," = aug}
+@string{USENIXSec2003 = "12th USENIX Security Symposium" = "USENIX Security"}
+@string{USENIXSec2003addr = "Washington, DC, USA" = ""}
+@string{USENIXSec2003date = aug # "~6--8," = aug}
+@string{USENIXSec2004 = "13th USENIX Security Symposium" = "USENIX Security"}
+@string{USENIXSec2004addr = "San Diego, CA, USA" = ""}
+@string{USENIXSec2004date = aug # "~11--13," = aug}
+@string{USENIXSec2005 = "14th USENIX Security Symposium" = "USENIX Security"}
+@string{USENIXSec2005addr = "Baltimore, MD, USA" = ""}
+@string{USENIXSec2005date = aug # "~3--5," = aug}
+@string{USENIXSec2006 = "15th USENIX Security Symposium" = "USENIX Security"}
+@string{USENIXSec2006addr = "Vancouver, BC, Canada" = ""}
+@string{USENIXSec2006date = aug # "~2--4," = aug}
+@string{USENIXSec2007 = "16th USENIX Security Symposium" = "USENIX Security"}
+@string{USENIXSec2007addr = "Boston, MA, USA" = ""}
+@string{USENIXSec2007date = aug # "~8--10," = aug}
+@string{USENIXSec2012 = "21st USENIX Security Symposium" = "USENIX Security"}
+@string{USENIXSec2012addr = "Bellevue, WA, USA" = ""}
+@string{USENIXSec2012date = aug # "~8--10," = aug}
+@string{USENIXSec2013 = "22nd USENIX Security Symposium" = "USENIX Security"}
+@string{USENIXSec2013addr = "Washington, DC, USA" = ""}
+@string{USENIXSec2013date = aug # "~14--16," = aug}
+
+
+@string{VLDB2004 = "30th International Conference on Very Large Data Bases" = "VLDB"}
+@string{VLDB2004addr = "Toronto, Canada"}
+@string{VLDB2004date = aug # "~31--" # sep # "~3," = aug # "/" # sep}
+@string{VLDB2010 = "36th International Conference on Very Large Data Bases" = "VLDB"}
+@string{VLDB2010addr = "Singapore"}
+@string{VLDB2010date = sep # "~14--16," = sep}
+
+@string{VMCAI2003 = "VMCAI'03, Fourth International Conference on
+                    Verification, Model Checking and Abstract Interpretation"
+                    = "VMCAI"}
+@string{VMCAI2003addr = "New York, New York" = ""}
+@string{VMCAI2003date = jan # "~9--11," = jan}
+@string{VMCAI2005 = "VMCAI'05, Sixth International Conference on
+                    Verification, Model Checking and Abstract Interpretation"
+                    = "VMCAI"}
+@string{VMCAI2005addr = "Paris, France" = ""}
+@string{VMCAI2005date = jan # "~17--19," = jan}
+
+@string{VMIL2009 = "VMIL '09: Proceedings of the Third Workshop on Virtual Machines and Intermediate Languages" = "VMIL"}
+@string{VMIL2009addr = "Orlando, FL, USA" = ""}
+
+@string{VSTTE2005 = "VSTTE:  Verified Software: Theories, Tools, Experiments" = "VSTTE"}
+@string{VSTTE2005addr = "Z{\"u}rich, Switzerland" = ""}
+@string{VSTTE2005date = oct # "~10--13," = oct}
+@string{VSTTE2008 = "VSTTE:  Verified Software: Theories, Tools, Experiments" = "VSTTE"}
+@string{VSTTE2008addr = "Toronto, Canada" = ""}
+@string{VSTTE2008date = oct # "~6--9," = oct}
+
+
+@string{W2SP2011 = "Web 2.0 Security and Privacy Workshop" = "W2SP"}
+@string{W2SP2011addr = "Oakland, CA, USA" = ""}
+@string{W2SP2011date = may # "~26," = may}
+
+
+@string{WASL2008 = "Proceedings of the First USENIX Workshop on Analysis of System Logs" = "WASL"}
+@string{WASL2008addr = "San Diego, CA, USA" = ""}
+@string{WASL2008date = dec # "~7," = dec}
+
+
+@string{WCET2005 = "5th Euromicro International Workshop on Worst-Case Execution Time Analysis (WCET'05)" = "WCET"}
+@string{WCET2005addr = "Palma, Spain" = ""}
+@string{WCET2005date = jul}
+
+@string{WCSSS99 = "Second ACM SIGPLAN Workshop on Compiler Support for System Software" = "WCSSS"}
+@string{WCSSS99addr = "Atlanta, GA, USA" = ""}
+@string{WCSSS99date = may # "~1," = may}
+
+@string{WDAG97 = "Proceedings of the 11th International Workshop on
+                  Distributed Algorithms" = "WDAG"}
+@string{WDAG97addr = "Saarbrucken, Germany" = ""}
+@string{WDAG97date = sep}
+
+@string{USENIXWindows2000 = "4th USENIX Windows System Symposium" = "USENIX Windows"}
+@string{USENIXWindows2000addr = "Seattle, WA, USA" = ""}
+@string{USENIXWindows2000date = aug}
+
+@string{WITS2003 = "Workshop on Issues in the Theory of Security" = "WITS"}
+@string{WITS2003addr = "Warsaw, Poland" = ""}
+@string{WITS2003date = apr # "~5--6," = apr}
+
+@string{WMCSA2003 = "5th IEEE Workshop on Mobile Computing Systems and Applications" = "WMCSA"}
+@string{WMCSA2003addr = "Monterey, CA, USA" = ""}
+@string{WMCSA2003date = oct # "~9--10," = oct}
+
+@string{WODA2003 = "WODA 2003: Workshop on Dynamic Analysis" = "WODA"}
+@string{WODA2003addr = "Portland, Oregon" = ""}
+@string{WODA2003date = may # "~9," = may}
+@string{WODA2005 = "WODA 2005: Workshop on Dynamic Analysis" = "WODA"}
+@string{WODA2005addr = "St.~Louis, MO, USA" = ""}
+@string{WODA2005date = may # "~17," = may}
+@string{WODA2006 = "WODA 2006: Workshop on Dynamic Analysis" = "WODA"}
+@string{WODA2006addr = "Shanghai, China" = ""}
+@string{WODA2006date = may # "~23," = may}
+@string{WODA2007 = "WODA 2007: Workshop on Dynamic Analysis" = "WODA"}
+@string{WODA2007addr = "Minneapolis, MN, USA" = ""}
+@string{WODA2007date = may # "~22," = may}
+@string{WODA2008 = "WODA 2008: Workshop on Dynamic Analysis" = "WODA"}
+@string{WODA2008addr = "Seattle, WA, USA" = ""}
+@string{WODA2008date = jul # "~21," = may}
+
+@string{WOOD2003 = "WOOD2003, Workshop on Object Oriented Developments" = "WOOD"}
+@string{WOOD2003addr = "Warsaw, Poland" = ""}
+@string{WOOD2003date = oct}
+
+@string{WOOT2007 = "First USENIX Workshop on Offensive Technologies" = "WOOT"}
+@string{WOOT2007addr = "Boston, MA, USA" = ""}
+@string{WOOT2007date = aug # "~6," = aug}
+@string{WOOT2011 = "Fifth USENIX Workshop on Offensive Technologies" = "WOOT"}
+@string{WOOT2011addr = "Washington, DC, USA" = ""}
+@string{WOOT2011date = aug # "~13," = aug}
+
+@string{WSMAI2003 = "1st Workshop on Web Services: Modeling, Architecture and Infrastructure" = "WSMAI"}
+@string{WSMAI2003addr = "Angers, France" = ""}
+@string{WSMAI2003date = apr # "~22," = apr}
+
+@string{WSMATE2006 = "WS-MaTe 2006: International Workshop on Web Services --- Modeling and Testing" = "WS-MaTe"}
+@string{WSMATE2006addr = "Palermo, Italy" = ""}
+@string{WSMATE2006date = jun # "~9," = jun}
+
+@string{WTISD2003date = sep # "~1--2," = sep}
+
+@string{WWW2004 = "Proceedings of the Thirteenth International World Wide Web Conference" = "WWW"}
+@string{WWW2004addr = "New York, NY, USA" = ""}
+@string{WWW2004date = may # "~17--20," = may}
+
+
+@string{XPAU2002 = "Proceedings of 2nd XP Universe and 1st Agile
+                  Universe Conference (XP/Agile Universe)"
+		= "XP/Agile Universe"}
+@string{XPAU2002addr = "Chicago, IL, USA" = ""}
+@string{XPAU2002date = aug # "~4--7," = aug}
+
+
+%%% ========================================================================
+%%% Journal titles
+
+% "SCP" is built into plain.bst.
+% The others are built into plain.bst, but I can override them here.
+@string{CACM     = "Communications of the ACM" = "CACM"}
+@string{JACM     = "Journal of the ACM" = "JACM"}
+@string{TOPLAS   = "ACM Transactions on Pro\-gramming Languages and Systems"
+		= "ACM TOPLAS"}
+@string{IEEESE  = "IEEE Transactions on Software Engineering" = "IEEE TSE"}
+@string{IEEETC  = "IEEE Transactions on Computers" = "IEEE Trans. Comput."}
+
+%% The below entries do not override anything that is built in.
+
+@string{AnnalsSE = "Annals of Software Engineering"}
+
+@string{computer = "IEEE Computer" = "Computer"}
+@string{CPE     = "Concurrency: Practice and Experience"}
+@string{CSUR    = "ACM Computing Surveys" = "ACM Comput.\ Surv."}
+@string{CSURVEYS = "ACM Computing Surveys" = "ACM Comput.\ Surv."}
+@string{ENTCS   = "Electronic Notes in Theoretical Computer Science" = "ENTCS"}
+@string{IJCM    = "International Journal of Computer Mathematics" = "IJCM"}
+@string{j-systems-and-software = "Journal of Systems and Software" = "J. Syst. Softw."}
+@string{JCSS    = "Journal of Computer and System Sciences" = "J. Comp. Syst. Sci."}
+@string{JOT     = "Journal of Object Technology" = "J. Object Tech."}
+@string{LOPLAS  = "ACM Letters on Programming Languages and Systems"
+                = "ACM LOPLAS"}
+@string{JSAC    = "IEEE Journal on Selected Areas in Communications" = "J. Sel. Areas in Commun."}
+@string{SIGPLAN = "ACM SIGPLAN Notices"}
+@string{IEEESoftware = "IEEE Software" = "IEEE Softw."}
+@string{SEN     = "ACM SIGSOFT Software Engineering Notes" = "ACM Softw. Eng. Notes"}
+@string{SPE     = "Software: Practice and Experience"} 
+@string{j-SPE   = SPE} 
+@string{STVR    = "Journal of Software Testing, Verification and Reliability" = "STVR"}
+@string{TDSC = "IEEE Transactions on Dependable and Secure Computing" = "TDSC"}
+@string{TOSEM   = "ACM Transactions on Software Engineering and Methodology"
+		= "ACM TOSEM"}
+@string{TISSEC  = "ACM Transactions on Information and System Security"
+                = "ACM TISSEC"}
+@string{TPDS    = "IEEE Transactions on Parallel and Distributed Systems"
+		= "IEEE Trans. Parallel Distrib. Syst."}
+@string{IEEETSE = IEEESE}
+@string{TSE     = IEEESE}
+
+@string{PTRSLB   = "Philosophical Transactions of the Royal Society of London, Series B" = "Phil.\ Trans.\ Royal Soc., B"}
+
+
+%%% ========================================================================
+%%% Book series
+
+% Isn't this supposed to be built-in?
+@string{LNCS   = "Lecture Notes in Computer Science" = "LNCS"}
+
+
+%%% ========================================================================
+%%% Research labs and schools
+
+@string{CMUSCS = "School of Computer Science, Carnegie Mellon University" = "CMU SCS"}
+@string{CMUaddr = "Pittsburgh, PA"}
+
+@string{ETHZ = "ETH Z{\"u}rich"}
+@string{ETHZaddr = "Z{\"u}rich, Switzerland"}
+
+@string{PARC   = "Xerox Corporation Palo Alto Research Center"}
+@string{PurdueSERC = "Software Engineering Research Center, Purdue University"
+               = "SERC, Purdue"}
+
+@string{MIT    = "Massachusetts Institute of Technology"}
+% string{MITEECS = "Massachusetts Institute of Technology Department of
+% 		 Electrical Engineering and Computer Science" = "MIT
+% 		 Dept. of EECS"}
+% string{MITLCS = "Massachusetts Institute of Technology Laboratory for
+% 		 Computer Science" = "MIT Lab for Computer Science"}
+% string{MITAI = "Massachusetts Institute of Technology Artificial
+% 		 Intelligence Laboratory" = "MIT AI Lab"}
+@string{MITEECS = "MIT Department of
+		 Electrical Engineering and Computer Science" = "MIT
+		 Dept. of EECS"}
+@string{MITLCS = "MIT Laboratory for Computer Science"
+                 = "MIT Lab for Computer Science"}
+@string{MITAI = "MIT Artificial
+		 Intelligence Laboratory" = "MIT AI Lab"}
+@string{MITCSAIL = "MIT Computer Science and Artificial Intelligence Laboratory"
+                 = "MIT CSAIL"}
+@string{MITSloan = "MIT Sloan School of Management Science"
+                 = "MIT Sloan School of Management"}
+@string{MITaddr = "Cambridge, MA" = ""}
+
+@string{MSRaddr = "Redmond, WA" = ""}
+
+@string{IBMTJWatson = "IBM T.J. Watson Research Center"}
+% Most common
+@string{IBMHawthorne = "Hawthorne, NY" = ""}
+
+@string{UWCSE = "University of Washington
+		 Department of Computer Science and Engineering" =
+                  "U. Wash. Dept. of Comp. Sci. \& Eng."}
+@string{UWCSEaddr = "Seattle, WA, USA"}
+
+% Perhaps add "Computer Sciences Department"
+@string{UWMadison = "University of Wisconsin -- Madison"}
+@string{UWMadisonaddr = "1210 West Dayton Street, Madison, WI 53706, USA" =
+                  "Madison, WI"}
+
+@string{WRL    = "Digital Equipment Corporation Western Research Laboratory"}
+
+
+%%% ========================================================================
+%%% Hacks
+
+% This is a separate string because it confuses the "bib-abbrev" script.
+@string{ErnstCGN2001TSEnotelong = "A previous version appeared in \bgroup\em " #
+		  ICSE99 # "\egroup, pages 213--224, " # ICSE99addrcomma #
+		  ICSE99date # " 1999"}
+
+@string{ErnstCGN2001TSEnote = ErnstCGN2001TSEnotelong = ""}
+
+
+%% bp (and maybe other programs) fail if string{...} is the last thing in
+%% the file.  Thus, this comment.  (Yuck.)
+
+%% A problem with this after-save-hook is that it blows away any existing
+%% *compilation* buffer.  Let's hope this isn't too big an annoyance.
+%%% Local Variables: 
+%%% auto-fill-function: nil
+%%% eval: (make-local-variable 'after-save-hook)
+%%% eval: (add-hook 'after-save-hook '(lambda () (save-window-excursion (let ((compilation-ask-about-save nil)) (compile "make")))))
+%%% End: 

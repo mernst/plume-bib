@@ -1,0 +1,1267 @@
+%%% slicing.bib
+%%% Bibliography on static and dynamic program slicing.
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Surveys
+%%%
+
+@techreport{Tip94,
+  key         	= {Tip94},
+  author      	= {Frank Tip},
+  title       	= {A Survey of Program Slicing Techniques},
+  institution 	= {Centrum voor Wiskunde en Informatica (CWI)},
+  type        	= {Report {CS}-{R}9438},
+  address     	= {Amsterdam},
+  year        	= {1994},
+  supersededby  = {Tip95:survey},
+}
+
+@Article{Tip95:survey,
+  author = 	 "Frank Tip",
+  title = 	 "A survey of program slicing techniques",
+  journal = 	 "Journal of Programming Languages",
+  year = 	 1995,
+  volume =	 3,
+  number =	 3,
+  pages =	 "121--189"
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Semantics
+%%%
+
+
+@InProceedings{CartwrightF89,
+  author = 	 "Robert Cartwright and Matthias Felleisen",
+  title = 	 "The semantics of program dependence",
+  pages =	 "13--27",
+  booktitle =	 PLDI89,
+  year =	 1989,
+  month =	 Jun,
+  address =	 "Portland, OR"
+}
+
+
+@TechReport{RepsY88,
+  author = 	 "Thomas Reps and Wuu Yang",
+  title = 	 "The semantics of program slicing",
+  institution =  UWMadison,
+  year = 	 1988,
+  number =	 777,
+  month =	 Jun
+}
+
+
+@InProceedings{RepsY89,
+  author = 	 "Thomas Reps and Wuu Yang",
+  title = 	 "The semantics of program slicing and program integration",
+  editor =	 "J. D{\'\i}az and F. Orejas",
+  number =	 352,
+  series =	 LNCS,
+  pages =	 "360--374",
+  booktitle =	 "TAPSOFT '89:  Proceedings of the International Joint
+		  Conference  on Theory and Practice of Software
+		  Development. Vol.2: Advanced Seminar on Foundations of
+		  Innovative Software II and Colloquium on Current Issues
+		  in Programming Languages (CCIPL)",
+  year =	 1989,
+  publisher =	 "Springer-Verlag",
+  address =	 "Barcelona, Spain",
+  month =	 Mar # "~13--17,"
+}
+
+
+@InProceedings{Venkatesh91,
+  author = 	 "G. A. Venkatesh",
+  title = 	 "The semantic approach to program slicing",
+  pages =	 "107--119",
+  booktitle =	 PLDI91,
+  year =	 1991,
+  address =	 PLDI91addr,
+  month =	 PLDI91date,
+  abstract =
+   "Program slicing is a source-to-source transformation that has
+    applications in construction, analysis, testing and debugging of programs.
+    A program slice contains the portion of a program that captures some subset
+    of the program behavior. Algorithms are available for constructing slices
+    for a particular execution of a program (dynamic slices) as well as to
+    approximate a subset of the behavior over all possible executions of a
+    program (static slices). As the behavior of a program is determined by the
+    semantics of the language, it is reasonable to expect a semantic
+    justification for the practice of program slicing. Program slices have been
+    used in several applications but there is no single notion of a slice that
+    is useful for all applications.  The author identifies and categorizes
+    different notions of a program slice available in the literature as well as
+    several new notions. The various notions are formalized in a denotational
+    framework."
+}
+% Aka SIGPLAN Notices vol.26, no.6
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Dynamic slicing
+%%%
+
+
+
+@Unpublished{Venkatesh93,
+  author = 	 "G. A. Venkatesh",
+  title = 	 "Experimental results from slicing {C} programs",
+  note = 	 "Submitted for publication",
+  year =	 1993,
+  month =	 Oct # "~19,"
+}
+
+
+
+
+@Article{Venkatesh95,
+  author =	 "G. A. Venkatesh",
+  title = 	 "Experimental results from dynamic slicing of {C} programs",
+  journal = 	 TOPLAS,
+  year = 	 1995,
+  volume =	 17,
+  number =	 2,
+  pages =	 "197--216",
+  month =	 mar
+}
+
+
+@TechReport{Agrawal91,
+  author = 	 "H. Agrawal",
+  title = 	 "Towards automatic debugging of computer programs",
+  institution =  PurdueSERC,
+  year = 	 1991,
+  number =	 "SERC-TR-103-P",
+  month =	 Sep
+}
+
+
+@InProceedings{AgrawalH90,
+  author = 	"Hiralal Agrawal and Joseph R. Horgan",
+  title = 	"Dynamic Program Slicing",
+  booktitle = 	PLDI90,
+  year = 	1990,
+  pages = 	"246--256",
+  month = 	PLDI90date,
+  address =	PLDI90addr,
+}
+% Aka SIGPLAN Notices vol.25, no. 6
+
+
+@TechReport{LarusC93,
+  author = 	 "James R. Larus and Satish Chandra",
+  title = 	 "Using tracing and dynamic slicing to tune compilers",
+  institution =  UWMadison,
+  year = 	 1993,
+  number =	 1174,
+  address =	 UWMadisonaddr,
+  month =	 aug # "~26,"
+}
+
+
+
+
+
+
+
+@Conference{HL92,
+    AUTHOR = "L. Huelsbergen and J. Larus",
+    TITLE = "Dynamic Program Parallelization",
+    Booktitle = "Proceedings of the '92 {ACM} Conference on
+                 {LISP} and Functional Programming",
+    Pages = "311--323",
+    YEAR = "June 1992"
+}
+
+
+
+
+
+
+
+
+
+
+
+@InProceedings{ZhangGZ2004,
+  author = 	 "Xiangyu Zhang and Rajiv Gupta and Youtao Zhang",
+  title = 	 "Efficient Forward Computation of Dynamic Slices Using
+                  Reduced Ordered Binary Decision Diagrams",
+  booktitle =	 ICSE2004,
+  pages = 	 "502--511",
+  year =	 2004,
+  address =	 ICSE2004addr,
+  month =	 ICSE2004date
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Static slicing
+%%%
+
+
+
+
+
+@Article{Weiser84,
+  author = 	 "Mark Weiser",
+  title = 	 "Program slicing",
+  journal =	 ieeese,
+  year =	 1984,
+  volume =	 "SE-10",
+  number =	 4,
+  pages =	 "352--357",
+  month =	 Jul
+}
+
+
+% day of month was either 3-7 or 5-7, I'm not sure which
+@InProceedings{HwangDC88,
+  author = 	 "J. C. Hwang and M. W. Du and C. R. Chou",
+  title = 	 "Finding program slices for recursive procedures",
+  booktitle =	 "Proceedings COMPSAC 88:  The Twelfth International
+		  Computer Software and Applications Conference",
+  year =	 1988,
+  organization = "IEEE Computer Society",
+  address =	 "Chicago",
+  month =	 oct
+}
+
+
+@InProceedings{HorwitzPR88b,
+  author = 	 "Susan Horwitz and Jan Prins and Thomas Reps",
+  title = 	 "On the adequacy of program dependence graphs for
+		  representing programs",
+  pages =	 "146--157",
+  booktitle =	 POPL88,
+  year =	 1988,
+  address =	 "San Diego, CA",
+  month =	 jan
+}
+
+
+@TechReport{HorwitzRB88,
+  author = 	 "Susan Horwitz and Thomas Reps and David Binkley",
+  title = 	 "Interprocedural slicing using dependence graphs",
+  institution =  UWMadison,
+  year = 	 1988,
+  number =	 756,
+  month =	 Mar
+}
+
+@Article{HorwitzRB90,
+  author = 	 "Susan Horwitz and Thomas Reps and David Binkley",
+  title = 	 "Interprocedural slicing using dependence graphs",
+  journal =	 toplas,
+  year =	 1990,
+  volume =	 12,
+  number =	 1,
+  pages =	 "26--60",
+  month =	 jan
+}
+
+
+@TechReport{Ball93,
+  author = 	 "Thomas Jaudon Ball",
+  title = 	 "The Use of Control-flow and Control Dependence in
+		  Software Tools",
+  institution =  UWMadison,
+  year = 	 1993,
+  number =	 1169,
+  month =	 Aug,
+  note =	 "PhD thesis"
+}
+
+
+@InProceedings{OttensteinO84,
+  author = 	 "K. J. Ottenstein and L. M. Ottenstein",
+  title = 	 "The program dependence graph in a software development
+		  environment",
+  pages =	 "177--184",
+  booktitle =	 "Proc. ACM SIGSOFT/SIGPLAN Software Engineering Symp. on
+		  Practical Software Development Environments",
+  year =	 1984,
+  address =	 "Pittsburgh, Pennsylvania",
+  month =	 apr
+}
+% (aka SIGPLAN Notices 19:5, May 1984)
+
+
+@Article{HarmanD93,
+  author = 	 "M. Harman and S. Danicic",
+  title = 	 "Projecting funtional models of imperative programs",
+  journal =	 sigplan,
+  year =	 1993,
+  volume =	 28,
+  number =	 11,
+  pages =	 "33--41",
+  month =	 Nov
+}
+
+
+@InProceedings{BiggerstaffMW93,
+  author = 	 "Ted J. Biggerstaff and Bharat G. Mitbander and Dallas Webster",
+  title = 	 "The concept assignment problem in program understanding",
+  booktitle =	 "15th Annual Conference on Software Engineering",
+  year =	 1993,
+  address =	 "Baltimore, Maryland",
+  month =	 May # "~17--21,"
+}
+
+
+@Article{BiggerstaffMW94,
+  author = 	 "Ted J. Biggerstaff and Bharat G. Mitbander and Dallas Webster",
+  title = 	 "Program understanding and the concept assignment problem",
+  journal =	 CACM,
+  year =	 1994,
+  volume =	 37,
+  number =	 5,
+  pages =	 "72--83",
+  month =	 May
+}
+
+
+@InProceedings{KamkarSF90,
+  author = 	 "Miriam Kamkar and Nahid Shahmehri and Peter Fritzson",
+  title = 	 "Bug localization by algorithmic debugging and program slicing",
+  editor =	 "P. Deransart and J. Ma{\l}uszy{\'n}ski",
+  pages =	 "60--74",
+  booktitle =	 "Proceedings, Programming Language Implementation and
+		  Logic Programming, International Workshop PLILP '90",
+  year =	 1990,
+  publisher =	 "Springer-Verlag",
+  address = 	 "Link{\"o}ping, Sweden",
+  month =	 aug # "~20--22,",
+  note =	 "LNCS 456"
+}
+
+
+@Article{FrizsonSKG92,
+  author = 	 "Peter Fritzson and Nahid Shahmehri and Mariam Kamkar and
+		  Tibor Gyimothy",
+  title = 	 "Generalized algorithmic debugging and testing",
+  journal =	 loplas,
+  year =	 1992,
+  volume =	 1,
+  number =	 4,
+  pages =	 "303--322",
+  month =	 Dec
+}
+% Also LiTH-IDA-R-90-42, apparently.
+
+
+@InProceedings{LyleW87,
+  author = 	 "James R. Lyle and Mark Weiser",
+  title = 	 "Automatic program bug location by program slicing",
+  booktitle =	 "Proceedings of the Second International Conference on
+		  Computers and Applications",
+  year =	 1987,
+  address =	 "Beijing, China",
+  month =	 Jun
+}
+
+
+@InProceedings{JiangZR91,
+  author = 	 "Jingyue Jiang and Xiling Zhou and David J. Robson",
+  title = 	 "Program slicing for {C} --- The problems in implementation",
+  pages =	 "182--190",
+  booktitle =	 "Proceedings, Conference on Software Maintenance 1991",
+  year =	 1991,
+  publisher =	 "IEEE Computer Society Press",
+  address =	 "Sorrento, Italy",
+  month =	 Oct # "~15--17,"
+}
+
+
+
+@Article{MarkosianNBBK94,
+  author = 	 "Lawrence Markosian and Philip Newcomb and Russell Brand
+		  and Scott Burson and Ted Kitzmiller",
+  title = 	 "Using an enabling technology to reengineer legacy systems",
+  journal =	 CACM,
+  year =	 1994,
+  volume =	 37,
+  number =	 5,
+  pages =	 "58--70",
+  month =	 May
+}
+
+
+@TechReport{LivadasC92,
+  author = 	 "Panos E. Livadas and Stephen Croll",
+  title = 	 "Program Slicing",
+  institution =  "Computer and Information Sciences Department, University of Florida",
+  year = 	 1992,
+  number =	 "SERC-TR-61-F",
+  address =	 "Gainesville, FL",
+  month =	 Oct
+}
+
+
+@TechReport{LivadasC94,
+  author = 	 "Panos E. Livadas and Stephen Croll",
+  title = 	 "A new algorithm for the calculation of transitive
+		  dependences",
+  institution =  "Computer and Information Sciences Department, University of Florida",
+  year = 	 1994,
+  number =	 "SERC-TR-72-F",
+  address =	 "Gainesville, FL",
+  month =	 Jun
+}
+
+
+@TechReport{LivadasR94,
+  author = 	 "Panos E. Livadas and Adam Rosenstein",
+  title = 	 "Slicing in the presence of pointer variables",
+  institution =  "Computer and Information Sciences Department, University of Florida",
+  year = 	 1994,
+  number =	 "SERC-TR-74-F",
+  address =	 "Gainesville, FL",
+  month =	 Jun
+}
+
+
+@InProceedings{LivadasR91,
+  author = 	 "Panos E. Livadas and Prabal K. Roy",
+  title = 	 "Program Dependence Analysis",
+  editor =	 "M. Kellner",
+  address =	 "Orlando, FL",
+  pages =	 "356--365",
+  booktitle =	 "Proceedings, Conference on Software Maintenance",
+  year =	 1992,
+  month =	 Nov # "~9--12,"
+}
+
+
+@Unpublished{JacksonR94:Abstract,
+  author = 	 "Daniel Jackson and Eugene J. Rollins",
+  title = 	 "Abstract Program Dependences for Reverse Engineering",
+  note = 	 "Submitted to Second ACM SIGSOFT Symposium on Foundations
+		  of Software Engineering",
+  year =	 1994,
+  month =	 Jun
+}
+
+
+@InProceedings{JacksonR94:NewModel,
+  author = 	 "Daniel Jackson and Eugene J. Rollins",
+  title = 	 "A New Model of Program Dependences for Reverse Engineering",
+  OPTpages = 	 "2--11",
+  booktitle =	 "Proceedings, Second ACM SIGSOFT Symposium on Foundations
+		  of Software Engineering",
+  year =	 1994,
+  address =	 "New Orleans",
+  month =	 Dec
+}
+
+
+@InProceedings{JacksonR94:Pictorial,
+  author = 	 "Daniel Jackson and Eugene J. Rollins",
+  title = 	 "Abstraction Mechanisms for Pictorial Slicing",
+  OPTpages = 	 "",
+  booktitle =	 "Proceedings, IEEE Workshop on Program Comprehension",
+  year =	 1994,
+  address =	 "Washington",
+  month =	 Nov
+}
+
+@TechReport{Jackson92,
+  author = 	 "Daniel Jackson",
+  title = 	 "Aspect: A formal specification language for detecting bugs",
+  institution =  MITLCS,
+  year = 	 1992,
+  number =	 "MIT/LCS/TR-543",
+  address =	 "Cambridge, MA",
+  month =	 Jun # "~16,"
+}
+
+
+@Unpublished{ChanghoHB95,
+  author = 	 "C. C. Changho and M. L. Hines and J. K. Blundell",
+  title = 	 "Generic program slicing with equivalence graphs",
+  note = 	 "Computer Science Telecommunications, University of
+		  Missouri -- Kansas City",
+  month =	 nov,
+  year =	 1995
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Combining dynamic and static slicing
+%%%
+
+@InProceedings{FieldT94,
+  author = 	 "John Field and Frank Tip",
+  title = 	 "Dynamic dependence in term rewriting systems and its
+		  application to program slicing",
+  editor =	 "M. Hermenegildo and J. Penjam",
+  volume =	 "???",
+  series =	 LNCS,
+  pages =	 "416--432",
+  booktitle =	 "Proceedings of the Sixth International Symposium on
+		  Programming Language Implementation and Logic Programming",
+  year =	 1994,
+  publisher =	 "Springer-Verlag",
+  note =	 "ftp.cwi.nl:/pub/gipe/drafts/FT94.ps.Z"
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Integration/comparison
+%%%
+
+
+@TechReport{Binkley91,
+  author = 	 "David W. Binkley",
+  title = 	 "Multi-Procedure Program Integration",
+  institution =  UWMadison,
+  year = 	 1991,
+  number =	 1038,
+  month =	 Aug
+}
+
+
+@InProceedings{HorwitzPR88a,
+  author = 	 "Susan Horwitz and Jan Prins and Thomas Reps",
+  title = 	 "Integrating non-interfering versions of programs",
+  pages =	 "146--157",
+  booktitle =	 POPL88,
+  year =	 1988,
+  address =	 "San Diego, CA",
+  month =	 jan
+}
+
+
+@Article{HorwitzPR89:TOPLAS,
+  author = 	 "Susan Horwitz and Jan Prins and Thomas Reps",
+  title = 	 "Integrating non-interfering versions of programs",
+  journal =	 toplas,
+  year =	 1989,
+  volume =	 11,
+  number =	 3,
+  pages =	 "345--387",
+  month =	 jul
+}
+
+
+@TechReport{HorwitzR90,
+  author = 	 "Susan Horwitz and Thomas Reps",
+  title = 	 "Efficient Comparison of Program Slices",
+  institution =  UWMadison,
+  year = 	 1990,
+  number =	 982,
+  month =	 Dec
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Compilable slicing
+%%%
+
+
+
+@Article{Binkley93,
+  author = 	 "David Binkley",
+  title = 	 "Precise executable interprocedural slices",
+  journal =	 loplas,
+  year =	 1993,
+  volume =	 2,
+  number =	 "1-4",
+  pages =	 "31--45",
+  month =	 mar # "--" # dec
+}
+
+
+@Misc{Binkley94,
+  author =	 "David Binkley",
+  howpublished = "Personal communication",
+  year =	 1994,
+  month =	 Jan # "~21,"
+}
+
+
+@InProceedings{BallH93,
+  author = 	 "Thomas Ball and Susan Horwitz",
+  title = 	 "Slicing Programs with Arbitrary Control-Flow",
+  number =	 749,
+  series =	 LNCS,
+  pages =	 "206--222",
+  booktitle =	 "Proc. of the 1st International Workshop on Automated and
+		  Algorithmic Debugging",
+  year =	 1993,
+  publisher =	 "Springer-Verlag",
+  address =	 "Link{\"o}ping, Sweden",
+  month =	 May
+}
+
+
+@Unpublished{ChoiF93,
+  author = 	 "Jong-Deok Choi and Jeanne Ferrante",
+  title = 	 "Static slicing in the presence of {GOTO} statements",
+  note = 	 "Submitted for publication;
+		  previously titled ``What is in a slice''",
+  year =	 1993,
+  month =	 Oct # "~19,"
+}
+
+
+@TechReport{BallH92,
+  author = 	"Thomas Ball and Susan Horwitz",
+  title = 	"Slicing Programs with Arbitrary Control Flow",
+  institution =	UWMadison,
+  year = 	1992,
+  number = 	"1128",
+  month = 	dec # "~21,"
+}
+
+
+@InProceedings{Agrawal94,
+  author = 	 "Hiralal Agrawal",
+  title = 	 "On slicing programs with jump statements",
+  pages =	 "302--312",
+  booktitle =	 PLDI94,
+  year =	 1994,
+  address =	 "Orlando, FL",
+  month =	 Jun # "~20--24,"
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Implemented slicers
+%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Applications of slicing
+%%%
+
+%%% Parallelization
+
+@InProceedings{BadgerW88,
+  author = 	 "Lee Badger and Mark Weiser",
+  title = 	 "Minimizing Communication for Synchronizing Parallel
+		  Dataflow Programs",
+  pages =	 "122--126",
+  booktitle =	 "Proceedings of the 1988 International Conference on
+		  Parallel  Processing,  Volume  II, Software",
+  year =	 1988,
+  address =	 "Penn State",
+  month =	 Aug
+}
+
+
+@Article{Weiser83,
+  author = 	 "Mark Weiser",
+  title = 	 "Reconstructing sequential behavior from parallel behavior
+		  projections",
+  journal =	 IPL,
+  year =	 1983,
+  volume =	 17,
+  number =	 5,
+  pages =	 "129--135",
+  month =	 Oct
+}
+
+
+%%% Debugging
+
+@InProceedings{TischlerSP83,
+  author = 	 "Ron Tischler and Robin Schaufler and Charlotte Payne",
+  title = 	 "Static analysis of programs as an aid to debugging",
+  pages =	 "155--158",
+  booktitle =	 HLD,
+  year =	 1983,
+  address =	 "Pacific Grove, CA",
+  month =	 Mar # "~20--23,"
+}
+
+
+@Article{PodgurskiC90,
+  author = 	 "Andy Podgurski and Lori A. Clarke",
+  title = 	 "A formal model of program dependences and its
+		  implications for software testing, debugging, and
+		  maintenance",
+  journal =	 IEEESE,
+  year =	 1990,
+  volume =	 16,
+  number =	 9,
+  pages =	 "965--979",
+  month =	 Sep
+}
+
+
+@Article{Weiser82,
+  author = 	 "Mark Weiser",
+  title = 	 "Programmers use slices when debugging",
+  journal =	 CACM,
+  year =	 1982,
+  volume =	 25,
+  number =	 7,
+  pages =	 "446--52",
+  month =	 Jul
+}
+
+
+@InProceedings{LyleW86,
+  author = 	 "Jim Lyle and Mark Weiser",
+  title = 	 "Experiments on slicing-based debugging aids",
+  booktitle =	 "Proceedings of the First Workshop on Empirical Studies of
+		  Programmers",
+  editor =	 "Elliot Soloway and Sitharama Iyengar",
+  year =	 1986,
+  month =	 Jun # "~5--6,",
+  address =	 "Washington, DC",
+  pages = 	 "187--197"
+}
+
+
+%%% Real-time systems
+
+
+@InProceedings{GerberH93:RTS,
+  author = 	 "Richard Gerber and Seongsoo Hong",
+  title = 	 "Semantics-Based Compiler Transformations for Enhanced
+		  Schedulability",
+  booktitle =	 "IEEE Real-Time Systems Symposium",
+  year =	 1993,
+  month =	 Dec,
+  note =	 "Also appears as UMD CS-TR-3071, UMIACS-TR-93-37, May 1993"
+}
+
+
+
+
+
+
+
+
+%%% Secure information flow
+
+@inproceedings{HammerKS2006,
+  author = {Christian Hammer and Jens Krinke and Gregor Snelting},
+  title = {Information Flow Control for Java Based on Path Conditions in Dependence Graphs},
+  booktitle = ISSSE2006,
+  year = 2006,
+  month = ISSSE2006date,
+  pages = "87--96",
+  address = ISSSE2006addr,
+}
+
+@article{SneltingRK2006,
+  author = {Gregor Snelting and Torsten Robschink and Jens Krinke},
+  title = {Efficient Path Conditions in Dependence Graphs for Software Safety Analysis},
+  year = 2006,
+  month = oct,
+  volume = 15,
+  number = 4,
+  pages = "410--457",
+  journal = TOSEM,
+}
+
+@inproceedings{HammerKN2006,
+  title = {Intransitive Noninterference in Dependence Graphs},
+  author = {Christian Hammer and Jens Krinke and Frank Nodes},
+  booktitle = ISOLA2006,
+  year = 2006,
+  month = ISOLA2006date,
+  address = ISOLA2006addr,
+  pages = "119--128",
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Not yet read
+%%%
+
+
+@Unpublished{LarsenH,
+  author = 	 {Loren D. Larsen and Mary Jean Harrold},
+  title = 	 {Slicing Object-Oriented Software},
+  note = 	 {Submitted to OOPSLA '95}
+}
+@InProceedings(abramsky,
+  Author    = {Abramsky, S.},
+  Title     = {Strictness Analysis and Polymorphic Invariance},
+  BookTitle = {Programs as Data Objects},
+  Year      = {1985},
+  Editor    = {H. Granziger and N. D. Jones},
+  Number    = {217},
+  Series    = {LNCS},
+  Pages     = {1--23},
+  Publisher = sv
+  )
+
+@Article{BergerettiC85,
+  author = 	 "Jean-Francois Bergeretti and Bernard A. Carre",
+  title = 	 "Information-flow and dataflow analysis of while-programs",
+  journal =	 toplas,
+  year =	 1985,
+  volume =	 7,
+  number =	 1,
+  pages =	 "37--61",
+  month =	 Jan
+}
+
+
+
+@Article{NingEK94,
+  author = 	 "Jim Q. Ning and Andre Engberts and W. (Voytek) Kozaczynski",
+  title = 	 "Automated support for legacy code understanding",
+  journal =	 CACM,
+  year =	 1994,
+  volume =	 37,
+  number =	 5,
+  pages =	 "50--57",
+  month =	 May
+}
+
+@InProceedings{NingEK93,
+  author = 	 "Jim Q. Ning and Andre Engberts and W. (Voytek) Kozaczynski",
+  title = 	 "Recovering reusable components from legacy systems by
+		  program segmentation",
+  pages =	 "64--72",
+  booktitle =	 "Proc. Working Conference on Reverse Engineering",
+  year =	 1993,
+  address =	 "Baltimore",
+  month =	 May
+}
+
+
+
+@Manual{Refine,
+  title = 	 "Refine User's Guide",
+  organization = "Reasoning Systems",
+  address =	 "Palo Alto, CA",
+  year =	 1992
+}
+
+
+@InProceedings{BeckE93,
+  author = 	 "Jon Beck and David Eichmann",
+  title = 	 "Program and interface slicing for reverse engineering",
+  pages =	 "509--518",
+  booktitle =	 "Proc. 15th International Conference on Software Engineering",
+  year =	 1993,
+  address =	 "Baltimore",
+  month =	 May
+}
+
+
+@Article{MoriconiW90,
+  author = 	 "Mark Moriconi and Timothy C. Winkler",
+  title = 	 "Approximate reasoning about the semantic effects of
+		  program changes",
+  journal =	 IEEETSE,
+  year =	 1990,
+  volume =	 16,
+  number =	 9,
+  pages =	 "980--992",
+  month =	 Sep
+}
+
+
+@TechReport{YauL88,
+  author = 	 "S. Yau and S. S. Liu",
+  title = 	 "Some approaches to logical ripple-effect analysis",
+  institution =  "University of Florida",
+  year = 	 1988,
+  type =	 "Software Engineering Research Center",
+  number =	 "SERC-TR-24-F",
+  address =	 "Gainesville, FL",
+  month =	 Oct
+}
+
+
+
+%A K. B. Gallagher
+%T Using program slicing in software maintenance
+%R Ph. D. Thesis \fR(Technical Report CS-90-05)\fP
+%I University of Maryland
+%C Baltimore County, Maryland
+
+
+
+
+@PhdThesis{Weiser79,
+  author = 	 "Mark Weiser",
+  title = 	 "Program slices:  formal, psychological, and practical
+		  investigations of an automatic program abstraction method",
+  school = 	 "University of Michigan",
+  year = 	 1979,
+  address =	 "Ann Arbor"
+}
+
+
+@InProceedings{Reps:93:SolvingDemandProblems,
+  author    =  "T. Reps",
+  title     =  "Solving demand versions of interprocedural analysis problems",
+  booktitle =  "Proceedings of the Fifth International Conference on Compiler Construction",
+  semno     =  "D-211",
+  year      =  "1993",
+  series    =   lncs,
+  volume    =  "786",
+  editor    =  "P. Fritzson",
+  pages     =  "389--403",
+  publisher =  "Springer-Verlag",
+  OPTnote   =  "",
+  keywords  =  "interprocedural dataflow analysis, magic-sets transformation,
+                demand algorithms",
+  summary   =  "The paper describes how algorithms for demand versions of
+                program-analysis problems can be obtained from their exhaustive
+                counterparts essentially for free, by applying the so-called
+                magic-sets transformation that was developed in the
+                logic-programming and deductive-database communities."
+}
+
+@Unpublished{Reps:94:SequentialNatureOfInterproceduralAnalysis,
+  author    =  "T. Reps",
+  title     =  "On the sequential nature of interprocedural program-analysis problems",
+  note      =  "Submitted for publication",
+  year      =  "1994",
+  month     =  Jan,
+  summary   =  "This paper shows that the interprocedural slicing problem
+                and the interprocedural gen/kill dataflow-analysis problem
+                are log-space complete for P.  These results provide evidence
+                that there do not exists fast parallel algorithms for
+                these problems.",
+  keywords  =  "interprocedural dataflow analysis,
+                interprocedural program slicing,
+                parallel algorithms,
+                inherently sequential problems",
+  semno     =  "D-212"
+}
+
+@Unpublished{Reps:94:DemandInterproceduralAnalysis,
+  author    =  "T. Reps",
+  title     =  "Demand interprocedural program analysis using logic databases",
+  note      =  "Extended version of D-211.  Submitted for publication",
+  year      =  "1994",
+  month     =  may,
+  summary   =  "The paper describes how algorithms for demand versions of
+                program-analysis problems can be obtained from their exhaustive
+                counterparts essentially for free, by applying the so-called
+                magic-sets transformation that was developed in the
+                logic-programming and deductive-database communities.
+                Applications to interprocedural dataflow analysis and
+                interprocedural program slicing are described.",
+  keywords  =  "interprocedural dataflow analysis,
+                magic-sets transformation,
+                interprocedural program slicing,
+                demand algorithms",
+  semno     =  "D-213"
+}
+
+
+
+@InProceedings{RepsHSR94:SIGSOFT,
+  author    =   "Thomas Reps and Susan Horwitz and Mooly Sagiv and Genevieve Rosay",
+  title     =   "Speeding up slicing",
+  booktitle = 	 "SIGSOFT'94: Proceedings of the Second ACM SIGSOFT
+  		  Symposium on Foundations of Reverse Engineering",
+  year      =   1994,
+  month     =   Dec # "~6--9,",
+  editor =	 "David Wile",
+  address =	 "New Orleans",
+  pages =	 "11--20",
+  note =	 "Software Engineering Notes 19:5"
+}
+@TechReport{RepsHSR94:TR,
+  author    =   "Thomas Reps and Susan Horwitz and Mooly Sagiv and Genevieve Rosay",
+  title     =   "Speeding up slicing",
+  institution =  "University of Wisconsin -- Madison",
+  year      =   "1994",
+  month     =   dec,
+  keywords  =   "interprocedural program slicing,
+                 system dependence graph,
+                 dynamic programming,
+                 dynamic transitive closure",
+  semno     =   "D-214"
+}
+
+
+@TechReport{RepsSagivHorwitz:94:GraphReachabilityReport,
+  semno     =   "D-215",
+  author    =   "T. Reps and M. Sagiv and S. Horwitz",
+  title     =   "Interprocedural dataflow analysis via graph reachability",
+  institution = "DIKU, University of Copenhagen, Denmark",
+  year      =   "1994",
+  number    =   "94/14",
+  summary   =   "The paper shows how a large class of interprocedural
+                 dataflow-analysis problems can be solved precisely
+                 in polynomial time by transforming them into a
+                 special kind of graph-reachability problem.",
+  keywords  =   "demand dataflow analysis,
+                 interprocedural dataflow analysis,
+                 interprocedural program slicing,
+                 graph reachability"
+} % ISSN 0107-8283
+
+
+
+@InProceedings{RepsHS95,
+  author = 	 "Thomas Reps and Susan Horwitz and Mooly Sagiv",
+  title = 	 "Precise interprocedural dataflow analysis via graph reachability",
+  booktitle =	 POPL95,
+  pages =	 "49--61",
+  year =	 1995,
+  address =	 POPL95addr,
+  month =	 POPL95date
+}
+
+
+@TechReport{Kamkar91-20,
+  author = 	 {Mariam Kamkar},
+  title = 	 {Interprocedural dynamic slicing applied to algorithmic debugging},
+  institution =  {Department of Computer and Information Science,
+		  Link\"oping University},
+  year = 	 1991,
+  number =	 {LiTH-IDA-R-91-20},
+  address =	 {Link\"oping, Sweden},
+  month =	 {June}
+}
+
+@TechReport{Kamkar91-19,
+  author = 	 {Mariam Kamkar},
+  title = 	 {An overview and comparative classification of static and
+		  dynamic slicing},
+  institution =  {Department of Computer and Information Science,
+		  Link\"oping University},
+  year = 	 1991,
+  number =	 {LiTH-IDA-R-91-19},
+  address =	 {Link\"oping, Sweden},
+  month =	 {June}
+}
+
+
+@InProceedings{FieldR95,
+  author = 	 "John Field and G. Ramalingam and Frank Tip",
+  title = 	 "Parametric program slicing",
+  booktitle = 	 "POPL '95",
+  year =	 1995,
+  month =	 jan
+}
+
+
+@InProceedings{GerberH93,
+  author = 	 "Richard Gerber and Seongsoo Hong",
+  title = 	 "Semantics-based compiler transformations for enhanced
+		  schedulability",
+  booktitle = 	 "Proc. 14th IEEE Real-Time Systems Symposium",
+  year =	 1993,
+  month =	 Dec,
+  pages =	 "232--242"
+}
+
+
+@Proceedings{FormalMethodsWorkshop93,
+  title = 	 "Increasing the Practical Impact of Formal Methods for
+		  Computer-Aided Software Development: Software Slicing,
+		  Merging, and Integration",
+  editor =	 "Valdis Berzins",
+  year = 	 1993,
+  organization = "ARO/AFOSR/ONR",
+  address =	 "U.S. Naval Postgraduate School, Monterey, California",
+  month =	 Oct # "~13--15,"
+}
+
+@Article{AdamsTW94,
+  author = 	 "Rolf Adams and Walter Tichy and Annette Weinert",
+  title = 	 "The cost of selective recompilation and environment
+		  processing",
+  journal = 	 TOSEM,
+  year = 	 1994,
+  volume =	 3,
+  number =	 1,
+  month =	 Jan,
+  pages =	 "3--28"
+}
+
+
+@article{222483,
+ author = {Sebastian Danicic and Mark Harman and Yoga Sivagurunathan},
+ title = {A parallel algorithm for static program slicing},
+ journal = {Inf. Process. Lett.},
+ volume = {56},
+ number = {6},
+ year = {1995},
+ issn = {0020-0190},
+ pages = {307--313},
+ doi = {http://dx.doi.org/10.1016/0020-0190(95)00170-0},
+ publisher = {Elsevier North-Holland, Inc.},
+ address = {Amsterdam, The Netherlands, The Netherlands},
+ }
+
+@InProceedings{BallE94,
+  author = 	 "Thomas Ball and Stephen G. Eick",
+  title = 	 "Visualizing program slices",
+  booktitle = 	 "Proceedings fo the IEEE Symposium on Visual Languages",
+  year =	 1994,
+  address =	 "St.~Louis, Missouri",
+  month =	 Oct # "~4--7,",
+  pages =	 "288--295"
+}
+
+
+@inproceedings{759374,
+ author = {Frank Tip},
+ title = {Generic Techniques for Source-Level Debugging and Dynamic Program Slicing},
+ booktitle = {TAPSOFT '95: Proceedings of the 6th International Joint Conference CAAP/FASE on Theory and Practice of Software Development},
+ year = {1995},
+ isbn = {3-540-59293-8},
+ pages = {516--530},
+ publisher = {Springer-Verlag},
+ address = {London, UK},
+}
+
+
+
+@PhdThesis{Tip95:PhD,
+  author = 	 "Frank Tip",
+  title = 	 "Generation of Program Analysis Tools",
+  school = 	 "Proefschrift Universiteit van Amsterdam",
+  year = 	 "1995",
+  OPTkey = 	 "",
+  address = 	 "Amsterdam",
+  OPTtype = 	 "",
+  month = 	 mar,
+  OPTnote = 	 "",
+  OPTannote = 	 ""
+}
+
+
+
+
+
+
+
+
+
+
+@Misc{RepsHB92,
+  author =	 "Thomas Reps and Susan Horwitz and David Binkley",
+  title =	 "Interprocedural slicing of computer programs using
+		  dependence graphs",
+  howpublished = "UNited States Patend 5,161,216",
+  year =	 1992,
+  month =	 Nov # "~3,"
+}
+
+@InProceedings{oopsla96*179,
+  author =       "Frank Tip and Jong-Deok Choi and John Field and G.
+                 Ramalingam",
+  title =        "Slicing Class Hierarchies in {C++}",
+  pages =        "179--197",
+  ISBN =         "0-201-92109-X",
+  ISSN =         "0362-1340",
+  booktitle =    "Proceedings of the Conference on Object-Oriented
+                 Programming Systems, Languages, and Applications",
+  month =        oct # "6--10~",
+  series =       "ACM SIGPLAN Notices",
+  volume =       "31, 10",
+  publisher =    "ACM Press",
+  address =      "New York",
+  year =         "1996",
+}
+
+@TechReport{HuangTBCWS95,
+  author = 	 "H. Huang and W.T. Tsai and S. Bhattacharya and X.P. Chen
+		  and Y. Wang and J. Sun",
+  title = 	 "Business rule extraction from legacy code",
+  institution =  "University of Minnesota, Department of Computer Science",
+  year = 	 1995,
+  number =	 "TR 95-034",
+  address =	 "Minneapolis, MN",
+  month =	 may
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% All references to Weiser84
+%%%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% More
+%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% End
+%%%
+

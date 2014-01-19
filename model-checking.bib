@@ -1,0 +1,183 @@
+
+
+@InProceedings{GanapathySJRB2005,
+  author = 	 "Vinod Ganapathy and Sanjit A. Seshia and Somesh Jha and Thomas W. Reps and Randal E. Bryant",
+  title = 	 "Automatic discovery of {API}-level exploits",
+  booktitle =	 ICSE2005,
+  pages = 	 "312--321",
+  year =	 2005,
+  address =	 ICSE2005addr,
+  month =	 ICSE2005date,
+  abstract =
+   "We argue that finding vulnerabilities in software components is different
+    from finding exploits against them. Exploits that compromise security often
+    use several low-level details of the component, such as layouts of stack
+    frames. Existing software analysis tools, while effective at identifying
+    vulnerabilities, fail to model low-level details, and are hence unsuitable
+    for exploit-finding.
+    \par
+    We study the issues involved in exploit-finding by considering application
+    programming interface (API) level exploits. A software component is
+    vulnerable to an API-level exploit if its security can be compromised by
+    invoking a sequence of API operations allowed by the component. We present
+    a framework to model low-level details of APIs, and develop an automatic
+    technique based on bounded, infinite-state model checking to discover
+    API-level exploits.
+    \par
+    We present two instantiations of this framework. We show that format-string
+    exploits can be modeled as API-level exploits, and demonstrate our
+    technique by finding exploits against vulnerabilities in widely-used
+    software. We also use the framework to model a cryptographic-key management
+    API (the IBM CCA) and demonstrate a tool that identifies a previously known
+    exploit.",
+}
+
+
+
+@InProceedings{HenzingerJMS2003,
+  author = 	 "Thomas A. Henzinger and Ranjit Jhala and Rupak Majumdar
+                  and Gregoire Sutre",
+  title = 	 "Software Verification with {Blast}",
+  booktitle =	 SPIN2003,
+  pages =	 "235--239",
+  year =	 2003,
+  address =	 SPIN2003addr,
+  month =	 SPIN2003date,
+  abstract =
+   "Blast is a model checker for C programs based on an algorithm called lazy
+    abstraction. Specifications are given as temporal safety monitors written
+    in C syntax. Blast starts with a very coarse predicate abstraction of the
+    input program and automatically refines the abstraction, on-the-fly and
+    on-demand, until either a bug is found or the specification is
+    proved. Then, Blast provides either an error trace or a succinct proof
+    certificate. Blast has been applied successfully to Linux and Windows
+    device drivers with tens of thousands of lines of C code."
+}
+
+
+@Article{BallLR2011,
+  author = 	 "Ball, Thomas and Levin, Vladimir and Rajamani, Sriram K.",
+  title = 	 "A decade of software model checking with {SLAM}",
+  journal = 	 CACM,
+  year = 	 2011,
+  volume = 	 54,
+  number = 	 7,
+  pages = 	 "68--76",
+  month = 	 jul,
+}
+
+
+@InProceedings{BallR2002,
+  author = 	 "Thomas Ball and Sriram K. Rajamani",
+  title = 	 "The {SLAM} project: Debugging system software via static analysis",
+  booktitle =	 POPL2002,
+  pages =	 "1--3",
+  year =	 2002,
+  address =	 POPL2002addr,
+  month =	 POPL2002date,
+  note =	 "Invited talk",
+  abstract =
+   "The goal of the SLAM project is to check whether or not a program obeys
+    ``API usage rules'' that specify what it means to be a good client of an
+    API. The SLAM toolkit statically analyzes a C program to determine whether
+    or not it violates given usage rules. The toolkit has two unique aspects:
+    it does not require the programmer to annotate the source program
+    (invariants are inferred); it minimizes noise (false error messages)
+    through a process known as ``counterexample-driven refinement''. SLAM
+    exploits and extends results from program analysis, model checking and
+    automated deduction. We have successfully applied the SLAM toolkit to
+    Windows XP device drivers, to both validate behavior and find defects in
+    their usage of kernel APIs."
+}
+
+
+
+
+@InProceedings{BallBKL2010,
+  author = 	 "Ball, Thomas and Bounimova, Ella and Kumar, Rahul and Levin, Vladimir",
+  title = 	 "{SLAM2}: Static driver verification with under 4\% false alarms",
+  booktitle = FMCAD2010,
+  year = 	 2010,
+  pages = 	 "35--42",
+  numpages =     8,
+  month = 	 FMCAD2010date,
+  address = 	 FMCAD2010addr,
+}
+
+
+@Article{AndersonH2002,
+  author = 	 "Henrik Reif Anderson and Henrik Hulgaard",
+  title = 	 "Boolean expression diagrams",
+  journal = 	 IandC,
+  year = 	 2002,
+  volume =	 179,
+  number =	 2,
+  pages =	 "194--212"
+}
+
+
+
+
+
+
+@InProceedings{EnglerM2004,
+  author = 	 "Dawson R. Engler and Madanlal Musuvathi",
+  title = 	 "Static analysis versus software model checking for bug finding",
+  booktitle =	 "VMCAI",
+  pages =	 "191--210",
+  year =	 2004,
+  address =	 "Venice",
+  month =	 jan # "~11-13,"
+}
+
+
+
+@inproceedings{964017,
+ author = {Roberto Giacobazzi and Isabella Mastroeni},
+ title = {Abstract non-interference: parameterizing non-interference by abstract interpretation},
+ booktitle = {POPL '04: Proceedings of the 31st ACM SIGPLAN-SIGACT symposium on Principles of programming languages},
+ year = {2004},
+ isbn = {1-58113-729-X},
+ pages = {186--197},
+ location = {Venice, Italy},
+ doi = {http://doi.acm.org/10.1145/964001.964017},
+ publisher = {ACM Press},
+ address = {New York, NY, USA},
+ }
+
+
+@inproceedings{940107,
+ author = { Robby and Matthew B. Dwyer and John Hatcliff},
+ title = {Bogor: an extensible and highly-modular software model checking framework},
+ booktitle = {ESEC/FSE-11: Proceedings of the 9th European software engineering conference held jointly with 11th ACM SIGSOFT international symposium on Foundations of software engineering},
+ year = {2003},
+ isbn = {1-58113-743-5},
+ pages = {267--276},
+ location = {Helsinki, Finland},
+ doi = {http://doi.acm.org/10.1145/940071.940107},
+ publisher = {ACM Press},
+ address = {New York, NY, USA},
+ }
+
+
+
+
+
+
+
+@article{ClarkeGL1994,
+    author = {Clarke, Edmund M. and Grumberg, Orna and Long, David E.},
+    title = {Model checking and abstraction},
+    journal = TOPLAS,
+    volume = {16},
+    number = {5},
+    year = {1994},
+    pages = {1512--1542},
+}
+
+% LocalWords: GanapathySJRB Vinod Ganapathy Sanjit Seshia Somesh Jha
+% LocalWords: API CCA InProceedings booktitle NEEDpages addr printf XP
+% LocalWords: printf's unmodeled seteuid execl HenzingerJMS Henzinger
+% LocalWords: Ranjit Jhala Rupak Majumdar Gregoire Sutre BallR Sriram
+% LocalWords: Rajamani AndersonH Henrik Reif Hulgaard IandC BDDs BDD
+% LocalWords: BED's BEDs EnglerM Engler Madanlal Musuvathi VMCAI jan
