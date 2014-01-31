@@ -2150,6 +2150,34 @@ endgame.",
 }
 
 
+@Misc{MeghaniE2003,
+  author = 	 "Samir V. Meghani and Michael D. Ernst",
+  title = 	 "Determining legal method call sequences in object interfaces",
+  month = 	 may,
+  year = 	 2003,
+  howpublished = "\url{http://homes.cs.washington.edu/~mernst/pubs/call-sequences.pdf}",
+  abstract =
+   "The permitted sequences of method calls in an object-oriented component
+    interface summarize how to correctly use the component.  Many components
+    lack such documentation: even if the documentation specifies the behavior
+    of each of the component's methods, it may not state the order in which the
+    methods should be invoked.  This paper presents a dynamic technique for
+    automatically extracting the legal method call sequences in a component
+    interface, expressed as a finite state machine.  Compared to previous
+    techniques, it increases accuracy and reduces dependence on the test suite.
+    It also identifies certain programming errors.",
+  basefilename = "call-sequences",
+  category =     "Invariant detection",
+  csetags = "mernst,mernst-Invariant-detection,plse",
+  summary =
+   "Correct functioning of a component can depend on the component's methods
+    being called in the correct order.  This paper simplifies and improves on
+    previous techniques for determining the legal call sequences.",
+  usesDaikon = 1,
+  undergradCoauthor = 1,
+}
+
+
 @InProceedings{BurdyEtAl03,
   author =       {Lilian Burdy and Yoonsik Cheon and David Cok and 
 		   Michael D. Ernst and Joe Kiniry and Gary T. Leavens and 
@@ -4054,16 +4082,6 @@ endgame.",
     "http://types.cs.washington.edu/jsr308/ current status and implementation;
      http://jcp.org/en/jsr/detail?id=308 original proposal",
 }
-
-
-@Misc{JSR308-PFD,
-  author = 	 "{JSR 308 Expert Group}",
-  title = 	 "Annotations on {Java} types",
-  howpublished = "\url{http://download.oracle.com/otn-pub/jcp/annotations-2014_01_08-pfd-spec/2014-01-08-jsr308-spec.pdf}",
-  month = 	 jan,
-  year = 	 2014,
-}
-
 
 
 @TechReport{McCamantE2006:TR,
@@ -7722,7 +7740,7 @@ endgame.",
   basefilename = "fsm-inference-declarative-icse2013",
   downloads =
     "http://homes.cs.washington.edu/~mernst/pubs/fsm-inference-declarative-tr130301.pdf TR 13-03-01;
-     http://code.google.com/p/synoptic/ InvariMint implementation",
+     http://synoptic.googlecode.com/ InvariMint implementation",
   OPTdownloadsnonlocal = "",
   category =  "Invariant detection",
   csetags = "ivanb,brun,mernst,jabrah,arvind,mernst-Software-engineering,proj-synoptic,plse",
@@ -8024,6 +8042,25 @@ endgame.",
 %%% 2014
 %%%
 
+@Misc{JSR308-PFD,
+  author = 	 "{JSR 308 Expert Group}",
+  pseudoauthor = "Michael D. Ernst",
+  title = 	 "Annotations on {Java} types",
+  howpublished = "\url{http://download.oracle.com/otn-pub/jcp/annotations-2014_01_08-pfd-spec/2014-01-08-jsr308-spec.pdf}",
+  month = 	 jan # "~8,",
+  year = 	 2014,
+  note = 	 "Proposed Final Draft.",
+  NOabstract =   1,
+  basefilename = "annotations-jsr308-pfd",
+  downloadsnonlocal = "http://download.oracle.com/otn-pub/jcp/annotations-2014_01_08-pfd-spec/2014-01-08-jsr308-spec.pdf PDF",
+  category =     "Programming language design",
+  csetags = "mernst,mernst-Programming-language-design,plse",
+  summary =
+   "This is the Proposed Final Draft of the specification of type
+   annotations in Jana 8.",
+}
+
+
 @InProceedings{AndersonEOPW2014,
   author = 	 "Ruth Anderson and Michael D. Ernst and Robert Ord{\'o}{\~n}ez and Paul Pham and Steven A. Wolfman",
   title = 	 "Introductory programming meets the real world: Using real problems and data in CS1",
@@ -8105,7 +8142,7 @@ endgame.",
     their implementations.  CSight's only requirement is that the logged events
     have vector timestamps. We provide a tool that automatically adds vector
     timestamps to system logs.  Our tool prototypes are available at
-    \url{http://code.google.com/p/synoptic/}.
+    \url{http://synoptic.googlecode.com/}.
     \par
     This paper presents algorithms for inferring CFSM models from traces
     of concurrent systems, proves them correct, provides an
@@ -8115,7 +8152,7 @@ endgame.",
     CSight infers accurate models that can help developers find bugs.",
   basefilename = "concurrent-models-icse2014",
   downloads =
-    "http://code.google.com/p/synoptic/ CSight implementation",
+    "http://synoptic.googlecode.com/ CSight implementation",
   category =  "Invariant detection",
   csetags = "ivanb,brun,mernst,arvind,mernst-Software-engineering,proj-synoptic,plse",
   summary =
@@ -8270,33 +8307,6 @@ endgame.",
 }
 
 
-@Misc{MeghaniE2003,
-  author = 	 "Samir V. Meghani and Michael D. Ernst",
-  title = 	 "Determining legal method call sequences in object interfaces",
-  month = 	 may,
-  year = 	 2003,
-  howpublished = "\url{http://homes.cs.washington.edu/~mernst/pubs/call-sequences.pdf}",
-  abstract =
-   "The permitted sequences of method calls in an object-oriented component
-    interface summarize how to correctly use the component.  Many components
-    lack such documentation: even if the documentation specifies the behavior
-    of each of the component's methods, it may not state the order in which the
-    methods should be invoked.  This paper presents a dynamic technique for
-    automatically extracting the legal method call sequences in a component
-    interface, expressed as a finite state machine.  Compared to previous
-    techniques, it increases accuracy and reduces dependence on the test suite.
-    It also identifies certain programming errors.",
-  basefilename = "call-sequences",
-  category =     "Invariant detection",
-  csetags = "mernst,mernst-Invariant-detection,plse",
-  summary =
-   "Correct functioning of a component can depend on the component's methods
-    being called in the correct order.  This paper simplifies and improves on
-    previous techniques for determining the legal call sequences.",
-  usesDaikon = 1,
-  undergradCoauthor = 1,
-}
-
 
 
 @Misc{RazES2005,
@@ -8381,6 +8391,167 @@ endgame.",
 %%% Submitted
 %%%
 
+
+@Misc{ZhangJWMLEN2014,
+  author = 	 "Sai Zhang and Darioush Jalali and Jochen Wuttke and K{\i}van{\c{c}} Mu{\c{s}}lu and Wing Lam and Michael D. Ernst and David Notkin",
+  title = 	 "Empirically revisiting the test independence assumption",
+  month = 	 jan,
+  year = 	 2014,
+  abstract =
+   "In a test suite, all the test cases should be independent:  no test should
+    affect any other test's result, and running the tests in any order should
+    produce the same test results.  Test independence is important so that
+    tests behave consistently as intended by the developers.  In addition,
+    techniques such as test prioritization assume that the tests in a suite are
+    independent, but they do not justify that assumption.  Test dependence is a
+    little-studied phenomenon.  This paper presents five results related to
+    test dependence.
+    \par
+    First, we characterize the test dependence that arises in practice.  We
+    studied 96 real-world dependent tests from 5 issue tracking systems.  Our
+    study shows that test dependence can be hard for programmers to identify.
+    It also shows that test dependence can cause non-trivial consequences, such
+    as masking program faults and leading to spurious bug reports.
+    \par
+    Second, we formally define test dependence in terms of test suites as
+    ordered sequences of tests along with explicit environments in which these
+    tests are executed.  We formulate the problem of detecting dependent tests
+    and prove that a useful special case is NP-complete.
+    \par
+    Third, guided by the study of real-world dependent tests, we propose and
+    compare three algorithms to detect dependent tests in a test suite.
+    \par
+    Fourth, we applied our dependent test detection algorithms to 4 real-world
+    programs and found dependent tests in each human-written and
+    automatically-generated test suite.
+    \par
+    Fifth, we empirically assessed the impact of dependent tests on five test
+    prioritization techniques and found that dependent tests affect the output
+    of \textit{all} five techniques.",
+  omitfromcv = 1,
+  underreview =   1,
+  basefilename = "test-independence",
+  category =  "Testing",
+  summary =
+   "A test is indepent if its result does not depend on what other tests have
+    been run.  Test prioritizaton and selection assume test independence.  We
+    show that both human-written and automatically-generated test suites
+    violate the standard test independence assumption."
+}
+
+
+
+@Misc{BarrosJMVDdAE2014,
+  author = 	 "Paulo Barros and Ren\'e Just and Suzanne Millstein and Paul Vines and Werner Dietl and Marcelo d'Amorim and Michael D. Ernst",
+  title = 	 "Precise and sound static analysis of implicit control flow: Resolving {Java} reflection and {Android} intents",
+  month = 	 jan,
+  year = 	 2014,
+  abstract =
+   "Implicit control flow is a transfer of control between procedures using
+    some mechanism other than a direct procedure call.  Implicit control flow
+    is a staple design pattern that adds flexibility to system design.
+    However, it is challenging for a static analysis to compute or verify
+    properties about a system that uses implicit control flow.
+    \par
+    This paper presents static analyses for two types of implicit control
+    flow:  Java reflection and Android intents.  Our analyses help to resolve
+    where control flows and what data is passed.  The analysis results are
+    provided to downstream analyses that benefit from improved precision.
+    \par
+    We have implemented our techniques for Java.  We enhanced an existing
+    security analysis with more precise treatment of reflection and intents.
+    Our evaluation showed that our analyses are easy for a programmer to use,
+    and they are effective in improving downstream analyses.",
+  omitfromcv = 1,
+  underreview =   1,
+  basefilename = "implicit-control-flow",
+  category =  "Static analysis",
+  summary =
+   "Standard program analysis understand control flow through direct procedure
+    calls.  This paper provides analyses that resolve uses of Java reflecton and
+    the data passed in Android intents.",
+}
+
+
+@Misc{WeitzKSE2014,
+  author = 	 "Konstantin Weitz and Gene Kim and Siwakorn Srisakaokul and Michael D. Ernst",
+  title = 	 "A type system for format strings",
+  month = 	 jan,
+  year = 	 2014,
+  abstract =
+   "Most programming languages support format strings, but their use is
+    error-prone.  Using the wrong format string syntax or passing the wrong
+    number or type of arguments leads to unintelligible text output, program
+    crashes, or security vulnerabilities (e.g.\ \emph{wu-ftpd}).
+    \par
+    This paper presents a model that captures the common concepts of many
+    important format string APIs (e.g.\ C, C\#, Java, Go), along with a type
+    system that guarantees that calls to these APIs will never fail.
+    \par
+    We evaluated an implementation of this type system for Java on 6 large and
+    well-maintained open source projects. Format string bugs are common in
+    practice (we found 103 bugs). The annotation burden on the user of our type
+    system is low (on average, for every bug found, only 0.85 annotations need
+    to be written).",
+  omitfromcv = 1,
+  underreview =   1,
+  basefilename = "format-string",
+  category =  "Static analysis",
+  summary =
+   "This paper presents a type system that guarantees that invocations of
+    format routines, such as printf, will not fail:  the format string is
+    well-formed and the arguments are compatible with the format string.",
+}
+
+
+
+@Misc{JustEF2014,
+  author = 	 "Ren\'e Just and Michael D. Ernst and Gordon Fraser",
+  authorASCII = 	 "Rene Just and Michael D. Ernst and Gordon Fraser",
+  title = 	 "Efficient mutation analysis by propagating and partitioning infected execution states",
+  month = 	 jan,
+  year = 	 2014,
+  abstract =
+   "Mutation analysis evaluates testing techniques by measuring how well they
+    detect seeded faults (mutants). However, mutation analysis is hampered by
+    inherent scalability problems --- a test suite is executed for each of a
+    large number of mutants.  Despite numerous optimizations presented in the
+    literature, this scalability issue remains, and this is one of the reasons
+    why mutation analysis is hardly used in practice.
+    \par
+    Whereas most previous optimizations attempted to statically reduce the
+    number of executions or their computational overhead, this paper exploits
+    information available only at run time to further reduce the number of
+    executions.
+    \par
+    First, \emph{state infection conditions} can reveal --- with a single test
+    execution on the unmutated program --- which mutants would lead to a
+    different state, thus avoiding unnecessary mutant executions.
+    %
+    Second, determining whether an infected execution state \emph{propagates}
+    can further reduce the number of executions. Mutants that are embedded in
+    compound expressions may infect the state locally without affecting the
+    outcome of the compound expression.
+    %
+    Third, those mutants that do infect the state can be \emph{partitioned}
+    based on the resulting infected state --- if two mutants lead to the same
+    infected state, only one needs to be executed as the result of the other
+    can be inferred.
+    \par
+    We have implemented these optimizations in the Major mutation
+    framework and empirically evaluated them on 14 open source 
+    programs. The optimizations reduced the mutation analysis time by
+    40\% on average.",
+  omitfromcv = 1,
+  underreview =   1,
+  basefilename = "state-infection",
+  category =  "Testing",
+  summary =
+   "Mutation analysis --- a technique for evaluating test suites --- is
+    notoriously compute-intensive.  This paper reduces its cost by 40\%, by
+    running the program being tested a single time in a prepass to determine
+    which test results can be predicted and thus do not need to be run.",
+}
 
 
 % LocalWords:  inproceedings typechecking booktitle apr basefilename pp RSA UW
