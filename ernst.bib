@@ -8126,12 +8126,12 @@ endgame.",
   address = 	 ICSE2014addr,
   abstract =
    "Concurrent systems are notoriously difficult to debug and understand. A
-    common way of gaining insight into system behavior is to inspect
-    execution logs and documentation. Unfortunately, manual inspection of
-    logs is an arduous process, and documentation is often incomplete and
-    out of sync with the implementation.
+    common way of gaining insight into system behavior is to inspect execution
+    logs and documentation. Unfortunately, manual inspection of logs is an
+    arduous process, and documentation is often incomplete and out of sync
+    with the implementation.
     \par
-    To provide developers with more insight into \networked systems, we
+    To provide developers with more insight into concurrent systems, we
     developed CSight.  CSight mines logs of a system's executions to infer a
     concise and accurate model of that system's behavior, in the form of a
     communicating finite state machine (CFSM).
@@ -8139,7 +8139,7 @@ endgame.",
     Engineers can use the inferred CFSM model to understand complex behavior,
     detect anomalies, debug, and increase confidence in the correctness of
     their implementations.  CSight's only requirement is that the logged events
-    have vector timestamps. We provide a tool that automatically adds vector
+    have vector timestamps.  We provide a tool that automatically adds vector
     timestamps to system logs.  Our tool prototypes are available at
     \url{http://synoptic.googlecode.com/}.
     \par
@@ -8171,33 +8171,33 @@ endgame.",
   month = 	 ICSE2014date,
   address = 	 ICSE2014addr,
   abstract =
-   "Modern software often exposes configuration options for users to
+   "Modern software often exposes configuration options that enable users to
     customize its behavior. During software evolution,
     developers may change how the configuration options behave.
     When upgrading to a new software version,
     users may need to re-configure the software
-    by changing values of certain configuration options.
+    by changing the values of certain configuration options.
     \par
-    This paper addresses a central question during the evolution
+    This paper addresses the following question during the evolution
     of a configurable software system: which configuration options
     should a user change to maintain the software's desired behavior?
-    We present a technique (and its tool implementation,
+    This paper presents a technique (and its tool implementation,
     called ConfSuggester) to troubleshoot configuration errors
     caused by software evolution. 
     ConfSuggester uses dynamic profiling, execution trace
     comparison, and static analysis to link the undesired
-    behavior to its root cause --- a single configuration option
-    whose value can be changed to produce desired behavior on the new
+    behavior to its root cause --- a configuration option
+    whose value can be changed to produce desired behavior from the new
     software version.
     \par
     We evaluated ConfSuggester on 8 configuration errors
     from 6 configurable software systems written in Java.
-    In 6 errors, the root-cause configuration option was
-    ConfSuggester's first suggestion. In 1 error, the root cause
+    For 6 errors, the root-cause configuration option was
+    ConfSuggester's first suggestion. For 1 error, the root cause
     was ConfSuggester's third suggestion. The root cause
     of the remaining error was ConfSuggester's sixth suggestion.
     Overall, ConfSuggester produced significantly better results
-    than two existing techniques. ConfSuggester runs in only a few
+    than two existing techniques. ConfSuggester runs in just a few
     minutes, making it an attractive alternative to manual debugging.",
   basefilename = "confsuggester-icse2014",
   downloads = "http://config-errors.googlecode.com ConfSuggester implementation",
@@ -8223,25 +8223,25 @@ endgame.",
    "Contracts are a popular tool for specifying the functional behavior of
     software. 
     This paper characterizes the contracts that developers write, the
-    contracts that developers could write, and how developers react when
+    contracts that developers could write, and how a developer reacts when
     shown the difference.
     \par
     This paper makes three research contributions based on an
-    investigation of projects' use of Code Contracts.
+    investigation of open-source projects' use of Code Contracts.
     First, we characterize Code Contract usage in practice.
     For example, approximately three-fourths of the Code Contracts
     are basic checks for the presence of data.  We discuss similarities and
     differences in usage across the projects, and we identify annotation burden,
     tool support, and training as possible explanations based on
     developer interviews.
-    Second, based on contracts automatically inferred for the projects,
+    Second, based on contracts automatically inferred for four of the projects,
     we find that developers 
     underutilize contracts for expressing state updates, object state
-    indicators, and conditional properties (implications).
+    indicators, and conditional properties.
     Third, we performed user studies to learn how developers decide which
-    contracts to enforce.  Developers use contract suggestions to support their
+    contracts to enforce.  The developers used contract suggestions to support their
     existing use cases with more expressive contracts.  However, the
-    suggestions do not make developers experiment with other use cases for which
+    suggestions did not lead them to experiment with other use cases for which
     contracts are better-suited.
     \par
     In support of the research contributions, the paper presents two engineering
@@ -8387,7 +8387,7 @@ endgame.",
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% Submitted
+%%% Submitted (under review)
 %%%
 
 
@@ -8551,6 +8551,156 @@ endgame.",
     running the program being tested a single time in a prepass to determine
     which test results can be predicted and thus do not need to be run.",
 }
+
+
+
+@Misc{ErnstJMDPRKBBHVW2014,
+  author = 	 "Michael D. Ernst and Ren{\'e} Just and Suzanne Millstein and Werner M. Dietl and Stuart Pernsteiner and Franziska Roesner and Karl Koscher and Paulo Barros and Ravi Bhoraskar and Seungyeop Han and Paul Vines and Edward X. Wu",
+  title = 	 "Collaborative verification of information flow for a high-assurance app store",
+  month = 	 feb,
+  year = 	 2014,
+  abstract =
+   "Current app stores distribute some malware to unsuspecting users, even
+    though the app approval process may be costly and time-consuming. We
+    propose the creation of high-integrity app stores that provide certain
+    guarantees to their customers. Our approach has four key features.  (1) Our
+    analysis is based upon a flow-sensitive, context-sensitive information-flow
+    type system. (2) We use finer-grained behavioral specifications of
+    information flow than current app stores, along with automated analysis to
+    prove correctness with respect to the specification. (3) Our approach works
+    on source code rather than binaries and is based on formal verification
+    rather than on bug-finding.  (4) We use a collaborative verification
+    methodology in which the software vendor and the app store auditor each do
+    tasks that are easy for them, reducing overall cost.
+    \par
+    We have implemented our system for Android apps written in Java. In an
+    adversarial Red Team evaluation, we were given 72 apps (576,000 LOC) to
+    analyze for malware. The 57 Trojans among these had been written
+    specifically to defeat a malware analysis such as ours, and the Red Teams
+    had access to our source code and documentation. Nonetheless, our
+    information-flow type system was effective: it detected 96\% of malware
+    whose malicious behavior was related to information flow and 82\% of all
+    malware. In practice our toolset would be combined with other analyses to
+    reduce the chance of approving a Trojan. The programmer annotation burden
+    is low: one annotation per 16 lines of code. Every sound analysis requires
+    a human to review potential false alarms, and in our experiments, this took
+    30 minutes per KLOC for an auditor unfamiliar with the app.",
+  omitfromcv = 1,
+  underreview = 1,
+  basefilename = "sparta",
+  category =  "Static analysis",
+  summary =
+   "This paper presents a practical, context-sensitive, flow-sensitive type
+    system that verifies that an app satisfies an information flow policy.
+    The system was effective in an adversarial Red Team evaluation."
+}
+
+
+@Misc{BhoraskarLHCSE2014,
+  author = 	 "Ravi Bhoraskar and Dominic Langenegger and Pingyang He
+  and Raymond Cheng and Will Scott and Michael D. Ernst",
+  title = 	 "User scripting on {Android} using {BladeDroid}",
+  month = 	 mar,
+  year = 	 2014,
+  abstract =
+   "Compared to desktop and web applications, mobile applications have so far
+    been developed in an extremely siloed environment. The apps running on our
+    phone are developed by a single entity with operating system protections
+    between sharing of data or code between programs. However, application
+    extensibility is often desired. In the web, a secondary ecosystem
+    flourishes around browser extensions, enabling users to customize the web
+    as they wish.  This paper presents BladeDroid, a system enabling user
+    customization of mobile applications, using a novel combination of bytecode
+    rewriting and dynamic class loading.  We describe four extensions that we
+    have built to evaluate BladeDroid’s usability, robustness, and performance.",
+  omitfromcv = 1,
+  underreview = 1,
+  basefilename = "bladedroid",
+  category =  "Software engineering",
+  summary =
+   "User scripting is common on the Web, but unknown for mobile applications.
+    Our BladeDroid system enables users to add scripts to mobile apps.
+    The implementation uses bytecode rewriting and dynamic class loading.",
+}
+
+
+@Misc{SchillerE2014,
+  author = 	 "Todd W. Schiller and Michael D. Ernst",
+  title = 	 "Cupid: an End-User Analysis Framework for {Eclipse}",
+  month = 	 mar,
+  year = 	 2014,
+  abstract =
+   "Current IDE extension models do not make it easy for the end-user developer
+    to compose information from multiple sources and existing plug-ins. This
+    paper presents Cupid, a framework for the Eclipse IDE that combines aspects
+    of mash-ups and scripting to bridge the gap between end-user analysis and
+    plug-in development. Cupid enables developers to easily discover,
+    synthesize, and visualize information.
+    \par
+    Information is created and transformed in Cupid via capabilities, dynamic
+    services with well-typed interfaces.  Capabilities can be pipelined to
+    construct new capabilities, similarly to Unix. To enable information to be
+    viewed where it is most pertinent, Cupid adds hooks to Eclipse’s standard
+    widgets allowing new information to be displayed in existing plug-ins
+    without modification. Cupid additionally provides new views with hooks,
+    including charts and mappings. Under the hood, Cupid uses type information
+    and Eclipse’s Jobs API to manage computation planning, execution, and
+    caching.
+    \par
+    To evaluate the learnability of Cupid, we observed undergraduate students
+    using Cupid to answer questions about an open-source project. After just
+    four questions, the students became (statistically) significantly more
+    successful at using Cupid to quickly answer questions. These results
+    suggest that Cupid establishes a favorable tradeoff between the cost of
+    learning Cupid and the benefits and insights it provides.",
+  omitfromcv = 1,
+  underreview = 1,
+  basefilename = "cupid",
+  category =  "Software engineering",
+  summary =
+   "Customizing an IDE requires writing a plug-in, which can be a significant
+    effort.  Our Cupid system enables a developer to easily write scripts for
+    an IDE, building upon existing plug-ins.",
+}
+
+
+@Misc{JustJIEHF2014,
+  author = 	 "Ren\'e Just and Darioush Jalali and Laura Inozemtseva and Michael D. Ernst and Reid Holmes and Gordon Fraser",
+  title = 	 "Are mutants a valid substitute for real faults in software testing?",
+  month = 	 mar,
+  year = 	 2014,
+  abstract =
+   "A good test suite is one that detects real faults. Because the set of
+    faults in a program is unknowable, this definition is not useful to
+    practitioners who are creating test suites nor to researchers who are
+    creating and evaluating tools that generate test suites. In place of real
+    faults, testing research often uses mutants, which are artificial faults ---
+    each one a simple syntactic variation --- that are systematically seeded
+    throughout the program under test. Mutation testing is appealing because
+    large numbers of mutants can be automatically generated and used as a proxy
+    for real faults.
+    \par
+    Unfortunately, there is little experimental evidence to support the use of
+    mutants as a proxy for real faults. This paper investigates whether mutants
+    are indeed a valid substitute for real faults --- that is, whether a test
+    suite’s ability to detect mutant versions of a program is correlated with
+    its ability to detect faults that developers have fixed.  Moreover, the
+    paper investigates whether this correlation holds between generated test
+    suites that are able to detect real faults.
+    \par
+    Our experiments used 357 real faults in 5 open-source apps (321 KLOC of
+    source code). We found a statistically significant correlation between
+    mutant detection and fault detection, even when controlling for code
+    coverage.",
+  omitfromcv = 1,
+  underreview = 1,
+  basefilename = "mutation-effectiveness",
+  category =  "Testing",
+  summary =
+   "Much research in software testing uses mutants (artificial defects) in
+   place of real ones.  We investigate whether this assumption is warranted.",
+}
+
 
 
 % LocalWords:  inproceedings typechecking booktitle apr basefilename pp RSA UW
