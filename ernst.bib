@@ -8060,6 +8060,60 @@ endgame.",
    annotations in Jana 8.",
 }
 
+
+@TechReport{ZhangJWMLEN2014:TR,
+  author = 	 "Sai Zhang and Darioush Jalali and Jochen Wuttke and K{\i}van{\c{c}} Mu{\c{s}}lu and Wing Lam and Michael D. Ernst and David Notkin",
+  authorASCII = 	 "Sai Zhang and Darioush Jalali and Jochen Wuttke and Kivanc Muslu and Wing Lam and Michael D. Ernst and David Notkin",
+  title = 	 "Empirically revisiting the test independence assumption",
+  institution =  UWCSE,
+  year = 	 2014,
+  number = 	 "UW-CSE-14-01-01",
+  address = 	 UWaddr,
+  month = 	 jan,
+  abstract =
+   "In a test suite, all the test cases should be independent:  no test should
+    affect any other test's result, and running the tests in any order should
+    produce the same test results.  Test independence is important so that
+    tests behave consistently as intended by the developers.  In addition,
+    techniques such as test prioritization assume that the tests in a suite are
+    independent, but they do not justify that assumption.  Test dependence is a
+    little-studied phenomenon.  This paper presents five results related to
+    test dependence.
+    \par
+    First, we characterize the test dependence that arises in practice.  We
+    studied 96 real-world dependent tests from 5 issue tracking systems.  Our
+    study shows that test dependence can be hard for programmers to identify.
+    It also shows that test dependence can cause non-trivial consequences, such
+    as masking program faults and leading to spurious bug reports.
+    \par
+    Second, we formally define test dependence in terms of test suites as
+    ordered sequences of tests along with explicit environments in which these
+    tests are executed.  We formulate the problem of detecting dependent tests
+    and prove that a useful special case is NP-complete.
+    \par
+    Third, guided by the study of real-world dependent tests, we propose and
+    compare three algorithms to detect dependent tests in a test suite.
+    \par
+    Fourth, we applied our dependent test detection algorithms to 4 real-world
+    programs and found dependent tests in each human-written and
+    automatically-generated test suite.
+    \par
+    Fifth, we empirically assessed the impact of dependent tests on five test
+    prioritization techniques and found that dependent tests affect the output
+    of \textit{all} five techniques.",
+  basefilename = "test-independence-tr140101",
+  downloadsnonlocal = "ftp://ftp.cs.washington.edu/tr/2014/01/UW-CSE-14-01-01.PDF PDF",
+  supersededby = "ZhangJWMLEN2014:TR",
+  category =  "Testing",
+  csetags = "mernst,mernst-Testing,plse,plse-testing,szhang,darioush,kivanc",
+  summary =
+   "A test is indepent if its result does not depend on what other tests have
+    been run.  Test prioritizaton and selection assume test independence.  We
+    show that both human-written and automatically-generated test suites
+    violate the standard test independence assumption."
+}
+
+
 @InProceedings{AndersonEOPW2014,
   author = 	 "Ruth Anderson and Michael D. Ernst and Robert Ord{\'o}{\~n}ez and Paul Pham and Steven A. Wolfman",
   title = 	 "Introductory programming meets the real world: Using real problems and data in CS1",
@@ -8263,6 +8317,95 @@ endgame.",
 }
 
 
+@InProceedings{ZhangJWMLEN2014,
+  author = 	 "Sai Zhang and Darioush Jalali and Jochen Wuttke and K{\i}van{\c{c}} Mu{\c{s}}lu and Wing Lam and Michael D. Ernst and David Notkin",
+  authorASCII = 	 "Sai Zhang and Darioush Jalali and Jochen Wuttke and Kivanc Muslu and Wing Lam and Michael D. Ernst and David Notkin",
+  title = 	 "Empirically revisiting the test independence assumption",
+  booktitle = ISSTA2014,
+  year = 	 2014,
+  NEEDpages = 	 "*",
+  month = 	 ISSTA2014date,
+  address = 	 ISSTA2014addr,
+  abstract =
+   "In a test suite, all the test cases should be independent:  no test should
+    affect any other test's result, and running the tests in any order should
+    produce the same test results.  Test independence is important so that
+    tests behave consistently as intended by the developers.  In addition,
+    techniques such as test prioritization assume that the tests in a suite are
+    independent, but they do not justify that assumption.  Test dependence is a
+    little-studied phenomenon.  This paper presents five results related to
+    test dependence.
+    \par
+    First, we characterize the test dependence that arises in practice.  We
+    studied 96 real-world dependent tests from 5 issue tracking systems.  Our
+    study shows that test dependence can be hard for programmers to identify.
+    It also shows that test dependence can cause non-trivial consequences, such
+    as masking program faults and leading to spurious bug reports.
+    \par
+    Second, we formally define test dependence in terms of test suites as
+    ordered sequences of tests along with explicit environments in which these
+    tests are executed.  We formulate the problem of detecting dependent tests
+    and prove that a useful special case is NP-complete.
+    \par
+    Third, guided by the study of real-world dependent tests, we propose and
+    compare three algorithms to detect dependent tests in a test suite.
+    \par
+    Fourth, we applied our dependent test detection algorithms to 4 real-world
+    programs and found dependent tests in each human-written and
+    automatically-generated test suite.
+    \par
+    Fifth, we empirically assessed the impact of dependent tests on five test
+    prioritization techniques and found that dependent tests affect the output
+    of \textit{all} five techniques.",
+  basefilename = "issta2014-test-independence",
+  TOODOdownloads = "*",
+  TODOdownloadsnonlocal = "*",
+  category =  "Testing",
+  csetags = "mernst,mernst-Testing,plse,plse-testing,szhang,darioush,kivanc",
+  summary =
+   "A test is indepent if its result does not depend on what other tests have
+    been run.  Test prioritizaton and selection assume test independence.  We
+    show that both human-written and automatically-generated test suites
+    violate the standard test independence assumption."
+}
+
+
+
+@InProceedings{WeitzKSE2014,
+  author = 	 "Konstantin Weitz and Gene Kim and Siwakorn Srisakaokul and Michael D. Ernst",
+  title = 	 "A type system for format strings",
+  booktitle = ISSTA2014,
+  year = 	 2014,
+  NEEDpages = 	 "*",
+  month = 	 ISSTA2014date,
+  address = 	 ISSTA2014addr,
+  abstract =
+   "Most programming languages support format strings, but their use is
+    error-prone.  Using the wrong format string syntax or passing the wrong
+    number or type of arguments leads to unintelligible text output, program
+    crashes, or security vulnerabilities (e.g.\ \emph{wu-ftpd}).
+    \par
+    This paper presents a model that captures the common concepts of many
+    important format string APIs (e.g.\ C, C\#, Java, Go), along with a type
+    system that guarantees that calls to these APIs will never fail.
+    \par
+    We evaluated an implementation of this type system for Java on 6 large and
+    well-maintained open source projects. Format string bugs are common in
+    practice (we found 103 bugs). The annotation burden on the user of our type
+    system is low (on average, for every bug found, only 0.85 annotations need
+    to be written).",
+  basefilename = "issta2014-format-string",
+  TOODOdownloads = "*",
+  TODOdownloadsnonlocal = "*",
+  category =  "Static analysis",
+  csetags = "mernst,mernst-Static-Analysis,plse,weitzkon",
+  summary =
+   "This paper presents a type system that guarantees that invocations of
+    format routines, such as printf, will not fail:  the format string is
+    well-formed and the arguments are compatible with the format string.",
+}
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% To appear, no date known yet
@@ -8390,56 +8533,6 @@ endgame.",
 %%% Submitted (under review)
 %%%
 
-
-@Misc{ZhangJWMLEN2014,
-  author = 	 "Sai Zhang and Darioush Jalali and Jochen Wuttke and K{\i}van{\c{c}} Mu{\c{s}}lu and Wing Lam and Michael D. Ernst and David Notkin",
-  title = 	 "Empirically revisiting the test independence assumption",
-  month = 	 jan,
-  year = 	 2014,
-  abstract =
-   "In a test suite, all the test cases should be independent:  no test should
-    affect any other test's result, and running the tests in any order should
-    produce the same test results.  Test independence is important so that
-    tests behave consistently as intended by the developers.  In addition,
-    techniques such as test prioritization assume that the tests in a suite are
-    independent, but they do not justify that assumption.  Test dependence is a
-    little-studied phenomenon.  This paper presents five results related to
-    test dependence.
-    \par
-    First, we characterize the test dependence that arises in practice.  We
-    studied 96 real-world dependent tests from 5 issue tracking systems.  Our
-    study shows that test dependence can be hard for programmers to identify.
-    It also shows that test dependence can cause non-trivial consequences, such
-    as masking program faults and leading to spurious bug reports.
-    \par
-    Second, we formally define test dependence in terms of test suites as
-    ordered sequences of tests along with explicit environments in which these
-    tests are executed.  We formulate the problem of detecting dependent tests
-    and prove that a useful special case is NP-complete.
-    \par
-    Third, guided by the study of real-world dependent tests, we propose and
-    compare three algorithms to detect dependent tests in a test suite.
-    \par
-    Fourth, we applied our dependent test detection algorithms to 4 real-world
-    programs and found dependent tests in each human-written and
-    automatically-generated test suite.
-    \par
-    Fifth, we empirically assessed the impact of dependent tests on five test
-    prioritization techniques and found that dependent tests affect the output
-    of \textit{all} five techniques.",
-  omitfromcv = 1,
-  underreview =   1,
-  basefilename = "test-independence",
-  category =  "Testing",
-  summary =
-   "A test is indepent if its result does not depend on what other tests have
-    been run.  Test prioritizaton and selection assume test independence.  We
-    show that both human-written and automatically-generated test suites
-    violate the standard test independence assumption."
-}
-
-
-
 @Misc{BarrosJMVDdAE2014,
   author = 	 "Paulo Barros and Ren\'e Just and Suzanne Millstein and Paul Vines and Werner Dietl and Marcelo d'Amorim and Michael D. Ernst",
   title = 	 "Precise and sound static analysis of implicit control flow: Resolving {Java} reflection and {Android} intents",
@@ -8470,38 +8563,6 @@ endgame.",
     calls.  This paper provides analyses that resolve uses of Java reflecton and
     the data passed in Android intents.",
 }
-
-
-@Misc{WeitzKSE2014,
-  author = 	 "Konstantin Weitz and Gene Kim and Siwakorn Srisakaokul and Michael D. Ernst",
-  title = 	 "A type system for format strings",
-  month = 	 jan,
-  year = 	 2014,
-  abstract =
-   "Most programming languages support format strings, but their use is
-    error-prone.  Using the wrong format string syntax or passing the wrong
-    number or type of arguments leads to unintelligible text output, program
-    crashes, or security vulnerabilities (e.g.\ \emph{wu-ftpd}).
-    \par
-    This paper presents a model that captures the common concepts of many
-    important format string APIs (e.g.\ C, C\#, Java, Go), along with a type
-    system that guarantees that calls to these APIs will never fail.
-    \par
-    We evaluated an implementation of this type system for Java on 6 large and
-    well-maintained open source projects. Format string bugs are common in
-    practice (we found 103 bugs). The annotation burden on the user of our type
-    system is low (on average, for every bug found, only 0.85 annotations need
-    to be written).",
-  omitfromcv = 1,
-  underreview =   1,
-  basefilename = "format-string",
-  category =  "Static analysis",
-  summary =
-   "This paper presents a type system that guarantees that invocations of
-    format routines, such as printf, will not fail:  the format string is
-    well-formed and the arguments are compatible with the format string.",
-}
-
 
 
 @Misc{JustEF2014,
