@@ -8068,7 +8068,7 @@ endgame.",
   institution =  UWCSE,
   year = 	 2014,
   number = 	 "UW-CSE-14-01-01",
-  address = 	 UWaddr,
+  address = 	 UWCSEaddr,
   month = 	 jan,
   abstract =
    "In a test suite, all the test cases should be independent:  no test should
@@ -8103,7 +8103,7 @@ endgame.",
     of \textit{all} five techniques.",
   basefilename = "test-independence-tr140101",
   downloadsnonlocal = "ftp://ftp.cs.washington.edu/tr/2014/01/UW-CSE-14-01-01.PDF PDF",
-  supersededby = "ZhangJWMLEN2014:TR",
+  supersededby = "ZhangJWMLEN2014",
   category =  "Testing",
   csetags = "mernst,mernst-Testing,plse,plse-testing,szhang,darioush,kivanc",
   summary =
@@ -8406,6 +8406,58 @@ endgame.",
 }
 
 
+@InProceedings{JustEF2014,
+  author = 	 "Ren\'e Just and Michael D. Ernst and Gordon Fraser",
+  authorASCII = 	 "Rene Just and Michael D. Ernst and Gordon Fraser",
+  title = 	 "Efficient mutation analysis by propagating and partitioning infected execution states",
+  booktitle = ISSTA2014,
+  year = 	 2014,
+  NEEDpages = 	 "*",
+  month = 	 ISSTA2014date,
+  address = 	 ISSTA2014addr,
+  abstract =
+   "Mutation analysis evaluates testing techniques by measuring how well they
+    detect seeded faults (mutants). However, mutation analysis is hampered by
+    inherent scalability problems --- a test suite is executed for each of a
+    large number of mutants.  Despite numerous optimizations presented in the
+    literature, this scalability issue remains, and this is one of the reasons
+    why mutation analysis is hardly used in practice.
+    \par
+    Whereas most previous optimizations attempted to statically reduce the
+    number of executions or their computational overhead, this paper exploits
+    information available only at run time to further reduce the number of
+    executions.
+    \par
+    First, \emph{state infection conditions} can reveal --- with a single test
+    execution on the unmutated program --- which mutants would lead to a
+    different state, thus avoiding unnecessary mutant executions.
+    %
+    Second, determining whether an infected execution state \emph{propagates}
+    can further reduce the number of executions. Mutants that are embedded in
+    compound expressions may infect the state locally without affecting the
+    outcome of the compound expression.
+    %
+    Third, those mutants that do infect the state can be \emph{partitioned}
+    based on the resulting infected state --- if two mutants lead to the same
+    infected state, only one needs to be executed as the result of the other
+    can be inferred.
+    \par
+    We have implemented these optimizations in the Major mutation
+    framework and empirically evaluated them on 14 open source 
+    programs. The optimizations reduced the mutation analysis time by
+    40\% on average.",
+  basefilename = "issta2014-state-infection",
+  TOODOdownloads = "*",
+  TODOdownloadsnonlocal = "*",
+  category =  "Testing",
+  csetags = "mernst,mernst-Static-Analysis,plse,rjust",
+  summary =
+   "Mutation analysis --- a technique for evaluating test suites --- is
+    notoriously compute-intensive.  This paper reduces its cost by 40\%, by
+    running the program being tested a single time in a prepass to determine
+    which test results can be predicted and thus do not need to be run.",
+}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% To appear, no date known yet
@@ -8563,56 +8615,6 @@ endgame.",
     calls.  This paper provides analyses that resolve uses of Java reflecton and
     the data passed in Android intents.",
 }
-
-
-@Misc{JustEF2014,
-  author = 	 "Ren\'e Just and Michael D. Ernst and Gordon Fraser",
-  authorASCII = 	 "Rene Just and Michael D. Ernst and Gordon Fraser",
-  title = 	 "Efficient mutation analysis by propagating and partitioning infected execution states",
-  month = 	 jan,
-  year = 	 2014,
-  abstract =
-   "Mutation analysis evaluates testing techniques by measuring how well they
-    detect seeded faults (mutants). However, mutation analysis is hampered by
-    inherent scalability problems --- a test suite is executed for each of a
-    large number of mutants.  Despite numerous optimizations presented in the
-    literature, this scalability issue remains, and this is one of the reasons
-    why mutation analysis is hardly used in practice.
-    \par
-    Whereas most previous optimizations attempted to statically reduce the
-    number of executions or their computational overhead, this paper exploits
-    information available only at run time to further reduce the number of
-    executions.
-    \par
-    First, \emph{state infection conditions} can reveal --- with a single test
-    execution on the unmutated program --- which mutants would lead to a
-    different state, thus avoiding unnecessary mutant executions.
-    %
-    Second, determining whether an infected execution state \emph{propagates}
-    can further reduce the number of executions. Mutants that are embedded in
-    compound expressions may infect the state locally without affecting the
-    outcome of the compound expression.
-    %
-    Third, those mutants that do infect the state can be \emph{partitioned}
-    based on the resulting infected state --- if two mutants lead to the same
-    infected state, only one needs to be executed as the result of the other
-    can be inferred.
-    \par
-    We have implemented these optimizations in the Major mutation
-    framework and empirically evaluated them on 14 open source 
-    programs. The optimizations reduced the mutation analysis time by
-    40\% on average.",
-  omitfromcv = 1,
-  underreview =   1,
-  basefilename = "state-infection",
-  category =  "Testing",
-  summary =
-   "Mutation analysis --- a technique for evaluating test suites --- is
-    notoriously compute-intensive.  This paper reduces its cost by 40\%, by
-    running the program being tested a single time in a prepass to determine
-    which test results can be predicted and thus do not need to be run.",
-}
-
 
 
 @Misc{ErnstJMDPRKBBHVW2014,
