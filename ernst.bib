@@ -8115,7 +8115,8 @@ endgame.",
 }
 
 @TechReport{JustJIEHF2014:TR,
-  author = 	 "Just, Rene and Jalali, Darioush and Inozemtseva, Laura and Ernst, Michael D. and Holmes, Reid and Fraser, Gordon",
+  author = 	 "Ren\'e Just and Darioush Jalali and Laura Inozemtseva and Michael D. Ernst and Reid Holmes and Gordon Fraser",
+  authorASCII = 	 "Rene Just and Darioush Jalali and Laura Inozemtseva and Michael D. Ernst and Reid Holmes and Gordon Fraser",
   title = 	 "Are mutants a valid substitute for real faults in software testing?",
   institution =  UWCSE,
   year = 	 2014,
@@ -8154,15 +8155,15 @@ endgame.",
 }
 
 
-
-
 @TechReport{BeschastnikhBEK2014:TR,
   author = 	 "Ivan Beschastnikh and Yuriy Brun and Michael D. Ernst and Arvind Krishnamurthy",
   title = 	 "Inferring models of concurrent systems from logs of their behavior with {CSight}",
-  institution =  UBCCS,
+  institution =  UBC,
+  type = 	 "cIRcle: UBC's Digital Repository",
   year = 	 2014,
   address = 	 UBCCSaddr,
   month = 	 feb # "~28,",
+  note = 	 "\url{http://hdl.handle.net/2429/46122}",
   abstract =
    "Concurrent systems are notoriously difficult to debug and understand.  A
     common way of gaining insight into system behavior is to inspect execution
@@ -8289,6 +8290,72 @@ endgame.",
 }
 
 
+
+
+@TechReport{ErnstJMDPRKBBHVW2014:TR,
+  author = 	 "Michael D. Ernst and Ren{\'e} Just and Suzanne Millstein and Werner M. Dietl and Stuart Pernsteiner and Franziska Roesner and Karl Koscher and Paulo Barros and Ravi Bhoraskar and Seungyeop Han and Paul Vines and Edward X. Wu",
+  title = 	 "Collaborative verification of information flow for a high-assurance app store",
+  institution =  UWCSE,
+  year = 	 2014,
+  OPTkey = 	 "",
+  OPTtype = 	 "",
+  OPTnumber = 	 "UW-CSE-14-04-02",
+  OPTaddress = 	 "",
+  OPTmonth = 	 apr,
+  OPTnote = 	 "",
+  OPTannote = 	 "",
+  OPTabstract =  "",
+  OPTusesDaikon = "",
+  OPTusesDaikonAsTestSubject = "",
+  OPTomitfromcv = "",
+  OPTbasefilename = "",
+  OPTdownloads = "",
+  OPTdownloadsnonlocal = "",
+  OPTsupersededby = "",
+  OPTcategory =  "",
+  OPTcsetags = 	 "",
+  OPTsummary = 	 "",
+}
+@Misc{,
+  month = 	 feb,
+  year = 	 2014,
+  abstract =
+   "Current app stores distribute some malware to unsuspecting users, even
+    though the app approval process may be costly and time-consuming. We
+    propose the creation of high-integrity app stores that provide certain
+    guarantees to their customers. Our approach has four key features.  (1) Our
+    analysis is based upon a flow-sensitive, context-sensitive information-flow
+    type system. (2) We use finer-grained behavioral specifications of
+    information flow than current app stores, along with automated analysis to
+    prove correctness with respect to the specification. (3) Our approach works
+    on source code rather than binaries and is based on formal verification
+    rather than on bug-finding.  (4) We use a collaborative verification
+    methodology in which the software vendor and the app store auditor each do
+    tasks that are easy for them, reducing overall cost.
+    \par
+    We have implemented our system for Android apps written in Java. In an
+    adversarial Red Team evaluation, we were given 72 apps (576,000 LOC) to
+    analyze for malware. The 57 Trojans among these had been written
+    specifically to defeat a malware analysis such as ours, and the Red Teams
+    had access to our source code and documentation. Nonetheless, our
+    information-flow type system was effective: it detected 96\% of malware
+    whose malicious behavior was related to information flow and 82\% of all
+    malware. In practice our toolset would be combined with other analyses to
+    reduce the chance of approving a Trojan. The programmer annotation burden
+    is low: one annotation per 16 lines of code. Every sound analysis requires
+    a human to review potential false alarms, and in our experiments, this took
+    30 minutes per KLOC for an auditor unfamiliar with the app.",
+  omitfromcv = 1,
+  underreview = 1,
+  basefilename = "sparta",
+  category =  "Static analysis",
+  summary =
+   "This paper presents a practical, context-sensitive, flow-sensitive type
+    system that verifies that an app satisfies an information flow policy.
+    The system was effective in an adversarial Red Team evaluation."
+}
+
+
 @InProceedings{BeschastnikhBEK2014,
   author = 	 "Ivan Beschastnikh and Yuriy Brun and Michael D. Ernst and Arvind Krishnamurthy",
   title = 	 "Inferring models of concurrent systems from logs of their behavior with {CSight}",
@@ -8333,6 +8400,7 @@ endgame.",
     its techniques correct and evaluates an implementation on system logs and a
     user study.",
 }
+
 
 
 @InProceedings{ZhangE2014,
