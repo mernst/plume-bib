@@ -42,14 +42,14 @@ bibtest.tex: *.bib
 test: bibtest
 bibtest: all bibtest-aux-clean bibtest.tex
 	@echo -n 'First latex run, suppressing warnings...'
-	@-latex bibtest >/dev/null 2>&1
+	@-latex -interaction=batchmode bibtest >/dev/null 2>&1
 	@echo 'done'
-	bibtex bibtest
+	bibtex -terse bibtest
 	@echo -n 'Second latex run, suppressing warnings...'
-	@-latex bibtest >/dev/null 2>&1
+	@-latex -interaction=batchmode bibtest >/dev/null 2>&1
 	@echo 'done'
 	@echo 'Third latex run, now warnings matter:'
-	latex bibtest
+	latex -interaction=batchmode bibtest
 
 PUBS_SRC ?= /afs/csail.mit.edu/group/pag/www/pubs-src
 
