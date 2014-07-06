@@ -2507,6 +2507,50 @@ endgame.",
 
 
 
+@InProceedings{SaffE2004:ETX,
+  author = 	 "David Saff and Michael D. Ernst",
+  title = 	 "Continuous testing in {Eclipse}",
+  booktitle =    ETX2004,
+  OPTpages = 	 "",
+  year = 	 2004,
+  address = 	 ETX2004addr,
+  month = 	 ETX2004date,
+  abstract =
+   "Continuous testing uses excess cycles on a developer's workstation to
+    continuously run regression tests in the background, providing rapid
+    feedback about test failures as source code is edited.  It is intended to
+    reduce the time and energy required to keep code well-tested, and to
+    prevent regression errors from persisting uncaught for long periods of
+    time.
+    \par
+    This paper reports on the design and implementation of a continuous testing
+    feature for Java development in the Eclipse development environment.  Our
+    challenge was to generate and display a new kind of feedback (asynchronous
+    notification of test failures) in a way that effectively reuses Eclipse's
+    extensible architecture and fits the expectations of Eclipse users without
+    interfering with their current work habits.  We present the design
+    principles we pursued in solving this challenge: present and future reuse,
+    consistent experience, minimal distraction, and testability.  These
+    principles, and how our plug-in and Eclipse succeeded and failed in
+    accomplishing them, should be of interest to other Eclipse extenders
+    looking to implement new kinds of developer feedback.
+    \par
+    The continuous testing plug-in is publicly available at
+    \url{http://pag.csail.mit.edu/continuoustesting/}.",
+  basefilename = "conttest-plugin-etx2004",
+  category = 	 "Testing",
+  csetags = "mernst,mernst-Testing,plse",
+  downloads =    "http://pag.csail.mit.edu/continuoustesting/ Eclipse plug-in",
+  downloadsnonlocal =
+   "http://homes.cs.washington.edu/~mernst/pubs/conttest-plugin-etx2004.pdf PDF;
+    http://homes.cs.washington.edu/~mernst/pubs/conttest-plugin-etx2004.ps PostScript",
+  summary =
+   "This paper describes the design principles, user interface,
+    architecture, and implementation of a publicly-available continuous
+    testing plug-in for the Eclipse development environment.",
+}
+
+
 @InProceedings{BrunE2004,
   author = 	 "Yuriy Brun and Michael D. Ernst",
   title = 	 "Finding latent code errors via machine learning over
@@ -2546,6 +2590,48 @@ endgame.",
     models to identify latent errors in other programs.",
   usesDaikon = 1,
   undergradCoauthor = 1,
+}
+
+
+@InProceedings{SaffE2004:mock-creation,
+  author = 	 "David Saff and Michael D. Ernst",
+  title = 	 "Automatic mock object creation for test factoring",
+  booktitle =	 PASTE2004,
+  pages = 	 "49--51",
+  year =	 2004,
+  address =	 PASTE2004addr,
+  month =	 PASTE2004date,
+  abstract =
+   "{\em Test factoring} creates fast, focused unit tests from slow system-wide
+    tests; each new unit test exercises only a subset of the functionality
+    exercised by the system tests.  Augmenting a test suite with factored unit
+    tests, and prioritizing the tests, should catch errors earlier in a test
+    run.
+    \par
+    One way to factor a test is to introduce \emph{mock objects}.  If a test
+    exercises a component A, which is designed to issue queries against or
+    mutate another component B, the implementation of B can be replaced by a
+    {\em mock}.  The mock has two purposes:  it checks that A's calls to B are
+    as expected, and it simulates B's behavior in response.  Given a system
+    test for A and B, and a record of A's and B's behavior when the system test
+    is run, we would like to automatically generate unit tests for A in which B
+    is mocked.  The factored tests can isolate bugs in A from bugs in B and, if
+    B is slow or expensive, improve test performance or cost.
+    \par
+    This paper motivates test factoring with an illustrative example, proposes
+    a simple procedure for automatically generating mock objects for factored
+    tests, and gives examples of how the procedure can be extended to larger
+    change languages.",
+  category = "Testing",
+  csetags = "mernst,mernst-Testing,plse",
+  basefilename = "mock-factoring-paste2004",
+  downloadsnonlocal =
+   "http://homes.cs.washington.edu/~mernst/pubs/mock-factoring-paste2004.pdf PDF;
+    http://homes.cs.washington.edu/~mernst/pubs/mock-factoring-paste2004.ps PostScript",
+  summary =
+   "A set of small, fast-running tests can be more useful than a single
+    larger test.  This paper proposes a way to automatically factor a large
+    test case into smaller tests, using mock objects to model the environment.",
 }
 
 
@@ -2626,92 +2712,6 @@ endgame.",
   undergradCoauthor = 1,
 }
 
-
-
-@InProceedings{SaffE2004:ETX,
-  author = 	 "David Saff and Michael D. Ernst",
-  title = 	 "Continuous testing in {Eclipse}",
-  booktitle =    ETX2004,
-  OPTpages = 	 "",
-  year = 	 2004,
-  address = 	 ETX2004addr,
-  month = 	 ETX2004date,
-  abstract =
-   "Continuous testing uses excess cycles on a developer's workstation to
-    continuously run regression tests in the background, providing rapid
-    feedback about test failures as source code is edited.  It is intended to
-    reduce the time and energy required to keep code well-tested, and to
-    prevent regression errors from persisting uncaught for long periods of
-    time.
-    \par
-    This paper reports on the design and implementation of a continuous testing
-    feature for Java development in the Eclipse development environment.  Our
-    challenge was to generate and display a new kind of feedback (asynchronous
-    notification of test failures) in a way that effectively reuses Eclipse's
-    extensible architecture and fits the expectations of Eclipse users without
-    interfering with their current work habits.  We present the design
-    principles we pursued in solving this challenge: present and future reuse,
-    consistent experience, minimal distraction, and testability.  These
-    principles, and how our plug-in and Eclipse succeeded and failed in
-    accomplishing them, should be of interest to other Eclipse extenders
-    looking to implement new kinds of developer feedback.
-    \par
-    The continuous testing plug-in is publicly available at
-    \url{http://pag.csail.mit.edu/continuoustesting/}.",
-  basefilename = "conttest-plugin-etx2004",
-  category = 	 "Testing",
-  csetags = "mernst,mernst-Testing,plse",
-  downloads =    "http://pag.csail.mit.edu/continuoustesting/ Eclipse plug-in",
-  downloadsnonlocal =
-   "http://homes.cs.washington.edu/~mernst/pubs/conttest-plugin-etx2004.pdf PDF;
-    http://homes.cs.washington.edu/~mernst/pubs/conttest-plugin-etx2004.ps PostScript",
-  summary =
-   "This paper describes the design principles, user interface,
-    architecture, and implementation of a publicly-available continuous
-    testing plug-in for the Eclipse development environment.",
-}
-
-
-@InProceedings{SaffE2004:mock-creation,
-  author = 	 "David Saff and Michael D. Ernst",
-  title = 	 "Automatic mock object creation for test factoring",
-  booktitle =	 PASTE2004,
-  pages = 	 "49--51",
-  year =	 2004,
-  address =	 PASTE2004addr,
-  month =	 PASTE2004date,
-  abstract =
-   "{\em Test factoring} creates fast, focused unit tests from slow system-wide
-    tests; each new unit test exercises only a subset of the functionality
-    exercised by the system tests.  Augmenting a test suite with factored unit
-    tests, and prioritizing the tests, should catch errors earlier in a test
-    run.
-    \par
-    One way to factor a test is to introduce \emph{mock objects}.  If a test
-    exercises a component A, which is designed to issue queries against or
-    mutate another component B, the implementation of B can be replaced by a
-    {\em mock}.  The mock has two purposes:  it checks that A's calls to B are
-    as expected, and it simulates B's behavior in response.  Given a system
-    test for A and B, and a record of A's and B's behavior when the system test
-    is run, we would like to automatically generate unit tests for A in which B
-    is mocked.  The factored tests can isolate bugs in A from bugs in B and, if
-    B is slow or expensive, improve test performance or cost.
-    \par
-    This paper motivates test factoring with an illustrative example, proposes
-    a simple procedure for automatically generating mock objects for factored
-    tests, and gives examples of how the procedure can be extended to larger
-    change languages.",
-  category = "Testing",
-  csetags = "mernst,mernst-Testing,plse",
-  basefilename = "mock-factoring-paste2004",
-  downloadsnonlocal =
-   "http://homes.cs.washington.edu/~mernst/pubs/mock-factoring-paste2004.pdf PDF;
-    http://homes.cs.washington.edu/~mernst/pubs/mock-factoring-paste2004.ps PostScript",
-  summary =
-   "A set of small, fast-running tests can be more useful than a single
-    larger test.  This paper proposes a way to automatically factor a large
-    test case into smaller tests, using mock objects to model the environment.",
-}
 
 
 @InProceedings{SaffE2004:ISSTA,
@@ -3085,7 +3085,7 @@ endgame.",
     feedback about test failures as code is edited. It reduces the time and
     energy required to keep code well-tested, and it prevents regression errors
     from persisting uncaught for long periods of time.",
-  supersededby = "SaffE2004:ETX A tool demo",
+  supersededby = "SaffE2004:ETX A tool demonstration",
   basefilename = "conttest-demo-icse2005",
   downloads =    "http://pag.csail.mit.edu/continuoustesting/ Eclipse plug-in",
   downloadsnonlocal =
@@ -6765,7 +6765,7 @@ endgame.",
     Synoptic tool, which is designed to support a rich log exploration
     workflow.",
   basefilename = "synoptic-fse2011-tool-demo",
-  supersededby = "BeschastnikhBSSE2011 A tool demo",
+  supersededby = "BeschastnikhBSSE2011 A tool demonstration",
   category =  "Invariant detection",
   OMITcsetagsBECAUSESUPERSEDED = "ivanb,jabrah,brun,mernst,mernst-Software-engineering,proj-synoptic,plse",
   NEEDsummary = 	 "*",
@@ -7339,8 +7339,8 @@ endgame.",
     tested.",
   basefilename = "haloop-vldb2012",
   downloads =
-   "http://homes.cs.washington.edu/~mernst/pubs/haloop-vldb2010-slides.pdf slides (PDF);
-    http://homes.cs.washington.edu/~mernst/pubs/haloop-vldb2010-slides.ppt slides (PowerPoint);
+   "http://homes.cs.washington.edu/~mernst/pubs/haloop-vldb2010-slides.pdf VLDB 2010 slides (PDF);
+    http://homes.cs.washington.edu/~mernst/pubs/haloop-vldb2010-slides.ppt VLDB 2010 slides (PowerPoint);
     http://code.google.com/p/haloop/ HaLoop implementation",
   downloadsnonlocal =
    "http://homes.cs.washington.edu/~mernst/pubs/haloop-vldb2012.pdf PDF",
@@ -8026,8 +8026,9 @@ endgame.",
     unobtrusively available to developers.",
   basefilename = "vc-conflicts-tse2013",
   downloads =
-    "http://code.google.com/p/crystalvc/ Crystal implementation;
-     http://homes.cs.washington.edu/~mernst/pubs/vc-conflicts-fse2011-tooldemo.pdf tool demo paper (PDF)",
+   "http://homes.cs.washington.edu/~mernst/pubs/vc-conflicts-fse2011-slides.pdf ESEC/FSE 2011 slides (PDF);
+    http://homes.cs.washington.edu/~mernst/pubs/vc-conflicts-fse2011-tooldemo.pdf tool demo paper (PDF);
+    http://code.google.com/p/crystalvc/ Crystal implementation",
   category =  "Speculative analysis",
   csetags = "brun,mernst,notkin,mernst-Software-engineering,plse",
   summary =
@@ -8137,7 +8138,7 @@ endgame.",
     Unfortunately, there is little experimental evidence to support the use of
     mutants as a proxy for real faults. This paper investigates whether mutants
     are indeed a valid substitute for real faults --- that is, whether a test
-    suite’s ability to detect mutants is correlated with its ability to detect
+    suite's ability to detect mutants is correlated with its ability to detect
     real faults that developers have fixed.
     \par
     Our experiments used 357 real faults in 5 open-source applications
@@ -8145,7 +8146,7 @@ endgame.",
     both developer-written and generated test suites.  We found a statistically
     significant correlation between mutant detection and real fault detection,
     even when controlling for code coverage.",
-  TOBEsupersededby = "JustJIEHF2014",
+  supersededby = "JustJIEHF2014",
   basefilename = "mutation-effectiveness-tr20140202",
   category =  "Testing",
   csetags = 	 "rjust,darioush,mernst,mernst-Testing,plse,plse-testing",
@@ -8172,13 +8173,13 @@ endgame.",
     the implementation.
     \par
     To provide developers with more insight into concurrent systems, we
-    developed CSight. CSight mines logs of a system’s executions to infer a
-    concise and accurate model of that system’s behavior, in the form of a
+    developed CSight. CSight mines logs of a system's executions to infer a
+    concise and accurate model of that system's behavior, in the form of a
     communicating finite state machine (CFSM).
     \par
     Engineers can use the inferred CFSM model to understand complex behavior,
     detect anomalies, debug, and increase confidence in the correctness of
-    their implementations. CSight’s only requirement is that the logged events
+    their implementations. CSight's only requirement is that the logged events
     have vector timestamps. We provide a tool that automatically adds vector
     timestamps to system logs. Our tool prototypes are available at
     \url{http://synoptic.googlecode.com/}.
@@ -8205,7 +8206,7 @@ endgame.",
 
 @InProceedings{AndersonEOPW2014,
   author = 	 "Ruth Anderson and Michael D. Ernst and Robert Ord{\'o}{\~n}ez and Paul Pham and Steven A. Wolfman",
-  title = 	 "Introductory programming meets the real world: Using real problems and data in CS1",
+  title = 	 "Introductory programming meets the real world: Using real problems and data in {CS1}",
   booktitle =	 SIGCSE2014,
   year = 	 2014,
   pages = 	 "465-466",
@@ -8280,7 +8281,7 @@ endgame.",
     and propose evaluation metrics to measure its usability, robustness and
     performance.",
   basefilename = "bladedroid-nsdi2014",
-  TOBEsupersededby = "BhoraskarLHCSE2014 a poster",
+  supersededby = "BhoraskarLHCSE2014 A poster",
   category =  "Software engineering",
   csetags = "bhora,pingyh,mernst,mernst-Software-engineering,plse",
   summary =
@@ -8512,13 +8513,13 @@ endgame.",
    "Compared to desktop and web applications, mobile applications have so far
     been developed in an extremely siloed environment. The apps running on our
     phone are developed by a single entity with operating system protections
-    between sharing of data or code between programs. However, application
-    extensibility is often desired. In the web, a secondary ecosystem
+    between sharing of data or code between programs.  However, application
+    extensibility is often desired.  In the web, a secondary ecosystem
     flourishes around browser extensions, enabling users to customize the web
     as they wish.  This paper presents BladeDroid, a system enabling user
     customization of mobile applications, using a novel combination of bytecode
-    rewriting and dynamic class loading.  We describe four extensions that we
-    have built to evaluate BladeDroid’s usability, robustness, and performance.",
+    rewriting and dynamic class loading. We describe four extensions that we
+    have built to evaluate BladeDroid's usability, robustness, and performance.",
   basefilename = "bladedroid-apsys2014",
   OPTdownloads = "",
   OPTdownloadsnonlocal = "",
@@ -8537,24 +8538,22 @@ endgame.",
   title = 	 "Empirically revisiting the test independence assumption",
   booktitle = ISSTA2014,
   year = 	 2014,
-  NEEDpages = 	 "*",
+  pages = 	 "386--396",
   month = 	 ISSTA2014date,
   address = 	 ISSTA2014addr,
   abstract =
    "In a test suite, all the test cases should be independent:  no test should
     affect any other test's result, and running the tests in any order should
-    produce the same test results.  Test independence is important so that
-    tests behave consistently as intended by the developers.  In addition,
-    techniques such as test prioritization assume that the tests in a suite are
-    independent, but they do not justify that assumption.  Test dependence is a
-    little-studied phenomenon.  This paper presents five results related to
-    test dependence.
+    produce the same test results.  Techniques such as test prioritization
+    generally assume that the tests in a suite are independent.  Test
+    dependence is a little-studied phenomenon.  This paper presents five
+    results related to test dependence.
     \par
     First, we characterize the test dependence that arises in practice.  We
     studied 96 real-world dependent tests from 5 issue tracking systems.  Our
     study shows that test dependence can be hard for programmers to identify.
-    It also shows that test dependence can cause non-trivial consequences, such
-    as masking program faults and leading to spurious bug reports.
+    It also shows that test dependence can cause non-trivial consequences,
+    such as masking program faults and leading to spurious bug reports.
     \par
     Second, we formally define test dependence in terms of test suites as
     ordered sequences of tests along with explicit environments in which these
@@ -8562,17 +8561,18 @@ endgame.",
     and prove that a useful special case is NP-complete.
     \par
     Third, guided by the study of real-world dependent tests, we propose and
-    compare three algorithms to detect dependent tests in a test suite.
+    compare four algorithms to detect dependent tests in a test suite.
     \par
-    Fourth, we applied our dependent test detection algorithms to 4 real-world
-    programs and found dependent tests in each human-written and
+    Fourth, we applied our dependent test detection algorithms to 4
+    real-world programs and found dependent tests in each human-written and
     automatically-generated test suite.
     \par
     Fifth, we empirically assessed the impact of dependent tests on five test
-    prioritization techniques and found that dependent tests affect the output
-    of \textit{all} five techniques.",
+    prioritization techniques.  Dependent tests affect the output of all five
+    techniques; that is, the reordered suite fails even though the original
+    suite did not.",
   basefilename = "test-independence-issta2014",
-  TOODOdownloads = "*",
+  downloads = "https://testisolation.googlecode.com/ DTDetector implementation",
   TODOdownloadsnonlocal = "*",
   category =  "Testing",
   csetags = "mernst,mernst-Testing,plse,plse-testing,szhang,darioush,kivanc",
@@ -8594,23 +8594,24 @@ endgame.",
   address = 	 ISSTA2014addr,
   abstract =
    "Most programming languages support format strings, but their use is
-    error-prone.  Using the wrong format string syntax or passing the wrong
-    number or type of arguments leads to unintelligible text output, program
-    crashes, or security vulnerabilities (e.g.\ \emph{wu-ftpd}).
+    error-prone.  Using the wrong format string syntax, or passing the wrong
+    number or type of arguments, leads to unintelligible text output, program
+    crashes, or security vulnerabilities.
     \par
-    This paper presents a model that captures the common concepts of many
-    important format string APIs (e.g.\ C, C\#, Java, Go), along with a type
-    system that guarantees that calls to these APIs will never fail.
+    This paper presents a type system that guarantees that calls to format
+    string APIs will never fail.  In Java, this means that the API will not
+    throw exceptions.  In C, this means that the API will not return negative
+    values, corrupt memory, etc.
     \par
-    We evaluated an implementation of this type system for Java on 6 large and
-    well-maintained open source projects. Format string bugs are common in
-    practice (we found 103 bugs). The annotation burden on the user of our type
-    system is low (on average, for every bug found, only 0.85 annotations need
-    to be written).",
+    We instantiated this type system for Java's Formatter API, and evaluated it
+    on 6 large and well-maintained open-source projects.  Format string bugs
+    are common in practice (our type system found 104 bugs), and the annotation
+    burden on the user of our type system is low (on average, for every bug
+    found, only 1.0 annotations need to be written).",
   basefilename = "format-string-issta2014",
   downloads = 
-   "http://types.cs.washington.edu/checker-framework/current/checkers-manual.html#formatter-checker
-   Format String Checker implementation",
+   "http://homes.cs.washington.edu/~mernst/pubs/format-string-issta2014-demo.pdf demo paper (PDF);
+    http://types.cs.washington.edu/checker-framework/current/checkers-manual.html#formatter-checker Format String Checker implementation",
   TODOdownloadsnonlocal = "*",
   category =  "Static analysis",
   csetags = "mernst,mernst-Static-Analysis,plse,weitzkon",
@@ -8619,6 +8620,41 @@ endgame.",
     format routines, such as printf, will not fail:  the format string is
     well-formed and the arguments are compatible with the format string.",
 }
+
+
+
+@InProceedings{WeitzKSE2014:demo,
+  author = 	 "Konstantin Weitz and Gene Kim and Siwakorn Srisakaokul and Michael D. Ernst",
+  title = 	 "A format string checker for {Java}",
+  booktitle = ISSTA2014,
+  year = 	 2014,
+  NEEDpages = 	 "*",
+  month = 	 ISSTA2014date,
+  address = 	 ISSTA2014addr,
+  abstract =
+   "Java supports format strings, but their use is error prone because: Java's
+    type system does not find any but the most trivial mistakes, Java's format
+    methods fail silently, and format methods are often executed infrequently.
+    \par
+    This paper presents the Format String Checker that is based on the format
+    string type system presented in [WeitzKSE2014]. The Format String Checker
+    guarantees that calls to Java's Formatter API will not throw exceptions.
+    \par
+    We evaluate the Format String Checker on 6 large and well-maintained
+    open-source projects.  Format string bugs are common in practice (we found
+    104 bugs), and the annotation burden on the user of our type system is low
+    (on average, for every bug found, only 1.0 annotations need to be written).",
+  basefilename = "format-string-issta2014demo",
+  supersededby = "WeitzKSE2014 A tool demonstration",
+  category =  "Static analysis",
+  csetags = "mernst,mernst-Static-Analysis,plse,weitzkon",
+  summary =
+   "This tool demo explains how to statically prevent, at compile time,
+    errors in usage of format strings.  The Format String Checker is easy to
+    use and effective.",
+}
+
+
 
 
 @InProceedings{JustEF2014,
@@ -8631,10 +8667,10 @@ endgame.",
   month = 	 ISSTA2014date,
   address = 	 ISSTA2014addr,
   abstract =
-   "Mutation analysis evaluates testing techniques by measuring how well they
-    detect seeded faults (mutants). However, mutation analysis is hampered by
-    inherent scalability problems --- a test suite is executed for each of a
-    large number of mutants.  Despite numerous optimizations presented in the
+   "Mutation analysis evaluates a testing technique by measuring how well it
+    detects seeded faults (mutants). Mutation analysis is hampered by inherent
+    scalability problems --- a test suite is executed for each of a large
+    number of mutants.  Despite numerous optimizations presented in the
     literature, this scalability issue remains, and this is one of the reasons
     why mutation analysis is hardly used in practice.
     \par
@@ -8644,23 +8680,22 @@ endgame.",
     executions.
     \par
     First, \emph{state infection conditions} can reveal --- with a single test
-    execution on the unmutated program --- which mutants would lead to a
-    different state, thus avoiding unnecessary mutant executions.
+    execution of the unmutated program --- which mutants would lead to a
+    different state, thus avoiding unnecessary test executions.
     Second, determining whether an infected execution state \emph{propagates}
     can further reduce the number of executions. Mutants that are embedded in
     compound expressions may infect the state locally without affecting the
-    outcome of the compound expression.
+    outcome of the compound expression. 
     Third, those mutants that do infect the state can be \emph{partitioned}
     based on the resulting infected state --- if two mutants lead to the same
     infected state, only one needs to be executed as the result of the other
     can be inferred.
     \par
-    We have implemented these optimizations in the Major mutation
-    framework and empirically evaluated them on 14 open source 
-    programs. The optimizations reduced the mutation analysis time by
-    40\% on average.",
+    We have implemented these optimizations in the Major mutation framework and
+    empirically evaluated them on 14 open source programs. The optimizations
+    reduced the mutation analysis time by 40\% on average.",
   basefilename = "state-infection-issta2014",
-  TOODOdownloads = "*",
+  downloads = "http://mutation-testing.org/ Major mutation framework and experimental data",
   TODOdownloadsnonlocal = "*",
   category =  "Testing",
   csetags = "mernst,mernst-Static-Analysis,plse,rjust",
@@ -8670,6 +8705,104 @@ endgame.",
     running the program being tested a single time in a prepass to determine
     which test results can be predicted and thus do not need to be run.",
 }
+
+
+@InProceedings{JustJE2014,
+  author = 	 "Ren{\'e} Just and Darioush Jalali and Michael D. Ernst",
+  authorASCII =	 "Rene Just and Darioush Jalali and Michael D. Ernst",
+  title = 	 "{Defects4J}: A {Database} of existing faults to enable controlled testing studies for {Java} programs",
+  booktitle = ISSTA2014,
+  year = 	 2014,
+  NEEDpages = 	 "*",
+  month = 	 ISSTA2014date,
+  address = 	 ISSTA2014addr,
+  abstract =
+   "Empirical studies in software testing research may not be comparable,
+    reproducible, or characteristic of practice.  One reason is that real bugs
+    are too infrequently used in software testing research.  Extracting and
+    reproducing real bugs is challenging and as a result hand-seeded faults or
+    mutants are commonly used as a substitute.
+    \par
+    This paper presents Defects4J, a database and extensible framework
+    providing real bugs to enable reproducible studies in software testing
+    research. The initial version of Defects4J contains 357 real bugs from 5
+    real-world open source programs. Each real bug is accompanied by a
+    comprehensive test suite that can expose (demonstrate) that bug.  Defects4J
+    is extensible and builds on top of each program's version control
+    system. Once a program is configured in Defects4J, new bugs can be added to
+    the database with little or no effort.
+    \par
+    Defects4J features a framework to easily access faulty and fixed program
+    versions and corresponding test suites. This framework also provides a
+    high-level interface to common tasks in software testing research, making
+    it easy to conduct and reproduce empirical studies.  Defects4J is publicly
+    available at \url{http://defects4j.org}.",
+  basefilename = "bug-database-issta2014",
+  downloads = "http://defects4j.org/ Defects4J website",
+  category =  "Software engineering",
+  csetags = "rjust,darioush,mernst,mernst-Static-Analysis,plse",
+  summary =
+   "Defects4J is a database of real bugs from open source programs.  Each
+    bug is isolated and reproducible.  This database enables researchers to
+    evaluate their techniques on real-world bugs.",
+}
+
+
+@InProceedings{JustJIEHF2014,
+  author = 	 "Ren\'e Just and Darioush Jalali and Laura Inozemtseva and Michael D. Ernst and Reid Holmes and Gordon Fraser",
+  title = 	 "Are mutants a valid substitute for real faults in software testing?",
+  OPTcrossref =  "",
+  OPTkey = 	 "",
+  booktitle = FSE2014,
+  year = 	 "2014",
+  OPTeditor = 	 "",
+  OPTvolume = 	 "",
+  OPTnumber = 	 "",
+  OPTseries = 	 "",
+  NEEDpages = 	 "*",
+  month = 	 FSE2014date,
+  address = 	 FSE2014addr,
+  OPTorganization = "",
+  OPTpublisher = "",
+  OPTnote = 	 "",
+  OPTannote = 	 "",
+  abstract =
+   "A good test suite is one that detects real faults. Because the set of
+    faults in a program is unknowable, this definition is not useful to
+    practitioners who are creating test suites nor to researchers who are
+    creating and evaluating tools that generate test suites. In place of real
+    faults, testing research often uses mutants, which are artificial faults ---
+    each one a simple syntactic variation --- that are systematically seeded
+    throughout the program under test. Mutation testing is appealing because
+    large numbers of mutants can be automatically generated and used as a proxy
+    for real faults.
+    \par
+    Unfortunately, there is little experimental evidence to support the use of
+    mutants as a proxy for real faults. This paper investigates whether mutants
+    are indeed a valid substitute for real faults --- that is, whether a test
+    suite's ability to detect mutant versions of a program is correlated with
+    its ability to detect faults that developers have fixed.  Moreover, the
+    paper investigates whether this correlation holds between generated test
+    suites that are able to detect real faults.
+    \par
+    Our experiments used 357 real faults in 5 open-source apps (321 KLOC of
+    source code). We found a statistically significant correlation between
+    mutant detection and fault detection, even when controlling for code
+    coverage.",
+  OPTusesDaikon = "",
+  OPTusesDaikonAsTestSubject = "",
+  OPTomitfromcv = "",
+  basefilename = "mutation-effectiveness-fse2014",
+  OPTdownloads = "",
+  OPTdownloadsnonlocal = "",
+  OPTsupersededby = "",
+  category =  "Testing",
+  csetags = "rjust,darioush,mernst,mernst-Testing,plse",
+  summary =
+   "Much research in software testing uses mutants (artificial defects) in
+   place of real ones.  We investigate whether this assumption is warranted.",
+}
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -8888,11 +9021,11 @@ endgame.",
     Information is created and transformed in Cupid via capabilities, dynamic
     services with well-typed interfaces.  Capabilities can be pipelined to
     construct new capabilities, similarly to Unix. To enable information to be
-    viewed where it is most pertinent, Cupid adds hooks to Eclipse’s standard
+    viewed where it is most pertinent, Cupid adds hooks to Eclipse's standard
     widgets allowing new information to be displayed in existing plug-ins
     without modification. Cupid additionally provides new views with hooks,
     including charts and mappings. Under the hood, Cupid uses type information
-    and Eclipse’s Jobs API to manage computation planning, execution, and
+    and Eclipse's Jobs API to manage computation planning, execution, and
     caching.
     \par
     To evaluate the learnability of Cupid, we observed undergraduate students
@@ -8909,44 +9042,6 @@ endgame.",
    "Customizing an IDE requires writing a plug-in, which can be a significant
     effort.  Our Cupid system enables a developer to easily write scripts for
     an IDE, building upon existing plug-ins.",
-}
-
-
-@Misc{JustJIEHF2014,
-  author = 	 "Ren\'e Just and Darioush Jalali and Laura Inozemtseva and Michael D. Ernst and Reid Holmes and Gordon Fraser",
-  title = 	 "Are mutants a valid substitute for real faults in software testing?",
-  month = 	 mar,
-  year = 	 2014,
-  abstract =
-   "A good test suite is one that detects real faults. Because the set of
-    faults in a program is unknowable, this definition is not useful to
-    practitioners who are creating test suites nor to researchers who are
-    creating and evaluating tools that generate test suites. In place of real
-    faults, testing research often uses mutants, which are artificial faults ---
-    each one a simple syntactic variation --- that are systematically seeded
-    throughout the program under test. Mutation testing is appealing because
-    large numbers of mutants can be automatically generated and used as a proxy
-    for real faults.
-    \par
-    Unfortunately, there is little experimental evidence to support the use of
-    mutants as a proxy for real faults. This paper investigates whether mutants
-    are indeed a valid substitute for real faults --- that is, whether a test
-    suite’s ability to detect mutant versions of a program is correlated with
-    its ability to detect faults that developers have fixed.  Moreover, the
-    paper investigates whether this correlation holds between generated test
-    suites that are able to detect real faults.
-    \par
-    Our experiments used 357 real faults in 5 open-source apps (321 KLOC of
-    source code). We found a statistically significant correlation between
-    mutant detection and fault detection, even when controlling for code
-    coverage.",
-  omitfromcv = 1,
-  underreview = 1,
-  basefilename = "mutation-effectiveness",
-  category =  "Testing",
-  summary =
-   "Much research in software testing uses mutants (artificial defects) in
-   place of real ones.  We investigate whether this assumption is warranted.",
 }
 
 
