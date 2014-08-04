@@ -8301,7 +8301,7 @@ endgame.",
   OPTkey = 	 "",
   OPTtype = 	 "",
   number = 	 "UW-CSE-14-04-02",
-  OPTaddress = 	 "",
+  address = 	 UWCSEaddr,
   month = 	 apr,
   OPTnote = 	 "",
   OPTannote = 	 "",
@@ -8309,7 +8309,7 @@ endgame.",
   basefilename = "infoflow-tr140402",
   OPTdownloads = "",
   OPTdownloadsnonlocal = "",
-  OPTsupersededby = "",
+  supersededby = "ErnstJMDPRKBBHVW2014",
   category =  "Static analysis",
   NEEDcsetags = 	 "*",
   summary =
@@ -8748,6 +8748,57 @@ endgame.",
 }
 
 
+
+@InProceedings{ErnstJMDPRKBBHVW2014,
+  author = 	 "Michael D. Ernst and Ren{\'e} Just and Suzanne Millstein and Werner M. Dietl and Stuart Pernsteiner and Franziska Roesner and Karl Koscher and Paulo Barros and Ravi Bhoraskar and Seungyeop Han and Paul Vines and Edward X. Wu",
+  authorASCII = 	 "Michael D. Ernst and Rene Just and Suzanne Millstein and Werner M. Dietl and Stuart Pernsteiner and Franziska Roesner and Karl Koscher and Paulo Barros and Ravi Bhoraskar and Seungyeop Han and Paul Vines and Edward X. Wu",
+  title = 	 "Collaborative verification of information flow for a high-assurance app store",
+  booktitle = CCS2014,
+  year = 	 2014,
+  NEEDpages = 	 "*",
+  month = 	 CCS2014date,
+  address = 	 CCS2014addr,
+  abstract =
+   "Current app stores distribute some malware to unsuspecting users, even
+    though the app approval process may be costly and time-consuming.  We
+    propose the creation of high-integrity app stores that provide certain
+    guarantees to their customers.  Our approach has four key features.
+    (1) Our analysis is based upon a flow-sensitive, context-sensitive
+    information-flow type system.
+    (2) We use finer-grained behavioral specifications of information flow than
+    current app stores, along with automated analysis to prove correctness with
+    respect to the specification.
+    (3) Our approach works on source code rather than binaries and is based on
+    formal verification rather than on bug-finding.
+    (4) We use a collaborative verification methodology in which the software
+    vendor and the app store auditor each do tasks that are easy for them,
+    reducing overall cost.
+    \par
+    We have implemented our system for Android apps written in Java.  In an
+    adversarial Red Team evaluation, we were given 72 apps (576,000 LOC) to
+    analyze for malware.  The 57 Trojans among these had been written
+    specifically to defeat a malware analysis such as ours, and the Red Teams
+    had access to our source code and documentation.  Nonetheless, our
+    information-flow type system was effective:  it detected 96\% of malware
+    whose malicious behavior was related to information flow and 82\% of all
+    malware.  In practice our toolset would be combined with other analyses to
+    reduce the chance of approving a Trojan.  The programmer annotation burden
+    is low:  6 annotations per 100 lines of code.  Every sound analysis
+    requires a human to review potential false alarms, and in our experiments,
+    this took 30 minutes per KLOC for an auditor unfamiliar with the app.",
+  basefilename = "sparta-ccs2014",
+  OPTdownloads = "",
+  OPTdownloadsnonlocal = "",
+  OPTsupersededby = "",
+  category =  "Static analysis",
+  csetags = "mernst,rjust,smillst,wmdietl,spernste,franzi,supersat,pbsf,bhora,syhan,plvines,edwardwu,mernst-Security,plse",
+  summary =
+   "This paper presents a practical, context-sensitive, flow-sensitive type
+    system that verifies that an app satisfies an information flow policy.
+    The system was effective in an adversarial Red Team evaluation."
+}
+
+
 @InProceedings{JustJIEHF2014,
   author = 	 "Ren\'e Just and Darioush Jalali and Laura Inozemtseva and Michael D. Ernst and Reid Holmes and Gordon Fraser",
   title = 	 "Are mutants a valid substitute for real faults in software testing?",
@@ -8802,7 +8853,6 @@ endgame.",
    "Much research in software testing uses mutants (artificial defects) in
    place of real ones.  We investigate whether this assumption is warranted.",
 }
-
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -8960,48 +9010,6 @@ endgame.",
    "Standard program analysis understand control flow through direct procedure
     calls.  This paper provides analyses that resolve uses of Java reflecton and
     the data passed in Android intents.",
-}
-
-
-@Misc{ErnstJMDPRKBBHVW2014,
-  author = 	 "Michael D. Ernst and Ren{\'e} Just and Suzanne Millstein and Werner M. Dietl and Stuart Pernsteiner and Franziska Roesner and Karl Koscher and Paulo Barros and Ravi Bhoraskar and Seungyeop Han and Paul Vines and Edward X. Wu",
-  title = 	 "Collaborative verification of information flow for a high-assurance app store",
-  month = 	 feb,
-  year = 	 2014,
-  abstract =
-   "Current app stores distribute some malware to unsuspecting users, even
-    though the app approval process may be costly and time-consuming. We
-    propose the creation of high-integrity app stores that provide certain
-    guarantees to their customers. Our approach has four key features.  (1) Our
-    analysis is based upon a flow-sensitive, context-sensitive information-flow
-    type system. (2) We use finer-grained behavioral specifications of
-    information flow than current app stores, along with automated analysis to
-    prove correctness with respect to the specification. (3) Our approach works
-    on source code rather than binaries and is based on formal verification
-    rather than on bug-finding.  (4) We use a collaborative verification
-    methodology in which the software vendor and the app store auditor each do
-    tasks that are easy for them, reducing overall cost.
-    \par
-    We have implemented our system for Android apps written in Java. In an
-    adversarial Red Team evaluation, we were given 72 apps (576,000 LOC) to
-    analyze for malware. The 57 Trojans among these had been written
-    specifically to defeat a malware analysis such as ours, and the Red Teams
-    had access to our source code and documentation. Nonetheless, our
-    information-flow type system was effective: it detected 96\% of malware
-    whose malicious behavior was related to information flow and 82\% of all
-    malware. In practice our toolset would be combined with other analyses to
-    reduce the chance of approving a Trojan. The programmer annotation burden
-    is low: one annotation per 16 lines of code. Every sound analysis requires
-    a human to review potential false alarms, and in our experiments, this took
-    30 minutes per KLOC for an auditor unfamiliar with the app.",
-  omitfromcv = 1,
-  underreview = 1,
-  basefilename = "sparta",
-  category =  "Static analysis",
-  summary =
-   "This paper presents a practical, context-sensitive, flow-sensitive type
-    system that verifies that an app satisfies an information flow policy.
-    The system was effective in an adversarial Red Team evaluation."
 }
 
 
