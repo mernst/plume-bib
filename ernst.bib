@@ -7509,7 +7509,7 @@ endgame.",
     simultaneously to verify a single program.",
   usesDaikon = 1,
   basefilename = "veriweb-oopsla2012",
-  downloads = "http://homes.cs.washington.edu/~tws/veriweb/ study materials",
+  downloads = "http://plse.cs.washington.edu/veriweb/ study materials",
   category =  "Software engineering",
   csetags = "tws,mernst,mernst-Software-engineering,plse,proj-veriweb",
   summary =
@@ -7862,7 +7862,8 @@ endgame.",
   basefilename = "gui-thread-ecoop2013",
   downloads =
    "http://homes.cs.washington.edu/~mernst/pubs/gui-thread-tr20130401.pdf technical report;
-    https://github.com/csgordon/javaui JavaUI implementation",
+    http://types.cs.washington.edu/checker-framework/current/checker-framework-manual.html#guieffect-checker JavaUI implementation;
+    https://github.com/csgordon/javaui older implementation and annotated subject programs",
   category =  "Concurrency",
   csetags = "csgordon,wmdietl,mernst,djg,mernst-Static-analysis,plse,plse-lockcaps",
   summary =
@@ -8115,6 +8116,7 @@ endgame.",
     violate the standard test independence assumption."
 }
 
+
 @TechReport{JustJIEHF2014:TR,
   author = 	 "Ren\'e Just and Darioush Jalali and Laura Inozemtseva and Michael D. Ernst and Reid Holmes and Gordon Fraser",
   authorASCII = 	 "Rene Just and Darioush Jalali and Laura Inozemtseva and Michael D. Ernst and Reid Holmes and Gordon Fraser",
@@ -8298,13 +8300,9 @@ endgame.",
   title = 	 "Collaborative verification of information flow for a high-assurance app store",
   institution =  UWCSE,
   year = 	 2014,
-  OPTkey = 	 "",
-  OPTtype = 	 "",
   number = 	 "UW-CSE-14-04-02",
   address = 	 UWCSEaddr,
   month = 	 apr,
-  OPTnote = 	 "",
-  OPTannote = 	 "",
   NEEDabstract =  "*",
   basefilename = "infoflow-tr140402",
   OPTdownloads = "",
@@ -8455,7 +8453,7 @@ endgame.",
     (2) Contract Inserter, a Visual Studio add-in for discovering and
     inserting likely invariants as Code Contracts.",
   basefilename = "contract-specifications-icse2014",
-  downloads = "http://homes.cs.washington.edu/~tws/code-contracts/ data
+  downloads = "http://plse.cs.washington.edu/code-contracts/ data
   and tools",
   category =  "Invariant detection",
   csetags = "tws,mernst,mernst-Software-engineering,plse,proj-daikon",
@@ -8716,6 +8714,7 @@ endgame.",
   pages = 	 "437-440",
   month = 	 ISSTA2014date,
   address = 	 ISSTA2014addr,
+  note = 	 "Tool demo",
   abstract =
    "Empirical studies in software testing research may not be comparable,
     reproducible, or characteristic of practice.  One reason is that real bugs
@@ -8760,38 +8759,39 @@ endgame.",
   address = 	 CCS2014addr,
   abstract =
    "Current app stores distribute some malware to unsuspecting users, even
-    though the app approval process may be costly and time-consuming.  We
-    propose the creation of high-integrity app stores that provide certain
-    guarantees to their customers.  Our approach has four key features.
-    (1) Our analysis is based upon a flow-sensitive, context-sensitive
-    information-flow type system.
-    (2) We use finer-grained behavioral specifications of information flow than
-    current app stores, along with automated analysis to prove correctness with
-    respect to the specification.
-    (3) Our approach works on source code rather than binaries and is based on
-    formal verification rather than on bug-finding.
-    (4) We use a collaborative verification methodology in which the software
-    vendor and the app store auditor each do tasks that are easy for them,
-    reducing overall cost.
+    though the app approval process may be costly and time-consuming.
+    High-integrity app stores must provide stronger guarantees that their apps
+    are not malicious.  We propose a verification model for use in such app
+    stores to guarantee that the apps are free of malicious information flows.
+    In our model, the software vendor and the app store auditor collaborate ---
+    each does tasks that are easy for her/him, reducing overall verification
+    cost.  The software vendor provides a behavioral specification of
+    information flow (at a finer granularity than used by current app stores)
+    and source code annotated with information-flow type qualifiers.  A
+    flow-sensitive, context-sensitive information-flow type system checks the
+    information flow type qualifiers in the source code and proves that only
+    information flows in the specification can occur at run time.  The app
+    store auditor uses the vendor-provided source code to manually verify
+    declassifications.
     \par
-    We have implemented our system for Android apps written in Java.  In an
-    adversarial Red Team evaluation, we were given 72 apps (576,000 LOC) to
-    analyze for malware.  The 57 Trojans among these had been written
-    specifically to defeat a malware analysis such as ours, and the Red Teams
-    had access to our source code and documentation.  Nonetheless, our
-    information-flow type system was effective:  it detected 96\% of malware
-    whose malicious behavior was related to information flow and 82\% of all
-    malware.  In practice our toolset would be combined with other analyses to
-    reduce the chance of approving a Trojan.  The programmer annotation burden
-    is low:  6 annotations per 100 lines of code.  Every sound analysis
-    requires a human to review potential false alarms, and in our experiments,
-    this took 30 minutes per KLOC for an auditor unfamiliar with the app.",
-  basefilename = "sparta-ccs2014",
-  OPTdownloads = "",
+    We have implemented the information-flow type system for Android apps
+    written in Java, and we evaluated both its effectiveness at detecting
+    information-flow violations and its usability in practice.  In an
+    adversarial Red Team evaluation, we analyzed 72 apps (576,000 LOC) for
+    malware.  The 57 Trojans among these had been written specifically to
+    defeat a malware analysis such as ours.  Nonetheless, our information-flow
+    type system was effective: it detected 96\% of malware whose malicious
+    behavior was related to information flow and 82\% of all malware.  In
+    addition to the adversarial evaluation, we evaluated the practicality of
+    using the collaborative model.  The programmer annotation burden is low: 6
+    annotations per 100 LOC\@.  Every sound analysis requires a human to review
+    potential false alarms, and in our experiments, this took 30 minutes per
+    1,000 LOC for an auditor unfamiliar with the app.",
+  basefilename = "infoflow-ccs2014",
+  downloads = "SPARTA toolset http://types.cs.washington.edu/sparta/",
   OPTdownloadsnonlocal = "",
-  OPTsupersededby = "",
   category =  "Static analysis",
-  csetags = "mernst,rjust,smillst,wmdietl,spernste,franzi,supersat,pbsf,bhora,syhan,plvines,edwardwu,mernst-Security,plse",
+  csetags = "mernst,rjust,smillst,wmdietl,spernste,franzi,supersat,pbsf,bhora,syhan,plvines,edwardwu,mernst-Security,plse,proj-sparta",
   summary =
    "This paper presents a practical, context-sensitive, flow-sensitive type
     system that verifies that an app satisfies an information flow policy.
@@ -8802,51 +8802,40 @@ endgame.",
 @InProceedings{JustJIEHF2014,
   author = 	 "Ren\'e Just and Darioush Jalali and Laura Inozemtseva and Michael D. Ernst and Reid Holmes and Gordon Fraser",
   title = 	 "Are mutants a valid substitute for real faults in software testing?",
-  OPTcrossref =  "",
-  OPTkey = 	 "",
   booktitle = FSE2014,
-  year = 	 "2014",
-  OPTeditor = 	 "",
-  OPTvolume = 	 "",
-  OPTnumber = 	 "",
-  OPTseries = 	 "",
+  year = 	 2014,
   NEEDpages = 	 "*",
   month = 	 FSE2014date,
   address = 	 FSE2014addr,
-  OPTorganization = "",
-  OPTpublisher = "",
-  OPTnote = 	 "",
-  OPTannote = 	 "",
   abstract =
-   "A good test suite is one that detects real faults. Because the set of
-    faults in a program is unknowable, this definition is not useful to
-    practitioners who are creating test suites nor to researchers who are
-    creating and evaluating tools that generate test suites. In place of real
-    faults, testing research often uses mutants, which are artificial faults ---
-    each one a simple syntactic variation --- that are systematically seeded
-    throughout the program under test. Mutation testing is appealing because
-    large numbers of mutants can be automatically generated and used as a proxy
-    for real faults.
+   "A good test suite is one that detects real faults.  Because the set of
+    faults in a program is usually unknowable, this definition is not useful to
+    practitioners who are creating test suites, nor to researchers who are
+    creating and evaluating tools that generate test suites.  In place of real
+    faults, testing research often uses mutants, which are artificial faults
+    --- each one a simple syntactic variation --- that are systematically
+    seeded throughout the program under test. Mutation analysis is appealing
+    because large numbers of mutants can be automatically-generated and used to
+    compensate for low quantities or the absence of known real faults.
     \par
     Unfortunately, there is little experimental evidence to support the use of
-    mutants as a proxy for real faults. This paper investigates whether mutants
-    are indeed a valid substitute for real faults --- that is, whether a test
-    suite's ability to detect mutant versions of a program is correlated with
-    its ability to detect faults that developers have fixed.  Moreover, the
-    paper investigates whether this correlation holds between generated test
-    suites that are able to detect real faults.
+    mutants as a replacement for real faults.  This paper investigates whether
+    mutants are indeed a valid substitute for real faults, i.e., whether a test
+    suite's ability to detect mutants is correlated with its ability to detect
+    real faults that developers have fixed.  Unlike prior studies, these
+    investigations also explicitly consider the conflating effects of code
+    coverage on the mutant detection rate.
     \par
-    Our experiments used 357 real faults in 5 open-source apps (321 KLOC of
-    source code). We found a statistically significant correlation between
-    mutant detection and fault detection, even when controlling for code
-    coverage.",
-  OPTusesDaikon = "",
-  OPTusesDaikonAsTestSubject = "",
-  OPTomitfromcv = "",
+    Our experiments used 357 real faults in 5 open-source applications that
+    comprise a total of 321,000 lines of code.  Furthermore, our experiments
+    used both developer-written and automatically-generated test suites.  The
+    results show a statistically significant correlation between mutant
+    detection and real fault detection, independently of code coverage.  The
+    results also give concrete suggestions on how to improve mutation analysis
+    and reveal some inherent limitations.",
   basefilename = "mutation-effectiveness-fse2014",
   OPTdownloads = "",
   OPTdownloadsnonlocal = "",
-  OPTsupersededby = "",
   category =  "Testing",
   csetags = "rjust,darioush,mernst,mernst-Testing,plse",
   summary =
