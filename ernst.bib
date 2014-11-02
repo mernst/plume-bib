@@ -7742,7 +7742,7 @@ endgame.",
   downloads =
     "http://homes.cs.washington.edu/~mernst/pubs/fsm-inference-declarative-tr130301.pdf TR 13-03-01;
      http://synoptic.googlecode.com/ InvariMint implementation",
-  OPTdownloadsnonlocal = "",
+  supersededby = "BeschastnikhBAEK2015",
   category =  "Invariant detection",
   csetags = "ivanb,brun,mernst,jabrah,arvind,mernst-Software-engineering,proj-synoptic,plse",
   summary =
@@ -8869,6 +8869,61 @@ endgame.",
   summary =
    "Much research in software testing uses mutants (artificial defects) in
    place of real ones.  We investigate whether this assumption is warranted.",
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% 2015
+%%%
+
+@Article{BeschastnikhBAEK2015,
+  author = 	 "Ivan Beschastnikh and Yuriy Brun and Jenny Abrahamson and Michael D. Ernst and Arvind Krishnamurthy",
+  title = 	 "Using declarative specification to improve the understanding, extensibility, and comparison of model-inference algorithms",
+  journal = 	 TSE,
+  year = 	 "2015",
+  OPTkey = 	 "",
+  NEEDvolume = 	 "*",
+  NEEDnumber = 	 "*",
+  NEEDpages = 	 "*",
+  NEEDmonth = 	 "*",
+  OPTnote = 	 "",
+  OPTannote = 	 "",
+  abstract =
+   "It is a staple development practice to log system behavior.  Numerous
+    powerful model-inference algorithms have been proposed to aid developers in
+    log analysis and system understanding.  Unfortunately, existing algorithms
+    are typically declared \emph{procedurally}, making them difficult to
+    understand, extend, and compare. This paper presents InvariMint, an
+    approach to specify model-inference algorithms \emph{declaratively}.
+    \par
+    We applied the InvariMint declarative approach to two model-inference
+    algorithms.  The evaluation results illustrate that InvariMint (1)~leads to
+    new fundamental insights and better understanding of existing algorithms,
+    (2)~simplifies creation of new algorithms, including hybrids that combine
+    or extend existing algorithms, and (3)~makes it easy to compare and
+    contrast previously published algorithms.
+    \par
+    InvariMint's declarative approach can outperform procedural
+    implementations. For example, on a log of 50,000 events, InvariMint's
+    declarative implementation of the kTails algorithm completes in 12 seconds,
+    while a procedural implementation completes in 18 minutes.  We also found
+    that InvariMint's declarative version of the Synoptic algorithm can be over
+    170 times faster than the procedural implementation.",
+  OPTusesDaikon = "",
+  OPTusesDaikonAsTestSubject = "",
+  OPTomitfromcv = "",
+  OPTbasefilename = "fsm-inference-declarative-tse2015",
+  downloads =
+    "http://synoptic.googlecode.com/ InvariMint implementation",
+  OPTsupersededby = "",
+  category =  "Invariant detection",
+  csetags = "ivanb,brun,mernst,jabrah,arvind,mernst-Software-engineering,proj-synoptic,plse",
+  summary =
+   "Model inference algorithms summarize a log to make it easier to understand.
+    But the algorithm itself can be hard to understand, especially if specified
+    procedurally.  InvariMint gives a declarative and efficient way to specify
+    model inference algorithms.",
+  undergradCoauthor = 1,
 }
 
 
