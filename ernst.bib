@@ -7479,7 +7479,7 @@ endgame.",
   author = 	 "Todd W. Schiller and Michael D. Ernst",
   title = 	 "Reducing the barriers to writing verified specifications",
   booktitle = OOPSLA2012,
-  pages = 	 "9--112",
+  pages = 	 "95--112",
   year = 	 2012,
   address = 	 OOPSLA2012addr,
   month = 	 OOPSLA2012date,
@@ -8768,7 +8768,7 @@ endgame.",
   downloads =
    "https://www.ideals.illinois.edu/bitstream/handle/2142/54893/2015-icse-tqi.pdf?sequence=2 PDF;
     http://hdl.handle.net/2142/54893 IDEALS permalink",
-  TOBEsupersededby = "*",
+  supersededby = "VakilianPEJ2015",
   category =  "Software engineering",
   csetags = 	 "mernst",
   omitfromcv =   1,
@@ -8831,6 +8831,7 @@ endgame.",
 
 @InProceedings{JustJIEHF2014,
   author = 	 "Ren\'e Just and Darioush Jalali and Laura Inozemtseva and Michael D. Ernst and Reid Holmes and Gordon Fraser",
+  authorASCII = 	 "Rene Just and Darioush Jalali and Laura Inozemtseva and Michael D. Ernst and Reid Holmes and Gordon Fraser",
   title = 	 "Are mutants a valid substitute for real faults in software testing?",
   booktitle = FSE2014,
   year = 	 2014,
@@ -8936,21 +8937,21 @@ endgame.",
   month = 	 SIGCSE2015date,
   address = 	 SIGCSE2015addr,
   abstract =
-   "This paper reports on our experience teaching introductory
-    programming by means of real-world data analysis. We have
-    found that students can be motivated to learn programming and
-    computer science concepts in order to analyze DNA, predict the
-    outcome of elections, detect fraudulent data, suggest friends in a
-    social network, determine the authorship of documents, and more.
-    The approach is more than just a collection of ``nifty
-    assignments''; rather, it affects the choice of topics and pedagogy.
+   "This paper reports on our experience teaching introductory programming
+    by means of real-world data analysis. We have found that students can
+    be motivated to learn programming and computer science concepts in
+    order to analyze DNA, predict the outcome of elections, detect
+    fraudulent data, suggest friends in a social network, determine the
+    authorship of documents, and more. The approach is more than just a
+    collection of ``nifty assignments''; rather, it affects the choice of
+    topics and pedagogy.
     \par
-    This paper describes how our approach has been used at four
-    diverse colleges and universities to teach CS majors and non-
-    majors alike. It outlines the types of assignments, which are based
-    on problems from science, engineering, business, and the
-    humanities. Finally, it offers advice for anyone trying to integrate
-    the approach into their own institution.",
+    This paper describes how our approach has been used at four diverse
+    colleges and universities to teach CS majors and non-majors alike. It
+    outlines the types of assignments, which are based on problems from
+    science, engineering, business, and the humanities. Finally, it offers
+    advice for anyone trying to integrate the approach into their own
+    institution.",
   basefilename = "data-programming-sigcse2015",
   downloads =
   "http://homes.cs.washington.edu/~mernst/teaching/data-programming/ Data Programming class at UW",
@@ -8964,6 +8965,34 @@ endgame.",
     engineering, business, etc."
 }
 
+
+@InProceedings{VakilianPEJ2015,
+  author = 	 "Vakilian, Mohsen and Phaosawasdi, Amarin and Ernst, Michael D. and Johnson, Ralph E.",
+  title = 	 "Cascade: A universal type qualifier inference tool",
+  booktitle = ICSE2015,
+  year = 	 2015,
+  NEEDpages = 	 "*",
+  month = 	 ICSE2015date,
+  address = 	 ICSE2015addr,
+  abstract =
+   "Type qualifier inference tools usually operate in batch mode and assume
+    that the program must not be changed. In practice, programs must be changed
+    to make them type correct, and programmers must understand them. Cascade is
+    an interactive type qualifier inference tool that is easy to implement and
+    universal (i.e., it can work for any type qualifier system for which a
+    checker is implemented). It shows that type qualifier inference can achieve
+    better results by reducing the level of automation and involving
+    programmers.",
+  basefilename = "cascade-typeinference-icse2015",
+  TODOdownloads = "*",
+  TODOdownloadsnonlocal = "*",
+  category =  "Software engineering",
+  csetags = 	 "mernst",
+  summary =
+   "Rather than operating a type inference tool in batch mode, this paper
+    proposes that the tool should be run incrementally, with the programmer
+    approving each step and being permitted to edit the program along the way.",
+}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -9094,6 +9123,7 @@ endgame.",
 
 @Misc{BarrosJMVDdAE2014,
   author = 	 "Paulo Barros and Ren\'e Just and Suzanne Millstein and Paul Vines and Werner Dietl and Marcelo d'Amorim and Michael D. Ernst",
+  authorASCII = 	 "Paulo Barros and Rene Just and Suzanne Millstein and Paul Vines and Werner Dietl and Marcelo d'Amorim and Michael D. Ernst",
   title = 	 "Precise and sound static analysis of implicit control flow: Resolving {Java} reflection and {Android} intents",
   month = 	 jan,
   year = 	 2014,
