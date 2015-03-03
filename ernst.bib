@@ -8968,7 +8968,7 @@ endgame.",
 
 @InProceedings{VakilianPEJ2015,
   author = 	 "Vakilian, Mohsen and Phaosawasdi, Amarin and Ernst, Michael D. and Johnson, Ralph E.",
-  title = 	 "Cascade: A universal type qualifier inference tool",
+  title = 	 "Cascade: A universal programmer-assisted type qualifier inference tool",
   booktitle = ICSE2015,
   year = 	 2015,
   NEEDpages = 	 "*",
@@ -8976,15 +8976,16 @@ endgame.",
   address = 	 ICSE2015addr,
   abstract =
    "Type qualifier inference tools usually operate in batch mode and assume
-    that the program must not be changed. In practice, programs must be changed
-    to make them type correct, and programmers must understand them. Cascade is
-    an interactive type qualifier inference tool that is easy to implement and
-    universal (i.e., it can work for any type qualifier system for which a
-    checker is implemented). It shows that type qualifier inference can achieve
-    better results by reducing the level of automation and involving
-    programmers.",
+    that the program must not be changed except to add the type qualifiers. In
+    practice, programs must be changed to make them type-correct, and
+    programmers must understand them. Cascade is an interactive type qualifier
+    inference tool that is easy to implement and universal (i.e., it can work
+    for any type qualifier system for which a checker is implemented). It shows
+    that qualifier inference can achieve better results by involving
+    programmers rather than relying solely on automation.",
   basefilename = "cascade-typeinference-icse2015",
-  TODOdownloads = "*",
+  downloads =
+   "https://github.com/reprogrammer/cascade Cascade tool",
   TODOdownloadsnonlocal = "*",
   category =  "Software engineering",
   csetags = 	 "mernst",
@@ -8993,6 +8994,10 @@ endgame.",
     proposes that the tool should be run incrementally, with the programmer
     approving each step and being permitted to edit the program along the way.",
 }
+
+
+
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
