@@ -84,6 +84,10 @@
 
 % These definitions must also precede uses later in the file.
 
+@string{Aarhus = "{\AA}arhus, Denmark"}
+@string{Jyvaskyla = "Jyv{\"{a}}skyl{\"{a}}, Finland"}
+@string{Malaga = "M{\'a}laga, Spain"}
+
 % The accents belong in French, but do not belong in English
 @string{Montreal = "Montreal, Canada"}
 % string{Montreal = "Montreal, QC, Canada"}
@@ -91,18 +95,136 @@
 % string{Montreal = "Montr{\'e}al, Canada"}
 % string{Montreal = "Montr{\'e}al, Qu{\'e}bec, Canada"}
 
+@string{Zurich = "Z{\"u}rich, Switzerland"}
+
+
+%%% ========================================================================
+%%% Research labs and schools
+
+@string{CMUHCII = "CMU HCII"}
+@string{CMUISR = "CMU ISR"}
+@string{CMUSCS = "CMU SCS"}
+@string{CMUaddr = "Pittsburgh, PA"}
+
+@string{ETHZ = "ETH Z{\"u}rich"}
+@string{ETHZaddr = "Z{\"u}rich, Switzerland"}
+
+@string{PARC   = "Xerox Corporation Palo Alto Research Center"}
+@string{PurdueSERC = "SERC, Purdue"}
+
+@string{MIT    = "Massachusetts Institute of Technology"}
+% string{MITEECS = "Massachusetts Institute of Technology Department of
+% 		 Electrical Engineering and Computer Science" = "MIT
+% 		 Dept. of EECS"}
+% string{MITLCS = "Massachusetts Institute of Technology Laboratory for
+% 		 Computer Science" = "MIT Lab for Computer Science"}
+% string{MITAI = "Massachusetts Institute of Technology Artificial
+% 		 Intelligence Laboratory" = "MIT AI Lab"}
+@string{MITEECS = "MIT Dept. of EECS"}
+@string{MITLCS = "MIT Lab for Computer Science"}
+@string{MITAI = "MIT AI Lab"}
+@string{MITCSAIL = "MIT CSAIL"}
+@string{MITSloan = "MIT Sloan School of Management"}
+@string{MITaddr = ""}
+
+@string{MSRaddr = ""}
+
+@string{IBMTJWatson = "IBM T.J. Watson Research Center"}
+% Most common
+@string{IBMHawthorne = ""}
+
+@string{UBCCS = "U. Brit. Columb. Dept. of Comp. Sci."}
+@string{UBCCSaddr = "Vancouver, BC, Canada"}
+@string{UBC = "U. Brit. Columbia"}
+@string{UBCaddr = "Vancouver, BC, Canada"}
+@string{UBCcircle = "cIRcle"}
+
+@string{UIUC = "UIUC"}
+@string{UIUCaddr = "Urbana, IL, USA"}
+
+@string{UWCSE = "U. Wash. Dept. of Comp. Sci. \& Eng."}
+@string{UWCSEaddr = "Seattle, WA, USA"}
+
+% Perhaps add "Computer Sciences Department"
+@string{UWMadison = "University of Wisconsin -- Madison"}
+@string{UWMadisonaddr = "Madison, WI"}
+
+@string{WRL    = "Digital Equipment Corporation Western Research Laboratory"}
+
+
+%%% ========================================================================
+%%% Book series
+
+% Isn't this supposed to be built-in?
+@string{LNCS   = "LNCS"}
+
+
+%%% ========================================================================
+%%% Journal titles
+
+% "SCP" is built into plain.bst.
+% The others are built into plain.bst, but I can override them here.
+@string{CACM     = "CACM"}
+@string{JACM     = "JACM"}
+@string{TOPLAS   = "ACM TOPLAS"}
+@string{IEEESE  = "IEEE TSE"}
+% built in: @string{SCP     = "Science of Computer Programming"}
+@string{IEEETC  = "IEEE Trans. Comput."}
+
+%% The below entries do not override anything that is built in.
+
+@string{AnnalsSE = "Annals of Software Engineering"}
+
+@string{computer = "Computer"}
+@string{CPE     = "Concurrency: Practice and Experience"}
+@string{CSUR    = "ACM Comput.\ Surv."}
+@string{CSURVEYS = "ACM Comput.\ Surv."}
+@string{ENTCS   = "ENTCS"}
+@string{IandC   = "Information and Computation"}
+@string{IJCM    = "IJCM"}
+@string{j-systems-and-software = "J. Syst. Softw."}
+@string{JCSS    = "J. Comp. Syst. Sci."}
+@string{JOT     = "J. Object Tech."}
+@string{LOPLAS  = "ACM LOPLAS"}
+@string{JSAC    = "J. Sel. Areas in Commun."}
+@string{SIGPLANNotices = "ACM SIGPLAN Notices"}
+@string{IEEESoftware = "IEEE Softw."}
+@string{OSR     = "SIGOPS Oper. Syst. Rev."}
+@string{SEN     = "ACM Softw. Eng. Notes"}
+@string{SPE     = "Software: Practice and Experience"}
+@string{j-SPE   = SPE}
+@string{STVR    = "STVR"}
+@string{TDSC    = "TDSC"}
+@string{TOCHI   = "ACM TOCHI"}
+@string{TOSEM   = "ACM TOSEM"}
+@string{TVCG    = "TVCG"}
+@string{TWEB    = "ACM TWEB"}
+@string{TISSEC  = "ACM TISSEC"}
+@string{TPDS    = "IEEE Trans. Parallel Distrib. Syst."}
+@string{IEEETSE = IEEESE}
+@string{TSE     = IEEESE}
+% built in: @string{SCP     = "Science of Computer Programming"}
+@string{IPAM    = "Information Processing \& Management"}
+
+@string{PTRSLB   = "Phil.\ Trans.\ Royal Soc., B"}
+@string{IJMMS   = "Int'l. J. Man-Machine Studies"}
+
 
 %%% ========================================================================
 %%% Proceedings of conferences and workshops
+%%%
 
 @string{AAAI98 = "AAAI"}
 @string{AAAI2000 = "AAAI/IAAI"}
 @string{AAAI2000date = jul # "/" # aug}
-@string{AAAI2000addr = "Austin, TX"}
+@string{AAAI2000addr = ""}
 
 @string{AADEBUG2003 = "AADEBUG"}
 @string{AADEBUG2003date = sep}
 @string{AADEBUG2003addr = ""}
+@string{AADEBUG2005 = "AADEBUG"}
+@string{AADEBUG2005date = sep}
+@string{AADEBUG2005adrr = ""}
 
 @string{ACSAC2002 = "ACSAC"}
 @string{ACSAC2002addr = ""}
@@ -143,6 +265,15 @@
 @string{AOSD2007 = "AOSD"}
 @string{AOSD2007addr = ""}
 @string{AOSD2007date = mar}
+@string{AOSD2010 = "AOSD"}
+@string{AOSD2010date = mar}
+@string{AOSD2010addr = ""}
+@string{AOSD2011 = "AOSD"}
+@string{AOSD2011date = mar}
+@string{AOSD2011addr = ""}
+@string{AOSD2012 = "AOSD"}
+@string{AOSD2012date = mar}
+@string{AOSD2012addr = ""}
 
 @string{APLAS2005 = "APLAS"}
 @string{APLAS2005addr = ""}
@@ -229,6 +360,9 @@
 @string{ASPLOS2008 = "ASPLOS"}
 @string{ASPLOS2008addr = ""}
 @string{ASPLOS2008date = mar}
+@string{ASPLOS2013 = "ASPLOS"}
+@string{ASPLOS2013addr = ""}
+@string{ASPLOS2013date = mar}
 
 @string{AST2006 = "AST Workshop"}
 @string{AST2006addr = ""}
@@ -329,12 +463,19 @@
 @string{CC2008addr = ""}
 @string{CC2008date = apr}
 
+@string{CASE1993 = "CASE"}
+@string{CASE1993date = jul}
+@string{CASE1993addr = ""}
+
 @string{CCS2005 = "CCS"}
 @string{CCS2005addr = ""}
 @string{CCS2005date = nov}
 @string{CCS2007 = "CCS"}
 @string{CCS2007addr = ""}
 @string{CCS2007date = oct # "/" # nov}
+@string{CCS2009 = "CCS"}
+@string{CCS2009addr = ""}
+@string{CCS2009date = oct}
 @string{CCS2011 = "CCS"}
 @string{CCS2011addr = ""}
 @string{CCS2011date = oct}
@@ -349,18 +490,38 @@
 @string{CHASE2008addr = ""}
 @string{CHASE2008date = may}
 
+@string{CHI = "Proceedings of the SIGCHI Conference on Human Factors in Computing Systems"}
+@string{CHI2002 = "CHI"}
+@string{CHI2002addr = ""}
+@string{CHI2002date = apr}
 @string{CHI2004 = "CHI"}
 @string{CHI2004addr = ""}
 @string{CHI2004date = apr}
 @string{CHI2007 = "CHI"}
 @string{CHI2007addr = ""}
 @string{CHI2007date = apr}
+@string{CHI2008 = "CHI"}
+@string{CHI2008addr = ""}
+@string{CHI2008date = apr}
+@string{CHI2009 = "CHI"}
+@string{CHI2009addr = ""}
+@string{CHI2009date = apr}
 @string{CHI2010 = "CHI"}
 @string{CHI2010addr = ""}
 @string{CHI2010date = apr}
 @string{CHI2011 = "CHI"}
 @string{CHI2011addr = ""}
 @string{CHI2011date = may}
+@string{CHI2013 = "CHI"}
+@string{CHI2013addr = ""}
+@string{CHI2013date = apr # "/" # may}
+@string{CHI2014 = "CHI"}
+@string{CHI2014addr = ""}
+@string{CHI2014date = apr # "/" # may}
+
+@string{CSCW2010 = "CSCW"}
+@string{CSCW2010addr = ""}
+@string{CSCW2010date = feb}
 
 @string{CMSR2004 = "CMSR"}
 @string{CMSR2004addr = ""}
@@ -430,6 +591,9 @@
 @string{DSN2003addr = ""}
 @string{DSN2003date = jun}
 
+@string{DSN2011 = "DSN"}
+@string{DSN2011addr = ""}
+@string{DSN2011date = jun}
 
 @string{ECOOP91 = "ECOOP"}
 @string{ECOOP91addr = ""}
@@ -546,6 +710,10 @@
 @string{EuroPar2000addr = ""}
 @string{EuroPar2000date = aug # "/" # sep}
 
+@string{EuroSys2009 = "EuroSys 2009"}
+@string{EuroSys2009addr = ""}
+@string{EuroSys2009date = mar # "/" # apr}
+
 @string{FASE2007 = "FASE"}
 @string{FASE2007addr = ""}
 @string{FASE2007date = mar}
@@ -629,8 +797,8 @@
 @string{FSE97addr = ""}
 @string{FSE97date = sep}
 @string{FSE98 = "FSE"}
-@string{fse98date = nov}
-@string{fse98addr = ""}
+@string{FSE98date = nov}
+@string{FSE98addr = ""}
 % Identical to ESEC99
 @string{FSE99 = "ESEC/FSE"}
 @string{FSE99date = sep}
@@ -703,10 +871,16 @@
 @string{GD2007addr = ""}
 @string{GD2007date = sep}
 
+@string{GPCE2010 = "GPCE"}
+@string{GPCE2010date = oct}
+@string{GPCE2010addr = ""}
+
 % Software Engineering Notes 8:4 and SIGPLAN Notices 18:8 (1983)
 @string{HLD = "ACM SIGSOFT/SIGPLAN Software Engineering Symposium on High-level Debugging"}
 
-@string{IandC   = "Information and Computation"}
+@string{HotMobile2011 = "HotMobile"}
+@string{HotMobile2011date = mar}
+@string{HotMobile2011addr = ""}
 
 @string{ICAPS2005 = "ICAPS"}
 @string{ICAPS2005date = jun}
@@ -772,6 +946,21 @@
 @string{ISMM2008date = jun}
 
 
+% ICPC
+% WPC (workshop) came before IWPC (international workshop) came before ICPC (conference).
+@string{WPC1997 = "WPC"}
+@string{WPC1997addr = "Dearborn, MI, USA"}
+@string{WPC1997date = may}
+% Eventually it became an "International" workshop, hence the acronym changing. *rolleyes*
+@string{IWPC2005 = "IWPC"}
+@string{IWPC2005addr = ""}
+@string{IWPC2005date = may}
+@string{ICPC2008 = "ICPC"}
+@string{ICPC2008addr = ""}
+@string{ICPC2008date = jun}
+@string{ICPC2012 = "ICPC"}
+@string{ICPC2012addr = ""}
+@string{ICPC2012date = jun}
 @string{ICPC2014 = "ICPC"}
 @string{ICPC2014addr = ""}
 @string{ICPC2014date = jun}
@@ -907,6 +1096,9 @@
 @string{ICSM2007 = "ICSM"}
 @string{ICSM2007addr = ""}
 @string{ICSM2007date = sep}
+@string{ICSM2009 = "ICSM"}
+@string{ICSM2009date = sep}
+@string{ICSM2009addr = ""}
 
 @string{ICST2012 = "ICST"}
 @string{ICST2012addr = ""}
@@ -937,6 +1129,10 @@
 @string{IJCAI97date = aug}
 
 @string{INCOSE96 = "INCOSE"}
+
+@string{InfoVis1995 = "InfoVis"}
+@string{InfoVis1995addr = "Atlanta, GA, USA"}
+@string{InfoVis1995date = oct}
 
 @string{IP71 = "Information Processing 71"}
 @string{IP71date = aug}
@@ -1030,6 +1226,9 @@
 @string{ISSTA2014 = "ISSTA"}
 @string{ISSTA2014addr = ""}
 @string{ISSTA2014date = jul}
+@string{ISSTA2015 = "ISSTA"}
+@string{ISSTA2015addr = ""}
+@string{ISSTA2015date = jul}
 
 @string{IVME2003 = "IVME"}
 @string{IVME2003addr = ""}
@@ -1050,13 +1249,17 @@
 @string{JavaGrande2002addr = ""}
 @string{JavaGrande2002date = nov}
 
+@string{LCPC2003 = "LCPC"}
+@string{LCPC2003date = oct}
+@string{LCPC2003addr = ""}
+
 @string{LCTES98 = "LCTES"}
 @string{LCTES98addr = ""}
 @string{LCTES98date = jun}
 
-@string{LFP90  = "LFP"}
-@string{LFP90addr = ""}
+@string{LFP90 = "LFP"}
 @string{LFP90date = jun}
+@string{LFP90addr = ""}
 @string{LFP92  = "LFP"}
 @string{LFP92addr = ""}
 @string{LFP92date = jun}
@@ -1135,7 +1338,10 @@
 @string{NSDI2007date = apr}
 @string{NSDI2010 = "NSDI"}
 @string{NSDI2010addr = ""}
-@string{NSDI2010date = mar # "/" # apr}
+@string{NSDI2010date = apr}
+@string{NSDI2011 = "NSDI"}
+@string{NSDI2011addr = ""}
+@string{NSDI2011date = mar # "/" # apr}
 @string{NSDI2014 = "NSDI"}
 @string{NSDI2014addr = ""}
 @string{NSDI2014date = apr}
@@ -1147,18 +1353,18 @@
 @string{NSPW2003addr = ""}
 @string{NSPW2003date = aug}
 
-@string{oopsla86 = "OOPSLA"}
-@string{oopsla86addr = ""}
-@string{oopsla86date = jun}
-@string{oopsla87 = "OOPSLA"}
-@string{oopsla87addr = ""}
-@string{oopsla87date = oct}
+@string{OOPSLA86 = "OOPSLA"}
+@string{OOPSLA86addr = ""}
+@string{OOPSLA86date = jun}
+@string{OOPSLA87 = "OOPSLA"}
+@string{OOPSLA87addr = ""}
+@string{OOPSLA87date = oct}
 @string{OOPSLA89 = "OOPSLA"}
 @string{OOPSLA89addr = ""}
 @string{OOPSLA89date = oct}
-@string{oopsla90 = "OOPSLA/ECOOP"}
-@string{oopsla90addr = ""}
-@string{oopsla90date = oct # "~21--25,"}
+@string{OOPSLA90 = "OOPSLA/ECOOP"}
+@string{OOPSLA90addr = ""}
+@string{OOPSLA90date = oct # "~21--25,"}
 @string{OOPSLA91 = "OOPSLA"}
 @string{OOPSLA91addr = ""}
 @string{OOPSLA91date = oct}
@@ -1174,15 +1380,15 @@
 @string{OOPSLA96 = "OOPSLA"}
 @string{OOPSLA96addr = ""}
 @string{OOPSLA96date = oct}
-@string{oopsla97 = "OOPSLA"}
-@string{oopsla97addr = ""}
-@string{oopsla97date = oct}
+@string{OOPSLA97 = "OOPSLA"}
+@string{OOPSLA97addr = ""}
+@string{OOPSLA97date = oct}
 @string{OOPSLA98 = "OOPSLA"}
-@string{oopsla98date = oct}
-@string{oopsla98addr = ""}
+@string{OOPSLA98date = oct}
+@string{OOPSLA98addr = ""}
 @string{OOPSLA99 = "OOPSLA"}
-@string{oopsla99date = nov}
-@string{oopsla99addr = ""}
+@string{OOPSLA99date = nov}
+@string{OOPSLA99addr = ""}
 @string{OOPSLA2000 = "OOPSLA"}
 @string{OOPSLA2000companion = "OOPSLA Companion"}
 @string{OOPSLA2000date = oct}
@@ -1232,8 +1438,25 @@
 @string{OOPSLA2012companion = "OOPSLA Companion"}
 @string{OOPSLA2012date = oct}
 @string{OOPSLA2012addr = ""}
+@string{OOPSLA2013 = "OOPSLA"}
+@string{OOPSLA2013companion = "OOPSLA Companion"}
+@string{OOPSLA2013date = oct}
+@string{OOPSLA2013addr = ""}
 
-@string{Onward2010 = "Onward!"}
+% Comes after the variable it references
+@string{GPCE2013 = "GPCE"}
+@string{GPCE2013date = oct}
+@string{GPCE2013addr = OOPSLA2013addr}
+
+@string{Onward2010 = "Proceedings of {Onward!} 2010"}
+@string{Onward2010date = oct}
+@string{Onward2010addr = OOPSLA2010addr}
+@string{Onward2012 = "Proceedings of {Onward!} 2012"}
+@string{Onward2012date = oct}
+@string{Onward2012addr = OOPSLA2012addr}
+@string{Onward2013 = "Proceedings of {Onward!} 2013"}
+@string{Onward2013date = oct}
+@string{Onward2013addr = OOPSLA2013addr}
 
 @string{OSDI96 = "OSDI"}
 @string{OSDI96date = oct}
@@ -1250,8 +1473,6 @@
 @string{OSDI2010 = "OSDI"}
 @string{OSDI2010date = oct}
 @string{OSDI2010addr = ""}
-
-@string{OSR = "SIGOPS Oper. Syst. Rev."}
 
 @string{PACT2001 = "PACT"}
 @string{PACT2001date = sep}
@@ -1321,17 +1542,20 @@
 @string{PLAS2009addr = ""}
 @string{PLAS2009date = jun}
 
+@string{PLATEAU2010 = "PLATEAU"}
+@string{PLATEAU2010addr = OOPSLA2010addr}
+@string{PLATEAU2010date = oct}
+@string{PLATEAU2011 = "PLATEAU"}
+@string{PLATEAU2011addr = OOPSLA2011addr}
+@string{PLATEAU2011date = oct}
+
 %% PLDI (formerly known as Compiler Construction)
-@string{CC82 = "Proceedings of the SIGPLAN '82 Symposium on
-                Compiler Construction"}
-@string{CC84 = "Proceedings of the ACM SIGPLAN '84 Symposium on 
-		Compiler Construction"}
+@string{CC82 = "Proceedings of the SIGPLAN '82 Symposium on Compiler Construction"}
+@string{CC84 = "Proceedings of the ACM SIGPLAN '84 Symposium on Compiler Construction"}
 @string{CC84addr = ""}
 @string{CC84date = jun}
-@string{CC86 = "Proceedings of the ACM SIGPLAN '86 Conference on
-		Compiler Construction"}
-@string{SOCC89 = "Proceedings of the SIGPLAN'89 Symposium on Compiler
-		 Construction"}
+@string{CC86 = "Proceedings of the ACM SIGPLAN '86 Conference on Compiler Construction"}
+@string{SOCC89 = "Proceedings of the SIGPLAN'89 Symposium on Compiler Construction"}
 @string{PLDI88 = "PLDI"}
 @string{PLDI88addr = ""}
 @string{PLDI88date = jun}
@@ -1351,28 +1575,28 @@
 @string{PLDI93addr = ""}
 @string{PLDI93date = jun}
 @string{PLDI94 = "PLDI"}
-@string{pldi94addr = ""}
-@string{pldi94date = jun}
+@string{PLDI94addr = ""}
+@string{PLDI94date = jun}
 @string{PLDI95 = "PLDI"}
-@string{pldi95addr = ""}
-@string{pldi95date = jun}
+@string{PLDI95addr = ""}
+@string{PLDI95date = jun}
 @string{PLDI96 = "PLDI"}
 @string{PLDI96addr = ""}
 @string{PLDI96date = may}
 @string{PLDI97 = "PLDI"}
-@string{pldi97addr = ""}
+@string{PLDI97addr = ""}
 @string{PLDI97date = jun}
 @string{PLDI98 = "PLDI"}
-@string{pldi98addr = ""}
-@string{pldi98date = jun}
+@string{PLDI98addr = ""}
+@string{PLDI98date = jun}
 @string{PLDI99 = "PLDI"}
-@string{pldi99addr = ""}
+@string{PLDI99addr = ""}
 @string{PLDI99date = jun}
 @string{PLDI2000 = "PLDI"}
-@string{pldi2000addr = ""}
+@string{PLDI2000addr = ""}
 @string{PLDI2000date = jun}
 @string{PLDI2001 = "PLDI"}
-@string{pldi2001addr = ""}
+@string{PLDI2001addr = ""}
 @string{PLDI2001date = jun}
 @string{PLDI2002 = "PLDI"}
 @string{PLDI2002addr = ""}
@@ -1407,10 +1631,20 @@
 @string{PLDI2013 = "PLDI"}
 @string{PLDI2013addr = ""}
 @string{PLDI2013date = jun}
+@string{PLDI2015 = "PLDI"}
+@string{PLDI2015addr = ""}
+@string{PLDI2015date = jun}
 
 @string{PLID2005 = "PLID"}
 @string{PLID2005addr = ""}
 @string{PLID2005date = sep}
+
+@string{PLOS2011 = "PLOS"}
+@string{PLOS2011addr = ""}
+@string{PLOS2011date = oct}
+@string{PLOS2013 = "PLOS"}
+@string{PLOS2013addr = ""}
+@string{PLOS2013date = nov}
 
 @string{PODC84 = "PODC"}
 @string{PODC84addr = ""}
@@ -1500,6 +1734,10 @@
 @string{POPL2010date = jan}
 @string{POPL2010addr = ""}
 
+@string{POST2014 = "POST"}
+@string{POST2014date = apr}
+@string{POST2014addr = ""}
+
 @string{PPOPP99 = "PPOPP"}
 @string{PPOPP99addr = ""}
 @string{PPOPP99date = may}
@@ -1562,6 +1800,9 @@
 @string{SAC2006 = "SAC"}
 @string{SAC2006addr = ""}
 @string{SAC2006date = apr}
+@string{SAC2008 = "SAC"}
+@string{SAC2008addr = ""}
+@string{SAC2008date = mar}
 @string{SAC2009 = "SAC"}
 @string{SAC2009addr = ""}
 @string{SAC2009date = mar}
@@ -1613,12 +1854,19 @@
 @string{SC2001addr = ""}
 @string{SC2001date = nov}
 
+@string{SoftComp2012 = "SC"}
+@string{SoftComp2012date = may # "/" # jun}
+@string{SoftComp2012addr = ""}
+
 @string{SCAM2003 = "SCAM"}
 @string{SCAM2003addr = ""}
 @string{SCAM2003date = sep}
 @string{SCAM2009 = "SCAM"}
 @string{SCAM2009addr = ""}
 @string{SCAM2009date = sep}
+@string{SCAM2014 = "SCAM"}
+@string{SCAM2014date = sep}
+@string{SCAM2014addr = ""}
 
 @string{SEFM2005 = "SEFM"}
 @string{SEFM2005addr = ""}
@@ -1641,6 +1889,10 @@
 @string{SIIT87 = "SIIT"}
 @string{SIIT87addr = ""}
 @string{SIIT87date = jun}
+
+@string{SNAPL2015 = "SNAPL"}
+@string{SNAPL2015addr = ""}
+@string{SNAPL2015date = may}
 
 @string{IEEESnP82 = "IEEE S\&P"}
 @string{IEEESnP82addr = ""}
@@ -1684,6 +1936,9 @@
 @string{SIGCSE2001 = "{SIGCSE}"}
 @string{SIGCSE2001date = feb}
 @string{SIGCSE2001addr = ""}
+@string{SIGCSE2013 = "SIGCSE"}
+@string{SIGCSE2013date = mar}
+@string{SIGCSE2013addr = ""}
 @string{SIGCSE2014 = "{SIGCSE}"}
 @string{SIGCSE2014date = mar}
 @string{SIGCSE2014addr = ""}
@@ -1696,6 +1951,10 @@
 @string{ITCSE00addr = "Helsinki, Finland"}
 @string{ITCSE00date = jul}
 
+@string{SIGMETRICS2010 = "SIGMETRICS"}
+@string{SIGMETRICS2010date = jun}
+@string{SIGMETRICS2010addr = ""}
+
 @string{SIPL93 = "SIPL '93"}
 @string{SIPL93trno = "YALEU/DCS/RR-968"}
 
@@ -1706,6 +1965,14 @@
 @string{SOFSEM2005 = "SOFSEM"}
 @string{SOFSEM2005addr = ""}
 @string{SOFSEM2005date = jan}
+
+%string{SoftVis2010 = "ACM Symposium on Software Visualization" = "SoftVis"}
+%string{SoftVis2010addr = "Salt Lake City, UT, USA"}
+%string{SoftVis2010date = oct # "~25--26," = oct}
+
+@string{SoftVis2010 = "SoftVis"}
+@string{SoftVis2010addr = "Salt Lake City, UT, USA"}
+@string{SoftVis2010date = oct}
 
 @string{SOSP93 = "SOSP"}
 @string{SOSP93addr = ""}
@@ -1842,6 +2109,10 @@
 @string{TOOLS39addr = ""}
 @string{TOOLS39date = jul # "/" # aug}
 
+@string{TOOLS47 = "TOOLS Europe"}
+@string{TOOLS47addr = ""}
+@string{TOOLS47date = jun # "/" # jul}
+
 @string{TOOLSEurope2008 = "Tools Europe"}
 @string{TOOLSEurope2008addr = ""}
 @string{TOOLSEurope2008date = ""}
@@ -1850,6 +2121,21 @@
 @string{TRUST2012addr = ""}
 @string{TRUST2012date = jun}
 
+@string{UIST2008 = "UIST"}
+@string{UIST2008addr = ""}
+@string{UIST2008date = oct}
+@string{UIST2009 = "UIST"}
+@string{UIST2009addr = ""}
+@string{UIST2009date = oct}
+@string{UIST2010 = "UIST"}
+@string{UIST2010addr = ""}
+@string{UIST2010date = oct}
+@string{UIST2011 = "UIST"}
+@string{UIST2011addr = ""}
+@string{UIST2011date = oct}
+@string{UIST2012 = "UIST"}
+@string{UIST2012addr = ""}
+@string{UIST2012date = oct}
 @string{UIST2013 = "UIST"}
 @string{UIST2013addr = ""}
 @string{UIST2013date = oct}
@@ -1896,6 +2182,9 @@
 @string{USENIX2006 = "USENIX"}
 @string{USENIX2006addr = ""}
 @string{USENIX2006date = jun}
+@string{USENIX2008 = "USENIX"}
+@string{USENIX2008addr = ""}
+@string{USENIX2008date = jun}
 
 @string{USENIXFAST2005 = "USENIX FAST"}
 @string{USENIXFAST2005addr = ""}
@@ -1932,6 +2221,18 @@
 @string{USENIXSec2013addr = ""}
 @string{USENIXSec2013date = aug}
 
+@string{VEE2006 = "VEE"}
+@string{VEE2006addr = PLDI2006addr}
+@string{VEE2006date = jun}
+@string{VEE2010 = "VEE"}
+% co-located with ASPLOS2010
+@string{VEE2010addr = ""}
+@string{VEE2010date = mar}
+
+@string{VL = "VL"}
+@string{VL1996 = VL}
+@string{VL1996addr = ""}
+@string{VL1996date = sep}
 
 @string{VLDB2004 = "VLDB"}
 @string{VLDB2004addr = "Toronto, Canada"}
@@ -1939,6 +2240,14 @@
 @string{VLDB2010 = "VLDB"}
 @string{VLDB2010addr = "Singapore"}
 @string{VLDB2010date = sep}
+
+@string{VLHCC = "VL/HCC"}
+@string{VLHCC2009 = VLHCC}
+@string{VLHCC2009addr = ""}
+@string{VLHCC2009date = sep}
+@string{VLHCC2011 = VLHCC}
+@string{VLHCC2011addr = ""}
+@string{VLHCC2011date = sep}
 
 @string{VMCAI2003 = "VMCAI"}
 @string{VMCAI2003addr = ""}
@@ -1972,9 +2281,26 @@
 @string{WCET2005addr = ""}
 @string{WCET2005date = jul}
 
+@string{WCRE2010 = "WCRE"}
+@string{WCRE2010date = oct}
+@string{WCRE2010addr = ""}
+
 @string{WCSSS99 = "WCSSS"}
 @string{WCSSS99addr = ""}
 @string{WCSSS99date = may}
+
+%% Colocated with USENIX2010
+@string{WebApps2010 = "WebApps"}
+@string{WebApps2010addr = ""}
+@string{WebApps2010date = "jun"}
+%% Colocated with USENIX2011
+@string{WebApps2011 = "WebApps"}
+@string{WebApps2011addr = ""}
+@string{WebApps2011date = "jun"}
+%% Colocated with USENIX2012
+@string{WebApps2012 = "WebApps"}
+@string{WebApps2012addr = ""}
+@string{WebApps2012date = "jun"}
 
 @string{WDAG97 = "WDAG"}
 @string{WDAG97addr = ""}
@@ -2007,6 +2333,9 @@
 @string{WODA2008 = "WODA"}
 @string{WODA2008addr = ""}
 @string{WODA2008date = may}
+@string{WODA2011 = ""}
+@string{WODA2011date = jul}
+@string{WODA2011addr = ISSTA2011addr}
 
 @string{WOOD2003 = "WOOD"}
 @string{WOOD2003addr = ""}
@@ -2032,112 +2361,18 @@
 @string{WWW2004 = "WWW"}
 @string{WWW2004addr = ""}
 @string{WWW2004date = may}
+@string{WWW2010 = "WWW"}
+@string{WWW2010addr = ""}
+@string{WWW2010date = apr}
+
+@string{QTAPC2008 = "QTAPC"}
+@string{QTAPC2008date = jun}
+@string{QTAPC2008addr = ICPC2008addr}
 
 
 @string{XPAU2002 = "XP/Agile Universe"}
 @string{XPAU2002addr = ""}
 @string{XPAU2002date = aug}
-
-
-%%% ========================================================================
-%%% Journal titles
-
-% "SCP" is built into plain.bst.
-% The others are built into plain.bst, but I can override them here.
-@string{CACM     = "CACM"}
-@string{JACM     = "JACM"}
-@string{TOPLAS   = "ACM TOPLAS"}
-@string{IEEESE  = "IEEE TSE"}
-@string{IEEETC  = "IEEE Trans. Comput."}
-
-%% The below entries do not override anything that is built in.
-
-@string{AnnalsSE = "Annals of Software Engineering"}
-
-@string{computer = "Computer"}
-@string{CPE     = "Concurrency: Practice and Experience"}
-@string{CSUR    = "ACM Comput.\ Surv."}
-@string{CSURVEYS = "ACM Comput.\ Surv."}
-@string{ENTCS   = "ENTCS"}
-@string{IJCM    = "IJCM"}
-@string{j-systems-and-software = "J. Syst. Softw."}
-@string{JCSS    = "J. Comp. Syst. Sci."}
-@string{JOT     = "J. Object Tech."}
-@string{LOPLAS  = "ACM LOPLAS"}
-@string{JSAC    = "J. Sel. Areas in Commun."}
-@string{SIGPLAN = "ACM SIGPLAN Notices"}
-@string{IEEESoftware = "IEEE Softw."}
-@string{SEN     = "ACM Softw. Eng. Notes"}
-@string{SPE     = "Software: Practice and Experience"}
-@string{j-SPE   = SPE}
-@string{STVR    = "STVR"}
-@string{TDSC = "TDSC"}
-@string{TOSEM   = "ACM TOSEM"}
-@string{TISSEC  = "ACM TISSEC"}
-@string{TPDS    = "IEEE Trans. Parallel Distrib. Syst."}
-@string{IEEETSE = IEEESE}
-@string{TSE     = IEEESE}
-
-@string{PTRSLB   = "Phil.\ Trans.\ Royal Soc., B"}
-
-
-%%% ========================================================================
-%%% Book series
-
-% Isn't this supposed to be built-in?
-@string{LNCS   = "LNCS"}
-
-
-%%% ========================================================================
-%%% Research labs and schools
-
-@string{CMUSCS = "CMU SCS"}
-@string{CMUaddr = "Pittsburgh, PA"}
-
-@string{ETHZ = "ETH Z{\"u}rich"}
-@string{ETHZaddr = "Z{\"u}rich, Switzerland"}
-
-@string{PARC   = "Xerox Corporation Palo Alto Research Center"}
-@string{PurdueSERC = "SERC, Purdue"}
-
-@string{MIT    = "Massachusetts Institute of Technology"}
-% string{MITEECS = "Massachusetts Institute of Technology Department of
-% 		 Electrical Engineering and Computer Science" = "MIT
-% 		 Dept. of EECS"}
-% string{MITLCS = "Massachusetts Institute of Technology Laboratory for
-% 		 Computer Science" = "MIT Lab for Computer Science"}
-% string{MITAI = "Massachusetts Institute of Technology Artificial
-% 		 Intelligence Laboratory" = "MIT AI Lab"}
-@string{MITEECS = "MIT Dept. of EECS"}
-@string{MITLCS = "MIT Lab for Computer Science"}
-@string{MITAI = "MIT AI Lab"}
-@string{MITCSAIL = "MIT CSAIL"}
-@string{MITSloan = "MIT Sloan School of Management"}
-@string{MITaddr = ""}
-
-@string{MSRaddr = ""}
-
-@string{IBMTJWatson = "IBM T.J. Watson Research Center"}
-% Most common
-@string{IBMHawthorne = ""}
-
-@string{UBCCS = "U. Brit. Columb. Dept. of Comp. Sci."}
-@string{UBCCSaddr = "Vancouver, BC, Canada"}
-@string{UBC = "U. Brit. Columbia"}
-@string{UBCaddr = "Vancouver, BC, Canada"}
-@string{UBCcircle = "cIRcle"}
-
-@string{UIUC = "UIUC"}
-@string{UIUCaddr = "Urbana, IL, USA"}
-
-@string{UWCSE = "U. Wash. Dept. of Comp. Sci. \& Eng."}
-@string{UWCSEaddr = "Seattle, WA, USA"}
-
-% Perhaps add "Computer Sciences Department"
-@string{UWMadison = "University of Wisconsin -- Madison"}
-@string{UWMadisonaddr = "Madison, WI"}
-
-@string{WRL    = "Digital Equipment Corporation Western Research Laboratory"}
 
 
 %%% ========================================================================

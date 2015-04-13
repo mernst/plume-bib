@@ -7947,6 +7947,7 @@ endgame.",
   basefilename = "offline-continuous-esecfse2013",
   downloads =
    "https://bitbucket.org/kivancmuslu/solstice/ Solstice implementation",
+  supersededby = "MusluBEN2015",
   category =  "Speculative analysis",
   csetags = "kivanc,brun,notkin,mernst,mernst-Software-engineering,plse,plse-speculation",
   summary =
@@ -8928,6 +8929,53 @@ endgame.",
 }
 
 
+@Article{MusluBEN2015,
+  author = 	 "K{\i}van{\c{c}} Mu{\c{s}}lu and Yuriy Brun and Michael D. Ernst and David Notkin",
+  authorASCII =  "Kivanc Muslu and Yuriy Brun and Michael D. Ernst and David Notkin",
+  title = 	 "Reducing feedback delay of software development tools via continuous analysis",
+  journal = 	 TSE,
+  year = 	 2015,
+  OPTkey = 	 "",
+  NEEDvolume = 	 "*",
+  NEEDnumber = 	 "*",
+  NEEDpages = 	 "*",
+  NEEDmonth = 	 "",
+  OPTnote = 	 "",
+  OPTannote = 	 "",
+  abstract =
+   "During software development, the sooner a developer learns how code changes
+    affect program analysis results, the more helpful that analysis is.
+    Manually invoking an analysis may interrupt the developer's workflow or
+    cause a delay before the developer learns the implications of the change. A
+    better approach is \emph{continuous analysis} tools that always provide
+    up-to-date results. We present Codebase Replication, a technique that eases
+    the implementation of continuous analysis tools by converting an existing
+    offline analysis into an IDE-integrated, continuous tool with two desirable
+    properties: isolation and currency. Codebase Replication creates and keeps
+    in sync a copy of the developer's codebase. The analysis runs on the copy
+    codebase without disturbing the developer and without being disturbed by
+    the developer's changes. We developed Solstice, an open-source,
+    publicly-available Eclipse plug-in that implements Codebase Replication.
+    Solstice has less than 2.5 milliseconds overhead for most common developer
+    actions. We used Solstice to implement four Eclipse-integrated continuous
+    analysis tools based on the offline versions of FindBugs, PMD, data race
+    detection, and unit testing. Each conversion required on average
+    710 LoC and 20 hours of implementation effort.
+    Case studies indicate that Solstice-based continuous analysis tools are
+    intuitive and easy-to-use.",
+  basefilename = "offline-continuous-tse2015",
+  downloads =
+   "https://bitbucket.org/kivancmuslu/solstice/ Solstice implementation",
+  category =  "Speculative analysis",
+  csetags = "kivanc,brun,notkin,mernst,mernst-Software-engineering,plse,plse-speculation",
+  summary =
+   "An offline program analysis runs when the developer invokes it.  A
+    continuous analysis operates automatically on the current codebase and
+    asynchronously informs the developer of results.  By using a shadow copy of
+    the codebase, an offline analysis can be made continuous.",
+}
+
+
 @InProceedings{AndersonEOPT2015,
   author = 	 "Ruth Anderson and Michael D. Ernst and Robert Ord{\'o}{\~n}ez and Paul Pham and Ben Treibelhorn",
   title = 	 "A data programming {CS1} course",
@@ -8966,6 +9014,36 @@ endgame.",
 }
 
 
+@InProceedings{ErnstGJLPTTW2015,
+  author = 	 "Michael D. Ernst and Dan Grossman and Jon Jacky and Calvin Loncaric and Stuart Pernsteiner and Zachary Tatlock and Emina Torlak and Xi Wang",
+  title = 	 "Toward a dependability case language and workflow for a radiation therapy system",
+  booktitle = SNAPL2015,
+  year = 	 2015,
+  NEEDpages = 	 *,
+  month = 	 SNAPL2015date,
+  address = 	 SNAPL2015addr,
+  abstract =
+   "We present a near-future research agenda for bringing a suite of
+    modern programming-languages verification tools---specifically
+    interactive theorem proving, solver-aided languages, and formally
+    defined domain-specific languages---to the development of a specific
+    safety-critical system, a radiotherapy medical device.  We sketch how
+    we believe recent programming-languages research advances can merge
+    with existing best practices for safety-critical systems to increase
+    system assurance and developer productivity.  We motivate hypotheses
+    central to our agenda: That we should start with a single specific
+    system and that we need to integrate a variety of complementary
+    verification and synthesis tools into system development.",
+  basefilename = "dependability-case-snapl2015",
+  category =  "Verification",
+  csetags = 	 "mernst,djg,loncaric,spernste,ztatlock,emina,xi,mernst-Verification,plse",
+  summary =
+   "This paper proposes the use of interactive theorem proving, solver-aided
+    languages, and formally defined domain-specific languages for the
+    development of a safety-critical radiotherapy medical device.",
+}
+
+
 @InProceedings{VakilianPEJ2015,
   author = 	 "Vakilian, Mohsen and Phaosawasdi, Amarin and Ernst, Michael D. and Johnson, Ralph E.",
   title = 	 "Cascade: A universal programmer-assisted type qualifier inference tool",
@@ -8996,8 +9074,80 @@ endgame.",
 }
 
 
+@InProceedings{WilcoxWPTWEA2015,
+  author = 	 "James R. Wilcox and Doug Woos and Pavel Panchekha and Zachary Tatlock and Xi Wang and Michael D. Ernst and Tom Anderson",
+  title = 	 "Verdi:  A framework for formally verifying distributed system implementations",
+  booktitle = PLDI2015,
+  year = 	 2015,
+  NEEDpages = 	 "*",
+  month = 	 PLDI2015date,
+  address = 	 PLDI2015addr,
+  abstract =
+   "Implementing reliable distributed systems is challenging because
+    such systems must tolerate faults gracefully: machines may crash
+    and networks may reorder, drop, or duplicate packets.  Bugs in these
+    systems can lead to loss of critical data and unacceptable service
+    outages.
+    \par
+    We present Verdi, a framework for implementing and formally verifying
+    practical distributed systems in Coq.  Verdi formalizes various network
+    semantics with different kinds of faults, and allows developers
+    to choose the most appropriate fault model when verifying their
+    implementation.  Furthermore, Verdi eases the verification burden by
+    enabling developers to construct systems from modular components.
+    This separation of concerns eases reasoning because the developer
+    can verify their system in an idealized fault model, then transfer
+    the resulting correctness guarantees to a more realistic fault model
+    without any additional proof burden. To demonstrate Verdi's utility,
+    we present a series of case studies including a key-value store and
+    a primary-backup replication mechanism.",
+  basefilename = "verify-distsystem-pldi2015",
+  downloads = "https://github.com/uwplse/verdi Verdi implementation",
+  category =  "Verification",
+  csetags = 	 "jrw12,dwoos,pavpan,ztatlock,xi,mernst,tom,mernst-Verification,plse",
+  summary =
+   "This paper presents Verdi, a methodology and toolset for modularly
+    implementing and formally verifying practical distributed systems in
+    Coq.  Case studies include a key-value store and a primary-backup
+    replication mechanism.",
+}
 
 
+@InProceedings{ZhangE2015,
+  author = 	 "Sai Zhang and Michael D. Ernst",
+  title = 	 "Proactive detection of inadequate diagnostic messages for software configuration errors",
+  booktitle = ISSTA2015,
+  year = 	 2015,
+  NEEDpages = 	 "*",
+  month = 	 ISSTA2015date,
+  address = 	 ISSTA2015addr,
+  abstract =
+   "This paper presents ConfDiagDetector, a technique to detect inadequate
+    (i.e., missing or ambiguous) diagnostic messages for configuration errors
+    issued by a configurable software system.
+    \par
+    ConfDiagDetector injects configuration errors (i.e., misconfigurations) to
+    the software under test, monitors the software outcomes under the injected
+    misconfigurations, and uses natural language processing to analyze the
+    output diagnostic message caused by each misconfiguration. ConfDiagDetector
+    reports diagnostic messages that may be unhelpful in diagnosing a
+    configuration error.
+    \par
+    In an evaluation on 4 real-world, mature configurable systems,
+    ConfDiagDetector reported 43 distinct inadequate diagnostic messages. 30 of
+    the detected messages have been confirmed by their developers, and 12 more
+    have been identified as inadequate by users in a user study. On average,
+    ConfDiagDetector took 182 seconds to detect each inadequate diagnostic
+    message.",
+  basefilename = "inadequate-diagnostics-issta2015",
+  downloads = "http://config-errors.googlecode.com ConfDiagDetector implementation",
+  category =  "Software engineering",
+  csetags = "szhang,mernst,mernst-Software-engineering,plse",
+  summary =
+   "ConfDiagDetector detects inadequate diagnostic messages for configuration
+    errors.  ConfDiagDetector injects misconfigurations and uses natural
+    language processing to analyze the resulting diagnostic messages.",
+}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
