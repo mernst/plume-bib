@@ -6948,8 +6948,6 @@ endgame.",
 }
 
 
-
-
 @Article{BeschastnikhBEKA2011:OSR,
   author = 	 "Ivan Beschastnikh and Yuriy Brun and Michael D. Ernst and Arvind Krishnamurthy and Thomas E. Anderson",
   title = 	 "Mining temporal invariants from partially ordered logs",
@@ -9075,34 +9073,40 @@ endgame.",
 
 
 @InProceedings{WilcoxWPTWEA2015,
-  author = 	 "James R. Wilcox and Doug Woos and Pavel Panchekha and Zachary Tatlock and Xi Wang and Michael D. Ernst and Tom Anderson",
-  title = 	 "Verdi:  A framework for formally verifying distributed system implementations",
+  author = 	 "James R. Wilcox and Doug Woos and Pavel Panchekha and Zachary Tatlock and Xi Wang and Michael D. Ernst and Thomas Anderson",
+  title = 	 "Verdi:  A framework for implementing and formally verifying distributed system",
   booktitle = PLDI2015,
   year = 	 2015,
   NEEDpages = 	 "*",
   month = 	 PLDI2015date,
   address = 	 PLDI2015addr,
   abstract =
-   "Implementing reliable distributed systems is challenging because
-    such systems must tolerate faults gracefully: machines may crash
-    and networks may reorder, drop, or duplicate packets.  Bugs in these
-    systems can lead to loss of critical data and unacceptable service
-    outages.
+   "Distributed systems are difficult to implement correctly because they
+    must handle both concurrency and failures: machines may crash at
+    arbitrary points and networks may reorder, drop, or duplicate packets.
+    Further, their behavior is often too complex to permit exhaustive
+    testing.  Bugs in these systems have led to the loss of critical data and
+    unacceptable service outages.
     \par
     We present Verdi, a framework for implementing and formally verifying
-    practical distributed systems in Coq.  Verdi formalizes various network
-    semantics with different kinds of faults, and allows developers
-    to choose the most appropriate fault model when verifying their
-    implementation.  Furthermore, Verdi eases the verification burden by
-    enabling developers to construct systems from modular components.
-    This separation of concerns eases reasoning because the developer
-    can verify their system in an idealized fault model, then transfer
-    the resulting correctness guarantees to a more realistic fault model
-    without any additional proof burden. To demonstrate Verdi's utility,
-    we present a series of case studies including a key-value store and
-    a primary-backup replication mechanism.",
+    distributed systems in Coq.  Verdi formalizes various network semantics
+    with different faults, and the developer chooses the most
+    appropriate fault model when verifying their implementation. Furthermore,
+    Verdi eases the verification burden by enabling the developer to first verify
+    their system under an idealized fault model, then transfer the resulting
+    correctness guarantees to a more realistic fault model without any
+    additional proof burden.
+    \par
+    To demonstrate Verdi's utility, we present the first mechanically
+    checked proof of linearizability of the Raft state machine
+    replication algorithm, as well as verified implementations of a
+    primary-backup replication system and a key-value store. These
+    verified systems provide similar performance to unverified
+    equivalents.",
   basefilename = "verify-distsystem-pldi2015",
-  downloads = "https://github.com/uwplse/verdi Verdi implementation",
+  downloads =
+    "http://verdi.uwplse.org/ Verdi website;
+     https://github.com/uwplse/verdi Verdi implementation",
   category =  "Verification",
   csetags = 	 "jrw12,dwoos,pavpan,ztatlock,xi,mernst,tom,mernst-Verification,plse",
   summary =
