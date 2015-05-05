@@ -88,7 +88,7 @@ export BIBINPUTS ?= .:bib
 
 bib:
 ifdef PLUMEBIB
-	ln -s $PLUMEBIB bib
+	ln -s ${PLUMEBIB} bib
 else
 	git clone https://github.com/mernst/plume-bib.git bib
 endif
@@ -97,7 +97,7 @@ bib-update: bib
 # Even if this command fails, it does not terminate the make job.
 # However, to skip it, invoke make as:  make NOGIT=1 ...
 ifndef NOGIT
-	-(cd bib && git pull -u && make)
+	-(cd bib && git pull && make)
 endif
 
 
