@@ -1,7 +1,7 @@
 plume-bib:  collection of BibTeX bibliography files.
 
 To obtain the bibliographies, run
-  hg clone https://code.google.com/p/plume-bib/ bib
+  git clone https://github.com/mernst/plume-bib.git
 
 This is a set of BibTeX bibliographies.  You can re-use them rather than
 having to re-type or download.  Re-typing or downloading bibliography
@@ -31,9 +31,13 @@ Here are some other features:
    future.)
 
 You can obtain the bibliographies by running the command
-  hg clone https://code.google.com/p/plume-bib/ bib
+  git clone https://github.com/mernst/plume-bib.git
 but you don't need to -- see below for how to set your build system to
 automatically obtain and/or update a copy.
+
+You can also set the PLUMEBIB environment variable to the location of your
+clone (usually a directory named bib), so that you will have just one clone
+rather than one for each paper you write.
 
 
 USAGE
@@ -66,10 +70,10 @@ and dates.  Add the new abbreviations to bibstring-master.bib as necessary.
 For consistency, please start each new bibliography entry with "@" in the
 first column, and end the entry with "}" or ")" on its own line.
 
-If you make changes but you lack write access to the Mercurial repository
-at https://code.google.com/p/plume-bib/, then please email a patch (a diff
-file) with your changes to Michael Ernst <mernst@cs.washington.edu>.
-Thanks for your contributions!
+If you make changes but you lack write access to the Git repository at
+https://code.google.com/p/plume-bib/, then please submit a pull request, or
+email a patch (a diff file) with your changes to Michael Ernst
+<mernst@cs.washington.edu>.  Thanks for your contributions!
 
 
 SETUP -- if you use a Makefile to process your paper
@@ -83,38 +87,48 @@ make "bib" a dependency for the myfile.bbl target.
 export BIBINPUTS ?= .:bib
 
 bib:
-	hg clone https://code.google.com/p/plume-bib/ bib
+ifdef PLUMEBIB
+	ln -s $PLUMEBIB bib
+else
+	git clone https://github.com/mernst/plume-bib.git bib
+endif
 .PHONY: bib-update
 bib-update: bib
-# This command never fails, but to skip it, invoke make as:  make NOHG=1 ...
-ifndef NOHG
-	-(cd bib && hg pull -u && make)
+# Even if this command fails, it does not terminate the make job.
+# However, to skip it, invoke make as:  make NOGIT=1 ...
+ifndef NOGIT
+	-(cd bib && git pull -u && make)
 endif
 
 
 SETUP -- non-Makefile version
 -----
 
-Obtain the bibliographies by running the command
+If you have previously cloned plume-bib and set the PLUMEBIB environment variable, there is nothing to do.  Otherwise, run this command:
 
-  hg clone https://code.google.com/p/plume-bib/ bib
+  cd; git clone https://code.google.com/p/plume-bib/ bib
 
-Then, add the "bib" directory to your BIBINPUTS environment variable.
+Then, set the PLUMEBIB environment variable to $HOME/bib and
+add the "bib" directory to your BIBINPUTS environment variable.
   bash syntax:
-    export BIBINPUTS=.:PATHTOPLUMEBIB:..:
+    export PLUMEBIB=$HOME/bib
+    export BIBINPUTS=.:${PLUMEBIB}:..:
   csh syntax:
-    setenv BIBINPUTS .:PATHTOPLUMEBIB:..:
+    setenv PLUMEBIB $HOME/bib
+    setenv BIBINPUTS .:${PLUMEBIB}:..:
 
 
 SETUP -- miscellaneous details
 -----
 
-For the bibfind command, see http://code.google.com/p/uwisdom/wiki/README .
-It uses the "bibroot" file in the plume-bib directory.
+For the bibfind command, see
+https://github.com/mernst/uwisdom/blob/wiki/README.md .
+The bibfind command uses the "bibroot" file in the plume-bib directory.
 
 If you wish to have only a single copy of the bibliographies on your
-computer, you can clone the repository just once and make a symbolic link
-to any directories where you are writing a paper.
+computer, you can clone the repository just once and set the PLUMEBIB
+environment variable.  Then your Makefile will create (or you can make by
+hand) a symbolic link from any directories where you are writing a paper.
 
 Note for miktex users:
 The bibtex that is supplied with miktex (the popular Windows implementation)
@@ -171,5 +185,5 @@ command-line option to BibTeX; for example:
 Whereas plume-bib is written using the @string approach, it would be
 possible to adapt it to accommodate the crossref approach, while retaining
 the other benefits of plume-bib.  One advantage of the @string approach is
-that it is less error-prone:  authors commonly forget to use
+that it is less error-prone:  people commonly forget to use
 "-min-crossrefs=9999" when running BibTeX.
