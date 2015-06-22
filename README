@@ -114,7 +114,7 @@ SETUP -- non-Makefile version
 If you have previously cloned plume-bib and set the PLUMEBIB environment
 variable, there is nothing to do.  Otherwise, run this command:
 
-    cd; git clone https://github.com/mernst/plume-bib.git
+    cd; git clone https://github.com/mernst/plume-bib.git bib
 
 Then, set the PLUMEBIB environment variable to $HOME/bib and
 add the "bib" directory to your BIBINPUTS environment variable.
@@ -205,3 +205,9 @@ possible to adapt it to accommodate the crossref approach, while retaining
 the other benefits of plume-bib.  One advantage of the @string approach is
 that it is less error-prone:  people commonly forget to use
 "-min-crossrefs=9999" when running BibTeX.
+
+
+LICENSE
+-------
+
+Uses the Creative Commons Attribution ("CC-BY") license.  See file LICENSE.
