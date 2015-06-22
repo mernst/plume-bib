@@ -114,7 +114,7 @@ SETUP -- non-Makefile version
 If you have previously cloned plume-bib and set the PLUMEBIB environment
 variable, there is nothing to do.  Otherwise, run this command:
 
-    cd; git clone https://code.google.com/p/plume-bib/ bib
+    cd; git clone https://github.com/mernst/plume-bib.git
 
 Then, set the PLUMEBIB environment variable to $HOME/bib and
 add the "bib" directory to your BIBINPUTS environment variable.
