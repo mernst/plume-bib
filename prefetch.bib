@@ -61,7 +61,7 @@
 )
 
 @inproceedings(chen-baer-asplos,
-	title = "Reducing memory latency via non-blocking and prefetching 
+	title = "Reducing memory latency via non-blocking and prefetching
 	caches",
 	author = "Tien-Fu Chen and Jean-Loup Baer",
 	booktitle = "Fifth " # asplos,
@@ -91,7 +91,7 @@
 	annote = {Also available as U. Washington CS TR 91-03-07.
 	\bn This article explores the LA-PC and RPT \cite{chen-baer-asplos}
 	technique in more detail.  They give good comparisons of hardware
-	and software techniques.  They have hardware keyed to PC address 
+	and software techniques.  They have hardware keyed to PC address
 	which detects zero-stride and irregular stride accesses, using
 	a standard branch prediction technique, and
 	only prefetches constant stride.  They uses {\em pixie} on MIPS
@@ -107,7 +107,7 @@
 	year = 1992, month = oct,
 	pages = "62--73",
 	annote = {\bn This paper presents a strong compiler prefetch
-	scheme (MIPS with a mixed suite of apps).  Prefetch instructions 
+	scheme (MIPS with a mixed suite of apps).  Prefetch instructions
 	are issued after performing locality analysis and peeling and
 	splitting loops.  They show selective prefetch is better than
 	indiscriminate, and that their scheme is robust in the face of
@@ -123,7 +123,7 @@
 	year = 1990, month = jun,
 	pages = "160--169",
 	annote = {\bn Good simulation methodology, compared simple
-	fetching against some simple hardware prefetching techniques, and 
+	fetching against some simple hardware prefetching techniques, and
 	concluded that it wasn't worthwhile to work hard on prefetching
 	(gain of about 2--5\%).  Investigated cycle-time penalties for
 	larger cache blocks, which quickly yields small optimal blocks.
@@ -137,7 +137,7 @@
 	year = 1991, month = may,
 	pages = "43--53",
 	annote = {\bn {\tt FETCH} instructions are used via fetch queues to
-	a fetch unit that loads a 
+	a fetch unit that loads a
 	fully-associative {\em fetchbuffer}, and a {\em prewriteback}
 	technique is discussed to avoid replacement writeback stalls.
 	Data is either in the cache or the fetchbuffer, not both.  There
@@ -153,15 +153,15 @@
 	booktitle = "The 18th " # isca,
 	year = 1991, month = may,
 	pages = "54--63",
-	annote = {\bn Using Perfect Club (e.g. vectorized numeric) benchmarks, 
-	the paper shows how two simple prefetching schemes can outperform 
-	a non-prefetching cache when dealing with long stride vector 
-	accesses and multiprocessor block invalidations in vector caches. 
+	annote = {\bn Using Perfect Club (e.g. vectorized numeric) benchmarks,
+	the paper shows how two simple prefetching schemes can outperform
+	a non-prefetching cache when dealing with long stride vector
+	accesses and multiprocessor block invalidations in vector caches.
 	Simulation was with the authors' `cheap' simulator, with Alliant
 	FX/8 traces.  Stride distance is assumed available to the cache.
-	{\em Sequential prefetch} only prefetches scalar and short stride 
-	vectors, and works well.  {\em Stride-prefetch} prefetches with the 
-	stride for long stride vectors, and is better.  The paper discusses 
+	{\em Sequential prefetch} only prefetches scalar and short stride
+	vectors, and works well.  {\em Stride-prefetch} prefetches with the
+	stride for long stride vectors, and is better.  The paper discusses
 	both miss ratio and completion time. \en}
 )
 
@@ -171,9 +171,9 @@
 	booktitle = sc # " '90",
 	year = 1990, month = nov,
 	pages = "564--572",
-	annote = {\bn This paper describes PFC-Sim and RiCEPS in detail.  
+	annote = {\bn This paper describes PFC-Sim and RiCEPS in detail.
 	Cache performance is examined (size, associativity).  Simple
-	line-size (overall sucessful) and next-block prefetching (generally 
+	line-size (overall sucessful) and next-block prefetching (generally
 	a big win and little overhead) are assessed.  Hardware
 	prefetching ``very effective'' for column-eriented programs;
 	looks to software for improvements. \en}
@@ -192,7 +192,7 @@
 	is done by prefetching the next iteration of the loop, including
 	indices for sparse matrices.  Simulation gave results on how far
 	ahead the value was returned.  The paper assesses address generation
-	overhead for prefetch, and looks to multiple 
+	overhead for prefetch, and looks to multiple
 	issue, register allocation, and compiler technology to reduce it.
 	Best avg. overhead is estimated at 12\%, which is suggested to
 	cover 20+ cycle latencies.  \en}
@@ -224,8 +224,8 @@
 	annote = {\bn This article is an overview of four techniques: hardware
 	coherency, relaxed memory consistency, software prefetching, and
 	multiple contexts.  They modelled a prefetch buffer and introduced
-	read and read-exclusive prefetching commands manually, getting 
-	generally good results, though less so where prefetch overhead was 
+	read and read-exclusive prefetching commands manually, getting
+	generally good results, though less so where prefetch overhead was
 	high.  They found prefetching did not work well with multiple
 	contexts, since if one technique would suffice, you still get two
 	overheads, and since context switching may invalidate prefetched
@@ -250,7 +250,7 @@
 @inproceedings(chen-pm,
 	title = "Data access microarchitectures for superscalar processors
 	with compiler-assisted data prefetching",
-	author = "William Y. Chen and Scott A. Mahlke and Pohua P. Chang 
+	author = "William Y. Chen and Scott A. Mahlke and Pohua P. Chang
 	and Hwu, Wen-mei W.",
 	booktitle = "The 24th " # ism,
 	year = 1991, month = nov,
@@ -265,9 +265,9 @@
 )
 
 @inproceedings(gornish-ics,
-	title = "Compiler-directed data prefetching in multiprocessors 
+	title = "Compiler-directed data prefetching in multiprocessors
 	with memory hierarchies",
-	author = "Edward H. Gornish and Elana D. Granston and 
+	author = "Edward H. Gornish and Elana D. Granston and
 	Alexander V. Veidenbaum",
 	booktitle = ics,
 	year = 1990, month = jun,
@@ -279,8 +279,8 @@
 	then examine them inside out to unfreeze and prefetch where
 	possible, using vector prefetching where possible.  They
 	consider both a memory-reference overlap and no-overlap model,
-	using a wide variety of sample codes in the static analyes (LINPACK, 
-	EISPACK, REALSET).  For real simulation they used a pipelined system 
+	using a wide variety of sample codes in the static analyes (LINPACK,
+	EISPACK, REALSET).  For real simulation they used a pipelined system
 	with memory across a switch from the processors.  They show a
 	7\% improvement with overlapped fetches, and a further 2\%--61\%
 	with prefetching. They suggest better results if they had
@@ -293,7 +293,7 @@
 	school = "University of Illinois at Urbana-Champaign",
 	year = 1989, month = dec,
 	note = {Also available as Illinois CSRD-949.},
-	annote = {Also available as Illinois CSRD-949. 
+	annote = {Also available as Illinois CSRD-949.
 	\bn This is an expanded version of \cite{gornish-ics}.
 	No simulation results are given; for their overlapped model
 	they predict speedups of 1.94 to 2.74 \en}
@@ -322,7 +322,7 @@
 	year = 1987, month = aug,
 	pages = "28--31",
 	note = {Also as Illinois CSRD TR 639, January 1987.},
-	annote = {Also as Illinois CSRD TR 639, January 1987. 
+	annote = {Also as Illinois CSRD TR 639, January 1987.
 	\bn This paper compares data prefetching with caches.  Prefetching
 	is done with branch guessing (50\% either way) and data reference
 	prefetching with data forwarding. It doesn't work too well with
@@ -340,8 +340,8 @@
 	school = "University of Illinois at Urbana-Champaign",
 	year = 1987, month = may,
 	note = {Also available as Illinois CSRD 670.},
-	annote = {Also available as Illinois CSRD 670.  
-	\bn This work is basically the same as what is in 
+	annote = {Also available as Illinois CSRD 670.
+	\bn This work is basically the same as what is in
 	\cite{lee-yew-isca,lee-yew-icpp}.  \en}
 )
 
@@ -357,14 +357,14 @@
 	then turns to {\em working set prefetching}, where the compiler
 	determines working sets and then whole sets are prefetching
 	when the program goes through phase transitions.
-	Multiprocessors are considered, where sets are tagged and broadcast 
+	Multiprocessors are considered, where sets are tagged and broadcast
 	on request to reduce likely bandwidth required.  He also
 	suggests a sequence number so that data-flow style cache
 	updating of working sets can be done.  No numbers are presented.  \en}
 )
 
 @inproceedings(jouppi-isca,
-	title = "Improving direct-mapped cache performance by the addition of 
+	title = "Improving direct-mapped cache performance by the addition of
 	a small fully-associative cache and prefetch buffers",
 	author = "Norman P. Jouppi",
 	booktitle = "The 17th " # ISCA,
@@ -419,7 +419,7 @@
 	pages = "696--697",
 	annote = {\bn Sets forth the next-block hardware prefetch strategy,
 	and claims 32-128 byte lines are good and allow for caches of
-	1/2 to 1/4 capacity to maintain the same hit ratio via prefetching. 
+	1/2 to 1/4 capacity to maintain the same hit ratio via prefetching.
 	\en}
 )
 
@@ -448,7 +448,7 @@
 	pages = "81--87",
 	annote = {\bn Kroft documents how to build a cache which can have
 	multiple outstanding requests (up to some hardware limit, which
-	he suggests should be 4).  Miss information/status holding registers 
+	he suggests should be 4).  Miss information/status holding registers
 	(MSHRs) are the key resources. \en}
 )
 
@@ -466,7 +466,7 @@
 	Each variable is associated with a `reference window' which is
 	used to determine what should be kept in cache (when controlled
 	in software) or what the hit rate will be (for hardware
-	control).  They consider program restructuring \`a la 
+	control).  They consider program restructuring \`a la
 	\cite{abu-sufah-79}, plus loop blocking. \en}
 )
 
@@ -492,7 +492,7 @@
 	year = 1985, month = jun,
 	pages = "64--73",
 	annote = {\bn This article only touches on prefetching, where it
-	looks at the simple $i+1$ prefetch model.  He finds prefetching 
+	looks at the simple $i+1$ prefetch model.  He finds prefetching
 	is increasingly useful with increasing cache size, prefetching
 	always cuts the ifetch miss ratio, and cuts the data miss ratioo
 	for data caches of 8K or more.  He notes icache traffic goes up
@@ -549,7 +549,7 @@
 )
 
 @article(driscoll-ibm,
-	title = "Cache miss directory---a means of prefetching cache `missed' 
+	title = "Cache miss directory---a means of prefetching cache `missed'
 	lines",
 	author = "G. C. Driscoll and J. J. Losq and T. R. Puzak and G. S. Rao
 	and H. E. Sachar and R. D. Villani",
@@ -571,7 +571,7 @@
 	volume = 22, number = 12,
 	year = 1980, month = may,
 	pages = "5539",
-	annote = {\bn The BHT is suggested as a way to prefetch instruction 
+	annote = {\bn The BHT is suggested as a way to prefetch instruction
 	lines. \en}
 )
 
@@ -587,7 +587,7 @@
 	states, and do a shortest-path search, then allow tags on your
 	instructions for fetch-bypass-cache and fetch-evict-line-NN
 	when the data is not already in cache.  They give the compiler
-	performance as $\Theta(k^{-1}mn)$, and tiny examples of improved 
+	performance as $\Theta(k^{-1}mn)$, and tiny examples of improved
 	run-time performance, but no real results yet. More work
 	coming. \en}
 )
@@ -615,7 +615,7 @@
 	school = "MIT",
 	year = 1992, month = may,
 	annote = {\bn This thesis is the extended version of
-	\cite{selvidge-isca}; it provides implementation specifics and more 
+	\cite{selvidge-isca}; it provides implementation specifics and more
 	detailed results. \en}
 )
 
@@ -663,13 +663,13 @@
 	title = "Alpha Architecture Technical Summary",
 	author = "Dick Sites and Rich Witek",
 	year = 1992,
-	note = "Available for anonymous FTP from 
+	note = "Available for anonymous FTP from
 	{\tt gatekeeper.dec.com} as {\tt pub/DEC/Alpha/technical-summary.txt}",
 	annote = {\bn Not read. \en}
 )
 
 @book(rs6000,
-	title = "IBM Journal of Research and Development, Special 
+	title = "IBM Journal of Research and Development, Special
 	Issue on RISC System/6000",
 	author = "IBM",
 	publisher = "IBM",
@@ -729,9 +729,10 @@
 	editor = "E. Gelenbe and R. Mahl",
 	pages = "515--527",
 	publisher = "North-Holland",
- 	annote = {\bn Not too directly relevant to prefetching, but 
+ 	annote = {\bn Not too directly relevant to prefetching, but
 	interesting. \en}
 )
+
 @article(sklenar-can,
 	title = "Prefetch unit for vector operations on scalar computers",
 	author = "Ivan Sklen\'a\v{r}",
@@ -760,7 +761,7 @@
 	author = "Anant Agarwal",
 	school = "Stanford University",
 	year = 1987, month = may,
-	annote = {\bn Available as Technical Report CSL-TR-87-332.  
+	annote = {\bn Available as Technical Report CSL-TR-87-332.
 	Didn't read. \en}
 )
 
@@ -788,7 +789,7 @@
 	title = "Data prefetching strategies for vector cache memories",
 	author = "John W. C. Fu and Janak H. Patel",
 	booktitle = "5th " # ipps,
-	year = 1991, month = may, 
+	year = 1991, month = may,
 	pages = "555--560",
 	annote = {\bn See \cite{fu-patel-isca} for all details; this paper
 	has identical content. \en}

@@ -147,7 +147,7 @@ The bibtex that is supplied with miktex (the popular Windows implementation)
 does not support the BIBINPUTS variable. You need to modify the miktex
 configuration.  In file `...\miktex\config\miktex.ini`, edit this entry:
 
-    Input Dirs=searchpath 
+    Input Dirs=searchpath
     (search path for BibTeX input files -- both databases and style files).
 
 

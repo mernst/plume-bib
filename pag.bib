@@ -11,6 +11,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% 1995
 %%%0
+
 @Article{McCartneyGS1995,
   author = 	 "T. Paul McCartney and Kenneth J. Goldman and David E. Saff",
   title = 	 "EUPHORIA: End-user construction of direct manipulation
@@ -39,9 +40,9 @@
     widgets with alternative representations.",
   category = "Software engineering",
   summary =
-   "EUPHORIA allows end-users to construct GUIs for distributed applications 
-    using only a graphics editor, with no programming.  Visual elements are 
-    related to each other and the application state by constraints which can 
+   "EUPHORIA allows end-users to construct GUIs for distributed applications
+    using only a graphics editor, with no programming.  Visual elements are
+    related to each other and the application state by constraints which can
     be visualized and directly edited.",
   nonPAG = 1,
 }
@@ -120,7 +121,7 @@
     improving fault detection, the technique generates a specification
     close to the oracle, which has many benefits in itself.",
   category = "Testing",
-  summary = 
+  summary =
    "This thesis proposes a technique for selecting test cases that is
     similar to structural code coverage techniques, but operates in the
     semantic domain of program behavior rather than in the lexical domain
@@ -171,7 +172,7 @@
     improving fault detection, the technique generates a specification
     close to the oracle, which has many benefits in itself.",
   category = "Testing",
-  summary = 
+  summary =
    "This thesis proposes a technique for selecting test cases that is
     similar to structural code coverage techniques, but operates in the
     semantic domain of program behavior rather than in the lexical domain
@@ -191,6 +192,7 @@
   supersededby = "Nimmer02:TR852 A revised version",
   usesDaikon =   1,
 }
+
 @TechReport{Nimmer02:TR852,
   author = 	 "Jeremy W. Nimmer",
   title = 	 "Automatic Generation and Checking of Program Specifications",
@@ -240,7 +242,7 @@
   address =	 MITaddr,
   month =	 May,
   basefilename = "workflow-rolfe-mengthesis",
-  abstract =	 
+  abstract =	
    "Workflow systems implement process definitions in laboratory, office, and
     industrial settings. In many cases, the process definition is implicit in
     the ad-hoc software written for a particular task. In other cases, a
@@ -422,7 +424,7 @@
     In addition to the ability to specify and enforce this basic
     constraint, ConstJava includes several other features, such as mutable
     fields, immutable classes, templates, and the const\_cast operator,
-    that make ConstJava a more useful language.  
+    that make ConstJava a more useful language.
     \par
     The thesis evaluates the utility of ConstJava via experiments involving
     writing ConstJava code and converting Java code to ConstJava code.  The
@@ -463,7 +465,7 @@
     In addition to the ability to specify and enforce this basic
     constraint, ConstJava includes several other features, such as mutable
     fields, immutable classes, templates, and the const\_cast operator,
-    that make ConstJava a more useful language.  
+    that make ConstJava a more useful language.
     \par
     The thesis evaluates the utility of ConstJava via experiments involving
     writing ConstJava code and converting Java code to ConstJava code.  The
@@ -641,7 +643,7 @@
     prevent regression errors from persisting uncaught for long periods of
     time.  The longer that regression errors are allowed to
     linger during development, the more time is wasted debugging and
-    fixing them once they are discovered.  
+    fixing them once they are discovered.
     \par
     By monitoring and measuring software projects, we estimate that the
     {\em wasted time}, consisting of this preventable extra fixing cost
@@ -1143,7 +1145,7 @@
   downloadsnonlocal =
     "http://pag.csail.mit.edu/pubs/guo-mixedlevel-mengthesis.pdf PDF",
   category =  "Dynamic analysis",
-  summary = 	 
+  summary = 	
    "This thesis introduces a mixed-level approach and toolkit for constructing
     dynamic analyses that combines the benefits of source-level and binary-level
     approaches.  It also presents two dynamic analysis tools --- for value
@@ -1224,7 +1226,7 @@
   downloadsnonlocal =
     "http://pag.csail.mit.edu/pubs/tschantz-refimmut-mengthesis.pdf PDF",
   category = "Programming language design",
-  summary = 	 
+  summary = 	
    "Javari extends Java 5 to express reference immutability constraints.  The
     type guarantees are deep (transitive) but users can exclude parts of
     the state.  The thesis includes type rules and  a type inference algorithm.",
@@ -1268,7 +1270,7 @@
     "http://pag.csail.mit.edu/pubs/tschantz-refimmut-tr059.pdf PDF",
   supersededby = "TschantzE2005 An extended version",
   category = "Programming language design",
-  summary = 	 
+  summary = 	
    "Javari extends Java 5 to express reference immutability constraints.  The
     type guarantees are deep (transitive) but users can exclude parts of
     the state.  The thesis includes type rules and  a type inference algorithm.",
@@ -1313,7 +1315,7 @@
   downloadsnonlocal =
     "http://pag.csail.mit.edu/pubs/xiao-invdetopt-mengthesis.pdf PDF",
   category =  "Invariant detection",
-  summary = 	 
+  summary = 	
    "As an optimization, the Daikon invariant detector suppresses (does not
     instantiate or check) potential invariants that are implied by
     instantiated/checked ones.  This thesis investigates optimizations to
@@ -1376,7 +1378,7 @@
   downloadsnonlocal =
     "http://pag.csail.mit.edu/pubs/predict-faults-icse2007.pdf PDF",
   category =  "Mining software repositories",
-  summary = 	 
+  summary = 	
    "Faults often co-occur, so when one is fixed, another one may be lurking
    nearby.  Using this intuition, this paper aims to identify a small
    number of files that contain most of the faults in a program.",
@@ -1534,7 +1536,7 @@
   number =	 2,
   pages =	 "181--196",
   month = 	 mar # "/" # apr,
-  abstract = 
+  abstract =
    "This paper introduces a new technique for predicting latent software bugs, called change classification. Change classification uses a machine learning classifier to determine whether a new software change is more similar to prior buggy changes or clean changes. In this manner, change classification predicts the existence of bugs in software changes. The classifier is trained using features (in the machine learning sense) extracted from the revision history of a software project stored in its software configuration management repository. The trained classifier can classify changes as buggy or clean, with a 78 percent accuracy and a 60 percent buggy change recall on average. Change classification has several desirable qualities: 1) The prediction granularity is small (a change to a single file), 2) predictions do not require semantic information about the source code, 3) the technique works for a broad array of project types and programming languages, and 4) predictions can be made immediately upon the completion of a change. Contributions of this paper include a description of the change classification approach, techniques for extracting features from the source code and change histories, a characterization of the performance of change classification across 12 open source projects, and an evaluation of the predictive power of different groups of features.",
   basefilename = "kim-tse-2008",
   category =  "Mining software repositories",
@@ -1559,13 +1561,13 @@
     mutation errors (incorrect side effects) or verifies their absence.
     While case studies have demonstrated the practicality and value of
     Javari, a barrier to usability remains in the development process.
-    A Javari program will not typecheck unless all the references 
+    A Javari program will not typecheck unless all the references
     in the APIs of libraries it uses are annotated with Javari
     type qualifiers.  Manually converting existing Java libraries to
-    Javari is both tedious and error-prone; the development process 
+    Javari is both tedious and error-prone; the development process
     requires an automated solution.
     \par
-    This thesis presents an algorithm for statically inferring reference 
+    This thesis presents an algorithm for statically inferring reference
     immutability in Javari.  The
     flow-insensitive and context-sensitive algorithm is sound and produces a set
     of qualifiers that typecheck in Javari.  The algorithm is
@@ -1573,13 +1575,13 @@
     possible; adding any additional \texttt{readonly} qualifiers
     will cause the program to not typecheck.
     A tool, Javarifier, implements this algorithm in order to
-    infer the Javari type qualifiers over a set of class files.  
-    Javarifier can also insert these qualifiers into the 
+    infer the Javari type qualifiers over a set of class files.
+    Javarifier can also insert these qualifiers into the
     corresponding source code, if the source code is available.
     \par
-    Javarifier automatically converts Java libraries to Javari.  Additionally, 
-    Javarifier eases the task of converting legacy programs to Javari by 
-    inferring the mutability of every reference in a program.  
+    Javarifier automatically converts Java libraries to Javari.  Additionally,
+    Javarifier eases the task of converting legacy programs to Javari by
+    inferring the mutability of every reference in a program.
     In case studies, Javarifier correctly inferred mutability over Java programs
     of up to 110 KLOC.",
   supersededby = "QuinonezTE2008 An extended version",
@@ -1635,7 +1637,7 @@
   month = ISSTA2008date,
   year = {2008},
   pages = "87--96",
-  abstract =  
+  abstract =
    "We present a case study in which a team of test engineers at Microsoft
     applied a feedback-directed random testing tool to a critical component of
     the .NET architecture. Due to its complexity and high reliability
@@ -1711,7 +1713,7 @@
    discussion.",
   basefilename = "infoflow-mccamant-phdthesis",
   downloads = "http://people.csail.mit.edu/smcc/projects/secret-flow/flowcheck.html Flowcheck implementation",
-  downloadsnonlocal =   
+  downloadsnonlocal =
    "http://pag.csail.mit.edu/pubs/infoflow-mccamant-phdthesis.pdf PDF;
     http://pag.csail.mit.edu/pubs/infoflow-mccamant-phdthesis.ps PostScript",
   category = "Security",
