@@ -8638,11 +8638,11 @@ endgame.",
     methods fail silently, and format methods are often executed infrequently.
     \par
     This paper presents the Format String Checker that is based on the format
-    string type system presented in [WeitzKSE2014]. The Format String Checker
+    string type system presented in [WeitzKSE2014].  The Format String Checker
     guarantees that calls to Java's Formatter API will not throw exceptions.
     \par
     We evaluate the Format String Checker on 6 large and well-maintained
-    open-source projects.  Format string bugs are common in practice (we found
+    open-source projects. Format string bugs are common in practice (we found
     104 bugs), and the annotation burden on the user of our type system is low
     (on average, for every bug found, only 1.0 annotations need to be written).",
   basefilename = "format-string-issta2014demo",
@@ -8654,8 +8654,6 @@ endgame.",
     errors in usage of format strings.  The Format String Checker is easy to
     use and effective.",
 }
-
-
 
 
 @InProceedings{JustEF2014,
@@ -8985,14 +8983,13 @@ endgame.",
   month = 	 SIGCSE2015date,
   address = 	 SIGCSE2015addr,
   abstract =
-   "This paper reports on our experience teaching introductory programming
-    by means of real-world data analysis. We have found that students can
-    be motivated to learn programming and computer science concepts in
-    order to analyze DNA, predict the outcome of elections, detect
-    fraudulent data, suggest friends in a social network, determine the
-    authorship of documents, and more. The approach is more than just a
-    collection of ``nifty assignments''; rather, it affects the choice of
-    topics and pedagogy.
+   "This paper reports on our experience teaching introductory programming by
+    means of real-world data analysis. We have found that students can be
+    motivated to learn programming and computer science concepts in order to
+    analyze DNA, predict the outcome of elections, detect fraudulent data,
+    suggest friends in a social network, determine the authorship of documents,
+    and more.  The approach is more than just a collection of ``nifty
+    assignments''; rather, it affects the choice of topics and pedagogy.
     \par
     This paper describes how our approach has been used at four diverse
     colleges and universities to teach CS majors and non-majors alike. It
@@ -9129,22 +9126,23 @@ endgame.",
   month = 	 ISSTA2015date,
   address = 	 ISSTA2015addr,
   abstract =
-   "This paper presents ConfDiagDetector, a technique to detect inadequate
-    (i.e., missing or ambiguous) diagnostic messages for configuration errors
-    issued by a configurable software system.
+   "This paper presents a technique to detect inadequate (i.e., missing or
+    ambiguous) diagnostic messages for configuration errors issued by a
+    configurable software system.
     \par
-    ConfDiagDetector injects configuration errors (i.e., misconfigurations) to
-    the software under test, monitors the software outcomes under the injected
-    misconfigurations, and uses natural language processing to analyze the
-    output diagnostic message caused by each misconfiguration. ConfDiagDetector
-    reports diagnostic messages that may be unhelpful in diagnosing a
-    configuration error.
+    The technique injects configuration errors into the software under test,
+    monitors the software outcomes under the injected configuration errors, and
+    uses natural language processing to analyze the output diagnostic message
+    caused by each configuration error. The technique reports diagnostic
+    messages that may be unhelpful in diagnosing a configuration error.
     \par
-    In an evaluation on 4 real-world, mature configurable systems,
-    ConfDiagDetector reported 43 distinct inadequate diagnostic messages. 30 of
-    the detected messages have been confirmed by their developers, and 12 more
-    have been identified as inadequate by users in a user study. On average,
-    ConfDiagDetector took 182 seconds to detect each inadequate diagnostic
+    We implemented the technique for Java in a tool, ConfDiagDetector. In an
+    evaluation on 4 real-world, mature configurable systems, ConfDiagDetector
+    reported 43 distinct inadequate diagnostic messages (25 missing and 18
+    ambiguous). 30 of the detected messages have been confirmed by their
+    developers, and 12 more have been identified as inadequate by users in a
+    user study. On average, ConfDiagDetector required 5 minutes of programmer
+    time and 3 minutes of compute time to detect each inadequate diagnostic
     message.",
   basefilename = "inadequate-diagnostics-issta2015",
   downloads = "http://config-errors.googlecode.com ConfDiagDetector implementation",
@@ -9154,6 +9152,42 @@ endgame.",
    "ConfDiagDetector detects inadequate diagnostic messages for configuration
     errors.  ConfDiagDetector injects misconfigurations and uses natural
     language processing to analyze the resulting diagnostic messages.",
+}
+
+
+@InProceedings{BurgKE2015,
+  author = 	 "Brian Burg and Andrew Ko and Michael D. Ernst",
+  title = 	 "Explaining Visual Changes in Web Interfaces",
+  booktitle = UIST2015,
+  year = 	 2015,
+  NEEDpages = 	 "*",
+  month = 	 UIST2015date,
+  address = 	 UIST2015addr,
+  abstract =
+   "Web developers often want to repurpose interactive behaviors from
+    third-party web pages, but struggle to locate the specific source code that
+    implements the behavior. This task is challenging because developers must
+    find and connect all of the non-local interactions between event-based
+    JavaScript code, declarative CSS styles, and web page content that combine
+    to express the behavior.
+    \par
+    The Scry tool embodies a new approach to locating the code that implements
+    interactive behaviors.  A developer selects a page element; whenever the
+    element changes, Scry captures the rendering engine's inputs (DOM, CSS) and
+    outputs (screenshot) for the element. For any two captured element states,
+    Scry can compute how the states differ and which lines of JavaScript code
+    were responsible. Using Scry, a developer can locate an interactive
+    behavior's implementation by picking two output states; Scry indicates the
+    JavaScript code directly responsible for their differences.",
+  basefilename = "dom-tracing-uist2015",
+  downloads =
+   "https://github.com/burg/timelapse/ Timelapse implementation",
+  category =  "Software engineering",
+  csetags = "burg,ajko,mernst,mernst-Software-engineering,plse",
+  summary =
+   "The Scry tool enables a developer to navigate forward and backward in a web
+    page's execution.  When the developer selects a web page element, Scry shows
+    how the browser state differed and what JavaScript code is responsible.",
 }
 
 
