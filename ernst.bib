@@ -5737,7 +5737,7 @@ endgame.",
     permanently, in an effort to give programmers the best of all worlds.",
   basefilename = "staticdynamic-scam2009",
   downloads =
-   "http://code.google.com/p/ductilej/ implementation",
+   "https://github.com/mernst/ductilej implementation",
   downloadsnonlocal =
    "http://homes.cs.washington.edu/~mernst/pubs/staticdynamic-scam2009-slides.pdf Slides (PDF);
     http://homes.cs.washington.edu/~mernst/pubs/staticdynamic-scam2009-slides.pptx Slides (Powerpoint)",
@@ -5960,7 +5960,7 @@ endgame.",
   basefilename = "staticdynamic-tap2010",
   downloads =
    "http://malaga2010.lcc.uma.es/tv/tools5.html Video;
-    http://code.google.com/p/ductilej/ implementation",
+    https://github.com/mernst/ductilej implementation",
   downloadsnonlocal =
    "http://homes.cs.washington.edu/~mernst/pubs/staticdynamic-tap2010.pdf extended abstract (PDF);
     http://homes.cs.washington.edu/~mernst/pubs/staticdynamic-tap2010-slides.pdf Slides (PDF);
@@ -6419,7 +6419,7 @@ endgame.",
     during prototyping and during the evolution of existing code.",
   basefilename = "ductile-icse2011",
   downloads =
-    "http://code.google.com/p/ductilej/ DuctileJ implementation",
+    "https://github.com/mernst/ductilej DuctileJ implementation",
   category =  "Programming language design",
   csetags = "mernst,mernst-Programming-language-design,plse",
   summary =
@@ -6645,7 +6645,7 @@ endgame.",
   supersededby = "BrunHEN2013",
   basefilename = "vc-conflicts-fse2011",
   downloads =
-    "http://code.google.com/p/crystalvc/ Crystal implementation;
+    "https://github.com/brunyuriy/crystalvc Crystal implementation;
      http://people.cs.umass.edu/~brun/video/Brun11esecfse/ video of talk;
      http://homes.cs.washington.edu/~mernst/pubs/vc-conflicts-fse2011-tooldemo.pdf tool demo paper (PDF)",
   category =  "Speculative analysis",
@@ -7464,7 +7464,7 @@ endgame.",
     faster when using Quick Fix Scout than Quick Fix, although the sample size
     was not large enough to show statistical significance.",
   basefilename = "quick-fix-scout-oopsla2012",
-  downloads = "https://quick-fix-scout.googlecode.com/ implementation",
+  downloads = "https://github.com/brunyuriy/quick-fix-scout implementation",
   category =  "Speculative analysis",
   csetags = "kivanc,brun,notkin,mernst,mernst-Software-engineering,plse,plse-speculation",
   summary =
@@ -7993,7 +7993,7 @@ endgame.",
     systematic bug reporting and debugging practices.",
   basefilename = "record-replay-uist2013",
   downloads =
-   "https://github.com/burg/timelapse/ Timelapse implementation",
+   "https://github.com/burg/replay-staging/ Timelapse implementation",
   category =  "Software engineering",
   csetags = "burg,rjacob,ajko,mernst,mernst-Software-engineering,plse",
   summary =
@@ -8032,7 +8032,7 @@ endgame.",
   downloads =
    "http://homes.cs.washington.edu/~mernst/pubs/vc-conflicts-fse2011-slides.pdf ESEC/FSE 2011 slides (PDF);
     http://homes.cs.washington.edu/~mernst/pubs/vc-conflicts-fse2011-tooldemo.pdf tool demo paper (PDF);
-    http://code.google.com/p/crystalvc/ Crystal implementation",
+    https://github.com/brunyuriy/crystalvc Crystal implementation",
   category =  "Speculative analysis",
   csetags = "brun,mernst,notkin,mernst-Software-engineering,plse",
   summary =
@@ -9122,7 +9122,7 @@ endgame.",
   title = 	 "Proactive detection of inadequate diagnostic messages for software configuration errors",
   booktitle = ISSTA2015,
   year = 	 2015,
-  NEEDpages = 	 "*",
+  pages = 	 "12--23",
   month = 	 ISSTA2015date,
   address = 	 ISSTA2015addr,
   abstract =
@@ -9181,13 +9181,102 @@ endgame.",
     JavaScript code directly responsible for their differences.",
   basefilename = "dom-tracing-uist2015",
   downloads =
-   "https://github.com/burg/timelapse/ Timelapse implementation",
+   "https://github.com/burg/replay-staging/ Timelapse implementation",
   category =  "Software engineering",
   csetags = "burg,ajko,mernst,mernst-Software-engineering,plse",
   summary =
    "The Scry tool enables a developer to navigate forward and backward in a web
     page's execution.  When the developer selects a web page element, Scry shows
     how the browser state differed and what JavaScript code is responsible.",
+}
+
+
+@InProceedings{BarrosJMVDdAE2015,
+  author = 	 "Paulo Barros and Ren\'e Just and Suzanne Millstein and Paul Vines and Werner Dietl and Marcelo d'Amorim and Michael D. Ernst",
+  authorASCII = 	 "Paulo Barros and Rene Just and Suzanne Millstein and Paul Vines and Werner Dietl and Marcelo d'Amorim and Michael D. Ernst",
+  title = 	 "Static analysis of implicit control flow: Resolving {Java} reflection and {Android} intents",
+  booktitle = ASE2015,
+  year = 	 2015,
+  NEEDpages = 	 "*",
+  month = 	 ASE2015date,
+  address = 	 ASE2015addr,
+  abstract =
+   "Implicit or indirect control flow is a transfer of control between
+    procedures using some mechanism other than an explicit procedure
+    call. Implicit control flow is a staple design pattern that adds
+    flexibility to system design. However, it is challenging for a static
+    analysis to compute or verify properties about a system that uses implicit
+    control flow.
+    \par
+    This paper presents static analyses for two types of implicit control flow
+    that frequently appear in Android apps: Java reflection and Android
+    intents. Our analyses help to resolve where control flows and what data is
+    passed. This information improves the precision of downstream analyses,
+    which no longer need to make conservative assumptions about implicit
+    control flow.
+    \par
+    We have implemented our techniques for Java. We enhanced an existing
+    security analysis with a more precise treatment of reflection and
+    intents. In a case study involving ten real-world Android apps that use
+    both intents and reflection, precision of the security analysis was
+    increased on average by two orders of magnitude.",
+  basefilename = "implicit-control-flow-ase2015",
+  downloads =
+   "http://types.cs.washington.edu/sparta/ SPARTA toolset;
+    http://checkerframework.org/ Checker Framework",
+  category =  "Static analysis",
+  csetags = "rjust,smillst,plvines,wmdietl,mernst,mernst-Static-analysis,plse",
+  summary =
+   "Standard program analysis understand control flow through direct procedure
+    calls.  This paper provides analyses that resolve uses of Java reflecton and
+    the data passed in Android intents.",
+}
+
+@InProceedings{MusluSBE2015,
+  author = 	 "K{\i}van{\c{c}} Mu{\c{s}}lu and Luke Swart and Yuriy Brun and Michael D. Ernst",
+  authorASCII =  "Kivanc Muslu and Yuriy Brun and Luke Swart and Michael D. Ernst",
+  title = 	 "Simplifying development history information retrieval via multi-grained views",
+  booktitle = ASE2015,
+  year = 	 2015,
+  NEEDpages = 	 "*",
+  month = 	 ASE2015date,
+  address = 	 ASE2015addr,
+  abstract =
+   "Development histories can simplify some software engineering
+    tasks. However, the ways development histories are created today restrict
+    them to a single granularity, making them hard to use for certain
+    tasks. For example, manually-managed version control histories are often
+    too coarse-grained:  searching for the cause of a regression bug identifies
+    commits that include other, irrelevant edits. Automatically-managed
+    histories that record every developer action are often too fine-grained:
+    reviewing the evolution of a feature requires examining thousands of
+    character-by-character edits.
+    \par
+    This paper introduces Codebase Manipulation, a technique for automatically
+    managing multi-grained views of a development history. Codebase
+    Manipulation automatically records a fine-grained history and applies
+    granularity transformations to create history views of differing
+    granularities. Using Codebase Manipulation, the developer accesses the
+    history at the granularity that is most suitable for the underlying
+    task. This paper shows how Codebase Manipulation supports three development
+    tasks: (1) untangling concurrent changes with Untangler, a new interactive
+    algorithm, (2) pinpointing causes of regression failures with Bisector, a
+    new history bisection algorithm, and (3) summarizing the evolution of code
+    elements with CodeEvolve, a new algorithm for transforming development
+    histories into code element granularity. Our evaluation shows that Codebase
+    Manipulation is efficient enough to be used unobtrusively by developers and
+    expressive enough to support new tools for multiple important development
+    tasks.",
+  basefilename = "codebase-manipulation-ase2015",
+  downloads =
+   "https://bitbucket.org/kivancmuslu/chronos Bread implementation;
+    https://bitbucket.org/LukeSwart/untangler Untangler implementation;
+    https://bitbucket.org/kivancmuslu/chronos-test-bisection Bisector implemenation",
+  category =  "Speculative analysis",
+  csetags = "kivanc,,mernst,mernst-Speculative-analysis,plse",
+  summary =
+   "This paper shows how to transform a development history into multiple
+   granularities that are appropriate for different software engineering tasks.",
 }
 
 
@@ -9316,39 +9405,6 @@ endgame.",
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Submitted (under review)
 %%%
-
-@Misc{BarrosJMVDdAE2014,
-  author = 	 "Paulo Barros and Ren\'e Just and Suzanne Millstein and Paul Vines and Werner Dietl and Marcelo d'Amorim and Michael D. Ernst",
-  authorASCII = 	 "Paulo Barros and Rene Just and Suzanne Millstein and Paul Vines and Werner Dietl and Marcelo d'Amorim and Michael D. Ernst",
-  title = 	 "Precise and sound static analysis of implicit control flow: Resolving {Java} reflection and {Android} intents",
-  month = 	 jan,
-  year = 	 2014,
-  abstract =
-   "Implicit control flow is a transfer of control between procedures using
-    some mechanism other than a direct procedure call.  Implicit control flow
-    is a staple design pattern that adds flexibility to system design.
-    However, it is challenging for a static analysis to compute or verify
-    properties about a system that uses implicit control flow.
-    \par
-    This paper presents static analyses for two types of implicit control
-    flow:  Java reflection and Android intents.  Our analyses help to resolve
-    where control flows and what data is passed.  The analysis results are
-    provided to downstream analyses that benefit from improved precision.
-    \par
-    We have implemented our techniques for Java.  We enhanced an existing
-    security analysis with more precise treatment of reflection and intents.
-    Our evaluation showed that our analyses are easy for a programmer to use,
-    and they are effective in improving downstream analyses.",
-  omitfromcv = 1,
-  underreview =   1,
-  basefilename = "implicit-control-flow",
-  category =  "Static analysis",
-  summary =
-   "Standard program analysis understand control flow through direct procedure
-    calls.  This paper provides analyses that resolve uses of Java reflecton and
-    the data passed in Android intents.",
-}
-
 
 @Misc{SchillerE2014,
   author = 	 "Todd W. Schiller and Michael D. Ernst",
