@@ -9204,24 +9204,25 @@ endgame.",
   address = 	 ASE2015addr,
   abstract =
    "Implicit or indirect control flow is a transfer of control between
-    procedures using some mechanism other than an explicit procedure
-    call. Implicit control flow is a staple design pattern that adds
-    flexibility to system design. However, it is challenging for a static
-    analysis to compute or verify properties about a system that uses implicit
-    control flow.
+    procedures using some mechanism other than an explicit procedure call.
+    Implicit control flow is a staple design pattern that adds flexibility to
+    system design.  However, it is challenging for a static analysis to
+    compute or verify properties about a system that uses implicit control
+    flow.
     \par
-    This paper presents static analyses for two types of implicit control flow
-    that frequently appear in Android apps: Java reflection and Android
-    intents. Our analyses help to resolve where control flows and what data is
-    passed. This information improves the precision of downstream analyses,
-    which no longer need to make conservative assumptions about implicit
-    control flow.
+    This paper presents static analyses for two types of implicit control
+    flow that frequently appear in Android apps:  Java reflection and Android
+    intents.  Our analyses help to resolve where control flows and what data
+    is passed.  This information improves the precision of downstream
+    analyses, which no longer need to make conservative assumptions about
+    implicit control flow.
     \par
-    We have implemented our techniques for Java. We enhanced an existing
+    We have implemented our techniques for Java.  We enhanced an existing
     security analysis with a more precise treatment of reflection and
-    intents. In a case study involving ten real-world Android apps that use
-    both intents and reflection, precision of the security analysis was
-    increased on average by two orders of magnitude.",
+    intents.  In a case study involving ten real-world Android apps that use
+    both intents and reflection, the precision of the security analysis was
+    increased on average by two orders of magnitude.  The precision of two
+    other downstream analyses was also improved.",
   basefilename = "implicit-control-flow-ase2015",
   downloads =
    "http://types.cs.washington.edu/sparta/ SPARTA toolset;
@@ -9233,6 +9234,51 @@ endgame.",
     calls.  This paper provides analyses that resolve uses of Java reflecton and
     the data passed in Android intents.",
 }
+
+
+@TechReport{BarrosJMVDdAE2015:TR,
+  author = 	 "Paulo Barros and Ren\'e Just and Suzanne Millstein and Paul Vines and Werner Dietl and Marcelo d'Amorim and Michael D. Ernst",
+  authorASCII = 	 "Paulo Barros and Rene Just and Suzanne Millstein and Paul Vines and Werner Dietl and Marcelo d'Amorim and Michael D. Ernst",
+  title = 	 "Static analysis of implicit control flow: Resolving {Java} reflection and {Android} intents (extended version)",
+  institution =  UWCSE,
+  year = 	 "2015",
+  OPTnumber = 	 "UW-CSE-15-08-01",
+  OPTaddress = 	 UWCSEaddr,
+  OPTmonth = 	 aug,
+  abstract =
+   "Implicit or indirect control flow is a transfer of control between
+    procedures using some mechanism other than an explicit procedure call.
+    Implicit control flow is a staple design pattern that adds flexibility to
+    system design.  However, it is challenging for a static analysis to
+    compute or verify properties about a system that uses implicit control
+    flow.
+    \par
+    This paper presents static analyses for two types of implicit control
+    flow that frequently appear in Android apps:  Java reflection and Android
+    intents.  Our analyses help to resolve where control flows and what data
+    is passed.  This information improves the precision of downstream
+    analyses, which no longer need to make conservative assumptions about
+    implicit control flow.
+    \par
+    We have implemented our techniques for Java.  We enhanced an existing
+    security analysis with a more precise treatment of reflection and
+    intents.  In a case study involving ten real-world Android apps that use
+    both intents and reflection, the precision of the security analysis was
+    increased on average by two orders of magnitude.  The precision of two
+    other downstream analyses was also improved.",
+  basefilename = "implicit-control-flow-tr150801",
+  downloads =
+   "http://types.cs.washington.edu/sparta/ SPARTA toolset;
+    http://checkerframework.org/ Checker Framework",
+  supersededby = "BarrosJMVDdAE2015 An extended version with proofs",
+  category =  "Static analysis",
+  csetags = "rjust,smillst,plvines,wmdietl,mernst,mernst-Static-analysis,plse",
+  summary =
+   "Standard program analysis understand control flow through direct procedure
+    calls.  This paper provides analyses that resolve uses of Java reflecton and
+    the data passed in Android intents.",
+}
+
 
 @InProceedings{MusluSBE2015,
   author = 	 "K{\i}van{\c{c}} Mu{\c{s}}lu and Luke Swart and Yuriy Brun and Michael D. Ernst",
