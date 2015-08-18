@@ -95,9 +95,9 @@ make "bib" a dependency for the myfile.bbl target.
     export BIBINPUTS ?= .:bib
     bib:
     ifdef PLUMEBIB
-	    ln -s ${PLUMEBIB} bib
+	    ln -s ${PLUMEBIB} $@
     else
-	    git clone https://github.com/mernst/plume-bib.git bib
+	    git clone https://github.com/mernst/plume-bib.git $@
     endif
     .PHONY: bib-update
     bib-update: bib

@@ -8928,53 +8928,6 @@ endgame.",
 }
 
 
-@Article{MusluBEN2015,
-  author = 	 "K{\i}van{\c{c}} Mu{\c{s}}lu and Yuriy Brun and Michael D. Ernst and David Notkin",
-  authorASCII =  "Kivanc Muslu and Yuriy Brun and Michael D. Ernst and David Notkin",
-  title = 	 "Reducing feedback delay of software development tools via continuous analysis",
-  journal = 	 TSE,
-  year = 	 2015,
-  OPTkey = 	 "",
-  NEEDvolume = 	 "*",
-  NEEDnumber = 	 "*",
-  NEEDpages = 	 "*",
-  NEEDmonth = 	 "",
-  OPTnote = 	 "",
-  OPTannote = 	 "",
-  abstract =
-   "During software development, the sooner a developer learns how code changes
-    affect program analysis results, the more helpful that analysis is.
-    Manually invoking an analysis may interrupt the developer's workflow or
-    cause a delay before the developer learns the implications of the change. A
-    better approach is \emph{continuous analysis} tools that always provide
-    up-to-date results. We present Codebase Replication, a technique that eases
-    the implementation of continuous analysis tools by converting an existing
-    offline analysis into an IDE-integrated, continuous tool with two desirable
-    properties: isolation and currency. Codebase Replication creates and keeps
-    in sync a copy of the developer's codebase. The analysis runs on the copy
-    codebase without disturbing the developer and without being disturbed by
-    the developer's changes. We developed Solstice, an open-source,
-    publicly-available Eclipse plug-in that implements Codebase Replication.
-    Solstice has less than 2.5 milliseconds overhead for most common developer
-    actions. We used Solstice to implement four Eclipse-integrated continuous
-    analysis tools based on the offline versions of FindBugs, PMD, data race
-    detection, and unit testing. Each conversion required on average
-    710 LoC and 20 hours of implementation effort.
-    Case studies indicate that Solstice-based continuous analysis tools are
-    intuitive and easy-to-use.",
-  basefilename = "offline-continuous-tse2015",
-  downloads =
-   "https://bitbucket.org/kivancmuslu/solstice/ Solstice implementation",
-  category =  "Speculative analysis",
-  csetags = "kivanc,brun,notkin,mernst,mernst-Software-engineering,plse,plse-speculation",
-  summary =
-   "An offline program analysis runs when the developer invokes it.  A
-    continuous analysis operates automatically on the current codebase and
-    asynchronously informs the developer of results.  By using a shadow copy of
-    the codebase, an offline analysis can be made continuous.",
-}
-
-
 @InProceedings{AndersonEOPT2015,
   author = 	 "Ruth Anderson and Michael D. Ernst and Robert Ord{\'o}{\~n}ez and Paul Pham and Ben Treibelhorn",
   authorASCII = 	 "Ruth Anderson and Michael D. Ernst and Robert Ordonez and Paul Pham and Ben Treibelhorn",
@@ -9157,9 +9110,125 @@ endgame.",
 }
 
 
+@InProceedings{DeanGEKPWCMMCM2015,
+  author = 	 "Drew Dean and Sean Gaurino and Leonard Eusebi and Andrew Keplinger and Tim Pavlik and Ronald Watro and Aaron Cammarata and John Murray and Kelly McLaughlin and John Cheng and Thomas Maddern",
+  pseudoauthor = "Michael D. Ernst",
+  title = 	 "Lessons Learned in Game Development for Crowdsourced Software Formal Verification",
+  booktitle = ThreeGSE2015,
+  year = 	 2015,
+  NOpages = 	 "*",
+  month = 	 ThreeGSE2015date,
+  address = 	 ThreeGSE2015addr,
+  abstract =
+   "The history of formal methods and computer security research is long and
+    intertwined. Program logics that were in theory capable of proving security
+    properties of software were developed by the early 1970s. The development
+    of the first security models gave rise to a desire to prove that the models
+    did, in fact, enforce the properties that they claimed to, and that an
+    actual implementation of the model was correct with respect to its
+    specification. Optimism reached its peak in the early to mid-1980s, and the
+    peak of formal methods for security was reached shortly before the
+    publication of the Orange Book, where the certification of a system at
+    class A1 required formal methods. Formal verification of software was
+    considered the gold standard evidence that the software enforced a
+    particular set of properties. Soon afterwards, the costs of formal methods,
+    in both time and money, became all too apparent. Mainstream computer
+    security research shifted focus to analysis of cryptographic protocols,
+    policies around cryptographic key management, and clever fixes for security
+    problems found in contemporary systems.",
+  basefilename = "csfv-lessons-3gse2015",
+  downloads =
+   "http://www.cs.washington.edu/verigames/ Verification Games project homepage;
+    http://flowjam.verigames.com/ Flow Jam game;
+    http://paradox.verigames.com/ Paradox game",
+  category =  "Verification",
+  csetags = 	 "mernst,mernst-Verification",
+  summary =
+   "Crowd-sourcing provides the promise of making formal verification cheaper
+    and thus more prevalent.  This paper overviews 5 games by which unskilled
+    people can perform program verification tasks.",
+}
+
+
+@TechReport{BarrosJMVDdAE2015:TR,
+  author = 	 "Paulo Barros and Ren\'e Just and Suzanne Millstein and Paul Vines and Werner Dietl and Marcelo d'Amorim and Michael D. Ernst",
+  authorASCII = 	 "Paulo Barros and Rene Just and Suzanne Millstein and Paul Vines and Werner Dietl and Marcelo d'Amorim and Michael D. Ernst",
+  title = 	 "Static analysis of implicit control flow: Resolving {Java} reflection and {Android} intents (extended version)",
+  institution =  UWCSE,
+  year = 	 2015,
+  number = 	 "UW-CSE-15-08-01",
+  address = 	 UWCSEaddr,
+  month = 	 aug,
+  abstract =
+   "Implicit or indirect control flow is a transfer of control between
+    procedures using some mechanism other than an explicit procedure call.
+    Implicit control flow is a staple design pattern that adds flexibility to
+    system design.  However, it is challenging for a static analysis to
+    compute or verify properties about a system that uses implicit control
+    flow.
+    \par
+    This paper presents static analyses for two types of implicit control
+    flow that frequently appear in Android apps:  Java reflection and Android
+    intents.  Our analyses help to resolve where control flows and what data
+    is passed.  This information improves the precision of downstream
+    analyses, which no longer need to make conservative assumptions about
+    implicit control flow.
+    \par
+    We have implemented our techniques for Java.  We enhanced an existing
+    security analysis with a more precise treatment of reflection and
+    intents.  In a case study involving ten real-world Android apps that use
+    both intents and reflection, the precision of the security analysis was
+    increased on average by two orders of magnitude.  The precision of two
+    other downstream analyses was also improved.",
+  basefilename = "implicit-control-flow-tr150801",
+  downloads =
+   "http://types.cs.washington.edu/sparta/ SPARTA toolset;
+    http://checkerframework.org/ Checker Framework",
+  supersededby = "BarrosJMVDdAE2015 An extended version",
+  category =  "Static analysis",
+  csetags = "rjust,smillst,plvines,wmdietl,mernst,mernst-Static-analysis,plse",
+  summary =
+   "Standard program analysis understand control flow through direct procedure
+    calls.  This paper provides analyses that resolve uses of Java reflecton and
+    the data passed in Android intents.",
+}
+
+
+@TechReport{ErnstMMS2015,
+  author = 	 "Michael Ernst and Damiano Macedonio and Massimo Merro and Fausto Spoto",
+  title = 	 "Semantics for locking specifications",
+  institution =  UWCSE,
+  year = 	 2015,
+  number = 	 "UW-CSE-15-09-01",
+  address = 	 UWCSEaddr,
+  month = 	 sep,
+  abstract =
+   "To prevent concurrency errors, programmers need to obey a locking
+    discipline. Annotations that specify that discipline, such as Java's
+    \tetxtt{@GuardedBy}, are already widely used.  Unfortunately, their
+    semantics is expressed informally and is consequently ambiguous.
+    This article highlights such ambiguities and
+    overcomes them by formalizing two possible semantics of \texttt{@GuardedBy},
+    using a reference operational semantics for a
+    core calculus of a concurrent Java-like language.
+    It also identifies when such annotations are actual guarantees against
+    data races. Our work aids in understanding the annotations and supports the
+    development of sound tools that verify or infer them.",
+  omitfromcv = "TEMPORARILY",
+  basefilename = "locking-semantics-tr150901",
+  TOBEsupersededby = "*",
+  category =  "Static analysis",
+  csetags = "mernst,jthaine,mernst-Static-analysis,plse",
+  summary =
+   "Java's @GuardedBy annotation is intended to prevent race conditions, but
+    current tools give it a definition that permits race conditions.  This paper
+    formalizes a correct definition that prevents race conditions as intended.",
+}
+
+
 @InProceedings{BurgKE2015,
   author = 	 "Brian Burg and Andrew Ko and Michael D. Ernst",
-  title = 	 "Explaining Visual Changes in Web Interfaces",
+  title = 	 "Explaining visual changes in web interfaces",
   booktitle = UIST2015,
   year = 	 2015,
   NEEDpages = 	 "*",
@@ -9236,50 +9305,6 @@ endgame.",
 }
 
 
-@TechReport{BarrosJMVDdAE2015:TR,
-  author = 	 "Paulo Barros and Ren\'e Just and Suzanne Millstein and Paul Vines and Werner Dietl and Marcelo d'Amorim and Michael D. Ernst",
-  authorASCII = 	 "Paulo Barros and Rene Just and Suzanne Millstein and Paul Vines and Werner Dietl and Marcelo d'Amorim and Michael D. Ernst",
-  title = 	 "Static analysis of implicit control flow: Resolving {Java} reflection and {Android} intents (extended version)",
-  institution =  UWCSE,
-  year = 	 2015,
-  number = 	 "UW-CSE-15-08-01",
-  address = 	 UWCSEaddr,
-  month = 	 aug,
-  abstract =
-   "Implicit or indirect control flow is a transfer of control between
-    procedures using some mechanism other than an explicit procedure call.
-    Implicit control flow is a staple design pattern that adds flexibility to
-    system design.  However, it is challenging for a static analysis to
-    compute or verify properties about a system that uses implicit control
-    flow.
-    \par
-    This paper presents static analyses for two types of implicit control
-    flow that frequently appear in Android apps:  Java reflection and Android
-    intents.  Our analyses help to resolve where control flows and what data
-    is passed.  This information improves the precision of downstream
-    analyses, which no longer need to make conservative assumptions about
-    implicit control flow.
-    \par
-    We have implemented our techniques for Java.  We enhanced an existing
-    security analysis with a more precise treatment of reflection and
-    intents.  In a case study involving ten real-world Android apps that use
-    both intents and reflection, the precision of the security analysis was
-    increased on average by two orders of magnitude.  The precision of two
-    other downstream analyses was also improved.",
-  basefilename = "implicit-control-flow-tr150801",
-  downloads =
-   "http://types.cs.washington.edu/sparta/ SPARTA toolset;
-    http://checkerframework.org/ Checker Framework",
-  supersededby = "BarrosJMVDdAE2015 An extended version",
-  category =  "Static analysis",
-  csetags = "rjust,smillst,plvines,wmdietl,mernst,mernst-Static-analysis,plse",
-  summary =
-   "Standard program analysis understand control flow through direct procedure
-    calls.  This paper provides analyses that resolve uses of Java reflecton and
-    the data passed in Android intents.",
-}
-
-
 @InProceedings{MusluSBE2015,
   author = 	 "K{\i}van{\c{c}} Mu{\c{s}}lu and Luke Swart and Yuriy Brun and Michael D. Ernst",
   authorASCII =  "Kivanc Muslu and Yuriy Brun and Luke Swart and Michael D. Ernst",
@@ -9290,32 +9315,19 @@ endgame.",
   month = 	 ASE2015date,
   address = 	 ASE2015addr,
   abstract =
-   "Development histories can simplify some software engineering
-    tasks. However, the ways development histories are created today restrict
-    them to a single granularity, making them hard to use for certain
-    tasks. For example, manually-managed version control histories are often
-    too coarse-grained:  searching for the cause of a regression bug identifies
-    commits that include other, irrelevant edits. Automatically-managed
-    histories that record every developer action are often too fine-grained:
-    reviewing the evolution of a feature requires examining thousands of
-    character-by-character edits.
-    \par
-    This paper introduces Codebase Manipulation, a technique for automatically
-    managing multi-grained views of a development history. Codebase
-    Manipulation automatically records a fine-grained history and applies
-    granularity transformations to create history views of differing
-    granularities. Using Codebase Manipulation, the developer accesses the
-    history at the granularity that is most suitable for the underlying
-    task. This paper shows how Codebase Manipulation supports three development
-    tasks: (1) untangling concurrent changes with Untangler, a new interactive
-    algorithm, (2) pinpointing causes of regression failures with Bisector, a
-    new history bisection algorithm, and (3) summarizing the evolution of code
-    elements with CodeEvolve, a new algorithm for transforming development
-    histories into code element granularity. Our evaluation shows that Codebase
-    Manipulation is efficient enough to be used unobtrusively by developers and
-    expressive enough to support new tools for multiple important development
-    tasks.",
-  basefilename = "codebase-manipulation-ase2015",
+   "Development histories can simplify some software
+    engineering tasks, but different tasks require different history
+    granularities. For example, a history that includes every edit
+    that resulted in compiling code is needed when searching for the
+    cause of a regression, whereas a history that contains only changes
+    relevant to a feature is needed for understanding the evolution of
+    the feature. Unfortunately, today, both manual and automated
+    history generation result in a single-granularity history. This
+    paper introduces the concept of \emph{multi-grained} development history
+    views and the architecture of Codebase Manipulation, a tool
+    that automatically records a fine-grained history and manages
+    its granularity by applying granularity transformations.",
+  basefilename = "history-transformations-ase2015",
   downloads =
    "https://bitbucket.org/kivancmuslu/chronos Bread implementation;
     https://bitbucket.org/LukeSwart/untangler Untangler implementation;
@@ -9325,6 +9337,53 @@ endgame.",
   summary =
    "This paper shows how to transform a development history into multiple
    granularities that are appropriate for different software engineering tasks.",
+}
+
+
+@Article{MusluBEN2015,
+  author = 	 "K{\i}van{\c{c}} Mu{\c{s}}lu and Yuriy Brun and Michael D. Ernst and David Notkin",
+  authorASCII =  "Kivanc Muslu and Yuriy Brun and Michael D. Ernst and David Notkin",
+  title = 	 "Reducing feedback delay of software development tools via continuous analysis",
+  journal = 	 TSE,
+  year = 	 2015,
+  OPTkey = 	 "",
+  NEEDvolume = 	 "*",
+  NEEDnumber = 	 "*",
+  NEEDpages = 	 "*",
+  NEEDmonth = 	 "",
+  OPTnote = 	 "",
+  OPTannote = 	 "",
+  abstract =
+   "During software development, the sooner a developer learns how code changes
+    affect program analysis results, the more helpful that analysis is.
+    Manually invoking an analysis may interrupt the developer's workflow or
+    cause a delay before the developer learns the implications of the change. A
+    better approach is \emph{continuous analysis} tools that always provide
+    up-to-date results. We present Codebase Replication, a technique that eases
+    the implementation of continuous analysis tools by converting an existing
+    offline analysis into an IDE-integrated, continuous tool with two desirable
+    properties: isolation and currency. Codebase Replication creates and keeps
+    in sync a copy of the developer's codebase. The analysis runs on the copy
+    codebase without disturbing the developer and without being disturbed by
+    the developer's changes. We developed Solstice, an open-source,
+    publicly-available Eclipse plug-in that implements Codebase Replication.
+    Solstice has less than 2.5 milliseconds overhead for most common developer
+    actions. We used Solstice to implement four Eclipse-integrated continuous
+    analysis tools based on the offline versions of FindBugs, PMD, data race
+    detection, and unit testing. Each conversion required on average
+    710 LoC and 20 hours of implementation effort.
+    Case studies indicate that Solstice-based continuous analysis tools are
+    intuitive and easy-to-use.",
+  basefilename = "offline-continuous-tse2015",
+  downloads =
+   "https://bitbucket.org/kivancmuslu/solstice/ Solstice implementation",
+  category =  "Speculative analysis",
+  csetags = "kivanc,brun,notkin,mernst,mernst-Software-engineering,plse,plse-speculation",
+  summary =
+   "An offline program analysis runs when the developer invokes it.  A
+    continuous analysis operates automatically on the current codebase and
+    asynchronously informs the developer of results.  By using a shadow copy of
+    the codebase, an offline analysis can be made continuous.",
 }
 
 
