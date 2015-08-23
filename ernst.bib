@@ -9226,6 +9226,42 @@ endgame.",
 }
 
 
+
+@TechReport{ErnstLMST2015,
+  author = 	 "Michael D. Ernst and Alberto Lovato and Damiano Macedonio and Fausto Spoto and Javier Thaine",
+  title = 	 "Locking discipline inference and checking",
+  institution =  UWCSE,
+  year = 	 2015,
+  number = 	 "UW-CSE-15-09-02",
+  address = 	 UWCSEaddr,
+  month = 	 sep,
+  abstract =
+   "Concurrency is a requirement for much modern software, but the
+    implementation of multithreaded algorithms comes at the risk of
+    errors such as data races. Programmers can prevent data races
+    by documenting and obeying a locking discipline, which indicates
+    which locks must be held in order to access which data.
+    \par
+    This paper introduces a formal semantics for locking specifications
+    that gives a guarantee of race freedom. The paper also provides
+    two implementations of the formal semantics for the Java language:
+    one based on abstract interpretation and one based on type theory. To
+    the best of our knowledge, these are the first tools that can soundly
+    infer and check a locking discipline for Java. Our experiments
+    compare the implementations with one another and with annotations
+    written by programmers.",
+  omitfromcv = "TEMPORARILY",
+  basefilename = "locking-inference-checking-tr150902",
+  TOBEsupersededby = "*",
+  category =  "Static analysis",
+  csetags = "mernst,jthaine,mernst-Static-analysis,plse",
+  summary =
+   "This paper describes an abstract inference and a type system and for
+    inferring and checking a locking discipline, and experiments with
+    implementations of each.",
+}
+
+
 @InProceedings{BurgKE2015,
   author = 	 "Brian Burg and Andrew Ko and Michael D. Ernst",
   title = 	 "Explaining visual changes in web interfaces",
