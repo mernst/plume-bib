@@ -481,6 +481,15 @@
 
 
 
+@InProceedings{JiangZCT2009,
+  author = 	 "Jiang, Bo and Zhang, Zhenyu and Chan, W. K. and Tse, T. H.",
+  title = 	 "Adaptive Random Test Case Prioritization",
+  booktitle = ASE2009,
+  year = 	 2009,
+  pages = 	 "233--244",
+  month = 	 ASE2009date,
+  address = 	 ASE2009addr,
+}
 
 
 
@@ -1033,7 +1042,7 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% Coverage criteria
+%%% Coverage criteria (test adequacy metrics)
 %%%
 
 @Article{ZhuHM97,
@@ -1093,6 +1102,15 @@
 
 
 
+@InProceedings{KapfhammerS2003,
+  author = 	 "Kapfhammer, Gregory M. and Soffa, Mary Lou",
+  title = 	 "A family of test adequacy criteria for database-driven applications",
+  booktitle = FSE2003,
+  year = 	 2003,
+  pages = 	 "98--107",
+  month = 	 FSE2003date,
+  address = 	 FSE2003addr,
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Correlation between coverage and quality/defects/bugs
@@ -1250,8 +1268,15 @@
 }
 
 
-
-
+@InProceedings{HsuO2009,
+  author = 	 "Hsu, Hwa-You and Orso, Alessandro",
+  title = 	 "{MINTS}: A general framework and tool for supporting test-suite minimization",
+  booktitle = ICSE2009,
+  year = 	 2009,
+  pages = 	 "419--429",
+  month = 	 ICSE2009date,
+  address = 	 ICSE2009addr,
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Mutation analysis (mutation testing)
@@ -1548,6 +1573,15 @@
 }
 
 
+@InProceedings{ZhangMZK2012,
+  author = 	 "Zhang, Lingming and Marinov, Darko and Zhang, Lu and Khurshid, Sarfraz",
+  title = 	 "Regression mutation testing",
+  booktitle = ISSTA2012,
+  year = 	 2012,
+  pages = 	 "331--341",
+  month = 	 ISSTA2012date,
+  address = 	 ISSTA2012addr,
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Generating test cases
@@ -1644,7 +1678,7 @@
 }
 
 
-@Article{CsallnerS:JCrasher,
+@Article{CsallnerS2004:JCrasher,
   author = 	 "Christoph Csallner and Yannis Smaragdakis",
   title = 	 "{JCrasher}: an automatic robustness tester for {Java}",
   journal = 	 SPE,
@@ -1923,6 +1957,41 @@
   month = 	 ICSE2012date,
   address = 	 ICSE2012addr,
 }
+
+
+@InProceedings{MisailovicMPKM2007,
+  author = 	 "Misailovic, Sasa and Milicevic, Aleksandar and Petrovic, Nemanja and Khurshid, Sarfraz and Marinov, Darko",
+  title = 	 "Parallel test generation and execution with {Korat}",
+  booktitle = FSE2007,
+  year = 	 2007,
+  pages = 	 "135--144",
+  month = 	 FSE2007date,
+  address = 	 FSE2007addr,
+}
+
+
+@InProceedings{FraserZ2011,
+  author = 	 "Gordon Fraser and Andreas Zeller",
+  title = 	 "Generating parameterized unit tests",
+  booktitle = ISSTA2011,
+  year = 	 2011,
+  pages = 	 "364--374",
+  month = 	 ISSTA2011date,
+  address = 	 ISSTA2011addr,
+}
+
+
+@Article{Howden1975,
+  author = 	 "William E. Howden",
+  title = 	 "Methodology for the generation of program test data",
+  journal = 	 IEEETC,
+  year = 	 1975,
+  volume = 	 "C-24",
+  number = 	 5,
+  pages = 	 "554--560",
+  month = 	 may,
+}
+
 
 
 %%%
@@ -2684,19 +2753,41 @@
 }
 
 
-@article{1027093,
- author = {Gregg Rothermel and Sebastian Elbaum and Alexey G. Malishevsky and Praveen Kallakuri and Xuemei Qiu},
- title = {On test suite composition and cost-effective regression testing},
- journal = TOSEM,
- volume = {13},
- number = {3},
- year = {2004},
- issn = {1049-331X},
- pages = {277--331},
- doi = {http://doi.acm.org/10.1145/1027092.1027093},
- publisher = {ACM Press},
- address = {New York, NY, USA},
- }
+
+
+@Article{RothermelEMKQ2004,
+  author = 	 "Gregg Rothermel and Sebastian Elbaum and Alexey G. Malishevsky and Praveen Kallakuri and Xuemei Qiu",
+  title = 	 "On test suite composition and cost-effective regression testing",
+  journal = 	 TOSEM,
+  year = 	 2004,
+  volume = 	 13,
+  number = 	 3,
+  pages = 	 "277--331",
+  month = 	 jul,
+  abstract =
+   "Regression testing is an expensive testing process used to revalidate
+    software as it evolves. Various methodologies for improving regression
+    testing processes have been explored, but the cost-effectiveness of these
+    methodologies has been shown to vary with characteristics of regression
+    test suites. One such characteristic involves the way in which test inputs
+    are composed into test cases within a test suite. This article reports the
+    results of controlled experiments examining the effects of two factors in
+    test suite composition---test suite granularity and test input
+    grouping---on the costs and benefits of several regression-testing-related
+    methodologies: retest-all, regression test selection, test suite reduction,
+    and test case prioritization. These experiments consider the application of
+    several specific techniques, from each of these methodologies, across ten
+    releases each of two substantial software systems, using seven levels of
+    test suite granularity and two types of test input grouping. The effects of
+    granularity, technique, and grouping on the cost and fault-detection
+    effectiveness of regression testing under the given methodologies are
+    analyzed. This analysis shows that test suite granularity significantly
+    affects several cost-benefit factors for the methodologies considered,
+    while test input grouping has limited effects. Further, the results expose
+    essential tradeoffs affecting the relationship between test suite design
+    and regression testing cost-effectiveness, with several implications for
+    practice.",
+}
 
 
 
@@ -2983,6 +3074,38 @@
 }
 
 
+
+@INPROCEEDINGS{,
+  author = {Harrold, Mary Jean and Jones, James A. and Li, Tongyu and Liang,
+	Donglin and Orso, Alessandro and Pennings, Maikel and Sinha, Saurabh
+	and Spoon, S. Alexander and Gujarathi, Ashish},
+  title = {Regression test selection for {Java} Software},
+  booktitle = {OOPSLA},
+  year = {2001},
+  pages = {312--326},
+  acmid = {504305},
+  doi = {http://doi.acm.org/10.1145/504282.504305},
+  isbn = {1-58113-335-9},
+  location = {Tampa Bay, FL, USA},
+  numpages = {15},
+  owner = {joe},
+  timestamp = {2012.02.29},
+  url = {http://doi.acm.org/10.1145/504282.504305}
+}
+
+
+
+
+@InProceedings{HarroldJLLOPSSG2001,
+  author = 	 "Harrold, Mary Jean and Jones, James A. and Li, Tongyu and Liang, Donglin and Orso, Alessandro and Pennings, Maikel and Sinha, Saurabh and Spoon, S. Alexander and Gujarathi, Ashish",
+  title = 	 "Regression test selection for {Java} software",
+  booktitle = OOPSLA2001,
+  year = 	 2001,
+  pages = 	 "312--326",
+  month = 	 OOPSLA2001date,
+  address = 	 OOPSLA2001addr,
+}
+
 @InProceedings{OrsoSH2004,
   author = 	 "Alessandro Orso and Nanjuan Shi and Mary Jean Harrold",
   title = 	 "Scaling regression testing to large software systems",
@@ -3117,6 +3240,28 @@
   NEEDpages = 	 "*",
   month = 	 ICSE2015date,
   address = 	 ICSE2015addr,
+}
+
+@InProceedings{RummelKT2005,
+  author = 	 "Rummel, Matthew J. and Kapfhammer, Gregory M. and Thall, Andrew",
+  title = 	 "Towards the prioritization of regression test suites with data flow information",
+  booktitle = SAC2005,
+  year = 	 2005,
+  pages = 	 "1499--1504",
+  month = 	 SAC2005date,
+  address = 	 SAC2005addr,
+}
+
+
+@Article{BriandLH2009,
+  author = 	 "Briand, L. C. and Labiche, Y. and He, S.",
+  title = 	 "Automating regression test selection based on {UML} designs",
+  journal = 	 IST,
+  year = 	 2009,
+  volume = 	 51,
+  number = 	 1,
+  pages = 	 "16--30",
+  month = 	 jan,
 }
 
 
@@ -3420,7 +3565,7 @@
 }
 
 
-@Article{ZellerH02,
+@Article{ZellerH2002,
   author = 	 "Andreas Zeller and Ralf Hildebrandt",
   title = 	 "Simplifying and Isolating Failure-Inducing Input",
   journal = 	 TSE,
@@ -4482,6 +4627,92 @@
 
 
 
+
+@InProceedings{NandaMSHO2011,
+  author = 	 "Nanda, Agastya and Mani, Senthil and Sinha, Saurabh and Harrold, Mary Jean and Orso, Alessandro",
+  title = 	 "Regression testing in the presence of non-code changes",
+  booktitle = ICST2011,
+  year = 	 2011,
+  pages = 	 "21--30",
+  month = 	 ICST2011date,
+  address = 	 ICST2011addr,
+}
+
+
+@InProceedings{KimCZ2013,
+  author = 	 "Kim, Taesoo and Chandra, Ramesh and Zeldovich, Nickolai",
+  title = 	 "Optimizing unit test execution in large software programs using dependency analysis",
+  booktitle = APSys2013,
+  year = 	 2013,
+  pages = 	 "19:1--19:6",
+  month = 	 APSys2013date,
+  address = 	 APSys2013addr,
+}
+
+
+@InProceedings{BellK2014,
+  author = 	 "Bell, Jonathan and Kaiser, Gail",
+  title = 	 "Unit test virtualization with {VMVM}",
+  booktitle = ICSE2014,
+  year = 	 2014,
+  pages = 	 "550--561",
+  month = 	 ICSE2014date,
+  address = 	 ICSE2014addr,
+}
+
+
+@INPROCEEDINGS{bergelsonetal:EEE:2006,
+  author = {Bergelson, B. and Exman, I.},
+  title = {Dynamic Test Composition In Hierarchical Software Testing},
+  booktitle = {2006 IEEE 24th Convention of Electrical and Electronics Engineers
+	in Israel},
+  year = {2006},
+  pages = {37--41},
+  doi = {10.1109/EEEI.2006.321078},
+  owner = {joe},
+  timestamp = {2011.12.26}
+}
+
+
+@InProceedings{Bell2014,
+  author = 	 "Bell, Jonathan",
+  title = 	 "Detecting, isolating, and enforcing dependencies among and within test cases",
+  booktitle = FSE2014,
+  year = 	 2014,
+  pages = 	 "799--802",
+  month = 	 FSE2014date,
+  address = 	 FSE2014addr,
+}
+@InProceedings{LuoHEM2014,
+  author = 	 "Luo, Qingzhou and Hariri, Farah and Eloussi, Lamyaa and Marinov, Darko",
+  title = 	 "An empirical analysis of flaky tests",
+  booktitle = FSE2014,
+  year = 	 2014,
+  pages = 	 "643--653",
+  month = 	 FSE2014date,
+  address = 	 FSE2014addr,
+}
+
+
+@InProceedings{GauLCMW2015,
+  author = 	 "Zebao Gao and Yalan Liang and Myra B. Cohen and Atif M. Memon and Zhen Wang",
+  title = 	 "Making system user interactive tests repeatable=: When and what should we control?",
+  booktitle = ICSE2015,
+  year = 	 2015,
+  pages = 	 "55--65",
+  month = 	 ICSE2015date,
+  address = 	 ICSE2015addr,
+}
+
+@InProceedings{ArltMPW2015,
+  author = 	 "Arlt, Stephan and Morciniec, Tobias and Podelski, Andreas and Wagner, Silke",
+  title = 	 "If {A} fails, can {B} still succeed? Inferring dependencies between test results in automotive system testing",
+  booktitle = ICST2015,
+  year = 	 2015,
+  pages = 	 "1--10",
+  month = 	 ICST2015date,
+  address = 	 ICST2015addr,
+}
 
 %%%
 %%% end
