@@ -6173,7 +6173,7 @@ endgame.",
     speculative operations can improve developer productivity and software
     quality.",
   basefilename = "speculation-foser2010",
-  OPTdownloads = "",
+  downloads = "https://github.com/brunyuriy/quick-fix-scout Quick Fix Scout implementation",
   OPTdownloadsnonlocal = "",
   OPTsupersededby = "",
   category =  "Speculative analysis",
@@ -7120,7 +7120,7 @@ endgame.",
     errors depend on others, our technique helps the developer decide which
     errors to resolve first.",
   basefilename = "global-recommendations-icsenier2012",
-  OPTdownloads = "",
+  downloads = "https://github.com/brunyuriy/quick-fix-scout Quick Fix Scout implementation",
   OPTdownloadsnonlocal = "",
   supersededby = "MusluBHEN2012-OOPSLA",
   category =  "Speculative analysis",
@@ -7742,7 +7742,7 @@ endgame.",
     can outperform equivalent procedural algorithms.",
   basefilename = "fsm-inference-declarative-icse2013",
   downloads =
-    "http://homes.cs.washington.edu/~mernst/pubs/fsm-inference-declarative-tr130301.pdf TR 13-03-01;
+    "http://homes.cs.washington.edu/~mernst/pubs/fsm-inference-declarative-tr130301.pdf TR UW-CSE-13-03-01;
      http://synoptic.googlecode.com/ InvariMint implementation",
   supersededby = "BeschastnikhBAEK2015",
   category =  "Invariant detection",
@@ -8503,8 +8503,7 @@ endgame.",
 
 
 @InProceedings{BhoraskarLHCSE2014,
-  author = 	 "Ravi Bhoraskar and Dominic Langenegger and Pingyang He
-  and Raymond Cheng and Will Scott and Michael D. Ernst",
+  author = 	 "Ravi Bhoraskar and Dominic Langenegger and Pingyang He and Raymond Cheng and Will Scott and Michael D. Ernst",
   title = 	 "User scripting on {Android} using {BladeDroid}",
   booktitle = APSys2014,
   year = 	 2014,
@@ -9111,7 +9110,7 @@ endgame.",
 
 
 @InProceedings{DeanGEKPWCMMCM2015,
-  author = 	 "Drew Dean and Sean Gaurino and Leonard Eusebi and Andrew Keplinger and Tim Pavlik and Ronald Watro and Aaron Cammarata and John Murray and Kelly McLaughlin and John Cheng and Thomas Maddern",
+  author = 	 "Drew Dean and Sean Guarino and Leonard Eusebi and Andrew Keplinger and Tim Pavlik and Ronald Watro and Aaron Cammarata and John Murray and Kelly McLaughlin and John Cheng and Thomas Maddern",
   pseudoauthor = "Michael D. Ernst",
   title = 	 "Lessons Learned in Game Development for Crowdsourced Software Formal Verification",
   booktitle = ThreeGSE2015,
@@ -9195,7 +9194,7 @@ endgame.",
 
 
 @TechReport{ErnstMMS2015,
-  author = 	 "Michael Ernst and Damiano Macedonio and Massimo Merro and Fausto Spoto",
+  author = 	 "Michael D. Ernst and Damiano Macedonio and Massimo Merro and Fausto Spoto",
   title = 	 "Semantics for locking specifications",
   institution =  UWCSE,
   year = 	 2015,
@@ -9224,7 +9223,6 @@ endgame.",
     current tools give it a definition that permits race conditions.  This paper
     formalizes a correct definition that prevents race conditions as intended.",
 }
-
 
 
 @TechReport{ErnstLMST2015,
@@ -9259,6 +9257,81 @@ endgame.",
    "This paper describes an abstract inference and a type system and for
     inferring and checking a locking discipline, and experiments with
     implementations of each.",
+}
+
+
+@TechReport{ErnstLMSS2015:TR,
+  author = 	 "Michael D. Ernst and Alberto Lovato and Damiano Macedonio and Ciprian Spiridon and Fausto Spoto",
+  title = 	 "Boolean formulas for the static identification of injection attacks in {Java}",
+  institution =  UWCSE,
+  year = 	 2015,
+  number = 	 "UW-CSE-15-09-03",
+  address = 	 UWCSEaddr,
+  month = 	 sep,
+  abstract =
+   "The most dangerous security-related software errors, according to CWE 2011,
+    are those leading to injection attacks --- user-provided data that result
+    in undesired database access and updates (\emph{SQL-injec\-tions}), dynamic
+    generation of web pages (\emph{cross-site scripting-injections}),
+    redirection to user-specified web pages (\emph{redirect-injections}),
+    execution of OS commands (\emph{command-injections}), class loading of
+    user-specified classes (\emph{reflection-injections}), and many others.
+    This paper describes a flow- and context-sensitive static analysis that
+    automatically identifies if and where injections of tainted data can occur
+    in a program.  The analysis models explicit flows of tainted data.  Its
+    notion of taintedness applies also to reference (non-primitive) types
+    dynamically allocated in the heap, and is object-sensitive and
+    field-sensitive.  The analysis works by translating the program into
+    Boolean formulas that model all possible flows.  We implemented it within
+    the Julia analyzer for Java and Android. Julia found injection security
+    vulnerabilities in the Internet banking service and in the customer
+    relationship management of a large Italian bank.",
+  omitfromcv = "TEMPORARILY",
+  basefilename = "injection-attacks-tr150903",
+  supersededby = "ErnstLMSS2015",
+  category =  "Static analysis",
+  csetags = "mernst,mernst-Static-analysis,plse",
+  summary =
+   "This paper describes a flow- and context-sensitive static analysis that
+    automatically identifies if and where injections of tainted data can occur 
+    in a program.  The analysis models explicit flows of tainted data.",
+}
+
+
+@InProceedings{UlHaqCE2015,
+  author = 	 "Ul Haq, Irfan and Juan Caballero and Michael D. Ernst",
+  title = 	 "Ayudante: Identifying undesired variable interactions",
+  booktitle = WODA2015,
+  year = 	 2015,
+  NEEDpages = 	 "*",
+  month = 	 WODA2015date,
+  address = 	 WODA2015addr,
+  abstract =
+   "A common programming mistake is for incompatible variables to interact,
+    e.g., storing euros in a variable that should hold dollars.
+    This paper proposes a novel approach for identifying 
+    undesired interactions between program variables. 
+    Our approach uses two different mechanisms to identify related variables.
+    Natural language processing (NLP) identifies variables with related
+    names that may have related semantics.
+    Abstract type inference (ATI) identifies variables that interact with each
+    other.
+    Any discrepancies between these two mechanisms may indicate
+    a programming error.
+    \par
+    We have implemented our approach in a tool called Ayudante. 
+    We evaluated Ayudante using two open source programs: 
+    the Exim mail server and grep. 
+    Although these programs have been extensively tested and 
+    in deployment for years, Ayudante's first report for grep
+    revealed a programming mistake.",
+  basefilename = "variable-interactions-woda2015",
+  category =  "Software engineering",
+  csetags = "mernst,mernst-Software-engineering,plse",
+  summary =
+   "Two different ways of identifying related variables are those that interact
+    (such as being involved in the same + operation) and those with similar
+    variable names.  When these give different results, it can indicate a bug."
 }
 
 
@@ -9330,7 +9403,9 @@ endgame.",
     other downstream analyses was also improved.",
   basefilename = "implicit-control-flow-ase2015",
   downloads =
-   "http://types.cs.washington.edu/sparta/ SPARTA toolset;
+   "http://homes.cs.washington.edu/~mernst/pubs/implicit-control-flow-tr150801.pdf
+   TR UW-CSE-15-08-01;
+    http://types.cs.washington.edu/sparta/ SPARTA toolset;
     http://checkerframework.org/ Checker Framework",
   category =  "Static analysis",
   csetags = "rjust,smillst,plvines,wmdietl,mernst,mernst-Static-analysis,plse",
