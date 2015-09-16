@@ -9309,23 +9309,19 @@ endgame.",
   address = 	 WODA2015addr,
   abstract =
    "A common programming mistake is for incompatible variables to interact,
-    e.g., storing euros in a variable that should hold dollars.
-    This paper proposes a novel approach for identifying 
-    undesired interactions between program variables. 
-    Our approach uses two different mechanisms to identify related variables.
-    Natural language processing (NLP) identifies variables with related
-    names that may have related semantics.
-    Abstract type inference (ATI) identifies variables that interact with each
-    other.
-    Any discrepancies between these two mechanisms may indicate
-    a programming error.
+    e.g., storing euros in a variable that should hold dollars, or using an
+    array index with the wrong array.  This paper proposes a novel approach for
+    identifying undesired interactions between program variables.  Our approach
+    uses two different mechanisms to identify related variables.  Natural
+    language processing (NLP) identifies variables with related names that may
+    have related semantics.  Abstract type inference (ATI) identifies variables
+    that interact with each other.  Any discrepancies between these two
+    mechanisms may indicate a programming error.
     \par
-    We have implemented our approach in a tool called Ayudante. 
-    We evaluated Ayudante using two open source programs: 
-    the Exim mail server and grep. 
-    Although these programs have been extensively tested and 
-    in deployment for years, Ayudante's first report for grep
-    revealed a programming mistake.",
+    We have implemented our approach in a tool called Ayudante.  We evaluated
+    Ayudante using two open-source programs:  the Exim mail server and grep.
+    Although these programs have been extensively tested and in deployment for
+    years, Ayudante's first report for grep revealed a programming mistake.",
   basefilename = "variable-interactions-woda2015",
   category =  "Software engineering",
   csetags = "mernst,mernst-Software-engineering,plse",
@@ -9508,26 +9504,22 @@ endgame.",
   month = 	 LPAR2015date,
   address = 	 LPAR2015addr,
   abstract =
-   "The most dangerous security-related software errors, according
-    to CWE 2011, are those leading to injection attacks ---
-    user-provided data that result in undesired
-    database access and updates (\emph{SQL-injec\-tions}),
-    dynamic generation of web pages (\emph{cross-site scripting-injections}),
+   "The most dangerous security-related software errors, according to CWE 2011,
+    are those leading to injection attacks --- user-provided data that result
+    in undesired database access and updates (\emph{SQL-injec\-tions}), dynamic
+    generation of web pages (\emph{cross-site scripting-injections}),
     redirection to user-specified web pages (\emph{redirect-injections}),
-    execution of OS commands (\emph{command-injections}),
-    class loading of user-specified classes (\emph{reflection-injections}), and
-    many others.
+    execution of OS commands (\emph{command-injections}), class loading of
+    user-specified classes (\emph{reflection-injections}), and many others.
     This paper describes a flow- and context-sensitive static analysis that
-    automatically identifies if and where injections of tainted data can occur in a program.
-    The analysis models explicit flows of tainted data.
-    Its notion of taintedness applies also
-    to reference (non-primitive) types dynamically allocated in the heap,
-    and is object-sensitive and field-sensitive.
-    The analysis works by translating the program into
-    Boolean formulas that model all possible flows.
-    We implemented it within the Julia
-    analyzer for Java and Android. Julia found injection security vulnerabilities
-    in the Internet banking service and in the customer
+    automatically identifies if and where injections of tainted data can occur
+    in a program.  The analysis models explicit flows of tainted data.  Its
+    notion of taintedness applies also to reference (non-primitive) types
+    dynamically allocated in the heap, and is object-sensitive and
+    field-sensitive.  The analysis works by translating the program into
+    Boolean formulas that model all possible flows.  We implemented it within
+    the Julia analyzer for Java and Android. Julia found injection security
+    vulnerabilities in the Internet banking service and in the customer
     relationship management of a large Italian bank.",
   basefilename = "detect-injections-lpar2015",
   category =  "Static analysis",
