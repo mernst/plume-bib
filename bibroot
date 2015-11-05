@@ -31,6 +31,7 @@
 \include{philosophy.bib}
 \include{prefetch.bib}
 \include{proglang-seminar.bib}
+\include{program-analysis.bib}
 \include{rayside-polymorphism.bib}
 \include{security.bib}
 \include{semantics.bib}

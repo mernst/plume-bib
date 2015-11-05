@@ -8881,6 +8881,96 @@ endgame.",
 %%% 2015
 %%%
 
+@TechReport{LamZE2015,
+  author = 	 "Wing Lam and Sai Zhang and Michael D. Ernst",
+  title = 	 "When tests collide: Evaluating and coping with the impact of test dependence",
+  institution =  UWCSE,
+  year = 	 "2015",
+  number = 	 "UW-CSE-15-03-01",
+  address = 	 UWCSEaddr,
+  month = 	 mar,
+  OPTnote = 	 "",
+  OPTannote = 	 "",
+  abstract =
+   "In a test suite, all the test cases should be independent: no test should
+    affect any other test’s result, and running the tests in any order should
+    produce the same test results. The assumption of test independence is
+    important so that tests behave consistently as designed. In addition, many
+    downstream testing techniques, including test prioritization, test
+    selection, and test parallelization, assume test independence. However,
+    this critical assumption often does not hold in practice.
+    \par
+    This paper empirically investigates the impact of test dependence on three
+    downstream testing techniques (test prioritization, selection, and
+    parallelization) and proposes a general approach to cope with such
+    impact. It presents two sets of results.
+    \par
+    First, we describe an empirical study to assess the impact of test
+    dependence on 4 test prioritization, 6 test selection, and 2 test
+    parallelization algorithms. Test dependence negatively affects the results
+    of all these downstream testing algorithms. For example, an
+    automatically-generated test suite for the XML-Security program contains
+    665 tests, and 111 of those tests yield a different test result (success
+    vs. fail) if the suite is parallelized to run on 16 CPUs.
+    \par
+    Second, we present an approach that enhances each test prioritization,
+    selection, and parallelization algorithm to respect test dependence, so
+    that each test in a suite yields the same result before and after applying
+    the downstream testing technique. In an experimental evaluation, the
+    enhanced testing algorithms worked as intended: the test results were
+    consistent even in the presence of test dependence, and they did not
+    substantially compromise the effectiveness of the original testing
+    algorithms.",
+  basefilename = "deptest-impact-tr150301",
+  OPTdownloads = "",
+  OPTdownloadsnonlocal = "",
+  TOBEsupersededby = "*",
+  category =  "Testing",
+  csetags = "mernst,mernst-Testing,plse",
+  summary =
+    "This paper shows that test prioritization, selection, and parallelization
+     yield incorrect results (test suites that spuriously fail) for real-world
+     test suites, and gives an algorithm that makes those techniques correct.",
+}
+
+@InProceedings{AndersonEOPT2015,
+  author = 	 "Ruth Anderson and Michael D. Ernst and Robert Ord{\'o}{\~n}ez and Paul Pham and Ben Treibelhorn",
+  authorASCII = 	 "Ruth Anderson and Michael D. Ernst and Robert Ordonez and Paul Pham and Ben Treibelhorn",
+  title = 	 "A data programming {CS1} course",
+  booktitle =	 SIGCSE2015,
+  year = 	 2015,
+  pages = 	 "150--155",
+  month = 	 SIGCSE2015date,
+  address = 	 SIGCSE2015addr,
+  abstract =
+   "This paper reports on our experience teaching introductory programming by
+    means of real-world data analysis. We have found that students can be
+    motivated to learn programming and computer science concepts in order to
+    analyze DNA, predict the outcome of elections, detect fraudulent data,
+    suggest friends in a social network, determine the authorship of documents,
+    and more.  The approach is more than just a collection of ``nifty
+    assignments''; rather, it affects the choice of topics and pedagogy.
+    \par
+    This paper describes how our approach has been used at four diverse
+    colleges and universities to teach CS majors and non-majors alike. It
+    outlines the types of assignments, which are based on problems from
+    science, engineering, business, and the humanities. Finally, it offers
+    advice for anyone trying to integrate the approach into their own
+    institution.",
+  basefilename = "data-programming-sigcse2015",
+  downloads =
+  "http://homes.cs.washington.edu/~mernst/teaching/data-programming/ Data Programming class at UW",
+  NEEDdownloadsnonlocal = "*",
+  category =  "Education",
+  csetags = 	 "rea,mernst,mernst-Software-engineering,plse",
+  summary =
+   "This paper describes experience, at 4 colleges and universities, with an
+    approach to teaching introductory programming in which each assignment uses
+    a real-world dataset and answers a real question from science,
+    engineering, business, etc."
+}
+
+
 @Article{BeschastnikhBAEK2015,
   author = 	 "Ivan Beschastnikh and Yuriy Brun and Jenny Abrahamson and Michael D. Ernst and Arvind Krishnamurthy",
   title = 	 "Using declarative specification to improve the understanding, extensibility, and comparison of model-inference algorithms",
@@ -8927,41 +9017,46 @@ endgame.",
 }
 
 
-@InProceedings{AndersonEOPT2015,
-  author = 	 "Ruth Anderson and Michael D. Ernst and Robert Ord{\'o}{\~n}ez and Paul Pham and Ben Treibelhorn",
-  authorASCII = 	 "Ruth Anderson and Michael D. Ernst and Robert Ordonez and Paul Pham and Ben Treibelhorn",
-  title = 	 "A data programming {CS1} course",
-  booktitle =	 SIGCSE2015,
+@TechReport{BarrosJMVDdAE2015:TR-UW-CSE-15-05-01,
+  author = 	 "Paulo Barros and Ren\'e Just and Suzanne Millstein and Paul Vines and Werner Dietl and Marcelo d'Amorim and Michael D. Ernst",
+  authorASCII = 	 "Paulo Barros and Rene Just and Suzanne Millstein and Paul Vines and Werner Dietl and Marcelo d'Amorim and Michael D. Ernst",
+  title = 	 "Static analysis of implicit control flow: Resolving {Java} reflection and {Android} intents",
+  institution =  UWCSE,
   year = 	 2015,
-  pages = 	 "150--155",
-  month = 	 SIGCSE2015date,
-  address = 	 SIGCSE2015addr,
+  number = 	 "UW-CSE-15-05-01",
+  address = 	 UWCSEaddr,
+  month = 	 may,
   abstract =
-   "This paper reports on our experience teaching introductory programming by
-    means of real-world data analysis. We have found that students can be
-    motivated to learn programming and computer science concepts in order to
-    analyze DNA, predict the outcome of elections, detect fraudulent data,
-    suggest friends in a social network, determine the authorship of documents,
-    and more.  The approach is more than just a collection of ``nifty
-    assignments''; rather, it affects the choice of topics and pedagogy.
+   "Implicit or indirect control flow is a transfer of control between
+    procedures using some mechanism other than an explicit procedure call.
+    Implicit control flow is a staple design pattern that adds flexibility to
+    system design.  However, it is challenging for a static analysis to
+    compute or verify properties about a system that uses implicit control
+    flow.
     \par
-    This paper describes how our approach has been used at four diverse
-    colleges and universities to teach CS majors and non-majors alike. It
-    outlines the types of assignments, which are based on problems from
-    science, engineering, business, and the humanities. Finally, it offers
-    advice for anyone trying to integrate the approach into their own
-    institution.",
-  basefilename = "data-programming-sigcse2015",
+    This paper presents static analyses for two types of implicit control 
+    flow that frequently appear in Android apps: Java reflection and Android
+    intents.  Our analyses help to resolve where control flows and what data
+    is passed.  This information improves the precision of downstream 
+    analyses, which no longer need to make conservative assumptions about
+    implicit control flow.
+    \par
+    We have implemented our techniques for Java.  We enhanced an existing
+    security analysis with a more precise treatment of reflection and
+    intents.  In a case study involving ten real-world Android apps that use
+    both intents and reflection, precision of the security analysis was
+    increased on average by two orders of magnitude.",
+  basefilename = "implicit-control-flow-tr150801",
   downloads =
-  "http://homes.cs.washington.edu/~mernst/teaching/data-programming/ Data Programming class at UW",
-  NEEDdownloadsnonlocal = "*",
-  category =  "Education",
-  csetags = 	 "rea,mernst,mernst-Software-engineering,plse",
+   "http://types.cs.washington.edu/sparta/ SPARTA toolset;
+    http://checkerframework.org/ Checker Framework",
+  supersededby = "BarrosJMVDdAE2015",
+  category =  "Static analysis",
+  csetags = "rjust,smillst,plvines,wmdietl,mernst,mernst-Static-analysis,plse",
   summary =
-   "This paper describes experience, at 4 colleges and universities, with an
-    approach to teaching introductory programming in which each assignment uses
-    a real-world dataset and answers a real question from science,
-    engineering, business, etc."
+   "Standard program analysis understands control flow through direct procedure
+    calls.  This paper provides analyses that resolve uses of Java reflecton and
+    the data passed in Android intents.",
 }
 
 
@@ -9187,7 +9282,7 @@ endgame.",
   category =  "Static analysis",
   csetags = "rjust,smillst,plvines,wmdietl,mernst,mernst-Static-analysis,plse",
   summary =
-   "Standard program analysis understand control flow through direct procedure
+   "Standard program analysis understands control flow through direct procedure
     calls.  This paper provides analyses that resolve uses of Java reflecton and
     the data passed in Android intents.",
 }
@@ -9202,9 +9297,9 @@ endgame.",
   address = 	 UWCSEaddr,
   month = 	 sep,
   abstract =
-   "To prevent concurrency errors, programmers need to obey a locking
+   "To prevent concurrency errors, programmers need to obey a locking 
     discipline. Annotations that specify that discipline, such as Java's
-    \tetxtt{@GuardedBy}, are already widely used.  Unfortunately, their
+    \texttt{@GuardedBy}, are already widely used.  Unfortunately, their
     semantics is expressed informally and is consequently ambiguous.
     This article highlights such ambiguities and
     overcomes them by formalizing two possible semantics of \texttt{@GuardedBy},
@@ -9213,7 +9308,6 @@ endgame.",
     It also identifies when such annotations are actual guarantees against
     data races. Our work aids in understanding the annotations and supports the
     development of sound tools that verify or infer them.",
-  omitfromcv = "TEMPORARILY",
   basefilename = "locking-semantics-tr150901",
   TOBEsupersededby = "*",
   category =  "Static analysis",
@@ -9235,19 +9329,18 @@ endgame.",
   month = 	 sep,
   abstract =
    "Concurrency is a requirement for much modern software, but the
-    implementation of multithreaded algorithms comes at the risk of
-    errors such as data races. Programmers can prevent data races
-    by documenting and obeying a locking discipline, which indicates
-    which locks must be held in order to access which data.
+    implementation of multithreaded algorithms comes at the risk of errors
+    such as data races.  Programmers can prevent data races by documenting
+    and obeying a locking discipline, which indicates which locks must be
+    held in order to access which data.
     \par
-    This paper introduces a formal semantics for locking specifications
-    that gives a guarantee of race freedom. The paper also provides
-    two implementations of the formal semantics for the Java language:
-    one based on abstract interpretation and one based on type theory. To
-    the best of our knowledge, these are the first tools that can soundly
-    infer and check a locking discipline for Java. Our experiments
-    compare the implementations with one another and with annotations
-    written by programmers.",
+    This paper introduces a formal semantics for locking specifications that
+    gives a guarantee of race freedom.  The paper also provides two
+    implementations of the formal semantics for the Java language:  one based
+    on abstract interpretation and one based on type theory.  To the best of
+    our knowledge, these are the first tools that can soundly infer and check
+    a locking discipline for Java.  Our experiments compare the implementations
+    with one another and with annotations written by programmers.",
   omitfromcv = "TEMPORARILY",
   basefilename = "locking-inference-checking-tr150902",
   TOBEsupersededby = "*",
@@ -9304,7 +9397,7 @@ endgame.",
   title = 	 "Ayudante: Identifying undesired variable interactions",
   booktitle = WODA2015,
   year = 	 2015,
-  NEEDpages = 	 "*",
+  pages = 	 "8--13",
   month = 	 WODA2015date,
   address = 	 WODA2015addr,
   abstract =
@@ -9407,7 +9500,7 @@ endgame.",
   category =  "Static analysis",
   csetags = "rjust,smillst,plvines,wmdietl,mernst,mernst-Static-analysis,plse",
   summary =
-   "Standard program analysis understand control flow through direct procedure
+   "Standard program analysis understands control flow through direct procedure
     calls.  This paper provides analyses that resolve uses of Java reflecton and
     the data passed in Android intents.",
 }
