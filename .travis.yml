@@ -11,4 +11,4 @@ notifications:
 addons:
   apt:
     packages:
-    - bibtex
+      - bibtex
