@@ -12,3 +12,4 @@ addons:
   apt:
     packages:
       - texlive
+      - texlive-latex-extra
