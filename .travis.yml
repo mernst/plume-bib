@@ -1,0 +1,9 @@
+language: java
+
+script: make test
+
+sudo: false
+
+notifications:
+  email:
+    - mernst@cs.washington.edu
