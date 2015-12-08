@@ -42,7 +42,8 @@ bibtest.tex: *.bib
 test: bibtest
 bibtest: all bibtest-aux-clean bibtest.tex
 	@echo -n 'First latex run, suppressing warnings...'
-	latex -interaction=batchmode bibtest >/dev/null 2>&1
+#	@-latex -interaction=batchmode bibtest >/dev/null 2>&1
+	latex bibtest
 	@echo 'done'
 	bibtex -terse bibtest
 	@echo -n 'Second latex run, suppressing warnings...'
