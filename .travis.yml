@@ -8,6 +8,7 @@ notifications:
   email:
     - mernst@cs.washington.edu
 
-before_install:
-  - sudo apt-get update -qq
-  - sudo apt-get install -y bibtex
+addons:
+  apt:
+    packages:
+    - bibtex
