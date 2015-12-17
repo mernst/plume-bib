@@ -3,13 +3,12 @@ language: java
 script: make test
 
 sudo: false
-
-notifications:
-  email:
-    - mernst@cs.washington.edu
-
 addons:
   apt:
     packages:
       - texlive
       - texlive-latex-extra
+
+notifications:
+  email:
+    - mernst@cs.washington.edu
