@@ -9440,7 +9440,7 @@ endgame.",
   basefilename = "locking-semantics-tr150901",
   downloadsnonlocal =
    "http://homes.cs.washington.edu/~mernst/pubs/locking-semantics-tr150901.pdf PDF",
-  TOBEsupersededby = "*",
+  supersededby = "ErnstMMS2016",
   category =  "Static analysis",
   csetags = "mernst,jthaine,mernst-Static-analysis,plse",
   summary =
@@ -9778,6 +9778,52 @@ endgame.",
 %%% 2016
 %%%
 
+@InProceedings{WoosWATEA2016,
+  author = 	 "Doug Woos and James R. Wilcox and Steve Anton and Zachary Tatlock and Michael D. Ernst and Thomas Anderson",
+  title = 	 "Planning for change in a formal verification of the {Raft} consensus protocol",
+  booktitle = CPP2016,
+  year = 	 2016,
+  NEEDpages = 	 "*",
+  month = 	 CPP2016date,
+  address = 	 CPP2016addr,
+  abstract =
+   "We present the first formal verification of state machine safety for
+    the Raft consensus protocol, a critical component of many distributed
+    systems.  We connected our proof to previous work to establish an
+    end-to-end guarantee that our implementation provides linearizable
+    state machine replication.  This proof required iteratively discovering
+    and proving 90 system invariants.  Our verified implementation
+    is extracted to OCaml and runs on real networks.
+    \par
+    The primary challenge we faced during the verification process
+    was proof maintenance, since proving one invariant often required
+    strengthening and updating other parts of our proof.  To address this
+    challenge, we propose a methodology of planning for change during
+    verification.  Our methodology adapts classical information hiding
+    techniques to the context of proof assistants, factors out common
+    invariant-strengthening patterns into custom induction principles,
+    proves higher-order lemmas that show any property proved about a
+    particular component implies analogous properties about related
+    components, and makes proofs robust to change using structural
+    tactics.  We also discuss how our methodology may be applied to
+    systems verification more broadly.",
+  basefilename = "raft-proof-cpp2016",
+  downloadsnonlocal =
+   "http://homes.cs.washington.edu/~mernst/pubs/raft-proof-cpp2016.pdf PDF;
+    http://homes.cs.washington.edu/~mernst/pubs/raft-proof-cpp2016-slides.pdf slides (PDF)",
+  downloads =
+    "http://verdi.uwplse.org/ Verdi website;
+     https://github.com/uwplse/verdi Verdi implementation;
+     https://github.com/uwplse/verdi/tree/cpp2015 Raft implementation and proofs",
+  category =  "Verification",
+  csetags = 	 "jrw12,dwoos,pavpan,ztatlock,xi,mernst,tom,mernst-Verification,plse",
+  summary =
+   "This paper provides a formal proof of correctness for a runnable
+    implementation of the widely-used Raft consensus algorithm. It also discusses
+    how to manage the incremental process of constructing such a proof.",
+}
+
+
 @TechReport{WeitzWTEKT2016:TR,
   author = 	 "Konstantin Weitz and Doug Woos and Emina Torlak and Michael D. Ernst and Arvind Krishnamurthy and Zachary Tatlock",
   title = 	 "Bagpipe: Verified {BGP} configuration checking",
@@ -9829,49 +9875,37 @@ endgame.",
 }
 
 
-@InProceedings{WoosWATEA2016,
-  author = 	 "Doug Woos and James R. Wilcox and Steve Anton and Zachary Tatlock and Michael D. Ernst and Thomas Anderson",
-  title = 	 "Planning for change in a formal verification of the {Raft} consensus protocol",
-  booktitle = CPP2016,
-  year = 	 2016,
-  NEEDpages = 	 "*",
-  month = 	 CPP2016date,
-  address = 	 CPP2016addr,
+@Article{BeschastnikhWBE2016,
+  author =       "Ivan Beschastnikh and Patty Wang and Yuriy Brun and Michael D. Ernst",
+  title =        "Debugging distributed systems: Challenges and options for
+  validation and debugging",
+  journal =      acmqueue,
+  year =         2016,
+  volume =    14,
+  number =    2,
+  pages =     "91-110",
+  month =     mar # "/" # apr,
   abstract =
-   "We present the first formal verification of state machine safety for
-    the Raft consensus protocol, a critical component of many distributed
-    systems.  We connected our proof to previous work to establish an
-    end-to-end guarantee that our implementation provides linearizable
-    state machine replication.  This proof required iteratively discovering
-    and proving 90 system invariants.  Our verified implementation
-    is extracted to OCaml and runs on real networks.
-    \par
-    The primary challenge we faced during the verification process
-    was proof maintenance, since proving one invariant often required
-    strengthening and updating other parts of our proof.  To address this
-    challenge, we propose a methodology of planning for change during
-    verification.  Our methodology adapts classical information hiding
-    techniques to the context of proof assistants, factors out common
-    invariant-strengthening patterns into custom induction principles,
-    proves higher-order lemmas that show any property proved about a
-    particular component implies analogous properties about related
-    components, and makes proofs robust to change using structural
-    tactics.  We also discuss how our methodology may be applied to
-    systems verification more broadly.",
-  basefilename = "raft-proof-cpp2016",
-  downloadsnonlocal =
-   "http://homes.cs.washington.edu/~mernst/pubs/raft-proof-cpp2016.pdf PDF;
-    http://homes.cs.washington.edu/~mernst/pubs/raft-proof-cpp2016-slides.pdf slides (PDF)",
+   "Distributed systems pose unique challenges for software
+    developers. Reasoning about concurrent activities of system nodes and even
+    understanding the system's communication topology can be difficult. A
+    standard approach to gaining insight into system activity is to analyze
+    system logs. Unfortunately, this can be a tedious and complex process. This
+    article looks at several key features and debugging challenges that
+    differentiate distributed systems from other kinds of software. The article
+    presents several promising tools and ongoing research to help resolve these
+    challenges.",
+  basefilename = "debug-distributed-queue2016",
   downloads =
-    "http://verdi.uwplse.org/ Verdi website;
-     https://github.com/uwplse/verdi Verdi implementation;
-     https://github.com/uwplse/verdi/tree/cpp2015 Raft implementation and proofs",
-  category =  "Verification",
-  csetags = 	 "jrw12,dwoos,pavpan,ztatlock,xi,mernst,tom,mernst-Verification,plse",
+   "http://bestchai.bitbucket.org/shiviz/ online deployment (try it!);
+    https://bitbucket.org/bestchai/shiviz ShiVector and ShiViz source code;
+    http://bestchai.bitbucket.org/shiviz-demo/ video demo (YouTube)",
+  category =  "Invariant detection",
+  csetags = "ivanb,brun,mernst,mernst-Software-engineering,proj-synoptic,plse",
   summary =
-   "This paper provides a formal proof of correctness for a runnable
-    implementation of the widely-used Raft consensus algorithm. It also discusses
-    how to manage the incremental process of constructing such a proof.",
+   "This paper presents two dools to help developers comprehend distributed
+    systems:  ShiVector to add vector timestamps to distributed system logs
+    and ShiViz to visualize such logs as space-time diagrams.",
 }
 
 
@@ -9917,6 +9951,41 @@ endgame.",
 }
 
 
+@InProceedings{ErnstMMS2016,
+  author = 	 "Michael D. Ernst and Damiano Macedonio and Massimo Merro and Fausto Spoto",
+  title = 	 "Semantics for locking specifications",
+  booktitle = NFM2016,
+  year =      2016,
+  NEEDpages =     "*",
+  month =     NFM2016date,
+  address =   NFM2016addr,
+  abstract =
+   "To prevent concurrency errors, programmers need to obey a locking
+    discipline.  Annotations that specify that discipline, such as Java's
+    \texttt{@GuardedBy}, are already widely used.  Unfortunately, their
+    semantics is expressed informally and is consequently ambiguous.  This
+    article highlights such ambiguities and overcomes them by formalizing
+    two possible semantics of \texttt{@GuardedBy}, using a reference
+    operational semantics for a core calculus of a concurrent Java-like
+    language.  It also identifies when such annotations are actual
+    guarantees against data races.  Our work aids in understanding the
+    annotations and supports the development of sound tools that verify or
+    infer them.",
+  basefilename = "locking-semantics-nfm2016",
+  downloads =
+   "http://www.juliasoft.com/users inference implementation;
+    http://checkerframework.org/ checking implementation",
+  TODOdownloadsnonlocal =
+   "http://homes.cs.washington.edu/~mernst/pubs/locking-semantics-nfm2016.pdf PDF",
+  category =  "Static analysis",
+  csetags = "mernst,mernst-Static-analysis,plse",
+  summary =
+   "Java's @GuardedBy annotation is intended to prevent race conditions, but
+    current tools give it a definition that permits race conditions.  This paper
+    formalizes a correct definition that prevents race conditions as intended.",
+}
+
+
 @InProceedings{LoncaricTE2016,
   author = 	 "Calvin Loncaric and Emina Torlak and Michael D. Ernst",
   title = 	 "Fast synthesis of fast collections",
@@ -9934,10 +10003,14 @@ endgame.",
     Our approach handles a wider range of data structures than previous work,
     including structures that maintain an order among their elements or have
     complex retrieval methods. We have prototyped our approach in a data
-    structure synthesizer called Cozy.  Three large, real-world case
+    structure synthesizer called Cozy.  Four large, real-world case
     studies compare structures generated by Cozy against
-    handwritten implementations in terms of correctness and performance.",
+    handwritten implementations in terms of correctness and performance.
+    Structures synthesized by Cozy match the performance of handwritten
+    data structures while avoiding human error.",
   basefilename = "collection-synthesis-pldi2016",
+  downloads =
+   "https://github.com/uwplse/cozy implementation",
   category = "Static analysis",
   FUTUREcategory =  "Synthesis",
   csetags = 	 "loncaric,emina,mernst,mernst-Static-analysis,plse",
@@ -9946,6 +10019,79 @@ endgame.",
     and query operations, and produces as output an efficient implementation.
     Cozy decomposes the problem into two parts by first synthesizing an
     ``outline'' in terms of high-level operations.",
+}
+
+
+@InProceedings{ErnstGGP2016,
+  author =       "Michael D. Ernst and Alberto Goffi and Alessandra Gorla and Mauro Pezz{\`e}",
+  authorASCII1 =       "Michael D. Ernst and Alberto Goffi and Alessandra Gorla and Mauro Pezze",
+  authorASCII2 =       "Michael D. Ernst and Alberto Goffi and Alessandra Gorla and Mauro Pezzè",
+  title =        "Automatic generation of oracles for exceptional behaviors",
+  booktitle = ISSTA2016,
+  year =      2016,
+  NEEDpages =     "*",
+  month =     ISSTA2016date,
+  address =   ISSTA2016addr,
+  abstract =
+   "Test suites should test exceptional behavior to detect
+    faults in error-handling code. However, manually-written test suites
+    tend to neglect exceptional behavior. Automatically-generated test
+    suites, on the other hand, lack test oracles that verify whether
+    runtime exceptions are the expected behavior of the code under test. 
+    \par
+    This paper proposes a technique that automatically creates test oracles
+    for exceptional behaviors from Javadoc comments.  The technique uses a
+    combination of natural language processing and program analysis.  Our
+    implementation, Toradocu, can be combined with a test input generation
+    tool.  Our experimental evaluation shows that Toradocu improves the
+    fault-finding effectiveness of automatically-generated test suites, while
+    at the same time reducing the number of false positives.",
+  basefilename = "exception-oracles-issta2016",
+  downloads = "https://github.com/albertogoffi/toradocu.git Implementation",
+  category =  "Testing",
+  csetags = "mernst,mernst-Testing,plse",
+  summary =
+   "This paper gives a technique that converts English documentation about
+    thrown exceptions (say, expressed in Javadoc) into assertions that determine
+    whether a program throws the correct exceptions."
+}
+
+
+@InProceedings{PernsteinerLTTWEJ2016,
+  author =       "Stuart Pernsteiner and Calvin Loncaric and Emina Torlak and Zachary Tatlock and Xi Wang and Michael D. Ernst and Jonathan Jacky",
+  title =        "Investigating safety of a radiotherapy machine using system models with pluggable checkers",
+  booktitle = CAV2016,
+  year =      2016,
+  NEEDpages =     "*",
+  month =     CAV2016date,
+  address =   CAV2016addr,
+  abstract =
+   "Formal techniques for guaranteeing software correctness have made
+    tremendous progress in recent decades.
+    However, applying these techniques to existing, real-world safety-critical
+    systems remains challenging in practice.
+    Inspired by goals set out in prior work, we report on a large-scale case
+    study that applies modern verification techniques to check safety
+    properties of a radiotherapy system in current clinical use.
+    Because of the diversity and complexity of system components (software,
+    hardware, and physical), no single tool was suitable for checking critical
+    cross-component safety properties.
+    This paper describes how we used state-of-the-art approaches to develop
+    specialized tools for checking different components and an extensible
+    Safety Case Checker (SCC) for composing the properties checked for each
+    component.
+    We describe the key design decisions that diverged from previous approaches
+    and that enabled us to practically apply our approach to provide
+    machine-checked guarantees.
+    Our case study uncovered subtle safety-critical flaws in a pre-release of
+    the latest version of the radiotherapy system's control software.",
+  basefilename = "neutrons-cav2016",
+  category =  "Verification",
+  csetags =   "spernste,loncaric,emina,ztatlock,xi,mernst",
+  summary =
+   "This paper describes a site of tools that we built to verify properties
+    of a clinical radiotherapy system, and a Safety Case Checker (SCC) that
+    connects them into a end-to-end safety argument.",
 }
 
 

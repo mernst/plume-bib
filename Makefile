@@ -50,6 +50,10 @@ bibtest: all bibtest-aux-clean bibtest.tex
 	@echo 'done'
 	@echo 'Third latex run, now warnings matter:'
 	latex -interaction=batchmode bibtest
+# This doesn't work.  I don't want non-ASCII characters within used fields of
+# bib entries, but elsewhere in the file, and in the authorASCII field, is OK.
+# chartest:
+# 	grep -P "[\x80-\xFF]" *.bib
 
 PUBS_SRC ?= /afs/csail.mit.edu/group/pag/www/pubs-src
 
