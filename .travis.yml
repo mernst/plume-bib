@@ -12,3 +12,6 @@ addons:
 notifications:
   email:
     - mernst@cs.washington.edu
+
+git:
+  depth: 3
