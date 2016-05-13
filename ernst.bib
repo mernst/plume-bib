@@ -4286,7 +4286,7 @@ endgame.",
 
 
 @Misc{Randoop-manual-2.1.1,
-  author = 	 "Randoop Developers",
+  author = 	 "{Randoop Developers}",
   title = 	 "Randoop Manual",
   howpublished = "\url{https://randoop.github.io/randoop/manual/}",
   month = 	 jan,
@@ -9960,17 +9960,15 @@ endgame.",
   month =     NFM2016date,
   address =   NFM2016addr,
   abstract =
-   "To prevent concurrency errors, programmers need to obey a locking
-    discipline.  Annotations that specify that discipline, such as Java's
-    \texttt{@GuardedBy}, are already widely used.  Unfortunately, their
-    semantics is expressed informally and is consequently ambiguous.  This
-    article highlights such ambiguities and overcomes them by formalizing
-    two possible semantics of \texttt{@GuardedBy}, using a reference
-    operational semantics for a core calculus of a concurrent Java-like
-    language.  It also identifies when such annotations are actual
-    guarantees against data races.  Our work aids in understanding the
-    annotations and supports the development of sound tools that verify or
-    infer them.",
+   "Lock-based synchronization disciplines, like Java's \texttt{@GuardedBy},
+    are widely used to prevent concurrency errors.  However, their semantics is
+    often expressed informally and is consequently ambiguous.  This article
+    highlights such ambiguities and overcomes them by formalizing two possible
+    semantics of \texttt{@GuardedBy}, using a reference operational semantics
+    for a core calculus of a concurrent Java-like language.  It also identifies
+    when such annotations are actual guarantees against data races. Our work
+    aids in understanding the annotations and supports the development of sound
+    tools that verify or infer them.",
   basefilename = "locking-semantics-nfm2016",
   downloads =
    "http://www.juliasoft.com/users inference implementation;
@@ -10047,7 +10045,7 @@ endgame.",
     fault-finding effectiveness of automatically-generated test suites, while
     at the same time reducing the number of false positives.",
   basefilename = "exception-oracles-issta2016",
-  downloads = "https://github.com/albertogoffi/toradocu Implementation",
+  downloads = "https://github.com/albertogoffi/toradocu implementation",
   category =  "Testing",
   csetags = "mernst,mernst-Testing,plse",
   summary =
@@ -10066,20 +10064,21 @@ endgame.",
   month =     CAV2016date,
   address =   CAV2016addr,
   abstract =
-   "Formal techniques for guaranteeing software correctness have made
+    "Formal techniques for guaranteeing software correctness have made
     tremendous progress in recent decades.
-    However, applying these techniques to existing, real-world safety-critical
+    However, applying these techniques to real-world safety-critical
     systems remains challenging in practice.
     Inspired by goals set out in prior work, we report on a large-scale case
     study that applies modern verification techniques to check safety
     properties of a radiotherapy system in current clinical use.
-    Because of the diversity and complexity of system components (software,
-    hardware, and physical), no single tool was suitable for checking critical
-    cross-component safety properties.
+    Because of the diversity and complexity of the system's components (software,
+    hardware, and physical), no single tool was suitable for both checking
+    critical component properties and ensuring that their composition
+    implies critical system properties.
     This paper describes how we used state-of-the-art approaches to develop
-    specialized tools for checking different components and an extensible
-    Safety Case Checker (SCC) for composing the properties checked for each
-    component.
+    specialized tools for verifying safety properties of individual components,
+    as well as an extensible tool for composing those properties to check the
+    safety of the system as a whole. 
     We describe the key design decisions that diverged from previous approaches
     and that enabled us to practically apply our approach to provide
     machine-checked guarantees.
@@ -10087,12 +10086,35 @@ endgame.",
     the latest version of the radiotherapy system's control software.",
   basefilename = "neutrons-cav2016",
   category =  "Verification",
-  csetags =   "spernste,loncaric,emina,ztatlock,xi,mernst",
+  csetags =   "spernste,loncaric,emina,ztatlock,xi,mernst,mernst-Verification,plse",
   summary =
    "This paper describes a site of tools that we built to verify properties
     of a clinical radiotherapy system, and a Safety Case Checker (SCC) that
     connects them into a end-to-end safety argument.",
 }
+
+
+@InProceedings{WeitzWTEKT2016:NetPL,
+  author = 	 "Konstantin Weitz and Doug Woos and Emina Torlak and Michael D. Ernst and Arvind Krishnamurthy and Zachary Tatlock",
+  title =        "Formal Semantics and Automated Verification for the {Border} {Gateway} {Protocol}",
+  booktitle = NetPL2016,
+  year =      2016,
+  NEEDpages =     "*",
+  month =     NetPL2016date,
+  address =   NetPL2016addr,
+  basefilename = "bagpipe-overview-netpl2016",
+  downloads =
+   "https://github.com/uwplse/uwplse-bagpipe Bagpipe implementation",
+  supersededby = "WeitzWTEKT2016:TR an overview",
+  TOBEsupersededby = "some real publication",
+  category =  "Verification",
+  csetags = 	 "weitzkon,dwoos,emina,mernst,arvind,ztatlock,mernst-Verification,plse",
+  summary =
+   "This brief paper overviews the Bagpipe project, which does
+    formal verification of control-plane policies for BGP configurations.",
+}
+
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
