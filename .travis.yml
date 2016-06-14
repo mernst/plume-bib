@@ -9,9 +9,5 @@ addons:
       - texlive
       - texlive-latex-extra
 
-notifications:
-  email:
-    - mernst@cs.washington.edu
-
 git:
   depth: 3
