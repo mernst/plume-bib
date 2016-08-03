@@ -6394,7 +6394,7 @@ endgame.",
   downloads =
     "ftp://ftp.cs.washington.edu/tr/2010/02/UW-CSE-10-02-01.PDF earlier TR with additional details",
   OLDdownloads =
-    "http://www.juliasoft.com/users implementation;
+    "https://portal.juliasoft.com/ implementation;
      ftp://ftp.cs.washington.edu/tr/2010/02/UW-CSE-10-02-01.PDF earlier TR with additional details",
   OPTdownloadsnonlocal = "",
   category =  "Static analysis",
@@ -9868,6 +9868,7 @@ endgame.",
    "https://github.com/uwplse/uwplse-bagpipe Bagpipe implementation",
   downloadsnonlocal =
    "http://homes.cs.washington.edu/~mernst/pubs/bgp-configuration-tr160101.pdf PDF",
+  supersededby = "WeitzWTEKT2016",
   category =  "Verification",
   csetags = 	 "weitzkon,dwoos,emina,mernst,arvind,ztatlock,mernst-Verification,plse",
   summary =
@@ -9877,7 +9878,7 @@ endgame.",
 }
 
 
-@Article{BeschastnikhWBE2016,
+@Article{BeschastnikhWBE2016acmqueue,
   author =       "Ivan Beschastnikh and Patty Wang and Yuriy Brun and Michael D. Ernst",
   title =        "Debugging distributed systems: Challenges and options for
   validation and debugging",
@@ -9902,6 +9903,7 @@ endgame.",
    "http://bestchai.bitbucket.org/shiviz/ online deployment (try it!);
     https://bitbucket.org/bestchai/shiviz ShiVector and ShiViz source code;
     http://bestchai.bitbucket.org/shiviz-demo/ video demo (YouTube)",
+  supersededby = "BeschastnikhWBE2016",
   category =  "Invariant detection",
   csetags = "ivanb,brun,mernst,mernst-Software-engineering,proj-synoptic,plse",
   summary =
@@ -9944,7 +9946,7 @@ endgame.",
   downloads =
    "http://checkerframework.org/ checking implementation",
   OLDdownloads =
-   "http://www.juliasoft.com/users inference implementation;
+   "https://portal.juliasoft.com/ inference implementation;
     http://checkerframework.org/ checking implementation",
   category =  "Static analysis",
   csetags = "mernst,jthaine,mernst-Static-analysis,plse",
@@ -9977,7 +9979,7 @@ endgame.",
   downloads =
    "http://checkerframework.org/ checking implementation",
   OLDdownloads =
-   "http://www.juliasoft.com/users inference implementation;
+   "https://portal.juliasoft.com/ inference implementation;
     http://checkerframework.org/ checking implementation",
   TODOdownloadsnonlocal =
    "http://homes.cs.washington.edu/~mernst/pubs/locking-semantics-nfm2016.pdf PDF",
@@ -10101,6 +10103,40 @@ endgame.",
 }
 
 
+@Article{BeschastnikhWBE2016,
+  author =       "Ivan Beschastnikh and Patty Wang and Yuriy Brun and Michael D. Ernst",
+  title =        "Debugging distributed systems: Challenges and options for validation and debugging",
+  journal =      cacm,
+  year =         2016,
+  volume =    59,
+  number =    8,
+  pages =     "32--37",
+  month =    aug,
+  abstract =
+   "Distributed systems pose unique challenges for software
+    developers. Reasoning about concurrent activities of system nodes and even
+    understanding the system's communication topology can be difficult. A
+    standard approach to gaining insight into system activity is to analyze
+    system logs. Unfortunately, this can be a tedious and complex process. This
+    article looks at several key features and debugging challenges that
+    differentiate distributed systems from other kinds of software. The article
+    presents several promising tools and ongoing research to help resolve these
+    challenges.",
+  basefilename = "debug-distributed-cacm2016",
+  downloads =
+   "http://bestchai.bitbucket.org/shiviz/ online deployment (try it!);
+    https://bitbucket.org/bestchai/shiviz ShiVector and ShiViz source code;
+    http://bestchai.bitbucket.org/shiviz-demo/ video demo (YouTube)",
+  category =  "Invariant detection",
+  csetags = "ivanb,brun,mernst,mernst-Software-engineering,proj-synoptic,plse",
+  summary =
+   "This paper presents two dools to help developers comprehend distributed
+    systems:  ShiVector to add vector timestamps to distributed system logs
+    and ShiViz to visualize such logs as space-time diagrams.",
+}
+
+
+
 @InProceedings{WeitzWTEKT2016:NetPL,
   author = 	 "Konstantin Weitz and Doug Woos and Emina Torlak and Michael D. Ernst and Arvind Krishnamurthy and Zachary Tatlock",
   title =        "Formal Semantics and Automated Verification for the {Border} {Gateway} {Protocol}",
@@ -10112,8 +10148,7 @@ endgame.",
   basefilename = "bagpipe-overview-netpl2016",
   downloads =
    "https://github.com/uwplse/uwplse-bagpipe Bagpipe implementation",
-  supersededby = "WeitzWTEKT2016:TR An overview",
-  TOBEsupersededby = "some real publication",
+  supersededby = "WeitzWTEKT2016 An overview",
   category =  "Verification",
   csetags = 	 "weitzkon,dwoos,emina,mernst,arvind,ztatlock,mernst-Verification,plse",
   summary =
@@ -10122,6 +10157,60 @@ endgame.",
 }
 
 
+@InProceedings{WeitzWTEKT2016,
+  author = 	 "Konstantin Weitz and Doug Woos and Emina Torlak and Michael D. Ernst and Arvind Krishnamurthy and Zachary Tatlock",
+  title =        "Scalable Verification of {Border} {Gateway} {Protocol} Configurations
+with an {SMT} Solver",
+  OPTcrossref =  "",
+  OPTkey =       "",
+  OPTbooktitle = OOPSLA2016,
+  OPTyear =      "2016",
+  OPTeditor =    "",
+  OPTvolume =    "",
+  OPTnumber =    "",
+  OPTseries =    "",
+  NEEDpages =     "*",
+  OPTmonth =     OOPSLA2016date,
+  OPTaddress =   OOPSLA2016addr,
+  OPTorganization = "",
+  OPTpublisher = "",
+  OPTnote =      "",
+  OPTannote =    "",
+  abstract =
+   "To route traffic across the Internet reliably and securely, Internet
+    Service Providers (ISPs) must configure their Border Gateway Protocol (BGP)
+    routers to implement policies restricting how routing announcements can be
+    used and exchanged with other ISPs.  Correctly implementing these policies
+    in router configurations has proven challenging in practice, and
+    misconfiguration has led to extended worldwide outages and traffic hijacks.
+    \par
+    This paper presents Bagpipe, the first system that enables ISPs to
+    declaratively express control-plane policies and that automatically
+    verifies that router configurations implement such policies.  The novel
+    initial network reduction soundly reduces policy verification to a search
+    for counterexamples in a finite space.  An SMT-based symbolic execution
+    engine performs this search efficiently. Bagpipe reduces the size of its
+    search space using predicate abstraction and parallelizes its search using
+    symbolic variable hoisting.
+    \par
+    Bagpipe's specification language is expressive: it can check all the BGP
+    configuration scenarios in the Juniper TechLibrary that relate to required
+    BGP functionality (i.e., not optional features or Juniper extensions).
+    Bagpipe is efficient: we ran it on three ASes with a total of over 240,000
+    lines of Cisco and Juniper BGP configuration.  Bagpipe is effective: it
+    revealed totalInconsistencies policy violations without issuing any false
+    positives.",
+  OPTbasefilename = "bgp-configuration-oopsla2016",
+  downloads =
+   "https://github.com/uwplse/uwplse-bagpipe Bagpipe implementation",
+  downloadsnonlocalTODO = "*",
+  category =  "Verification",
+  csetags = 	 "weitzkon,dwoos,emina,mernst,arvind,ztatlock,mernst-Verification,plse",
+  summary =
+   "This paper presents Bagpipe, a verification tool for BGP configurations.
+    Bagpipe has been proven correct, which required a mechanised semantics for
+    BGP.  Bagpipe found multiple errors in real-world BGP configurations.",
+}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
