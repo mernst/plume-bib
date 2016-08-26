@@ -10157,6 +10157,64 @@ endgame.",
 }
 
 
+@TechReport{PearsonCJFAEPK2016,
+  author =       "Spencer Pearson and Jos\'e Campos and Ren\'e Just and Gordon Fraser and Rui Abreu and Michael D. Ernst and Deric Pang and Benjamin Keller",
+  authorASCII =       "Spencer Pearson and Jose Campos and Rene Just and Gordon Fraser and Rui Abreu and Michael D. Ernst and Deric Pang and Benjamin Keller",
+  title =        "Evaluating fault localization techniques",
+  institution =  UWCSE,
+  year =         "2016",
+  OPTkey =       "",
+  OPTtype =      "",
+  number = 	 "UW-CSE-16-08-XX",
+  address =   UWCSEaddr,
+  month =     aug,
+  OPTnote =      "",
+  OPTannote =    "",
+  abstract =
+   "A fault localization technique takes as input a faulty program, and it
+    produces as output a ranked list of suspicious code locations at which the
+    program may be defective.  When researchers propose a new fault
+    localization technique, they evaluate it on programs with known faults;
+    they score the technique based on where in its output list the actual
+    defect appears.  This enables comparison of multiple fault localization
+    techniques to determine which one is better.
+    \par
+    Previous research has evaluated fault localization techniques using
+    artificial faults, called mutants, generated either by mutation tools or
+    manually.  In other words, previous research has determined which fault
+    localization techniques are best at finding artificial faults.  However, it
+    is not known which fault localization techniques are best at finding real
+    faults.  It is not obvious that the answer is the same, given previous work
+    showing that artificial faults have both similarities to and differences
+    from real faults.
+    \par
+    We evaluated 7 previously-studied fault localization
+    techniques, applying them to 297 real
+    faults and 2273 artificial
+    faults in 5 real-world programs.  In our experiments, artificial faults
+    were not useful for predicting which fault localization techniques perform
+    best on real faults.
+    \par
+    In light of these results, we identify a design space that includes many
+    previously-studied fault localization techniques as well as hundreds of new
+    techniques, and we evaluate the techniques in this space on real faults. We
+    find several novel techniques that outperform all existing techniques in
+    this context.",
+  OPTomitfromcv = "",
+  basefilename = "fault-localization-tr1608XX",
+  OPTdownloads = "",
+  OPTdownloadsnonlocal = "",
+  TOBEsupersededby = "PearsonCJFAEPK2017",
+  category =  "Testing",
+  csetags = 	 "suspense,mernst,dericp,bjkeller,mernst-Testing,plse",
+  summary =
+   "Previously, fault localization techniques were evaluated on artificial faults,
+    called mutants.  None of the previous results holds for real faults,
+    indicating that artificial faults should not be used to evaluate fault
+    localization techniques.",
+}
+
+
 @InProceedings{WeitzWTEKT2016,
   author = 	 "Konstantin Weitz and Doug Woos and Emina Torlak and Michael D. Ernst and Arvind Krishnamurthy and Zachary Tatlock",
   title =        "Scalable Verification of {Border} {Gateway} {Protocol} Configurations
