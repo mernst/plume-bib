@@ -4440,13 +4440,11 @@ endgame.",
   category =	 "Security",
   csetags = "mernst,mernst-Security,plse",
   summary =
-   "A dynamic analysis of information flow (e.g., end-to-end
-   confidentiality) is sound if its estimates of the amount of
-   information revealed can never be too low.  This paper proves such
-   a soundness result by simulating an analyzed program with a pair
-   copies connected by a limited-bandwidth channel.",
+   "A dynamic analysis of information flow (e.g., end-to-end confidentiality) is
+    sound if its estimates of the amount of information revealed can never be too
+    too low.  This paper proves such a soundness result by simulating an analyzed
+    program with a pair copies connected by a limited-bandwidth channel.",
 }
-
 
 
 @InProceedings{ZibinPAAKE2007,
@@ -9981,7 +9979,7 @@ endgame.",
   OLDdownloads =
    "https://portal.juliasoft.com/ inference implementation;
     http://checkerframework.org/ checking implementation",
-  TODOdownloadsnonlocal =
+  downloadsnonlocal =
    "http://homes.cs.washington.edu/~mernst/pubs/locking-semantics-nfm2016.pdf PDF",
   category =  "Static analysis",
   csetags = "mernst,mernst-Static-analysis,plse",
@@ -10163,24 +10161,20 @@ endgame.",
   title =        "Evaluating \& improving fault localization techniques",
   institution =  UWCSE,
   year =         "2016",
-  OPTkey =       "",
-  OPTtype =      "",
   number = 	 "UW-CSE-16-08-03",
   address =   UWCSEaddr,
   month =     aug,
-  OPTnote =      "",
-  OPTannote =    "",
   abstract =
    "A fault localization technique takes as input a faulty program, and it
     produces as output a ranked list of suspicious code locations at which the
     program may be defective.  When researchers propose a new fault
     localization technique, they evaluate it on programs with known faults;
-    they score the technique based on where in its output list the actual
-    defect appears.  This enables comparison of multiple fault localization
+    they score the technique based on where in its output list the defective
+    code appears.  This enables comparison of multiple fault localization
     techniques to determine which one is better.
     \par
     Previous research has evaluated fault localization techniques using
-    artificial faults, called mutants, generated either by mutation tools or
+    artificial faults, generated either by mutation tools or
     manually.  In other words, previous research has determined which fault
     localization techniques are best at finding artificial faults.  However, it
     is not known which fault localization techniques are best at finding real
@@ -10188,30 +10182,70 @@ endgame.",
     showing that artificial faults have both similarities to and differences
     from real faults.
     \par
-    We evaluated 7 previously-studied fault localization
-    techniques, applying them to 297 real
-    faults and 2273 artificial
-    faults in 5 real-world programs.  In our experiments, artificial faults
-    were not useful for predicting which fault localization techniques perform
-    best on real faults.
+    We performed a replication study to evaluate 10 claims in the literature
+    that compared fault localization techniques.  We used
+    2273 artificial
+    faults in 5 real-world programs.  Our results refute 3 of
+    the previous claims.  Then, we evaluated the same 10 claims, using
+    297 \emph{real} faults from the
+    5 programs.  Every previous result was refuted or was
+    statistically insignificant.  In other words, our experiments show that
+    artificial faults are not useful for predicting which fault localization
+    techniques perform best on real faults.
     \par
-    In light of these results, we identify a design space that includes many
+    In light of these results, we identified a design space that includes many
     previously-studied fault localization techniques as well as hundreds of new
-    techniques, and we evaluate the techniques in this space on real faults. We
-    find several novel techniques that outperform all existing techniques in
-    this context.",
-  OPTomitfromcv = "",
+    techniques.  We experimentally determined which factors in the design space
+    are most important.  Then, we extended it with new techniques.  Several of
+    our novel techniques outperform all existing techniques, notably in terms
+    of ranking defective code in the top-5 or top-10 reports.",
   basefilename = "fault-localization-tr160803",
-  OPTdownloads = "",
-  OPTdownloadsnonlocal = "",
+  downloads = "https://bitbucket.org/rjust/fault-localization-data data and scripts",
+  downloadsnonlocal =
+   "http://homes.cs.washington.edu/~mernst/pubs/fault-localization-tr160803.pdf PDF",
   TOBEsupersededby = "PearsonCJFAEPK2017",
   category =  "Testing",
   csetags = 	 "suspense,mernst,dericp,bjkeller,mernst-Testing,plse",
   summary =
-   "Previously, fault localization techniques were evaluated on artificial faults,
-    called mutants.  None of the previous results holds for real faults,
-    indicating that artificial faults should not be used to evaluate fault
-    localization techniques.",
+   "Previously, fault localization techniques were evaluated on artificial
+    faults, such as mutants.  None of the previously-reported results holds for
+    real faults, indicating that artificial faults should not be used to
+    evaluate fault localization techniques.",
+}
+
+@InProceedings{NandiE2016,
+  author = 	 "Chandrakana Nandi and Michael D. Ernst",
+  title = 	 "Automatic trigger generation for rule-based smart homes",
+  booktitle =    PLAS2016,
+  NEEDpages = 	 "*",
+  year = 	 2016,
+  address = 	 PLAS2016addr,
+  month = 	 PLAS2016date,
+  abstract =
+   "To customize the behavior of a smart home, an end user writes rules.  When
+    an external event satisfies the rule's trigger, the rule's action executes;
+    for example, when the temperature is above a certain threshold, then window
+    awnings might be extended.  End users often write incorrect
+    rules.  This paper presents a technique that prevents
+    \textit{errors due to too few triggers} in the rules.  The technique
+    statically analyzes a rule's actions to determine what triggers are
+    necessary.
+    \par
+    We implemented the technique in a tool called TrigGen and tested it on 96
+    end-user written rules for openHAB, an open-source home automation
+    platform.  It identified that 80\% of the rules had fewer triggers than
+    required for correct behavior.  The missing triggers could lead to
+    unexpected behavior and security vulnerabilities in a smart home.",
+  basefilename = "trigger-generation-plas2016",
+  TODOdownloadsnonlocal =
+   "http://homes.cs.washington.edu/~mernst/pubs/trigger-generation-plas2016.pdf PDF",
+  category =	 "Security",
+  csetags = "mernst,cnandi,mernst-Security,plse",
+  summary =
+   "User-written rules consist of triggers and actions.  If the user forgets to
+    write some triggers, then the rules may not fire as often as desired by the
+    user, leading to undesired behavior or security errors.  This paper describes
+    an analysis to find omitted trigger conditions.",
 }
 
 
