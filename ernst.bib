@@ -10261,32 +10261,32 @@ with an {SMT} Solver",
   month =     OOPSLA2016date,
   address =   OOPSLA2016addr,
   abstract =
-   "To route traffic across the Internet reliably and securely, Internet
-    Service Providers (ISPs) must configure their Border Gateway Protocol (BGP)
-    routers to implement policies restricting how routing announcements can be
-    used and exchanged with other ISPs.  Correctly implementing these policies
-    in router configurations has proven challenging in practice, and
-    misconfiguration has led to extended worldwide outages and traffic hijacks.
+   "Internet Service Providers (ISPs) use the Border Gateway Protocol (BGP) to
+    announce and exchange routes for delivering packets through the internet.
+    ISPs must carefully configure their BGP routers to ensure traffic is routed
+    reliably and securely.  Correctly configuring BGP routers has proven
+    challenging in practice, and misconfiguration has led to worldwide outages
+    and traffic hijacks.
     \par
-    This paper presents Bagpipe, the first system that enables ISPs to
-    declaratively express control-plane policies and that automatically
-    verifies that router configurations implement such policies.  The novel
-    initial network reduction soundly reduces policy verification to a search
-    for counterexamples in a finite space.  An SMT-based symbolic execution
-    engine performs this search efficiently. Bagpipe reduces the size of its
-    search space using predicate abstraction and parallelizes its search using
+    This paper presents Bagpipe, a system that enables ISPs to declaratively
+    express BGP policies and that automatically verifies that router
+    configurations implement such policies.  The novel \emph{initial network
+    reduction} soundly reduces policy verification to a search for
+    counterexamples in a finite space.  An SMT-based symbolic execution engine
+    performs this search efficiently.  Bagpipe reduces the size of its search
+    space using predicate abstraction and parallelizes its search using
     symbolic variable hoisting.
     \par
-    Bagpipe's specification language is expressive: it can check all the BGP
-    configuration scenarios in the Juniper TechLibrary that relate to required
-    BGP functionality (i.e., not optional features or Juniper extensions).
-    Bagpipe is efficient: we ran it on three ASes with a total of over 240,000
-    lines of Cisco and Juniper BGP configuration.  Bagpipe is effective: it
-    revealed totalInconsistencies policy violations without issuing any false
+    Bagpipe's policy specification language is expressive:  we expressed
+    policies inferred from real AS configurations, policies from the
+    literature, and policies for 10 Juniper TechLibrary configuration
+    scenarios.  Bagpipe is efficient:  we ran it on three ASes with a total of
+    over 240,000 lines of Cisco and Juniper BGP configuration.  Bagpipe is
+    effective:  it revealed 19 policy violations without issuing any false
     positives.",
   basefilename = "bgp-configuration-oopsla2016",
   downloads =
-   "https://github.com/uwplse/uwplse-bagpipe Bagpipe implementation",
+   "http://bagpipe.uwplse.org/bagpipe/ Bagpipe homepage",
   downloadsnonlocalTODO = "*",
   category =  "Verification",
   csetags = 	 "weitzkon,dwoos,emina,mernst,arvind,ztatlock,mernst-Verification,plse",
