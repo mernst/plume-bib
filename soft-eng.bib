@@ -495,6 +495,59 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Program repair
+%%%
+
+@InProceedings{LeGouesDVFW2012,
+  author = 	 "Le Goues, Claire and Dewey-Vogt, Michael and Forrest, Stephanie and Weimer, Westley",
+  title = 	 "A systematic study of automated program repair: fixing 55 out of 105 bugs for \$8 each",
+  booktitle = ICSE2012,
+  pages = 	 "3--13",
+  year = 	 2012,
+  address = 	 ICSE2012addr,
+  month = 	 ICSE2012date,
+  abstract =
+   "There are more bugs in real-world programs than human programmers can
+    realistically address. This paper evaluates two research questions: ``What
+    fraction of bugs can be repaired automatically?'' and ``How much does it
+    cost to repair a bug automatically?'' In previous work, we presented
+    GenProg, which uses genetic programming to repair defects in off-the-shelf
+    C programs. To answer these questions, we: (1) propose novel algorithmic
+    improvements to GenProg that allow it to scale to large programs and find
+    repairs 68\% more often, (2) exploit GenProg's inherent parallelism using
+    cloud computing resources to provide grounded, human-competitive cost
+    measurements, and (3) generate a large, indicative benchmark set to use for
+    systematic evaluations. We evaluate GenProg on 105 defects from 8
+    open-source programs totaling 5.1 million lines of code and involving
+    10,193 test cases. GenProg automatically repairs 55 of those 105
+    defects. To our knowledge, this evaluation is the largest available of its
+    kind, and is often two orders of magnitude larger than previous work in
+    terms of code or test suite size or defect count. Public cloud computing
+    prices allow our 105 runs to be reproduced for \$403; a successful repair
+    completes in 96 minutes and costs \$7.32, on average.",
+}
+
+
+
+
+@InProceedings{QiLAR2015,
+  author =       "Qi, Zichao and Long, Fan and Achour, Sara and Rinard, Martin",
+  title =        "An analysis of patch plausibility and correctness for generate-and-validate patch generation systems",
+  booktitle = ISSTA2015,
+  year =      2015,
+  pages =     "24--36",
+  month =     ISSTA2015date,
+  address =   ISSTA2015addr,
+}
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Miscellaneous
 %%%
 
@@ -1332,38 +1385,6 @@
 
 
 
-@InProceedings{LeGouesDVFW2012,
-  author = 	 "Le Goues, Claire and Dewey-Vogt, Michael and Forrest, Stephanie and Weimer, Westley",
-  title = 	 "A systematic study of automated program repair: fixing 55 out of 105 bugs for \$8 each",
-  booktitle = ICSE2012,
-  pages = 	 "3--13",
-  year = 	 2012,
-  address = 	 ICSE2012addr,
-  month = 	 ICSE2012date,
-  abstract =
-   "There are more bugs in real-world programs than human programmers can
-    realistically address. This paper evaluates two research questions: ``What
-    fraction of bugs can be repaired automatically?'' and ``How much does it
-    cost to repair a bug automatically?'' In previous work, we presented
-    GenProg, which uses genetic programming to repair defects in off-the-shelf
-    C programs. To answer these questions, we: (1) propose novel algorithmic
-    improvements to GenProg that allow it to scale to large programs and find
-    repairs 68\% more often, (2) exploit GenProg's inherent parallelism using
-    cloud computing resources to provide grounded, human-competitive cost
-    measurements, and (3) generate a large, indicative benchmark set to use for
-    systematic evaluations. We evaluate GenProg on 105 defects from 8
-    open-source programs totaling 5.1 million lines of code and involving
-    10,193 test cases. GenProg automatically repairs 55 of those 105
-    defects. To our knowledge, this evaluation is the largest available of its
-    kind, and is often two orders of magnitude larger than previous work in
-    terms of code or test suite size or defect count. Public cloud computing
-    prices allow our 105 runs to be reproduced for \$403; a successful repair
-    completes in 96 minutes and costs \$7.32, on average.",
-}
-
-
-
-
 
 
 
@@ -1711,19 +1732,6 @@
   pages =     "285--296",
   month =     ICSE2016date,
   address =   ICSE2016addr,
-}
-
-
-
-
-@InProceedings{QiLAR2015,
-  author =       "Qi, Zichao and Long, Fan and Achour, Sara and Rinard, Martin",
-  title =        "An analysis of patch plausibility and correctness for generate-and-validate patch generation systems",
-  booktitle = ISSTA2015,
-  year =      2015,
-  pages =     "24--36",
-  month =     ISSTA2015date,
-  address =   ISSTA2015addr,
 }
 
 
