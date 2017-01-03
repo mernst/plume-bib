@@ -87,7 +87,7 @@ email a patch (a diff file) with your changes to Michael Ernst
 SETUP -- if you use a Makefile to process your paper
 ----------------------------------------------------
 
-1. Add "bib" as a dependency for the rule that calls bibtex;
+1. Add "bib" as a dependency for the rule that calls bibtex, if any;
    for example, make "bib" a dependency for the myfile.bbl target, if any.
 2. Add "bib-update" as a dependency of your default target (such as "all").
 3. Add the following rules to your Makefile.
