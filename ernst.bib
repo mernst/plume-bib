@@ -4,6 +4,32 @@
 %   http://homes.cs.washington.edu/~mernst/software/bibtex2web.html
 % for an explanation of the fields.
 
+%% Current categories (which should be kept in sync with
+%% ~/public_html/research/pubs-bytopic-categories, though that file
+%% is only used for sorting):
+%   category = "Artificial intelligence",
+%   category = "Bug prediction",
+%   category = "Concurrency",
+%   category = "Dynamic analysis",
+%   category = "Education",
+%   category = "Immutability (side effects)",
+%   category = "Invariant detection",
+%   category = "Miscellaneous",
+%   category = "Programming language design",
+%   category = "Refactoring",
+%   category = "Security",
+%   category = "Software engineering",
+%   category = "Speculative analysis",
+%   category = "Static analysis",
+%   category = "Testing",
+%   category = "Theory",
+%   category = "Verification",
+%   FUTUREcategory =  "Databases",
+%   FUTUREcategory =  "Synthesis",
+%   OLDcategory =     "Software engineering",
+%   OPTcategory =  "",
+%   subcategory = "Slicing",
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% 1989
@@ -93,7 +119,8 @@
   basefilename = "curvematch-aaai1989",
   downloadsnonlocal =
    "http://homes.cs.washington.edu/~mernst/pubs/curvematch-aaai1989.pdf PDF",
-  category = "Artificial intelligence",
+  OLDcategory = "Artificial intelligence",
+  category = "Miscellaneous",
   csetags = "mernst,mernst-Artificial-intelligence,plse",
   summary =
    "Correspondences between a real-world image and a map or terrain model
@@ -298,7 +325,7 @@
 		  Parallel Systems",
   year =	 1992,
   month =	 Jul # "~21,",
-  category =  "Concurrency",
+  category = "Concurrency",
   abstract =
 "Programmers would like to be able to write a single program for both
 parallel and serial computers.  Historically, the focus has been on
@@ -367,7 +394,7 @@ improve the performance of parallel programs without serializing them.  The
 methods may be applied as an optimization of a parallelizing compiler after
 a serial program's parallelism has been exposed, and they are also
 applicable to some serial programs.",
-  category =  "Concurrency",
+  category = "Concurrency",
   supersededby = "Ernst94:Serialize:LCSTR",
   nonPAG = 1,
 }
@@ -657,7 +684,7 @@ endgame.",
   month =	 Aug # "~21,",
   OPTnote =         "Revision of Master's thesis",
   supersededby = "Ernst94:Serialize:LCSTR A concurrently published technical report",
-  category =  "Concurrency",
+  category = "Concurrency",
   nonPAG = 1,
 }
 
@@ -730,7 +757,7 @@ endgame.",
   basefilename = "serialize-tr638",
   downloadsnonlocal =
    "http://homes.cs.washington.edu/~mernst/pubs/serialize-tr638.pdf PDF",
-  category =  "Concurrency",
+  category = "Concurrency",
   csetags = "mernst,mernst-Static-analysis,plse",
   summary =
    "This paper introduces and evaluates methods for automatically
@@ -967,7 +994,8 @@ endgame.",
   downloadsnonlocal =
    "http://homes.cs.washington.edu/~mernst/pubs/satcompile-ijcai97.pdf PDF",
   downloads = "ftp://ftp.cs.washington.edu/pub/ai/medic.tar.gz Medic implementation",
-  category = "Artificial intelligence",
+  OLDcategory = "Artificial intelligence",
+  category = "Miscellaneous",
   csetags = "mernst,mernst-Artificial-intelligence,plse",
   summary =
    "Planning problems can be solved by transformation into a propositional
@@ -1911,7 +1939,7 @@ endgame.",
   basefilename = "simexecution-vmcai2003",
   downloadsnonlocal =
    "http://homes.cs.washington.edu/~mernst/pubs/simexecution-vmcai2003.pdf PDF",
-  category =     "Verification",
+  category = "Verification",
   csetags = "mernst,mernst-Verification,plse",
   summary =
    "This paper proposes integration of dynamic analysis with traditional
@@ -2060,7 +2088,7 @@ endgame.",
   downloads =
    "http://homes.cs.washington.edu/~mernst/pubs/staticdynamic-paste2004-slides-dist.pdf slides (PDF);
     http://homes.cs.washington.edu/~mernst/pubs/staticdynamic-paste2004-slides-dist.ppt slides (PowerPoint)",
-  category =     "Dynamic analysis",
+  category = "Dynamic analysis",
   csetags = "mernst,mernst-Dynamic-analysis,plse",
   summary =
    "This position paper is intended to provoke thought and discussion
@@ -2094,7 +2122,7 @@ endgame.",
   downloadsnonlocal =
    "http://homes.cs.washington.edu/~mernst/pubs/woda2003-proceedings.pdf PDF",
   downloads =    "http://www.cs.nmsu.edu/~jcook/woda2003/ workshop website",
-  category =     "Dynamic analysis",
+  category = "Dynamic analysis",
   csetags = "mernst,mernst-Dynamic-analysis,plse",
   summary =
    "This workshop brought together practitioners and academics to discuss
@@ -2179,7 +2207,7 @@ endgame.",
   basefilename = "woda2003-summary",
   downloadsnonlocal =
    "http://homes.cs.washington.edu/~mernst/pubs/woda2003-summary.pdf PDF",
-  category =     "Dynamic analysis",
+  category = "Dynamic analysis",
   csetags = "mernst,mernst-Dynamic-analysis,plse",
   summary =
    "This summary recaps the WODA 2003 workshop.  WODA brought together
@@ -2210,7 +2238,7 @@ endgame.",
   downloadsnonlocal =
    "http://homes.cs.washington.edu/~mernst/pubs/call-sequences.pdf PDF",
   downloads = "http://homes.cs.washington.edu/~mernst/pubs/call-sequences.pdf PDF",
-  category =     "Invariant detection",
+  category = "Invariant detection",
   csetags = "mernst,mernst-Invariant-detection,plse",
   summary =
    "Correct functioning of a component can depend on the component's methods
@@ -2331,7 +2359,7 @@ endgame.",
     performance on two tasks: statically proving the absence of run-time
     errors with a theorem-prover, and separating faulty from correct
     executions of erroneous programs.",
-  category =     "Static analysis",
+  category = "Static analysis",
   csetags = "mernst,mernst-Static-analysis,plse",
   basefilename = "predicates-tr914",
   downloadsnonlocal =
@@ -2422,7 +2450,7 @@ endgame.",
   basefilename = "steering-issre2003",
   downloadsnonlocal =
    "http://homes.cs.washington.edu/~mernst/pubs/steering-issre2003.pdf PDF",
-  category =     "Dynamic analysis",
+  category = "Dynamic analysis",
   OMITcsetagsBECAUSESUPERSEDED = "mernst,mernst-Dynamic-analysis,plse",
   summary =
    "For software with distinct modes and a mode selector that chooses among
@@ -2535,7 +2563,7 @@ endgame.",
     implemented our analysis in a tool that automatically inserts type
     parameters into Java code, and we report its performance when applied to a
     number of real-world Java programs.",
-  category =     "Refactoring",
+  category = "Refactoring",
   OMITcsetagsBECAUSESUPERSEDED = "mernst,mernst-Refactoring,plse",
   summary =
    "When type parameters are added to library code, client code should be
@@ -2578,7 +2606,7 @@ endgame.",
     The continuous testing plug-in is publicly available at
     \url{http://pag.csail.mit.edu/continuoustesting/}.",
   basefilename = "conttest-plugin-etx2004",
-  category = 	 "Testing",
+  category = "Testing",
   csetags = "mernst,mernst-Testing,plse",
   downloads =    "http://pag.csail.mit.edu/continuoustesting/ Eclipse plug-in",
   downloadsnonlocal =
@@ -2743,7 +2771,7 @@ endgame.",
   downloads =
    "http://homes.cs.washington.edu/~mernst/pubs/simexecution-vmcai2003-slides.pdf slides (PDF);
     http://homes.cs.washington.edu/~mernst/pubs/simexecution-vmcai2003-slides.ppt slides (PowerPoint)",
-  category =     "Verification",
+  category = "Verification",
   csetags = "mernst,mernst-Verification,plse",
   summary =
    "This paper proposes integration of dynamic analysis with traditional
@@ -2832,7 +2860,7 @@ endgame.",
   downloadsnonlocal =
       "http://homes.cs.washington.edu/~mernst/pubs/steering-issta2004.pdf PDF;
        http://homes.cs.washington.edu/~mernst/pubs/steering-issta2004.ppt slides (PowerPoint)",
-  category =     "Dynamic analysis",
+  category = "Dynamic analysis",
   csetags = "mernst,mernst-Dynamic-analysis,plse",
   summary =
    "Program steering selects modalities for a program that may operate in
@@ -2873,7 +2901,7 @@ endgame.",
   basefilename = "classify-tests-tr968",
   downloadsnonlocal =
    "http://homes.cs.washington.edu/~mernst/pubs/classify-tests-tr968.pdf PDF",
-  category =     "Testing",
+  category = "Test generation",
   csetags = "mernst,mernst-Testing,plse",
   summary =
    "This paper presents an automatic mechanism for selecting tests that are
@@ -2969,7 +2997,7 @@ endgame.",
   downloadsnonlocal =
     "http://homes.cs.washington.edu/~mernst/pubs/instantiating-generics-oopsla2004.pdf PDF;
      http://homes.cs.washington.edu/~mernst/pubs/instantiating-generics-oopsla2004-slides.pdf slides (PDF)",
-  category =     "Refactoring",
+  category = "Refactoring",
   csetags = "mernst,mernst-Refactoring,plse",
   summary =
    "When type parameters are added to library code, client code should be
@@ -3013,7 +3041,7 @@ endgame.",
   basefilename = "upgrades-savcbs2004",
   downloadsnonlocal =
     "http://homes.cs.washington.edu/~mernst/pubs/upgrades-savcbs2004.pdf PDF",
-  category =     "Bug prediction",
+  category = "Bug prediction",
   csetags = "mernst,mernst-Bug-prediction,plse",
   summary =
    "This paper formalizes (and corrects a few mistakes in) previous work on
@@ -3097,7 +3125,7 @@ endgame.",
   downloadsnonlocal =
     "http://homes.cs.washington.edu/~mernst/pubs/groupthink-icse2005.pdf PDF",
   OLDcategory =     "Software engineering",
-  category =     "Education",
+  category = "Education",
   csetags = "mernst,mernst-Software-engineering,plse",
   summary =
    "The Groupthink specification exercise is a fun group activity that
@@ -3127,7 +3155,7 @@ endgame.",
   downloads =    "http://pag.csail.mit.edu/continuoustesting/ Eclipse plug-in",
   downloadsnonlocal =
    "http://homes.cs.washington.edu/~mernst/pubs/conttest-demo-icse2005.pdf PDF",
-  category =     "Testing",
+  category = "Testing",
   OMITcsetagsBECAUSESUPERSEDED = "mernst,mernst-Testing,plse",
   summary =
    "The Eclipse plug-in for continuous testing automatically runs tests to
@@ -3147,7 +3175,7 @@ endgame.",
   month =	 jun # "~7,",
   supersededby = "SaffAPE2005",
   basefilename = "test-factoring-tr991",
-  category =     "Testing",
+  category = "Testing",
   OMITcsetagsBECAUSESUPERSEDED = "mernst,mernst-Testing,plse",
   summary =
    "Test factoring creates fast, focused unit tests from slow system-wide
@@ -3257,7 +3285,7 @@ endgame.",
     https://randoop.github.io/randoop/ Randoop implementation",
   downloadsnonlocal =
    "http://homes.cs.washington.edu/~mernst/pubs/classify-tests-ecoop2005.pdf PDF",
-  category =     "Testing",
+  category = "Test generation",
   csetags = "mernst,mernst-Testing,plse",
   summary =
    "This paper presents an automatic mechanism for selecting tests that are
@@ -3296,7 +3324,7 @@ endgame.",
   basefilename = "deadlock-library-ecoop2005",
   downloadsnonlocal =
    "http://homes.cs.washington.edu/~mernst/pubs/deadlock-library-ecoop2005.pdf PDF",
-  category =     "Static analysis",
+  category = "Concurrency",
   csetags = "mernst,mernst-Static-analysis,plse,plse-lockcaps",
   summary =
    "This paper gives a technique for determining whether any invocation of
@@ -3338,7 +3366,7 @@ endgame.",
   downloadsnonlocal =
     "http://homes.cs.washington.edu/~mernst/pubs/legacy-verification-vstte2005.pdf PDF;
      http://homes.cs.washington.edu/~mernst/pubs/legacy-verification-vstte2005-slides.pdf slides (PDF)",
-  category =     "Verification",
+  category = "Verification",
   csetags = "mernst,mernst-Verification,plse",
   summary =
    "Legacy (under-documented and -specified) code will be with us forever.  This
@@ -3438,7 +3466,7 @@ endgame.",
   month =	 PASTE2005date,
   basefilename = "paste2005-proceedings",
   downloads =    "http://homes.cs.washington.edu/~mernst/meetings/paste2005/ workshop website",
-  category =     "Software engineering",
+  category = "Software engineering",
   csetags = "mernst,mernst-Software-engineering,plse",
   summary =
    "PASTE 2005 brought together the program analysis, software tools, and
@@ -3477,7 +3505,7 @@ endgame.",
   basefilename = "test-factoring-ase2005",
   downloadsnonlocal =
     "http://homes.cs.washington.edu/~mernst/pubs/test-factoring-ase2005.pdf PDF",
-  category =     "Testing",
+  category = "Testing",
   csetags = "mernst,mernst-Testing,plse",
   summary =
    "Test factoring creates fast, focused unit tests from slow system-wide
@@ -3526,7 +3554,7 @@ endgame.",
      http://homes.cs.washington.edu/~mernst/pubs/dynamic-tutorial-ase2005-java-instrumentation.pdf slides 2 (PDF);
      http://homes.cs.washington.edu/~mernst/pubs/dynamic-tutorial-ase2005-compiled-instrumentation.pdf slides 3 (PDF);
      http://homes.cs.washington.edu/~mernst/pubs/dynamic-tutorial-ase2005-data-analysis.pdf slides 4 (PDF)",
-  category =     "Dynamic analysis",
+  category = "Dynamic analysis",
   csetags = "mernst,mernst-Dynamic-analysis,plse",
   summary =
    "A broad overview of the field of dynamic analysis, including
@@ -3591,7 +3619,7 @@ endgame.",
   basefilename = "web-service-subst-wsmate2006",
   downloadsnonlocal =
     "http://homes.cs.washington.edu/~mernst/pubs/web-service-subst-wsmate2006.pdf PDF",
-  category =     "Dynamic analysis",
+  category = "Dynamic analysis",
   csetags = "mernst,mernst-Dynamic-analysis,plse",
   summary =
    "Programmers, end users, and even program would like to discover and
@@ -3646,7 +3674,7 @@ endgame.",
   basefilename = "infer-repair-issta2006",
   downloadsnonlocal =
     "http://homes.cs.washington.edu/~mernst/pubs/infer-repair-issta2006.pdf PDF",
-  category =     "Dynamic analysis",
+  category = "Dynamic analysis",
   csetags = "mernst,mernst-Dynamic-analysis,plse",
   summary =
    "This paper presents an automatic technique for recovering from data
@@ -3668,7 +3696,7 @@ endgame.",
   month = 	 may,
   usesDaikon = 1,
   supersededby = "DemskyEGMPR2006",
-  category =  "Dynamic analysis",
+  category = "Dynamic analysis",
 }
 
 
@@ -3701,7 +3729,7 @@ endgame.",
   downloads = "http://plse.cs.washington.edu/daikon/ DynComp implementation (distributed as part of Daikon)",
   downloadsnonlocal =
     "http://homes.cs.washington.edu/~mernst/pubs/abstract-type-issta2006.pdf PDF",
-  category =     "Dynamic analysis",
+  category = "Dynamic analysis",
   csetags = "mernst,mernst-Dynamic-analysis,plse",
   summary =
    "This paper presents a dynamic analysis for computing abstract types,
@@ -3739,7 +3767,7 @@ endgame.",
   basefilename = "testgen-ase2006",
   downloadsnonlocal =
     "http://homes.cs.washington.edu/~mernst/pubs/testgen-ase2006.pdf PDF",
-  category =  "Testing",
+  category = "Test generation",
   csetags = "mernst,mernst-Testing,plse",
   summary =
    "This paper experimentally evaluates four test generation strategies:
@@ -3787,7 +3815,7 @@ endgame.",
   basefilename = "oo-test-gen-tr056",
   downloadsnonlocal =
     "http://homes.cs.washington.edu/~mernst/pubs/oo-test-gen-tr056.pdf PDF",
-  category =     "Testing",
+  category = "Test generation",
   OMITcsetagsBECAUSESUPERSEDED = "mernst,mernst-Testing,plse",
   summary =
    "An automatically inferred model of legal method call sequences can bias test
@@ -3833,7 +3861,7 @@ endgame.",
   basefilename = "parameterizing-generics-tr",
   downloadsnonlocal =
     "http://homes.cs.washington.edu/~mernst/pubs/parameterizing-generics-tr.pdf PDF",
-  category =     "Refactoring",
+  category = "Refactoring",
   csetags = "mernst,mernst-Refactoring,plse",
   summary =
    "Programmers must change their programs to take advantage of generic types.
@@ -3872,7 +3900,7 @@ endgame.",
   basefilename = "feedback-testgen-tr125",
   downloadsnonlocal =
     "http://homes.cs.washington.edu/~mernst/pubs/feedback-testgen-tr125.pdf PDF",
-  category =  "Testing",
+  category = "Testing",
   csetags = "mernst,mernst-Testing,plse",
   summary =
    "This paper presents a technique that improves random test generation by
@@ -3905,12 +3933,12 @@ endgame.",
     compared to previous approaches, our approach increases both scalability
     and overall accuracy.",
   supersededby = "ArtziKGE2007:TR",
-  category =  "Immutability (side effects)",
+  category = "Immutability (side effects)",
   csetags = "mernst,mernst-Immutability-(side-effects),plse",
   basefilename = "mutability-tr065",
   downloadsnonlocal =
     "http://homes.cs.washington.edu/~mernst/pubs/mutability-tr065.pdf PDF",
-  category =  "Dynamic analysis",
+  category = "Dynamic analysis",
   csetags = "mernst,mernst-Dynamic-analysis,plse",
   summary =
    "A collection of fast, simple mutability analysis stages (both static
@@ -3956,7 +3984,7 @@ endgame.",
   basefilename = "oo-test-gen-mtoos2006",
   downloadsnonlocal =
     "http://homes.cs.washington.edu/~mernst/pubs/oo-test-gen-mtoos2006.pdf PDF",
-  category =     "Testing",
+  category = "Test generation",
   csetags = "mernst,mernst-Testing,plse",
   summary =
    "An automatically inferred model of legal method call sequences can bias test
@@ -4012,7 +4040,7 @@ endgame.",
   year = 	 2006,
   NOabstract =   1,
   basefilename = "annotations-jsr308",
-  category =     "Programming language design",
+  category = "Programming language design",
   csetags = "mernst,mernst-Programming-language-design,plse",
   summary =
    "This proposal extends Java's annotation system to permit annotations on
@@ -4033,7 +4061,7 @@ endgame.",
   year = 	 2007,
   NOabstract =   1,
   basefilename = "annotations-jsr308",
-  category =     "Programming language design",
+  category = "Programming language design",
   csetags = "mernst,mernst-Programming-language-design,plse",
   summary =
    "This proposal extends Java's annotation system to permit annotations on
@@ -4054,7 +4082,7 @@ endgame.",
   year = 	 2007,
   NOabstract =   1,
   basefilename = "annotations-jsr308",
-  category =     "Programming language design",
+  category = "Programming language design",
   csetags = "mernst,mernst-Programming-language-design,plse",
   summary =
    "This proposal extends Java's annotation system to permit annotations on
@@ -4075,7 +4103,7 @@ endgame.",
   year = 	 2008,
   NOabstract =   1,
   basefilename = "annotations-jsr308",
-  category =     "Programming language design",
+  category = "Programming language design",
   csetags = "mernst,mernst-Programming-language-design,plse",
   summary =
    "This specification extends Java's annotation system to permit annotations
@@ -4097,7 +4125,7 @@ endgame.",
   year = 	 2011,
   NOabstract =   1,
   basefilename = "annotations-jsr308",
-  category =     "Programming language design",
+  category = "Programming language design",
   csetags = "mernst,mernst-Programming-language-design,plse",
   summary =
    "This specification extends Java's annotation system to permit annotations
@@ -4192,7 +4220,7 @@ endgame.",
     http://homes.cs.washington.edu/~mernst/pubs/groupthink-icse2005-slides.ppt ICSE 2005 slides (PowerPoint)",
   OLDdownloads =
     "http://vital.cs.ohiou.edu/vitalwiki/index.php/Aid_for_Groupthink Second Life version",
-  category =     "Education",
+  category = "Education",
   csetags = "mernst,mernst-Software-engineering,plse",
   summary =
    "The Groupthink specification exercise is a fun group activity that
@@ -4245,7 +4273,7 @@ endgame.",
   downloadsnonlocal =
    "http://homes.cs.washington.edu/~mernst/pubs/parameterizing-generics-icse2007.pdf PDF;
     http://homes.cs.washington.edu/~mernst/pubs/parameterizing-generics-icse2007-slides.pdf slides (PDF)",
-  category =     "Refactoring",
+  category = "Refactoring",
   csetags = "mernst,mernst-Refactoring,plse",
   summary =
    "Programmers must change their programs to take advantage of generic types.
@@ -4294,7 +4322,7 @@ endgame.",
    "http://homes.cs.washington.edu/~mernst/pubs/feedback-testgen-icse2007.pdf PDF;
     http://homes.cs.washington.edu/~mernst/pubs/feedback-testgen-icse2007-slides.pdf slides (PDF);
     http://homes.cs.washington.edu/~mernst/pubs/feedback-testgen-icse2007-slides.ppt slides (PowerPoint)",
-  category =  "Testing",
+  category = "Test generation",
   csetags = "mernst,mernst-Testing,plse",
   summary =
    "This paper presents a technique that improves random test generation by
@@ -4341,7 +4369,7 @@ endgame.",
   basefilename = "prioritize-warnings-msr2007",
   downloadsnonlocal =
     "http://homes.cs.washington.edu/~mernst/pubs/prioritize-warnings-msr2007.pdf PDF",
-  category =  "Bug prediction",
+  category = "Bug prediction",
   csetags = "mernst,mernst-Bug-prediction,plse",
   summary =
    "Bug-finding tools prioritize their warning messages, but often do so poorly.
@@ -4383,7 +4411,7 @@ endgame.",
   basefilename = "immutability-generics-tr018",
   downloadsnonlocal =
     "http://homes.cs.washington.edu/~mernst/pubs/immutability-generics-tr018.pdf PDF",
-  category =  "Immutability (side effects)",
+  category = "Immutability (side effects)",
   OMITcsetagsBECAUSESUPERSEDED = "mernst,mernst-Immutability-(side-effects),plse",
   summary =
    "This paper shows how to provide compiler-checked guarantees of both
@@ -4418,7 +4446,7 @@ endgame.",
   basefilename = "mutability-tr020",
   downloadsnonlocal =
     "http://homes.cs.washington.edu/~mernst/pubs/mutability-tr020.pdf PDF",
-  category =  "Immutability (side effects)",
+  category = "Immutability (side effects)",
   OMITcsetagsBECAUSESUPERSEDED = "mernst,mernst-Immutability-(side-effects),plse",
   summary =
    "A collection of fast, simple mutability analysis stages (both static
@@ -4456,7 +4484,7 @@ endgame.",
   basefilename = "infoflow-proof-plas2007",
   downloadsnonlocal =
    "http://pag.csail.mit.edu/pubs/infoflow-proof-plas2007.pdf PDF",
-  category =	 "Security",
+  category = "Security",
   csetags = "mernst,mernst-Security,plse",
   summary =
    "A dynamic analysis of information flow (e.g., end-to-end confidentiality) is
@@ -4499,7 +4527,7 @@ endgame.",
    "https://checkerframework.org/manual/#igj-checker IGJ implementation",
   downloadsnonlocal =
     "http://homes.cs.washington.edu/~mernst/pubs/immutability-generics-fse2007.pdf PDF",
-  category =  "Immutability (side effects)",
+  category = "Immutability (side effects)",
   csetags = "mernst,mernst-Immutability-(side-effects),plse",
   summary =
    "This paper shows how to provide compiler-checked guarantees of both
@@ -4542,7 +4570,7 @@ endgame.",
   basefilename = "prioritize-warnings-fse2007",
   downloadsnonlocal =
     "http://homes.cs.washington.edu/~mernst/pubs/prioritize-warnings-fse2007.pdf PDF",
-  category =  "Bug prediction",
+  category = "Bug prediction",
   csetags = "mernst,mernst-Bug-prediction,plse",
   summary =
    "This paper determines how a bug-finding tool should prioritize its warnings.
@@ -4582,7 +4610,7 @@ endgame.",
   downloadsnonlocal =
     "http://homes.cs.washington.edu/~mernst/pubs/custom-types-tr047.pdf PDF",
   supersededby = "PapiACPE2008",
-  category = 	 "Programming language design",
+  category = "Programming language design",
   OMITcsetagsBECAUSESUPERSEDED = "mernst,mernst-Programming-language-design,plse",
   summary =
    "We have created a framework for adding custom type qualifiers to the Java
@@ -4613,7 +4641,7 @@ endgame.",
   downloadsnonlocal =
    "http://homes.cs.washington.edu/~mernst/pubs/refimmut-tools-oopsla2007.pdf PDF",
   supersededby = "QuinonezTE2008 A tool description",
-  category = 	 "Immutability (side effects)",
+  category = "Immutability (side effects)",
   csetags = "mernst,mernst-Immutability-(side-effects),plse",
   summary =
    "The Javari language for reference immutability helps Java programmers avoid
@@ -4649,7 +4677,7 @@ endgame.",
   downloadsnonlocal =
    "http://homes.cs.washington.edu/~mernst/pubs/typequals-demo-oopsla2007.pdf PDF",
   supersededby = "PapiACPE2008 A tool description",
-  category = 	 "Programming language design",
+  category = "Programming language design",
   OMITcsetagsBECAUSESUPERSEDED = "mernst,mernst-Programming-language-design,plse",
   summary =
    "User-defined type qualifiers enable programmers to state program properties
@@ -4680,7 +4708,7 @@ endgame.",
   downloadsnonlocal =
    "http://homes.cs.washington.edu/~mernst/pubs/pacheco-randoop-oopsla2007.pdf PDF",
   supersededby = "PachecoLEB2007 A tool description",
-  category =  "Testing",
+  category = "Testing",
   OMITcsetagsBECAUSESUPERSEDED = "mernst,mernst-Testing,plse",
   summary =
    "This paper describes the Randoop tool for automatically generating unit
@@ -4714,7 +4742,7 @@ endgame.",
   downloadsnonlocal =
     "http://homes.cs.washington.edu/~mernst/pubs/mutability-ase2007.pdf PDF",
   supersededby = "ArtziQKE2009",
-  category =  "Immutability (side effects)",
+  category = "Immutability (side effects)",
   OMITcsetagsBECAUSESUPERSEDED = "mernst,mernst-Immutability-(side-effects),plse",
   summary =
    "A collection of fast, simple mutability analysis stages (both static
@@ -4753,7 +4781,7 @@ endgame.",
   downloadsnonlocal =
    "http://pag.csail.mit.edu/pubs/repro-crashes-tr054.pdf PDF;
     http://dspace.mit.edu/handle/1721.1/39639 DSpace",
-  category =  "Testing",
+  category = "Testing",
   OMITcsetagsBECAUSESUPERSEDED = "mernst,mernst-Testing,plse",
   summary =
    "ReCrash is a lightweight technique that monitors a program for errors
@@ -4848,7 +4876,7 @@ endgame.",
   downloads = "http://plse.cs.washington.edu/daikon/ Daikon implementation",
   downloadsnonlocal =
     "http://homes.cs.washington.edu/~mernst/pubs/daikon-tool-scp2007.pdf PDF",
-  category =     "Invariant detection",
+  category = "Invariant detection",
   csetags = "mernst,mernst-Invariant-detection,plse",
   summary =
    "This paper discusses the Daikon tool, including its features,
@@ -4890,7 +4918,7 @@ endgame.",
   OPTdownloads = "",
   downloadsnonlocal =
    "http://dspace.mit.edu/bitstream/handle/1721.1/40090/MIT-CSAIL-TR-2008-002.pdf PDF",
-  category =  "Testing",
+  category = "Testing",
   csetags = "mernst,mernst-Testing,plse",
   summary =
    "A ``theory'' is a claim about one or more objects --- an executable predicate
@@ -4934,7 +4962,7 @@ endgame.",
   downloadsnonlocal =
    "http://homes.cs.washington.edu/~mernst/pubs/web-apps-tr006.pdf PDF",
   supersededby = "ArtziKDTDPE2008",
-  category =  "Testing",
+  category = "Testing",
   OMITcsetagsBECAUSESUPERSEDED = "mernst,mernst-Testing,plse",
   summary =
    "This paper extends dynamic test generation, based on interleaved
@@ -4956,7 +4984,7 @@ endgame.",
   downloadsnonlocal =
    "http://homes.cs.washington.edu/~mernst/pubs/web-apps-rc24528.pdf PDF",
   supersededby = "ArtziKDTDPE2008",
-  category =  "Testing",
+  category = "Testing",
 }
 
 
@@ -5082,7 +5110,7 @@ endgame.",
   downloads = "http://pag.csail.mit.edu/ReCrash/ ReCrash implementation",
   downloadsnonlocal =
    "http://homes.cs.washington.edu/~mernst/pubs/reproduce-failures-ecoop2008.pdf PDF",
-  category =  "Testing",
+  category = "Testing",
   csetags = "mernst,mernst-Testing,plse",
   summary =
    "ReCrash is a lightweight technique that monitors a program for failures such
@@ -5187,7 +5215,7 @@ endgame.",
   supersededby = "ArtziKDTDPE2010",
   downloadsnonlocal =
     "http://homes.cs.washington.edu/~mernst/pubs/bugs-webapps-issta2008.pdf PDF",
-  category =  "Testing",
+  category = "Testing",
   OMITcsetagsBECAUSESUPERSEDED = "mernst,mernst-Testing,plse",
   summary =
    "This paper extends dynamic test generation, based on interleaved
@@ -5233,7 +5261,7 @@ endgame.",
     https://checkerframework.org/ Checker Framework implementation",
   downloadsnonlocal =
    "http://homes.cs.washington.edu/~mernst/pubs/pluggable-checkers-issta2008.pdf PDF",
-  category = 	 "Programming language design",
+  category = "Programming language design",
   csetags = "mernst,mernst-Programming-language-design,plse",
   summary =
    "We have created a framework for pluggable type-checking in Java (including
@@ -5272,7 +5300,7 @@ endgame.",
   downloadsnonlocal =
    "http://dspace.mit.edu/bitstream/handle/1721.1/42832/MIT-CSAIL-TR-2008-053.pdf PDF;
     http://dspace.mit.edu/bitstream/handle/1721.1/42832/MIT-CSAIL-TR-2008-053.ps PostScript",
-  category =  "Refactoring",
+  category = "Refactoring",
   OMITcsetagsBECAUSESUPERSEDED = "mernst,mernst-Refactoring,plse",
   summary =
    "This paper is a historical analysis of the transformations that
@@ -5345,7 +5373,7 @@ endgame.",
   downloadsnonlocal =
    "http://homes.cs.washington.edu/~mernst/pubs/create-attacks-tr054.pdf PDF",
   supersededby = "KiezunGJE2009",
-  category =  "Security",
+  category = "Security",
   OMITcsetagsBECAUSESUPERSEDED = "mernst,mernst-Security,plse",
   summary =
    "By generating inputs that cause the program to execute particular
@@ -5391,7 +5419,7 @@ endgame.",
    "http://homes.cs.washington.edu/~mernst/pubs/concurrent-refactoring-tr057.pdf PDF;
     http://dspace.mit.edu/bitstream/handle/1721.1/42841/MIT-CSAIL-TR-2008-057.pdf PDF (DSpace)",
   supersededby = "DigME2009",
-  category =  "Refactoring",
+  category = "Refactoring",
   OMITcsetagsBECAUSESUPERSEDED = "mernst,mernst-Refactoring,plse",
   summary =
    "This paper presents a refactoring tool, Concurrencer, that transforms
@@ -5451,7 +5479,7 @@ endgame.",
   downloadsnonlocal =
    "http://homes.cs.washington.edu/~mernst/pubs/string-solver-tr004.pdf PDF",
   supersededby = "KiezunGGHE2009",
-  category =  "Static analysis",
+  category = "Static analysis",
   OMITcsetagsBECAUSESUPERSEDED = "mernst,mernst-Static-analysis,plse",
   summary =
    "This paper describes an efficient and expressive solver (that is, a
@@ -5512,7 +5540,7 @@ endgame.",
 @TechReport{ArtziKDTDPE2009,
   author = 	 "Shay Artzi and Adam Kie{\.z}un and Julian Dolby and Frank Tip and Danny Dig and Amit Paradkar and Michael D. Ernst",
   authorASCII = 	 "Shay Artzi and Adam Kiezun and Julian Dolby and Frank Tip and Danny Dig and Amit Paradkar and Michael D. Ernst",
-  title = 	 "Finding Bugs in Web Applications Using Dynamic Test Generation and Explicit State Model Checking",
+  title = 	 "Finding bugs in web applications using dynamic test generation and explicit state model checking",
   institution =  MITCSAIL,
   year = 	 2009,
   number = 	 "MIT-CSAIL-TR-2009-010",
@@ -5541,7 +5569,7 @@ endgame.",
   downloadsnonlocal =
     "http://homes.cs.washington.edu/~mernst/pubs/bugs-webapps-tr2009.pdf PDF",
   supersededby = "ArtziKDTDPE2010",
-  category =  "Testing",
+  category = "Dynamic analysis",
   OMITcsetagsBECAUSESUPERSEDED = "mernst,mernst-Testing,plse",
   summary =
    "This paper extends dynamic test generation, based on interleaved
@@ -5583,7 +5611,7 @@ endgame.",
    "http://refactoring.info/tools/Concurrencer/ Concurrencer implementation",
   downloadsnonlocal =
    "http://homes.cs.washington.edu/~mernst/pubs/concurrent-refactoring-icse2009.pdf PDF",
-  category =  "Refactoring",
+  category = "Refactoring",
   csetags = "mernst,mernst-Refactoring,plse",
   summary =
    "This paper presents a refactoring tool, Concurrencer, that transforms
@@ -5629,7 +5657,7 @@ endgame.",
   downloadsnonlocal =
    "http://homes.cs.washington.edu/~mernst/pubs/create-attacks-icse2009.pdf PDF;
     http://homes.cs.washington.edu/~mernst/pubs/create-attacks-icse2009-slides.pdf slides (PDF)",
-  category =  "Security",
+  category = "Security",
   csetags = "mernst,mernst-Security,plse",
   summary =
    "By generating inputs that cause the program to execute particular
@@ -5680,7 +5708,7 @@ endgame.",
   downloadsnonlocal =
    "http://homes.cs.washington.edu/~mernst/pubs/string-solver-issta2009.pdf PDF",
   supersededby = "KiezunGAGHE2012",
-  category =  "Static analysis",
+  category = "Static analysis",
   csetags = "mernst,mernst-Static-analysis,plse",
   summary =
    "This paper describes an efficient and expressive solver (that is, a
@@ -5718,7 +5746,7 @@ endgame.",
   supersededby = "TipFKEBDS2011",
   downloadsnonlocal =
    "http://homes.cs.washington.edu/~mernst/pubs/refactoring-type-constraints-rc24804.pdf PDF",
-  category =  "Refactoring",
+  category = "Refactoring",
   OMITcsetagsBECAUSESUPERSEDED = "mernst,mernst-Refactoring,plse",
   summary =
    "A program is one solution to the type constraints that are imposed by its
@@ -5768,7 +5796,7 @@ endgame.",
    "http://homes.cs.washington.edu/~mernst/pubs/staticdynamic-scam2009-slides.pdf Slides (PDF);
     http://homes.cs.washington.edu/~mernst/pubs/staticdynamic-scam2009-slides.pptx Slides (Powerpoint)",
   supersededby = "BayneCE2011",
-  category =  "Dynamic analysis",
+  category = "Dynamic analysis",
   OMITcsetagsBECAUSESUPERSEDED = "mernst,mernst-Dynamic-analysis,plse",
   summary =
    "This talk proposes a way to obtain the rapid development of a
@@ -5826,7 +5854,7 @@ endgame.",
    "http://homes.cs.washington.edu/~mernst/pubs/automatic-patching-sosp2009.pdf PDF;
     http://homes.cs.washington.edu/~mernst/pubs/automatic-patching-sosp2009-slides.pdf Slides (PDF);
     http://homes.cs.washington.edu/~mernst/pubs/automatic-patching-sosp2009-slides.ppt Slides (PowerPoint)",
-  category =  "Security",
+  category = "Security",
   csetags = "mernst,mernst-Security,plse",
   summary =
    "The ClearView system automatically:  classifies executions as normal or
@@ -5856,7 +5884,7 @@ endgame.",
    "http://homes.cs.washington.edu/~mernst/pubs/ownership-immutability-tr0913.pdf PDF",
   OTHERdownloadsnonlocal =
    "http://ecs.victoria.ac.nz/foswiki/pub/Main/TechnicalReportSeries/ECSTR09-13.pdf PDF",
-  category =  "Programming language design",
+  category = "Ownership (encapsulation)",
   csetags = "mernst,mernst-Programming-language-design,plse",
   TOBEsupersededby = "Zibin2010",
   summary =
@@ -5906,7 +5934,7 @@ endgame.",
   basefilename = "field-initialization-tr100201",
   downloadsnonlocal = "ftp://ftp.cs.washington.edu/tr/2010/02/UW-CSE-10-02-01.PDF PDF",
   supersededby = "SpotoE2011 a previous version with some additional details",
-  category =  "Static analysis",
+  category = "Static analysis",
   OMITcsetagsBECAUSESUPERSEDED = "mernst,mernst-Static-analysis,plse",
   summary =
    "This paper presents a flow-sensitive, exception-aware static analysis that
@@ -5953,7 +5981,7 @@ endgame.",
   basefilename = "speculative-merge-tr100301",
   downloadsnonlocal = "ftp://ftp.cs.washington.edu/tr/2010/03/UW-CSE-10-03-01.PDF PDF",
   supersededby = "BrunHEN2011",
-  category =  "Speculative analysis",
+  category = "Speculative analysis",
   OMITcsetagsBECAUSESUPERSEDED = "mernst,notkin,mernst-Software-engineering,plse",
   summary =
    "Are software engineers sometimes unaware that their work conflicts with
@@ -5995,7 +6023,7 @@ endgame.",
     http://homes.cs.washington.edu/~mernst/pubs/staticdynamic-tap2010-slides.pdf Slides (PDF);
     http://homes.cs.washington.edu/~mernst/pubs/staticdynamic-tap2010-slides.pptx Slides (Powerpoint)",
   supersededby = "BayneCE2011",
-  category =  "Dynamic analysis",
+  category = "Dynamic analysis",
   OMITcsetagsBECAUSESUPERSEDED = "mernst,mernst-Dynamic-analysis,plse",
   summary =
    "This talk proposes a way to obtain the rapid development of a
@@ -6036,7 +6064,7 @@ endgame.",
   basefilename = "bugs-webapps-tse2010",
   downloadsnonlocal =
     "http://homes.cs.washington.edu/~mernst/pubs/bugs-webapps-tse2010.pdf PDF",
-  category =  "Testing",
+  category = "Dynamic analysis",
   csetags = "mernst,mernst-Testing,plse",
   summary =
    "This paper extends dynamic test generation, based on combined
@@ -6074,7 +6102,7 @@ endgame.",
    "http://homes.cs.washington.edu/~mernst/pubs/haloop-vldb2010.pdf PDF",
   supersededby = "BuHBErnst2012",
   FUTUREcategory =  "Databases",
-  category =  "Miscellaneous",
+  category = "Miscellaneous",
   OMITcsetagsBECAUSESUPERSEDED = "ybu,billhowe,magda,mernst,mernst-Miscellaneous,plse",
   summary =
    "An iterative job may repeat similar work on each iteration.  This paper
@@ -6112,7 +6140,7 @@ endgame.",
    "https://github.com/ModelInference/synoptic implementation",
   OPTdownloadsnonlocal = "",
   supersededby = "BeschastnikhBSSE2011",
-  category =  "Invariant detection",
+  category = "Invariant detection",
   csetags = "ivanb,mernst,brun,mernst-Dynamic-analysis,proj-synoptic,plse",
   summary =
    "Synoptic produces a small graph that summarizes a distributed system log.
@@ -6166,7 +6194,7 @@ endgame.",
    "http://ecs.victoria.ac.nz/foswiki/pub/Main/TechnicalReportSeries/ECSTR10-16.pdf TR with proofs",
   TODOdownloads = ";
     https://checkerframework.org/manual#igj-checker implementation",
-  category =  "Programming language design",
+  category = "Ownership (encapsulation)",
   csetags = "mernst,mernst-Programming-language-design,plse",
   summary =
    "This paper shows how to combine ownership and immutability, producing a
@@ -6208,7 +6236,7 @@ endgame.",
   downloads =
    "https://github.com/brunyuriy/quick-fix-scout Quick Fix Scout implementation",
   OPTsupersededby = "",
-  category =  "Speculative analysis",
+  category = "Speculative analysis",
   csetags = "brun,mernst,notkin,mernst-Software-engineering,plse",
   summary =
    "This paper proposes that tools should analyze program versions that do not
@@ -6246,7 +6274,7 @@ endgame.",
   downloadsnonlocal =
    "http://homes.cs.washington.edu/~mernst/pubs/economics-foser2010.pdf PDF",
   OPTsupersededby = "",
-  category =  "Software engineering",
+  category = "Software engineering",
   csetags = "tws,mernst,mernst-Software-engineering,plse,proj-veriweb",
   summary =
    "We propose to build tools that permit less-skilled workers to perform
@@ -6293,7 +6321,7 @@ endgame.",
     it is more precise than the other code clone detectors.",
   supersededby = "LiE2012",
   basefilename = "buggy-clones-tr110502",
-  category =  "Software engineering",
+  category = "Software engineering",
   OMITcsetagsBECAUSESUPERSEDED = "mernst,mernst-Software-engineering,plse",
   summary =
    "When programmers clone code, they also clone bugs.  This paper presents a
@@ -6327,7 +6355,7 @@ endgame.",
   basefilename = "refactoring-type-constraints-toplas2011",
   downloadsnonlocal =
    "http://homes.cs.washington.edu/~mernst/pubs/refactoring-type-constraints-toplas2011.pdf PDF",
-  category =  "Refactoring",
+  category = "Refactoring",
   csetags = "mernst,mernst-Refactoring,plse",
   summary =
    "A program is one solution to the type constraints that are imposed by its
@@ -6367,7 +6395,7 @@ endgame.",
   basefilename = "concurrent-history-iwmse2011",
   downloadsnonlocal =
    "http://homes.cs.washington.edu/~mernst/pubs/concurrent-history-iwmse2011.pdf PDF",
-  category =  "Refactoring",
+  category = "Refactoring",
   csetags = "mernst,mernst-Refactoring,plse",
   summary =
    "This paper is a historical analysis of the transformations that
@@ -6416,7 +6444,7 @@ endgame.",
     "https://portal.juliasoft.com/ implementation;
      ftp://ftp.cs.washington.edu/tr/2010/02/UW-CSE-10-02-01.PDF earlier TR with additional details",
   OPTdownloadsnonlocal = "",
-  category =  "Static analysis",
+  category = "Static analysis",
   csetags = "mernst,mernst-Static-analysis,plse",
   summary =
    "This paper presents a flow-sensitive, exception-aware static analysis that
@@ -6463,7 +6491,7 @@ endgame.",
     http://homes.cs.washington.edu/~mernst/pubs/ductile-icse2011-slides.pdf slides (PDF)",
   downloads =
     "https://github.com/mernst/ductilej DuctileJ implementation",
-  category =  "Programming language design",
+  category = "Programming language design",
   csetags = "mernst,mernst-Programming-language-design,plse",
   summary =
    "The DuctileJ language enables the rapid development and flexibility of a
@@ -6508,7 +6536,7 @@ endgame.",
   downloads =
     "https://checkerframework.org/ implementation",
   usesDaikonAsTestSubject = 1,
-  category =  "Programming language design",
+  category = "Programming language design",
   csetags = "wmd,sdietzel,mernst,kinanc,tws,mernst-Programming-language-design,plse",
   summary =
    "This paper evaluates the ease of pluggable type-checking with the Checker
@@ -6559,7 +6587,7 @@ endgame.",
     http://homes.cs.washington.edu/~mernst/pubs/palus-testgen-issta2011.pdf slides (PowerPoint)",
   downloads = "https://code.google.com/archive/p/tpalus/ implementation",
   OPTsupersededby = "",
-  category =  "Testing",
+  category = "Test generation",
   csetags = "szhang,ybu,mernst,mernst-Testing,plse,proj-testgen",
   summary =
    "The Palus tool performs constraint-based random test generations, using
@@ -6611,7 +6639,7 @@ endgame.",
     experimental data are available at
     \url{http://people.csail.mit.edu/akiezun/hampi/}",
   supersededby = "KiezunGGHE2009 A tutorial and paper",
-  category =  "Static analysis",
+  category = "Static analysis",
   csetags = "mernst,mernst-Static-analysis,plse",
   summary =
    "This invited paper accompanies a tutorial and further describes the HAMPI solver
@@ -6651,7 +6679,7 @@ endgame.",
     http://homes.cs.washington.edu/~mernst/pubs/tunable-typeinf-ecoop2011-slides.pdf slides (PDF)",
   downloads = "https://ece.uwaterloo.ca/~wdietl/inference/ Implementation and experiments",
   OPTsupersededby = "",
-  category =  "Programming language design",
+  category = "Ownership (encapsulation)",
   csetags = "wmd,mernst,mernst-Programming-language-design,plse",
   summary =
    "Type inference for ownershup types is underconstrained:  many different
@@ -6699,7 +6727,7 @@ endgame.",
     "https://github.com/brunyuriy/crystalvc Crystal implementation;
      http://people.cs.umass.edu/~brun/video/Brun11esecfse/ video of talk;
      http://homes.cs.washington.edu/~mernst/pubs/vc-conflicts-fse2011-tooldemo.pdf tool demo paper (PDF)",
-  category =  "Speculative analysis",
+  category = "Speculative analysis",
   csetags = "brun,mernst,notkin,mernst-Software-engineering,plse",
   summary =
    "The Crystal tool informs a developer when his individual work can be
@@ -6731,7 +6759,7 @@ endgame.",
     developers about actions that would address the conflicts and about
     people with whom they should communicate.",
   supersededby = "BrunHEN2011 A tool demonstration",
-  category =  "Speculative analysis",
+  category = "Speculative analysis",
   OMITcsetagsBECAUSESUPERSEDED = "brun,mernst,notkin,mernst-Software-engineering,plse",
   summary =
    "This tool demo describes the Crystal tool, which speculatively performs
@@ -6787,7 +6815,7 @@ endgame.",
   downloadsnonlocal =
    "http://homes.cs.washington.edu/~mernst/pubs/synoptic-fse2011.pdf PDF",
   OPTsupersededby = "",
-  category =  "Invariant detection",
+  category = "Invariant detection",
   csetags = "ivanb,brun,mernst,mgsloan,mernst-Software-engineering,proj-synoptic,plse",
   summary =
    "Synoptic infers, from system logs, a finite state machine model of the
@@ -6818,7 +6846,7 @@ endgame.",
     workflow.",
   basefilename = "synoptic-fse2011-tool-demo",
   supersededby = "BeschastnikhBSSE2011 A tool demonstration",
-  category =  "Invariant detection",
+  category = "Invariant detection",
   OMITcsetagsBECAUSESUPERSEDED = "ivanb,jabrah,brun,mernst,mernst-Software-engineering,proj-synoptic,plse",
   NEEDsummary = 	 "*",
   undergradCoauthor = 1,
@@ -6863,7 +6891,7 @@ endgame.",
     preservation) to show it soundly prevents deadlock.",
   basefilename = "lock-capabilities-tr111001",
   supersededby = "GordonEG2012",
-  category =  "Concurrency",
+  category = "Concurrency",
   csetags = "csgordon,mernst,djg,mernst-Static-analysis,plse,plse-lockcaps",
   summary =
    "This paper prevents deadlock by forcing the locking discipline to follow
@@ -6902,7 +6930,7 @@ endgame.",
     http://homes.cs.washington.edu/~mernst/pubs/test-documentation-ase2011-slides.pdf slides (PDF)",
   downloads =
    "https://code.google.com/archive/p/failuredoc/ FailureDoc implementation",
-  category =  "Testing",
+  category = "Testing",
   csetags = "szhang,mernst,mernst-Testing,plse,proj-failuredoc",
   summary =
    "When a test fails, debugging begins.  The FailureDoc tool indicates which
@@ -6940,7 +6968,7 @@ endgame.",
    "http://homes.cs.washington.edu/~mernst/pubs/maintainable-tests-ase2011.pdf PDF",
   downloads =
    "https://randoop.github.io/randoop/ Randoop implementation",
-  category =  "Testing",
+  category = "Test generation",
   csetags = "mernst,mernst-Testing,plse",
   summary =
    "This paper shows how to apply automatic test generation to the domain of
@@ -6973,7 +7001,7 @@ endgame.",
   OMITdownloads_because_synoptic_does_not_yet_handle_partially_ordered_logs =
    "https://github.com/ModelInference/synoptic Synoptic implementation",
   supersededby = "BeschastnikhBEKA2011:OSR",
-  category =  "Invariant detection",
+  category = "Invariant detection",
   csetags = "ivanb,brun,mernst,arvind,tom,mernst-Software-engineering,proj-synoptic,plse",
   summary =
    "Totally ordered (linear) logs have been well-studied in the invariant
@@ -6996,7 +7024,7 @@ endgame.",
   downloadsnonlocal =
    "http://homes.cs.washington.edu/~mernst/pubs/log-test-gen-sospwip2011.pdf PDF",
   OPTsupersededby = "",
-  category =  "Invariant detection",
+  category = "Invariant detection",
   csetags = "ivanb,brun,mernst,arvind,tom,mernst-Software-engineering,proj-synoptic,plse",
   summary =
    "This short paper proposes a way to automatically generate test scenarios
@@ -7029,7 +7057,7 @@ endgame.",
    "http://homes.cs.washington.edu/~mernst/pubs/mining-po-logs-osr2011.pdf PDF",
   OMITdownloads_because_synoptic_does_not_yet_handle_partially_ordered_logs =
    "https://github.com/ModelInference/synoptic Synoptic implementation",
-  category =  "Invariant detection",
+  category = "Invariant detection",
   csetags = "ivanb,brun,mernst,arvind,tom,mernst-Software-engineering,proj-synoptic,plse",
   summary =
    "Totally ordered (linear) logs have been well-studied in the invariant
@@ -7080,7 +7108,7 @@ endgame.",
   downloadsnonlocal =
    "http://homes.cs.washington.edu/~mernst/pubs/lock-capabilities-tldi2012.pdf PDF;
     http://homes.cs.washington.edu/~mernst/pubs/lock-capabilities-tldi2012-slides.pdf slides (PDF)",
-  category =  "Concurrency",
+  category = "Concurrency",
   csetags = "csgordon,mernst,djg,mernst-Static-analysis,plse,plse-lockcaps",
   summary =
    "This paper prevents deadlock by forcing the locking discipline to follow
@@ -7112,7 +7140,7 @@ endgame.",
    "http://homes.cs.washington.edu/~mernst/pubs/speculate-predict-fcsd2012-poster.pptx poster (PowerPoint)",
   downloadsnonlocal =
    "http://homes.cs.washington.edu/~mernst/pubs/speculate-predict-fcsd2012.pdf PDF",
-  category =  "Speculative analysis",
+  category = "Speculative analysis",
   csetags = "brun,kivanc,mernst,notkin,mernst-Software-engineering,plse,plse-speculation",
   summary =
    "Rather than dealing with source code conflicts when a developer notices,
@@ -7154,7 +7182,7 @@ endgame.",
    "http://homes.cs.washington.edu/~mernst/pubs/buggy-clones-icse2012.pdf PDF",
   downloads =
    "http://homes.cs.washington.edu/~mernst/pubs/buggy-clones-tr110502.pdf TR UW-CSE-11-05-02",
-  category =  "Software engineering",
+  category = "Software engineering",
   csetags = "mernst,mernst-Software-engineering,plse",
   summary =
    "When programmers clone code, they also clone bugs.  This paper presents a
@@ -7190,7 +7218,7 @@ endgame.",
   downloads = "https://github.com/brunyuriy/quick-fix-scout Quick Fix Scout implementation",
   OPTdownloadsnonlocal = "",
   supersededby = "MusluBHEN2012-OOPSLA",
-  category =  "Speculative analysis",
+  category = "Speculative analysis",
   summary =
    "Integrated development environments (IDEs) offer suggestions to programmers;
     accepting these suggestions can speed development.  This paper improves
@@ -7236,7 +7264,7 @@ endgame.",
     http://homes.cs.washington.edu/~mernst/pubs/regex-types-ftfjp2012-slides.pdf slides (PDF)",
   downloads =
    "https://checkerframework.org/manual/#regex-checker Regex Checker implementation",
-  category =  "Programming language design",
+  category = "Programming language design",
   csetags = "espishak,wmdietl,mernst,mernst-Programming-language-design,plse",
   summary =
    "A program that uses regular expressions can fail at run time due to improper
@@ -7285,7 +7313,7 @@ endgame.",
     http://games.cs.washington.edu/verigames-dev/demo/traffic/PipeJam.html Traffic Jam game;
     http://games.cs.washington.edu/verigame/flowjam/ Flow Jam game;
     http://paradox.centerforgamescience.org/paradox/Paradox.html Paradox game",
-  category =  "Verification",
+  category = "Verification",
   csetags = "wmdietl,sdietzel,mernst,nmote,bdwalker,scooper,pavlik,zoran,mernst-verification,plse,graphics,plse-verigames",
   summary =
    "This paper presents a system that takes as input a program and a property,
@@ -7326,7 +7354,7 @@ endgame.",
     http://homes.cs.washington.edu/~mernst/pubs/infer-ownership-ecoop2012-slides.pdf slides (PDF)",
   downloads =
    "http://www.cs.rpi.edu/~huangw5/cf-inference/ implementation",
-  category =  "Static analysis",
+  category = "Ownership (encapsulation)",
   csetags = "wmdietl,mernst,mernst-Static-analysis,plse",
   summary =
    "This paper generalizes previous work on ownership inference, showing how
@@ -7381,7 +7409,7 @@ endgame.",
   basefilename = "unreproducible-tests-icst-2012",
   downloadsnonlocal =
    "http://homes.cs.washington.edu/~mernst/pubs/unreproducible-tests-icst-2012-slides.pdf slides (PDF)",
-  category =  "Software engineering",
+  category = "Software engineering",
   summary =
    "This keynote talk is a call to arms to the community to treat research more
     like software:  it deserves to be tested and replicable."
@@ -7425,7 +7453,7 @@ endgame.",
   downloadsnonlocal =
    "http://homes.cs.washington.edu/~mernst/pubs/haloop-vldb2012.pdf PDF",
   FUTUREcategory =  "Databases",
-  category =  "Miscellaneous",
+  category = "Miscellaneous",
   csetags = "ybu,billhowe,magda,mernst,mernst-Miscellaneous,plse",
   summary =
    "An iterative job may repeat similar work on each iteration.  This paper
@@ -7472,7 +7500,7 @@ endgame.",
     http://homes.cs.washington.edu/~mernst/pubs/gui-thread-tr130401.pdf extended version (PDF)",
   csetags = "mernst,mernst-Testing,plse,plse-testing,szhang",
   downloads = "http://guierrordetector.googlecode.com/ implementation",
-  category =  "Concurrency",
+  category = "Concurrency",
   summary =
    "In a GUI program, only the main thread (event thread) should access GUI
     objects.  Our analysis verifies this property, and found crashing errors
@@ -7504,7 +7532,7 @@ endgame.",
     can outperform equivalent procedural algorithms.",
   basefilename = "invarimint-tr120802",
   supersededby = "BeschastnikhBAEK2013",
-  category =  "Invariant detection",
+  category = "Invariant detection",
   csetags = "ivanb,brun,mernst,arvind,mernst-Software-engineering,proj-synoptic,plse",
   summary =
    "Model inference algorithms are typically defined procedurally, which makes
@@ -7548,7 +7576,7 @@ endgame.",
    "http://homes.cs.washington.edu/~mernst/pubs/quick-fix-scout-oopsla2012.pdf PDF;
     http://homes.cs.washington.edu/~mernst/pubs/quick-fix-scout-oopsla2012-slides.pdf slides (PDF)",
   downloads = "https://github.com/brunyuriy/quick-fix-scout implementation",
-  category =  "Speculative analysis",
+  category = "Speculative analysis",
   csetags = "kivanc,brun,notkin,mernst,mernst-Software-engineering,plse,plse-speculation",
   summary =
    "An IDE lets a developer modify his or her program, but does not indicate
@@ -7598,7 +7626,7 @@ endgame.",
    "http://homes.cs.washington.edu/~mernst/pubs/veriweb-oopsla2012.pdf PDF;
     http://homes.cs.washington.edu/~mernst/pubs/veriweb-oopsla2012-slides.pdf slides (PDF)",
   downloads = "http://plse.cs.washington.edu/veriweb/ study materials",
-  category =  "Software engineering",
+  category = "Software engineering",
   csetags = "tws,mernst,mernst-Software-engineering,plse,proj-veriweb",
   summary =
    "We present a novel user interface that enables ordinary developers, who
@@ -7697,7 +7725,7 @@ endgame.",
   downloadsnonlocal =
    "http://homes.cs.washington.edu/~mernst/pubs/string-solver-tosem2012.pdf PDF",
   OPTdownloadsnonlocal = "",
-  category =  "Static analysis",
+  category = "Static analysis",
   csetags = "mernst,mernst-Static-analysis,plse",
   summary =
    "This paper describes an efficient and expressive solver (that is, a
@@ -7768,7 +7796,7 @@ endgame.",
     http://homes.cs.washington.edu/~mernst/pubs/configuration-errors-icse2013-slides.pdf slides (PDF)",
   downloads = "http://config-errors.googlecode.com ConfDiagnoser implementation",
   OPTdownloadsnonlocal = "",
-  category =  "Testing",
+  category = "Testing",
   csetags = "mernst,mernst-Testing,plse,plse-testing,szhang",
   summary =
    "Sometimes, incorrect software behavior is not due to a bug, but to supplying
@@ -7800,7 +7828,7 @@ endgame.",
     can outperform equivalent procedural algorithms.",
   basefilename = "invarimint-tr120802",
   supersededby = "BeschastnikhBAEK2013 An extended version with proofs",
-  category =  "Invariant detection",
+  category = "Invariant detection",
   csetags = "ivanb,brun,mernst,arvind,mernst-Software-engineering,proj-synoptic,plse",
   summary =
    "Model inference algorithms are typically defined procedurally, which makes
@@ -7837,7 +7865,7 @@ endgame.",
     "http://homes.cs.washington.edu/~mernst/pubs/fsm-inference-declarative-tr130301.pdf TR UW-CSE-13-03-01;
      http://synoptic.googlecode.com/ InvariMint implementation",
   supersededby = "BeschastnikhBAEK2015",
-  category =  "Invariant detection",
+  category = "Invariant detection",
   csetags = "ivanb,brun,mernst,jabrah,arvind,mernst-Software-engineering,proj-synoptic,plse",
   summary =
    "Model inference algorithms summarize a log to make it easier to understand.
@@ -7922,7 +7950,7 @@ endgame.",
   downloads =
    "http://homes.cs.washington.edu/~mernst/pubs/rely-guarantee-ref-tr130302.pdf technical report;
     https://github.com/csgordon/rgref/ implementation",
-  category =  "Static analysis",
+  category = "Static analysis",
   csetags = "csgordon,mernst,djg,mernst-Static-analysis,plse,plse-lockcaps",
   summary =
    "This paper presents a new type system for reasoning about side effects
@@ -7965,7 +7993,7 @@ endgame.",
    "http://homes.cs.washington.edu/~mernst/pubs/gui-thread-tr20130401.pdf technical report (PDF);
     https://checkerframework.org/manual/#guieffect-checker JavaUI implementation;
     https://github.com/csgordon/javaui older implementation and annotated subject programs",
-  category =  "Concurrency",
+  category = "Concurrency",
   csetags = "csgordon,wmdietl,mernst,djg,mernst-Static-analysis,plse,plse-lockcaps",
   summary =
    "In a GUI program, only the main thread (event thread) should access GUI
@@ -8004,7 +8032,7 @@ endgame.",
     http://homes.cs.washington.edu/~mernst/pubs/repair-workflow-issta2013-slides.pdf slides (PDF)",
   downloads =
    "https://code.google.com/archive/p/workflow-repairer/ FlowFixer implementation",
-  category =  "Testing",
+  category = "Testing",
   csetags = "mernst,mernst-Testing,plse,plse-testing,szhang,hlv",
   summary =
    "When a UI changes, a user's workflow must also change.  The FlowFixer
@@ -8051,7 +8079,7 @@ endgame.",
   downloads =
    "https://bitbucket.org/kivancmuslu/solstice/ Solstice implementation",
   supersededby = "MusluBEN2015",
-  category =  "Speculative analysis",
+  category = "Speculative analysis",
   csetags = "kivanc,brun,notkin,mernst,mernst-Software-engineering,plse,plse-speculation",
   summary =
    "An offline program analysis runs when the developer invokes it.  A
@@ -8099,7 +8127,7 @@ endgame.",
     http://homes.cs.washington.edu/~mernst/pubs/record-replay-uist2013-slides.pdf slides (PDF)",
   downloads =
    "https://github.com/burg/replay-staging/ Timelapse implementation",
-  category =  "Software engineering",
+  category = "Software engineering",
   csetags = "burg,rjacob,ajko,mernst,mernst-Software-engineering,plse",
   summary =
    "This paper presents a record-replay infrastructure for web applications.
@@ -8140,7 +8168,7 @@ endgame.",
    "http://homes.cs.washington.edu/~mernst/pubs/vc-conflicts-fse2011-slides.pdf ESEC/FSE 2011 slides (PDF);
     http://homes.cs.washington.edu/~mernst/pubs/vc-conflicts-fse2011-tooldemo.pdf tool demo paper (PDF);
     https://github.com/brunyuriy/crystalvc Crystal implementation",
-  category =  "Speculative analysis",
+  category = "Speculative analysis",
   csetags = "brun,mernst,notkin,mernst-Software-engineering,plse",
   summary =
    "The Crystal tool informs a developer when his individual work can be
@@ -8166,7 +8194,7 @@ endgame.",
   NOabstract =   1,
   basefilename = "annotations-jsr308-pfd",
   downloadsnonlocal = "http://download.oracle.com/otndocs/jcp/annotations-2014_01_08-pfd-spec/ PDF",
-  category =     "Programming language design",
+  category = "Programming language design",
   csetags = "mernst,mernst-Programming-language-design,plse",
   summary =
    "This is the Proposed Final Draft of the specification of type
@@ -8217,7 +8245,7 @@ endgame.",
   basefilename = "test-independence-tr140101",
   downloadsnonlocal = "ftp://ftp.cs.washington.edu/tr/2014/01/UW-CSE-14-01-01.PDF PDF",
   supersededby = "ZhangJWMLEN2014",
-  category =  "Testing",
+  category = "Testing",
   csetags = "mernst,mernst-Testing,plse,plse-testing,szhang,darioush,kivanc",
   summary =
    "A test is indepent if its result does not depend on which other tests have
@@ -8261,7 +8289,7 @@ endgame.",
     even when controlling for code coverage.",
   supersededby = "JustJIEHF2014",
   basefilename = "mutation-effectiveness-tr20140202",
-  category =  "Testing",
+  category = "Testing",
   csetags = 	 "rjust,darioush,mernst,mernst-Testing,plse,plse-testing",
   summary =
    "Much research in software testing uses mutants (artificial defects) in
@@ -8307,7 +8335,7 @@ endgame.",
   downloads =
     "http://synoptic.googlecode.com/ CSight implementation",
   supersededby = "BeschastnikhBEK2014",
-  category =  "Invariant detection",
+  category = "Invariant detection",
   csetags = "ivanb,brun,mernst,arvind,mernst-Software-engineering,proj-synoptic,plse",
   summary =
    "This paper provides a new approach to inferring a communicating finite state
@@ -8363,7 +8391,7 @@ endgame.",
    "http://homes.cs.washington.edu/~mernst/pubs/data-programming-sigcse2014.pdf PDF",
   downloads =
    "http://homes.cs.washington.edu/~mernst/teaching/data-programming/ Data Programming class at UW",
-  category =  "Education",
+  category = "Education",
   csetags = 	 "rea,mernst,mernst-Software-engineering,plse",
   summary =
    "Most introductory programming classes base their examples and assignments
@@ -8396,7 +8424,7 @@ endgame.",
     performance.",
   basefilename = "bladedroid-nsdi2014",
   supersededby = "BhoraskarLHCSE2014 A poster",
-  category =  "Software engineering",
+  category = "Software engineering",
   csetags = "bhora,pingyh,mernst,mernst-Software-engineering,plse",
   summary =
    "User scripting is common on the Web, but unknown for mobile applications.
@@ -8422,7 +8450,7 @@ endgame.",
   OPTdownloads = "",
   OPTdownloadsnonlocal = "",
   supersededby = "ErnstJMDPRKBBHVW2014",
-  category =  "Static analysis",
+  category = "Static analysis",
   NEEDcsetags = 	 "*",
   summary =
    "This paper presents a practical, context-sensitive, flow-sensitive type
@@ -8471,7 +8499,7 @@ endgame.",
     http://homes.cs.washington.edu/~mernst/pubs/concurrent-models-icse2014-slides.pdf slides (PDF)",
   downloads =
     "http://synoptic.googlecode.com/ CSight implementation",
-  category =  "Invariant detection",
+  category = "Invariant detection",
   csetags = "ivanb,brun,mernst,arvind,mernst-Software-engineering,proj-synoptic,plse",
   summary =
    "This paper provides a new approach to inferring a communicating finite state
@@ -8525,7 +8553,7 @@ endgame.",
     http://homes.cs.washington.edu/~mernst/pubs/confsuggester-icse2014-slides.pdf slides (PDF)",
   downloads = "http://config-errors.googlecode.com ConfSuggester implementation",
   NEEDdownloadsnonlocal = "*",
-  category =  "Testing",
+  category = "Testing",
   csetags = "mernst,mernst-Testing,plse,plse-testing,szhang",
   summary =
    "A new version of a system may require different configuration options than a
@@ -8579,7 +8607,7 @@ endgame.",
     http://homes.cs.washington.edu/~mernst/pubs/contract-specifications-icse2014-slides.pdf slides (PDF)",
   downloads = "http://plse.cs.washington.edu/code-contracts/ data
   and tools",
-  category =  "Invariant detection",
+  category = "Invariant detection",
   csetags = "tws,mernst,mernst-Software-engineering,plse,proj-daikon",
   summary =
    "How do developers use Code Contracts in practice?  How does developers' use
@@ -8618,7 +8646,7 @@ endgame.",
    "https://bestchai.bitbucket.io/shiviz/? online deployment (try it!);
     https://bitbucket.org/bestchai/shiviz ShiVector and ShiViz source code;
     https://bestchai.bitbucket.io/shiviz-demo/? video demo (YouTube)",
-  category =  "Invariant detection",
+  category = "Invariant detection",
   csetags = "ivanb,brun,mernst,mernst-Software-engineering,proj-synoptic,plse",
   summary =
    "This paper presents two dools to help developers comprehend distributed
@@ -8650,7 +8678,7 @@ endgame.",
   basefilename = "bladedroid-apsys2014",
   downloadsnonlocal =
    "http://homes.cs.washington.edu/~mernst/pubs/bladedroid-apsys2014.pdf PDF",
-  category =  "Software engineering",
+  category = "Software engineering",
   csetags = "bhora, dola,pingyh,ryscheng,wrs,mernst,mernst-Software-engineering,plse",
   summary =
    "User scripting is common on the Web, but unknown for mobile applications.
@@ -8703,7 +8731,7 @@ endgame.",
   downloadsnonlocal =
    "http://homes.cs.washington.edu/~mernst/pubs/test-independence-issta2014.pdf PDF",
   downloads = "https://testisolation.googlecode.com/ DTDetector implementation",
-  category =  "Testing",
+  category = "Testing",
   csetags = "mernst,mernst-Testing,plse,plse-testing,szhang,darioush,kivanc",
   summary =
    "A test is indepent if its result does not depend on what other tests have
@@ -8745,7 +8773,7 @@ endgame.",
   downloads =
    "http://homes.cs.washington.edu/~mernst/pubs/format-string-issta2014-demo.pdf demo paper (PDF);
     https://checkerframework.org/manual/#formatter-checker Format String Checker implementation",
-  category =  "Static analysis",
+  category = "Programming language design",
   csetags = "mernst,mernst-Static-Analysis,plse,weitzkon",
   summary =
    "This paper presents a type system that guarantees that invocations of
@@ -8779,7 +8807,7 @@ endgame.",
     (on average, for every bug found, only 1.0 annotations need to be written).",
   basefilename = "format-string-issta2014demo",
   supersededby = "WeitzKSE2014 A tool demonstration",
-  category =  "Static analysis",
+  category = "Static analysis",
   csetags = "mernst,mernst-Static-Analysis,plse,weitzkon",
   summary =
    "This tool demo explains how to statically prevent, at compile time,
@@ -8831,7 +8859,7 @@ endgame.",
    "http://homes.cs.washington.edu/~mernst/pubs/state-infection-issta2014.pdf PDF;
     http://homes.cs.washington.edu/~mernst/pubs/state-infection-issta2014-slides.pdf slides (PDF)",
   downloads = "http://mutation-testing.org/ Major mutation framework and experimental data",
-  category =  "Testing",
+  category = "Testing",
   csetags = "mernst,mernst-Static-Analysis,plse,rjust",
   summary =
    "Mutation analysis --- a technique for evaluating test suites --- is
@@ -8876,7 +8904,7 @@ endgame.",
   downloadsnonlocal =
    "http://homes.cs.washington.edu/~mernst/pubs/bug-database-issta2014.pdf PDF",
   downloads = "http://defects4j.org/ Defects4J website",
-  category =  "Software engineering",
+  category = "Software engineering",
   csetags = "rjust,darioush,mernst,mernst-Static-Analysis,plse",
   summary =
    "Defects4J is a database of real bugs from open source programs.  Each
@@ -8906,7 +8934,7 @@ endgame.",
    "https://www.ideals.illinois.edu/bitstream/handle/2142/54893/2015-icse-tqi.pdf?sequence=2 PDF;
     http://hdl.handle.net/2142/54893 IDEALS permalink",
   supersededby = "VakilianPEJ2015",
-  category =  "Software engineering",
+  category = "Software engineering",
   csetags = 	 "mernst",
   omitfromcv =   1,
   summary =
@@ -8960,7 +8988,7 @@ endgame.",
    "http://homes.cs.washington.edu/~mernst/pubs/infoflow-ccs2014.pdf PDF;
     http://homes.cs.washington.edu/~mernst/pubs/infoflow-ccs2014-slides.pdf slides (PDF)",
   downloads = "https://types.cs.washington.edu/sparta/ SPARTA toolset and experimental data",
-  category =  "Static analysis",
+  category = "Security",
   csetags = "mernst,rjust,smillst,wmdietl,spernste,franzi,supersat,pbsf,bhora,syhan,plvines,edwardwu,mernst-Security,plse,proj-sparta",
   summary =
    "This paper presents a practical, context-sensitive, flow-sensitive type
@@ -9012,7 +9040,7 @@ endgame.",
   downloads =
    "http://defects4j.org/ Defects4J subject programs;
     http://mutation-testing.org/ Major mutation tool",
-  category =  "Testing",
+  category = "Testing",
   csetags = "rjust,darioush,mernst,mernst-Testing,plse",
   summary =
    "Much research in software testing uses mutants (artificial defects) in
@@ -9068,7 +9096,7 @@ endgame.",
   downloadsnonlocal =
    "http://homes.cs.washington.edu/~mernst/pubs/deptest-impact-tr150301.pdf PDF",
   TOBEsupersededby = "*",
-  category =  "Testing",
+  category = "Testing",
   csetags = "mernst,mernst-Testing,plse",
   summary =
     "This paper shows that test prioritization, selection, and parallelization
@@ -9105,7 +9133,7 @@ endgame.",
    "http://homes.cs.washington.edu/~mernst/pubs/data-programming-sigcse2015.pdf PDF",
   downloads =
    "http://homes.cs.washington.edu/~mernst/teaching/data-programming/ Data Programming class at UW",
-  category =  "Education",
+  category = "Education",
   csetags = 	 "rea,mernst,mernst-Software-engineering,plse",
   summary =
    "This paper describes experience, at 4 colleges and universities, with an
@@ -9153,7 +9181,7 @@ endgame.",
   downloads =
    "http://homes.cs.washington.edu/~mernst/pubs/fsm-inference-declarative-icse2013-slides.pdf ICSE 2013 slides (PDF);
     http://synoptic.googlecode.com/ InvariMint implementation",
-  category =  "Invariant detection",
+  category = "Invariant detection",
   csetags = "ivanb,brun,mernst,jabrah,arvind,mernst-Software-engineering,proj-synoptic,plse",
   summary =
    "Model inference algorithms summarize a log to make it easier to understand.
@@ -9198,7 +9226,7 @@ endgame.",
    "https://types.cs.washington.edu/sparta/ SPARTA toolset;
     https://checkerframework.org/ Checker Framework",
   supersededby = "BarrosJMVDdAE2015",
-  category =  "Static analysis",
+  category = "Static analysis",
   csetags = "rjust,smillst,plvines,wmdietl,mernst,mernst-Static-analysis,plse",
   summary =
    "Standard program analysis understands control flow through direct procedure
@@ -9231,7 +9259,7 @@ endgame.",
   downloadsnonlocal =
    "http://homes.cs.washington.edu/~mernst/pubs/dependability-case-snapl2015.pdf PDF;
     http://homes.cs.washington.edu/~mernst/pubs/dependability-case-snapl2015-slides.pdf slides (PDF)",
-  category =  "Verification",
+  category = "Verification",
   csetags = 	 "mernst,djg,loncaric,spernste,ztatlock,emina,xi,mernst-Verification,plse",
   summary =
    "This paper proposes the use of interactive theorem proving, solver-aided
@@ -9264,7 +9292,7 @@ endgame.",
   downloads =
    "https://github.com/reprogrammer/cascade Cascade tool;
     https://github.com/reprogrammer/tqi-study user study materials",
-  category =  "Software engineering",
+  category = "Software engineering",
   csetags = 	 "mernst",
   summary =
    "Rather than operating a type inference tool in batch mode, this paper
@@ -9311,7 +9339,7 @@ endgame.",
     "http://verdi.uwplse.org/verdi_slides.pdf slides (PDF);
      http://verdi.uwplse.org/ Verdi website;
      https://github.com/uwplse/verdi Verdi implementation",
-  category =  "Verification",
+  category = "Verification",
   csetags = 	 "jrw12,dwoos,pavpan,ztatlock,xi,mernst,tom,mernst-Verification,plse",
   summary =
    "This paper presents Verdi, a methodology and toolset for modularly
@@ -9353,8 +9381,9 @@ endgame.",
    "http://homes.cs.washington.edu/~mernst/pubs/inadequate-diagnostics-issta2015.pdf PDF;
     http://homes.cs.washington.edu/~mernst/pubs/inadequate-diagnostics-issta2015-slides.pdf slides (PDF)",
   downloads = "http://config-errors.googlecode.com ConfDiagDetector implementation",
-  category =  "Software engineering",
-  csetags = "szhang,mernst,mernst-Software-engineering,plse",
+  OLDcategory = "Software engineering",
+  category = "Natural language processing",
+  csetags = "szhang,mernst,mernst-Natural-language-processing,plse",
   summary =
    "ConfDiagDetector detects inadequate diagnostic messages for configuration
     errors.  ConfDiagDetector injects misconfigurations and uses natural
@@ -9365,7 +9394,7 @@ endgame.",
 @InProceedings{DeanGEKPWCMMCM2015,
   author = 	 "Drew Dean and Sean Guarino and Leonard Eusebi and Andrew Keplinger and Tim Pavlik and Ronald Watro and Aaron Cammarata and John Murray and Kelly McLaughlin and John Cheng and Thomas Maddern",
   pseudoauthor = "Michael D. Ernst",
-  title = 	 "Lessons Learned in Game Development for Crowdsourced Software Formal Verification",
+  title = 	 "Lessons learned in game development for crowdsourced software formal verification",
   booktitle = ThreeGSE2015,
   year = 	 2015,
   NOpages = 	 "*",
@@ -9395,7 +9424,7 @@ endgame.",
    "http://www.cs.washington.edu/verigames/ Verification Games project homepage;
     http://games.cs.washington.edu/verigame/flowjam/ Flow Jam game;
     http://paradox.centerforgamescience.org/paradox/Paradox.html Paradox game",
-  category =  "Verification",
+  category = "Verification",
   csetags = 	 "mernst,mernst-Verification",
   summary =
    "Crowd-sourcing provides the promise of making formal verification cheaper
@@ -9439,7 +9468,7 @@ endgame.",
    "https://types.cs.washington.edu/sparta/ SPARTA toolset;
     https://checkerframework.org/ Checker Framework",
   supersededby = "BarrosJMVDdAE2015 An extended version",
-  category =  "Static analysis",
+  category = "Static analysis",
   csetags = "rjust,smillst,plvines,wmdietl,mernst,mernst-Static-analysis,plse",
   summary =
    "Standard program analysis understands control flow through direct procedure
@@ -9473,7 +9502,7 @@ endgame.",
   downloadsnonlocal =
    "http://homes.cs.washington.edu/~mernst/pubs/locking-semantics-tr150901.pdf PDF",
   supersededby = "ErnstMMS2016",
-  category =  "Static analysis",
+  category = "Concurrency",
   csetags = "mernst,jthaine,mernst-Static-analysis,plse",
   summary =
    "Java's @GuardedBy annotation is intended to prevent race conditions, but
@@ -9508,7 +9537,7 @@ endgame.",
   downloadsnonlocal =
    "http://homes.cs.washington.edu/~mernst/pubs/locking-inference-checking-tr150902.pdf PDF",
   supersededby = "ErnstLMST2016",
-  category =  "Static analysis",
+  category = "Concurrency",
   csetags = "mernst,jthaine,mernst-Static-analysis,plse",
   summary =
    "This paper describes an abstract inference and a type system and for
@@ -9546,7 +9575,7 @@ endgame.",
     relationship management of a large Italian bank.",
   basefilename = "injection-attacks-tr150903",
   supersededby = "ErnstLMSS2015",
-  category =  "Static analysis",
+  category = "Static analysis",
   csetags = "mernst,mernst-Static-analysis,plse",
   summary =
    "This paper describes a flow- and context-sensitive static analysis that
@@ -9582,8 +9611,9 @@ endgame.",
   downloadsnonlocal =
    "http://homes.cs.washington.edu/~mernst/pubs/variable-interactions-woda2015.pdf PDF;
     http://homes.cs.washington.edu/~mernst/pubs/variable-interactions-woda2015-slides.pdf slides (PDF)",
-  category =  "Software engineering",
-  csetags = "mernst,mernst-Software-engineering,plse",
+  OLDcategory = "Software engineering",
+  category = "Natural language processing",
+  csetags = "mernst,mernst-Natural-language-processing,plse",
   summary =
    "Two different ways of identifying related variables are those that interact
     (such as being involved in the same + operation) and those with similar
@@ -9621,7 +9651,7 @@ endgame.",
     http://homes.cs.washington.edu/~mernst/pubs/dom-tracing-uist2015-slides.pdf slides (PDF)",
   downloads =
    "https://github.com/burg/replay-staging/ Timelapse implementation",
-  category =  "Software engineering",
+  category = "Software engineering",
   csetags = "burg,ajko,mernst,mernst-Software-engineering,plse",
   summary =
    "The Scry tool enables a developer to navigate forward and backward in a web
@@ -9668,7 +9698,7 @@ endgame.",
    "http://homes.cs.washington.edu/~mernst/pubs/implicit-control-flow-tr150801.pdf extended version;
     https://types.cs.washington.edu/sparta/ SPARTA toolset;
     https://checkerframework.org/ Checker Framework",
-  category =  "Static analysis",
+  category = "Static analysis",
   csetags = "rjust,smillst,plvines,wmdietl,mernst,mernst-Static-analysis,plse",
   summary =
    "Standard program analysis understands control flow through direct procedure
@@ -9709,7 +9739,7 @@ endgame.",
    "https://bitbucket.org/kivancmuslu/chronos Bread implementation;
     https://bitbucket.org/LukeSwart/untangler Untangler implementation;
     https://bitbucket.org/kivancmuslu/chronos-test-bisection Bisector implemenation",
-  category =  "Speculative analysis",
+  category = "Speculative analysis",
   csetags = "kivanc,mernst,mernst-Speculative-analysis,plse",
   summary =
    "This paper shows how to transform a development history into multiple
@@ -9759,7 +9789,7 @@ endgame.",
    "http://homes.cs.washington.edu/~mernst/pubs/offline-continuous-esecfse2013-slides.pdf ESEC/FSE 2013 slides (PDF);
     http://homes.cs.washington.edu/~mernst/pubs/offline-continuous-esecfse2013-slides.pptx ESEC/FSE 2013 slides (PowerPoint);
     https://bitbucket.org/kivancmuslu/solstice/ Solstice implementation",
-  category =  "Speculative analysis",
+  category = "Speculative analysis",
   csetags = "kivanc,brun,notkin,mernst,mernst-Software-engineering,plse,plse-speculation",
   summary =
    "An offline program analysis runs when the developer invokes it.  A
@@ -9799,7 +9829,7 @@ endgame.",
   downloadsnonlocal =
    "http://homes.cs.washington.edu/~mernst/pubs/detect-injections-lpar2015.pdf PDF;
     http://homes.cs.washington.edu/~mernst/pubs/detect-injections-lpar2015-slides.pdf slides (PDF)",
-  category =  "Static analysis",
+  category = "Static analysis",
   csetags = "mernst,mernst-Static-analysis,plse",
   summary =
    "This paper describes a flow- and context-sensitive static analysis that
@@ -9849,7 +9879,7 @@ endgame.",
     "http://verdi.uwplse.org/ Verdi website;
      https://github.com/uwplse/verdi Verdi implementation;
      https://github.com/uwplse/verdi/tree/cpp2015 Raft implementation and proofs",
-  category =  "Verification",
+  category = "Verification",
   csetags = 	 "jrw12,dwoos,pavpan,ztatlock,xi,mernst,tom,mernst-Verification,plse",
   summary =
    "This paper provides a formal proof of correctness for a runnable
@@ -9902,7 +9932,7 @@ endgame.",
   downloadsnonlocal =
    "http://homes.cs.washington.edu/~mernst/pubs/bgp-configuration-tr160101.pdf PDF",
   supersededby = "WeitzWTEKT2016",
-  category =  "Verification",
+  category = "Verification",
   csetags = 	 "weitzkon,dwoos,emina,mernst,arvind,ztatlock,mernst-Verification,plse",
   summary =
    "This paper presents Bagpipe, a verification tool for BGP configurations.
@@ -9933,11 +9963,11 @@ endgame.",
     challenges.",
   basefilename = "debug-distributed-queue2016",
   downloads =
-   "http://bestchai.bitbucket.org/shiviz/ online deployment (try it!);
+   "https://bestchai.bitbucket.org/shiviz/ online deployment (try it!);
     https://bitbucket.org/bestchai/shiviz ShiVector and ShiViz source code;
     http://bestchai.bitbucket.org/shiviz-demo/ video demo (YouTube)",
   supersededby = "BeschastnikhWBE2016",
-  category =  "Invariant detection",
+  category = "Invariant detection",
   csetags = "ivanb,brun,mernst,mernst-Software-engineering,proj-synoptic,plse",
   summary =
    "This paper presents two dools to help developers comprehend distributed
@@ -9982,7 +10012,7 @@ endgame.",
   OLDdownloads =
    "https://portal.juliasoft.com/ inference implementation;
     https://checkerframework.org/ checking implementation",
-  category =  "Static analysis",
+  category = "Concurrency",
   csetags = "mernst,jthaine,mernst-Static-analysis,plse",
   summary =
    "This paper describes an abstract inference and a type system and for
@@ -10017,7 +10047,7 @@ endgame.",
     https://checkerframework.org/ checking implementation",
   downloadsnonlocal =
    "http://homes.cs.washington.edu/~mernst/pubs/locking-semantics-nfm2016.pdf PDF",
-  category =  "Static analysis",
+  category = "Concurrency",
   csetags = "mernst,mernst-Static-analysis,plse",
   summary =
    "Java's @GuardedBy annotation is intended to prevent race conditions, but
@@ -10089,8 +10119,9 @@ endgame.",
     reduces EvoSuite's false positives by 33\%.",
   basefilename = "exception-oracles-issta2016",
   downloads = "https://github.com/albertogoffi/toradocu Toradocu implementation",
-  category =  "Testing",
-  csetags = "mernst,mernst-Testing,plse",
+  OLDcategory = "Testing",
+  category = "Natural language processing",
+  csetags = "mernst,mernst-Natural-language-processing,plse",
   summary =
    "This paper gives a technique that converts English documentation about
     thrown exceptions (say, expressed in Javadoc) into assertions that determine
@@ -10128,7 +10159,7 @@ endgame.",
     Our case study uncovered subtle safety-critical flaws in a pre-release of
     the latest version of the radiotherapy system's control software.",
   basefilename = "neutrons-cav2016",
-  category =  "Verification",
+  category = "Verification",
   csetags =   "spernste,loncaric,emina,ztatlock,xi,mernst,mernst-Verification,plse",
   summary =
    "This paper describes a site of tools that we built to verify properties
@@ -10158,10 +10189,10 @@ endgame.",
     challenges.",
   basefilename = "debug-distributed-cacm2016",
   downloads =
-   "http://bestchai.bitbucket.org/shiviz/? online deployment (try it!);
+   "https://bestchai.bitbucket.org/shiviz/? online deployment (try it!);
     https://bitbucket.org/bestchai/shiviz ShiVector and ShiViz source code;
-    http://bestchai.bitbucket.org/shiviz-demo/? video demo (YouTube)",
-  category =  "Invariant detection",
+    https://bestchai.bitbucket.org/shiviz-demo/? video demo (YouTube)",
+  category = "Invariant detection",
   csetags = "ivanb,brun,mernst,mernst-Software-engineering,proj-synoptic,plse",
   summary =
    "This paper presents two dools to help developers comprehend distributed
@@ -10184,7 +10215,7 @@ endgame.",
   downloads =
    "https://github.com/uwplse/uwplse-bagpipe Bagpipe implementation",
   supersededby = "WeitzWTEKT2016 An overview",
-  category =  "Verification",
+  category = "Verification",
   csetags = 	 "weitzkon,dwoos,emina,mernst,arvind,ztatlock,mernst-Verification,plse",
   summary =
    "This brief paper overviews the Bagpipe project, which does
@@ -10242,7 +10273,7 @@ endgame.",
   downloadsnonlocal =
    "http://homes.cs.washington.edu/~mernst/pubs/fault-localization-tr160803.pdf PDF",
   supersededby = "PearsonCJFAEPK2017 An extended version",
-  category =  "Testing",
+  category = "Testing",
   csetags = 	 "suspense,mernst,dericp,bjkeller,mernst-Testing,plse",
   summary =
    "Previously, fault localization techniques were evaluated on artificial
@@ -10280,7 +10311,7 @@ endgame.",
   downloadsnonlocal =
    "http://homes.cs.washington.edu/~mernst/pubs/trigger-generation-plas2016.pdf PDF;
     http://homes.cs.washington.edu/~mernst/pubs/trigger-generation-plas2016-slides.pdf slides (PDF)",
-  category =	 "Security",
+  category = "Security",
   csetags = "mernst,cnandi,mernst-Security,plse",
   summary =
    "User-written rules consist of triggers and actions.  If the user forgets to
@@ -10328,7 +10359,7 @@ with an {SMT} Solver",
    "https://www.youtube.com/watch?v=eKB5Vj0PsIk talk video;
     http://bagpipe.uwplse.org/bagpipe/ Bagpipe homepage",
   downloadsnonlocalTODO = "*",
-  category =  "Verification",
+  category = "Verification",
   csetags = 	 "weitzkon,dwoos,emina,mernst,arvind,ztatlock,mernst-Verification,plse",
   summary =
    "This paper presents Bagpipe, a verification tool for BGP configurations.
@@ -10341,6 +10372,96 @@ with an {SMT} Solver",
 %%% 2017
 %%%
 
+
+@TechReport{LinWPVZE2017:TR,
+  author =       "Xi Victoria Lin and Chenglong Wang and Deric Pang and Kevin Vu and Luke Zettlemoyer and Michael D. Ernst",
+  title =        "Program synthesis from natural language using recurrent neural networks",
+  institution =  uwcse,
+  year =         2017,
+  number =    "UW-CSE-17-03-01",
+  address =   uwcseaddr,
+  month =     mar,
+  abstract =
+   "Oftentimes, a programmer may have difficulty implementing a
+    desired operation. Even when the programmer can describe her
+    goal in English, it can be difficult to translate into code. Existing
+    resources, such as question-and-answer websites, tabulate specific
+    operations that someone has wanted to perform in the past, but
+    they are not effective in generalizing to new tasks, to compound
+    tasks that require combining previous questions, or sometimes even
+    to variations of listed tasks.
+    \par
+    Our goal is to make programming easier and more productive by
+    letting programmers use their own words and concepts to express
+    the intended operation, rather than forcing them to accommodate
+    the machine by memorizing its grammar. We have built a system
+    that lets a programmer describe a desired operation in natural
+    language, then automatically translates it to a programming language
+    for review and approval by the programmer. Our system, Tellina,
+    does the translation using recurrent neural networks (RNNs), a
+    state-of-the-art natural language processing technique that we
+    augmented with slot (argument) filling and other enhancements.
+    \par
+    We evaluated Tellina in the context of shell scripting. We trained
+    Tellina's RNNs on textual descriptions of file system operations
+    and bash one-liners, scraped from the web. Although recovering
+    completely correct commands is challenging, Tellina achieves top-3
+    accuracy of 80\% for producing the correct command structure. In a
+    controlled study, programmers who had access to Tellina
+    outperformed those who did not, even when Tellina's predictions were
+    not completely correct, to a statistically significant degree.",
+  basefilename = "nl-command-tr170301",
+  downloads = "http://kirin.cs.washington.edu:8000/ Tellina tool",
+  TOBEsupersededby = "*",
+  category = "Natural language processing",
+  csetags = "xilin,clwang,dericp,lsz,mernst,mernst-Natural-language-processing,plse",
+  summary =
+   "Tellina is a system that translates an English description of a file
+   system operation into a bash command.  A controlled user experiment
+   shows that it helps programmers perform file system tasks more quickly.",
+}
+
+
+@InProceedings{Ernst2017,
+  author =       "Michael D. Ernst",
+  title =        "Natural language is a programming language: Applying natural language processing to software development",
+  booktitle = SNAPL2017,
+  year =      2017,
+  NEEDpages =     "*",
+  month =     SNAPL2017date,
+  address =   SNAPL2017addr,
+  abstract =
+   "A powerful, but limited, way to view software is as source code alone.
+    Treating a program as a sequence of instructions enables it to be
+    formalized and makes it amenable to mathematical techniques
+    such as abstract interpretation and model checking.  
+    \par
+    A program consists of much more than a sequence of instructions.
+    Developers make use of test cases, documentation, variable names, program
+    structure, the version control repository, and more.  I argue that it is
+    time to take the blinders off of software analysis tools:  tools should use
+    all these artifacts to deduce more powerful and useful information about
+    the program.
+    \par
+    Researchers are beginning to make progress towards this vision.  This paper
+    discusses four initial results that find bugs and generate code by applying
+    natural language processing techniques to software artifacts.  The four
+    techniques use as input error messages, variable names, procedure
+    documentation, and user questions.  They use four different NLP techniques:
+    document similarity, word semantics, parse trees, and neural networks.
+    \par
+    The initial results suggest that this is a promising avenue for
+    future work.",
+  basefilename = "nlppl-snapl2017",
+  category = "Software engineering",
+  csetags =   "mernst,mernst-Software-engineering,plse",
+  summary =
+   "Software developers embed much natural language (e.g., English) in their
+    code, including in error messages, variable names, and comments.  This paper
+    advocates analyzing the natural language as well as the source code.",
+}
+
+
 @InProceedings{PearsonCJFAEPK2017,
   author =       "Spencer Pearson and Jos\'e Campos and Ren\'e Just and Gordon Fraser and Rui Abreu and Michael D. Ernst and Deric Pang and Benjamin Keller",
   authorASCII =       "Spencer Pearson and Jose Campos and Rene Just and Gordon Fraser and Rui Abreu and Michael D. Ernst and Deric Pang and Benjamin Keller",
@@ -10351,47 +10472,48 @@ with an {SMT} Solver",
   month =     ICSE2017date,
   address =   ICSE2017addr,
   abstract =
-   "A fault localization technique takes as input a faulty program, and it
-    produces as output a ranked list of suspicious code locations at which the
+   "Most fault localization techniques take as input a faulty program, and
+    produce as output a ranked list of suspicious code locations at which the
     program may be defective.  When researchers propose a new fault
-    localization technique, they evaluate it on programs with known faults;
-    they score the technique based on where in its output list the defective
-    code appears.  This enables comparison of multiple fault localization
-    techniques to determine which one is better.
+    localization technique, they typically evaluate it on programs with known
+    faults. The technique is scored based on where in its output list the
+    defective code appears. This enables the comparison of multiple fault
+    localization techniques to determine which one is better.
     \par
     Previous research has evaluated fault localization techniques using
-    artificial faults, generated either by mutation tools or
-    manually.  In other words, previous research has determined which fault
-    localization techniques are best at finding artificial faults.  However, it
-    is not known which fault localization techniques are best at finding real
-    faults.  It is not obvious that the answer is the same, given previous work
-    showing that artificial faults have both similarities to and differences
-    from real faults.
+    artificial faults, generated either by mutation tools or manually. In other
+    words, previous research has determined which fault localization techniques
+    are best at finding artificial faults.  However, it is not known which
+    fault localization techniques are best at finding real faults. It is not
+    obvious that the answer is the same, given previous work showing that
+    artificial faults have both similarities to and differences from real
+    faults.
     \par
     We performed a replication study to evaluate 10 claims in the literature
-    that compared fault localization techniques.  We used
-    2273 artificial
-    faults in 5 real-world programs.  Our results refute 3 of
-    the previous claims.  Then, we evaluated the same 10 claims, using
-    297 \emph{real} faults from the
-    5 programs.  Every previous result was refuted or was
-    statistically insignificant.  In other words, our experiments show that
-    artificial faults are not useful for predicting which fault localization
-    techniques perform best on real faults.
+    that compared fault localization techniques (from the spectrum-based and
+    mutation-based families). We used 3242 artificial faults in 6 real-world
+    programs. Our results support 7 of the previous claims as statistically
+    significant, but only 3 as having non-negligible effect sizes. Then, we
+    evaluated the same 10 claims, using 323 \emph{real} faults from the 6
+    programs. Every previous result was refuted or was statistically and
+    practically insignificant. Our experiments show that artificial faults are
+    not useful for predicting which fault localization techniques perform best
+    on real faults.
     \par
     In light of these results, we identified a design space that includes many
     previously-studied fault localization techniques as well as hundreds of new
-    techniques.  We experimentally determined which factors in the design space
-    are most important.  Then, we extended it with new techniques.  Several of
-    our novel techniques outperform all existing techniques, notably in terms
-    of ranking defective code in the top-5 or top-10 reports.",
+    techniques. We experimentally determined which factors in the design space
+    are most important, using an overall set of 395 real faults. Then, we
+    extended this design space with new techniques. Several of our novel
+    techniques outperform all existing techniques, notably in terms of ranking
+    defective code in the top-5 or top-10 reports.",
   basefilename = "fault-localization-icse2017",
   downloads =
    "http://homes.cs.washington.edu/~mernst/pubs/fault-localization-tr160803.pdf technical report UW-CSE-16-08-03;
     https://bitbucket.org/rjust/fault-localization-data data and scripts",
   TODOdownloadsnonlocal = "",
   TOBEsupersededby = "PearsonCJFAEPK2018",
-  category =  "Testing",
+  category = "Testing",
   csetags = 	 "suspense,mernst,dericp,bjkeller,mernst-Testing,plse",
   summary =
    "Previously, fault localization techniques were evaluated on artificial
@@ -10399,6 +10521,46 @@ with an {SMT} Solver",
     real faults, indicating that artificial faults should not be used to
     evaluate fault localization techniques.",
   undergradCoauthor = 1,
+}
+
+
+
+@Article{GordonEGP2017,
+  author =       "Colin S. Gordon and Michael D. Ernst and Dan Grossman and Matthew Parkinson",
+  title =        "Verifying Invariants of Lock-free Data Structures with Rely-Guarantee and Refinement Types",
+  journal =      TOPLAS,
+  year =         2017,
+  NEEDvolume =    "*",
+  NEEDnumber =    "*",
+  NEEDpages =     "*",
+  NEEDmonth =     "*",
+  abstract =
+   "Verifying invariants of fine-grained concurrent data structures is
+    challenging because interference from other threads may occur at any
+    time. We propose a new way of proving invariants of fine-grained concurrent
+    data structures: applying rely-guarantee reasoning to references in the
+    concurrent setting. Rely-guarantee applied to references can verify bounds
+    on thread interference, without requiring a whole program to be verified.
+    \par
+    This paper provides three new results. First, it provides a new approach to
+    preserving invariants and restricting usage of concurrent data
+    structures. Our approach targets a space between simple type systems and
+    modern concurrent program logics, offering an intermediate point between
+    unverified code and full verification. Furthermore, it avoids sealing
+    concurrent data structure implementations, and can interact safely with
+    unverified imperative code. Second, we demonstrate the approach's broad
+    applicability through a series of case studies, using two implementations:
+    an axiomatic C OQ DSL and a library for Liquid Haskell. Third, these two
+    implementations allow us to compare and contrast verifications by
+    interactive proof (C OQ ) and a weaker form that can be expressed using
+    SMT-discharged dependent refinement types (Liquid Haskell).",
+  basefilename = "lockfree-toplas2017",
+  category = "Verification",
+  csetags = "csgordon,mernst,djg,mernst-Verification,plse",
+  summary =
+   "This paper presents a new approach to verifying lock-free concurrent data
+    structures that handles more complex code:  view references as
+    capabilities and verify them using rely-guarantee reasoning.",
 }
 
 
