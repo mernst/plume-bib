@@ -679,11 +679,8 @@ month = mar
   author = 	 "Craig Chambers and David Ungar",
   title = 	 "Customization:  Optimizing Compiler Technology for
                   {Self}, a Dynamically-Typed Object-Oriented Language",
-  booktitle =	 PLDI89,
+  crossref =     "PLDI89",
   pages =	 "146--160",
-  year =	 1989,
-  address =	 PLDI89addr,
-  month =	 PLDI89date
 }
 
 @inproceedings{ChKa89,
@@ -907,10 +904,8 @@ pages =  "261--269"
 @inproceedings{De:GCRTCL,
 title = "Garbage Collection and Runtime Typing as a {C}++ Library",
 author = "David L. Detlefs",
-booktitle = USENIXCxx92,
-year = 1992,
-date = USENIXCxx92date,
-address = USENIXCxx92addr,
+  crossref =     "USENIXCxx92",
+  pages = "37--56",
 key = ""
 }
 
@@ -1027,11 +1022,7 @@ MONTH=jun
 @inproceedings{Ed:SP,
 author = "Daniel Ross Edelson",
 title = "Smart Pointers: They're Smart, But They're Not Pointers",
-booktitle = USENIXCxx92,
-year = 1992,
-date = USENIXCxx92date,
-address = USENIXCxx92addr,
-key = "",
+  crossref =     "USENIXCxx92",
 pages = "1--19",
 note = "Technical Report UCSC-CRL-92-27, University of California at
 Santa Cruz, Baskin Center for Computer Engineering and Information
@@ -1852,7 +1843,7 @@ pages = "50--87"
 @inproceedings{LM:PDRC,
 author = "Lermen C.W. and D. Maurer",
 title = "A Protocol for Distributed Reference Counting",
-booktitle = FPCA,
+booktitle = "Functional Programming and Computer Architecture",
 year = 1986,
 pages = {343--350}
 }
@@ -2913,7 +2904,7 @@ booktitle = "Summer 1991 {USENIX} Conference",
 organization = "{USENIX} Association",
 year = 1991,
 month = jun,
-location = "Nashville, Tennessee",
+address  = "Nashville, Tennessee",
 pages = {385--403}
 }
 
@@ -2978,11 +2969,8 @@ pages = "1--17"
   author = 	 "Craig Chambers and David Ungar and Elgin Lee",
   title = 	 "An efficient implementation of {Self}, a dynamically-typed
 		  object-oriented language based on prototypes",
-  booktitle =	 OOPSLA89,
+  crossref =     "OOPSLA89",
   pages =	 "49--70",
-  year =	 1989,
-  address =	 OOPSLA89addr,
-  month =	 OOPSLA89date
 }
 
 @article{VD:DICIL,
@@ -3456,29 +3444,6 @@ year = 1990,
 publisher = "{IEEE} Computer Society Press"
 }
 
-@proceedings{FPLCA85,
-title = FPLCA,
-booktitle = FPLCA,
-month = spe,
-year = 1985,
-editor = "Jean-Pierre Jouannaud",
-address = "Nancy, France",
-publisher = SV,
-series = lncs,
-number = 201
-}
-
-@proceedings{FPLCA87,
-title = FPLCA,
-booktitle = FPLCA,
-editor = "Gilles Kahn",
-series = lncs,
-number = 274,
-publisher = sv,
-month = sep,
-year = 1987
-}
-
 @proceedings{IJCAI83,
 title = IJCAI,
 booktitle = IJCAI,
@@ -3549,45 +3514,6 @@ address = "Snowbird, Utah",
 publisher = ACM
 }
 
-@proceedings{LFP90,
-title = "Conference Record of the " # 1990 # " " # LFP,
-booktitle = "Conference Record of the " # 1990 # " " # LFP,
-key = "{LFP}",
-month = LFP90date,
-year = 1990,
-address = LFP90addr,
-}
-
-@proceedings{LFP92,
-title = "Conference Record of the " # 1992 # " " # LFP,
-booktitle = "Conference Record of the " # 1992 # " " # LFP,
-key = "{LFP}",
-month = LFP92date,
-year = 1992,
-address = LFP92addr,
-}
-
-@proceedings{OOPSLA86,
-title =  OOPSLA # " ({OOPSLA} '86) Proceedings",
-booktitle = OOPSLA # " ({OOPSLA} '86) Proceedings",
-key = "{OOPSLA}",
-month = oct,
-year = 1986,
-publisher = ACM,
-note = "Published as {\em {SIGPLAN} Notices 21}(11), November 1986."
-}
-
-@proceedings{OOPSLA87,
-title = OOPSLA # " ({OOPSLA} '87) Proceedings",
-booktitle = OOPSLA # " ({OOPSLA} '87) Proceedings",
-editor = "Norman Meyrowitz",
-month = oct,
-year = 1987,
-address = "Orlando, Florida",
-publisher = ACM,
-note = "Published as {\em {SIGPLAN} Notices 22}(12), December 1987."
-}
-
 @proceedings{OOPSLA87Add,
 title = "{OOPSLA} '87 Addendum to the Proceedings",
 booktitle = "{OOPSLA} '87 Addendum to the Proceedings",
@@ -3610,14 +3536,6 @@ publisher = ACM,
 note = "Published as {\em {SIGPLAN} Notices 23}(11), November 1988."
 }
 
-@proceedings{OOPSLA89,
-title = OOPSLA # " ({OOPSLA} '89) Proceedings",
-booktitle = OOPSLA # " ({OOPSLA} '89) Proceedings",
-key = "{OOPSLA}",
-year = 1989,
-publisher = ACM
-}
-
 @proceedings{OOPSLA/ECOOP90,
 title = OOPSLA # "/" # ECOOP # " ({OOPSLA/ECOOP} '90) Proceedings",
 booktitle  = OOPSLA # "/" # ECOOP # " ({OOPSLA/ECOOP} '90) Proceedings",
@@ -3638,17 +3556,6 @@ year = 1990,
 address = "Ottawa, Ontario",
 publisher = ACM,
 note = "Published as a special issue of {\em {SIGPLAN} Notices}, 1991."
-}
-
-@proceedings{OOPSLA91,
-title =  OOPSLA # " ({OOPSLA} '91)",
-booktitle = OOPSLA # " ({OOPSLA} '91)",
-editor = "Andreas Paepcke",
-month = oct,
-year = 1991,
-address = "Phoenix, Arizona",
-publisher = ACM,
-note = "Published as {\em {SIGPLAN} Notices 26}(11), November 1991."
 }
 
 @proceedings{OOPSLA91Add,
@@ -3731,136 +3638,6 @@ address = "San Miniato, Italy",
 publisher = SV
 }
 
-@proceedings{POPL76,
-title = "Conference Record of the Third Annual " # POPL,
-booktitle = "Conference Record of the Third Annual " # POPL,
-key = "{POPL}",
-address = "Atlanta, Georgia",
-month = jan,
-year = 1976,
-publisher = ACM
-}
-
-@proceedings{POPL81,
-title = "Conference Record of the Eighth Annual " # POPL,
-booktitle = "Conference Record of the Eighth Annual " # POPL,
-key = "{POPL}",
-year = 1981,
-publisher = ACM
-}
-
-@proceedings{POPL82,
-title = "Conference Record of the Ninth Annual " # POPL,
-booktitle = "Conference Record of the Ninth Annual " # POPL,
-key = "{POPL}",
-address = "Albuquerque, New Mexico",
-month = jan,
-year = 1982,
-publisher = ACM
-}
-
-@proceedings{POPL84,
-title = "Conference Record of the Eleventh Annual " # POPL,
-booktitle = "Conference Record of the Eleventh Annual " # POPL,
-key = "{POPL}",
-month = jan,
-year = 1984,
-address = "Salt Lake City, Utah",
-publisher = ACM
-}
-
-@proceedings{POPL85,
-title = "Conference Record of the Twelfth Annual " # POPL,
-booktitle = "Conference Record of the Twelfth Annual " # POPL,
-key = "{POPL}",
-month = jan,
-year = 1985,
-address = "New Orleans, Louisiana",
-publisher = ACM
-}
-
-@proceedings{POPL87,
-title = "Conference Record of the Fourteenth Annual " # POPL,
-booktitle = "Conference Record of the Fourteenth Annual " # POPL,
-key = "{POPL}",
-month = jan,
-year = 1987,
-publisher = ACM
-}
-
-@proceedings{POPL88,
-title = "Conference Record of the Fifteenth Annual " # POPL,
-booktitle = "Conference Record of the Fifteenth Annual " # POPL,
-key = "{POPL}",
-month = jan,
-year = 1988,
-address = "San Diego, California",
-publisher = ACM
-}
-
-@proceedings{POPL90,
-title = "Conference Record of the Seventeenth Annual " # POPL,
-booktitle = "Conference Record of the Seventeenth Annual " # POPL,
-key = "{POPL}",
-month = jan,
-year = 1990,
-address = "San Francisco, California",
-publisher = ACM
-}
-
-@proceedings{PLDI88,
-title = "Proceedings of the " # 1988 # " " # PLDI,
-booktitle = "Proceedings of the " # 1988 # " " # PLDI,
-key = "{PLDI}",
-month = jun,
-year = 1988,
-address = "Atlanta, Georgia",
-publisher = ACM
-}
-
-@proceedings{PLDI89,
-title = "Proceedings of the " # 1989 # " " # PLDI,
-booktitle = "Proceedings of the " # 1989 # " " # PLDI,
-key = "{PLDI}",
-month = jun,
-year = 1989,
-address = "Portland, Oregon",
-publisher = ACM,
-note = "Published as {\em {SIGPLAN} Notices 24}(7), July 1989."
-}
-
-@proceedings{PLDI90,
-title = "Proceedings of the " # 1990 # " " # PLDI,
-booktitle = "Proceedings of the " # 1990 # " " # PLDI,
-key = "{PLDI}",
-month = jun,
-year = 1990,
-address = "White Plains, New York",
-publisher = ACM,
-note = "Published as {\em {SIGPLAN} Notices 25}(6), June 1990."
-}
-
-@proceedings{PLDI91,
-title = "Proceedings of the " # 1991 # " " # PLDI,
-booktitle = "Proceedings of the " # 1991 # " " # PLDI,
-key = "{PLDI}",
-month = jun,
-year = 1991,
-address = "Toronto, Ontario",
-publisher = ACM,
-note = "Published as {\em {SIGPLAN} Notices 26}(6), June 1992."
-}
-
-@proceedings{PLDI92,
-title = "Proceedings of the " # 1992 # " " # PLDI,
-booktitle = "Proceedings of the " # 1992 # " " # PLDI,
-key = "{PLDI}",
-month = jun,
-year = 1992,
-address = "San Francisco, California",
-publisher = ACM
-}
-
 @proceedings{SESPSDE87,
 title = "{ACM SIGSOFT/SIGPLAN} Software Engineering Symposium on Practical
 Software Development Environments",
@@ -3871,17 +3648,6 @@ publisher = ACM,
 month = apr,
 year = 1984,
 note = "Published as {\em ACM SIGPLAN Notices 19}(5), May, 1987"
-}
-
-@proceedings{SIIT87,
-title = "{SIGPLAN} 1987 Symposium on Interpreters and Interpretive Techniques",
-booktitle = "{SIGPLAN} 1987 Symposium on Interpreters and Interpretive Techniques",
-key = "{SIIT}",
-publisher = ACM,
-year = 1987,
-month = jun,
-address = "Saint Paul, Minnesota",
-note = "Published as {\em {SIGPLAN} Notices 22}(7), July 1987"
 }
 
 @proceedings{SOSP83,

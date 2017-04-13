@@ -4,6 +4,7 @@
 
 BIB_ABBREVIATE ?= ./bib-abbreviate.pl
 
+# TODO: reinstate bibstring-crossrefs-abbrev.bib
 all: bibstring-unabbrev.bib bibstring-abbrev.bib bibroot
 
 BIBFILES := $(shell ls *.bib | grep -v bibstring-unabbrev.bib | grep -v bibstring-abbrev.bib)
@@ -24,9 +25,19 @@ bibstring-abbrev.bib: bibstring-master.bib $(BIB_ABBREVIATE)
 	$(BIB_ABBREVIATE) -abbrev $< > $@
 	@chmod -w $@
 
+bibstring-test: bibstring-abbrev.bib bibstring-unabbrev.bib
+	diff bibstring-abbrev.bib bibstring-abbrev.bib-GOLD
+	diff bibstring-unabbrev.bib  bibstring-unabbrev.bib-GOLD
+
+## TODO: write a new script, only for [book]titles
+# bibstring-crossrefs-abbrev.bib: bibstring-crossrefs-master.bib $(BIB_ABBREVIATE)
+# 	@rm -f $@
+# 	$(BIB_ABBREVIATE) -abbrev $< > $@
+# 	@chmod -w $@
+
 bibroot: *.bib
 	@rm -f $@
-	@ls -1 *.bib | perl -p -e 'BEGIN { print "% File for finding bibliography items.\n\n"; } if (/^bibstring/) { $$_=""; next; }; s:^(.*)$$:\\include{$$1}:;' > $@
+	@ls -1 *.bib | perl -p -e 'BEGIN { print "% File for finding bibliography items.\n\n"; } if (/^bibstring/ || /^crossrefs/) { $$_=""; next; }; s:^(.*)$$:\\include{$$1}:;' > $@
 	@chmod -w $@
 
 bibtest-aux-clean:
@@ -34,7 +45,7 @@ bibtest-aux-clean:
 
 bibtest.tex: *.bib
 	@rm -f $@
-	@ls -1 *.bib | perl -p -e 'BEGIN { print "\\documentclass{report}\n\\usepackage{url}\n\\usepackage{fullpage}\n\\usepackage{relsize}\n\\begin{document}\\hbadness=10000\n\n\\bibliographystyle{alpha}\n\\nocite{*}\n\n\\bibliography{bibstring-unabbrev"; } END { print "}\n\n\\end{document}\n"; } if (/^bibstring/) { $$_=""; next; }; s:^(.*)\.bib\n:,$$1:;' > $@
+	@ls -1 *.bib | perl -p -e 'BEGIN { print "\\documentclass{report}\n\\usepackage{url}\n\\usepackage{fullpage}\n\\usepackage{relsize}\n\\begin{document}\\hbadness=10000\n\n\\bibliographystyle{alpha}\n\\nocite{*}\n\n\\bibliography{bibstring-unabbrev"; } END { print ",crossrefs}\n\n\\end{document}\n"; } if (/^bibstring/ || /^crossrefs/) { $$_=""; next; }; s:^(.*)\.bib\n:,$$1:;' > $@
 	@chmod -w $@
 # This must be phony because a file might be old, but not listed in bibroot.
 .PHONY: bibtest.tex
@@ -47,7 +58,7 @@ bibtest: all bibtest-aux-clean bibtest.tex
 	@echo -n 'First latex run, suppressing warnings...'
 	@-latex -interaction=batchmode bibtest >/dev/null 2>&1
 	@echo 'done'
-	bibtex -terse bibtest
+	bibtex -terse -min-crossrefs=9999 bibtest
 	@echo -n 'Second latex run, suppressing warnings...'
 	@-latex -interaction=batchmode bibtest >/dev/null 2>&1
 	@echo 'done'
