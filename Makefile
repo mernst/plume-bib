@@ -5,7 +5,7 @@
 BIB_ABBREVIATE ?= ./bib-abbreviate.pl
 
 # TODO: reinstate bibstring-crossrefs-abbrev.bib
-all: bibstring-unabbrev.bib bibstring-abbrev.bib bibroot
+all: bibstring-unabbrev.bib bibstring-abbrev.bib bibroot docs/index.html
 
 BIBFILES := $(shell ls *.bib | grep -v bibstring-unabbrev.bib | grep -v bibstring-abbrev.bib)
 
@@ -25,14 +25,10 @@ bibstring-abbrev.bib: bibstring-master.bib $(BIB_ABBREVIATE)
 	$(BIB_ABBREVIATE) -abbrev $< > $@
 	@chmod -w $@
 
-bibstring-test: bibstring-abbrev.bib bibstring-unabbrev.bib
-	diff bibstring-abbrev.bib bibstring-abbrev.bib-GOLD
-	diff bibstring-unabbrev.bib  bibstring-unabbrev.bib-GOLD
-
-## TODO: write a new script, only for [book]titles
+## TODO: write a new abbreviaton script, only for [book]titles
 # bibstring-crossrefs-abbrev.bib: bibstring-crossrefs-master.bib $(BIB_ABBREVIATE)
 # 	@rm -f $@
-# 	$(BIB_ABBREVIATE) -abbrev $< > $@
+# 	$(BIB_TITLE_ABBREVIATE) -abbrev $< > $@
 # 	@chmod -w $@
 
 bibroot: *.bib
@@ -58,7 +54,7 @@ bibtest: all bibtest-aux-clean bibtest.tex
 	@echo -n 'First latex run, suppressing warnings...'
 	@-latex -interaction=batchmode bibtest >/dev/null 2>&1
 	@echo 'done'
-	bibtex -terse -min-crossrefs=9999 bibtest
+	bibtex -terse -min-crossrefs=9999 bibtest 2>&1 | grep -v "Warning--to sort, need editor, organization"
 	@echo -n 'Second latex run, suppressing warnings...'
 	@-latex -interaction=batchmode bibtest >/dev/null 2>&1
 	@echo 'done'

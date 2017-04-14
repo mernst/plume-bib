@@ -449,13 +449,8 @@ reference when the conference proceedings would be more appropriate.</p>
 <p>Short and long versions of names, locations, and dates for conferences,
 journals, etc.  The short (abbreviated) version is convenient if your
 paper is nearing its page limit.  Changing between the two versions only
-requires a two-character change to your LaTeX file (see below), and no
+requires a tiny change to your LaTeX file (see below), and no
 changes to any bib files.</p>
-</li>
-<li>
-<p>Detailed dates.  Dates contain days of the month, which give the dates
-of just the appropriate track rather than the whole conference.  The
-abbreviated version omits the day of the month, though.</p>
 </li>
 <li>
 <p>Consistent naming convention for citation keys:  last name of first
@@ -495,7 +490,7 @@ bibliography strings, use one of these commands in your LaTeX file:</p>
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>\bibliography{bibstring-abbrev,...,crossrefs}
+<pre>\bibliography{bibstring-abbrev,...,crossrefs-abbrev}
 \bibliography{bibstring-unabbrev,...,crossrefs}</pre>
 </div>
 </div>
@@ -508,8 +503,8 @@ bibliography strings, use one of these commands in your LaTeX file:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>This defines the \url command used in the bibliographies.  To make URLs use
-a slightly narrower font (the regular tt font is very wide), use:</p>
+<p>This defines the <code>\url</code> command used in the bibliographies.  To make URLs use
+a slightly narrower font (the regular <code>tt</code> font is very wide), use:</p>
 </div>
 <div class="literalblock">
 <div class="content">
@@ -534,13 +529,13 @@ a slightly narrower font (the regular tt font is very wide), use:</p>
 <p>Changes, corrections, and additions are welcome.</p>
 </div>
 <div class="paragraph">
-<p>When adding new bibliography entries, please use bibliography strings
-rather than hard-coding conference/journal/institution names, locations,
-and dates.  Add the new abbreviations to bibstring-master.bib as necessary.</p>
+<p>When adding new bibliography entries, please create an entry in
+<code>crossrefs.bib</code> for conferences, and create bibliography strings in
+<code>bibstring-master</code> for journal/institution names and abbreviations.</p>
 </div>
 <div class="paragraph">
 <p>For consistency, please start each new bibliography entry with "@" in the
-first column, and end the entry with "}" or ")" on its own line.</p>
+first column, and end the entry with "}" on its own line.</p>
 </div>
 <div class="paragraph">
 <p>If you make changes but you lack write access to the Git repository at
@@ -612,15 +607,6 @@ add the "bib" directory to your BIBINPUTS environment variable.</p>
 export BIBINPUTS=.:${PLUMEBIB}:..:</pre>
 </div>
 </div>
-<div class="paragraph">
-<p>csh syntax:</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>setenv PLUMEBIB $HOME/bib
-setenv BIBINPUTS .:${PLUMEBIB}:..:</pre>
-</div>
-</div>
 </div>
 </div>
 <div class="sect1">
@@ -655,7 +641,7 @@ configuration.  In file <code>...\miktex\config\miktex.ini</code>, edit this ent
 <h2 id="_invoking_bibtex_crossref_and_min_crossrefs_9999">INVOKING BIBTEX: crossref and -min-crossrefs=9999</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>plume-bib&#8217;s .bib files use @crossref.  To avoid outut like</p>
+<p>plume-bib&#8217;s .bib files use <code>@crossref</code>.  To avoid outut like</p>
 </div>
 <div class="literalblock">
 <div class="content">
@@ -685,7 +671,7 @@ example:</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-04-12 13:00:24 PDT
+Last updated 2017-04-13 08:29:55 PDT
 </div>
 </div>
 </body>

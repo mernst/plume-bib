@@ -16,11 +16,8 @@ Here are some other features:
  * Short and long versions of names, locations, and dates for conferences,
    journals, etc.  The short (abbreviated) version is convenient if your
    paper is nearing its page limit.  Changing between the two versions only
-   requires a two-character change to your LaTeX file (see below), and no
+   requires a tiny change to your LaTeX file (see below), and no
    changes to any bib files.
- * Detailed dates.  Dates contain days of the month, which give the dates
-   of just the appropriate track rather than the whole conference.  The
-   abbreviated version omits the day of the month, though.
  * Consistent naming convention for citation keys:  last name of first
    author, followed by last initial of each other author, followed by
    year.  This makes the citation more recognizable in your LaTeX source,
@@ -48,15 +45,15 @@ USAGE
 To choose the abbreviated (short) or unabbreviated (long) version of the
 bibliography strings, use one of these commands in your LaTeX file:
 
-    \bibliography{bibstring-abbrev,...,crossrefs}
+    \bibliography{bibstring-abbrev,...,crossrefs-abbrev}
     \bibliography{bibstring-unabbrev,...,crossrefs}
 
 When using the bibliographies, add near the top of your LaTeX document:
 
     \usepackage{url}
 
-This defines the \url command used in the bibliographies.  To make URLs use
-a slightly narrower font (the regular tt font is very wide), use:
+This defines the `\url` command used in the bibliographies.  To make URLs use
+a slightly narrower font (the regular `tt` font is very wide), use:
 
     \usepackage{pslatex}
 
@@ -71,12 +68,12 @@ EDITING AND ADDING ENTRIES
 
 Changes, corrections, and additions are welcome.
 
-When adding new bibliography entries, please use bibliography strings
-rather than hard-coding conference/journal/institution names, locations,
-and dates.  Add the new abbreviations to bibstring-master.bib as necessary.
+When adding new bibliography entries, please create an entry in
+`crossrefs.bib` for conferences, and create bibliography strings in
+`bibstring-master` for journal/institution names and abbreviations.
 
 For consistency, please start each new bibliography entry with "@" in the
-first column, and end the entry with "}" or ")" on its own line.
+first column, and end the entry with "}" on its own line.
 
 If you make changes but you lack write access to the Git repository at
 https://github.com/mernst/plume-bib, then please submit a pull request, or
@@ -124,11 +121,6 @@ bash syntax:
     export PLUMEBIB=$HOME/bib
     export BIBINPUTS=.:${PLUMEBIB}:..:
 
-csh syntax:
-
-    setenv PLUMEBIB $HOME/bib
-    setenv BIBINPUTS .:${PLUMEBIB}:..:
-
 
 SETUP -- miscellaneous details
 ------------------------------
@@ -154,7 +146,7 @@ configuration.  In file `...\miktex\config\miktex.ini`, edit this entry:
 INVOKING BIBTEX: crossref and -min-crossrefs=9999
 -------------------------------------------------
 
-plume-bib's .bib files use @crossref.  To avoid outut like
+plume-bib's .bib files use `@crossref`.  To avoid outut like
 
     [1] Brun et al.  Paper title.  In [2].
     [2] Proceedings of ESEC/FSE 2011.  Szeged, Hungary, Sep. 7--9, 2011.
