@@ -1332,7 +1332,7 @@ endgame.",
   author = 	 "David Notkin and Marc Donner and Michael D. Ernst and
                   Michael Gorlick and Whitehead, Jr., E. James",
   title = 	 "Panel: Perspectives on software engineering",
-  crossref =     "icse2001",
+  crossref =     "ICSE2001",
   pages = 	 "699--702",
   abstract =
    "This panel gives a non-standard view of the future of software
@@ -10025,16 +10025,17 @@ with an {SMT} Solver",
     the program.
     \par
     Researchers are beginning to make progress towards this vision.  This paper
-    discusses four initial results that find bugs and generate code by applying
-    natural language processing techniques to software artifacts.  The four
-    techniques use as input error messages, variable names, procedure
+    gives, as examples,
+    four results that find bugs and generate code by applying
+    \emph{natural language processing} techniques to software artifacts.  The
+    four techniques use as input error messages, variable names, procedure
     documentation, and user questions.  They use four different NLP techniques:
     document similarity, word semantics, parse trees, and neural networks.
     \par
     The initial results suggest that this is a promising avenue for
     future work.",
-  basefilename = "nlppl-snapl2017",
-  category = "Software engineering",
+  basefilename = "natural-language-snapl2017",
+  category = "Natural language processing",
   csetags =   "mernst,mernst-Software-engineering,plse",
   summary =
    "Software developers embed much natural language (e.g., English) in their
@@ -10159,8 +10160,143 @@ with an {SMT} Solver",
 %%% Submitted (under review)
 %%%
 
+@Misc{LamZE2017,
+  author =    "Wing Lam and Sai Zhang and Michael D. Ernst",
+  title =     "Accomodating Test Dependence in Testing Algorithms",
+  month =     feb,
+  year =      2017,
+  abstract =
+   "When test cases are \emph{independent}, no test affects any other test's
+    outcome, and running the tests in any order yields the same test
+    outcomes. Many test-reordering techniques, including test prioritization,
+    test selection, and test parallelization, assume test independence.
+    However, this critical assumption often does not hold in practice, causing
+    the test-reordering techniques to produce incorrect suites.
+    \par
+    This paper first describes an empirical study to assess the impact of test
+    dependence on 4 test prioritization, 6 test selection, and 2 test
+    parallelization algorithms. Test dependence negatively affects all these
+    test-reordering algorithms: the test suites that they produce suffer false
+    alarms and missed alarms, both of which are costly in terms of developer
+    time or impact the reliability of the software.
+    \par
+    The paper then presents a new approach that modifies each test-reordering
+    algorithm to maintain test dependence. One of its inputs is a set of test
+    dependences, which was precomputed from a prior version of the
+    software. After the original test prioritization, selection, or
+    parallelization algorithm produces a suite, our approach further reorders
+    and/or adds tests to the suite to maintain the order required by the test
+    dependences. This reduces false positives and false negatives in the final
+    test suite.
+    \par
+    In an experimental evaluation, dependence-aware test-reordering algorithms
+    worked as intended: they quickly produced test suites whose outcomes were
+    consistent with the original order, even when the original suite contained
+    dependent tests.",
+  omitfromcv = 1,
+  underreview = 1,
+  basefilename = "test-dependence",
+  category =  "Testing",
+  summary =
+   "Test-reordering techniques such as prioritization can fail when tests are
+    dependent (their outcome depends on their order of execution).  This paper
+    gives an algorithm that makes test-reordering techniques correct even in
+    the presence of dependence.",
+}
 
 
+@Misc{WeitzLHTET2017,
+  author =    "Konstantin Weitz and Steven Lyubomirsky and Stefan Heule and Emina Torlak and Michael D. Ernst and Zachary Tatlock",
+  title =     "SpaceSearch: A library for building and verifying solver-aided tools",
+  month =     feb,
+  year =      2017,
+  abstract =
+   "Many verification tools build on automated solvers. These tools reduce
+    problems in a specific application domain (e.g., compiler optimization
+    validation) to queries that can be discharged with a highly optimized
+    solver. But the correctness of the reductions themselves is rarely verified
+    in practice, limiting the confidence that the solver's output establishes
+    the desired domain-level property.
+    \par
+    This paper presents SpaceSearch, a new library for developing solver-aided
+    tools within a proof assistant. A user builds their solver-aided tool in
+    Coq against the SpaceSearch interface, and the user then verifies that the
+    results provided by the interface are sufficient to establish the tool's
+    desired high-level properties. Once verified, the tool can be extracted to
+    an implementation in a solver-aided language (e.g., Rosette), where
+    SpaceSearch provides an efficient instantiation of the SpaceSearch
+    interface with calls to an underlying SMT solver. This combines the strong
+    correctness guarantees of developing a tool in a proof assistant with the
+    high performance of modern SMT solvers. This paper also introduces new
+    optimizations for such verified solver-aided tools, including
+    parallelization and incrementalization.
+    \par
+    We evaluate SpaceSearch by building and verifying two solver-aided
+    tools. The first, SaltShaker, checks that RockSalt's x86 semantics for a
+    given instruction agrees with STOKE's x86 semantics. SaltShaker identified
+    7 bugs in RockSalt and 1 bug in STOKE. After these systems were patched by
+    their developers, SaltShaker verified the semantics' agreement on 15,255
+    instruction instantiations in under 2h. The second tool, BGProof, is a
+    verified version of an existing Border Gateway Protocol (BGP) router
+    configuration checker. Like the existing checker, BGProof scales to
+    checking industrial configurations spanning over 240 KLOC, identifying 19
+    configuration inconsistencies with no false positives. However, the
+    correctness of BGProof has been formally proven, and we found 2 bugs in the
+    unverified implementation. These results demonstrate that SpaceSearch is a
+    practical approach to developing efficient, verified solver-aided tools.",
+  omitfromcv = 1,
+  underreview = 1,
+  basefilename = "spacesearch",
+  category =  "Verification",
+  summary =
+   "SpaceSearch is a library for developing solver-aided tools within a proof 
+    assistant.  It enables the creation of provably correct tools that transform
+    some problem from its original doman to that of a highly optimized solver.",
+}
+
+@Misc{GoffiGEPCBK2017,
+  author =    "Alberto Goffi and Alessandra Gorla and Michael D. Ernst
+  and Mauro Pezz{\`e} and Sergio Delgado Castellanos and Arianna Blasi and Benjamin Keller",
+  authorASCII =    "Alberto Goffi and Alessandra Gorla and Michael D. Ernst
+  and Mauro Pezze and Sergio Delgado Castellanos and Arianna Blasi and Benjamin Keller",
+  authorASCII2 =    "Alberto Goffi and Alessandra Gorla and Michael D. Ernst
+  and Mauro Pezzè and Sergio Delgado Castellanos and Arianna Blasi and Benjamin Keller",
+  title =     "Translating Code Comments to Procedure Specifications",
+  month =     apr,
+  year =      2017,
+  abstract =
+   "Procedure specifications are useful in many software development tasks,
+    such as test case generation, debugging, program comprehension, code
+    synthesis, refactoring, formal verification, run-time monitoring. As one
+    example, specifications are useful in automatic test case generation: they
+    help a tool produce inputs that induce peculiar behaviors, and they act as
+    test oracles able to reveal bugs.
+    \par
+    Whereas formal specifications are seldom available in practice, it is
+    standard practice for developers to document their code with
+    semi-structured comments such as Doxygen, Javadoc, RDoc, and Sphinx. These
+    comments express the procedure specification with a mix of predefined tags
+    and natural language.
+    \par
+    This paper presents Jdoctor, an approach that combines natural language
+    parsing with pattern matching to translate Javadoc comments into executable
+    procedure specifications written as Java expressions. In an empirical
+    evaluation, Jdoctor achieved precision of 91\% and recall of 60\% in
+    translating Javadoc into procedure specifications. This is substantially
+    better than previous work; the respective f-measure scores are @tComment
+    40\%, Toradocu 50\%, Jdoctor 72\%. We also supplied the Jdoctor-derived
+    specifications to an automated test case generation tool, Randoop. The
+    specifications enabled Randoop to generate test cases that reveal more
+    defects, produce fewer false alarms, and achieve higher coverage.",
+  omitfromcv = 1,
+  underreview = 1,
+  basefilename = "comments-to-specs",
+  category =  "Natural language processing",
+  csetags = "mernst,mernst-Natural-language-processing,plse",
+  summary =
+   "This paper improves previous techniques that convert English documentation
+    into assertions that act as an executable specification."
+}
 
 % LocalWords:  inproceedings typechecking booktitle apr basefilename pp RSA UW
 % LocalWords:  mltypechecking mitacmug ML's nonPAG MastersThesis jun co ESEC NY
@@ -10241,7 +10377,7 @@ with an {SMT} Solver",
 %  LocalWords:  undergradCoauthor ErnstGKN99pointers ErnstGKN99 tr991102
 %  LocalWords:  notkin ErnstBN99TR tr970406 ErnstBN2002 ICSE2000 icse2000
 %  LocalWords:  icse2000addr icse2000date ErnstCGN2001TSEnote tse2001 S477
-%  LocalWords:  Ernst01 icse2001 icse2001addr icse2001date NimmerE01 tr823
+%  LocalWords:  Ernst01 NimmerE01 tr823
 %  LocalWords:  rv2001 KataokaEGN01 ICSM2001 ICSM2001addr ICSM2001date Xie
 %  LocalWords:  icsm2001 StreckenbachS2004 NimmerE02 ISSTA2002 issta2002
 %  LocalWords:  ISSTA2002addr ISSTA2002date FSE2002 FSE2002addr fse2002
