@@ -9457,7 +9457,7 @@ endgame.",
   author = 	 "Doug Woos and James R. Wilcox and Steve Anton and Zachary Tatlock and Michael D. Ernst and Thomas Anderson",
   title = 	 "Planning for change in a formal verification of the {Raft} consensus protocol",
   crossref =     "CPP2016",
-  NEEDpages = 	 "*",
+  pages = 	 "154-165",
   abstract =
    "We present the first formal verification of state machine safety for
     the Raft consensus protocol, a critical component of many distributed
@@ -9589,7 +9589,7 @@ endgame.",
   author = 	 "Michael D. Ernst and Alberto Lovato and Damiano Macedonio and Fausto Spoto and Javier Thaine",
   title = 	 "Locking discipline inference and checking",
   crossref =     "ICSE2016",
-  NEEDpages = 	 "*",
+  pages = 	 "1133-1144",
   abstract =
    "Concurrency is a requirement for much modern software, but the
     implementation of multithreaded algorithms comes at the risk of errors
@@ -9630,7 +9630,7 @@ endgame.",
   author = 	 "Michael D. Ernst and Damiano Macedonio and Massimo Merro and Fausto Spoto",
   title = 	 "Semantics for locking specifications",
   crossref =     "NFM2016",
-  NEEDpages =     "*",
+  pages =     "355-372",
   abstract =
    "Lock-based synchronization disciplines, like Java's \texttt{@GuardedBy},
     are widely used to prevent concurrency errors.  However, their semantics is
@@ -9662,7 +9662,7 @@ endgame.",
   author = 	 "Calvin Loncaric and Emina Torlak and Michael D. Ernst",
   title = 	 "Fast synthesis of fast collections",
   crossref =     "PLDI2016",
-  NEEDpages = 	 "355-368",
+  pages = 	 "355-368",
   abstract =
    "Many applications require specialized data structures not found in the
     standard libraries, but implementing new data structures by hand is tedious
@@ -9729,7 +9729,7 @@ endgame.",
   author =       "Stuart Pernsteiner and Calvin Loncaric and Emina Torlak and Zachary Tatlock and Xi Wang and Michael D. Ernst and Jonathan Jacky",
   title =        "Investigating safety of a radiotherapy machine using system models with pluggable checkers",
   crossref =     "CAV2016",
-  NEEDpages =     "*",
+  pages =     "23-41",
   abstract =
     "Formal techniques for guaranteeing software correctness have made
     tremendous progress in recent decades.
@@ -9800,7 +9800,8 @@ endgame.",
   author = 	 "Konstantin Weitz and Doug Woos and Emina Torlak and Michael D. Ernst and Arvind Krishnamurthy and Zachary Tatlock",
   title =        "Formal Semantics and Automated Verification for the {Border} {Gateway} {Protocol}",
   crossref =     "NetPL2016",
-  NEEDpages =     "*",
+  numpages =    2,
+  NOpages =     "Maybe no proceedings; not in ACM Digital Library as of 4/26/2017",
   basefilename = "bagpipe-overview-netpl2016",
   downloads =
    "https://github.com/uwplse/uwplse-bagpipe Bagpipe implementation",
@@ -9878,7 +9879,7 @@ endgame.",
   author = 	 "Chandrakana Nandi and Michael D. Ernst",
   title = 	 "Automatic trigger generation for rule-based smart homes",
   crossref =     "PLAS2016",
-  NEEDpages = 	 "*",
+  pages = 	 "97-102",
   abstract =
    "To customize the behavior of a smart home, an end user writes rules.
     When an external event satisfies the rule's trigger, the rule's action
@@ -10010,7 +10011,7 @@ with an {SMT} Solver",
   author =       "Michael D. Ernst",
   title =        "Natural language is a programming language: Applying natural language processing to software development",
   crossref =     "SNAPL2017",
-  NEEDpages =     "*",
+  pages =     "4:1--4:14",
   abstract =
    "A powerful, but limited, way to view software is as source code alone.
     Treating a program as a sequence of instructions enables it to be
@@ -10143,6 +10144,55 @@ with an {SMT} Solver",
 }
 
 
+@InProceedings{WeitzLHTET2017,
+  author =       "Konstantin Weitz and Steven Lyubomirsky and Stefan Heule and Emina Torlak and Michael D. Ernst and Zachary Tatlock",
+  title =        "SpaceSearch: A library for building and verifying solver-aided tools",
+  crossref =  "ICFP2017",
+  NEEDpages =     "*",
+  abstract =
+   "Many verification tools build on automated solvers. These tools reduce
+    problems in a specific application domain (e.g., compiler optimization
+    validation) to queries that can be discharged with a highly optimized
+    solver. But the correctness of the reductions themselves is rarely verified
+    in practice, limiting the confidence that the solver's output establishes
+    the desired domain-level property.
+    \par
+    This paper presents SpaceSearch, a new library for developing solver-aided
+    tools within a proof assistant. A user builds their solver-aided tool in
+    Coq against the SpaceSearch interface, and the user then verifies that the
+    results provided by the interface are sufficient to establish the tool's
+    desired high-level properties. Once verified, the tool can be extracted to
+    an implementation in a solver-aided language (e.g., Rosette), where
+    SpaceSearch provides an efficient instantiation of the SpaceSearch
+    interface with calls to an underlying SMT solver. This combines the strong
+    correctness guarantees of developing a tool in a proof assistant with the
+    high performance of modern SMT solvers. This paper also introduces new
+    optimizations for such verified solver-aided tools, including
+    parallelization and incrementalization.
+    \par
+    We evaluate SpaceSearch by building and verifying two solver-aided
+    tools. The first, SaltShaker, checks that RockSalt's x86 semantics for a
+    given instruction agrees with STOKE's x86 semantics. SaltShaker identified
+    7 bugs in RockSalt and 1 bug in STOKE. After these systems were patched by
+    their developers, SaltShaker verified the semantics' agreement on 15,255
+    instruction instantiations in under 2h. The second tool, BGProof, is a
+    verified version of an existing Border Gateway Protocol (BGP) router
+    configuration checker. Like the existing checker, BGProof scales to
+    checking industrial configurations spanning over 240 KLOC, identifying 19
+    configuration inconsistencies with no false positives. However, the
+    correctness of BGProof has been formally proven, and we found 2 bugs in the
+    unverified implementation. These results demonstrate that SpaceSearch is a
+    practical approach to developing efficient, verified solver-aided tools.",
+  basefilename = "spacesearch-icfp2017",
+  category =  "Verification",
+  csetags = 	 "weitzkon,sslyu,emina,mernst,ztatlock,mernst-Verification,plse",
+  summary =
+   "SpaceSearch is a library for developing solver-aided tools within a proof 
+    assistant.  It enables the creation of provably correct tools that transform
+    some problem from its original doman to that of a highly optimized solver.",
+}
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% To appear, no date known yet
@@ -10204,55 +10254,6 @@ with an {SMT} Solver",
     the presence of dependence.",
 }
 
-
-@Misc{WeitzLHTET2017,
-  author =    "Konstantin Weitz and Steven Lyubomirsky and Stefan Heule and Emina Torlak and Michael D. Ernst and Zachary Tatlock",
-  title =     "SpaceSearch: A library for building and verifying solver-aided tools",
-  month =     feb,
-  year =      2017,
-  abstract =
-   "Many verification tools build on automated solvers. These tools reduce
-    problems in a specific application domain (e.g., compiler optimization
-    validation) to queries that can be discharged with a highly optimized
-    solver. But the correctness of the reductions themselves is rarely verified
-    in practice, limiting the confidence that the solver's output establishes
-    the desired domain-level property.
-    \par
-    This paper presents SpaceSearch, a new library for developing solver-aided
-    tools within a proof assistant. A user builds their solver-aided tool in
-    Coq against the SpaceSearch interface, and the user then verifies that the
-    results provided by the interface are sufficient to establish the tool's
-    desired high-level properties. Once verified, the tool can be extracted to
-    an implementation in a solver-aided language (e.g., Rosette), where
-    SpaceSearch provides an efficient instantiation of the SpaceSearch
-    interface with calls to an underlying SMT solver. This combines the strong
-    correctness guarantees of developing a tool in a proof assistant with the
-    high performance of modern SMT solvers. This paper also introduces new
-    optimizations for such verified solver-aided tools, including
-    parallelization and incrementalization.
-    \par
-    We evaluate SpaceSearch by building and verifying two solver-aided
-    tools. The first, SaltShaker, checks that RockSalt's x86 semantics for a
-    given instruction agrees with STOKE's x86 semantics. SaltShaker identified
-    7 bugs in RockSalt and 1 bug in STOKE. After these systems were patched by
-    their developers, SaltShaker verified the semantics' agreement on 15,255
-    instruction instantiations in under 2h. The second tool, BGProof, is a
-    verified version of an existing Border Gateway Protocol (BGP) router
-    configuration checker. Like the existing checker, BGProof scales to
-    checking industrial configurations spanning over 240 KLOC, identifying 19
-    configuration inconsistencies with no false positives. However, the
-    correctness of BGProof has been formally proven, and we found 2 bugs in the
-    unverified implementation. These results demonstrate that SpaceSearch is a
-    practical approach to developing efficient, verified solver-aided tools.",
-  omitfromcv = 1,
-  underreview = 1,
-  basefilename = "spacesearch",
-  category =  "Verification",
-  summary =
-   "SpaceSearch is a library for developing solver-aided tools within a proof 
-    assistant.  It enables the creation of provably correct tools that transform
-    some problem from its original doman to that of a highly optimized solver.",
-}
 
 @Misc{GoffiGEPCBK2017,
   author =    "Alberto Goffi and Alessandra Gorla and Michael D. Ernst
