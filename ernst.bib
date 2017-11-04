@@ -1368,7 +1368,7 @@ endgame.",
   title = 	 "Static verification of dynamically detected program
 		  invariants: Integrating {Daikon} and {ESC}/{Java}",
   crossref = 	 "RV2001",
-  NEEDpages = 	 "*",
+  NOpages = 	 "pages are numbered 1-22",
   abstract =
    "This paper shows how to integrate two complementary techniques for
     manipulating program invariants: dynamic detection and static verification.
@@ -2204,7 +2204,6 @@ endgame.",
 		   K. Rustan M. Leino and Erik Poll},
   title =        {An overview of {JML} tools and applications},
   crossref =     "FMICS03",
-  NEEDpages = 	 "*",
   supersededby = "BurdyCCEKLLP2005",
   basefilename = "jml-tools-fmics2003",
   downloadsnonlocal =
@@ -2516,7 +2515,6 @@ endgame.",
   author = 	 "David Saff and Michael D. Ernst",
   title = 	 "Continuous testing in {Eclipse}",
   crossref =     "ETX2004",
-  NEEDpages = 	 "*",
   abstract =
    "Continuous testing uses excess cycles on a developer's workstation to
     continuously run regression tests in the background, providing rapid
@@ -4998,7 +4996,6 @@ endgame.",
   author = 	 "Michael D. Ernst",
   title = 	 "Building and using pluggable type systems with the {Checker Framework}",
   crossref =     "ECOOP2008",
-  NEEDpages =    "*",
   note =         "Tool demo",
   abstract =
    "A static type system helps programmers to detect and prevent errors.
@@ -8129,7 +8126,6 @@ endgame.",
   author = 	 "Ravi Bhoraskar and Dominic Langenegger and Pingyang He and Michael D. Ernst",
   title = 	 "User scripting on {Android} using {BladeDroid}",
   crossref =     "NSDI2014",
-  NEEDpages = 	 "*",
   abstract =
    "User scripts allow users to customize their app use experience. In web
     apps, for instance, a user may use Greasemonkey scripts and browser
@@ -10093,7 +10089,7 @@ with an {SMT} Solver",
   authorASCII =       "Spencer Pearson and Jose Campos and Rene Just and Gordon Fraser and Rui Abreu and Michael D. Ernst and Deric Pang and Benjamin Keller",
   title =        "Evaluating and improving fault localization",
   crossref =     "ICSE2017",
-  NEEDpages =     "*",
+  pages =        "609-620",
   abstract =
    "Most fault localization techniques take as input a faulty program, and
     produce as output a ranked list of suspicious code locations at which the
@@ -10190,9 +10186,9 @@ with an {SMT} Solver",
 
 @InProceedings{WeitzLHTET2017,
   author =       "Konstantin Weitz and Steven Lyubomirsky and Stefan Heule and Emina Torlak and Michael D. Ernst and Zachary Tatlock",
-  title =        "SpaceSearch: A library for building and verifying solver-aided tools",
+  title =        "{SpaceSearch}: A library for building and verifying solver-aided tools",
   crossref =  "ICFP2017",
-  NEEDpages =     "*",
+  pages =     "25:1--25:28*",
   abstract =
    "Many verification tools build on automated solvers. These tools reduce
     problems in a specific application domain (e.g., compiler optimization
@@ -10236,6 +10232,49 @@ with an {SMT} Solver",
     some problem from its original doman to that of a highly optimized solver.",
 }
 
+
+@InProceedings{JackyBELPTT2017,
+  author =       "Jonathan Jacky and Stefani Banerian and Michael D. Ernst and Calvin Loncaric and Stuart Pernsteiner and Zachary Tatlock and Emina Torlak",
+  title =        "Automatic formal verification for {EPICS}",
+  crossref =  "ICALEPCS2017",
+  NEEDpages =     "*",
+  abstract =
+   "We built an EPICS-based radiation therapy machine control program and
+    are using it to treat patients at our hospital.  To help ensure safety,
+    the control program uses a restricted subset of EPICS constructs and programming
+    techniques, and we developed several new automated formal verification
+    tools for this subset.
+    \par
+    To check our control program, we built a \emph{Symbolic Interpeter}
+    that finds errors in EPICS database programs,
+    using symbolic execution and satisfiability
+    checking.  It found serious errors in our control program that were
+    missed by reviews and testing.
+    \par
+    To check the EPICS runtime (EPICS Core) itself, we
+    first developed a \emph{Formal Semantics} for EPICS database programs,
+    based on the EPICS Record Reference Manual (RRM) and expressed in
+    the specification language of an automated theorem prover.
+    We built a formally-verified \emph{Trace Validator} and
+    used it to check the EPICS runtime against our semantics by
+    differential testing with millions of randomly generated programs.
+    The testing process generally corroborated that the EPICS runtime
+    conforms to its specification in the RRM, but it did find several omissions
+    and ambiguities in the RRM that might mislead users.
+    Our formal semantics for EPICS
+    enables valuable future developments: a full proof of correctness
+    for our EPICS program, verified analyses for arbitrary EPICS
+    programs, and a \emph{Verified Compiler} that could
+    compile an EPICS database to a verified standalone program, while
+    dispensing with much of the unverified EPICS toolchain and runtime.",
+  basefilename = "epics-verification-icalepcs2017",
+  category = "Verification",
+  csetags =   "mernst,loncaric,spernste,ztatlock,emina,mernst-Verification,plse",
+  summary =
+   "This paper presents a symbolic interpreter that detects errors in EPICS
+    programs.  It also presents a formal semantics for the EPICS language, which
+    revealed omissions and ambiguities in the EPICS specification.",
+}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
