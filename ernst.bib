@@ -21,11 +21,11 @@
 %   category = "Software engineering",
 %   category = "Speculative analysis",
 %   category = "Static analysis",
+%   category = "Synthesis",
 %   category = "Testing",
 %   category = "Theory",
 %   category = "Verification",
 %   FUTUREcategory =  "Databases",
-%   FUTUREcategory =  "Synthesis",
 %   OLDcategory =     "Software engineering",
 %   OPTcategory =  "",
 %   subcategory = "Slicing",
@@ -9717,9 +9717,8 @@ endgame.",
   basefilename = "collection-synthesis-pldi2016",
   downloads =
    "https://github.com/CozySynthesizer/cozy Cozy implementation",
-  category = "Static analysis",
-  FUTUREcategory =  "Synthesis",
-  csetags = 	 "loncaric,emina,mernst,mernst-Static-analysis,plse",
+  category = "Synthesis",
+  csetags = 	 "loncaric,emina,mernst,mernst-Synthesis,plse",
   summary =
    "The Cozy tool takes as input a specification for a collection data structure
     and query operations, and produces as output an efficient implementation.
@@ -10278,6 +10277,53 @@ with an {SMT} Solver",
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% 2018
+%%%
+
+
+@InProceedings{LoncaricET2018,
+  author =       "Calvin Loncaric and Michael D. Ernst and Emina Torlak",
+  title =        "Generalized data structure synthesis",
+  crossref =  "ICSE2018",
+  NEEDpages =     "*",
+  abstract =
+   "Data structure synthesis is the task of generating data structure
+    implementations from high-level specifications.  Recent work in this area
+    has shown potential to save programmer time and reduce the risk of defects,
+    but existing techniques only focus on data structures whose API
+    operations find subsets of a single collection.  Real-world use cases are not
+    always so simple:  programs often track multiple related collections and
+    aggregate properties such as sums, counts, minimums, and maximums.
+    \par
+    This paper shows how to synthesize data structures that track subsets and
+    aggregations of multiple related collections.
+    Our technique decomposes the synthesis task into alternating steps of
+    \emph{query synthesis} and \emph{incrementalization}.  The query synthesis step
+    implements pure operations over the data structure state by leveraging existing
+    enumerative synthesis techniques (with slight modifications for the data
+    structures domain).  The incrementalization step implements imperative state
+    modifications by re-framing them as fresh queries that determine what to
+    change, coupled with a small amount of code to apply the change.  As an added
+    benefit of this approach over previous work, the synthesized data structure
+    is specialized not just to the queries in the specification but also to which
+    update operations are needed.
+    We have evaluated our approach in five large case studies,
+    demonstrating that these extensions are broadly applicable.",
+  basefilename = "generalized-synthesis-icse2018",
+  downloads =
+   "https://github.com/CozySynthesizer/cozy Cozy implementation",
+  TODOdownloadsnonlocal = "*",
+  category = "Synthesis",
+  csetags = 	 "loncaric,emina,mernst,mernst-Synthesis,plse",
+  summary =
+   "This paper shows how to synthesize a data structure that tracks subsets and
+   aggregations of multiple related collections.  The input is a trivial
+   implementation of the desired API operations, and the output is an efficient
+   implementation.",
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% To appear, no date known yet
 %%%
 
@@ -10499,4 +10545,3 @@ with an {SMT} Solver",
 %  LocalWords:  ISSTA2006addr ISSTA2006date issta2006 RinardE2006 CSAIL
 %  LocalWords:  GuoPME2006 bytecodes dAmorimPMXE2006 Darko ASE2006 ase2006
 %  LocalWords:  ASE2006addr ASE2006date Symclat
-
