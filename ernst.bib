@@ -24,6 +24,7 @@
 %   category = "Synthesis",
 %   category = "Testing",
 %   category = "Theory",
+%   category = "User interfaces",
 %   category = "Verification",
 %   FUTUREcategory =  "Databases",
 %   OLDcategory =     "Software engineering",
@@ -7374,7 +7375,8 @@ endgame.",
    "http://homes.cs.washington.edu/~mernst/pubs/veriweb-oopsla2012.pdf PDF;
     http://homes.cs.washington.edu/~mernst/pubs/veriweb-oopsla2012-slides.pdf slides (PDF)",
   downloads = "http://plse.cs.washington.edu/veriweb/ study materials",
-  category = "Software engineering",
+  OLDcategory = "Software engineering",
+  category = "User interfaces",
   csetags = "tws,mernst,mernst-Software-engineering,plse,proj-veriweb",
   summary =
    "We present a novel user interface that enables ordinary developers, who
@@ -7762,8 +7764,8 @@ endgame.",
     http://homes.cs.washington.edu/~mernst/pubs/repair-workflow-issta2013-slides.pdf slides (PDF)",
   downloads =
    "https://code.google.com/archive/p/workflow-repairer/ FlowFixer implementation",
-  category = "Testing",
-  csetags = "mernst,mernst-Testing,plse,plse-testing,szhang,hlv",
+  category = "User interfaces",
+  csetags = "szhang,hlv,mernst,mernst-Testing,plse,plse-testing",
   summary =
    "When a UI changes, a user's workflow must also change.  The FlowFixer
     tool automatically translates an old workflow into one that works on the
@@ -9308,7 +9310,8 @@ endgame.",
     http://homes.cs.washington.edu/~mernst/pubs/dom-tracing-uist2015-slides.pdf slides (PDF)",
   downloads =
    "https://github.com/burg/replay-staging/ Timelapse implementation",
-  category = "Software engineering",
+  OLDcategory = "Software engineering",
+  category = "User interfaces",
   csetags = "burg,ajko,mernst,mernst-Software-engineering,plse",
   summary =
    "The Scry tool enables a developer to navigate forward and backward in a web
@@ -9947,8 +9950,8 @@ endgame.",
 
 @InProceedings{WeitzWTEKT2016,
   author = 	 "Konstantin Weitz and Doug Woos and Emina Torlak and Michael D. Ernst and Arvind Krishnamurthy and Zachary Tatlock",
-  title =        "Scalable Verification of {Border} {Gateway} {Protocol} Configurations
-with an {SMT} Solver",
+  title =        "Scalable verification of {Border} {Gateway} {Protocol} configurations
+with an {SMT} solver",
   crossref =     "OOPSLA2016",
   pages =     "765-780",
   abstract =
@@ -10267,6 +10270,7 @@ with an {SMT} Solver",
     compile an EPICS database to a verified standalone program, while
     dispensing with much of the unverified EPICS toolchain and runtime.",
   basefilename = "epics-verification-icalepcs2017",
+  downloads = "https://youtu.be/CFSnkB5z0GA video of talk",
   category = "Verification",
   csetags =   "mernst,loncaric,spernste,ztatlock,emina,mernst-Verification,plse",
   summary =
@@ -10276,9 +10280,36 @@ with an {SMT} Solver",
 }
 
 
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% 2018
 %%%
+
+
+@InProceedings{LinWZE2018,
+  author =       "Xi Victoria Lin and Chenglong Wang and Luke Zettlemoyer and Michael D. Ernst",
+  title =        "{NL2Bash}: A corpus and semantic parser for natural language interface to the {Linux} operating system",
+  crossref =  "LREC2018",
+  NEEDpages =     "*",
+  abstract =
+   "We present new data and semantic parsing methods for the problem of mapping
+    English sentences to Bash commands (NL2Bash). Our long-term goal is to
+    enable any user to perform operations such as file manipulation, search,
+    and application-specific scripting by simply stating their goals in
+    English. We take a first step in this domain, by providing a new dataset of
+    challenging but commonly used Bash commands and expert-written English
+    descriptions, along with baseline methods to establish performance levels
+    on this task.",
+  basefilename = "nl2bash-corpus-lrec2018",
+  downloads = "https://github.com/TellinaTool/nl2bash dataset",
+  category = "Natural language processing",
+  csetags = "xilin,clwang,lsz,mernst,mernst-Natural-language-processing,plse",
+  summary =
+   "NL2Bash is a dataset containing pairs of (English text, Bash commands).
+    This dataset can be used in training and evaluating tools that translate
+    from English to bash."
+}
 
 
 @InProceedings{LoncaricET2018,
@@ -10289,10 +10320,10 @@ with an {SMT} Solver",
   abstract =
    "Data structure synthesis is the task of generating data structure
     implementations from high-level specifications.  Recent work in this area
-    has shown potential to save programmer time and reduce the risk of defects,
-    but existing techniques only focus on data structures whose API
-    operations find subsets of a single collection.  Real-world use cases are not
-    always so simple:  programs often track multiple related collections and
+    has shown potential to save programmer time and reduce the risk of defects.
+    Existing techniques focus on data structures 
+    for manipulating subsets of a single collection, but real-world 
+    programs often track multiple related collections and
     aggregate properties such as sums, counts, minimums, and maximums.
     \par
     This paper shows how to synthesize data structures that track subsets and
@@ -10300,14 +10331,14 @@ with an {SMT} Solver",
     Our technique decomposes the synthesis task into alternating steps of
     \emph{query synthesis} and \emph{incrementalization}.  The query synthesis step
     implements pure operations over the data structure state by leveraging existing
-    enumerative synthesis techniques (with slight modifications for the data
-    structures domain).  The incrementalization step implements imperative state
+    enumerative synthesis techniques, specialized to the data
+    structures domain.  The incrementalization step implements imperative state
     modifications by re-framing them as fresh queries that determine what to
     change, coupled with a small amount of code to apply the change.  As an added
     benefit of this approach over previous work, the synthesized data structure
-    is specialized not just to the queries in the specification but also to which
-    update operations are needed.
-    We have evaluated our approach in five large case studies,
+    is optimized for not only the queries in the specification but also the required
+    update operations.
+    We have evaluated our approach in four large case studies,
     demonstrating that these extensions are broadly applicable.",
   basefilename = "generalized-synthesis-icse2018",
   downloads =
@@ -10320,6 +10351,46 @@ with an {SMT} Solver",
    aggregations of multiple related collections.  The input is a trivial
    implementation of the desired API operations, and the output is an efficient
    implementation.",
+}
+
+
+@InProceedings{PanchekhaGETK2018,
+  author =       "Pavel Panchekha and Adam Geller and Michael D. Ernst and Zachary Tatlock and Shoaib Kamil",
+  title =        "Verifying that web pages have accessible layout",
+  crossref =  "PLDI2018",
+  NEEDpages =     "*",
+  abstract =
+   "Usability and accessibility guidelines aim
+      to make graphical user interfaces accessible to all users,
+      such as by requiring that
+      text is sufficiently large,
+      interactive controls are visible,
+      and heading size corresponds to importance.
+    These guidelines must hold on the infinitely many possible renderings
+      of a web page generated by differing screen sizes, browsers, and fonts.
+    Today, these guidelines are tested by manual inspection
+      of a few renderings,
+      because 1) the guidelines are not expressed in a formal language,
+      2) the semantics of browser rendering are not well understood,
+      and 3) no tools exist to check all possible renderings of a web page.
+    VizAssert solves each of these problems.
+    First, it introduces \textit{visual logic} to precisely specify accessibility properties.
+    Second, it formalizes a large fragment of the \textit{browser rendering algorithm}.
+    Third, it provides a \textit{sound, automated tool} for testing assertions in visual logic.
+    \par
+    We encoded 14 assertions drawn from best-practice
+      accessibility and mobile-usability guidelines in visual logic.
+    VizAssert checked them on on 51 professionally designed web pages.
+    It found 40 distinct errors in the web pages, while
+      reporting only 5 false positive warnings.",
+  basefilename = "verify-layout-pldi2018",
+  downloadsnonlocal = "http://cassius.uwplse.org/ Cassius tool",
+  category =  "User interfaces",
+  csetags =   "pavpan,atgeller,mernst,ztatlock,mernst-Verification,plse",
+  summary =
+   "The VizAssert tool proves that a web page's layout satisfies a usability
+    or accessibility property, such as that text never overlaps or buttons
+    are onscreen, regardless of screen size, font preferences, browser, etc.",
 }
 
 
@@ -10545,4 +10616,3 @@ with an {SMT} Solver",
 %  LocalWords:  ISSTA2006addr ISSTA2006date issta2006 RinardE2006 CSAIL
 %  LocalWords:  GuoPME2006 bytecodes dAmorimPMXE2006 Darko ASE2006 ase2006
 %  LocalWords:  ASE2006addr ASE2006date Symclat
-te Symclat
