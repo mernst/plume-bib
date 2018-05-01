@@ -113,9 +113,6 @@
 
 
 
-
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Refactoring
 %%%
@@ -401,6 +398,19 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Defect prediction (fault prediction)
+%%%
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Fault localization
 %%%
 
@@ -498,8 +508,9 @@
 
 
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% Program repair
+%%% Automated program repair (APR)
 %%%
 
 @InProceedings{LeGouesDVFW2012,
@@ -545,6 +556,33 @@
 
 
 
+
+
+
+@InProceedings{TianR2017,
+  author = 	 "Tian, Yuchi and Ray, Baishakhi",
+  title = 	 "Automatically diagnosing and repairing error handling bugs in {C}",
+  crossref =  "FSE2017",
+  year = 	 2017,
+  pages = 	 "752--762",
+}
+
+
+@Article{Motwani2017,
+author="Motwani, Manish
+and Sankaranarayanan, Sandhya
+and Just, Ren{\'e}
+and Brun, Yuriy",
+title="Do automated program repair techniques repair hard and important bugs?",
+journal="Empirical Software Engineering",
+year="2017",
+month="Nov",
+day="18",
+abstract="Existing evaluations of automated repair techniques focus on the fraction of the defects for which the technique can produce a patch, the time needed to produce patches, and how well patches generalize to the intended specification. However, these evaluations have not focused on the applicability of repair techniques and the characteristics of the defects that these techniques can repair. Questions such as ``Can automated repair techniques repair defects that are hard for developers to repair?'' and ``Are automated repair techniques less likely to repair defects that involve loops?'' have not, as of yet, been answered. To address such questions, we annotate two large benchmarks totaling 409 C and Java defects in real-world software, ranging from 22K to 2.8M lines of code, with measures of the defect's importance, the developer-written patch's complexity, and the quality of the test suite. We then analyze relationships between these measures and the ability to produce patches for the defects of seven automated repair techniques ---AE, GenProg, Kali, Nopol, Prophet, SPR, and TrpAutoRepair. We find that automated repair techniques are less likely to produce patches for defects that required developers to write a lot of code or edit many files, or that have many tests relevant to the defect. Java techniques are more likely to produce patches for high-priority defects. Neither the time it took developers to fix a defect nor the test suite's coverage correlate with the automated repair techniques' ability to produce patches. Finally, automated repair techniques are less capable of fixing defects that require developers to add loops and new function calls, or to change method signatures. These findings identify strengths and shortcomings of the state-of-the-art of automated program repair along new dimensions. The presented methodology can drive research toward improving the applicability of automated repair techniques to hard and important bugs.",
+issn="1573-7616",
+doi="10.1007/s10664-017-9550-0",
+url="https://doi.org/10.1007/s10664-017-9550-0"
+}
 
 
 
@@ -651,8 +689,6 @@
     that combines the output of the tools together, looking for particular
     lines of code, methods, and classes that many tools warn about.",
 }
-
-
 
 
 
@@ -1615,8 +1651,6 @@
 
 
 
-
-
 @InProceedings{DeweyNH2015,
   author =       "Dewey, Kyle and Nichols, Lawton and Hardekopf, Ben",
   title =        "Automated data structure generation: Refuting common wisdom",
@@ -1855,6 +1889,8 @@
 }
 
 
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% LocalWords Dictionary
 %%% 
@@ -2003,4 +2039,32 @@
 %  LocalWords:  Gitless's Rhein astner Aniruddh Lawrance behaviour favour
 %  LocalWords:  idealised localisation webserver Thum Comput Netw Elsevier
 %  LocalWords:  Rahul Denae Heckman EclEmma Bethmann Anja Leich Saake Andr
-%  LocalWords:  Brechmann Brodmann
+%  LocalWords:  Brechmann Brodmann MIS LientzS ZelkowitzSG Gannon Yourdon
+%  LocalWords:  Papaccio crossref Productivities HostRW Bjorn SalmanTMJ RQ
+%  LocalWords:  Siegmund Tarvo Mockus Amritanshu Agrawal datapoint ParninO
+%  LocalWords:  hyperparameters SMOTUNED RenieresR SteimannFA Friedrich TF
+%  LocalWords:  ZhangZK JonesHS YooNH Nilsson Harman DiGiuseppeJ BrunE Xia
+%  LocalWords:  KochharXLL Kochhar Pavneet Shanping LongR Ren Jiang Xuan
+%  LocalWords:  diffoscope wrt IDF RepLoc Guix LeGouesDVFW ASPLOS QiLAR JB
+%  LocalWords:  Overfitting overfitting TianR Tian Yuchi Baishakhi ErrDoc
+%  LocalWords:  ErroDoc Motwani Manish Sankaranarayanan Nopol SanthiarPK
+%  LocalWords:  GhafariGMT Giordano ICPC FASE OOPSLACompanion PMESSE CBCD
+%  LocalWords:  ApelLBLK ChangYM JohnsonSMHB BushPS Domenico Alessandra Yu
+%  LocalWords:  Uchitel Bram Kai Gui Mei Halfond dex wifi Payton Proximal
+%  LocalWords:  middleware datums MusluBM MusluBNC LoNZ USENIXSec Blanc Yi
+%  LocalWords:  CaliskanIslamHLNVYG Sadowski Likert MurphyHillZN SeoSEAB
+%  LocalWords:  changesets Aftandilian NarayananR Christoph Kellogg's Hong
+%  LocalWords:  ChristakisMW MatichukMAJKS IOException SQLException Madsen
+%  LocalWords:  GousiosSB Anders Gogh Springer DeweyNH Lawton dequeue
+%  LocalWords:  YangXLCML MadsenTASM Gunter BarrettKMHTP
+%  LocalWords:  Kandogan Eser Maglio Takayama Prabaker Madhu CSCW XiongHSC
+%  LocalWords:  Hubaux Arnaud Czarnecki Krzysztof WhitakerCG OSDI WangPCZW
+%  LocalWords:  Platt Ruyun misconfiguration PeerPressure RabkinK Rabkin
+%  LocalWords:  Katz KellerUC Upadhyaya Prasang Candea ConfErr DSN Jie KeY
+%  LocalWords:  XiongZHSWC Hansheng HubauxXC eCos VaMoS HentschelHB hnle
+%  LocalWords:  Hentschel Reiner Bubel Hahnle SED BuseW Buse Sainyam enums
+%  LocalWords:  Galhotra Themis GoffiGMPT Goffi Mattavelli Pezz Tonella
+%  LocalWords:  Paolo Gopstein Iannacone DeLong Zhuang Yanyan Cappos qwert
+%  LocalWords:  Paderborn Weimer's linter formatter DiFranceGRG Guo Rubio
+%  LocalWords:  Gonz lez Fiorella Zampetti Gabriele Bavota Massimiliano
+%  LocalWords:  Penta Lanza Oliveto CoreNLP dev
