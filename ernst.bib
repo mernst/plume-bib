@@ -10499,25 +10499,22 @@ with an {SMT} solver",
   crossref =  "ISSTA2018",
   NEEDpages =     "*",
   abstract =
-   "In languages
-    like C,
-    out-of-bounds array accesses 
-    lead to security vulnerabilities and crashes.
-    Even in managed languages like Java, which check array bounds
-    at run time, out-of-bounds accesses cause exceptions that terminate the
-    program.
+   "In languages like C, out-of-bounds array accesses lead to security
+    vulnerabilities and crashes. Even in managed languages like Java, which
+    check array bounds at run time, out-of-bounds accesses cause exceptions
+    that terminate the program.
     \par
     We present a lightweight type system that certifies, at compile time,
-    that
-    array accesses in the program will be in-bounds. The type system
+    that array accesses in the program are in-bounds. The type system
     consists of several cooperating hierarchies of dependent types,
-    specialized to the domain of array bounds-checking.
-    Programmers can write type annotations at procedure boundaries, allowing
-    modular verification at a cost that scales linearly with program size.
+    specialized to the domain of array bounds-checking. Programmers write
+    type annotations at procedure boundaries, allowing modular verification
+    at a cost that scales linearly with program size.
     \par
-    We implemented our type system for Java in a tool we call Charles.
-    We evaluated Charles on over 100,000 lines of open-source code and discovered
-    array access errors even in well-tested, industrial projects such as Google Guava.",
+    We implemented our type system for Java in a tool called the Index
+    Checker. We evaluated the Index Checker on over 100,000 lines of
+    open-source code and discovered array access errors even in
+    well-tested, industrial projects such as Google Guava.",
   basefilename = "array-indexing-issta2018",
   downloads = "https://checkerframework.org/ implementation",
   OPTdownloadsnonlocal = "",
@@ -10707,3 +10704,4 @@ with an {SMT} solver",
 %  LocalWords:  ISSTA2006addr ISSTA2006date issta2006 RinardE2006 CSAIL
 %  LocalWords:  GuoPME2006 bytecodes dAmorimPMXE2006 Darko ASE2006 ase2006
 %  LocalWords:  ASE2006addr ASE2006date Symclat
+t
