@@ -5122,6 +5122,8 @@ endgame.",
   downloads =
    "http://homes.cs.washington.edu/~mernst/pubs/pluggable-types-issta2008-slides.pdf talk slides (PDF);
     http://homes.cs.washington.edu/~mernst/pubs/pluggable-types-demo-slides.pdf demo slides (PDF);
+    http://homes.cs.washington.edu/~mernst/pubs/pluggable-checkers-retrospective-issta2018-slides.pdf ISSTA 2018 retrospective slides (PDF);
+    https://docs.google.com/presentation/d/1-DRyBQq-Afmu0nZnb7BK2vd95Nmr13O5xv3fNc0iBok/edit ISSTA 2018 retrospective slides (Google Slides);
     http://pag.csail.mit.edu/pubs/pluggable-checkers-papi-mengthesis.pdf Papi thesis (PDF);
     https://checkerframework.org/ Checker Framework implementation",
   downloadsnonlocal =
@@ -10200,10 +10202,10 @@ with an {SMT} solver",
     the desired domain-level property.
     \par
     This paper presents SpaceSearch, a new library for developing solver-aided
-    tools within a proof assistant. A user builds their solver-aided tool in
+    tools within a proof assistant.  A user builds their solver-aided tool in
     Coq against the SpaceSearch interface, and the user then verifies that the
     results provided by the interface are sufficient to establish the tool's
-    desired high-level properties. Once verified, the tool can be extracted to
+    desired high-level properties.  Once verified, the tool can be extracted to
     an implementation in a solver-aided language (e.g., Rosette), where
     SpaceSearch provides an efficient instantiation of the SpaceSearch
     interface with calls to an underlying SMT solver. This combines the strong
@@ -10213,18 +10215,20 @@ with an {SMT} solver",
     parallelization and incrementalization.
     \par
     We evaluate SpaceSearch by building and verifying two solver-aided
-    tools. The first, SaltShaker, checks that RockSalt's x86 semantics for a
-    given instruction agrees with STOKE's x86 semantics. SaltShaker identified
-    7 bugs in RockSalt and 1 bug in STOKE. After these systems were patched by
-    their developers, SaltShaker verified the semantics' agreement on 15,255
-    instruction instantiations in under 2h. The second tool, BGProof, is a
-    verified version of an existing Border Gateway Protocol (BGP) router
-    configuration checker. Like the existing checker, BGProof scales to
-    checking industrial configurations spanning over 240 KLOC, identifying 19
-    configuration inconsistencies with no false positives. However, the
-    correctness of BGProof has been formally proven, and we found 2 bugs in the
-    unverified implementation. These results demonstrate that SpaceSearch is a
-    practical approach to developing efficient, verified solver-aided tools.",
+    tools. The first, SaltShaker, checks that RockSalt's x86 semantics agrees
+    with STOKE's x86 semantics for a given instruction instantiation. When run
+    on 15,255 instruction instantiations, SaltShaker identified 7 bugs in
+    RockSalt and 1 bug in STOKE. After these systems were patched by their
+    developers, SaltShaker verified the semantics' agreement on these
+    instruction instantiations in under 2h. The second tool is a verified
+    version of Bagpipe, a Border Gateway Protocol (BGP) router configuration
+    checker. Like the previous, unverified, version, our new Bagpipe
+    implementation scales to checking industrial configurations spanning over
+    240 KLOC, identifying 19 configuration inconsistencies with no false
+    positives. Furthermore, in the process of verifying Bagpipe, we identified
+    and fixed 2 bugs from the unverified implementation. These results
+    demonstrate that SpaceSearch is a practical approach to developing
+    efficient, verified solver-aided tools.",
   basefilename = "spacesearch-icfp2017",
   category =  "Verification",
   csetags = 	 "weitzkon,sslyu,emina,mernst,ztatlock,mernst-Verification,plse",
@@ -10398,9 +10402,6 @@ with an {SMT} solver",
 
 
 
-
-
-
 @InProceedings{JustPDE2018,
   author =       "Ren\'e Just and Chris Parnin and Ian Drosos and Michael D. Ernst",
   authorASCII = "Rene Just and Chris Parnin and Ian Drosos and Michael D. Ernst",
@@ -10408,39 +10409,38 @@ with an {SMT} solver",
   crossref =  "ISSTA2018",
   NEEDpages =     "*",
   abstract =
-   "To realistically evaluate a software testing or debugging technique, the
-    technique must be run on defects and tests that are characteristic of
-    those a developer would encounter in practice.  In general, this means
-    that the evaluation should use real defects and tests.
-    \par
-    For example, to determine the utility of a fault localization technique, it
+   "To realistically evaluate a software testing or debugging technique, it
+    must be run on defects and tests that are characteristic of
+    those a developer would encounter in practice.
+    For example, to determine the utility of a fault localization or automated
+    program repair technique, it
     could be run on real defects from a bug tracking system, using real
     tests that are committed to the version control repository along with the
-    fix.  Although such a methodology uses real tests, it may not use tests
-    that are representative of the information a developer or
+    fixes.  Although such a methodology uses real tests, it may not use tests
+    that are characteristic of the information a developer or
     tool would have in practice.  The tests that a developer commits \emph{after}
-    fixing a defect may encode more information than was available to the developer when
-    initially diagnosing the defect.  This calls into question the results of
-    past empirical studies on the effectiveness of fault localization and automated program repair that used developer-provided tests.
+    fixing a defect may encode more information than was available
+    to the developer when initially diagnosing the defect.
     \par
     This paper compares, both quantitatively and qualitatively, the
     developer-provided tests
     committed along with fixes (as found in the version control repository)
     versus the user-provided tests extracted from bug reports (as found in the
     issue tracker).
-    \par
-    Our results provide evidence that developer-provided tests encode more information
-    than available in user-provided tests.
-    For fault localization, developer-provided tests consistently overestimate the
-    ability to rank a defective statement in the list of the top-n most suspicious
-    statements.
-    For automated program repair, developer-provided tests overstate the
-    effectiveness, because user-provided tests generate far fewer
-    correct patches and substantially increase the repair time.
-    We also provide a novel benchmark that contains tests extracted from bug
-    reports, and we make suggestions for improving the design and evaluation
+    It provides evidence that developer-provided tests are more targeted
+    toward the defect and encode more information than user-provided tests.
+    For fault localization, developer-provided tests overestimate a
+    technique's ability to rank a defective statement in the list of the
+    top-n most suspicious statements.
+    For automated program repair, developer-provided tests overestimate a
+    technique's ability to (efficiently) generate correct patches---user-provided
+    tests lead to fewer correct patches and increased repair time.
+    This paper also provides suggestions for improving the design and evaluation
     of fault localization and automated program repair techniques.",
   basefilename = "test-provenance-issta2018",
+  downloads =
+   "https://docs.google.com/presentation/d/1vdkSkkue-jsk5VdUtcXwYIZ0_2bJlfBvqxH5xUuaMgk/edit?usp=sharing slides (Google Slides);
+    https://github.com/rjust/defects4j data",
   category =  "Testing",
   csetags =   "rjust,mernst,mernst-Testing,plse",
   summary =
@@ -10450,7 +10450,6 @@ with an {SMT} solver",
     as would be the case in realistic practice, leads to worse fault 
     localization results.",
 }
-
 
 
 @InProceedings{BlasiGKGEPC2018,
@@ -10473,16 +10472,17 @@ with an {SMT} solver",
     procedure specification with a mix of predefined tags and natural
     language.
     This paper presents Jdoctor, an approach that combines
-    pattern, lexical and semantic matching to
+    pattern, lexical, and semantic matching to
     translate Javadoc comments into executable procedure specifications
     written as Java expressions.
     In an empirical evaluation, Jdoctor achieved precision of
-    91\% and recall of 83\% in
+    92\% and recall of 83\% in
     translating Javadoc into procedure specifications.
     We also supplied the Jdoctor-derived specifications to an
     automated test case generation tool, Randoop.
     The specifications enabled Randoop to generate test cases that
-    reveal more defects and produce fewer false alarms.",
+    produce fewer false alarms and reveal more defects.",
+  basefilename = "comments-specs-issta2018",
   downloads = "https://github.com/albertogoffi/toradocu Toradocu implementation",
   category = "Natural language processing",
   csetags = "mernst,mernst-Natural-language-processing,plse",
