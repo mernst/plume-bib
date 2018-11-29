@@ -2,7 +2,6 @@ language: java
 
 script: make test
 
-sudo: false
 addons:
   apt:
     packages:
