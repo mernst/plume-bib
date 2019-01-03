@@ -7915,13 +7915,13 @@ endgame.",
   author = 	 "{JSR 308 Expert Group}",
   pseudoauthor = "Michael D. Ernst",
   title = 	 "Annotations on {Java} types",
-  howpublished = "\url{http://download.oracle.com/otndocs/jcp/annotations-2014_01_08-pfd-spec/}",
+  howpublished = "\url{https://download.oracle.com/otndocs/jcp/annotations-2014_01_08-pfd-spec/}",
   month = 	 jan # "~8,",
   year = 	 2014,
   note = 	 "Proposed Final Draft.",
   NOabstract =   1,
   basefilename = "annotations-jsr308-pfd",
-  downloadsnonlocal = "http://download.oracle.com/otndocs/jcp/annotations-2014_01_08-pfd-spec/ PDF",
+  downloadsnonlocal = "https://download.oracle.com/otndocs/jcp/annotations-2014_01_08-pfd-spec/ PDF",
   category = "Programming language design",
   csetags = "mernst,mernst-Programming-language-design,plse",
   summary =
@@ -10524,6 +10524,71 @@ with an {SMT} solver",
    "This paper presents a fast, precise, scalable, easy-to-use, static
     verification technique for proving that all array accesses are within
     their bounds, based on multiple simple cooperating type systems.",
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% 2019
+%%%
+
+@InProceedings{MichaelWAET2019,
+  author = 	 "Ellis Michael and Doug Woos and Thomas Anderson and Michael D. Ernst and and Zach Tatlock",
+  title = 	 "Teaching rigorous distributed systems with efficient model checking",
+  crossref =  "EuroSys2019",
+  NEEDpages = 	 "*",
+  basefilename = "dslabs-eurosys2019",
+  abstract =
+   "Writing correct distributed systems code is difficult, especially for
+    novice programmers. The inherent asynchrony and need for fault
+    tolerance make errors almost inevitable. Industrial-strength testing
+    and model checking has been shown to be effective at uncovering bugs,
+    but comes with costs --- both time and effort --- far beyond what
+    students can afford. To address this, we have developed an efficient
+    model checking framework and visual debugger for distributed systems,
+    with the goal of helping students find and fix bugs in near real-time.
+    We identify two novel techniques for reducing the state space to be
+    searched and efficiently finding bugs in student implementations. We
+    report on our experience using these tools to help over two hundred
+    students build a correct, linearizable, fault tolerant,
+    dynamically-sharded key--value store.",
+  category =  "Dynamic analysis",
+  csetags = 	 "emichael,dwoos,tom,mernst,ztatlock,mernst-Dynamic-analysis,plse",
+  summary =
+   "This paper introduces shows an effective way to teach distributed systems,
+    with a set of labs, and a model checker and visual debugger used by
+    students to verify and debug their solutions."
+}
+
+
+@Article{ZouLXEZ2019,
+  author = 	 "Daming Zou and Jingjing Liang and Yingfei Xiong and Michael D. Ernst and Lu Zhang",
+  title = 	 "An Empirical Study of Fault Localization Families and Their Combinations",
+  journal = 	 TSE,
+  year = 	 2019,
+  NEEDvolume = 	 "*",
+  NEEDnumber = 	 "*",
+  NEEDpages = 	 "*",
+  NEEDmonth = 	 "*",
+  basefilename = "fl-families-tse2019",
+  abstract =
+   "The performance of fault localization techniques is critical to their
+    adoption in practice. This paper reports on an empirical study of a wide
+    range of fault localization techniques on real-world faults. Different
+    from previous studies, this paper (1) considers a wide range of
+    techniques from different families, (2) combines different techniques,
+    and (3) considers the execution time of different techniques. Our results
+    reveal that combined technique significantly outperforms any individual
+    technique (200\% increase in faults localized in Top 1), suggesting that
+    combination may be a desirable way to apply fault localization techniques
+    and future techniques should also be evaluated in the combined
+    setting. Our implementation is publicly available for evaluating and
+    combining fault localization techniques.",
+  category = "Testing",
+  csetags = 	 "mernst,mernst-Testing,plse",
+  summary =
+   "This paper evaluates multiple fault localization techniques on
+    real-world faults, and indicates how to combine them to improve
+    them further.",
 }
 
 
