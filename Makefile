@@ -18,23 +18,23 @@ docs/index.html: README
 bibstring-unabbrev.bib: bibstring-master.bib $(BIB_ABBREVIATE)
 	@rm -f $@
 	$(BIB_ABBREVIATE) $< > $@
-	@chmod -w $@
+	@chmod oga-w $@
 
 bibstring-abbrev.bib: bibstring-master.bib $(BIB_ABBREVIATE)
 	@rm -f $@
 	$(BIB_ABBREVIATE) -abbrev $< > $@
-	@chmod -w $@
+	@chmod oga-w $@
 
 ## TODO: write a new abbreviaton script, only for [book]titles
 # bibstring-crossrefs-abbrev.bib: bibstring-crossrefs-master.bib $(BIB_ABBREVIATE)
 # 	@rm -f $@
 # 	$(BIB_TITLE_ABBREVIATE) -abbrev $< > $@
-# 	@chmod -w $@
+# 	@chmod oga-w $@
 
 bibroot: *.bib
 	@rm -f $@
 	@ls -1 *.bib | perl -p -e 'BEGIN { print "% File for finding bibliography items.\n\n"; } if (/^bibstring/ || /^crossrefs/) { $$_=""; next; }; s:^(.*)$$:\\include{$$1}:;' > $@
-	@chmod -w $@
+	@chmod oga-w $@
 
 bibtest-aux-clean:
 	rm -f bibtest.aux bibtest.bbl bibtest.blg bibtest.dvi bibtest.log
@@ -42,7 +42,7 @@ bibtest-aux-clean:
 bibtest.tex: *.bib
 	@rm -f $@
 	@ls -1 *.bib | perl -p -e 'BEGIN { print "\\documentclass{report}\n\\usepackage{url}\n\\usepackage{fullpage}\n\\usepackage{relsize}\n\\begin{document}\\hbadness=10000\n\n\\bibliographystyle{alpha}\n\\nocite{*}\n\n\\bibliography{bibstring-unabbrev"; } END { print ",crossrefs}\n\n\\end{document}\n"; } if (/^bibstring/ || /^crossrefs/) { $$_=""; next; }; s:^(.*)\.bib\n:,$$1:;' > $@
-	@chmod -w $@
+	@chmod oga-w $@
 # This must be phony because a file might be old, but not listed in bibroot.
 .PHONY: bibtest.tex
 

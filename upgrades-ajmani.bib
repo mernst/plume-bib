@@ -1,3 +1,6 @@
+%% This was last synced with
+%% http://www.pmg.lcs.mit.edu/~ajmani/papers/upgrades.bib
+%% on 2019-01-14
 % The latest version of this file can be downloaded at:
 % http://www.pmg.lcs.mit.edu/~ajmani/papers/upgrades.bib
 %
@@ -12,6 +15,70 @@
 % Note: you'll need \usepackage{url} in your LaTeX document to handle the
 % \url commands in this bibliography.
 
+@inproceedings{ajmani06modular,
+  author = "Sameer Ajmani and Barbara Liskov and Liuba Shrira",
+  title = "Modular Software Upgrades for Distributed Systems",
+  booktitle = "European Conference on Object-Oriented Programming (ECOOP)",
+  month = jul,
+  year = 2006,
+  location = "Nantes, France",
+  category = "Automatic Software Upgrades",
+  categories = "Automatic Software Upgrades",
+  abstract =
+"Upgrading the software of long-lived, highly-available distributed
+systems is difficult.  It is not possible to upgrade all the nodes in a
+system at once, since some nodes may be unavailable and halting the
+system for an upgrade is unacceptable.  Instead, upgrades must happen
+gradually, and there may be long periods of time when different nodes
+run different software versions and need to communicate using
+incompatible protocols.  We present a methodology and infrastructure
+that make it possible to upgrade distributed systems automatically while
+limiting service disruption.  We introduce new ways to reason about
+correctness in a multi-version system. We also describe a prototype
+implementation that supports automatic upgrades with modest overhead.",
+  downloads = "
+http://pmg.csail.mit.edu/~ajmani/papers/ecoop06-upgrades.ps ps;
+http://pmg.csail.mit.edu/~ajmani/papers/ecoop06-upgrades.pdf pdf",
+}
+
+@phdthesis{ajmani04automatic,
+title="Automatic Software Upgrades for Distributed Systems",
+author="Sameer Ajmani",
+school= "MIT",
+month = sep,
+year = 2004,
+XXXnote = "Also as Technical Report MIT-LCS-TR-",
+category = "Automatic Software Upgrades",
+categories = "Automatic Software Upgrades; IRIS",
+abstract=
+"Upgrading the software of long-lived, highly-available distributed
+systems is difficult.  It is not possible to upgrade all the nodes in a
+system at once, since some nodes may be unavailable and halting the
+system for an upgrade is unacceptable.  Instead, upgrades may happen
+gradually, and there may be long periods of time when different nodes
+are running different software versions and need to communicate using
+incompatible protocols.  We present a methodology and infrastructure
+that address these challenges and make it possible to upgrade
+distributed systems automatically while limiting service disruption.
+\par
+Our methodology defines how to enable nodes to interoperate across
+versions, how to preserve the state of a system across upgrades, and how
+to schedule an upgrade so as to limit service disruption.  The approach
+is modular: defining an upgrade requires understanding only the new
+software and the version it replaces.
+\par
+The upgrade infrastructure is a generic platform for distributing and
+installing software while enabling nodes to interoperate across
+versions.  The infrastructure requires no access to the system source
+code and is transparent: node software is unaware that different
+versions even exist.  We have implemented a prototype of the
+infrastructure called Upstart that intercepts socket communication using
+a dynamically-linked C++ library.  Experiments show that Upstart has low
+overhead and works well for both local-area and Internet systems.",
+downloads={
+http://pmg.csail.mit.edu/~ajmani/papers/phdthesis.ps ps;
+http://pmg.csail.mit.edu/~ajmani/papers/phdthesis.pdf pdf
+}
 
 @Article{brewer01lessons,
   author =       "Eric A. Brewer",
@@ -32,8 +99,8 @@
 }
 
 @Misc{swg,
-  title =        "Star Wars Galaxies",
-  key =          "Star Wars Galaxies",
+  title = "Star Wars Galaxies Multiplayer Online Game",
+  note = "\url{http://starwarsgalaxies.station.sony.com/}",
   annote =       "A multiplayer online game that requires clients to
                  version sync with the server before logging in.
                  Presumably, the server kicks off all clients (requiring
@@ -44,7 +111,7 @@
   author =       "Marcin Solarski and Hein Meling",
   title =        "Towards Upgrading Actively Replicated Servers
                  on-the-fly",
-  crossref =     "Dependable02",
+  crossref =     "dependable02",
   annote =       "Upgrades a replicated server by upgrading each replica
                  in turn. Assumes that (1) multiple upgrades do not
                  interleave, (2) version v+1 offers a compatible
@@ -57,8 +124,6 @@
                  different versions, so doesn't need to convert messages
                  between versions (i.e., no simulation mode).",
 }
-
-
 
 @TechReport{rsync,
   author = 	 "Andrew Tridgell and Paul Mackerras",
@@ -110,7 +175,7 @@
   author =       "Chang Liu and Debra J. Richardson",
   title =        "Using {RAIC} for Dependable On-Line Upgrading of
                  Distributed Systems",
-  crossref =     "Dependable02",
+  crossref =     "dependable02",
   annote =       "A RAIC controller provides a static interface to an
                  array of similar or identical components. The RAIC
                  automatically handles failover and recovery of
@@ -129,7 +194,7 @@
   author =       "C. Hofmeister and E. White and J. Purtilo",
   title =        "Surgeon: {A} Packager for Dynamically Reconfigurable
                  Distributed Applications",
-  crossref =     "ICCDS92",
+  crossref =     "iccds92",
   note =         "Also in \cite{swej93mar}, pages 95--101",
   annote =       "Describes a way to package an upgrade to software
                  components in a distributed system. Packaging analyzes
@@ -154,7 +219,7 @@
   author =       "Steffen Hauptmann and Josef Wasel",
   title =        "On-line Maintenance with On-the-fly Software
                  Replacement",
-  crossref =     "ICCDS96",
+  crossref =     "iccds96",
   annote =       "Supports replacement of modules, called ``actors'', in
                  the Chorus real-time OS. Actors can contain several
                  threads and provide an interface composed of several
@@ -172,7 +237,7 @@
 }
 
 @Misc{gnucleus,
-  title =        "The Gnucleus Open-Source Gnutella Client",
+  title =        "The {Gnucleus} Open-Source {Gnutella} Client",
 note="\url{http://www.gnucleus.com/Gnucleus/}",
   key =          "Gnucleus",
   annote =       "A peer-to-peer file sharing system that deploys
@@ -194,7 +259,7 @@ note="\url{http://www.gnucleus.com/Gnucleus/}",
   author =       "Chryssa Dislis",
   title =        "Improving Service Availability via Low-Outage
                  Upgrades",
-  crossref =     "Dependable02",
+  crossref =     "dependable02",
   annote =       "Gives an industry perspective (Motorola, Inc.) on the
                  importance of upgrading software without interrupting
                  service, and suggests (common sense) techniques for
@@ -209,7 +274,7 @@ note="\url{http://www.gnucleus.com/Gnucleus/}",
 @InProceedings{cook02reliable,
   author =       "Jonathan E. Cook and Navin Vedagiri",
   title =        "Reliable Upgrading through Multi-Version Execution",
-  crossref =     "Dependable02",
+  crossref =     "dependable02",
   annote =       "Allows multiple versions of a function to exist
                  simultaneously, and uses an arbiter to dispatch calls
                  dynamically to different versions of a function. Keeps
@@ -231,7 +296,7 @@ note="\url{http://www.gnucleus.com/Gnucleus/}",
   author =       "M. R. V. Chaudron and F. van de Laar",
   title =        "An Upgrade Mechanism Based on Publish/Subscribe
                  Interaction",
-  crossref =     "Dependable02",
+  crossref =     "dependable02",
   annote =       "Advocates the use of publish/subscribe as an
                  interaction style for upgradeable component-based
                  systems. Publish/subscribe induces less coupling than
@@ -247,7 +312,7 @@ note="\url{http://www.gnucleus.com/Gnucleus/}",
 @InProceedings{bloom92reconfiguration,
   author =       "Toby Bloom and Mark Day",
   title =        "Reconfiguration in {A}rgus",
-  crossref =     "ICCDS92",
+  crossref =     "iccds92",
   note =         "Also in \cite{swej93mar}, pages 102--108",
   annote =       "Defines a correctness condition for reconfiguration:
                  ``continuation abstractions are preserved or invisibly
@@ -271,7 +336,7 @@ note="\url{http://www.gnucleus.com/Gnucleus/}",
   author =       "C. Bidan and V. Issarny and T. Saridakis and A.
                  Zarras",
   title =        "A Dynamic Reconfiguration Service for {CORBA}",
-  crossref =     "ICCDS98",
+  crossref =     "iccds98",
   URL =          "http://citeseer.ist.psu.edu/bidan98dynamic.html",
   annote =       "Defines a Dynamic Reconfiguration Manager (DRM) that
                  coordinates reconfigurations in Aster, a CORBA-based
@@ -290,7 +355,7 @@ note="\url{http://www.gnucleus.com/Gnucleus/}",
   author =       "Robert P. Bialek",
   title =        "The Architecture of a Dynamically Updatable,
                  Component-based System",
-  crossref =     "Dependable02",
+  crossref =     "dependable02",
   annote =       "Combines dynamic component architectures (e.g., CORBA,
                  EJB, DCOM) with dynamic software updating (e.g., Gupta
                  and Jalote, Hicks) to create an architecture that
@@ -303,8 +368,8 @@ note="\url{http://www.gnucleus.com/Gnucleus/}",
 }
 
 @Misc{battle.net,
-  title =        "Battle.net",
-  key =          "Battle.net",
+  title =        "{Battle.net} Multiplayer Online Game Server",
+  note = "\url{www.battle.net}",
   annote =       "A game server system that requires clients to version
                  sync with the server before allowing them to set up
                  games with other clients. This ensures that clients in
@@ -316,8 +381,8 @@ note="\url{http://www.gnucleus.com/Gnucleus/}",
 @InProceedings{barbacci92durra,
   author =       "M. Barbacci and others",
   title =        "Building Fault-tolerant Distributed Applications with
-                 {D}urra",
-  crossref =     "ICCDS92",
+                 {Durra}",
+  crossref =     "iccds92",
   note =         "Also in \cite{swej93mar}, pages 83--94",
   annote =       "Durra describes an application as a set of components
                  (application tasks and communication channels), a set
@@ -453,9 +518,9 @@ note="\url{http://www.gnucleus.com/Gnucleus/}",
   author =       "L. Peterson and D. Culler and T. Anderson and T.
                  Roscoe",
   booktitle =    "In Proceedings of the 1st Workshop on Hot Topics in
-                 Networks (HotNets-I)",
+                 Networks ({HotNets}-I)",
   title =        "A Blueprint for Introducing Disruptive Technology into
-                 the Internet",
+                 the {Internet}",
   year =         "2002",
   URL =          "http://citeseer.ist.psu.edu/peterson02blueprint.html",
   month =     oct,
@@ -465,14 +530,14 @@ note="\url{http://www.gnucleus.com/Gnucleus/}",
 @Unpublished{microsoft02managing,
   author =       "Microsoft Corporation",
   title =        "Managing Automatic Updating and Download Technologies
-                 in {W}indows {XP}",
+                 in {Windows} {XP}",
   year =         "2002",
   note =         "\url{http://www.microsoft.com/WindowsXP/pro/techinfo/administration/manageautoupdate/default.asp}",
 }
 
 @Misc{ghemawat02google,
   author =       "Sanjay Ghemawat",
-  title =        "Google, Inc., personal communication",
+  title =        "{Google}, {Inc}., personal communication",
   year =         "2002",
   personal =     "Sanjay explained how Google updates its software: they
                  have several (5?) data centers, and DNS directs clients
@@ -497,7 +562,6 @@ note="\url{http://www.gnucleus.com/Gnucleus/}",
   year =         "2002",
   url =         "http://www.pmg.lcs.mit.edu/~ajmani/papers/review.pdf",
   month =     aug,
-  note = 	 "Manuscript",
 }
 
 @Unpublished{ajmani02distributed,
@@ -506,10 +570,9 @@ note="\url{http://www.gnucleus.com/Gnucleus/}",
   year =         "2002",
   url =         "http://www.pmg.lcs.mit.edu/~ajmani/papers/scenarios.pdf",
   month =     oct,
-  note = 	 "Manuscript",
 }
 
-@InProceedings{2002:icsm:truyen,
+@InProceedings{truyen02consistency,
   author =       "E. Truyen and W. Joosen and P. Verbaeten",
   booktitle =    "Proceedings of the International Conference on
                  Software Maintenance ({ICSM}'02)",
@@ -560,7 +623,7 @@ note="\url{http://www.gnucleus.com/Gnucleus/}",
 @InProceedings{tewksbury01live,
   author =       "L. A. Tewksbury and L. E. Moser and P. M.
                  Melliar-Smith",
-  booktitle =    "IEEE Intl. Conf. on Software Maintenance (ICSM)",
+  booktitle =    "{IEEE} Intl. Conf. on Software Maintenance ({ICSM})",
   title =        "Live upgrades of {CORBA} applications using object
                  replication",
   year =         "2001",
@@ -672,13 +735,13 @@ note="\url{http://www.gnucleus.com/Gnucleus/}",
   month =     may,
 }
 
-@InProceedings{2001:icse:truyen,
+@InProceedings{truyen01dynamic,
   author =       "E. Truyen and B. Vanhaute and W. Joosen and P.
                  Verbaeten and B. N{\o}rregaard J{\o}rgensen",
   booktitle =    "Proceedings of the 23rd International Conference on
                  Software Engeneering ({ICSE}'01)",
   title =        "Dynamic and Selective Combination of Extensions in
-                 {Component-Based} Applications",
+                 Component-Based Applications",
   publisher =    "IEEE Computer Society",
   pages =        "233--242",
   month =        May # "~12--19,",
@@ -712,22 +775,22 @@ note="\url{http://www.gnucleus.com/Gnucleus/}",
 
 @InProceedings{ritzau00dynamic,
   author =       "Tobias Ritzau and Jesper Andersson",
-  booktitle =    "Java for Embedded Systems Workshop",
+  booktitle =    "{Java} for Embedded Systems Workshop",
   title =        "Dynamic Deployment of {Java} Applications",
   year =         "2000",
-  annote =       "Uses lazy upgrades to convert classes and objects to
-                 new versions. An upgrade consists of a class converter
-                 that converts static class data and an object converter
-                 that converts instances. The system uses a modified JVM
-                 to keeps old versions of classes and objects around so
-                 that old references continue to work. Does not comment
-                 on the problem of state divergence between different
-                 versions of the same object. Uses Jini to deploy
-                 upgrades in distributed systems, but has no mechanism
-                 to synchronize or otherwise schedule distributed
-                 upgrades. Converter routines cannot call methods of old
-                 or new objects -- they can only copy and convert object
-                 state.",
+  annote = "\textsc{JDrums}: Uses lazy upgrades to convert classes and
+                 objects to new versions. An upgrade consists of a class
+                 converter that converts static class data and an object
+                 converter that converts instances. The system uses a
+                 modified JVM to keeps old versions of classes and
+                 objects around so that old references continue to
+                 work. Does not comment on the problem of state
+                 divergence between different versions of the same
+                 object. Uses Jini to deploy upgrades in distributed
+                 systems, but has no mechanism to synchronize or
+                 otherwise schedule distributed upgrades. Converter
+                 routines cannot call methods of old or new objects --
+                 they can only copy and convert object state.",
   address =   "London",
   month =     may,
 }
@@ -739,7 +802,7 @@ note="\url{http://www.gnucleus.com/Gnucleus/}",
                  Cluster Computing 2000",
   title =        "Partition Repositories for Partition Cloning---{OS}
                  Independent Software Maintenance in Large Clusters of
-                 {PC}s",
+                 {PCs}",
   address =      "Chemnitz, Germany",
   month =        nov,
   year =         "2000",
@@ -770,10 +833,10 @@ note="\url{http://www.gnucleus.com/Gnucleus/}",
   author =       "Scott Malabarba and Raju Pandey and Jeff Gragg and
                  Earl Barr and J. Fritz Barnes",
   booktitle =    "European Conf. on Object-Oriented Programming",
-  title =        "Runtime support for type-safe dynamic {J}ava classes",
+  title =        "Runtime support for type-safe dynamic {Java} classes",
   year =         "2000",
   annote =       "[by Steven Richman] Malabarba et al. bring dynamic
-                 classes to Java by modifying the virtual machine and
+                 classes to {Java} by modifying the virtual machine and
                  adding a dynamic class loader. Type correctness is
                  checked when an upgrade in compiled. Specifically,
                  their compiler guarantees that the set of new and
@@ -838,7 +901,7 @@ note="\url{http://www.gnucleus.com/Gnucleus/}",
                  Wolf",
   booktitle =    "Intl. Conf. on Software Engineering",
   title =        "A Cooperative Approach to Support Software Deployment
-                 Using the Software Dock",
+                 Using the {Software} {Dock}",
   year =         "1999",
   URL =          "http://citeseer.ist.psu.edu/hall99cooperative.html",
   pages =     "174--183",
@@ -856,7 +919,7 @@ isbn="1-58113-545-9",
 
 @InProceedings{devanbu99security,
   author =       "P. Devanbu and M. Gertz and S. Stubblebine",
-  booktitle =    "ICSE Workshop on Software Engineering over the
+  booktitle =    "{ICSE} Workshop on Software Engineering over the
                  Internet",
   title =        "Security for Automated, Distributed Configuration
                  Management",
@@ -945,7 +1008,7 @@ isbn="1-58113-545-9",
 @InProceedings{hjalmtysson98dynamic,
   author =       "Gilsi Hjalmtysson and Robert Gray",
   booktitle =    "{USENIX} Annual Technical Conf.",
-  title =        "Dynamic {C}++ Classes---{A} lightweight mechanism to
+  title =        "Dynamic {C++} Classes---{A} lightweight mechanism to
                  update code in a running program",
   year =         "1998",
   URL =          "http://citeseer.ist.psu.edu/266962.html",
@@ -1224,8 +1287,8 @@ isbn="1-58113-545-9",
   author =       "Michael E. Shaddock and Michael C. Mitchell and Helen
                  E. Harrison",
   booktitle =    "Proc. of the 9th {USENIX} Sys. Admin. Conf.",
-  title =        "How to Upgrade 1500 Workstations on {S}aturday, and
-                 Still Have Time to Mow the Yard on {S}unday",
+  title =        "How to Upgrade 1500 Workstations on {Saturday}, and
+                 Still Have Time to Mow the Yard on {Sunday}",
   year =         "1995",
   ISBN =         "1-880446-73-1",
   address =   "Berkeley",
@@ -1275,12 +1338,12 @@ isbn="1-58113-545-9",
   title =        "Dynamic Reconfiguration of Distributed Applications",
   school =       "University of Maryland, College Park",
   year =         "1994",
-  note =         "Also as Technical Report CS-TR-3210",
+  note =         "Also available as Technical Report CS-TR-3210",
   URL =          "http://citeseer.ist.psu.edu/hofmeister93dynamic.html",
   annote =       "Hofmeister's thesis on her 1993 work with Purtilo.",
 }
 
-@Misc{swej93mar,
+@Book{swej93mar,
   key =          "{IEE} Software Engineering Journal, Special Issue on
                  Configurable Dist. Systems",
   title =        "{IEE} Software Engineering Journal, Special Issue on
@@ -1330,7 +1393,7 @@ crossrefonly = "",
   author =       "Brian Oki and Manfred Pfluegl and Alex Siegel and Dale
                  Skeen",
   booktitle =    "14th {ACM} Symposium on Operating System Principals",
-  title =        "The {I}nformation {B}us: An Architecture for
+  title =        "The {Information} {Bus}: {An} Architecture for
                  Extensible Distributed Systems",
   year =         "1993",
   annote =       "A communication medium that supports the transfer of
@@ -1442,7 +1505,7 @@ crossrefonly = "",
 
 @InProceedings{richardson91aspects,
   author =       "Joel Richardson and Peter Schwarz",
-  booktitle =    "Proc. of the ACM SIGMOD Intl. Conf. on Management of
+  booktitle =    "Proc. of the {ACM} {SIGMOD} Intl. Conf. on Management of
                  Data",
   title =        "Aspects: Extending Objects to Support Multiple,
                  Independent Roles",
@@ -1484,7 +1547,7 @@ crossrefonly = "",
 
 @Article{kramer90evolving,
   author =       "J. Kramer and J. Magee",
-  title =        "The Evolving Philosophers Problem: Dynamic Change
+  title =        "{The} {Evolving} {Philosophers} {Problem}: {Dynamic} Change
                  Management",
   journal =      "{IEEE} Transactions on Software Engineering",
   volume =       "16",
@@ -1693,7 +1756,7 @@ crossrefonly = "",
                  clients' transactions. Bloom does not detail an
                  implementation and cites the need for a higher-level
                  user interface to replacement.",
-  note =      "Also as MIT LCS Tech. Report 303",
+  note =      "Also available as MIT LCS Tech. Report 303",
   pages =     "134",
 }
 
@@ -1738,7 +1801,7 @@ crossrefonly = "",
                  data structure access in a flow of execution.",
 }
 
-@Proceedings{Dependable02,
+@Proceedings{dependable02,
   key =          "Workshop on Dependable On-line Upgrading of Dist.
                  Systems",
   booktitle =    "Workshop on Dependable On-line Upgrading of Dist.
