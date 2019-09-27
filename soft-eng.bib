@@ -609,6 +609,109 @@ url="https://doi.org/10.1007/s10664-017-9550-0"
 } 
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Clone detection and code similarity
+%%%
+
+@InProceedings{BasitRJ2005,
+  author = 	 "Hamid Abdul Basit and Damith C. Rajapakse and Stan Jarzabek",
+  title = 	 "Beyond templates: A study of clones in the {STL} and some
+                  general implications",
+  crossref =     "ICSE2005",
+  pages = 	 "451--459",
+  abstract =
+   "Templates (or generics) help us write compact, generic code, which aids
+    both reuse and maintenance. The STL is a powerful example of how templates
+    help achieve these goals. Still, our study of the STL revealed substantial,
+    and in our opinion, counter-productive repetitions (so-called clones)
+    across groups of similar class or function templates. Clones occurred, as
+    variations across these similar program structures were irregular and could
+    not be unified by suitable template parameters in a natural way. We
+    encountered similar problems in other class libraries as well as in
+    application programs, written in a range of programming languages. In the
+    paper, we present quantitative and qualitative results from our study. We
+    argue that the difficulties we encountered affect programs in general. We
+    present a solution that can treat such template-unfriendly cases of
+    redundancies at the meta-level, complementing and extending the power of
+    language features, such as templates, in areas of generic programming.",
+}
+
+
+
+@InProceedings{BasitJ2005,
+  author = 	 "Hamid Abdul Basit and Stan Jarzabek",
+  title = 	 "Detecting higher-level similarity patterns in programs",
+  crossref =     "FSE2005",
+  pages =	 "156--165",
+  abstract =
+   "Cloning in software systems is known to create problems during software
+    maintenance. Several techniques have been proposed to detect the same or
+    similar code fragments in software, so-called simple clones. While the
+    knowledge of simple clones is useful, detecting design-level similarities
+    in software could ease maintenance even further, and also help us identify
+    reuse opportunities. We observed that recurring patterns of simple clones -
+    so-called structural clones - often indicate the presence of interesting
+    design-level similarities. An example would be patterns of collaborating
+    classes or components. Finding structural clones that signify potentially
+    useful design information requires efficient techniques to analyze the bulk
+    of simple clone data and making non-trivial inferences based on the
+    abstracted information. In this paper, we describe a practical solution to
+    the problem of detecting some basic, but useful, types of design-level
+    similarities such as groups of highly similar classes or files. First, we
+    detect simple clones by applying conventional token-based techniques. Then
+    we find the patterns of co-occurring clones in different files using the
+    Frequent Itemset Mining (FIM) technique. Finally, we perform file
+    clustering to detect those clusters of highly similar files that are likely
+    to contribute to a design-level similarity pattern. The novelty of our
+    approach is application of data mining techniques to detect design level
+    similarities. Experiments confirmed that our method finds many useful
+    structural clones and scales up to big programs. The paper describes our
+    method for structural clone detection, a prototype tool called Clone Miner
+    that implements the method and experimental results."
+}
+
+
+
+
+@InProceedings{KimSNM2005,
+  author = 	 "Miryung Kim and Vibha Sazawal and David Notkin
+                  and Gail C. Murphy",
+  title = 	 "An empirical study of code clone genealogies",
+  crossref =     "FSE2005",
+  pages =	 "187--196",
+  abstract =
+   "It has been broadly assumed that code clones are inherently bad and that
+    eliminating clones by refactoring would solve the problems of code
+    clones. To investigate the validity of this assumption, we developed a
+    formal definition of clone evolution and built a clone genealogy tool that
+    automatically extracts the history of code clones from a source code
+    repository. Using our tool we extracted clone genealogy information for two
+    Java open source projects and analyzed their evolution.
+    \par
+    Our study contradicts some conventional wisdom about clones. In particular,
+    refactoring may not always improve software with respect to clones for two
+    reasons. First, many code clones exist in the system for only a short time;
+    extensive refactoring of such short-lived clones may not be worthwhile if
+    they are likely diverge from one another very soon. Second, many clones,
+    especially long-lived clones that have changed consistently with other
+    elements in the same group, are not easily refactorable due to programming
+    language limitations. These insights show that refactoring will not help in
+    dealing with some types of clones and open up opportunities for
+    complementary clone maintenance tools that target these other classes of
+    clones.",
+}
+
+
+@inproceedings{JB10,
+  Author = {Kevin Jalbert and Jeremy S. Bradbury},
+  Title = {Using Clone Detection to Identify Bugs in Concurrent Software},
+  Booktitle = {Proc. of 26th IEEE International Conference on Software Maintenance (ICSM 2010)},
+  Month = {Sept.},
+  Year = {2010}
+}
+
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Miscellaneous
@@ -716,33 +819,6 @@ url="https://doi.org/10.1007/s10664-017-9550-0"
 
 
 
-@InProceedings{KimSNM2005,
-  author = 	 "Miryung Kim and Vibha Sazawal and David Notkin
-                  and Gail C. Murphy",
-  title = 	 "An empirical study of code clone genealogies",
-  crossref =     "FSE2005",
-  pages =	 "187--196",
-  abstract =
-   "It has been broadly assumed that code clones are inherently bad and that
-    eliminating clones by refactoring would solve the problems of code
-    clones. To investigate the validity of this assumption, we developed a
-    formal definition of clone evolution and built a clone genealogy tool that
-    automatically extracts the history of code clones from a source code
-    repository. Using our tool we extracted clone genealogy information for two
-    Java open source projects and analyzed their evolution.
-    \par
-    Our study contradicts some conventional wisdom about clones. In particular,
-    refactoring may not always improve software with respect to clones for two
-    reasons. First, many code clones exist in the system for only a short time;
-    extensive refactoring of such short-lived clones may not be worthwhile if
-    they are likely diverge from one another very soon. Second, many clones,
-    especially long-lived clones that have changed consistently with other
-    elements in the same group, are not easily refactorable due to programming
-    language limitations. These insights show that refactoring will not help in
-    dealing with some types of clones and open up opportunities for
-    complementary clone maintenance tools that target these other classes of
-    clones.",
-}
 
 
 @Book{GhezziJM91,
@@ -799,65 +875,6 @@ url="https://doi.org/10.1007/s10664-017-9550-0"
   title = 	 "Correlation exploitation in error ranking",
   crossref =     "FSE2004",
   pages = 	 "83--93",
-}
-
-
-
-@InProceedings{BasitRJ2005,
-  author = 	 "Hamid Abdul Basit and Damith C. Rajapakse and Stan Jarzabek",
-  title = 	 "Beyond templates: A study of clones in the {STL} and some
-                  general implications",
-  crossref =     "ICSE2005",
-  pages = 	 "451--459",
-  abstract =
-   "Templates (or generics) help us write compact, generic code, which aids
-    both reuse and maintenance. The STL is a powerful example of how templates
-    help achieve these goals. Still, our study of the STL revealed substantial,
-    and in our opinion, counter-productive repetitions (so-called clones)
-    across groups of similar class or function templates. Clones occurred, as
-    variations across these similar program structures were irregular and could
-    not be unified by suitable template parameters in a natural way. We
-    encountered similar problems in other class libraries as well as in
-    application programs, written in a range of programming languages. In the
-    paper, we present quantitative and qualitative results from our study. We
-    argue that the difficulties we encountered affect programs in general. We
-    present a solution that can treat such template-unfriendly cases of
-    redundancies at the meta-level, complementing and extending the power of
-    language features, such as templates, in areas of generic programming.",
-}
-
-
-
-@InProceedings{BasitJ2005,
-  author = 	 "Hamid Abdul Basit and Stan Jarzabek",
-  title = 	 "Detecting higher-level similarity patterns in programs",
-  crossref =     "FSE2005",
-  pages =	 "156--165",
-  abstract =
-   "Cloning in software systems is known to create problems during software
-    maintenance. Several techniques have been proposed to detect the same or
-    similar code fragments in software, so-called simple clones. While the
-    knowledge of simple clones is useful, detecting design-level similarities
-    in software could ease maintenance even further, and also help us identify
-    reuse opportunities. We observed that recurring patterns of simple clones -
-    so-called structural clones - often indicate the presence of interesting
-    design-level similarities. An example would be patterns of collaborating
-    classes or components. Finding structural clones that signify potentially
-    useful design information requires efficient techniques to analyze the bulk
-    of simple clone data and making non-trivial inferences based on the
-    abstracted information. In this paper, we describe a practical solution to
-    the problem of detecting some basic, but useful, types of design-level
-    similarities such as groups of highly similar classes or files. First, we
-    detect simple clones by applying conventional token-based techniques. Then
-    we find the patterns of co-occurring clones in different files using the
-    Frequent Itemset Mining (FIM) technique. Finally, we perform file
-    clustering to detect those clusters of highly similar files that are likely
-    to contribute to a design-level similarity pattern. The novelty of our
-    approach is application of data mining techniques to detect design level
-    similarities. Experiments confirmed that our method finds many useful
-    structural clones and scales up to big programs. The paper describes our
-    method for structural clone detection, a prototype tool called Clone Miner
-    that implements the method and experimental results."
 }
 
 
@@ -1373,15 +1390,6 @@ url="https://doi.org/10.1007/s10664-017-9550-0"
 }
 
 
-
-
-@inproceedings{JB10,
-  Author = {Kevin Jalbert and Jeremy S. Bradbury},
-  Title = {Using Clone Detection to Identify Bugs in Concurrent Software},
-  Booktitle = {Proc. of 26th IEEE International Conference on Software Maintenance (ICSM 2010)},
-  Month = {Sept.},
-  Year = {2010}
-}
 
 
 

@@ -5,7 +5,7 @@
 BIB_ABBREVIATE ?= ./bib-abbreviate.pl
 
 # TODO: reinstate bibstring-crossrefs-abbrev.bib
-all: bibstring-unabbrev.bib bibstring-abbrev.bib bibroot docs/index.html
+all: bibstring-unabbrev.bib bibstring-abbrev.bib crossrefs-abbrev.bib bibroot docs/index.html
 
 BIBFILES := $(shell ls *.bib | grep -v bibstring-unabbrev.bib | grep -v bibstring-abbrev.bib)
 
@@ -23,6 +23,14 @@ bibstring-unabbrev.bib: bibstring-master.bib $(BIB_ABBREVIATE)
 bibstring-abbrev.bib: bibstring-master.bib $(BIB_ABBREVIATE)
 	@rm -f $@
 	$(BIB_ABBREVIATE) -abbrev $< > $@
+	@chmod oga-w $@
+
+crossrefs-abbrev.bib: crossrefs.bib $(BIB_ABBREVIATE)
+	@rm -f $@
+	$(BIB_ABBREVIATE) -abbrev $< > $@
+	perl -pi -e 's/(^\s*(book)?title\s*=\s*\".*?)(\s+'\''?[0-9]+)?:\s.*(\",$$)/\1\4/' $@
+	perl -pi -e 's/(^\s*(book)?title\s*=\s*\"[A-Za-z]*)(\s+'\''?[0-9]+)?,\s.*(\",$$)/\1\4/' $@
+	perl -pi -e 's/(^\s*address\s*=\s*\".*\",?$$)//' $@
 	@chmod oga-w $@
 
 ## TODO: write a new abbreviaton script, only for [book]titles
