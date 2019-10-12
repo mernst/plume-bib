@@ -10577,6 +10577,54 @@ with an {SMT} solver",
 }
 
 
+@Article{PanchekhaDTK2019,
+  author = 	 "Pavel Panchekha and Michael D. Ernst and Zachary Tatlock and Shoaib Kamil",
+  title = 	 "Modular verification of web page layout",
+  journal = 	 ACMPL,
+  year = 	 2019,
+  volume = 	 3,
+  number = 	 151,
+  pages = 	 26,
+  note = 	 "OOPSLA",
+  abstract =
+   "Automated verification can ensure that a web page satisfies accessibility,
+    usability, and design properties regardless of the end user's device,
+    preferences, and assistive technologies. However, state-of-the-art
+    verification tools for layout properties do not scale to large pages
+    because they rely on whole-page analyses and must reason about the entire
+    page using the complex semantics of the browser layout algorithm.
+    \par
+    This paper introduces and formalizes \emph{modular layout proofs}. A
+    modular layout proof splits a monolithic verification problem into smaller
+    verification problems, one for each \emph{component} of a web page. Each
+    \emph{component specification} can use rely/guarantee-style preconditions to make it
+    verifiable independently of the rest of the page and enabling reuse across
+    multiple pages. Modular layout proofs scale verification to pages an order
+    of magnitude larger than those supported by previous approaches.
+    \par
+    We prototyped these techniques in a new proof assistant, Troika. In Troika,
+    a proof author partitions a page into components and writes specifications
+    for them. Troika then verifies the specifications, and uses those
+    specifications to verify whole-page properties. Troika also enables the
+    proof author to verify different component specifications with different
+    verification tools, leveraging the strengths of each. In a case study, we
+    use Troika to verify a large web page and demonstrate a speed-up of
+    13--1469$\times$ over existing tools, taking verification time from hours to
+    seconds. We develop a systematic approach to writing Troika proofs and
+    demonstrate it on 8 proofs of properties from prior work to show that
+    modular layout proofs are short, easy to write, and provide benefits over
+    existing tools.",
+  basefilename = "verify-layout-modular-oopsla2019",
+  downloads = "http://cassius.uwplse.org/ Troika, VizAssert, and Cassius tools",
+  category =  "User interfaces",
+  csetags =   "pavpan,mernst,ztatlock,mernst-Verification,plse",
+  summary =
+   "The Troika tool modularizes previous work on layout verification,
+   splitting a monolithic verification problem into independent parts,
+   one for each component of a web page.",
+}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% To appear, no date known yet
 %%%
