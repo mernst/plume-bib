@@ -712,11 +712,21 @@
 
 
 @InProceedings{FahndrichLeino03,
-    author = {Manuel F{\"a}hndrich and K. Rustan M. Leino},
-    authorASCII = {Manuel Fahndrich and K. Rustan M. Leino},
-    title = {Heap Monotonic Typestates},
-    year = {2003},
-    booktitle = {IWACO'03}
+  author = {Manuel F{\"a}hndrich and K. Rustan M. Leino},
+  authorASCII = {Manuel Fahndrich and K. Rustan M. Leino},
+  title = {Heap Monotonic Typestates},
+  year = {2003},
+  booktitle = {IWACO'03},
+  abstract =
+   "The paper defines the class of heap monotonic typestates. The
+    monotonicity of such typestates enables sound checking algorithms
+    without the need for non-aliasing regimes of pointers. The basic idea is
+    that data structures evolve over time in a manner that only makes their
+    representation invariants grow stronger, never weaker. This assumption
+    guarantees that existing object references with particular typestates
+    remain valid in all program futures, while still allowing objects to
+    attain new stronger typestates. The system is powerful enough to
+    establish properties of circular data structures."
 }
 
 
@@ -1333,6 +1343,12 @@
   pages =     "87--97",
 }
 
+@InProceedings{BanerjeeCS2019,
+  author = 	 "Banerjee, Subarno and Clapp, Lazaro and Sridharan, Manu",
+  title = 	 "{NullAway}: Practical type-based null safety for {Java}",
+  crossref =  "FSE2019",
+  pages = 	 "740–750",
+}
 
 
 %%%
@@ -2759,6 +2775,12 @@
 
 
 
+@InProceedings{WolffGTA2011,
+  author = 	 "Wolff, Roger and Garcia, Ronald and Tanter, \'{E}ric and Aldrich, Jonathan",
+  title = 	 "Gradual Typestate",
+  crossref =  "ECOOP2011",
+  pages = 	 "459–483",
+}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -4505,6 +4527,8 @@ keywords = "FindBugs"
   crossref =     "FSE2014",
   pages = 	 "155--165",
 }
+
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
