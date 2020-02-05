@@ -10626,6 +10626,96 @@ with an {SMT} solver",
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% 2020
+%%%
+
+
+
+
+@InProceedings{KelloggRSSE2020,
+  author = 	 "Martin Kellogg and Manli Ran and Manu Sridharan and Martin Sch{\"a}f and Michael D. Ernst",
+  authorASCII = 	 "Martin Kellogg and Manli Ran and Manu Sridharan and Martin Schaef and Michael D. Ernst",
+  authorASCII2 = 	 "Martin Kellogg and Manli Ran and Manu Sridharan and Martin Schaf and Michael D. Ernst",
+  title = 	 "Verifying Object Construction",
+  crossref =  "ICSE2020",
+  NEEDpages = 	 "*",
+  OPTabstract =
+   "In object-oriented languages, constructors often have a combination of
+    required and optional formal parameters.  It is tedious and inconvenient
+    for programmers to write a constructor by hand for each combination.  The
+    multitude of constructors is error-prone for clients, and client code is
+    difficult to read due to the large number of constructor arguments.
+    Therefore, programmers often use design patterns that enable more flexible
+    object construction---the builder pattern, dependency injection, or factory
+    methods.
+    \par
+    However, these design patterns can be \emph{too} flexible: not all
+    combinations of logical parameters lead to the construction of well-formed
+    objects.  When a client uses the builder pattern to construct an object,
+    the compiler does not check that a valid set of values was provided.
+    Incorrect use of builders can lead to security vulnerabilities, run-time
+    crashes, and other problems.
+    \par
+    This work shows how to statically verify uses of object construction, such
+    as the builder pattern.  Using a simple specification language, programmers
+    specify which combinations of logical arguments are permitted. Our
+    compile-time analysis detects client code that may construct objects
+    unsafely.  Our analysis is based on a novel special case of typestate
+    checking, \emph{accumulation analysis}, that modularly reasons about
+    accumulations of method calls.  It scales to industrial programs.  We
+    evaluated it on over 9 million lines of code, discovering defects which
+    included previously-unknown security vulnerabilities and potential
+    null-pointer violations in heavily-used open-source codebases.  Our
+    analysis has a low false positive rate and low annotation burden.
+    \par
+    Our implementation and experimental data are publicly available.",
+  basefilename = "object-construction-icse2020",
+  OPTdownloads = "",
+  downloadsnonlocal =
+    "https://github.com/kelloggm/object-construction-checker implementation;
+     http://dx.doi.org/10.17632/3ycxw469p8.1 scripts and data",
+  category =  "Verification",
+  csetags =   "kelloggm,mernst,mernst-Verification,plse",
+  summary =
+   "This paper introduces accumulation analysis, a restricted form of
+    typestate that requires no alias analysis.  It can verify correct
+    use of the builder pattern and related patterns."
+}
+
+
+@InProceedings{LouisDBES2020,
+  author = 	 "Annie Louis and Santanu Kumar Dash and Earl T. Barr and Michael D. Ernst and Charles
+Sutton",
+  title = 	 "Where should I comment my code? A dataset and model for predicting locations that need comments",
+  crossref =  "ICSENIER2020",
+  NEEDpages = 	 "*",
+  abstract =
+   "Programmers should write code comments, but not on every line of code.
+    Because both too few and too many comments are undesirable,
+    programmers must judiciously decide where to write code comments.
+    We have created a machine learning model that suggests locations where a
+    programmer should write a code comment.
+    We trained it on existing
+    commented code to learn locations that are chosen by developers.
+    Once trained, the model can predict locations in new code.
+    Our models achieved precision of 74\% and recall of 13\% in identifying
+    comment-worthy locations.  This first success opens the door to future work, both in
+    the new \emph{where-to-comment} problem and in guiding comment generation.
+    Our code and data is available at
+    \url{http://groups.inf.ed.ac.uk/cup/comment-locator/}.",
+  basefilename = "predict-comments-icse2020",
+  OPTdownloads = "",
+  downloadsnonlocal = "http://groups.inf.ed.ac.uk/cup/comment-locator/ code and dataset",
+  category =  "Natural language processing",
+  csetags =   "mernst,mernst-Natural-language-processing,plse",
+  summary =
+   "This paper shows how to predict where programmers should write
+   code comments.  Its models achieved precision of 74\% and recall of 13\%.",
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% To appear, no date known yet
 %%%
 
