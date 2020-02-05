@@ -30,7 +30,7 @@ crossrefs-abbrev.bib: crossrefs.bib $(BIB_ABBREVIATE)
 	$(BIB_ABBREVIATE) -abbrev $< > $@
 	perl -pi -e 's/(^\s*(book)?title\s*=\s*\".*?)(\s+'\''?[0-9]+)?:\s.*(\",$$)/\1\4/' $@
 	perl -pi -e 's/(^\s*(book)?title\s*=\s*\"[A-Za-z]*)(\s+'\''?[0-9]+)?,\s.*(\",$$)/\1\4/' $@
-	perl -pi -e 's/(^\s*address\s*=\s*\".*\",?$$)//' $@
+	perl -pi -e 's/(^\s*address\s*=\s*\".*\",?\n)//' $@
 	@chmod oga-w $@
 
 ## TODO: write a new abbreviaton script, only for [book]titles
