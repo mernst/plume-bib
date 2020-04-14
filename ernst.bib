@@ -8152,8 +8152,8 @@ endgame.",
 
 
 @TechReport{ErnstJMDPRKBBHVW2014:TR,
-  author = 	 "Michael D. Ernst and Ren{\'e} Just and Suzanne Millstein and Werner Dietl and Stuart Pernsteiner and Franziska Roesner and Karl Koscher and Paulo Barros and Ravi Bhoraskar and Seungyeop Han and Paul Vines and Edward X. Wu",
-  authorASCII = 	 "Michael D. Ernst and Rene Just and Suzanne Millstein and Werner Dietl and Stuart Pernsteiner and Franziska Roesner and Karl Koscher and Paulo Barros and Ravi Bhoraskar and Seungyeop Han and Paul Vines and Edward X. Wu",
+  author = 	 "Michael D. Ernst and Ren{\'e} Just and Suzanne Millstein and Werner M. Dietl and Stuart Pernsteiner and Franziska Roesner and Karl Koscher and Paulo Barros and Ravi Bhoraskar and Seungyeop Han and Paul Vines and Edward X. Wu",
+  authorASCII = 	 "Michael D. Ernst and Rene Just and Suzanne Millstein and Werner M. Dietl and Stuart Pernsteiner and Franziska Roesner and Karl Koscher and Paulo Barros and Ravi Bhoraskar and Seungyeop Han and Paul Vines and Edward X. Wu",
   title = 	 "Collaborative verification of information flow for a high-assurance app store",
   institution =  UWCSE,
   year = 	 2014,
@@ -9813,6 +9813,7 @@ endgame.",
    "https://bestchai.bitbucket.io/shiviz/ online deployment (try it!);
     https://bitbucket.org/bestchai/shiviz ShiVector and ShiViz source code;
     https://bestchai.bitbucket.io/shiviz-demo/ video demo (YouTube)",
+  supersededby = "BeschastnikhLXWBE2020",
   category = "Debugging,Distributed systems",
   csetags = "ivanb,brun,mernst,mernst-Distributed-systems,proj-synoptic,plse",
   summary =
@@ -10568,6 +10569,7 @@ with an {SMT} solver",
     and that future techniques should also be evaluated in the combined
     setting. Our implementation is publicly available for evaluating and
     combining fault localization techniques.",
+  downloads = "https://combinefl.github.io CombineFL tool",
   category = "Debugging",
   csetags = 	 "mernst,mernst-Testing,plse",
   summary =
@@ -10630,6 +10632,49 @@ with an {SMT} solver",
 %%%
 
 
+@Article{BeschastnikhLXWBE2020,
+  author = 	 "Beschastnikh, Ivan and Liu, Perry and Xing, Albert and Wang, Patty and Brun, Yuriy and Ernst, Michael D.",
+  title = 	 "Visualizing Distributed System Executions",
+  journal = 	 TOSEM,
+  year = 	 2020,
+  volume = 	 29,
+  number = 	 2,
+  pages = 	 "9:1--9:38",
+  numpages = 38,
+  month = 	 mar,
+  abstract =
+   "Distributed systems pose unique challenges for software
+    developers. Understanding the system's communication topology and reasoning
+    about concurrent activities of system hosts can be difficult. The standard
+    approach, analyzing system logs, can be a tedious and complex process that
+    involves reconstructing a system log from multiple hosts' logs, reconciling
+    timestamps among hosts with non-synchronized clocks, and understanding what
+    took place during the execution encoded by the log. This article presents a
+    novel approach for tackling three tasks frequently performed during
+    analysis of distributed system executions: (1) understanding the relative
+    ordering of events, (2) searching for specific patterns of interaction
+    between hosts, and (3) identifying structural similarities and differences
+    between pairs of executions. Our approach consists of XVector, which
+    instruments distributed systems to capture partial ordering information
+    that encodes the happens-before relation between events, and ShiViz, which
+    processes the resulting logs and presents distributed system executions as
+    interactive time-space diagrams. Two user studies with a total of 109
+    students and a case study with 2 developers showed that our method was
+    effective, helping participants answer statistically significantly more
+    system-comprehension questions correctly, with a very large effect size.",
+  basefilename = "visualize-distributed-tosem2020",
+  downloads =
+   "https://bestchai.bitbucket.io/shiviz/ ShiViz;
+    https://bestchai.bitbucket.io/shiviz-demo/ video demo of ShiViz;
+    https://github.com/DistributedClocks XVector",
+  category =  "Distributed systems",
+  csetags = 	 "mernst,mernst-Distributed-systems,plse",
+  summary =
+   "This paper presents two dools to help developers comprehend distributed
+    systems:  ShiVector to add vector timestamps to distributed system logs
+    and ShiViz to visualize such logs as space-time diagrams.",
+}
+
 
 
 @InProceedings{KelloggRSSE2020,
@@ -10670,8 +10715,7 @@ with an {SMT} solver",
     \par
     Our implementation and experimental data are publicly available.",
   basefilename = "object-construction-icse2020",
-  OPTdownloads = "",
-  downloadsnonlocal =
+  downloads =
     "https://github.com/kelloggm/object-construction-checker implementation;
      http://dx.doi.org/10.17632/3ycxw469p8.1 scripts and data",
   category =  "Verification",
@@ -10773,57 +10817,6 @@ Sutton",
     dependent (their outcome depends on their order of execution).  This paper
     gives an algorithm that makes test-reordering techniques correct even in
     the presence of dependence.",
-}
-
-
-
-
-@Misc{BeschastnikhLXWBE2019,
-  author = 	 "Ivan Beschastnikh and Perry Liu and Albert Xing and Patty Wang and Yuriy Brun and Michael D. Ernst",
-  abstract =
-   "Distributed systems pose unique challenges for software
-    developers. Reasoning about concurrent activities of system hosts, and
-    even understanding the system's communication topology, can be
-    difficult.  A standard approach to gaining insight into system
-    activity is to analyze system logs. Unfortunately, this can be a
-    tedious and complex process.
-    Three key tasks that are frequently performed during analysis of distributed
-    system executions, but are poorly supported by current tools, are:
-    (1)~understanding the relative ordering of events,
-    (2)~searching for specific patterns of interaction between hosts, and
-    (3)~identifying structural similarities and differences between pairs
-    of executions.
-    \par
-    This paper presents two tools, \emph{XVector} and \emph{ShiViz}, that support
-    developers in analyzing logged distributed system executions.
-    XVector is a suite of libraries to instrument systems in different languages
-    to capture partial ordering information
-    that encodes the happens-before relation between events. ShiViz
-    processes the resulting logs and presents distributed system
-    executions as interactive time-space diagrams, with the aim of
-    supporting the tasks listed above.
-    \par
-    We evaluated ShiViz in three ways.  We ran experiments to measure how
-    well ShiViz enables developers to perform the three
-    system-understanding tasks.  We ran a study with 70 students in a
-    distributed systems course debugging and validating their distributed
-    system implementations using ShiViz. And, we ran two case studies in which we supplied
-    ShiViz to two developers, each of whom was working on a complex
-    system, to see how ShiViz aided them with development and debugging.
-    Participants using ShiViz answered statistically significantly more system
-    comprehension questions correctly than control groups; the effect size of
-    using ShiViz was very large. In all three types of evaluation, the
-    participants found ShiViz helpful in their analysis of
-    distributed system executions.",
-  omitfromcv = 1,
-  underreview = 1,
-  basefilename = "visualize-distributed",
-  category =  "Distributed systems",
-  csetags = 	 "mernst,mernst-Distributed-systems,plse",
-  summary =
-   "This paper presents two dools to help developers comprehend distributed
-    systems:  ShiVector to add vector timestamps to distributed system logs
-    and ShiViz to visualize such logs as space-time diagrams.",
 }
 
 
