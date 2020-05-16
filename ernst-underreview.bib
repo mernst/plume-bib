@@ -1,0 +1,232 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Michael Ernst's submitted (under review) papers
+%%%
+
+
+@Misc{LinWPVZE,
+  author = 	 "Xi Victoria Lin and Chenglong Wang and Deric Pang and Kevin Vu and Luke Zettlemoyer and Michael D. Ernst",
+  title = 	 "Program synthesis from natural language using recurrent neural networks",
+  month = 	 feb,
+  year = 	 2018,
+  NEEDcrossref =  "*",
+  NEEDpages = 	 "*",
+  abstract =
+   "Oftentimes, a programmer may 
+    have difficulty implementing a desired operation.
+    Even when the programmer can
+    describe the goal in English, it can be difficult to translate into code.
+    Existing resources, such as question-and-answer websites, tabulate specific
+    operations that someone has wanted to perform in the past, but they are not
+    effective in generalizing to new tasks, to compound tasks that require
+    combining previous questions, or sometimes even to variations of listed
+    tasks.
+    \par
+    Our goal is to make programming easier and more productive by letting
+    programmers use their own words and concepts to express the intended operation, 
+    rather than forcing them 
+    to accommodate the machine by memorizing its grammar.
+    We have built a system that lets a programmer describe a desired operation
+    in natural language, then automatically translates it
+    to a 
+    programming language 
+    for review and approval by the programmer.
+    Our system, Tellina, does the translation using recurrent neural networks
+    (RNNs), a state-of-the-art natural language processing technique that we
+    augmented with slot (argument) filling and other enhancements.
+    \par
+    We evaluated Tellina in the context of shell scripting.  We trained
+    Tellina's RNNs on textual descriptions of file system operations and bash
+    one-liners, scraped from the web.  Although recovering completely correct
+    commands is challenging, Tellina achieves top-3 accuracy of 80\% for producing 
+    the correct 
+    command structure. In a controlled study,
+    programmers who had
+    access to Tellina outperformed those who did not, even when Tellina's 
+    predictions were not completely correct,
+    to a statistically significant degree.",
+  omitfromcv = 1,
+  underreview = 1,
+  basefilename = "nl-to-bash",
+  category =  "Natural language processing",
+  csetags = 	 "xilin,clwang,dericp,lsz,mernst,mernst-Natural-language-processing,plse",
+  summary =
+   "Machine translation can translate one human language to another. Tellina 
+    applies it to a new domain: translating human language to computer programs.",
+}
+
+
+@Misc{KelloggSTE,
+  author = 	 "Martin Kellogg and Martin Sch{\"a}f and Serdar Tasiran and Michael D. Ernst",
+  authorASCII = 	 "Martin Kellogg and Martin Schaef and Serdar Tasiran and Michael D. Ernst",
+  authorASCII = 	 "Martin Kellogg and Martin Schaf and Serdar Tasiran and Michael D. Ernst",
+  title = 	 "Continuous compliance",
+  month = may,
+  year = 2020,
+  NEEDcrossref =  "*",
+  NEEDpages = 	 "*",
+  abstract =
+   "Vendors who wish to provide software or services to large corporations and
+    governments must often obtain numerous certificates of compliance.  Each
+    certificate asserts that the software satisfies a compliance regime, like
+    SOC or the PCI DSS, to protect the privacy and security of sensitive data.
+    Manual compliance audits of source code (the industry standard) are
+    expensive, error-prone, partial, and prone to regressions.
+    \par
+    We propose \emph{continuous compliance} to guarantee that the codebase
+    stays compliant on each code change using lightweight verification tools.
+    Continuous compliance increases assurance and reduces cost in the domain of
+    source-code compliance.
+    \par
+    We evaluated continuous compliance by building and deploying verification
+    tools for five common audit controls related to data security:
+    cryptographically unsafe algorithms must not be used, keys must be at least
+    256 bits long, credentials must not be hard-coded into program text, HTTPS
+    must always be used instead of HTTP, and cloud data stores must not be
+    world-readable.  We report on our experience deploying these verification
+    tools at a large company, where they are integrated into the compliance
+    process (including auditors accepting their output as evidence) and have
+    been run on over 68 million lines of code.  We open-sourced our tools and applied
+    them to over 5 million lines of open-source software.  Compared to other
+    publicly-available tools for detecting misuses of encryption, only ours are
+    suitable for continuous compliance.",
+  omitfromcv = 1,
+  underreview = 1,
+  basefilename = "continuous-compliance",
+  TODOdownloadsnonlocal = "*",
+  category =  "Verification",
+  csetags = 	 "kelloggm,mernst,mernst-Verification,plse",
+  summary =
+   "Compliance --- adherence to best practices --- is usually checked manually,
+    which is costly and error-prone.  This paper automates the process using
+    verification tools.",
+}
+
+
+@Misc{BlasiGEPC,
+  author = 	 "Arianna Blasi and Alessandra Gorla and Michael D. Ernst and Mauro Pezz{\`e} and Antonio Carzaniga",
+  authorASCII = 	 "Arianna Blasi and Alessandra Gorla and Michael D. Ernst and Mauro Pezze and Antonio Carzaniga",
+  title = 	 "{MeMo}: Discovering metamorphic relations for test automation",
+  month = may,
+  year = 2020,
+  NEEDcrossref =  "*",
+  NEEDpages = 	 "*",
+  abstract =
+   "Effective software testing depends on effective oracles. Implicit
+    oracles (e.g., null pointers may not be dereferenced)
+    are widely applicable but narrow in scope and
+    independent of application semantics.
+    Oracles based on formal
+    specifications can reveal semantic failures,
+    but specifications are expensive to obtain and to
+    maintain.  Metamorphic oracles are somewhere in between. 
+    They exploit notions of equivalence among different
+    functions in the program under test to detect semantic
+    failures, but still require manual identification of metamorphic
+    relations.  We present MeMo, a technique and a tool
+    to automatically derive metamorphic relations from
+    widely available natural language documentation, and we use
+    the automatically derive metamorphic relations 
+    as oracles in automatically generated test cases. Our
+    experimental evaluation demonstrates that 1) MeMo can effectively and
+    precisely infer metamorphic relations, 2) MeMo complements existing
+    state of the art techniques based on dynamic program analysis, and
+    3) metamorphic relations discovered with MeMo can be used 
+    as test oracles in test cases automatically generated with Randoop and EvoSuite
+    to effectively detect faults.",
+  omitfromcv = 1,
+  underreview = 1,
+  basefilename = "discover-metamorphic",
+  TODOdownloadsnonlocal = "*",
+  category =  "Natural language processing",
+  csetags = 	 "mernst,mernst-Natural-language-processing,plse",
+  summary =
+   "A metamorphic relation expresses that two expressions have the same value.
+    MeMo translates natural-language documentation into metamorphic relations.",
+}
+
+
+@Misc{ChenGTEHFAJ,
+  author = 	 "Yiqun Chen and Rahul Gopinath and Anita Tadakamalla and Michael D. Ernst and Reid Holmes and Gordon Fraser and Paul Ammann and Ren{\'e} Just",
+  authorASCII = 	 "Yiqun Chen and Rahul Gopinath and Anita Tadakamalla and Michael D. Ernst and Reid Holmes and Gordon Fraser and Paul Ammann and Rene Just",
+  title = 	 "Revisiting the relationship between fault detection, test adequacy criteria, and test set size",
+  month = may,
+  year = 2020,
+  NEEDcrossref =  "*",
+  NEEDpages = 	 "*",
+  abstract =
+   "The research community has long recognized a complex interrelationship between
+    test set size, test adequacy criteria, and test effectiveness in terms of fault
+    detection. However, there is substantial confusion about the role and importance
+    of controlling for test set size when assessing and comparing test adequacy
+    criteria. This paper makes the following contributions:
+    (1) A review of contradictory analyses of the relationship between fault
+    detection, test suite size, and test adequacy criteria. Specifically, this paper
+    addresses the supposed contradiction of prior work and explains why test suite
+    size is neither a confounding variable, as previously suggested, nor an
+    independent variable that should be experimentally manipulated.
+    (2) An explication and discussion of the experimental design and sampling
+    strategies of prior work, together with a discussion of conceptual and
+    statistical problems, and specific guidelines for future work.
+    (3) A methodology for comparing test-adequacy criteria on an equal basis, which
+    accounts for test suite size by treating it as a covariate.
+    (4) An empirical evaluation that compares the effectiveness of coverage-based
+    and mutation-based testing to one another and random testing.  Additionally,
+    this paper proposes probabilistic coupling, a methodology for approximating the
+    representativeness of a set of test goals for a given set of real faults.",
+  omitfromcv = 1,
+  underreview = 1,
+  basefilename = "test-set-size",
+  category =  "Testing",
+  csetags = 	 "mernst,mernst-Testing,plse",
+  summary =
+   "Previous research reported both that test set size almost entirely explains
+    fault detection, and that test set size plays no role.  This paper resolves
+    the contradiction and gives correct experimental and statistical methodology.",
+}
+
+
+
+@Misc{MudduluruWME,
+  author = 	 "Rashmi Mudduluru and Jason Waataja and Suzanne Millstein and Michael D. Ernst",
+  title = 	 "Verifying determinism properties in sequential programs",
+  month = may,
+  year = 2020,
+  NEEDcrossref =  "*",
+  NEEDpages = 	 "*",
+  abstract =
+   "When a program is nondeterministic, it is difficult to test and debug.
+    Nondeterminism occurs even in sequential programs: for example, as a
+    result of iterating over the elements of a hash table.
+    \par
+    We have created a type system that expresses determinism specifications
+    in a program.
+    The key ideas in the type system are type qualifiers for nondeterminism,
+    order-nondeterminism, and determinism; type well-formedness rules to
+    restrict the typings for collections; and enhancements to polymorphism that
+    improve precision when analyzing collection operations. While state-of-the-art
+    nondeterminism detection tools rely on observing output from specific runs, our approach
+    verifies determinism at compile time, thereby providing stronger soundness guarantees.
+    \par
+    We implemented our type system for Java.
+    Our type checker, DTC, warns if a
+    program is nondeterministic or verifies that the program is deterministic.
+    In a case study of a 24,000-line software project, it found
+    previously-unknown nondeterminism errors in a program that had been heavily
+    vetted by its developers,
+    who were greatly concerned about nondeterminism errors.
+    In an experiment, it found all of the
+    non-concurrency-related nondeterminism that was found by
+    state-of-the-art dynamic approaches for detecting flaky tests.",
+  omitfromcv = 1,
+  underreview = 1,
+  basefilename = "determinism-sequential",
+  TODOdownloads = "*",
+  category =  "Verification",
+  csetags = 	 "rashmi4,jwaataja,smillst,mernst,mernst-Verification,plse",
+  summary =
+   "This paper presents a type system that captures whether a value is
+    deterministic (the same across runs), nondeterministic, or
+    order-nondeterministic (a collection with the same contents across
+    runs, but possibly in a different order).",
+}
+

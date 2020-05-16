@@ -10684,7 +10684,7 @@ with an {SMT} solver",
   title = 	 "Verifying Object Construction",
   crossref =  "ICSE2020",
   NEEDpages = 	 "*",
-  OPTabstract =
+  abstract =
    "In object-oriented languages, constructors often have a combination of
     required and optional formal parameters.  It is tedious and inconvenient
     for programmers to write a constructor by hand for each combination.  The
@@ -10707,17 +10707,19 @@ with an {SMT} solver",
     compile-time analysis detects client code that may construct objects
     unsafely.  Our analysis is based on a novel special case of typestate
     checking, \emph{accumulation analysis}, that modularly reasons about
-    accumulations of method calls.  It scales to industrial programs.  We
-    evaluated it on over 9 million lines of code, discovering defects which
-    included previously-unknown security vulnerabilities and potential
-    null-pointer violations in heavily-used open-source codebases.  Our
-    analysis has a low false positive rate and low annotation burden.
+    accumulations of method calls. Because accumulation analysis does not
+    require precise aliasing information for soundness, our analysis scales to
+    industrial programs.  We evaluated it on over 9 million lines of code,
+    discovering defects which included previously-unknown security
+    vulnerabilities and potential null-pointer violations in heavily-used
+    open-source codebases.  Our analysis has a low false positive rate and low
+    annotation burden.
     \par
     Our implementation and experimental data are publicly available.",
   basefilename = "object-construction-icse2020",
   downloads =
     "https://github.com/kelloggm/object-construction-checker implementation;
-     http://dx.doi.org/10.17632/3ycxw469p8.1 scripts and data",
+     https://doi.org/10.5281/zenodo.3634993 scripts and data",
   category =  "Verification",
   csetags =   "kelloggm,mernst,mernst-Verification,plse",
   summary =
@@ -10735,8 +10737,6 @@ Sutton",
   NEEDpages = 	 "*",
   abstract =
    "Programmers should write code comments, but not on every line of code.
-    Because both too few and too many comments are undesirable,
-    programmers must judiciously decide where to write code comments.
     We have created a machine learning model that suggests locations where a
     programmer should write a code comment.
     We trained it on existing
@@ -10748,14 +10748,68 @@ Sutton",
     Our code and data is available at
     \url{http://groups.inf.ed.ac.uk/cup/comment-locator/}.",
   basefilename = "predict-comments-icse2020",
-  OPTdownloads = "",
-  downloadsnonlocal = "http://groups.inf.ed.ac.uk/cup/comment-locator/ code and dataset",
+  downloads = "http://groups.inf.ed.ac.uk/cup/comment-locator/ implementation and dataset",
   category =  "Natural language processing",
   csetags =   "mernst,mernst-Natural-language-processing,plse",
   summary =
    "This paper shows how to predict where programmers should write
    code comments.  Its models achieved precision of 74\% and recall of 13\%.",
 }
+
+
+
+
+
+@InProceedings{LamSOZEX2020,
+  author = 	 "Wing Lam and August Shi and Reed Oei and Sai Zhang and Michael D. Ernst and Tao Xie",
+  title = 	 "Dependent-test-aware regression testing techniques",
+  crossref =  ISSTA2020,
+  NEEDpages = 	 "*",
+  abstract =
+   "Developers check their changes using regression testing
+    techniques. Unfortunately, regression testing techniques suffer from flaky
+    tests, which can both pass and fail when run multiple times on the same
+    version of code and tests. While many types of flaky tests exist, one
+    prominent type is dependent tests, which are tests that pass when run in
+    one order but fail when run in another order.  Although dependent tests may
+    cause flaky test failures, dependent tests can help developers run their
+    tests faster. Since developers may still want dependent tests, we propose
+    to make regression testing techniques dependent-test-aware to reduce flaky
+    test failures.
+    \par
+    To understand the necessity of dependent-test-aware regression testing
+    techniques, we conduct the first study on the impact of dependent tests on
+    three regression testing techniques: test prioritization, test selection,
+    and test parallelization. In particular, we implement 4 test
+    prioritization, 6 test selection, and 2 test parallelization algorithms,
+    and we evaluate them on 11 Java modules with dependent tests. When we run
+    the orders produced by the traditional, dependent-test-unaware regression
+    testing algorithms, 90\% of the human-written test suites with dependent
+    tests have at least one flaky test failure, while 100\% of the
+    automatically-generated test suites have at least one flaky test failure.
+    \par
+    We develop a general approach for enhancing regression testing algorithms
+    to make them dependent-test-aware, and we apply our approach to enhance 12
+    algorithms. Compared to traditional, unenhanced regression testing
+    algorithms, the enhanced algorithms use provided test dependencies to
+    produce different orders or orders with extra tests. Our evaluation shows
+    that, in comparison to the orders produced by the unenhanced algorithms,
+    the orders produced by the enhanced algorithms (1) have overall 65\% fewer
+    flaky test failures due to dependent tests, and (2) may add extra tests but
+    run only <1\% slower on average. Our results suggest that enhancing
+    regression testing algorithms to be dependent-test-aware can substantially
+    reduce flaky test failures with only a minor slowdown to run the tests.",
+  basefilename = "dependent-tests",
+  TODOdownloads = "*",
+  category =  "Testing",
+  csetags = 	 "mernst,mernst-Testing,plse",
+  summary =
+   "Dependent tests are tests that pass when run in one order but fail
+    when run in another order.  This paper presents a way to detect test
+    dependencies, plus test prioritization, selection, and parallelization
+    techniques that avoid violating the dependencies.",
+}
+
 
 
 
@@ -10769,55 +10823,6 @@ Sutton",
 % if a date is known, put the paper one section earlier in the file.
 
 
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% Submitted (under review)
-%%%
-
-@Misc{LamZE2017,
-  author =    "Wing Lam and Sai Zhang and Michael D. Ernst",
-  title =     "Accomodating Test Dependence in Regression Testing Algorithms",
-  month =     feb,
-  year =      2017,
-  abstract =
-   "When test cases are \emph{independent}, no test affects any other test's
-    outcome, and running the tests in any order yields the same test
-    outcomes. Many test-reordering techniques, including test prioritization,
-    test selection, and test parallelization, assume test independence.
-    However, this critical assumption often does not hold in practice, causing
-    the test-reordering techniques to produce incorrect suites.
-    \par
-    This paper first describes an empirical study to assess the impact of test
-    dependence on 4 test prioritization, 6 test selection, and 2 test
-    parallelization algorithms. Test dependence negatively affects all these
-    test-reordering algorithms: the test suites that they produce suffer false
-    alarms and missed alarms, both of which are costly in terms of developer
-    time or impact the reliability of the software.
-    \par
-    The paper then presents a new approach that modifies each test-reordering
-    algorithm to maintain test dependence. One of its inputs is a set of test
-    dependences, which was precomputed from a prior version of the
-    software. After the original test prioritization, selection, or
-    parallelization algorithm produces a suite, our approach further reorders
-    and/or adds tests to the suite to maintain the order required by the test
-    dependences. This reduces false positives and false negatives in the final
-    test suite.
-    \par
-    In an experimental evaluation, dependence-aware test-reordering algorithms
-    worked as intended: they quickly produced test suites whose outcomes were
-    consistent with the original order, even when the original suite contained
-    dependent tests.",
-  omitfromcv = 1,
-  underreview = 1,
-  basefilename = "test-dependence",
-  category =  "Testing",
-  summary =
-   "Test-reordering techniques such as prioritization can fail when tests are
-    dependent (their outcome depends on their order of execution).  This paper
-    gives an algorithm that makes test-reordering techniques correct even in
-    the presence of dependence.",
-}
 
 
 % LocalWords:  inproceedings typechecking booktitle apr basefilename pp RSA UW
