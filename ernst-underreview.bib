@@ -11,7 +11,7 @@
   NEEDcrossref =  "*",
   NEEDpages = 	 "*",
   abstract =
-   "Oftentimes, a programmer may 
+   "Oftentimes, a programmer may
     have difficulty implementing a desired operation.
     Even when the programmer can
     describe the goal in English, it can be difficult to translate into code.
@@ -22,13 +22,13 @@
     tasks.
     \par
     Our goal is to make programming easier and more productive by letting
-    programmers use their own words and concepts to express the intended operation, 
-    rather than forcing them 
+    programmers use their own words and concepts to express the intended operation,
+    rather than forcing them
     to accommodate the machine by memorizing its grammar.
     We have built a system that lets a programmer describe a desired operation
     in natural language, then automatically translates it
-    to a 
-    programming language 
+    to a
+    programming language
     for review and approval by the programmer.
     Our system, Tellina, does the translation using recurrent neural networks
     (RNNs), a state-of-the-art natural language processing technique that we
@@ -37,11 +37,11 @@
     We evaluated Tellina in the context of shell scripting.  We trained
     Tellina's RNNs on textual descriptions of file system operations and bash
     one-liners, scraped from the web.  Although recovering completely correct
-    commands is challenging, Tellina achieves top-3 accuracy of 80\% for producing 
-    the correct 
+    commands is challenging, Tellina achieves top-3 accuracy of 80\% for producing
+    the correct
     command structure. In a controlled study,
     programmers who had
-    access to Tellina outperformed those who did not, even when Tellina's 
+    access to Tellina outperformed those who did not, even when Tellina's
     predictions were not completely correct,
     to a statistically significant degree.",
   omitfromcv = 1,
@@ -50,7 +50,7 @@
   category =  "Natural language processing",
   csetags = 	 "xilin,clwang,dericp,lsz,mernst,mernst-Natural-language-processing,plse",
   summary =
-   "Machine translation can translate one human language to another. Tellina 
+   "Machine translation can translate one human language to another. Tellina
     applies it to a new domain: translating human language to computer programs.",
 }
 
@@ -118,19 +118,19 @@
     Oracles based on formal
     specifications can reveal semantic failures,
     but specifications are expensive to obtain and to
-    maintain.  Metamorphic oracles are somewhere in between. 
+    maintain.  Metamorphic oracles are somewhere in between.
     They exploit notions of equivalence among different
     functions in the program under test to detect semantic
     failures, but still require manual identification of metamorphic
     relations.  We present MeMo, a technique and a tool
     to automatically derive metamorphic relations from
     widely available natural language documentation, and we use
-    the automatically derive metamorphic relations 
+    the automatically derive metamorphic relations
     as oracles in automatically generated test cases. Our
     experimental evaluation demonstrates that 1) MeMo can effectively and
     precisely infer metamorphic relations, 2) MeMo complements existing
     state of the art techniques based on dynamic program analysis, and
-    3) metamorphic relations discovered with MeMo can be used 
+    3) metamorphic relations discovered with MeMo can be used
     as test oracles in test cases automatically generated with Randoop and EvoSuite
     to effectively detect faults.",
   omitfromcv = 1,
@@ -229,4 +229,3 @@
     order-nondeterministic (a collection with the same contents across
     runs, but possibly in a different order).",
 }
-
