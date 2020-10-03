@@ -954,7 +954,9 @@ endgame.",
     pseudo-randomness into the decryption scheme to provide an additional level
     of security to the scheme.",
   basefilename = "access-patent-5586186",
-  nodownloads = 1,
+  downloads =
+   "https://patents.google.com/patent/US5586186A/en Google Patents;
+    https://patentimages.storage.googleapis.com/d5/7a/e9/7233c72863437c/US5586186.pdf PDF",
   category = "Theory",
   csetags = "mernst,mernst-Theory,plse",
   summary =
@@ -10812,6 +10814,64 @@ with an {SMT} solver",
 }
 
 
+@InProceedings{KelloggSTE2020,
+  author = 	 "Martin Kellogg and Martin Sch{\"a}f and Serdar Tasiran and Michael D. Ernst",
+  authorASCII1 = 	 "Martin Kellogg and Martin Schaf and Serdar Tasiran and Michael D. Ernst",
+  authorASCII2 = 	 "Martin Kellogg and Martin Schaef and Serdar Tasiran and Michael D. Ernst",
+  title = 	 "Continuous compliance",
+  crossref =  "ASE2020",
+  NEEDpages = 	 "*",
+  abstract =
+   "Vendors who wish to provide software or services to large corporations and
+    governments must often obtain numerous certificates of compliance.  Each certificate asserts
+    that the software satisfies a compliance regime, like SOC or the PCI DSS, to protect
+    the privacy and security of sensitive data.
+    The industry standard for obtaining a compliance certificate is an auditor
+    manually auditing source code.  This approach is expensive, error-prone,
+    partial, and prone to regressions.
+    \par
+    We propose \emph{continuous compliance}
+    to guarantee that the codebase stays compliant on each code change
+    using lightweight verification tools.
+    Continuous compliance
+    increases assurance and reduces costs.
+    \par
+    Continuous compliance is applicable to any source-code compliance requirement.  To
+    illustrate our approach, we built verification tools for
+    five common audit controls related to
+    data security:
+    cryptographically unsafe algorithms must not be used,
+    keys must be at
+    least 256 bits long, credentials must not be hard-coded into
+    program text, HTTPS must always be used instead of HTTP, and
+    cloud data stores must not be world-readable.
+    \par
+    We evaluated our approach in three ways.
+    (1) We applied our tools to over 5
+    million lines of open-source software.
+    (2)  We compared our tools to other publicly-available tools for detecting
+    misuses of encryption on a previously-published benchmark, finding that
+    only ours are suitable for continuous
+    compliance.
+    (3) We deployed  a continuous compliance process
+    at AWS, a large cloud-services company: we integrated verification tools into the compliance process
+    (including auditors accepting their output as evidence)
+    and ran them on over 68 million lines of code.
+    Our tools and the data for the former two evaluations are publicly available.",
+  basefilename = "continuous-compliance-ase2020",
+  downloads =
+   "https://doi.org/10.5281/zenodo.3976221 scripts and data;
+    https://github.com/awslabs/aws-kms-compliance-checker KMS checker;
+    https://github.com/awslabs/aws-crypto-policy-compliance-checker crypto checker;
+    https://github.com/kelloggm/bucket-compliance-checker bucket checker;
+    https://github.com/kelloggm/no-literal-checker no literal checker",
+  category =  "Verification",
+  csetags =   "kelloggm,mernst,mernst-Verification,plse",
+  summary =
+   "Formal verification is a good match for compliance requirements that are
+    imposed by customers on vendors.  We deployed compliance verification tools
+    in industry and ran case studies on over 60 million lines of code.",
+}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
