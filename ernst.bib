@@ -10971,6 +10971,86 @@ with an {SMT} solver",
 }
 
 
+@InProceedings{KelloggSSE2021,
+  author = 	 "Martin Kellogg and Narges Shadab and Manu Sridharan and Michael D. Ernst",
+  title = 	 "Lightweight and modular resource leak verification",
+  crossref =  "FSE2021",
+  NEEDpages = 	 "*",
+  abstract =
+   "A resource leak occurs when a program allocates a resource, such as a
+    socket or file handle, but fails to deallocate it.  Resource leaks are an
+    important, common problem that cause resource starvation, slowdowns, and
+    crashes.  Previous techniques to prevent resource leaks are unsound,
+    imprecise, inapplicable to existing code, slow, or a combination of
+    these.
+    \par
+    We observe that detecting a resource leak for a variable involves three
+    parts: 1) tracking its \emph{must-call obligations}, 2) tracking which
+    methods have been called on it, and 3) comparing the results of these to
+    check if its obligations have been fulfilled.  Our key insight is that
+    these can be reduced to an accumulation problem, a class of typestate
+    problems amenable to sound and modular checking without the need for a
+    heavyweight, whole-program alias analysis.  We developed a baseline leak
+    checker via this approach.  The precision of an accumulation analysis can
+    be improved by computing targeted aliasing information, and we devised
+    three novel techniques that use this capability to achieve precision in
+    practice:  a lightweight ownership transfer system; a specialized
+    resource alias analysis; and a system to create a fresh obligation when a
+    non-final resource field is updated.  Our approach occupies a unique
+    slice of the design space when compared to prior approaches: it is sound
+    and runs quickly compared to heavier-weight approaches (running in
+    minutes on programs that a state-of-the-art approach took hours to
+    analyze).  We implemented our techniques for Java in an open-source tool
+    called Plumber.  Plumber revealed 45 real bugs in widely-deployed
+    software.  It scales well, has a manageable false positive rate (lower
+    than the high-confidence resource leak analysis built into the Eclipse
+    IDE), and imposes only a small annotation burden (1/2000 LoC) for
+    developers.",
+  basefilename = "resource-leak-esecfse2021",
+  TODOdownloads = "*",
+  TODOdownloadsnonlocal = "*",
+  category =  "Verification",
+  csetags =   "kelloggm,mernst,mernst-Verification,plse",
+  summary =
+   "This paper presents a modular approach to detecting resource leaks that does
+    not require a heavy-weight whole-program analysis.  The approach is sound,
+    is applicable to existing code, and is easy for developers to use.",
+}
+
+
+@InProceedings{ZhangFEPD2021,
+  author = 	 "Zhen Zhang and Yu Feng and Michael D. Ernst and Sebastian Porst and Isil Dillig",
+  title = 	 "Checking conformance of applications against {GUI} policies",
+  crossref =  "FSE2021",
+  NEEDpages = 	 "*",
+  abstract =
+   "A good graphical user interface (GUI) is crucial for an application's usability,
+    so vendors and regulatory agencies increasingly place restrictions on how GUI
+    elements should appear to and interact with users. Motivated by this concern,
+    this paper presents a new technique (based on static analysis) for checking
+    conformance between (Android) applications and GUI policies expressed in a
+    formal specification language. In particular, this paper (1) describes a
+    specification language for formalizing GUI guidelines, (2) proposes a new
+    program abstraction called an \emph{event-driven layout forest}, and (3) describes
+    a static analysis for constructing this abstraction and checking it against a
+    GUI policy. We have implemented the proposed approach in a tool called
+    Venus, and we evaluate it on 2361 Android
+    applications and 17 guidelines. Our
+    evaluation shows that Venus can uncover malicious applications that perform
+    ad fraud and  identify violations of GUI design guidelines and GDPR
+    laws.",
+  basefilename = "gui-policies-esecfse2021",
+  TODOdownloads = "*",
+  TODOdownloadsnonlocal = "*",
+  category =  "Verification",
+  csetags = "zgzhen,mernst,mernst-Security,plse",
+  summary =
+   "Deceptive GUIs can cause interactions that users do not intend, and badly
+    designed GUIs can reduce usability. This paper shows how to analyze an
+    Android app to ensure that it obeys GUI best practices.",
+}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% To appear, no date known yet
 %%%

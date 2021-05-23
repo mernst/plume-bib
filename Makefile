@@ -12,6 +12,7 @@ BIBFILES := $(shell ls *.bib | grep -v bibstring-unabbrev.bib | grep -v bibstrin
 clean: bibtest-aux-clean
 	rm -f bibstring-unabbrev.bib bibstring-abbrev.bib bibroot bibtest.tex
 
+# docs/index.html is published as https://mernst.github.io/plume-bib/
 docs/index.html: README
 	asciidoctor $< --out-file=$@
 
