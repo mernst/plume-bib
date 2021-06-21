@@ -55,53 +55,6 @@
 }
 
 
-@Misc{KelloggSTE,
-  author = 	 "Martin Kellogg and Martin Sch{\"a}f and Serdar Tasiran and Michael D. Ernst",
-  authorASCII = 	 "Martin Kellogg and Martin Schaef and Serdar Tasiran and Michael D. Ernst",
-  authorASCII = 	 "Martin Kellogg and Martin Schaf and Serdar Tasiran and Michael D. Ernst",
-  title = 	 "Continuous compliance",
-  month = may,
-  year = 2020,
-  NEEDcrossref =  "*",
-  NEEDpages = 	 "*",
-  abstract =
-   "Vendors who wish to provide software or services to large corporations and
-    governments must often obtain numerous certificates of compliance.  Each
-    certificate asserts that the software satisfies a compliance regime, like
-    SOC or the PCI DSS, to protect the privacy and security of sensitive data.
-    Manual compliance audits of source code (the industry standard) are
-    expensive, error-prone, partial, and prone to regressions.
-    \par
-    We propose \emph{continuous compliance} to guarantee that the codebase
-    stays compliant on each code change using lightweight verification tools.
-    Continuous compliance increases assurance and reduces cost in the domain of
-    source-code compliance.
-    \par
-    We evaluated continuous compliance by building and deploying verification
-    tools for five common audit controls related to data security:
-    cryptographically unsafe algorithms must not be used, keys must be at least
-    256 bits long, credentials must not be hard-coded into program text, HTTPS
-    must always be used instead of HTTP, and cloud data stores must not be
-    world-readable.  We report on our experience deploying these verification
-    tools at a large company, where they are integrated into the compliance
-    process (including auditors accepting their output as evidence) and have
-    been run on over 68 million lines of code.  We open-sourced our tools and applied
-    them to over 5 million lines of open-source software.  Compared to other
-    publicly-available tools for detecting misuses of encryption, only ours are
-    suitable for continuous compliance.",
-  omitfromcv = 1,
-  underreview = 1,
-  basefilename = "continuous-compliance",
-  TODOdownloadsnonlocal = "*",
-  category =  "Verification",
-  csetags = 	 "kelloggm,mernst,mernst-Verification,plse",
-  summary =
-   "Compliance --- adherence to best practices --- is usually checked manually,
-    which is costly and error-prone.  This paper automates the process using
-    verification tools.",
-}
-
-
 @Misc{BlasiGEPC,
   author = 	 "Arianna Blasi and Alessandra Gorla and Michael D. Ernst and Mauro Pezz{\`e} and Antonio Carzaniga",
   authorASCII = 	 "Arianna Blasi and Alessandra Gorla and Michael D. Ernst and Mauro Pezze and Antonio Carzaniga",
