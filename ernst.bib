@@ -10051,7 +10051,7 @@ with an {SMT} solver",
    "A powerful, but limited, way to view software is as source code alone.
     Treating a program as a sequence of instructions enables it to be
     formalized and makes it amenable to mathematical techniques
-    such as abstract interpretation and model checking.  
+    such as abstract interpretation and model checking.
     \par
     A program consists of much more than a sequence of instructions.
     Developers make use of test cases, documentation, variable names, program
@@ -10225,7 +10225,7 @@ with an {SMT} solver",
   category =  "Verification",
   csetags = 	 "weitzkon,sslyu,emina,mernst,ztatlock,mernst-Verification,plse",
   summary =
-   "SpaceSearch is a library for developing solver-aided tools within a proof 
+   "SpaceSearch is a library for developing solver-aided tools within a proof
     assistant.  It enables the creation of provably correct tools that transform
     some problem from its original doman to that of a highly optimized solver.",
 }
@@ -10276,8 +10276,6 @@ with an {SMT} solver",
 }
 
 
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% 2018
 %%%
@@ -10317,8 +10315,8 @@ with an {SMT} solver",
    "Data structure synthesis is the task of generating data structure
     implementations from high-level specifications.  Recent work in this area
     has shown potential to save programmer time and reduce the risk of defects.
-    Existing techniques focus on data structures 
-    for manipulating subsets of a single collection, but real-world 
+    Existing techniques focus on data structures
+    for manipulating subsets of a single collection, but real-world
     programs often track multiple related collections and
     aggregate properties such as sums, counts, minimums, and maximums.
     \par
@@ -10437,9 +10435,9 @@ with an {SMT} solver",
   csetags =   "rjust,mernst,mernst-Testing,plse",
   summary =
    "Fault localization experiments are usually performed using tests commited
-    to found in version control systems.  These may have been committed after 
+    to found in version control systems.  These may have been committed after
     the developer had investigated a fix.  Using test cases from issue trackers,
-    as would be the case in realistic practice, leads to worse fault 
+    as would be the case in realistic practice, leads to worse fault
     localization results.",
 }
 
@@ -10479,7 +10477,7 @@ with an {SMT} solver",
   category = "Test generation,Natural language processing",
   csetags = "mernst,mernst-Natural-language-processing,plse",
   summary =
-   "This paper gives an improved technique that converts English Javadoc 
+   "This paper gives an improved technique that converts English Javadoc
     procedure documentation (preconditions, postconditions, exceptions)
     into executable expresssions that can be used as assertions."
 }
@@ -10979,37 +10977,36 @@ with an {SMT} solver",
   crossref =  "FSE2021",
   NEEDpages = 	 "*",
   abstract =
-   "A resource leak occurs when a program allocates a resource, such as a
-    socket or file handle, but fails to deallocate it.  Resource leaks are an
-    important, common problem that cause resource starvation, slowdowns, and
-    crashes.  Previous techniques to prevent resource leaks are unsound,
-    imprecise, inapplicable to existing code, slow, or a combination of
-    these.
+   "A resource leak occurs when a program allocates a resource, such as a socket
+    or file handle, but fails to deallocate it.  Resource leaks cause resource
+    starvation, slowdowns, and crashes.  Previous techniques to prevent resource
+    leaks are either unsound, imprecise, inapplicable to existing code, slow, or a
+    combination of these.
     \par
-    We observe that detecting a resource leak for a variable involves three
-    parts: 1) tracking its \emph{must-call obligations}, 2) tracking which
-    methods have been called on it, and 3) comparing the results of these to
-    check if its obligations have been fulfilled.  Our key insight is that
-    these can be reduced to an accumulation problem, a class of typestate
-    problems amenable to sound and modular checking without the need for a
-    heavyweight, whole-program alias analysis.  We developed a baseline leak
-    checker via this approach.  The precision of an accumulation analysis can
-    be improved by computing targeted aliasing information, and we devised
-    three novel techniques that use this capability to achieve precision in
-    practice:  a lightweight ownership transfer system; a specialized
-    resource alias analysis; and a system to create a fresh obligation when a
-    non-final resource field is updated.  Our approach occupies a unique
-    slice of the design space when compared to prior approaches: it is sound
-    and runs quickly compared to heavier-weight approaches (running in
-    minutes on programs that a state-of-the-art approach took hours to
-    analyze).  We implemented our techniques for Java in an open-source tool
-    called Plumber.  Plumber revealed 45 real bugs in widely-deployed
-    software.  It scales well, has a manageable false positive rate (lower
-    than the high-confidence resource leak analysis built into the Eclipse
-    IDE), and imposes only a small annotation burden (1/2000 LoC) for
-    developers.",
+    Static detection of resource leaks requires checking that de-allocation
+    methods are always invoked on relevant objects before they become unreachable.
+    Our key insight is that leak detection can be reduced to an accumulation
+    problem, a class of typestate problems amenable to sound and modular checking
+    without the need for a heavyweight, whole-program alias analysis.  We
+    developed a baseline leak checker via this approach.  The precision of an
+    accumulation analysis can be improved by computing targeted aliasing
+    information, and we augmented our baseline checker with three such novel
+    techniques:  a lightweight ownership transfer system; a specialized resource
+    alias analysis; and a system to create a fresh obligation when a non-final
+    resource field is updated.
+    \par
+    Our approach occupies a unique slice of the design space: it is sound and runs
+    relatively quickly (taking minutes on programs that a state-of-the-art
+    approach took hours to analyze).  We implemented our techniques for Java in an
+    open-source tool called the Resource Leak Checker.  The Resource Leak Checker
+    revealed 49 real resource leaks in widely-deployed software.  It scales well,
+    has a manageable false positive rate (comparable to the high-confidence
+    resource leak analysis built into the Eclipse IDE), and imposes only a small
+    annotation burden (1/1500 LoC) for developers.",
   basefilename = "resource-leak-esecfse2021",
-  TODOdownloads = "*",
+  downloads =
+    "https://checkerframework.org/ implementation;
+     https://doi.org/10.5281/zenodo.4902321 scripts and data",
   TODOdownloadsnonlocal = "*",
   category =  "Verification",
   csetags =   "kelloggm,mernst,mernst-Verification,plse",
@@ -11056,6 +11053,45 @@ with an {SMT} solver",
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% To appear, no date known yet
 %%%
+
+@Article{BlasiGEPC2021,
+  author = 	 "Arianna Blasi and Alessandra Gorla and Michael D. Ernst and Mauro Pezz{\`e} and Antonio Carzaniga",
+  authorASCII = 	 "Arianna Blasi and Alessandra Gorla and Michael D. Ernst and Mauro Pezze and Antonio Carzaniga",
+  title = 	 "{MeMo}: Discovering metamorphic relations for test automation",
+  journal = 	 JSS,
+  year = 	 "2021",
+  OPTkey = 	 "",
+  NEEDvolume = 	 "*",
+  NEEDnumber = 	 "*",
+  NEEDpages = 	 "*",
+  NEEDmonth = 	 "*",
+  abstract =
+   "Software testing depends on effective oracles. Implicit oracles, such as
+    checks for program crashes, are widely applicable but narrow in scope.
+    Oracles based on formal specifications can reveal application-specific
+    failures, but specifications are expensive to obtain and maintain.
+    Metamorphic oracles are somewhere in-between.  They test equivalence among
+    different procedures to detect semantic failures. Until now, the
+    identification of metamorphic relations has been a manual and expensive
+    process, except for few specific domains where automation is possible. We
+    present MeMo, a technique and a tool to automatically derive metamorphic
+    equivalence relations from natural language documentation, and we use such
+    metamorphic relations as oracles in automatically generated test cases. Our
+    experimental evaluation demonstrates that 1) MeMo can effectively and
+    precisely infer equivalence metamorphic relations, 2) MeMo complements
+    existing state-of-the-art techniques that are based on dynamic program
+    analysis, and 3) metamorphic relations discovered with MeMo effectively detect
+    defects when used as test oracles in automatically-generated or
+    manually-written test cases.",
+  basefilename = "discover-metamorphic-jss-2021",
+  NEEDdownloads = "*",
+  NEEDdownloadsnonlocal = "*",
+  category =  "Natural language processing",
+  csetags = 	 "mernst,mernst-Natural-language-processing,plse",
+  summary =
+   "A metamorphic relation expresses that two expressions have the same value.
+    MeMo translates natural-language documentation into metamorphic relations.",
+}
 
 
 

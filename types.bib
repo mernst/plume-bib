@@ -286,6 +286,25 @@
 }
 
 
+
+@PhdThesis{Coblenz2020,
+  author = 	 "Michael Coblenz",
+  title = 	 "User-Centered Design of Principled Programming Languages",
+  school = 	 "Carnegie Mellon University",
+  year = 	 2020,
+  month = 	 "aug",
+  note = 	 "TR CMU-CS-20-127",
+}
+
+
+
+@InProceedings{Milanova2018,
+  author = 	 "Ana Milanova",
+  title = 	 "Definite reference mutability",
+  crossref =  "ECOOP2018",
+  pages = 	 "25:1--25:30",
+}
+
 %%%
 %%% Interning (aka canonicalization, hash-consing)
 %%%
@@ -1254,7 +1273,7 @@
   author = 	 {Spoto, F.},
   title = 	 {The Nullness Analyser of {Julia}},
   crossref =     "LPAR2010",
-  NEEDpages = 	 "405-424",
+  pages = 	 "405-424",
 }
 
 
@@ -1339,17 +1358,18 @@
 
 
 @InProceedings{BrotherstonDL2017,
-  author =       "Brotherston, Dan and Dietl, Werner and Lhot{\'a}k, Ond{\v{r}}ej",
-  title =        "Granullar: gradual nullable types for {Java}",
+  author = 	 "Brotherston, Dan and Dietl, Werner and Lhot\'{a}k, Ond\v{r}ej",
+  authorASCII =  "Brotherston, Dan and Dietl, Werner and Lhotak, Ondrej",
+  title = 	 "Granullar: Gradual nullable types for {Java}",
   crossref =  "CC2017",
-  pages =     "87--97",
+  pages = 	 "87-97",
 }
 
 @InProceedings{BanerjeeCS2019,
   author = 	 "Banerjee, Subarno and Clapp, Lazaro and Sridharan, Manu",
   title = 	 "{NullAway}: Practical type-based null safety for {Java}",
   crossref =  "FSE2019",
-  pages = 	 "740–750",
+  pages = 	 "740-750",
 }
 
 
@@ -1370,21 +1390,21 @@
   author = 	 "Qi, Xin and Myers, Andrew C.",
   title = 	 "Masked types for sound object initialization",
   crossref =  "POPL2009",
-  pages = 	 "53–65",
+  pages = 	 "53-65",
 }
 
 @InProceedings{HenryMCM2012,
   author = 	 "Henry, Gr\'{e}goire and Mauny, Michel and Chailloux, Emmanuel and Manoury, Pascal",
   title = 	 "Typing unmarshalling without marshalling types",
   crossref =  "ICFP2012",
-  pages = 	 "287–298",
+  pages = 	 "287-298",
 }
 
 @InProceedings{BettiniBL2005,
   author = 	 "Bettini, Lorenzo and Bono, Viviana and Likavec, Silvia",
   title = 	 "Safe and flexible objects",
   crossref =  "SAC2005",
-  pages = 	 "1258–1263",
+  pages = 	 "1258-1263",
 }
 
 @InProceedings{HubertJMP2010,
@@ -1542,6 +1562,188 @@
   howpublished = "\url{https://www.cs.cornell.edu/~asampson/blog/quala.html}",
   month = 	 aug,
   year = 	 2014,
+}
+
+
+@InProceedings{Mackie2016,
+  author = 	 "Christopher A. Mackie",
+  title = 	 "Preventing signedness errors in numerical computations in Java",
+  crossref =  "FSE2016",
+  pages = 	 "1148-1150",
+  abstract =
+   "We have developed and implemented a type system, the Signedness
+    Type System, that captures usage of signed and unsigned integers in
+    Java programs. This type system enables developers to detect errors
+    regarding unsigned integers at compile time, and guarantees that
+    such errors cannot occur at run time. In a case study. our type
+    system proved easy to use and detected a previously unknown
+    bug. Our type system is implemented as the Signedness Checker and
+    will be available with the Checker Framework
+    (\url{http://CheckerFramework.org/}).",
+  downloads = "https://checkerframework.org/ implementation",
+}
+
+
+@InProceedings{Santino2016,
+  author = 	 "Joseph Santino",
+  title = 	 "Enforcing correct array indexes with a type system",
+  crossref =  "FSE2016",
+  pages = 	 "1142-1144",
+  abstract =
+   "We have built the Index Checker, a type checker that issues
+    warnings about array, list, and string accesses that are
+    potentially unsafe. An example is shown in Figure 1. As with any
+    sound tool, some of its warnings may be false positives. If the
+    Index Checker issues no warning, then the programmer is guaranteed
+    that no array access will cause an IndexOutOfBoundsException at run
+    time (modulo suppressed warnings and unchecked code). The Index
+    Checker ships with knowledge of Java APIs. The developer can
+    optionally write a few type annotations in the program to make the
+    Index Checker more precise. Our system includes five new type
+    qualifiers, defined in Figure 2, that can be applied to integral
+    types such as Java int. These are dependent types that indicate the
+    relationship between the int and given arrays. Figures 3 and 4 show
+    the relationship among these type qualifiers. The type system also
+    contains a type qualifier for arrays, @MinLen, which is a lower
+    bound on its length and permits use of literal integers to access
+    the array or to construct a new array. The Index Checker is built
+    upon the Checker Framework (http://CheckerFramework.org/).",
+}
+
+
+@MastersThesis{Sherwany2011,
+  author = 	 "Sherwany, Amanj",
+  title = 	 "The Design, Implementation and Evaluation of a Pluggable Type Checker for Thread-Locality in {Java}",
+  school = 	 "Uppsala University, Department of Information Technology",
+  year = 	 2011,
+  address = 	 "Uppsala, Sweden",
+}
+
+
+
+@InProceedings{GerakiosBS2013,
+  author = 	 "Gerakios, Prodromos and Biboudis, Aggelos and Smaragdakis, Yannis",
+  title = 	 "Reified type parameters using Java annotations",
+  crossref =  "GPCE2013",
+  pages = 	 "61-64",
+}
+
+
+@InProceedings{HuangM2012,
+  author = 	 "Huang, Wei and Milanova, Ana",
+  title = 	 "{ReImInfer}: Method purity inference for {Java}",
+  crossref =  "FSE2012",
+  pages = 	 "1-4",
+}
+
+
+
+
+@InProceedings{KechagiaS2017,
+  author = 	 "Kechagia, Maria and Spinellis, Diomidis",
+  title = 	 "Type checking for reliable {APIs}",
+  crossref =  "WAPI2017",
+  pages = 	 "15-18",
+}
+
+@InProceedings{ChenD2018,
+  author = 	 "Charles Zhuo Chen and Werner Dietl",
+  title = 	 "Don't miss the end: Preventing unsafe end-of-file comparisons",
+  crossref =  "NFM2018",
+  pages = 	 "87-94",
+}
+
+
+
+@MastersThesis{Ta2018,
+  author = 	 "Mier Ta",
+  title = 	 "Context sensitive typechecking and inference: ownership and immutability",
+  school = 	 "U. of Waterloo",
+  year = 	 2018,
+  address = 	 "Waterloo, Ontario, Canada",
+}
+
+
+
+@MastersThesis{Valgma2018,
+  author = 	 "Lembit Valgma",
+  title = 	 "Usable and Sound Static Analysis through its Integration into Automated and Interactive Workflows",
+  school = 	 "U. of Tartu",
+  year = 	 2018,
+  address = 	 "Tartu, Estonia",
+}
+
+@MastersThesis{Chen2018,
+  author = 	 "Zhuo Chen",
+  title = 	 "Pluggable properties for program understanding: Ontic type checking and inference",
+  school = 	 "U. of Waterloo",
+  year = 	 2018,
+  address = 	 "Waterloo, Ontario, Canada",
+}
+
+
+@InProceedings{Kellogg2019,
+  author = 	 "Kellogg, Martin",
+  title = 	 "Compile-time detection of machine image sniping",
+  crossref =  "ASE2019",
+  pages = 	 "1256-1258",
+}
+
+
+@InProceedings{HeDG2019,
+  author = 	 "He, Jingzhu and Dai, Ting and Gu, Xiaohui",
+  title = 	 "{TFix}: Automatic timeout bug fixing in production server systems",
+  crossref =  "ICDCS2019",
+  pages = 	 "612-623",
+}
+
+
+@TechReport{GschwindV2018,
+  author = 	 "Sascha Gschwind and Renato Venzin",
+  title = 	 "Googletest to {CUTE} converter",
+  institution =  "University of Applied Sciences Rapperswil",
+  year = 	 2018,
+  address = 	 "Rapperswil, Switzerland",
+}
+
+
+@InProceedings{BagheriKM2020,
+  author = 	 "Bagheri, Hamid and Kang, Eunsuk and Mansoor, Niloofar",
+  title = 	 "Synthesis of assurance cases for software certification",
+  crossref =  "ICSENIER2020",
+  pages = 	 "61-64",
+}
+
+
+@InProceedings{XiaohuiLD2020,
+  author = 	 "Xiang, Tongtong and Luo, Jeff Y. and Dietl, Werner",
+  title = 	 "Precise inference of expressive units of measurement types",
+  crossref =  "OOPSLA2020",
+  NEEDpages = 	 "*",
+}
+
+@InProceedings{KohlerEWMS2020,
+  author = 	 "K{\"o}hler, Mirko and Eskandani, Nafise and Weisenburger, Pascal and Margara, Alessandro and Salvaneschi, Guido",
+  authorASCII =  "Kohler, Mirko and Eskandani, Nafise and Weisenburger, Pascal and Margara, Alessandro and Salvaneschi, Guido",
+  title = 	 "Rethinking safe consistency in distributed object-oriented programming",
+  crossref =  "OOPSLA2020",
+  NEEDpages = 	 "*",
+}
+
+@MastersThesis{Xing2020,
+  author = 	 "Weitian Xing",
+  title = 	 "Light-weight verification of cryptographic {API} usage",
+  school = 	 "U. of Waterloo",
+  year = 	 2020,
+  address = 	 "Waterloo, Ontario, Canada",
+}
+
+@MastersThesis{Xiang2020,
+  author = 	 "Tongtong Xiang",
+  title = 	 "Type Checking and Whole-program Inference for Value Range Analysis",
+  school = 	 "U. of Waterloo",
+  year = 	 2020,
+  address = 	 "Waterloo, Ontario, Canada",
 }
 
 
@@ -2020,6 +2222,17 @@
 
 
 
+
+
+@MastersThesis{Li2017,
+  author = 	 "Jianchu Li",
+  title = 	 "A general pluggable type inference framework and its use for data-flow analysis",
+  school = 	 "U. of Waterloo",
+  year = 	 2017,
+  address = 	 "Waterloo, Ontario, Canada",
+}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Ownership
 %%%
@@ -2321,8 +2534,25 @@
 }
 
 
+
+
+@Article{DietlDM2011,
+  author = 	 "Dietl, Werner and Drossopoulou, Sophia and M{\"u}ller, Peter",
+  authorASCII = 	 "Dietl, Werner and Drossopoulou, Sophia and Muller, Peter",
+  authorASCII = 	 "Dietl, Werner and Drossopoulou, Sophia and Mueller, Peter",
+  title = 	 "Separating ownership topology and encapsulation with {Generic Universe Types}",
+  journal = 	 TOPLAS,
+  year = 	 2011,
+  volume = 	 33,
+  number = 	 6,
+  pages = 	 "20:1-62",
+  month = 	 dec,
+}
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% Information-flow type systems for security
+%%% Information-flow type systems for security, and tainting
 %%%
 
 @InProceedings{MyersL97,
@@ -2438,6 +2668,52 @@
   pages = 	 "5:1--5:7",
 }
 
+
+
+@InProceedings{HuangDMD2015,
+  author = 	 "Huang, Wei and Dong, Yao and Milanova, Ana and Dolby, Julian",
+  title = 	 "Scalable and Precise Taint Analysis for Android",
+  crossref =  "ISSTA2015",
+  pages = 	 "106-117",
+}
+
+
+@InProceedings{MilanovaH2012,
+  author = 	 "Milanova, Ana and Huang, Wei",
+  title = 	 "Inference and Checking of Context-Sensitive Pluggable Types",
+  crossref =  "FSE2012",
+  pages = 	 "1-4",
+}
+
+
+
+
+@InProceedings{DongMD2016,
+  author = 	 "Dong, Yao and Milanova, Ana and Dolby, Julian",
+  title = 	 "{JCrypt}: Towards computation over encrypted data",
+  crossref =  "PPPJ2016",
+  NEEDpages = 	 "*",
+}
+
+
+
+
+@MastersThesis{Brinker2016,
+  author = 	 "Laurens Brinker",
+  title = 	 "Security analysis of the {IRMA} app using {SPARTA} and fuzzing",
+  school = 	 "Radboud University",
+  year = 	 2016,
+  type = 	 "Bachelor Thesis",
+  address = 	 "Nijmegen, Netherlands",
+}
+
+
+@InProceedings{HuangDM2014,
+  author = 	 "Huang, Wei and Dong, Yao and Milanova, Ana",
+  title = 	 "Type-based taint analysis for {Java} web applications",
+  crossref =  "FASE2014",
+  pages = 	 "140-154",
+}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -2812,7 +3088,7 @@
   author = 	 "Wolff, Roger and Garcia, Ronald and Tanter, \'{E}ric and Aldrich, Jonathan",
   title = 	 "Gradual Typestate",
   crossref =  "ECOOP2011",
-  pages = 	 "459–483",
+  pages = 	 "459-483",
 }
 
 
@@ -2833,21 +3109,21 @@
   author = 	 "Bierhoff, Kevin and Aldrich, Jonathan",
   title = 	 "Modular typestate checking of aliased objects",
   crossref =  "OOPSLA2007",
-  pages = 	 "301–320",
+  pages = 	 "301-320",
 }
 
 @InProceedings{KouzapasDPG2016,
   author = 	 "Kouzapas, Dimitrios and Dardha, Ornela and Perera, Roly and Gay, Simon J.",
   title = 	 "Typechecking Protocols with {Mungo} and {StMungo}",
   crossref =  "PPDF2016",
-  pages = 	 "146–159",
+  pages = 	 "146-159",
 }
 
 @InProceedings{Bodden2010,
   author = 	 "Bodden, Eric",
   title = 	 "Efficient hybrid typestate analysis by determining continuation-equivalent states",
   crossref =  "ICSE2010",
-  pages = 	 "5–14",
+  pages = 	 "5-14",
 }
 
 
@@ -2855,14 +3131,14 @@
   author = 	 "Aldrich, Jonathan and Sunshine, Joshua and Saini, Darpan and Sparks, Zachary",
   title = 	 "Typestate-oriented programming",
   crossref =  "OOPSLACompanion2009",
-  pages = 	 "1015–1022",
+  pages = 	 "1015-1022",
 }
 
 @InProceedings{SunshineNSAT2011,
   author = 	 "Sunshine, Joshua and Naden, Karl and Stork, Sven and Aldrich, Jonathan and Tanter, {\'E}ric",
   title = 	 "First-class state change in {Plaid}",
   crossref =  "OOPSLA2011",
-  pages = 	 "713–732",
+  pages = 	 "713-732",
 }
 
 
@@ -2958,6 +3234,17 @@
   title = 	 "Equality proofs and deferred type errors:  A compiler pearl",
   crossref =     "ICFP2012",
   pages = 	 "341--352",
+}
+
+
+
+
+@MastersThesis{Brotherston2016,
+  author = 	 "Daniel Brotherston",
+  title = 	 "Gradual pluggable typing in {Java}",
+  school = 	 "U. of Waterloo",
+  year = 	 2016,
+  address = 	 "Waterloo, Ontario, Canada",
 }
 
 
@@ -4562,6 +4849,14 @@ keywords = "FindBugs"
 }
 
 
+@InProceedings{LiuBSD2016,
+  author = 	 "Shuang Liu and Guangdong Bai and Jun Sun and J. Dong",
+  title = 	 "Towards Using Concurrent {Java} {API} Correctly",
+  crossref =  "ICECCS2016",
+  pages = 	 "219-222",
+}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Comparing static and dynamic typing
 %%%
@@ -4633,15 +4928,6 @@ keywords = "FindBugs"
   title =        "Liquid types",
   crossref =  "PLDI2008",
   pages =   "159-169",
-}
-
-
-
-@InProceedings{Santino2016,
-  author =       "Santino, Joseph",
-  title =        "Enforcing correct array indexes with a type system",
-  crossref =  "FSE2016",
-  pages =     "1142--1144",
 }
 
 
@@ -5077,7 +5363,8 @@ keywords = "FindBugs"
 
 @InProceedings{SteimannMM2006,
   author = 	 "Friedrich Steimann and Philip Mayer and Andreas Mei{\ss}ner",
-  authorASCII =  "Andreas Meißner    Andreas Meissner",
+  authorASCII = 	 "Friedrich Steimann and Philip Mayer and Andreas Meissner",
+  authorASCII = 	 "Friedrich Steimann and Philip Mayer and Andreas Meißner",
   title = 	 "Decoupling classes with inferred interfaces",
   crossref =     "SAC2006",
   pages = 	 "1404--1408",
