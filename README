@@ -84,25 +84,25 @@ email a patch (a diff file) with your changes to Michael Ernst
 SETUP -- if you use a Makefile to process your paper
 ----------------------------------------------------
 
-1. Add "bib" as a dependency for the rule that calls bibtex; for example,
-   make "bib" a dependency for the myfile.bbl target.  If no rule calls
+1. Add "plume-bib" as a dependency for the rule that calls bibtex; for example,
+   make "plume-bib" a dependency for the myfile.bbl target.  If no rule calls
    bibtex, you can skip this step.
-2. Add "bib-update" as a dependency of your default target (such as "all").
+2. Add "plume-bib-update" as a dependency of your default target (such as "all").
 3. Add the following rules to your Makefile.
 
-    export BIBINPUTS ?= .:bib
-    bib:
+    export BIBINPUTS ?= .:plume-bib
+    plume-bib:
     ifdef PLUMEBIB
 	    ln -s ${PLUMEBIB} $@
     else
 	    git clone https://github.com/mernst/plume-bib.git $@
     endif
-    .PHONY: bib-update
-    bib-update: bib
+    .PHONY: plume-bib-update
+    plume-bib-update: plume-bib
     # Even if this command fails, it does not terminate the make job.
     # However, to skip it, invoke make as:  make NOGIT=1 ...
     ifndef NOGIT
-	    -(cd bib && git pull && make)
+	    -(cd plume-bib && git pull && make)
     endif
 
 
@@ -112,14 +112,14 @@ SETUP -- non-Makefile version
 If you have previously cloned plume-bib and set the PLUMEBIB environment
 variable, there is nothing to do.  Otherwise, run this command:
 
-    cd; git clone https://github.com/mernst/plume-bib.git bib
+    cd; git clone https://github.com/mernst/plume-bib.git plume-bib
 
-Then, set the PLUMEBIB environment variable to $HOME/bib and
-add the "bib" directory to your BIBINPUTS environment variable.
+Then, set the PLUMEBIB environment variable to $HOME/plume-bib and
+add the "plume-bib" directory to your BIBINPUTS environment variable.
 
 bash syntax:
 
-    export PLUMEBIB=$HOME/bib
+    export PLUMEBIB=$HOME/plume-bib
     export BIBINPUTS=.:${PLUMEBIB}:..:
 
 
