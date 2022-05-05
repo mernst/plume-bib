@@ -10879,8 +10879,6 @@ with an {SMT} solver",
 %%% 2021
 %%%
 
-
-
 @TechReport{MudduluruWME2021:TR,
   author = 	 "Rashmi Mudduluru and Jason Waataja and Suzanne Millstein and Michael D. Ernst",
   title = 	 "Verifying determinism in sequential programs (extended version)",
@@ -11086,6 +11084,47 @@ with an {SMT} solver",
    "A metamorphic relation expresses that two expressions have the same value.
     MeMo translates natural-language documentation into metamorphic relations.",
   doi = {https://doi.org/10.1016/j.jss.2021.111041},
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% 2022
+%%%
+
+@InProceedings{KelloggSSE2022,
+  author = 	 "Martin Kellogg and Narges Shadab and Manu Sridharan and Michael D. Ernst",
+  title = 	 "Accumulation analysis",
+  crossref =  "ECOOP2022",
+  NEEDpages = 	 "*",
+  abstract =
+   "A typestate specification indicates which behaviors of an object are
+    permitted in each of the object's states.  In the general case,
+    soundly checking a typestate specification requires precise
+    information about aliasing (i.e., an alias or pointer analysis), which
+    is computationally expensive.  This requirement has hindered the
+    adoption of sound typestate analyses in practice.
+    \par
+    This paper identifies \emph{accumulation typestate specifications},
+    which are the subset of typestate specifications that can be soundly
+    checked without any information about aliasing.  An accumulation
+    typestate specification can be checked instead by an accumulation
+    analysis: a simple dataflow analysis that conservatively estimates the
+    operations that have been performed on an object.
+    \par
+    This paper formalizes the notions of accumulation analysis and
+    accumulation typestate specification. It proves that accumulation
+    typestate specifications are exactly those typestate specifications
+    that can be checked soundly without aliasing information.  Further,
+    41\% of the typestate specifications that appear in the research
+    literature are accumulation typestate specifications.",
+  basefilename = "accumulation-analysis-ecoop2022",
+  category =  "Verification",
+  csetags =   "kelloggm,mernst,mernst-Verification,plse",
+  summary =
+   "This paper proves that accumulation typestate specifications can be
+    checked soundly without aliasing information. Further, 41\% of the
+    typestate specifications in the research literature are accumulation 
+    typestate specifications.",
 }
 
 
