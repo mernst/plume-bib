@@ -1,0 +1,218 @@
+% Bibliography about version control and merge conflicts
+
+
+
+
+
+@InProceedings{ApelLBLK2011,
+  author = 	 "Sven Apel and J{\"o}rg Liebig and Benjamin Brandl and Christian Lengauer and Christian K{\"a}stner",
+  authorASCII = 	 "Sven Apel and Jorg Liebig and Benjamin Brandl and Christian Lengauer and Christian Kastner",
+  title = 	 "Semistructured Merge: Rethinking Merge in Revision Control Systems",
+  crossref =     "FSE2011",
+  pages = 	 "190--200",
+}
+
+
+@InProceedings{TrindadeTavaresBCS2019,
+  author = 	 "Trindade Tavares, Alberto and Borba, Paulo and Cavalcanti, Guilherme and Soares, Sérgio",
+  title = 	 "Semistructured Merge in {JavaScript} Systems",
+  crossref =  "ASE2019",
+  pages = 	 "1014-1025",
+}
+
+
+
+
+
+
+
+
+@TechReport{Binkley91,
+  author = 	 "David W. Binkley",
+  title = 	 "Multi-Procedure Program Integration",
+  institution =  UWMadison,
+  year = 	 1991,
+  number =	 1038,
+  month =	 Aug
+}
+
+
+@InProceedings{HorwitzPR88a,
+  author = 	 "Susan Horwitz and Jan Prins and Thomas Reps",
+  title = 	 "Integrating non-interfering versions of programs",
+  crossref = 	 "POPL88",
+  pages =	 "146--157",
+}
+
+
+@Article{HorwitzPR89:TOPLAS,
+  author = 	 "Susan Horwitz and Jan Prins and Thomas Reps",
+  title = 	 "Integrating non-interfering versions of programs",
+  journal =	 toplas,
+  year =	 1989,
+  volume =	 11,
+  number =	 3,
+  pages =	 "345--387",
+  month =	 jul
+}
+
+
+
+
+
+
+
+
+@article{10.1145/3360596,
+author = {Shen, Bo and Zhang, Wei and Zhao, Haiyan and Liang, Guangtai and Jin, Zhi and Wang, Qianxiang},
+title = {IntelliMerge: A Refactoring-Aware Software Merging Technique},
+year = {2019},
+issue_date = {October 2019},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {3},
+number = {OOPSLA},
+url = {https://doi.org/10.1145/3360596},
+doi = {10.1145/3360596},
+abstract = {In modern software development, developers rely on version control systems like Git to collaborate in the branch-based development workflow. One downside of this workflow is the conflicts occurred when merging contributions from different developers: these conflicts are tedious and error-prone to be correctly resolved, reducing the efficiency of collaboration and introducing potential bugs. The situation becomes even worse, with the popularity of refactorings in software development and evolution, because current merging tools (usually based on the text or tree structures of source code) are unaware of refactorings. In this paper, we present IntelliMerge, a graph-based refactoring-aware merging algorithm for Java programs. We explicitly enhance this algorithm's ability in detecting and resolving refactoring-related conflicts. Through the evaluation on 1,070 merge scenarios from 10 popular open-source Java projects, we show that IntelliMerge reduces the number of merge conflicts by 58.90% comparing with GitMerge (the prevalent unstructured merging tool) and 11.84% comparing with jFSTMerge (the state-of-the-art semi-structured merging tool) without sacrificing the auto-merging precision (88.48%) and recall (90.22%). Besides, the evaluation of performance shows that IntelliMerge takes 539 milliseconds to process one merge scenario on the median, which indicates its feasibility in real-world applications.},
+journal = {Proc. ACM Program. Lang.},
+month = {oct},
+articleno = {170},
+numpages = {28},
+keywords = {software merging, conflicts resolution, Revision control system, refactoring}
+}
+
+
+
+@ARTICLE{1000449,  author={Mens, T.},  journal={IEEE Transactions on
+Software Engineering},   title={A state-of-the-art survey on software
+merging},   year={2002},  volume={28},  number={5},  pages={449-462},
+doi={10.1109/TSE.2002.1000449}}
+
+
+@InProceedings{ApelLL2012,
+  author = 	 "Apel, Sven and Le\ss enich, Olaf and Lengauer, Christian",
+  authorUTF = 	 "Apel, Sven and Leßenich, Olaf and Lengauer, Christian",
+  authorASCII =  "Apel, Sven and Lessenich, Olaf and Lengauer, Christian",
+  title = 	 "Structured merge with auto-tuning: balancing precision and performance",
+  crossref =  "ICSE2012",
+  pages = 	 "120-129",
+}
+
+
+@article{10.1145/3276535,
+author = {Sousa, Marcelo and Dillig, Isil and Lahiri, Shuvendu K.},
+title = {Verified Three-Way Program Merge},
+year = {2018},
+issue_date = {November 2018},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {2},
+number = {OOPSLA},
+url = {https://doi.org/10.1145/3276535},
+doi = {10.1145/3276535},
+abstract = {Even though many programmers rely on 3-way merge tools to integrate changes from different branches, such tools can introduce subtle bugs in the integration process. This paper aims to mitigate this problem by defining a semantic notion of conflict-freedom, which ensures that the merged program does not introduce new unwanted behaviors. We also show how to verify this property using a novel, compositional algorithm that combines lightweight summarization for shared program fragments with precise relational reasoning for the modifications. Towards this goal, our method uses a 4-way differencing algorithm on abstract syntax trees to represent different program versions as edits applied to a shared program with holes. This representation allows our verification algorithm to reason about different edits in isolation and compose them to obtain an overall proof of conflict freedom. We have implemented the proposed technique in a new tool called SafeMerge for Java and evaluate it on 52 real-world merge scenarios obtained from Github. The experimental results demonstrate the benefits of our approach over syntactic conflict-freedom and indicate that SafeMerge is both precise and practical.},
+journal = {Proc. ACM Program. Lang.},
+month = {oct},
+articleno = {165},
+numpages = {29},
+keywords = {Three-way program merge, product programs, relational verification}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@inproceedings{10.1145/2025113.2025141,
+author = {Apel, Sven and Liebig, J\"{o}rg and Brandl, Benjamin and Lengauer, Christian and K\"{a}stner, Christian},
+title = {Semistructured Merge: Rethinking Merge in Revision Control Systems},
+year = {2011},
+isbn = {9781450304436},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/2025113.2025141},
+doi = {10.1145/2025113.2025141},
+abstract = {An ongoing problem in revision control systems is how to resolve conflicts in a merge of independently developed revisions. Unstructured revision control systems are purely text-based and solve conflicts based on textual similarity. Structured revision control systems are tailored to specific languages and use language-specific knowledge for conflict resolution. We propose semistructured revision control systems that inherit the strengths of both: the generality of unstructured systems and the expressiveness of structured systems. The idea is to provide structural information of the underlying software artifacts --- declaratively, in the form of annotated grammars. This way, a wide variety of languages can be supported and the information provided can assist in the automatic resolution of two classes of conflicts: ordering conflicts and semantic conflicts. The former can be resolved independently of the language and the latter using specific conflict handlers. We have been developing a tool that supports semistructured merge and conducted an empirical study on 24 software projects developed in Java, C#, and Python comprising 180 merge scenarios. We found that semistructured merge reduces the number of conflicts in 60% of the sample merge scenarios by, on average, 34%, compared to unstructured merge. We found also that renaming is challenging in that it can increase the number of conflicts during semistructured merge, and that a combination of unstructured and semistructured merge is a pragmatic way to go.},
+booktitle = {Proceedings of the 19th ACM SIGSOFT Symposium and the 13th European Conference on Foundations of Software Engineering},
+pages = {190-200},
+numpages = {11},
+keywords = {fstmerge, semistructured merge, featurehouse, revision control, version control, software merging},
+location = {Szeged, Hungary},
+series = {ESEC/FSE '11}
+}
+
+
+
+
+
+
+
+
+@inproceedings{DBLP:conf/c++/Grass92,
+  author    = {Judith E. Grass},
+  title     = {Cdiff: {A} Syntax Directed Differencer for {C++} Programs},
+  booktitle = {Proceedings of the {C++} Conference. Portland, OR, USA, August 1992},
+  pages     = {181--194},
+  year      = {1992},
+  timestamp = {Thu, 15 May 2014 18:36:26 +0200},
+  biburl    = {https://dblp.org/rec/conf/c++/Grass92.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+
+
+
+@InProceedings{BallKPS97,
+  author = 	 "Thomas Ball and Jung-Min Kim and Adam A. Porter and Harvey P. Siy",
+  title = 	 "If Your Version Control System Could Talk \ldots",
+  crossref =     "PMESSE97",
+  NEEDpages = 	 "*",
+}
+
+
+@Article{Rochkind75,
+  author = 	 "Marc J. Rochkind",
+  title = 	 "The Source Code Control System",
+  journal = 	 IEEETSE,
+  year = 	 1975,
+  volume = 	 1,
+  number = 	 4,
+  pages = 	 "364--370",
+  month = 	 dec,
+}
+
+
+
+
+
+@InProceedings{MusluBNC2014,
+  author = 	 "K{\i}van{\c{c}} Mu{\c{s}}lu and Christian Bird and Nachi Nagappan and Jacek Czerwonka",
+  authorASCII = 	 "Kivanc Muslu and Christian Bird and Nachi Nagappan and Jacek Czerwonka",
+  title = 	 "Transition from centralized to distributed version control systems: A case study on reasons, barriers, and outcomes",
+  crossref =     "ICSE2014",
+  pages = 	 "334--344",
+}
+
+
+
+
+
+% LocalWords:  Kasi Sarma KQ177 BERZINS POSTGRAD V550 P229 ISSN Apel
+% LocalWords:  Subfile SciSearch InProceedings ApelLBLK2011 rg Liebig
+% LocalWords:  Brandl Lengauer stner authorASCII Jorg Kastner FSE2011
+% LocalWords:  Semistructured crossref semistructured FSTMerge Borba
+% LocalWords:  FSTGENERATOR TrindadeTavaresBCS2019 Trindade Tavares
+% LocalWords:  Cavalcanti Guilherme Soares Sérgio ase2019 jsFSTMerge
+% LocalWords:  Estler Nordio Furia De Rosso untracking Gitless async
+% LocalWords:  Untracked Gitless's TechReport Binkley91 Binkley diff3
+% LocalWords:  UWMadison HorwitzRB90 HorwitzPR88a Horwitz Prins jul
+% LocalWords:  POPL88 HorwitzPR89 toplas HorwitzR90 DeepMerge Dinella
+% LocalWords:  Mytkowicz Svyatkovskiy Mayur Naik Shuvendu Lahiri
+% LocalWords:  DeepMerge's MergeBERT Mytcowicz Negar
