@@ -10,8 +10,8 @@
 \include{debug-optimized.bib}
 \include{dispatch.bib}
 \include{education.bib}
-\include{ernst-underreview.bib}
 \include{ernst.bib}
+\include{ernst-underreview.bib}
 \include{games.bib}
 \include{garbage-collection.bib}
 \include{generals.bib}
@@ -23,7 +23,6 @@
 \include{layout.bib}
 \include{lectures-ernst.bib}
 \include{macros.bib}
-\include{merge.bib}
 \include{model-checking.bib}
 \include{nlp.bib}
 \include{noncs.bib}
