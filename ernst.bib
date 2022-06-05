@@ -11097,27 +11097,31 @@ with an {SMT} solver",
   crossref =  "ECOOP2022",
   NEEDpages = 	 "*",
   abstract =
-   "A typestate specification indicates which behaviors of an object are
-    permitted in each of the object's states.  In the general case,
-    soundly checking a typestate specification requires precise
-    information about aliasing (i.e., an alias or pointer analysis), which
-    is computationally expensive.  This requirement has hindered the
-    adoption of sound typestate analyses in practice.
+   "A typestate specification indicates which
+    behaviors of an object are permitted in each of the object's states.
+    In the general case, soundly checking a typestate specification
+    requires precise information about aliasing
+    (i.e.,  an alias or pointer analysis),
+    which is computationally expensive.
+    This requirement has hindered the adoption of sound typestate analyses
+    in practice.
     \par
     This paper identifies \emph{accumulation typestate specifications},
-    which are the subset of typestate specifications that can be soundly
-    checked without any information about aliasing.  An accumulation
-    typestate specification can be checked instead by an accumulation
-    analysis: a simple dataflow analysis that conservatively estimates the
+    which are the subset of typestate specifications that
+    can be soundly checked without any information about aliasing.
+    An accumulation typestate specification can be checked instead
+    by an accumulation analysis: a simple, fast
+    dataflow analysis that conservatively approximates the
     operations that have been performed on an object.
     \par
     This paper formalizes the notions of accumulation analysis and
-    accumulation typestate specification. It proves that accumulation
-    typestate specifications are exactly those typestate specifications
-    that can be checked soundly without aliasing information.  Further,
-    41\% of the typestate specifications that appear in the research
-    literature are accumulation typestate specifications.",
+    accumulation typestate specification. It proves
+    that accumulation typestate specifications are exactly those typestate specifications
+    that can be checked soundly without aliasing information.
+    Further, 41\% of the typestate specifications that appear in the
+    research literature are accumulation typestate specifications.",
   basefilename = "accumulation-analysis-ecoop2022",
+  downloads = "https://checkerframework.org/ implementation",
   category =  "Verification",
   csetags =   "kelloggm,mernst,mernst-Verification,plse",
   summary =
@@ -11126,6 +11130,8 @@ with an {SMT} solver",
     typestate specifications in the research literature are accumulation 
     typestate specifications.",
 }
+
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
