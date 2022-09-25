@@ -9975,7 +9975,7 @@ with an {SMT} solver",
   basefilename = "bgp-configuration-oopsla2016",
   downloads =
    "https://www.youtube.com/watch?v=eKB5Vj0PsIk talk video;
-    https://bagpipe.uwplse.org/bagpipe/ Bagpipe homepage",
+    http://bagpipe.uwplse.org Bagpipe homepage",
   downloadsnonlocalTODO = "*",
   category = "Distributed systems",
   csetags = 	 "weitzkon,dwoos,emina,mernst,arvind,ztatlock,mernst-Verification,plse",
@@ -10973,7 +10973,7 @@ with an {SMT} solver",
   author = 	 "Martin Kellogg and Narges Shadab and Manu Sridharan and Michael D. Ernst",
   title = 	 "Lightweight and modular resource leak verification",
   crossref =  "FSE2021",
-  NEEDpages = 	 "*",
+  pages = 	 "181--192",
   abstract =
    "A resource leak occurs when a program allocates a resource, such as a socket
     or file handle, but fails to deallocate it.  Resource leaks cause resource
@@ -11052,10 +11052,8 @@ with an {SMT} solver",
   title = 	 "{MeMo}: Automatically identifying metamorphic relations in {Javadoc} comments for test automation",
   journal = 	 JSS,
   year = 	 "2021",
-  OPTkey = 	 "",
   volume = 	 "181",
-  NEEDnumber = 	 "*",
-  NEEDpages = 	 "*",
+  pages = 	 "111041:1--13",
   month = 	 nov,
   abstract =
    "Software testing depends on effective oracles. Implicit oracles, such as
@@ -11077,7 +11075,6 @@ with an {SMT} solver",
     manually-written test cases.",
   basefilename = "identify-metamorphic-jss-2021",
   downloads = "https://github.com/ariannab/MeMo implementation",
-  NEEDdownloadsnonlocal = "*",
   category =  "Natural language processing",
   csetags = 	 "mernst,mernst-Natural-language-processing,plse",
   summary =
@@ -11133,6 +11130,50 @@ with an {SMT} solver",
 }
 
 
+
+
+@InProceedings{BlasiGEP2022,
+  author = 	 "Arianna Blasi and Alessandra Gorla and Michael D. Ernst and Mauro Pezz{\`e}",
+  authorASCII = 	 "Arianna Blasi and Alessandra Gorla and Michael D. Ernst and Mauro Pezze",
+  authorNONASCII = 	 "Arianna Blasi and Alessandra Gorla and Michael D. Ernst and Mauro Pezzè",
+  title = 	 "{Call} {Me} {Maybe}: Using {NLP} to automatically generate unit test cases respecting temporal constraints",
+  crossref =  "ASE2022",
+  NEEDpages = 	 "*",
+  abstract =
+   "A class may need to obey temporal constraints in order to function
+    correctly.  For example, the correct usage protocol for an iterator is
+    to always check whether there is a next element before asking for it;
+    iterating over a collection when there are no items left leads to a
+    \emph{NoSuchElementException}.  Automatic test case generation tools
+    such as Randoop and EvoSuite do not have any notion of these temporal
+    constraints. Generating test cases by randomly invoking methods on a
+    new instance of the class under test may raise run time exceptions
+    that do not necessarily expose software faults, but are rather a
+    consequence of violations of temporal properties.
+    \par
+    This paper presents \emph{CallMeMaybe}, a novel technique that uses
+    natural language processing to analyze Javadoc comments to identify
+    temporal constraints. This information can guide a test case generator
+    towards executing sequences of method calls that respect the temporal
+    constraints. Our evaluation on 73 subjects from seven popular Java
+    systems shows that \emph{CallMeMaybe} achieves a precision of 83\% and
+    a recall of 70\% when translating temporal constraints into Java
+    expressions.  For the two biggest subjects, the integration with
+    Randoop flags 11,818 false alarms and enriches 12,024 correctly
+    failing test cases due to violations of temporal constraints with
+    clear explanation that can help software developers.",
+  basefilename = "nlp-unittest-temporal-ase2022",
+  downloads = "https://github.com/ariannab/callmemaybe implementation & replication package",
+  category =  "Natural language processing",
+  csetags = 	 "mernst,mernst-Natural-language-processing,plse",
+  summary =
+   "This paper presents an NLP technique that analyzes code comments to identify
+    temporal constraints such as ``the thread should be started after setting
+    the daemon'', and it converts them into executable assertions.",
+}
+
+
+%% When I add here at the bottom of the file, also post a PLSE news item
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

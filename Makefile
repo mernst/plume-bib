@@ -60,15 +60,15 @@ bibtest.tex: *.bib
 #   emacs -batch -l bibtex --eval="(progn (setq bibtex-files '(bibtex-file-path) enable-local-eval t) (bibtex-validate-globally))"
 test: bibtest
 bibtest: all bibtest-aux-clean bibtest.tex
-	@echo -n 'First latex run, suppressing warnings...'
-	@-latex -interaction=batchmode bibtest >/dev/null 2>&1
+	@echo -n 'First pdflatex run, suppressing warnings...'
+	@-pdflatex -interaction=batchmode bibtest >/dev/null 2>&1
 	@echo 'done'
 	bibtex -terse -min-crossrefs=9999 bibtest 2>&1 | grep -v "Warning--to sort, need editor, organization"
-	@echo -n 'Second latex run, suppressing warnings...'
-	@-latex -interaction=batchmode bibtest >/dev/null 2>&1
+	@echo -n 'Second pdflatex run, suppressing warnings...'
+	@-pdflatex -interaction=batchmode bibtest >/dev/null 2>&1
 	@echo 'done'
-	@echo 'Third latex run, now warnings matter:'
-	latex -interaction=batchmode bibtest
+	@echo 'Third pdflatex run, now warnings matter:'
+	pdflatex -interaction=batchmode bibtest
 # This doesn't work.  I don't want non-ASCII characters within used fields of
 # bib entries, but elsewhere in the file, and in the authorASCII field, is OK.
 # chartest:
