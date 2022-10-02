@@ -10266,7 +10266,7 @@ with an {SMT} solver",
     compile an EPICS database to a verified standalone program, while
     dispensing with much of the unverified EPICS toolchain and runtime.",
   basefilename = "epics-verification-icalepcs2017",
-  downloads = "https://www.youtube.com/watch?v=CFSnkB5z0GA video of talk",
+  downloads = "https://www.youtube.com/watch?v=CFSnkB5z0GA talk video (YouTube)",
   category = "Verification",
   csetags =   "mernst,loncaric,spernste,ztatlock,emina,mernst-Verification,plse",
   summary =
@@ -10525,7 +10525,7 @@ with an {SMT} solver",
   author = 	 "Ellis Michael and Doug Woos and Thomas Anderson and Michael D. Ernst and Zachary Tatlock",
   title = 	 "Teaching rigorous distributed systems with efficient model checking",
   crossref =  "EuroSys2019",
-  NEEDpages = 	 "*",
+  pages = 	 "1-15",
   basefilename = "dslabs-eurosys2019",
   abstract =
    "Writing correct distributed systems code is difficult, especially for
@@ -10554,10 +10554,10 @@ with an {SMT} solver",
   title = 	 "An empirical study of fault localization families and their combinations",
   journal = 	 TSE,
   year = 	 2019,
-  NEEDvolume = 	 "*",
+  volume = 	 "47",
   NEEDnumber = 	 "*",
-  NEEDpages = 	 "*",
-  NEEDmonth = 	 "*",
+  pages = 	 "332-347",
+  month = 	 feb,
   basefilename = "fl-families-tse2019",
   abstract =
    "The performance of fault localization techniques is critical to their
@@ -10736,7 +10736,7 @@ with an {SMT} solver",
   author = 	 "Annie Louis and Santanu Kumar Dash and Earl T. Barr and Michael D. Ernst and Charles Sutton",
   title = 	 "Where should I comment my code? A dataset and model for predicting locations that need comments",
   crossref =  "ICSENIER2020",
-  NEEDpages = 	 "*",
+  pages = 	 "21-24",
   abstract =
    "Programmers should write code comments, but not on every line of code.
     We have created a machine learning model that suggests locations where a
@@ -10766,7 +10766,7 @@ with an {SMT} solver",
   author = 	 "Wing Lam and August Shi and Reed Oei and Sai Zhang and Michael D. Ernst and Tao Xie",
   title = 	 "Dependent-test-aware regression testing techniques",
   crossref =  "ISSTA2020",
-  NEEDpages = 	 "*",
+  pages = 	 "298-311",
   abstract =
    "Developers check their changes using regression testing
     techniques. Unfortunately, regression testing techniques suffer from flaky
@@ -10803,7 +10803,8 @@ with an {SMT} solver",
     reduce flaky test failures with only a minor slowdown to run the tests.",
   basefilename = "dependent-tests-issta2020",
   downloads =
-   "https://github.com/TestingResearchIllinois/dependent-tests-impact implementation;
+   "https://www.youtube.com/watch?v=YV9561AmNlU talk video (YouTube);
+    https://github.com/TestingResearchIllinois/dependent-tests-impact implementation;
     https://sites.google.com/view/test-dependence-impact data",
   category =  "Testing",
   csetags = 	 "mernst,mernst-Testing,plse",
@@ -10875,6 +10876,44 @@ with an {SMT} solver",
 }
 
 
+@InProceedings{ChenGTEHFAJ2020,
+  author = 	 "Chen, Yiqun T. and Gopinath, Rahul and Tadakamalla, Anita and Ernst, Michael D. and Holmes, Reid and Fraser, Gordon and Ammann, Paul and Just, Ren\'{e}",
+  title = 	 "Revisiting the relationship between fault detection, test adequacy criteria, and test set size",
+  crossref =  "ASE2020",
+  pages = 	 "237-249",
+  abstract =
+   "The research community has long recognized a complex interrelationship
+    between fault detection, test adequacy criteria, and test set
+    size. However, there is substantial confusion about whether and how to
+    experimentally control for test set size when assessing how well an
+    adequacy criterion is correlated with fault detection and when comparing
+    test adequacy criteria. Resolving the confusion, this paper makes the
+    following contributions: (1) A review of contradictory analyses of the
+    relationships between fault detection, test adequacy criteria, and test set
+    size. Specifically, this paper addresses the supposed contradiction of
+    prior work and explains why test set size is neither a confounding
+    variable, as previously suggested, nor an independent variable that should
+    be experimentally manipulated. (2) An explication and discussion of the
+    experimental designs of prior work, together with a discussion of
+    conceptual and statistical problems, as well as specific guidelines for
+    future work. (3) A methodology for comparing test adequacy criteria on an
+    equal basis, which accounts for test set size without directly manipulating
+    it through unrealistic stratification. (4) An empirical evaluation that
+    compares the effectiveness of coverage-based testing, mutation-based
+    testing, and random testing. Additionally, this paper proposes
+    probabilistic coupling, a methodology for assessing the representativeness
+    of a set of test goals for a given fault and for approximating the
+    fault-detection probability of adequate test sets.",
+  basefilename = "test-set-size-ase2020",
+  category =  "Testing",
+  csetags = 	 "mernst,rjust,mernst-Testing,plse",
+  summary =
+   "Test suite size has a big impact on test effectiveness.  How should
+    experiments control for test suite size?  How do size and test adequacy
+    (e.g., coverage) affect the fault detection power of a test suite?",
+}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% 2021
 %%%
@@ -10927,7 +10966,7 @@ with an {SMT} solver",
   author = 	 "Rashmi Mudduluru and Jason Waataja and Suzanne Millstein and Michael D. Ernst",
   title = 	 "Verifying determinism in sequential programs",
   crossref =  "ICSE2021",
-  NEEDpages = 	 "*",
+  pages = 	 "37-49",
   abstract =
    "When a program is nondeterministic, it is difficult to test and debug.
     Nondeterminism occurs even in sequential programs: e.g.,
@@ -11002,7 +11041,7 @@ with an {SMT} solver",
     annotation burden (1/1500 LoC) for developers.",
   basefilename = "resource-leak-esecfse2021",
   downloads =
-    "https://www.youtube.com/watch?v=bY5K3kRg3aw talk video;
+    "https://www.youtube.com/watch?v=bY5K3kRg3aw talk video (YouTube);
      https://checkerframework.org/ implementation;
      https://doi.org/10.5281/zenodo.4902321 scripts and data",
   TODOdownloadsnonlocal = "*",
@@ -11019,7 +11058,7 @@ with an {SMT} solver",
   author = 	 "Zhen Zhang and Yu Feng and Michael D. Ernst and Sebastian Porst and Isil Dillig",
   title = 	 "Checking conformance of applications against {GUI} policies",
   crossref =  "FSE2021",
-  NEEDpages = 	 "*",
+  pages = 	 "95-106",
   abstract =
    "A good graphical user interface (GUI) is crucial for an application's usability,
     so vendors and regulatory agencies increasingly place restrictions on how GUI
@@ -11035,7 +11074,7 @@ with an {SMT} solver",
     shows that Venus can uncover malicious applications that perform ad fraud and
     identify violations of GUI design guidelines and GDPR laws.",
   basefilename = "gui-policies-esecfse2021",
-  TODOdownloads = "*",
+  downloads = "https://github.com/izgzhen/ui-checker implementation",
   TODOdownloadsnonlocal = "*",
   category =  "Security",
   csetags = "zgzhen,mernst,mernst-Security,plse",

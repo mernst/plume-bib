@@ -7,6 +7,7 @@
 
 
 
+
 @InProceedings{ApelLBLK2011,
   author = 	 "Sven Apel and J{\"o}rg Liebig and Benjamin Brandl and Christian Lengauer and Christian K{\"a}stner",
   authorASCII = 	 "Sven Apel and Jorg Liebig and Benjamin Brandl and Christian Lengauer and Christian Kastner",
@@ -68,7 +69,7 @@
 
 @article{10.1145/3360596,
 author = {Shen, Bo and Zhang, Wei and Zhao, Haiyan and Liang, Guangtai and Jin, Zhi and Wang, Qianxiang},
-title = {IntelliMerge: A Refactoring-Aware Software Merging Technique},
+title = {{IntelliMerge}: A Refactoring-Aware Software Merging Technique},
 year = {2019},
 issue_date = {October 2019},
 publisher = {Association for Computing Machinery},
@@ -91,6 +92,47 @@ keywords = {software merging, conflicts resolution, Revision control system, ref
 Software Engineering},   title={A state-of-the-art survey on software
 merging},   year={2002},  volume={28},  number={5},  pages={449-462},
 doi={10.1109/TSE.2002.1000449}}
+  This is quite dated, since it was published in 2002.  It's not bad for what it
+is, stating a number of concerns like types of merging, conflict detection,
+conflict resolution, and delta algorithms.  However, the treatment is
+superficial because of limited space and many topics to cover.  There isn't much
+synthesis, nor analysis of what works well and what does not, and when.  More
+often each technique is described as its paper abstract and conclusion probably
+do.
+  I wish the paper had settled on one term for each concept.  "syntactic
+conflicts" or "textual conflicts" are derived from the text of a file.
+"Structural conflicts" or "syntactic conflicts" come from representing the code
+as a parse tree.  A "semantic conflict" or "behavioral conflict" requires a
+model of program semantics (such as denotational semantics or program dependence
+graphs).  "a static semantic conflict" is detected by a compiler.  "Structural
+merging" is related to refactoring and restructuring, such as extracting an
+interface or adding a new class in the middle of a class hierarchy.
+  "change-based merging ... uses information about the precise changes that were
+performed during evolution of the software", typically by instrumenting the
+software development environment.
+  The conclusion states, "Graphs look promising as an underlying
+representation".  It also says "we need techniques for merging more than two
+parallel versions simultaneously.", because there exist teams of more than 2
+people.  But it doesn't justify why repeated 2-way merging is not adequate.
+
+
+@article{journals/tosem/PerrySV01,
+  added-at = {2018-11-06T00:00:00.000+0100},
+  author = {Perry, Dewayne E. and Siy, Harvey P. and Votta, Lawrence G.},
+  biburl = {https://www.bibsonomy.org/bibtex/2dc01e62b9b4e35e01890251f3de81e1d/dblp},
+  ee = {https://doi.org/10.1145/383876.383878},
+  interhash = {ec6330519d62f394ded0f10d2d00cbd0},
+  intrahash = {dc01e62b9b4e35e01890251f3de81e1d},
+  journal = {ACM Trans. Softw. Eng. Methodol.},
+  keywords = {dblp},
+  number = 3,
+  pages = {308-337},
+  timestamp = {2018-11-07T12:16:11.000+0100},
+  title = {Parallel changes in large-scale software development: an observational case study.},
+  url = {http://dblp.uni-trier.de/db/journals/tosem/tosem10.html#PerrySV01},
+  volume = 10,
+  year = 2001
+}
 
 
 @InProceedings{ApelLL2012,
@@ -101,6 +143,8 @@ doi={10.1109/TSE.2002.1000449}}
   crossref =  "ICSE2012",
   pages = 	 "120-129",
 }
+
+
 
 
 @article{10.1145/3276535,
@@ -114,7 +158,7 @@ volume = {2},
 number = {OOPSLA},
 url = {https://doi.org/10.1145/3276535},
 doi = {10.1145/3276535},
-abstract = {Even though many programmers rely on 3-way merge tools to integrate changes from different branches, such tools can introduce subtle bugs in the integration process. This paper aims to mitigate this problem by defining a semantic notion of conflict-freedom, which ensures that the merged program does not introduce new unwanted behaviors. We also show how to verify this property using a novel, compositional algorithm that combines lightweight summarization for shared program fragments with precise relational reasoning for the modifications. Towards this goal, our method uses a 4-way differencing algorithm on abstract syntax trees to represent different program versions as edits applied to a shared program with holes. This representation allows our verification algorithm to reason about different edits in isolation and compose them to obtain an overall proof of conflict freedom. We have implemented the proposed technique in a new tool called SafeMerge for Java and evaluate it on 52 real-world merge scenarios obtained from Github. The experimental results demonstrate the benefits of our approach over syntactic conflict-freedom and indicate that SafeMerge is both precise and practical.},
+abstract = {Even though many programmers rely on 3-way merge tools to integrate changes from different branches, such tools can introduce subtle bugs in the integration process. This paper aims to mitigate this problem by defining a semantic notion of conflict-freedom, which ensures that the merged program does not introduce new unwanted behaviors. We also show how to verify this property using a novel, compositional algorithm that combines lightweight summarization for shared program fragments with precise relational reasoning for the modifications. Towards this goal, our method uses a 4-way differencing algorithm on abstract syntax trees to represent different program versions as edits applied to a shared program with holes. This representation allows our verification algorithm to reason about different edits in isolation and compose them to obtain an overall proof of conflict freedom. We have implemented the proposed technique in a new tool called SafeMerge for Java and evaluate it on 52 real-world merge scenarios obtained from GitHub. The experimental results demonstrate the benefits of our approach over syntactic conflict-freedom and indicate that SafeMerge is both precise and practical.},
 journal = {Proc. ACM Program. Lang.},
 month = {oct},
 articleno = {165},
@@ -267,6 +311,7 @@ series = {ESEC/FSE '11}
 
 
 
+
 % LocalWords:  Kasi Sarma KQ177 BERZINS POSTGRAD V550 P229 ISSN Apel
 % LocalWords:  Subfile SciSearch InProceedings ApelLBLK2011 rg Liebig
 % LocalWords:  Brandl Lengauer stner authorASCII Jorg Kastner FSE2011
@@ -277,5 +322,26 @@ series = {ESEC/FSE '11}
 % LocalWords:  Untracked Gitless's TechReport Binkley91 Binkley diff3
 % LocalWords:  UWMadison HorwitzRB90 HorwitzPR88a Horwitz Prins jul
 % LocalWords:  POPL88 HorwitzPR89 toplas HorwitzR90 DeepMerge Dinella
-% LocalWords:  Mytkowicz Svyatkovskiy Mayur Naik Shuvendu Lahiri
-% LocalWords:  DeepMerge's MergeBERT Mytcowicz Negar
+% LocalWords:  Mytkowicz Svyatkovskiy Mayur Naik Shuvendu Lahiri Neel
+% LocalWords:  DeepMerge's MergeBERT Mytcowicz Negar BugBuilder ba Bo
+% LocalWords:  Ghorbani Fakhoury Sundaresan Shen Zhao Haiyan Liang P5
+% LocalWords:  Guangtai Jin Zhi Qianxiang IntelliMerge url doi Proc
+% LocalWords:  oct articleno numpages Gleiph Ghiotto Murta Márcio der
+% LocalWords:  André Hoek Mens Siy Votta biburl ee interhash Softw B1
+% LocalWords:  ec6330519d62f394ded0f10d2d00cbd0 intrahash Methodol M0
+% LocalWords:  dc01e62b9b4e35e01890251f3de81e1d dblp PerrySV01 enich
+% LocalWords:  Mens2002 PerrySV2001 ApelLL2012 authorUTF Leßenich Ulf
+% LocalWords:  Lessenich ICSE2012 Dillig Isil SafeMerge Bernhard SHA
+% LocalWords:  Westfechtel Asklund NWPER Ignat IWCES IkiWiki Tichy lu
+% LocalWords:  overbroad ICSM variant1 Kästner inproceedings isbn SCM
+% LocalWords:  booktitle fstmerge featurehouse Autom Accioly Taweesup
+% LocalWords:  ApiwattanapongOH2004 Apiwattanapong Alessandro Orso n1
+% LocalWords:  Harrold ASE2004 JDIFF supersededby ASEjournal JDiff n2
+% LocalWords:  ApiwattanapongOH2007 usesDaikonAsTestSubject JABA VCSs
+% LocalWords:  Cdiff Differencer bibsource Lucent Springer Verlag dec
+% LocalWords:  Magnusson ECOOP'98 BallKPS97 PMESSE97 NEEDpages SCCS
+% LocalWords:  Rochkind75 Rochkind IEEETSE MusluBNC2014 Nachi Jacek
+% LocalWords:  Nagappan Czerwonka ICSE2014 HuntT2002 Nadi Kashif Nho
+% LocalWords:  Tien Dimitar Asenov Balz Guenat uller Otth FASE eg
+% LocalWords:  GumTree parentId IntegerLiteral oldNode newNode RxJava
+% LocalWords:  XHTML DaisyDiff
