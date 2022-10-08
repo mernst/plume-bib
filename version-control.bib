@@ -7,6 +7,10 @@
 
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Merging, including merge conflicts
+%%%
+
 
 @InProceedings{ApelLBLK2011,
   author = 	 "Sven Apel and J{\"o}rg Liebig and Benjamin Brandl and Christian Lengauer and Christian K{\"a}stner",
@@ -23,8 +27,6 @@
   crossref =  "ASE2019",
   pages = 	 "1014-1025",
 }
-
-
 
 
 
@@ -78,7 +80,7 @@ volume = {3},
 number = {OOPSLA},
 url = {https://doi.org/10.1145/3360596},
 doi = {10.1145/3360596},
-abstract = {In modern software development, developers rely on version control systems like Git to collaborate in the branch-based development workflow. One downside of this workflow is the conflicts occurred when merging contributions from different developers: these conflicts are tedious and error-prone to be correctly resolved, reducing the efficiency of collaboration and introducing potential bugs. The situation becomes even worse, with the popularity of refactorings in software development and evolution, because current merging tools (usually based on the text or tree structures of source code) are unaware of refactorings. In this paper, we present IntelliMerge, a graph-based refactoring-aware merging algorithm for Java programs. We explicitly enhance this algorithm's ability in detecting and resolving refactoring-related conflicts. Through the evaluation on 1,070 merge scenarios from 10 popular open-source Java projects, we show that IntelliMerge reduces the number of merge conflicts by 58.90% comparing with GitMerge (the prevalent unstructured merging tool) and 11.84% comparing with jFSTMerge (the state-of-the-art semi-structured merging tool) without sacrificing the auto-merging precision (88.48%) and recall (90.22%). Besides, the evaluation of performance shows that IntelliMerge takes 539 milliseconds to process one merge scenario on the median, which indicates its feasibility in real-world applications.},
+abstract = {In modern software development, developers rely on version control systems like Git to collaborate in the branch-based development workflow. One downside of this workflow is the conflicts occurred when merging contributions from different developers: these conflicts are tedious and error-prone to be correctly resolved, reducing the efficiency of collaboration and introducing potential bugs. The situation becomes even worse, with the popularity of refactorings in software development and evolution, because current merging tools (usually based on the text or tree structures of source code) are unaware of refactorings. In this paper, we present IntelliMerge, a graph-based refactoring-aware merging algorithm for Java programs. We explicitly enhance this algorithm's ability in detecting and resolving refactoring-related conflicts. Through the evaluation on 1,070 merge scenarios from 10 popular open-source Java projects, we show that IntelliMerge reduces the number of merge conflicts by 58.90\% comparing with GitMerge (the prevalent unstructured merging tool) and 11.84\% comparing with jFSTMerge (the state-of-the-art semi-structured merging tool) without sacrificing the auto-merging precision (88.48\%) and recall (90.22\%). Besides, the evaluation of performance shows that IntelliMerge takes 539 milliseconds to process one merge scenario on the median, which indicates its feasibility in real-world applications.},
 journal = {Proc. ACM Program. Lang.},
 month = {oct},
 articleno = {170},
@@ -117,6 +119,7 @@ people.  But it doesn't justify why repeated 2-way merging is not adequate.
 
 
 @article{journals/tosem/PerrySV01,
+  title = {Parallel changes in large-scale software development: an observational case study.},
   added-at = {2018-11-06T00:00:00.000+0100},
   author = {Perry, Dewayne E. and Siy, Harvey P. and Votta, Lawrence G.},
   biburl = {https://www.bibsonomy.org/bibtex/2dc01e62b9b4e35e01890251f3de81e1d/dblp},
@@ -128,7 +131,6 @@ people.  But it doesn't justify why repeated 2-way merging is not adequate.
   number = 3,
   pages = {308-337},
   timestamp = {2018-11-07T12:16:11.000+0100},
-  title = {Parallel changes in large-scale software development: an observational case study.},
   url = {http://dblp.uni-trier.de/db/journals/tosem/tosem10.html#PerrySV01},
   volume = 10,
   year = 2001
@@ -200,6 +202,24 @@ series = {ESEC/FSE '11}
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Diff
+%%%
+
 @InProceedings{ApiwattanapongOH2004,
   author = 	 "Taweesup Apiwattanapong and Alessandro Orso and Mary Jean Harrold",
   title = 	 "A differencing algorithm for object-oriented programs",
@@ -270,6 +290,62 @@ series = {ESEC/FSE '11}
 
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Tangled commits (and untangling them)
+%%%
+
+
+
+@Article{JiangLLZCNZHBZ2022,
+  author = 	 "Jiang, Yanjie and Liu, Hui and Luo, Xiaoqing and Zhu, Zhihao and Chi, Xiaye and Niu, Nan and Zhang, Yuxia and Hu, Yamin and Bian, Pan and Zhang, Lu",
+  title = 	 "{BugBuilder}: An Automated Approach to Building Bug Repository",
+  journal = 	 ieeetse,
+  year = 	 2022,
+  NEEDvolume = 	 "*",
+  NEEDnumber = 	 "*",
+  NEEDpages = 	 "*",
+  NEEDmonth = 	 "*",
+}
+
+
+@InProceedings{DashAB2018,
+  author = 	 "Dash, Santanu Kumar and Allamanis, Miltiadis and Barr, Earl T.",
+  title = 	 "{RefiNym}: Using Names to Refine Types",
+  crossref =  "fse2018",
+  pages = 	 "107–117",
+}
+
+
+
+@InProceedings{PartachiDAB2020,
+  author = 	 "P\^{a}rtachi, Profir-Petru and Dash, Santanu Kumar and Allamanis, Miltiadis and Barr, Earl T.",
+  authorASCII =  "Partachi, Profir-Petru and Dash, Santanu Kumar and Allamanis, Miltiadis and Barr, Earl T.",
+  title = 	 "Flexeme: Untangling Commits Using Lexical Flows",
+  crossref =  "FSE2020",
+  pages = 	 "63-74",
+}
+
+
+
+
+@InProceedings{ShenZKZWLJ2021,
+  author = 	 "Shen, Bo and Zhang, Wei and K{\"a}stner, Christian and Zhao, Haiyan and Wei, Zhao and Liang, Guangtai and Jin, Zhi",
+  authorASCII =  "Shen, Bo and Zhang, Wei and Kastner, Christian and Zhao, Haiyan and Wei, Zhao and Liang, Guangtai and Jin, Zhi",
+  title = 	 "{SmartCommit}: A graph-based interactive assistant for activity-oriented commits",
+  crossref =  "FSE2021",
+  pages = 	 "379-390",
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Other
+%%%
+
+
+
+
+
 
 @InProceedings{BallKPS97,
   author = 	 "Thomas Ball and Jung-Min Kim and Adam A. Porter and Harvey P. Siy",
@@ -301,47 +377,6 @@ series = {ESEC/FSE '11}
   crossref =     "ICSE2014",
   pages = 	 "334--344",
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-@Article{JiangLLZCNZHBZ2022,
-  author = 	 "Jiang, Yanjie and Liu, Hui and Luo, Xiaoqing and Zhu, Zhihao and Chi, Xiaye and Niu, Nan and Zhang, Yuxia and Hu, Yamin and Bian, Pan and Zhang, Lu",
-  title = 	 "{BugBuilder}: An Automated Approach to Building Bug Repository",
-  journal = 	 ieeetse,
-  year = 	 2022,
-  NEEDvolume = 	 "*",
-  NEEDnumber = 	 "*",
-  NEEDpages = 	 "*",
-  NEEDmonth = 	 "*",
-}
-
-
-@InProceedings{DashAB2018,
-  author = 	 "Dash, Santanu Kumar and Allamanis, Miltiadis and Barr, Earl T.",
-  title = 	 "{RefiNym}: Using Names to Refine Types",
-  crossref =  "fse2018",
-  pages = 	 "107–117",
-}
-
-
-@InProceedings{PartachiDAB2020,
-  author = 	 "P\^{a}rtachi, Profir-Petru and Dash, Santanu Kumar and Allamanis, Miltiadis and Barr, Earl T.",
-  authorASCII =  "Partachi, Profir-Petru and Dash, Santanu Kumar and Allamanis, Miltiadis and Barr, Earl T.",
-  title = 	 "Flexeme: Untangling Commits Using Lexical Flows",
-  crossref =  "FSE2020",
-  pages = 	 "63-74",
-}
-
 
 
 
