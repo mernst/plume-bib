@@ -1,7 +1,6 @@
 #!/usr/bin/perl -wps
 # bib-abbreviate: Maintain parallel bibliography abbreviation (bibstring) files
 # Michael Ernst <mernst@cs.washington.edu>
-# Time-stamp: <2009-12-16 10:06:28 mernst>
 
 # Sometimes, I want a verbose bibliography; other times I want a terser
 # one (usually so it doesn't take up so much space against a page limit).

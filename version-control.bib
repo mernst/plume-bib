@@ -163,6 +163,9 @@
 
 
 
+@INPROCEEDINGS{7194568,  author={Barnett, Mike and Bird, Christian and Brunet, João and Lahiri, Shuvendu K.},  booktitle={2015 IEEE/ACM 37th IEEE International Conference on Software Engineering},   title={Helping Developers Help Themselves: Automatic Decomposition of Code Review Changesets},   year={2015},  volume={1},  number={},  pages={134-144},  doi={10.1109/ICSE.2015.35}}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Merging, including merge conflicts and structured merge
 %%%
@@ -260,6 +263,24 @@ people.  But it doesn't justify why repeated 2-way merging is not adequate.
 
 
 
+@inproceedings{10.1145/1176617.1176698,
+author = {Dig, Danny and Nguyen, Tien N. and Manzoor, Kashif and Johnson, Ralph},
+title = {MolhadoRef: A Refactoring-Aware Software Configuration Management Tool},
+year = {2006},
+isbn = {159593491X},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/1176617.1176698},
+doi = {10.1145/1176617.1176698},
+abstract = {Refactoring tools allow programmers to change their source code quicker than before. However, the complexity of these changes cause versioning tools that operate at a file level to lose the history of entities and be unable to merge refactored entities. This problem can be solved by semantic, operation-based SCM with persistent IDs. We propose that versioning tools be aware of program entities and refactoring operations. We present MolhadoRef, our prototype, which uses these techniques to ensure that it never loses history. MolhadoRef can successfully merge edit and refactoring operations which were performed on different development branches.},
+booktitle = {Companion to the 21st ACM SIGPLAN Symposium on Object-Oriented Programming Systems, Languages, and Applications},
+pages = {732–733},
+numpages = {2},
+keywords = {refactoring, version control, configuration management},
+location = {Portland, Oregon, USA},
+series = {OOPSLA '06}
+}
+
 
 
 @InProceedings{ApelLBLK2011,
@@ -271,23 +292,6 @@ people.  But it doesn't justify why repeated 2-way merging is not adequate.
 }
 
 
-@inproceedings{10.1145/2025113.2025141,
-author = {Apel, Sven and Liebig, J\"{o}rg and Brandl, Benjamin and Lengauer, Christian and K\"{a}stner, Christian},
-title = {Semistructured Merge: Rethinking Merge in Revision Control Systems},
-year = {2011},
-isbn = {9781450304436},
-publisher = {Association for Computing Machinery},
-address = {New York, NY, USA},
-url = {https://doi.org/10.1145/2025113.2025141},
-doi = {10.1145/2025113.2025141},
-abstract = {An ongoing problem in revision control systems is how to resolve conflicts in a merge of independently developed revisions. Unstructured revision control systems are purely text-based and solve conflicts based on textual similarity. Structured revision control systems are tailored to specific languages and use language-specific knowledge for conflict resolution. We propose semistructured revision control systems that inherit the strengths of both: the generality of unstructured systems and the expressiveness of structured systems. The idea is to provide structural information of the underlying software artifacts --- declaratively, in the form of annotated grammars. This way, a wide variety of languages can be supported and the information provided can assist in the automatic resolution of two classes of conflicts: ordering conflicts and semantic conflicts. The former can be resolved independently of the language and the latter using specific conflict handlers. We have been developing a tool that supports semistructured merge and conducted an empirical study on 24 software projects developed in Java, C#, and Python comprising 180 merge scenarios. We found that semistructured merge reduces the number of conflicts in 60% of the sample merge scenarios by, on average, 34%, compared to unstructured merge. We found also that renaming is challenging in that it can increase the number of conflicts during semistructured merge, and that a combination of unstructured and semistructured merge is a pragmatic way to go.},
-booktitle = {Proceedings of the 19th ACM SIGSOFT Symposium and the 13th European Conference on Foundations of Software Engineering},
-pages = {190-200},
-numpages = {11},
-keywords = {fstmerge, semistructured merge, featurehouse, revision control, version control, software merging},
-location = {Szeged, Hungary},
-series = {ESEC/FSE '11}
-}
 
 
 @InProceedings{TrindadeTavaresBCS2019,
@@ -347,6 +351,8 @@ keywords = {Three-way program merge, product programs, relational verification}
 }
 
 
+
+
 @Article{GhiottoMBvdH2020,
   author = 	 "Ghiotto, Gleiph and Murta, Leonardo and Barros, Márcio and van der Hoek, Andr{\'e}",
   authorASCII1 =  "Ghiotto, Gleiph and Murta, Leonardo and Barros, Márcio and van der Hoek, André",
@@ -376,6 +382,162 @@ keywords = {Three-way program merge, product programs, relational verification}
 
 
 
+
+
+
+
+
+
+
+@inproceedings{10.1145/1826147.1826154,
+author = {Koegel, Maximilian and Herrmannsdoerfer, Markus and von Wesendonk, Otto and Helming, Jonas},
+title = {Operation-Based Conflict Detection},
+year = {2010},
+isbn = {9781605589602},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/1826147.1826154},
+doi = {10.1145/1826147.1826154},
+abstract = {In recent years, models are increasingly used throughout the entire lifecycle in software engineering projects. In effect, the need for collaboration and for management of change on these models emerged. Traditionally, Software Configuration Management (SCM) systems are employed to facilitate collaboration on software engineering artifacts and to control change to these artifacts. For scalability and to support offline operation, most of these systems employ optimistic concurrency control and therefore require methods to detect concurrent change---also known as conflict detection. However, many researchers have shown that existing approaches for SCM systems do not work well on graph-like models, since they are geared towards textual artifacts and do not take the graph structure of models into account. The approaches for conflict detection in these systems show many false positives, since they require a merge every time the same configuration item --- in this case the same file --- is changed. In this paper, we propose operation-based conflict detection, which detects conflicts directly on the operations that change the model. We compare operation-based conflict detection to file-based conflict detection in a multi-case study and show that operation-based conflict detection results in less conflicts and therefore requires fewer merges.},
+booktitle = {Proceedings of the 1st International Workshop on Model Comparison in Practice},
+pages = {21–30},
+numpages = {10},
+keywords = {conflict detection, model merging, software configuration management, operation-based, version control},
+location = {Malaga, Spain},
+series = {IWMCP '10}
+}
+@inproceedings{10.1109/CVSM.2009.5071721,
+author = {Koegel, Maximilian and Helming, Jonas and Seyboth, Stephan},
+title = {Operation-Based Conflict Detection and Resolution},
+year = {2009},
+isbn = {9781424437146},
+publisher = {IEEE Computer Society},
+address = {USA},
+url = {https://doi.org/10.1109/CVSM.2009.5071721},
+doi = {10.1109/CVSM.2009.5071721},
+abstract = {Models are in wide-spread use in the software development lifecycle and model-driven development even promotes them from an abstraction of the system to the description the system is generated from. Therefore it is increasingly important to collaborate on models. These models can range from requirements models over UML models to project management models such as schedules. Tool support for collaboration on models is therefore crucial. Traditionally Software Configuration Management (SCM) systems such as RCS [9] or Subversion [10] have supported this task for textual artifacts such as source code on the granularity of files and textual lines. They do not work well for graph-like models with many links since the granularity needed to support them is on the level of model elements and their attributes. For the design of a novel SCM system addressing these requirements it is essential to define how conflicts on models are detected and how they can be resolved. In this paper we present an approach to conflict detection and resolution on models. We employ operation-based change tracking and therefore detect conflicts based on operations. For conflict resolution we propose an integration of SCM with techniques from Rational Management to effectively resolve conflicts.},
+booktitle = {Proceedings of the 2009 ICSE Workshop on Comparison and Versioning of Software Models},
+pages = {43–48},
+numpages = {6},
+series = {CVSM '09}
+}
+
+
+
+@inproceedings{10.1145/1860559.1860600,
+author = {Vion-Dury, Jean-Yves},
+title = {Diffing, Patching and Merging XML Documents: Toward a Generic Calculus of Editing Deltas.},
+year = {2010},
+isbn = {9781450302319},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/1860559.1860600},
+doi = {10.1145/1860559.1860600},
+abstract = {This work addresses what we believe to be a central issue in the field of XML diff and merge computation: the mathematical modeling of the so-called "editing deltas" and the study of their formal abstract properties. We expect at least three outputs from this theoretical work: a common basis to compare performances of the various algorithms through a structural normalization of deltas, a universal and flexible patch application model and a clearer separation of patch and merge engine performance from delta generation performance. Moreover, this work could inspire technical approaches to combine heterogeneous engines thank to sound delta transformations. This short paper reports current results, discusses key points and outlines some perspectives.},
+booktitle = {Proceedings of the 10th ACM Symposium on Document Engineering},
+pages = {191–194},
+numpages = {4},
+keywords = {tree transformation, tree-to-tree correction, version control, XML, tree edit distance},
+location = {Manchester, United Kingdom},
+series = {DocEng '10}
+}
+
+
+@inproceedings{10.1145/2494266.2494277,
+author = {Ba, M. Lamine and Abdessalem, Talel and Senellart, Pierre},
+title = {Uncertain Version Control in Open Collaborative Editing of Tree-Structured Documents},
+year = {2013},
+isbn = {9781450317894},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/2494266.2494277},
+doi = {10.1145/2494266.2494277},
+abstract = {In order to ease content enrichment, exchange, and sharing, web-scale collaborative platforms such as Wikipedia or Google Docs enable unbounded interactions between a large number of contributors, without prior knowledge of their level of expertise and reliability. Version control is then essential for keeping track of the evolution of the shared content and its provenance. In such environments, uncertainty is ubiquitous due to the unreliability of the sources, the incompleteness and imprecision of the contributions, the possibility of malicious editing and vandalism acts, etc. To handle this uncertainty, we use a probabilistic XML model as a basic component of our version control framework. Each version of a shared document is represented by an XML tree and the whole document, together with its different versions, is modeled as a probabilistic XML document. Uncertainty is evaluated using the probabilistic model and the reliability measure associated to each source, each contributor, or each editing event, resulting in an uncertainty measure on each version and each part of the document. We show that standard version control operations can be implemented directly as operations on the probabilistic XML model; efficiency with respect to deterministic version control systems is demonstrated on real-world datasets.},
+booktitle = {Proceedings of the 2013 ACM Symposium on Document Engineering},
+pages = {27–36},
+numpages = {10},
+keywords = {xml, collaborative work, uncertain data, version control},
+location = {Florence, Italy},
+series = {DocEng '13}
+}
+
+
+@inproceedings{10.1145/3524842.3528448,
+author = {Kudrjavets, Gunnar and Nagappan, Nachiappan and Rastogi, Ayushi},
+title = {Do Small Code Changes Merge Faster? A Multi-Language Empirical Investigation},
+year = {2022},
+isbn = {9781450393034},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3524842.3528448},
+doi = {10.1145/3524842.3528448},
+abstract = {Code velocity, or the speed with which code changes are integrated into a production environment, plays a crucial role in Continuous Integration and Continuous Deployment. Many studies report factors influencing code velocity. However, solutions to increase code velocity are unclear. Meanwhile, the industry continues to issue guidelines on "ideal" code change size, believing it increases code velocity despite lacking evidence validating the practice. Surprisingly, this fundamental question has not been studied to date. This study investigates the practicality of improving code velocity by optimizing pull request size and composition (ratio of insertions, deletions, and modifications).
+\par
+We start with a hypothesis that a moderate correlation exists between pull request size and time-to-merge. We selected 100 most popular, actively developed projects from 10 programming languages on GitHub. We analyzed our dataset of 845,316 pull requests by size, composition, and context to explore its relationship to time-to-merge---a proxy to measure code velocity. Our study shows that pull request size and composition do not relate to time-to-merge. Regardless of the contextual factors that can influence pull request size or composition (e.g., programming language), the observation holds. Pull request data from two other platforms: Gerrit and Phabricator (401,790 code reviews) confirms the lack of relationship. This negative result as in "...eliminate useless hypotheses ..." [75] challenges a widespread belief by showing that small code changes do not merge faster to increase code velocity.},
+booktitle = {Proceedings of the 19th International Conference on Mining Software Repositories},
+pages = {537–548},
+numpages = {12},
+keywords = {code review velocity, pull request size, GitHub, pull request},
+location = {Pittsburgh, Pennsylvania},
+series = {MSR '22}
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Datasets
+%%%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@inproceedings{GZ14,
+  author = {Gousios, Georgios and Zaidman, Andy},
+  title = {A Dataset for Pull-based Development Research},
+  booktitle = {Proceedings of the 11th Working Conference on Mining Software Repositories},
+  series = {MSR 2014},
+  year = {2014},
+  isbn = {978-1-4503-2863-0},
+  location = {Hyderabad, India},
+  pages = {368--371},
+  numpages = {4},
+  doi = {10.1145/2597073.2597122},
+  acmid = {2597122},
+  publisher = {ACM},
+  address = {New York, NY, USA},
+  keywords = {distributed software development, empirical software engineering, pull request, pull-based development},
+}
+
+
+
+
+@inproceedings{10.1145/2597073.2597124,
+author = {Passos, Leonardo and Czarnecki, Krzysztof},
+title = {A Dataset of Feature Additions and Feature Removals from the Linux Kernel},
+year = {2014},
+isbn = {9781450328630},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/2597073.2597124},
+doi = {10.1145/2597073.2597124},
+abstract = {This paper describes a dataset of feature additions and removals in the Linux kernel evolution history, spanning over seven years of kernel development. Features, in this context, denote configurable system options that users select when creating customized kernel images. The provided dataset is the largest corpus we are aware of capturing feature additions and removals, allowing researchers to assess the kernel evolution from a feature-oriented point-of-view. Furthermore, the dataset can be used to better understand how features evolve over time, and how different artifacts change as a result. One particular use of the dataset is to provide a real-world case to assess existing support for feature traceability and evolution. In this paper, we detail the dataset extraction process, the underlying database schema, and example queries. The dataset is directly available at our Bitbucket repository: https://bitbucket.org/lpassos/kconfigdb},
+booktitle = {Proceedings of the 11th Working Conference on Mining Software Repositories},
+pages = {376–379},
+numpages = {4},
+keywords = {Linux, Evolution, Version Control History, Traceability},
+location = {Hyderabad, India},
+series = {MSR 2014}
+}
 
 
 
@@ -440,6 +602,154 @@ keywords = {Three-way program merge, product programs, relational verification}
 }
 
 
+@inproceedings{10.1145/1294948.1294975,
+author = {De Lucia, Andrea and Fasano, Fausto and Oliveto, Rocco and Santonicola, Domenico},
+title = {Improving Context Awareness in Subversion through Fine-Grained Versioning of Java Code},
+year = {2007},
+isbn = {9781595937223},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/1294948.1294975},
+doi = {10.1145/1294948.1294975},
+abstract = {In this paper, we present an extension of the Subversion command line to support fine-grained versioning of Java code. To this aim, for each Java file under versioning, an XML-based file representing the logical structure of the original file is automatically built by parsing the code. An additional XML-based file is also built to model collaboration constraints. This information is useful to enrich the context awareness by providing developers information about changes made by others to the same logical unit (i.e., class, method, or attribute) of the Java file. Finally, we present an extension of Subclipse, a Subversion front-end implemented as an Eclipse plug-in, aiming to support the fine-grained versioning in Subversion.},
+booktitle = {Ninth International Workshop on Principles of Software Evolution: In Conjunction with the 6th ESEC/FSE Joint Meeting},
+pages = {110–113},
+numpages = {4},
+keywords = {version control, integrated development environment},
+location = {Dubrovnik, Croatia},
+series = {IWPSE '07}
+}
+
+
+@inproceedings{10.5555/2662737.2662745,
+author = {Foucault, Matthieu and Barbier, S\'{e}bastien and Lugato, David},
+title = {Enhancing Version Control with Domain-Specific Semantics},
+year = {2013},
+isbn = {9781467364478},
+publisher = {IEEE Press},
+abstract = {As Domain-Specific Modeling Languages (DSML) become more widespread, it is now possible for non-computer scientists to design complex systems. Not only do DSMLs make modeling more accessible to domain experts, they also improve their efficiency. Using such models, the problem of their maintenance and evolution arises, with common software engineering issues, such as reversibility and traceability of developments.In this article we present the integration of a collaborative edition process into a model-driven engineering (MDE) simulation platform defining its own DSML, which includes a serialization procedure. Our novel approach defines a collaborative work and version control process. This process uses the concrete textual syntax defined by this DSML, which allows us to use the features of existing Version Control Systems (VCS) to work with serialized models, and helps calculate the differences between two versions of a model, merge versions of these models, and detect merge conflicts.},
+booktitle = {Proceedings of the 5th International Workshop on Modeling in Software Engineering},
+pages = {31–36},
+numpages = {6},
+location = {San Francisco, California},
+series = {MiSE '13}
+}
+
+
+@inproceedings{10.1145/1012807.1012859,
+author = {Nguyen, Tien N. and Munson, Ethan V. and Boyland, John T.},
+title = {The Molhado Hypertext Versioning System},
+year = {2004},
+isbn = {1581138482},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/1012807.1012859},
+doi = {10.1145/1012807.1012859},
+abstract = {This paper describes Molhado, a hypertext versioning and software configuration management system that is distinguished from previous systems by its flexible product versioning and structural configuration management model. The model enables a unified versioning framework for atomic and composite software artifacts, and hypermedia structures among them in a fine-grained manner at the logical level. Hypermedia structures are managed separately from documents' contents. Molhado explicitly represents hyperlinks, allowing them to be browsed, visualized, and systematically analyzed. Molhado not only versions complex hypermedia structures (e.g., multi links), but also supports versioning of individual hyperlinks. This paper focuses on Molhado's hypertext versioning and its use in the Software Concordance environment to manage the evolution of a software project and hypermedia structures.},
+booktitle = {Proceedings of the Fifteenth ACM Conference on Hypertext and Hypermedia},
+pages = {185–194},
+numpages = {10},
+keywords = {hypertext versioning, version control, software engineering, software configuration management},
+location = {Santa Cruz, CA, USA},
+series = {HYPERTEXT '04}
+}
+
+
+@inproceedings{10.1145/1860559.1860621,
+author = {M\"{u}ller, Arthur and R\"{o}nnau, Sebastian and Borghoff, Uwe M.},
+title = {A File-Type Sensitive, Auto-Versioning File System},
+year = {2010},
+isbn = {9781450302319},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/1860559.1860621},
+doi = {10.1145/1860559.1860621},
+abstract = {Auto-versioning file systems offer a simple and reliable interface to document change control. The implicit versioning of documents at each write access catches the whole evolution of a document, thus supporting regulatory compliance rules. Most existing file systems work on low abstraction levels and track the document evolution on their binary representation. Higher-level differencing tools allow for a far more meaningful change-tracking, though.In this paper, we present an auto-versioning file system that is able to handle files depending on their file type. This way, a suitable differencing tool can be assigned to each file type. Our approach supports regulatory compliant storage as well as the archiving of documents},
+booktitle = {Proceedings of the 10th ACM Symposium on Document Engineering},
+pages = {271–274},
+numpages = {4},
+keywords = {file system, regulatory compliance, version control, auto-versioning, document management},
+location = {Manchester, United Kingdom},
+series = {DocEng '10}
+}
+
+
+@inproceedings{10.1145/2034691.2034713,
+author = {Thao, Cheng and Munson, Ethan V.},
+title = {Version-Aware XML Documents},
+year = {2011},
+isbn = {9781450308632},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/2034691.2034713},
+doi = {10.1145/2034691.2034713},
+abstract = {A document often goes through many revisions before it is finalized. In the normal document creation process, newer revisions overwrite older ones and only the final revision is kept. At any stage of document creation, it might be desirable to see how the document came to its current form or to revert back to a previous revision. Conventional version control tools such as CVS could help authors do exactly this. However, these tools are unlikely to be adopted by non-technical document authors due to the overhead of managing a repository and the tools' learning curves.This paper presents an approach called version-aware documents that embeds versioning data within the document thus making version control for single documents a seamless part of the authoring process.},
+booktitle = {Proceedings of the 11th ACM Symposium on Document Engineering},
+pages = {97–100},
+numpages = {4},
+keywords = {xml document, collaborative editing, version control},
+location = {Mountain View, California, USA},
+series = {DocEng '11}
+}
+
+
+@inproceedings{10.1145/2889160.2889262,
+author = {Linsbauer, Lukas and Egyed, Alexander and Lopez-Herrejon, Roberto Erick},
+title = {A Variability Aware Configuration Management and Revision Control Platform},
+year = {2016},
+isbn = {9781450342056},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/2889160.2889262},
+doi = {10.1145/2889160.2889262},
+abstract = {Modern systems need to run in many different contexts like hardware and software platforms or environmental conditions. Additionally different customers might have slightly different requirements towards systems. Therefore software systems need to be highly configurable and provide variable sets of features for different customers. There are various approaches to developing and managing such systems, like ad-hoc clone-and-own approaches or structured software product line approaches for each of which again several different techniques and tools exist to support them. While the different approaches come with advantages they also have several disadvantages and shortcomings. Some work only with specific implementation artifacts (e.g. source code but not models) and others exist only as plugins for specific IDEs which makes them intrusive or even unusable in some development environments. In our work we present a development process and tools for managing and engineering of highly configurable and variable systems that is generic, incremental, flexible and intuitive. We evaluated our approach on several case study systems from various different domains and origins like open source, academia or industry. The results so far showed promising results.},
+booktitle = {Proceedings of the 38th International Conference on Software Engineering Companion},
+pages = {803–806},
+numpages = {4},
+keywords = {variants, features, configuration, versioning, variability},
+location = {Austin, Texas},
+series = {ICSE '16}
+}
+
+
+@inproceedings{10.1145/1456536.1456576,
+author = {Junqueira, Daniel C. and Bittar, Thiago J. and Fortes, Renata P. M.},
+title = {A Fine-Grained and Flexible Version Control for Software Artifacts},
+year = {2008},
+isbn = {9781605580838},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/1456536.1456576},
+doi = {10.1145/1456536.1456576},
+abstract = {Version control is an activity very important for high-quality software production. The structure used by version control systems is the same used by file systems, but in general the abstraction level made by software developers considers the file contents and its internal structure, including details as classes, methods, control blocks and others. Fine-grained version control tools can provide a more detailed version control. However traditional tools and models provide very low flexibility and present high cost and impact of deployment in software development environments. In this paper, there are presented a model and a tool which aim at providing support to fine-grained version control activities.},
+booktitle = {Proceedings of the 26th Annual ACM International Conference on Design of Communication},
+pages = {185–192},
+numpages = {8},
+keywords = {version control, software configuration management},
+location = {Lisbon, Portugal},
+series = {SIGDOC '08}
+}
+
+
+@article{10.1145/383876.383878,
+author = {Perry, Dewayne E. and Siy, Harvey P. and Votta, Lawrence G.},
+title = {Parallel Changes in Large-Scale Software Development: An Observational Case Study},
+year = {2001},
+issue_date = {July 2001},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {10},
+number = {3},
+issn = {1049-331X},
+url = {https://doi.org/10.1145/383876.383878},
+doi = {10.1145/383876.383878},
+abstract = {An essential characteristic of large-scale software development is parallel development by teams of developers. How this parallel development is structured and supported has a profound effect on both the quality and timeliness of the product. We conduct an observational case study in which we collect and analyze the change and configuration management history of a legacy system to delineate the boundaries of, and to understand the nature of, the problems encountered in parallel development. The results of our studies are (1) that the degree of parallelism is very highhigher than considered by tool builders; (2) there are multiple levels of parallelism, and the data for some important aspects are uniform and consistent for all levels; (3) the tails of the distributions are long, indicating the tail, rather than the mean, must receive serious attention in providing solutions for these problems; and (4) there is a significant correlation between the degree of parallel work on a given component and the number of quality problems it has. Thus, the results of this study are important both for tool builders and for process and project engineers.},
+journal = {ACM Trans. Softw. Eng. Methodol.},
+month = {jul},
+pages = {308–337},
+numpages = {30},
+keywords = {merging interfering and noninterfering versions, change management, parallel/concurrent changes, parallel versions, software integration}
+}
 
 
 % LocalWords:  Kasi Sarma KQ177 BERZINS POSTGRAD V550 P229 ISSN Apel

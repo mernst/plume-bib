@@ -4162,6 +4162,171 @@ series = {ISSTA 2021}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Metamorphic testing
+%%%
+
+
+@InProceedings{DavisW81,
+  author = 	 "Martin D. Davis and Elaine J. Weyuker",
+  title = 	 "Pseudo-oracles for non-testable programs",
+  booktitle =	 "ACM 81: Proceedings of the ACM '81 conference",
+  pages =	 "254--257",
+  year =	 1981,
+  NEEDaddress = 	 "",
+  month = 	 nov # "~9--11,",
+  abstract =
+   "The most commonly used method of validating a program is by testing. The
+    programmer typically runs the program on some test cases, and if and when
+    they run correctly, the program is considered to be correct.
+    \par
+    We know that many difficult problems are associated with testing. One such
+    problem is that it is a fundamental part of the testing process to require
+    the ability to infer properties of a program by observing the program's
+    behavior on selected inputs. The most common property that one hopes to
+    infer through testing is correctness. But unless the program is run on the
+    entire input domain, there are infinitely many programs which produce the
+    correct output on the selected inputs, but produce incorrect output for
+    some other element of the domain."
+}
+
+
+
+
+@Article{SeguraFSRC2016,
+  author = 	 "Segura, Sergio and Fraser, Gordon and Sanchez, Ana B. and Ruiz-Cort{\'e}s, Antonio",
+  authorASCII =  "Segura, Sergio and Fraser, Gordon and Sanchez, Ana B. and Ruiz-Cortes, Antonio",
+  authorASCII2 = "Segura, Sergio and Fraser, Gordon and Sanchez, Ana B. and Ruiz-Cortés, Antonio",
+  title = 	 "A Survey on Metamorphic Testing",
+  journal = 	 IEEETSE,
+  year = 	 2016,
+  volume = 	 42,
+  number = 	 9,
+  pages = 	 "805-824",
+}
+
+@Article{AmmannK1988,
+  author = 	 "Paul E. Ammann and John C. Knight",
+  title = 	 "Data Diversity: An Approach to Software Fault Tolerance",
+  journal = 	 "IEEE Trans. Comput.",
+  year = 	 1988,
+  volume =	 37,
+  number =	 4,
+  pages =	 "418--425",
+  month =	 apr,
+  abstract =
+   "Data diversity is described, and the results of a pilot study are
+    presented. The regions of the input space that cause failure for certain
+    experimental programs are discussed, and data reexpression, the way in
+    which alternate input data sets can be obtained, is examined. A description
+    is given of the retry block which is the data-diverse equivalent of the
+    recovery block, and a model of the retry block, together with some
+    empirical results is presented. N-copy programming which is the
+    data-diverse equivalent of N-version programming is considered, and a
+    simple model and some empirical results are also given.",
+}
+
+
+@Article{Wasserman:1997:SRR,
+  author =       "Hal Wasserman and Manuel Blum",
+  title =        "Software reliability via run-time result-checking",
+  journal =      "Journal of the ACM",
+  volume =       "44",
+  number =       "6",
+  pages =        "826--849",
+  month =        nov,
+  year =         "1997",
+  coden =        "JACOAH",
+  ISSN =         "0004-5411",
+  bibdate =      "Fri Feb 13 15:58:32 MST 1998",
+  url =          "http://www.acm.org:80/pubs/citations/journals/jacm/1997-44-6/p826-wasserman/",
+  abstract =     "We review the field of result-checking, discussing
+                 simple checkers and self-correctors. We argue that such
+                 checkers could profitably be incorporated in software
+                 as an aid to efficient debugging and enhanced
+                 reliability. We consider how to modify traditional
+                 checking methodologies to make them more appropriate
+                 for use in real-time, real-number computer systems. In
+                 particular, we suggest that checkers should be allowed
+                 to use stored randomness: that is, that they should be
+                 allowed to generate, preprocess, and store random bits
+                 prior to run-time, and then to use this information
+                 repeatedly in a series of run-time checks. In a case
+                 study of checking a general real-number linear
+                 transformation (e.g., a Fourier Transform), we present
+                 a simple checker which uses stored randomness, and a
+                 self-corrector which is particularly efficient if
+                 stored randomness is employed.",
+  keywords =     "algorithms; reliability; verification",
+  subject =      "{\bf D.2.5} Software, SOFTWARE ENGINEERING, Testing
+                 and Debugging. {\bf F.2.1} Theory of Computation,
+                 ANALYSIS OF ALGORITHMS AND PROBLEM COMPLEXITY,
+                 Numerical Algorithms and Problems, Computation of
+                 transforms. {\bf F.3.1} Theory of Computation, LOGICS
+                 AND MEANINGS OF PROGRAMS, Specifying and Verifying and
+                 Reasoning about Programs.",
+}
+
+
+@InProceedings{issta93*1,
+  author =       "Manuel Blum",
+  title =        "Designing Programs to Check Their Work",
+  pages =        1,
+  ISBN =         "0-89791-608-5",
+  crossref =     "ISSTA93",
+}
+
+
+
+
+@Article{Blum:1995:DPC,
+  author =       "Manuel Blum and Sampath Kannan",
+  title =        "Designing Programs that Check Their Work",
+  journal =      "Journal of the Association for Computing Machinery",
+  volume =       42,
+  number =       1,
+  pages =        "269--291",
+  month =        jan,
+  year =         1995,
+  coden =        "JACOAH",
+  ISSN =         "0004-5411",
+  bibdate =      "Mon May 15 21:04:34 1995",
+  url =          "http://www.acm.org/pubs/toc/Abstracts/0004-5411/200880.html",
+  abstract =     "A {\em program correctness checker\/} is an algorithm
+                 for checking the output of a computation. That is,
+                 given a program and an instance on which the program is
+                 run, the checker certifies whether the output of the
+                 program on that instance is correct. This paper defines
+                 the concept of a program checker. It designs program
+                 checkers for a few specific and carefully chosen
+                 problems in the class FP of functions computable in
+                 polynomial time. Problems in FP for which checkers are
+                 presented in this paper include Sorting, Matrix Rank
+                 and GCD. It also applies methods of modern
+                 cryptography, especially the idea of a probabilistic
+                 interactive proof, to the design of program checkers
+                 for group theoretic computations.\par Two structural
+                 theorems are proven here. One is a characterization of
+                 problems that can be checked. The other theorem
+                 establishes equivalence classes of problems such that
+                 whenever one problem in a class is checkable, all
+                 problems in the class are checkable.",
+  keywords =     "algorithms; design; reliability; theory;
+                 verification",
+  subject =      "{\bf D.2.4}: Software, SOFTWARE ENGINEERING, Program
+                 Verification, Correctness proofs. {\bf D.2.4}:
+                 Software, SOFTWARE ENGINEERING, Program Verification,
+                 Reliability. {\bf F.2.0}: Theory of Computation,
+                 ANALYSIS OF ALGORITHMS AND PROBLEM COMPLEXITY, General.
+                 {\bf F.3.1}: Theory of Computation, LOGICS AND MEANINGS
+                 OF PROGRAMS, Specifying and Verifying and Reasoning
+                 about Programs. {\bf G.3}: Mathematics of Computing,
+                 PROBABILITY AND STATISTICS, Probabilistic algorithms
+                 (including Monte Carlo).",
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Other topics
 %%%
 
@@ -4687,28 +4852,6 @@ series = {ISSTA 2021}
 
 
 
-@InProceedings{DavisW81,
-  author = 	 "Martin D. Davis and Elaine J. Weyuker",
-  title = 	 "Pseudo-oracles for non-testable programs",
-  booktitle =	 "ACM 81: Proceedings of the ACM '81 conference",
-  pages =	 "254--257",
-  year =	 1981,
-  NEEDaddress = 	 "",
-  month = 	 nov # "~9--11,",
-  abstract =
-   "The most commonly used method of validating a program is by testing. The
-    programmer typically runs the program on some test cases, and if and when
-    they run correctly, the program is considered to be correct.
-    \par
-    We know that many difficult problems are associated with testing. One such
-    problem is that it is a fundamental part of the testing process to require
-    the ability to infer properties of a program by observing the program's
-    behavior on selected inputs. The most common property that one hopes to
-    infer through testing is correctness. But unless the program is run on the
-    entire input domain, there are infinitely many programs which produce the
-    correct output on the selected inputs, but produce incorrect output for
-    some other element of the domain."
-}
 
 
 @InProceedings{ElkarabliehZK2007,
@@ -4727,144 +4870,6 @@ series = {ISSTA 2021}
 }
 
 
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% Metamorphic testing
-%%%
-
-@Article{SeguraFSRC2016,
-  author = 	 "Segura, Sergio and Fraser, Gordon and Sanchez, Ana B. and Ruiz-Cort{\'e}s, Antonio",
-  authorASCII =  "Segura, Sergio and Fraser, Gordon and Sanchez, Ana B. and Ruiz-Cortes, Antonio",
-  authorASCII2 = "Segura, Sergio and Fraser, Gordon and Sanchez, Ana B. and Ruiz-Cortés, Antonio",
-  title = 	 "A Survey on Metamorphic Testing",
-  journal = 	 IEEETSE,
-  year = 	 2016,
-  volume = 	 42,
-  number = 	 9,
-  pages = 	 "805-824",
-}
-
-@Article{AmmannK1988,
-  author = 	 "Paul E. Ammann and John C. Knight",
-  title = 	 "Data Diversity: An Approach to Software Fault Tolerance",
-  journal = 	 "IEEE Trans. Comput.",
-  year = 	 1988,
-  volume =	 37,
-  number =	 4,
-  pages =	 "418--425",
-  month =	 apr,
-  abstract =
-   "Data diversity is described, and the results of a pilot study are
-    presented. The regions of the input space that cause failure for certain
-    experimental programs are discussed, and data reexpression, the way in
-    which alternate input data sets can be obtained, is examined. A description
-    is given of the retry block which is the data-diverse equivalent of the
-    recovery block, and a model of the retry block, together with some
-    empirical results is presented. N-copy programming which is the
-    data-diverse equivalent of N-version programming is considered, and a
-    simple model and some empirical results are also given.",
-}
-
-
-@Article{Wasserman:1997:SRR,
-  author =       "Hal Wasserman and Manuel Blum",
-  title =        "Software reliability via run-time result-checking",
-  journal =      "Journal of the ACM",
-  volume =       "44",
-  number =       "6",
-  pages =        "826--849",
-  month =        nov,
-  year =         "1997",
-  coden =        "JACOAH",
-  ISSN =         "0004-5411",
-  bibdate =      "Fri Feb 13 15:58:32 MST 1998",
-  url =          "http://www.acm.org:80/pubs/citations/journals/jacm/1997-44-6/p826-wasserman/",
-  abstract =     "We review the field of result-checking, discussing
-                 simple checkers and self-correctors. We argue that such
-                 checkers could profitably be incorporated in software
-                 as an aid to efficient debugging and enhanced
-                 reliability. We consider how to modify traditional
-                 checking methodologies to make them more appropriate
-                 for use in real-time, real-number computer systems. In
-                 particular, we suggest that checkers should be allowed
-                 to use stored randomness: that is, that they should be
-                 allowed to generate, preprocess, and store random bits
-                 prior to run-time, and then to use this information
-                 repeatedly in a series of run-time checks. In a case
-                 study of checking a general real-number linear
-                 transformation (e.g., a Fourier Transform), we present
-                 a simple checker which uses stored randomness, and a
-                 self-corrector which is particularly efficient if
-                 stored randomness is employed.",
-  keywords =     "algorithms; reliability; verification",
-  subject =      "{\bf D.2.5} Software, SOFTWARE ENGINEERING, Testing
-                 and Debugging. {\bf F.2.1} Theory of Computation,
-                 ANALYSIS OF ALGORITHMS AND PROBLEM COMPLEXITY,
-                 Numerical Algorithms and Problems, Computation of
-                 transforms. {\bf F.3.1} Theory of Computation, LOGICS
-                 AND MEANINGS OF PROGRAMS, Specifying and Verifying and
-                 Reasoning about Programs.",
-}
-
-
-@InProceedings{issta93*1,
-  author =       "Manuel Blum",
-  title =        "Designing Programs to Check Their Work",
-  pages =        1,
-  ISBN =         "0-89791-608-5",
-  crossref =     "ISSTA93",
-}
-
-
-
-
-@Article{Blum:1995:DPC,
-  author =       "Manuel Blum and Sampath Kannan",
-  title =        "Designing Programs that Check Their Work",
-  journal =      "Journal of the Association for Computing Machinery",
-  volume =       42,
-  number =       1,
-  pages =        "269--291",
-  month =        jan,
-  year =         1995,
-  coden =        "JACOAH",
-  ISSN =         "0004-5411",
-  bibdate =      "Mon May 15 21:04:34 1995",
-  url =          "http://www.acm.org/pubs/toc/Abstracts/0004-5411/200880.html",
-  abstract =     "A {\em program correctness checker\/} is an algorithm
-                 for checking the output of a computation. That is,
-                 given a program and an instance on which the program is
-                 run, the checker certifies whether the output of the
-                 program on that instance is correct. This paper defines
-                 the concept of a program checker. It designs program
-                 checkers for a few specific and carefully chosen
-                 problems in the class FP of functions computable in
-                 polynomial time. Problems in FP for which checkers are
-                 presented in this paper include Sorting, Matrix Rank
-                 and GCD. It also applies methods of modern
-                 cryptography, especially the idea of a probabilistic
-                 interactive proof, to the design of program checkers
-                 for group theoretic computations.\par Two structural
-                 theorems are proven here. One is a characterization of
-                 problems that can be checked. The other theorem
-                 establishes equivalence classes of problems such that
-                 whenever one problem in a class is checkable, all
-                 problems in the class are checkable.",
-  keywords =     "algorithms; design; reliability; theory;
-                 verification",
-  subject =      "{\bf D.2.4}: Software, SOFTWARE ENGINEERING, Program
-                 Verification, Correctness proofs. {\bf D.2.4}:
-                 Software, SOFTWARE ENGINEERING, Program Verification,
-                 Reliability. {\bf F.2.0}: Theory of Computation,
-                 ANALYSIS OF ALGORITHMS AND PROBLEM COMPLEXITY, General.
-                 {\bf F.3.1}: Theory of Computation, LOGICS AND MEANINGS
-                 OF PROGRAMS, Specifying and Verifying and Reasoning
-                 about Programs. {\bf G.3}: Mathematics of Computing,
-                 PROBABILITY AND STATISTICS, Probabilistic algorithms
-                 (including Monte Carlo).",
-}
 
 
 
