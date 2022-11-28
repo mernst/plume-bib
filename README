@@ -45,11 +45,6 @@ USAGE
 To choose the abbreviated (short) or unabbreviated (long) version of the
 bibliography strings, use one of these commands in your LaTeX file:
 
-    \bibliography{bibstring-abbrev,...,crossrefs-abbrev}
-    \bibliography{bibstring-unabbrev,...,crossrefs}
-
-or if plume-bib is not in your BIBINPUTS environment variable, one of these:
-
     \bibliography{plume-bib/bibstring-abbrev,...,plume-bib/crossrefs-abbrev}
     \bibliography{plume/bib/bibstring-unabbrev,...,plume-bib/crossrefs}
 
