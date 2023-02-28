@@ -96,78 +96,6 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% Tangled commits and untangling algorithms
-%%%
-
-
-
-
-
-
-@InProceedings{KirinukiHHK2016,
-  author = 	 "Kirinuki, Hiroyuki and Higo, Yoshiki and Hotta, Keisuke and Kusumoto, Shinji",
-  title = 	 "Splitting commits via past code changes",
-  crossref =  "APSEC2016",
-  pages = 	 "129-136",
-}
-
-
-
-@InProceedings{DashAB2018,
-  author = 	 "Dash, Santanu Kumar and Allamanis, Miltiadis and Barr, Earl T.",
-  title = 	 "{RefiNym}: Using Names to Refine Types",
-  crossref =  "fse2018",
-  pages = 	 "107-117",
-}
-
-
-
-@InProceedings{PartachiDAB2020,
-  author = 	 "P\^{a}rtachi, Profir-Petru and Dash, Santanu Kumar and Allamanis, Miltiadis and Barr, Earl T.",
-  authorASCII =  "Partachi, Profir-Petru and Dash, Santanu Kumar and Allamanis, Miltiadis and Barr, Earl T.",
-  title = 	 "Flexeme: Untangling Commits Using Lexical Flows",
-  crossref =  "FSE2020",
-  pages = 	 "63-74",
-}
-
-
-@InProceedings{ShenZKZWLJ2021,
-  author = 	 "Shen, Bo and Zhang, Wei and K{\"a}stner, Christian and Zhao, Haiyan and Wei, Zhao and Liang, Guangtai and Jin, Zhi",
-  authorASCII =  "Shen, Bo and Zhang, Wei and Kastner, Christian and Zhao, Haiyan and Wei, Zhao and Liang, Guangtai and Jin, Zhi",
-  title = 	 "{SmartCommit}: A graph-based interactive assistant for activity-oriented commits",
-  crossref =  "FSE2021",
-  pages = 	 "379-390",
-}
-
-
-
-
-@Article{JiangLLZCNZHBZ2022,
-  author = 	 "Jiang, Yanjie and Liu, Hui and Luo, Xiaoqing and Zhu, Zhihao and Chi, Xiaye and Niu, Nan and Zhang, Yuxia and Hu, Yamin and Bian, Pan and Zhang, Lu",
-  title = 	 "{BugBuilder}: An Automated Approach to Building Bug Repository",
-  journal = 	 ieeetse,
-  year = 	 2022,
-  NEEDvolume = 	 "*",
-  NEEDnumber = 	 "*",
-  NEEDpages = 	 "*",
-  NEEDmonth = 	 "*",
-}
-
-
-@InProceedings{ChenXYX2022,
-  author = 	 "Chen, Siyu and Xu, Shengbin and Yao, Yuan and Xu, Feng",
-  title = 	 "Untangling composite commits by attributed graph clustering",
-  crossref =  "Internetware2022",
-  pages = 	 "117-126",
-}
-
-
-
-
-@INPROCEEDINGS{7194568,  author={Barnett, Mike and Bird, Christian and Brunet, João and Lahiri, Shuvendu K.},  booktitle={2015 IEEE/ACM 37th IEEE International Conference on Software Engineering},   title={Helping Developers Help Themselves: Automatic Decomposition of Code Review Changesets},   year={2015},  volume={1},  number={},  pages={134-144},  doi={10.1109/ICSE.2015.35}}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Merging, including merge conflicts and structured merge
 %%%
 
@@ -213,32 +141,17 @@
 
 
 
-@ARTICLE{1000449,  author={Mens, T.},  journal={IEEE Transactions on
-Software Engineering},   title={A state-of-the-art survey on software
-merging},   year={2002},  volume={28},  number={5},  pages={449-462},
-doi={10.1109/TSE.2002.1000449}}
-  This is quite dated, since it was published in 2002.  It's not bad for what it
-is, stating a number of concerns like types of merging, conflict detection,
-conflict resolution, and delta algorithms.  However, the treatment is
-superficial because of limited space and many topics to cover.  There isn't much
-synthesis, nor analysis of what works well and what does not, and when.  More
-often each technique is described as its paper abstract and conclusion probably
-do.
-  I wish the paper had settled on one term for each concept.  "syntactic
-conflicts" or "textual conflicts" are derived from the text of a file.
-"Structural conflicts" or "syntactic conflicts" come from representing the code
-as a parse tree.  A "semantic conflict" or "behavioral conflict" requires a
-model of program semantics (such as denotational semantics or program dependence
-graphs).  "a static semantic conflict" is detected by a compiler.  "Structural
-merging" is related to refactoring and restructuring, such as extracting an
-interface or adding a new class in the middle of a class hierarchy.
-  "change-based merging ... uses information about the precise changes that were
-performed during evolution of the software", typically by instrumenting the
-software development environment.
-  The conclusion states, "Graphs look promising as an underlying
-representation".  It also says "we need techniques for merging more than two
-parallel versions simultaneously.", because there exist teams of more than 2
-people.  But it doesn't justify why repeated 2-way merging is not adequate.
+
+@Article{Mens2002,
+  author = 	 "Tom Mens",
+  title = 	 "A state-of-the-art survey on software merging",
+  journal = 	 "IEEETSE",
+  year = 	 2002,
+  volume = 	 28,
+  number = 	 5,
+  pages = 	 "449-462",
+  doi = 	 "10.1109/TSE.2002.1000449",
+}
 
 
 @article{journals/tosem/PerrySV01,
@@ -379,6 +292,14 @@ keywords = {Three-way program merge, product programs, relational verification}
 
 
 
+@MastersThesis{Ellis2022,
+  author = 	 "Max Ellis",
+  title = 	 "A Systematic Comparison of Two Refactoring-aware Merging Techniques",
+  school = 	 "University of Alberta",
+  year = 	 2022,
+  address = 	 "Alberta, Canada",
+}
+
 
 
 
@@ -486,10 +407,92 @@ series = {MSR '22}
 
 
 
+@Article{LarsenFBM2023,
+  author = 	 "Lars{\'e}n, Simon and Falleri, Jean-R{\'e}my and Baudry, Benoit and Monperrus, Martin",
+  title = 	 "Spork: Structured Merge for {Java} with Formatting Preservation",
+  journal = 	 "IEEETSE",
+  year = 	 2023,
+  volume = 	 49,
+  number = 	 01,
+  pages = 	 "64-83",
+  month = 	 jan,
+}
 
 
 
 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Tangled commits and untangling algorithms
+%%%
+
+
+
+
+
+
+@InProceedings{KirinukiHHK2016,
+  author = 	 "Kirinuki, Hiroyuki and Higo, Yoshiki and Hotta, Keisuke and Kusumoto, Shinji",
+  title = 	 "Splitting commits via past code changes",
+  crossref =  "APSEC2016",
+  pages = 	 "129-136",
+}
+
+
+
+@InProceedings{DashAB2018,
+  author = 	 "Dash, Santanu Kumar and Allamanis, Miltiadis and Barr, Earl T.",
+  title = 	 "{RefiNym}: Using Names to Refine Types",
+  crossref =  "fse2018",
+  pages = 	 "107-117",
+}
+
+
+
+@InProceedings{PartachiDAB2020,
+  author = 	 "P\^{a}rtachi, Profir-Petru and Dash, Santanu Kumar and Allamanis, Miltiadis and Barr, Earl T.",
+  authorASCII =  "Partachi, Profir-Petru and Dash, Santanu Kumar and Allamanis, Miltiadis and Barr, Earl T.",
+  title = 	 "Flexeme: Untangling Commits Using Lexical Flows",
+  crossref =  "FSE2020",
+  pages = 	 "63-74",
+}
+
+
+@InProceedings{ShenZKZWLJ2021,
+  author = 	 "Shen, Bo and Zhang, Wei and K{\"a}stner, Christian and Zhao, Haiyan and Wei, Zhao and Liang, Guangtai and Jin, Zhi",
+  authorASCII =  "Shen, Bo and Zhang, Wei and Kastner, Christian and Zhao, Haiyan and Wei, Zhao and Liang, Guangtai and Jin, Zhi",
+  title = 	 "{SmartCommit}: A graph-based interactive assistant for activity-oriented commits",
+  crossref =  "FSE2021",
+  pages = 	 "379-390",
+}
+
+
+
+
+@Article{JiangLLZCNZHBZ2022,
+  author = 	 "Jiang, Yanjie and Liu, Hui and Luo, Xiaoqing and Zhu, Zhihao and Chi, Xiaye and Niu, Nan and Zhang, Yuxia and Hu, Yamin and Bian, Pan and Zhang, Lu",
+  title = 	 "{BugBuilder}: An Automated Approach to Building Bug Repository",
+  journal = 	 ieeetse,
+  year = 	 2022,
+  NEEDvolume = 	 "*",
+  NEEDnumber = 	 "*",
+  NEEDpages = 	 "*",
+  NEEDmonth = 	 "*",
+}
+
+
+@InProceedings{ChenXYX2022,
+  author = 	 "Chen, Siyu and Xu, Shengbin and Yao, Yuan and Xu, Feng",
+  title = 	 "Untangling composite commits by attributed graph clustering",
+  crossref =  "Internetware2022",
+  pages = 	 "117-126",
+}
+
+
+
+
+@INPROCEEDINGS{7194568,  author={Barnett, Mike and Bird, Christian and Brunet, João and Lahiri, Shuvendu K.},  booktitle={2015 IEEE/ACM 37th IEEE International Conference on Software Engineering},   title={Helping Developers Help Themselves: Automatic Decomposition of Code Review Changesets},   year={2015},  volume={1},  number={},  pages={134-144},  doi={10.1109/ICSE.2015.35}}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -503,6 +506,38 @@ series = {MSR '22}
 
 
 
+
+@article{reaper,
+author = {},
+title = {},
+}
+
+@Article{MunaiahKCN2017,
+  author = 	 "Munaiah, Nuthan and Kroh, Steven and Cabrey, Craig and Nagappan, Meiyappan",
+  title = 	 "Curating {GitHub} for Engineered Software Projects",
+  journal = 	 JEmpiricalSE,
+  year = 	 "2017",
+  OPTkey = 	 "",
+  OPTvolume = 	 "22",
+  OPTnumber = 	 "6",
+  OPTpages = 	 "3219–3253",
+  OPTmonth = 	 dec,
+  OPTnote = 	 "",
+  OPTannote = 	 "",
+  OPTdoi = 	 "",
+  OPTabstract =  {Software forges like GitHub host millions of repositories. Software engineering researchers have been able to take advantage of such a large corpora of potential study subjects with the help of tools like GHTorrent and Boa. However, the simplicity in querying comes with a caveat: there are limited means of separating the signal (e.g. repositories containing engineered software projects) from the noise (e.g. repositories containing home work assignments). The proportion of noise in a random sample of repositories could skew the study and may lead to researchers reaching unrealistic, potentially inaccurate, conclusions. We argue that it is imperative to have the ability to sieve out the noise in such large repository forges. We propose a framework, and present a reference implementation of the framework as a tool called reaper, to enable researchers to select GitHub repositories that contain evidence of an engineered software project. We identify software engineering practices (called dimensions) and propose means for validating their existence in a GitHub repository. We used reaper to measure the dimensions of 1,857,423 GitHub repositories. We then used manually classified data sets of repositories to train classifiers capable of predicting if a given GitHub repository contains an engineered software project. The performance of the classifiers was evaluated using a set of 200 repositories with known ground truth classification. We also compared the performance of the classifiers to other approaches to classification (e.g. number of GitHub Stargazers) and found our classifiers to outperform existing approaches. We found stargazers-based classifier (with 10 as the threshold for number of stargazers) to exhibit high precision (97\%) but an inversely proportional recall (32\%). On the other hand, our best classifier exhibited a high precision (82\%) and a high recall (86\%). The stargazer-based criteria offers precision but fails to recall a significant portion of the population.},
+  OPTusesDaikon = "",
+  OPTusesDaikonAsTestSubject = "",
+  OPTomitfromcv = "",
+  OPTunderreview = "",
+  OPTbasefilename = "",
+  OPTdownloads = "",
+  OPTdownloadsnonlocal = "",
+  OPTsupersededby = "",
+  OPTcategory =  "",
+  OPTcsetags = 	 "",
+  OPTsummary = 	 "",
+}
 
 
 
