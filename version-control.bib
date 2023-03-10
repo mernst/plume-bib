@@ -423,6 +423,225 @@ series = {MSR '22}
 
 
 
+@article{10.1145/197320.197403,
+author = {Berzins, Valdis},
+title = {Software Merge: Semantics of Combining Changes to Programs},
+year = {1994},
+issue_date = {Nov. 1994},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {16},
+number = {6},
+issn = {0164-0925},
+url = {https://doi.org/10.1145/197320.197403},
+doi = {10.1145/197320.197403},
+abstract = {We present a language-independent semantic model of the process of combining changes to programs. This model extends the domains used in denotational semantics (complete partial orders) to Boolean algebras, and represents incompatible modifications as well as compatible extensions. The model is used to define the intended semantics of change-merging operations on programs and to establish some general properties of software merging. We determine conditions under which changes to subprograms of a software system can be merged independently and illustrate cases where this is not possible.},
+journal = {ACM Trans. Program. Lang. Syst.},
+month = {nov},
+pages = {1875–1903},
+numpages = {29},
+keywords = {semantics, software change merging, software maintenance, domains}
+}
+
+@article{10.1145/3276536,
+author = {Zhu, Fengmin and He, Fei},
+title = {Conflict Resolution for Structured Merge via Version Space Algebra},
+year = {2018},
+issue_date = {November 2018},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {2},
+number = {OOPSLA},
+url = {https://doi.org/10.1145/3276536},
+doi = {10.1145/3276536},
+abstract = {Resolving conflicts is the main challenge for software merging. The existing merge tools usually rely on the developer to manually resolve conflicts. This is of course inefficient. We propose an interactive approach for resolving merge conflicts. To the best of our knowledge, this is the first attempt for conflict resolution of structured merge. To represent the possibly very large set of candidate programs, we propose an expressive and efficient representation by version space algebra. We also design a simple mechanism for ranking resolutions in the program space, such that the top-ranked resolution is very likely to meet the developer's expectation. We prototype our approach as a merge tool AutoMerge, and evaluate it on 244 real-world conflicts arising from 10 open-source projects. Results show great practicality of our approach.},
+journal = {Proc. ACM Program. Lang.},
+month = {oct},
+articleno = {166},
+numpages = {25},
+keywords = {version space algebra, conflict resolution, Revision control systems, software merge}
+}
+
+
+@inproceedings{10.1145/3540250.3549163,
+author = {Svyatkovskiy, Alexey and Fakhoury, Sarah and Ghorbani, Negar and Mytkowicz, Todd and Dinella, Elizabeth and Bird, Christian and Jang, Jinu and Sundaresan, Neel and Lahiri, Shuvendu K.},
+title = {Program Merge Conflict Resolution via Neural Transformers},
+year = {2022},
+isbn = {9781450394130},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3540250.3549163},
+doi = {10.1145/3540250.3549163},
+abstract = {Collaborative software development is an integral part of the modern software development life cycle, essential to the success of large-scale software projects. When multiple developers make concurrent changes around the same lines of code, a merge conflict may occur. Such conflicts stall pull requests and continuous integration pipelines for hours to several days, seriously hurting developer productivity. To address this problem, we introduce MergeBERT, a novel neural program merge framework based on token-level three-way differencing and a transformer encoder model. By exploiting the restricted nature of merge conflict resolutions, we reformulate the task of generating the resolution sequence as a classification task over a set of primitive merge patterns extracted from real-world merge commit data. Our model achieves 63–68% accuracy for merge resolution synthesis, yielding nearly a 3\texttimes{} performance improvement over existing semi-structured, and 2\texttimes{} improvement over neural program merge tools. Finally, we demonstrate that MergeBERT is sufficiently flexible to work with source code files in Java, JavaScript, TypeScript, and C# programming languages. To measure the practical use of MergeBERT, we conduct a user study to evaluate MergeBERT suggestions with 25 developers from large OSS projects on 122 real-world conflicts they encountered. Results suggest that in practice, MergeBERT resolutions would be accepted at a higher rate than estimated by automatic metrics for precision and accuracy. Additionally, we use participant feedback to identify future avenues for improvement of MergeBERT.},
+booktitle = {Proceedings of the 30th ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering},
+pages = {822–833},
+numpages = {12},
+keywords = {program merge, Software evolution, ml4code},
+location = {Singapore, Singapore},
+series = {ESEC/FSE 2022}
+}
+
+@inproceedings{10.1145/1134285.1134461,
+author = {Freese, Tammo},
+title = {Refactoring-Aware Version Control},
+year = {2006},
+isbn = {1595933751},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/1134285.1134461},
+doi = {10.1145/1134285.1134461},
+abstract = {Today, refactorings are supported in some integrated development environments (IDEs). The refactoring operations can only work correctly if all source code that needs to be changed is available to the IDE. However, this precondition neither holds for application programming interface (API) evolution, nor in team development. The research presented in this paper aims to support refactoring in API evolution and team development by extending IDE and version control to allow refactoring-aware merging and migration.},
+booktitle = {Proceedings of the 28th International Conference on Software Engineering},
+pages = {953–956},
+numpages = {4},
+keywords = {library, software evolution, application programming interface, refactoring, subversion, version control, eclipse},
+location = {Shanghai, China},
+series = {ICSE '06}
+}
+
+@inproceedings{10.1145/2661136.2661137,
+author = {Swierstra, Wouter and L\"{o}h, Andres},
+title = {The Semantics of Version Control},
+year = {2014},
+isbn = {9781450332101},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/2661136.2661137},
+doi = {10.1145/2661136.2661137},
+abstract = {As software becomes increasingly complex, software configuration management is becoming ever more important. This paper shows how logics for reasoning about mutable state, such as separation logic, can also be used to give semantics for version control systems. By applying these ideas from the programming language research community, developers may reason formally about the broader software development process.},
+booktitle = {Proceedings of the 2014 ACM International Symposium on New Ideas, New Paradigms, and Reflections on Programming \& Software},
+pages = {43–54},
+numpages = {12},
+keywords = {separation logic, semantics, hoare logic, version control},
+location = {Portland, Oregon, USA},
+series = {Onward! 2014}
+}
+
+@inproceedings{10.1145/2905055.2905072,
+author = {Rao, N. Rama and Sekharaiah, K. Chandra},
+title = {A Methodological Review Based Version Control System with Evolutionary Research for Software Processes},
+year = {2016},
+isbn = {9781450339629},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/2905055.2905072},
+doi = {10.1145/2905055.2905072},
+abstract = {The constant add up of new features and bug fixes often make invariable changes and refinements inevitable in the software development at regular intervals. The software should enable the end-user to decipher the critical version information about the minutest detail in every software artifact and if it does not, no software can be called as complete or nor is it user-friendly. When developers check in the software files they have to put in the version field manually as a part of header information inside the file. It would be difficult to identify vulnerabilities in the software when the files lack embedded version information which makes it harder for the end users to accurately identify the running version of the software. How can version control system (VCS) help in optimizing the bug traceability time and bug fixing potential? Version control system (VCS) is a software application that helps in collaborative software development of software projects. In order to support this instance, we should analyze which version control system is to be considered and whether to use central repository version control system or local repository version control system. Various functional, non functional evaluation criteria and fundamental requirements like installation, configuration, learning curve, performance, commits, branching, merging, and tagging have been considered for a through comparison of many version control systems. In this paper, we review and analyze the currently used VCS that involved in a view of a collaborative software development for software evolution. And an attempt has also been made to identify the version information in every deliverable file or retain it with the source. We demonstrate and perform survey on current versioning systems like Concurrent Version Control System (CVS), Subversion (SVN), Team Foundation Server (TFS), Git, ACME, Visual Source Safe(VSS), Mercurial and Clear Case, etc. that offers opportunities to test produced results and validate.},
+booktitle = {Proceedings of the Second International Conference on Information and Communication Technology for Competitive Strategies},
+articleno = {14},
+numpages = {6},
+keywords = {Source code management(SCM), CVS, Git, SVN, Mercurial, Distributed version control system(DVCS), TFS, Version control system(VCS)},
+location = {Udaipur, India},
+series = {ICTCS '16}
+}
+
+@inproceedings{10.1145/3135932.3135943,
+author = {Cavalcanti, Guilherme},
+title = {What Merge Tool Should I Use?},
+year = {2017},
+isbn = {9781450355148},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3135932.3135943},
+doi = {10.1145/3135932.3135943},
+abstract = {While unstructured merge tools try to automatically resolve merge conflicts via textual similarity, semistructured and structured merge tools try to go further by exploiting the syntactic structure and semantics of the involved artefacts. Previous studies compare these merge approaches with respect to the number of reported conflicts, showing, for most projects and merge situations, a reduction in favor of semistructured and structured merge. However, these studies do not investigate whether this reduction actually leads to integration effort reduction (Productivity) without negative impact on the correctness of the merging process (Quality). To analyze this, and to better understand how these tools could be improved, we propose empirical studies to identify spurious conflicts (false positives) reported by one approach but not by the other, and interference reported as conflict by one approach but missed by the other (false negatives).},
+booktitle = {Proceedings Companion of the 2017 ACM SIGPLAN International Conference on Systems, Programming, Languages, and Applications: Software for Humanity},
+pages = {19–20},
+numpages = {2},
+keywords = {version control systems, empirical studies, software merging, collaborative development},
+location = {Vancouver, BC, Canada},
+series = {SPLASH Companion 2017}
+}
+
+@inproceedings{10.1145/3422392.3422440,
+author = {Menezes, Jos\'{e} William and Trindade, Bruno and Pimentel, Jo\~{a}o Felipe and Moura, Tayane and Plastino, Alexandre and Murta, Leonardo and Costa, Catarina},
+title = {What Causes Merge Conflicts?},
+year = {2020},
+isbn = {9781450387538},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3422392.3422440},
+doi = {10.1145/3422392.3422440},
+abstract = {During the software development process, several developers commonly change artifacts in parallel. A merge process can combine parallel changes. In the case of changes that cannot be automatically combined, the developer responsible for the merge must reconcile decisions and resolve conflicts. Some studies are concerned with investigating ways to deal with merge conflicts and measuring the effort that this activity may require. However, the investigation of factors that may reduce the occurrence of conflicts needs more and deeper attention. This paper aims at identifying and analyzing attributes of past merges with and without conflicts to understand what may induce physical conflicts. We analyzed 182,273 merge scenarios from 80 projects written in eight different programming languages to find characteristics that increase the chances of a merge to have a conflict. We found that attributes such as the number of committers, the number of commits, and the number of changed files seem to have the biggest influence in the occurrence of merge conflicts. Moreover, attributes in the branch that is being integrated seem to be more influential than the same attributes in the other branch. Additionally, we discovered positive correlations between the occurrence of conflicts and both the duration of the branch and the intersection of developers.},
+booktitle = {Proceedings of the XXXIV Brazilian Symposium on Software Engineering},
+pages = {203–212},
+numpages = {10},
+keywords = {Attributes, Merge, Merge Conflicts, Repository Mining},
+location = {Natal, Brazil},
+series = {SBES '20}
+}
+
+@inproceedings{10.1109/ASE.2019.00098,
+author = {Tavares, Alberto Trindade and Borba, Paulo and Cavalcanti, Guilherme and Soares, S\'{e}rgio},
+title = {Semistructured Merge in JavaScript Systems},
+year = {2020},
+isbn = {9781728125084},
+publisher = {IEEE Press},
+url = {https://doi.org/10.1109/ASE.2019.00098},
+doi = {10.1109/ASE.2019.00098},
+abstract = {Industry widely uses unstructured merge tools that rely on textual analysis to detect and resolve conflicts between code contributions. Semistructured merge tools go further by partially exploring the syntactic structure of code artifacts, and, as a consequence, obtaining significant merge accuracy gains for Java-like languages. To understand whether semistructured merge and the observed gains generalize to other kinds of languages, we implement two semistructured merge tools for JavaScript, and compare them to an unstructured tool. We find that current semistructured merge algorithms and frameworks are not directly applicable for scripting languages like JavaScript. By adapting the algorithms, and studying 10,345 merge scenarios from 50 JavaScript projects on GitHub, we find evidence that our JavaScript tools report fewer spurious conflicts than unstructured merge, without compromising the correctness of the merging process. The gains, however, are much smaller than the ones observed for Java-like languages, suggesting that semistructured merge advantages might be limited for languages that allow both commutative and non-commutative declarations at the same syntactic level.},
+booktitle = {Proceedings of the 34th IEEE/ACM International Conference on Automated Software Engineering},
+pages = {1014–1025},
+numpages = {12},
+keywords = {version control systems, collaborative development, JavaScript, software merging, semistructured merge},
+location = {San Diego, California},
+series = {ASE '19}
+}
+
+@inproceedings{10.1145/3555228.3555229,
+author = {Campos Junior, Heleno de S. and de Menezes, Gleiph Ghiotto L. and Barros, M\'{a}rcio de Oliveira and van der Hoek, Andr\'{e} and Murta, Leonardo Gresta Paulino},
+title = {Towards Merge Conflict Resolution by Combining Existing Lines of Code},
+year = {2022},
+isbn = {9781450397353},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3555228.3555229},
+doi = {10.1145/3555228.3555229},
+abstract = {Software developers often need to combine their contributions. This operation is called merge. When the contributions happen at the same physical region in the source code, the merge is marked as conflicting and must be manually resolved by the developers. Existing studies explore why conflicts happen, their characteristics, and how they are resolved. In this paper, we investigate a specific subset of merge conflicts, which may be resolved using a combination of existing lines. We analyze 10,177 conflict chunks of popular projects that were resolved by combining existing lines, aiming at characterizing and finding patterns that developers frequently use to resolve them. We found that these conflicting chunks and their resolutions are usually small (they have a median of 6 LOC and 3 LOC, respectively). Moreover, 98.6% of the analyzed resolutions preserve the order of the lines in the conflicting chunks. We also found that 77.4% of the chunk resolutions do not interleave lines from different contributions more than once. These findings altogether, when used as heuristics for automatic merge resolution, could enable the reduction of the search space by 94.7%, paving the road for future search-based software engineering tools for this problem.},
+booktitle = {Proceedings of the XXXVI Brazilian Symposium on Software Engineering},
+pages = {425–434},
+numpages = {10},
+keywords = {search-based software engineering, conflict resolution, Version control systems, software merge},
+location = {Virtual Event, Brazil},
+series = {SBES '22}
+}
+
+@inproceedings{10.1145/2601248.2601275,
+author = {Mehdi, Ahmed-Nacer and Urso, Pascal and Charoy, Fran\c{c}ois},
+title = {Evaluating Software Merge Quality},
+year = {2014},
+isbn = {9781450324762},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/2601248.2601275},
+doi = {10.1145/2601248.2601275},
+abstract = {Software merging is a time-consuming and error-prone activity but essential to large-scale software development. Developers use software merging tools, but if such tools return results with too many conflicts and errors, this activity becomes even more difficult. To help developers, several algorithms have been proposed to improve the automation of merge tools. These algorithms aim at minimising conflict situations and therefore improving the productivity of the development team, however no general framework is proposed to evaluated and compare their result.This paper proposes a methodology to measure the effort required to use the result of a given merge tool. We employ the large number of publicly available open-source development histories to automatically compute this measure and evaluate the quality of the merging tools results. We use the simple idea that these histories contains both the concurrent modifications and their merge results as approved by the developers. Through a study of six open-source repositories totalling more than 2.5 millions lines of code, we show meaningful comparison results between merge algorithms and how to use the results to improve them.},
+booktitle = {Proceedings of the 18th International Conference on Evaluation and Assessment in Software Engineering},
+articleno = {9},
+numpages = {10},
+keywords = {distributed systems, collaboration, merge quality, methodology, collaborative editing, commutative replicated data types, algorithms, experimentation, asynchronous system, conflicts, benchmark, automatic evaluation},
+location = {London, England, United Kingdom},
+series = {EASE '14}
+}
+
+@inproceedings{10.1109/ICSE-C.2017.103,
+author = {Cavalcanti, Guilherme and Borba, Paulo and Accioly, Paola},
+title = {Should We Replace Our Merge Tools?},
+year = {2017},
+isbn = {9781538615898},
+publisher = {IEEE Press},
+url = {https://doi.org/10.1109/ICSE-C.2017.103},
+doi = {10.1109/ICSE-C.2017.103},
+abstract = {While unstructured merge tools try to automatically resolve merge conflicts via textual similarity, semistructured merge tools try to go further by partially exploiting the syntactic structure and semantics of the involved artefacts. Previous studies compare these merge approaches with respect to the number of reported conflicts, showing, for most projects and merge situations, a reduction in favor of semistructured merge. However, these studies do not investigate whether this reduction actually leads to integration effort reduction (Productivity) without negative impact on the correctness of the merging process (Quality). To analyze this, and to better understand how these tools could be improved, we propose empirical studies to identify spurious conflicts reported by one approach but not by the other, and interference reported as conflict by one approach but missed by the other.},
+booktitle = {Proceedings of the 39th International Conference on Software Engineering Companion},
+pages = {325–327},
+numpages = {3},
+keywords = {empirical studies, version control systems, collaborative development, software merging},
+location = {Buenos Aires, Argentina},
+series = {ICSE-C '17}
+}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Tangled commits and untangling algorithms
 %%%
