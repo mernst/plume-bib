@@ -92,7 +92,6 @@ SETUP -- if you use a Makefile to process your paper
    (Warning: these commands get mangled when viewing the README at GitHub.
    Clone the repository and view the `README` file directly.)
 
-    export BIBINPUTS ?= .:plume-bib
     plume-bib:
     ifdef PLUMEBIB
 	    ln -s ${PLUMEBIB} $@
