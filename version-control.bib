@@ -1,4 +1,3 @@
-% Bibliography about version control and merge conflicts
 
 
 
@@ -176,27 +175,6 @@
 
 
 
-
-@inproceedings{10.1145/1176617.1176698,
-author = {Dig, Danny and Nguyen, Tien N. and Manzoor, Kashif and Johnson, Ralph},
-title = {MolhadoRef: A Refactoring-Aware Software Configuration Management Tool},
-year = {2006},
-isbn = {159593491X},
-publisher = {Association for Computing Machinery},
-address = {New York, NY, USA},
-url = {https://doi.org/10.1145/1176617.1176698},
-doi = {10.1145/1176617.1176698},
-abstract = {Refactoring tools allow programmers to change their source code quicker than before. However, the complexity of these changes cause versioning tools that operate at a file level to lose the history of entities and be unable to merge refactored entities. This problem can be solved by semantic, operation-based SCM with persistent IDs. We propose that versioning tools be aware of program entities and refactoring operations. We present MolhadoRef, our prototype, which uses these techniques to ensure that it never loses history. MolhadoRef can successfully merge edit and refactoring operations which were performed on different development branches.},
-booktitle = {Companion to the 21st ACM SIGPLAN Symposium on Object-Oriented Programming Systems, Languages, and Applications},
-pages = {732-733},
-numpages = {2},
-keywords = {refactoring, version control, configuration management},
-location = {Portland, Oregon, USA},
-series = {OOPSLA '06}
-}
-
-
-
 @InProceedings{ApelLBLK2011,
   author = 	 "Sven Apel and J{\"o}rg Liebig and Benjamin Brandl and Christian Lengauer and Christian K{\"a}stner",
   authorASCII = 	 "Sven Apel and Jorg Liebig and Benjamin Brandl and Christian Lengauer and Christian Kastner",
@@ -259,16 +237,6 @@ keywords = {Three-way program merge, product programs, relational verification}
 }
 
 
-@InProceedings{ShenZZLJW2019,
-  author = 	 "Shen, Bo and Zhang, Wei and Zhao, Haiyan and Liang, Guangtai and Jin, Zhi and Wang, Qianxiang",
-  title = 	 "{IntelliMerge}: A refactoring-aware software merging technique",
-  crossref =  "OOPSLA2019",
-  pages = 	 "170:1-170:28",
-}
-
-
-
-
 @Article{GhiottoMBvdH2020,
   author = 	 "Ghiotto, Gleiph and Murta, Leonardo and Barros, M{\'a}rcio and van der Hoek, Andr{\'e}",
   authorUTF =  "Ghiotto, Gleiph and Murta, Leonardo and Barros, Márcio and van der Hoek, André",
@@ -289,18 +257,6 @@ keywords = {Three-way program merge, product programs, relational verification}
 
 
 
-
-
-
-
-
-@MastersThesis{Ellis2022,
-  author = 	 "Max Ellis",
-  title = 	 "A Systematic Comparison of Two Refactoring-aware Merging Techniques",
-  school = 	 "University of Alberta",
-  year = 	 2022,
-  address = 	 "Alberta, Canada",
-}
 
 
 
@@ -425,25 +381,19 @@ series = {MSR '22}
 
 
 
-@article{10.1145/197320.197403,
-author = {Berzins, Valdis},
-title = {Software Merge: Semantics of Combining Changes to Programs},
-year = {1994},
-issue_date = {Nov. 1994},
-publisher = {Association for Computing Machinery},
-address = {New York, NY, USA},
-volume = {16},
-number = {6},
-issn = {0164-0925},
-url = {https://doi.org/10.1145/197320.197403},
-doi = {10.1145/197320.197403},
-abstract = {We present a language-independent semantic model of the process of combining changes to programs. This model extends the domains used in denotational semantics (complete partial orders) to Boolean algebras, and represents incompatible modifications as well as compatible extensions. The model is used to define the intended semantics of change-merging operations on programs and to establish some general properties of software merging. We determine conditions under which changes to subprograms of a software system can be merged independently and illustrate cases where this is not possible.},
-journal = {ACM Trans. Program. Lang. Syst.},
-month = {nov},
-pages = {1875-1903},
-numpages = {29},
-keywords = {semantics, software change merging, software maintenance, domains}
+
+
+@Article{Berzins1994,
+  author = 	 "Berzins, Valdis",
+  title = 	 "Software Merge: Semantics of Combining Changes to Programs",
+  journal = 	 TOPLAS,
+  year = 	 1994,
+  volume = 	 16,
+  number = 	 6,
+  pages = 	 "1875-1903",
+  note = 	 nov,
 }
+
 
 @article{10.1145/3276536,
 author = {Zhu, Fengmin and He, Fei},
@@ -484,26 +434,9 @@ series = {ESEC/FSE 2022}
 }
 
 
-@inproceedings{10.1145/1134285.1134461,
-author = {Freese, Tammo},
-title = {Refactoring-Aware Version Control},
-year = {2006},
-isbn = {1595933751},
-publisher = {Association for Computing Machinery},
-address = {New York, NY, USA},
-url = {https://doi.org/10.1145/1134285.1134461},
-doi = {10.1145/1134285.1134461},
-abstract = {Today, refactorings are supported in some integrated development environments (IDEs). The refactoring operations can only work correctly if all source code that needs to be changed is available to the IDE. However, this precondition neither holds for application programming interface (API) evolution, nor in team development. The research presented in this paper aims to support refactoring in API evolution and team development by extending IDE and version control to allow refactoring-aware merging and migration.},
-booktitle = {Proceedings of the 28th International Conference on Software Engineering},
-pages = {953-956},
-numpages = {4},
-keywords = {library, software evolution, application programming interface, refactoring, subversion, version control, eclipse},
-location = {Shanghai, China},
-series = {ICSE '06}
-}
-
 @inproceedings{10.1145/2661136.2661137,
-author = {Swierstra, Wouter and L\"{o}h, Andres},
+author = {Swierstra, Wouter and L{\"o}h, Andres},
+authorASCII = {Swierstra, Wouter and Loh, Andres},
 title = {The Semantics of Version Control},
 year = {2014},
 isbn = {9781450332101},
@@ -647,6 +580,66 @@ series = {ICSE-C '17}
 }
 
 
+
+@InProceedings{MenezesTJMPMC2020,
+  author = 	 "Menezes, Jos\'{e} William and Trindade, Bruno and Pimentel, Jo\~{a}o Felipe and Moura, Tayane and Plastino, Alexandre and Murta, Leonardo and Costa, Catarina",
+  title = 	 "What Causes Merge Conflicts?",
+  crossref =  "SBES2020",
+  pages = 	 "203-212",
+}
+
+
+@Article{ZhuH2018,
+  author = 	 "Zhu, Fengmin and He, Fei",
+  title = 	 "Conflict Resolution for Structured Merge via Version Space Algebra",
+  journal = 	 PAPL,
+  year = 	 2018,
+  volume = 	 2,
+  number = 	 "OOPSLA",
+  month = 	 oct,
+articleno = 166,
+numpages = 25,
+}
+
+
+
+@InProceedings{Cavalcanti2017,
+  author = 	 "Cavalcanti, Guilherme",
+  title = 	 "What merge tool should I use?",
+  crossref =  "SPLASH2017Companion",
+  pages = 	 "19-20",
+}
+
+
+@InProceedings{RaoS2016,
+  author = 	 "Rao, N. Rama and Sekharaiah, K. Chandra",
+  title = 	 "A Methodological Review Based Version Control System with Evolutionary Research for Software Processes",
+  crossref =  "ICTCS2016",
+articleno = {14},
+numpages = {6},
+}
+
+
+@InProceedings{SwierstraL2014,
+  author = 	 "Swierstra, Wouter and L{\"o}h, Andres",
+  authorASCII = 	 "Swierstra, Wouter and Loh, Andres",
+  title = 	 "The Semantics of Version Control",
+  crossref =  "Onward2014",
+  pages = 	 "43–54",
+}
+
+
+@InProceedings{MehdiUC2014,
+  author = 	 "Mehdi, Ahmed-Nacer and Urso, Pascal and Charoy, Fran\c{c}ois",
+  authorASCII =	 "Mehdi, Ahmed-Nacer and Urso, Pascal and Charoy, Francois",
+  title = 	 "Evaluating Software Merge Quality",
+  crossref =  "EASE2014",
+articleno = {9},
+numpages = {10},
+}
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Tangled commits and untangling algorithms
 %%%
@@ -735,28 +728,15 @@ series = {ICSE-C '17}
   author = 	 "Munaiah, Nuthan and Kroh, Steven and Cabrey, Craig and Nagappan, Meiyappan",
   title = 	 "Curating {GitHub} for Engineered Software Projects",
   journal = 	 JEmpiricalSE,
-  year = 	 "2017",
-  OPTkey = 	 "",
-  OPTvolume = 	 "22",
-  OPTnumber = 	 "6",
-  OPTpages = 	 "3219-3253",
-  OPTmonth = 	 dec,
-  OPTnote = 	 "",
-  OPTannote = 	 "",
-  OPTdoi = 	 "",
-  OPTabstract =  {Software forges like GitHub host millions of repositories. Software engineering researchers have been able to take advantage of such a large corpora of potential study subjects with the help of tools like GHTorrent and Boa. However, the simplicity in querying comes with a caveat: there are limited means of separating the signal (e.g. repositories containing engineered software projects) from the noise (e.g. repositories containing home work assignments). The proportion of noise in a random sample of repositories could skew the study and may lead to researchers reaching unrealistic, potentially inaccurate, conclusions. We argue that it is imperative to have the ability to sieve out the noise in such large repository forges. We propose a framework, and present a reference implementation of the framework as a tool called reaper, to enable researchers to select GitHub repositories that contain evidence of an engineered software project. We identify software engineering practices (called dimensions) and propose means for validating their existence in a GitHub repository. We used reaper to measure the dimensions of 1,857,423 GitHub repositories. We then used manually classified data sets of repositories to train classifiers capable of predicting if a given GitHub repository contains an engineered software project. The performance of the classifiers was evaluated using a set of 200 repositories with known ground truth classification. We also compared the performance of the classifiers to other approaches to classification (e.g. number of GitHub Stargazers) and found our classifiers to outperform existing approaches. We found stargazers-based classifier (with 10 as the threshold for number of stargazers) to exhibit high precision (97\%) but an inversely proportional recall (32\%). On the other hand, our best classifier exhibited a high precision (82\%) and a high recall (86\%). The stargazer-based criteria offers precision but fails to recall a significant portion of the population.},
-  OPTusesDaikon = "",
-  OPTusesDaikonAsTestSubject = "",
-  OPTomitfromcv = "",
-  OPTunderreview = "",
-  OPTbasefilename = "",
-  OPTdownloads = "",
-  OPTdownloadsnonlocal = "",
-  OPTsupersededby = "",
-  OPTcategory =  "",
-  OPTcsetags = 	 "",
-  OPTsummary = 	 "",
+  year = 	 2017,
+  volume = 	 22,
+  number = 	 6,
+  pages = 	 "3219-3253",
+  month = 	 dec,
 }
+
+
+
 
 
 
@@ -809,6 +789,60 @@ numpages = {4},
 keywords = {Linux, Evolution, Version Control History, Traceability},
 location = {Hyderabad, India},
 series = {MSR 2014}
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Refactoring
+%%%
+
+
+@inproceedings{10.1145/1176617.1176698,
+author = {Dig, Danny and Nguyen, Tien N. and Manzoor, Kashif and Johnson, Ralph},
+title = {MolhadoRef: A Refactoring-Aware Software Configuration Management Tool},
+year = {2006},
+isbn = {159593491X},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/1176617.1176698},
+doi = {10.1145/1176617.1176698},
+abstract = {Refactoring tools allow programmers to change their source code quicker than before. However, the complexity of these changes cause versioning tools that operate at a file level to lose the history of entities and be unable to merge refactored entities. This problem can be solved by semantic, operation-based SCM with persistent IDs. We propose that versioning tools be aware of program entities and refactoring operations. We present MolhadoRef, our prototype, which uses these techniques to ensure that it never loses history. MolhadoRef can successfully merge edit and refactoring operations which were performed on different development branches.},
+booktitle = {Companion to the 21st ACM SIGPLAN Symposium on Object-Oriented Programming Systems, Languages, and Applications},
+pages = {732-733},
+numpages = {2},
+keywords = {refactoring, version control, configuration management},
+location = {Portland, Oregon, USA},
+series = {OOPSLA '06}
+}
+
+
+
+
+@InProceedings{Freese2006,
+  author = 	 "Freese, Tammo",
+  title = 	 "Refactoring-Aware Version Control",
+  crossref =  "ICSE2006",
+  pages = 	 "953–956",
+}
+
+
+@InProceedings{ShenZZLJW2019,
+  author = 	 "Shen, Bo and Zhang, Wei and Zhao, Haiyan and Liang, Guangtai and Jin, Zhi and Wang, Qianxiang",
+  title = 	 "{IntelliMerge}: A refactoring-aware software merging technique",
+  crossref =  "OOPSLA2019",
+  pages = 	 "170:1-170:28",
+}
+
+
+
+
+@MastersThesis{Ellis2022,
+  author = 	 "Max Ellis",
+  title = 	 "A Systematic Comparison of Two Refactoring-aware Merging Techniques",
+  school = 	 "University of Alberta",
+  year = 	 2022,
+  address = 	 "Alberta, Canada",
 }
 
 
@@ -1021,6 +1055,34 @@ month = {jul},
 pages = {308-337},
 numpages = {30},
 keywords = {merging interfering and noninterfering versions, change management, parallel/concurrent changes, parallel versions, software integration}
+}
+
+
+
+@InProceedings{BaAS2013,
+  author = 	 "Ba, M. Lamine and Abdessalem, Talel and Senellart, Pierre",
+  title = 	 "Uncertain Version Control in Open Collaborative Editing of Tree-Structured Documents",
+  crossref =  "DocEng2013",
+  pages = 	 "27-36",
+}
+@article{10.1145/197320.197403,
+author = {Berzins, Valdis},
+title = {Software Merge: Semantics of Combining Changes to Programs},
+year = {1994},
+issue_date = {Nov. 1994},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {16},
+number = {6},
+issn = {0164-0925},
+url = {https://doi.org/10.1145/197320.197403},
+doi = {10.1145/197320.197403},
+abstract = {We present a language-independent semantic model of the process of combining changes to programs. This model extends the domains used in denotational semantics (complete partial orders) to Boolean algebras, and represents incompatible modifications as well as compatible extensions. The model is used to define the intended semantics of change-merging operations on programs and to establish some general properties of software merging. We determine conditions under which changes to subprograms of a software system can be merged independently and illustrate cases where this is not possible.},
+journal = {ACM Trans. Program. Lang. Syst.},
+month = {nov},
+pages = {1875–1903},
+numpages = {29},
+keywords = {software change merging, domains, software maintenance, semantics}
 }
 
 
