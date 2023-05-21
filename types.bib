@@ -1408,6 +1408,7 @@
 }
 
 
+
 %%%
 %%% Initialization
 %%%
@@ -2996,6 +2997,7 @@
   crossref =  "FASE2014",
   pages = 	 "140-154",
 }
+
 
 @InProceedings{SextonCN2017,
   author = 	 "Sexton, Julian and Chudnov, Andrey and Naumann, David A.",
@@ -6189,6 +6191,7 @@ keywords = "FindBugs"
   pages =     "275--288",
 }
 
+
 @InProceedings{Cousot1997,
   author =       "Cousot, Patrick",
   title =        "Types as abstract interpretations",
@@ -6224,7 +6227,7 @@ keywords = "FindBugs"
  publisher = {ACM},
  address = {New York, NY, USA},
  keywords = {Coq, Haskell, verification},
-} 
+}
 
 
 @InProceedings{FluetP2005,
@@ -6322,6 +6325,8 @@ keywords = "FindBugs"
 
 
 
+% Unconfuse LaTeX mode: $
+
 @InProceedings{TsushimaCS2021,
   author = 	 "Tsushima, Kanae and Chitil, Olaf and Sharrad, Joanna",
   title = 	 "Type Debugging with Counter-Factual Type Error Messages Using an Existing Type Checker",
@@ -6329,6 +6334,31 @@ keywords = "FindBugs"
   year = 	 2021,
   abstract = {The cause of a type error can be very difficult to find for the Hindley-Milner type system. Consequently many solutions have been proposed, but they are hardly used in practice. Here we propose a new solution that provides counter-factual type error messages; these messages state what types specific subexpressions in a program should have (in contrast to the types they actually have) to remove a type error. Such messages are easy-to-understand, because programers are already familiar with them. Furthermore, our solution is easy-to-implement, because it reuses an existing type checker as a subroutine. We transform an ill-typed program into a well-typed program with additional λ-bound variables. The types of these λ-bound variables yield actual and counter-factual type information. That type information plus intended types added as type annotations direct the search of the type debugger.},
 }
+
+
+@article{10.1145/3450952,
+author = {Dunfield, Jana and Krishnaswami, Neel},
+title = {Bidirectional Typing},
+year = {2021},
+issue_date = {June 2022},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {54},
+number = {5},
+issn = {0360-0300},
+url = {https://doi.org/10.1145/3450952},
+doi = {10.1145/3450952},
+abstract = {Bidirectional typing combines two modes of typing: type checking, which checks that a program satisfies a known type, and type synthesis, which determines a type from the program. Using checking enables bidirectional typing to support features for which inference is undecidable; using synthesis enables bidirectional typing to avoid the large annotation burden of explicitly typed languages. In addition, bidirectional typing improves error locality. We highlight the design principles that underlie bidirectional type systems, survey the development of bidirectional typing from the prehistoric period before Pierce and Turner’s local type inference to the present day, and provide guidance for future investigations.},
+journal = {ACM Comput. Surv.},
+month = {may},
+articleno = {98},
+numpages = {38},
+keywords = {type inference, Type checking}
+}
+
+
+
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
