@@ -100,9 +100,9 @@ SETUP -- if you use a Makefile to process your paper
 	    git clone https://github.com/mernst/plume-bib.git $@
     endif
     .PHONY: plume-bib-update
-    plume-bib-update: plume-bib
-    # Even if this command fails, it does not terminate the make job.
+    # Even if the plume-bib-update target fails, it does not terminate the make job.
     # However, to skip it, invoke make as:  make NOGIT=1 ...
+    plume-bib-update: plume-bib
     ifndef NOGIT
 	    -(cd plume-bib && git pull && make)
     endif
