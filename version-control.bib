@@ -18,13 +18,57 @@
 }
 
 
-@InProceedings{JacksonL1994,
-  author = 	 "Daniel Jackson and David A. Ladd",
-  title = 	 "Semantic diff: a tool for summarizing the effects of modifications",
-  crossref =  "ICSM94",
-  pages = 	 "243-252",
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Diff -- line-based
+%%%
+
+@Article{NugrohoHM2020,
+  author = 	 "Nugroho, Yusuf Sulistyo and Hata, Hideaki and Matsumoto, Kenichi",
+  title = 	 "How different are different \emph{diff} algorithms in {Git}?",
+  journal = 	 JEmpiricalSE,
+  year = 	 2020,
+  volume = 	 25,
+  number = 	 1,
+  pages = 	 "790-823",
+  month = 	 jan,
+  abstract =
+   "Automatic identification of the differences between two versions of a file is a
+    common and basic task in several applications of mining code repositories. Git,
+    a version control system, has a diff utility and users can select algorithms of
+    diff from the default algorithm Myers to the advanced Histogram algorithm. From
+    our systematic mapping, we identified three popular applications of diff in
+    recent studies. On the impact on code churn metrics in 14 Java projects, we
+    obtained different values in 1.7\% to 8.2\% commits based on the different diff
+    algorithms. Regarding bug-introducing change identification, we found 6.0\% and
+    13.3\% in the identified bug-fix commits had different results of
+    bug-introducing changes from 10 Java projects. For patch application, we found
+    that the Histogram is more suitable than Myers for providing the changes of
+    code, from our manual analysis. Thus, we strongly recommend using the Histogram
+    algorithm when mining Git repositories to consider differences in source code.",
 }
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Diff -- tree-based
+%%%
+
+@InProceedings{FalleriMBMM2014,
+  author = 	 "Falleri, Jean-R\'{e}my and Morandat, Flor\'{e}al and Blanc, Xavier and Martinez, Matias and Monperrus, Martin",
+  authorASCII =  "Falleri, Jean-Remy and Morandat, Floreal and Blanc, Xavier and Martinez, Matias and Monperrus, Martin",
+  title = 	 "Fine-grained and accurate source code differencing",
+  crossref =  "ASE2014",
+  pages = 	 "313-324",
+}
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Diff -- graph-based
+%%%
 
 @InProceedings{ApiwattanapongOH2004,
   author = 	 "Taweesup Apiwattanapong and Alessandro Orso and Mary Jean Harrold",
@@ -82,65 +126,23 @@
 }
 
 
-@InProceedings{FalleriMBMM2014,
-  author = 	 "Falleri, Jean-R\'{e}my and Morandat, Flor\'{e}al and Blanc, Xavier and Martinez, Matias and Monperrus, Martin",
-  authorASCII =  "Falleri, Jean-Remy and Morandat, Floreal and Blanc, Xavier and Martinez, Matias and Monperrus, Martin",
-  title = 	 "Fine-grained and accurate source code differencing",
-  crossref =  "ASE2014",
-  pages = 	 "313-324",
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Diff -- other representations
+%%%
+
+@InProceedings{JacksonL1994,
+  author = 	 "Daniel Jackson and David A. Ladd",
+  title = 	 "Semantic diff: a tool for summarizing the effects of modifications",
+  crossref =  "ICSM94",
+  pages = 	 "243-252",
 }
-
-
 
 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% Merging, including merge conflicts and structured merge
+%%% Merging
 %%%
-
-
-
-@InProceedings{HorwitzPR88a,
-  author = 	 "Susan Horwitz and Jan Prins and Thomas Reps",
-  title = 	 "Integrating non-interfering versions of programs",
-  crossref = 	 "POPL88",
-  pages =	 "146--157",
-}
-
-
-@Article{HorwitzPR89:TOPLAS,
-  author = 	 "Susan Horwitz and Jan Prins and Thomas Reps",
-  title = 	 "Integrating non-interfering versions of programs",
-  journal =	 toplas,
-  year =	 1989,
-  volume =	 11,
-  number =	 3,
-  pages =	 "345--387",
-  month =	 jul
-}
-
-
-@TechReport{Binkley91,
-  author = 	 "David W. Binkley",
-  title = 	 "Multi-Procedure Program Integration",
-  institution =  UWMadison,
-  year = 	 1991,
-  number =	 1038,
-  month =	 Aug
-}
-
-
-
-
-
-
-
-
-
-
-
-
 
 @Article{Mens2002,
   author = 	 "Tom Mens",
@@ -154,6 +156,57 @@
 }
 
 
+
+
+
+@inproceedings{10.1145/3524842.3528448,
+author = {Kudrjavets, Gunnar and Nagappan, Nachiappan and Rastogi, Ayushi},
+title = {Do Small Code Changes Merge Faster? A Multi-Language Empirical Investigation},
+year = {2022},
+isbn = {9781450393034},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3524842.3528448},
+doi = {10.1145/3524842.3528448},
+abstract = {Code velocity, or the speed with which code changes are integrated into a production environment, plays a crucial role in Continuous Integration and Continuous Deployment. Many studies report factors influencing code velocity. However, solutions to increase code velocity are unclear. Meanwhile, the industry continues to issue guidelines on "ideal" code change size, believing it increases code velocity despite lacking evidence validating the practice. Surprisingly, this fundamental question has not been studied to date. This study investigates the practicality of improving code velocity by optimizing pull request size and composition (ratio of insertions, deletions, and modifications).
+\par
+We start with a hypothesis that a moderate correlation exists between pull request size and time-to-merge. We selected 100 most popular, actively developed projects from 10 programming languages on GitHub. We analyzed our dataset of 845,316 pull requests by size, composition, and context to explore its relationship to time-to-merge---a proxy to measure code velocity. Our study shows that pull request size and composition do not relate to time-to-merge. Regardless of the contextual factors that can influence pull request size or composition (e.g., programming language), the observation holds. Pull request data from two other platforms: Gerrit and Phabricator (401,790 code reviews) confirms the lack of relationship. This negative result as in "...eliminate useless hypotheses ..." [75] challenges a widespread belief by showing that small code changes do not merge faster to increase code velocity.},
+booktitle = {Proceedings of the 19th International Conference on Mining Software Repositories},
+pages = {537-548},
+numpages = {12},
+keywords = {code review velocity, pull request size, GitHub, pull request},
+location = {Pittsburgh, Pennsylvania},
+series = {MSR '22}
+}
+
+
+
+
+@inproceedings{10.1145/3422392.3422440,
+author = {Menezes, Jos\'{e} William and Trindade, Bruno and Pimentel, Jo\~{a}o Felipe and Moura, Tayane and Plastino, Alexandre and Murta, Leonardo and Costa, Catarina},
+title = {What Causes Merge Conflicts?},
+year = {2020},
+isbn = {9781450387538},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3422392.3422440},
+doi = {10.1145/3422392.3422440},
+abstract = {During the software development process, several developers commonly change artifacts in parallel. A merge process can combine parallel changes. In the case of changes that cannot be automatically combined, the developer responsible for the merge must reconcile decisions and resolve conflicts. Some studies are concerned with investigating ways to deal with merge conflicts and measuring the effort that this activity may require. However, the investigation of factors that may reduce the occurrence of conflicts needs more and deeper attention. This paper aims at identifying and analyzing attributes of past merges with and without conflicts to understand what may induce physical conflicts. We analyzed 182,273 merge scenarios from 80 projects written in eight different programming languages to find characteristics that increase the chances of a merge to have a conflict. We found that attributes such as the number of committers, the number of commits, and the number of changed files seem to have the biggest influence in the occurrence of merge conflicts. Moreover, attributes in the branch that is being integrated seem to be more influential than the same attributes in the other branch. Additionally, we discovered positive correlations between the occurrence of conflicts and both the duration of the branch and the intersection of developers.},
+booktitle = {Proceedings of the XXXIV Brazilian Symposium on Software Engineering},
+pages = {203-212},
+numpages = {10},
+keywords = {Attributes, Merge, Merge Conflicts, Repository Mining},
+location = {Natal, Brazil},
+series = {SBES '20}
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Merging -- line-based
+%%%
+
+
 @article{journals/tosem/PerrySV01,
   title = {Parallel changes in large-scale software development: an observational case study},
   added-at = {2018-11-06T00:00:00.000+0100},
@@ -164,13 +217,64 @@
   intrahash = {dc01e62b9b4e35e01890251f3de81e1d},
   journal = {ACM Trans. Softw. Eng. Methodol.},
   keywords = {dblp},
-  number = 3,
   pages = {308-337},
   timestamp = {2018-11-07T12:16:11.000+0100},
   url = {http://dblp.uni-trier.de/db/journals/tosem/tosem10.html#PerrySV01},
-  volume = 10,
   year = 2001
+  volume = 10,
+  number = 3,
+  abstract = {An essential characteristic of large-scale software development is parallel development by teams of developers. How this parallel development is structured and supported has a profound effect on both the quality and timeliness of the product. We conduct an observational case study in which we collect and analyze the change and configuration management history of a legacy system to delineate the boundaries of, and to understand the nature of, the problems encountered in parallel development. The results of our studies are (1) that the degree of parallelism is very high -- higher than considered by tool builders; (2) there are multiple levels of parallelism, and the data for some important aspects are uniform and consistent for all levels; (3) the tails of the distributions are long, indicating the tail, rather than the mean, must receive serious attention in providing solutions for these problems; and (4) there is a significant correlation between the degree of parallel work on a given component and the number of quality problems it has. Thus, the results of this study are important both for tool builders and for process and project engineers.},
+  journal = {ACM Trans. Softw. Eng. Methodol.},
+  month = {jul},
 }
+
+
+@Article{GhiottoMBvdH2020,
+  author = 	 "Ghiotto, Gleiph and Murta, Leonardo and Barros, M{\'a}rcio and van der Hoek, Andr{\'e}",
+  authorUTF =  "Ghiotto, Gleiph and Murta, Leonardo and Barros, Márcio and van der Hoek, André",
+  authorASCII =  "Ghiotto, Gleiph and Murta, Leonardo and Barros, Marcio and van der Hoek, Andre",
+  title = 	 "On the Nature of Merge Conflicts: A Study of 2,731 Open Source {Java} Projects Hosted by {GitHub}",
+  journal = 	 ieeetse,
+  year = 	 2020,
+  volume = 	 46,
+  number = 	 8,
+  pages = 	 "892-915",
+  month = 	 aug,
+}
+
+
+@ARTICLE{9591645,
+  author={Seibt, Georg and Heck, Florian and Cavalcanti, Guilherme and Borba, Paulo and Apel, Sven},
+  journal={IEEE Transactions on Software Engineering},
+  title={Leveraging Structure in Software Merge: An Empirical Study},
+  year={2022},
+  volume={48},
+  number={11},
+  pages={4590-4610},
+  doi={10.1109/TSE.2021.3123143}}
+Svyatkovskiy et al say:
+"Seibt et al. [37] explore and evaluate merge
+algorithms on a suite of ten software repositories, paying attention
+to the amount of resolutions produced, size of conflict, runtime
+cost, and correctness. Interestingly, they use the test suites of each
+project as an oracle to assess correctness of code after the merge."
+
+
+
+@InProceedings{NguyenI2017,
+  author = 	 "Hoai Le Nguyen and Claudia-Lavinia Ignat",
+  title = 	 "Parallelism and conflicting changes in {Git} version control systems",
+  booktitle = "IWCES'17 - The Fifteenth International Workshop on Collaborative Editing Systems",
+  year = 	 2017,
+  month = 	 feb,
+  address = 	 "Portland, OR, USA",
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Merging -- tree-based (including "structured" and "semi-structured")
+%%%
 
 
 
@@ -183,8 +287,6 @@
   crossref =     "FSE2011",
   pages = 	 "190--200",
 }
-
-
 
 
 @InProceedings{TrindadeTavaresBCS2019,
@@ -218,108 +320,28 @@
 }
 
 
-@article{10.1145/3276535,
-author = {Sousa, Marcelo and Dillig, Isil and Lahiri, Shuvendu K.},
-title = {Verified Three-Way Program Merge},
-year = {2018},
-issue_date = {November 2018},
-publisher = {Association for Computing Machinery},
-address = {New York, NY, USA},
-volume = {2},
-number = {OOPSLA},
-url = {https://doi.org/10.1145/3276535},
-doi = {10.1145/3276535},
-abstract = {Even though many programmers rely on 3-way merge tools to integrate changes from different branches, such tools can introduce subtle bugs in the integration process. This paper aims to mitigate this problem by defining a semantic notion of conflict-freedom, which ensures that the merged program does not introduce new unwanted behaviors. We also show how to verify this property using a novel, compositional algorithm that combines lightweight summarization for shared program fragments with precise relational reasoning for the modifications. Towards this goal, our method uses a 4-way differencing algorithm on abstract syntax trees to represent different program versions as edits applied to a shared program with holes. This representation allows our verification algorithm to reason about different edits in isolation and compose them to obtain an overall proof of conflict freedom. We have implemented the proposed technique in a new tool called SafeMerge for Java and evaluate it on 52 real-world merge scenarios obtained from GitHub. The experimental results demonstrate the benefits of our approach over syntactic conflict-freedom and indicate that SafeMerge is both precise and practical.},
-journal = {Proc. ACM Program. Lang.},
-month = {oct},
-articleno = {165},
-numpages = {29},
-keywords = {Three-way program merge, product programs, relational verification}
+
+
+@InProceedings{AsenovGMO2017,
+  author = 	 "Asenov, Dimitar and Guenat, Balz and M{\"u}ller, Peter and Otth, Martin",
+  title = 	 "Precise Version Control of Trees with Line-Based Version Control Systems",
+  crossref =  "FASE2017",
+  pages = 	 "152-169",
+  abstract=
+   "Version control of tree structures, ubiquitous in software engineering, is
+    typically performed on a textual encoding of the trees, rather than the trees
+    directly. Applying standard line-based diff and merge algorithms to such
+    encodings leads to inaccurate diffs, unnecessary conflicts, and incorrect
+    merges. To address these problems, we propose novel algorithms for computing
+    precise diffs between two versions of a tree and for three-way merging of
+    trees. Unlike most other approaches for version control of structured data,
+    our approach integrates with mainstream version control systems. Our merge
+    algorithm can be customized for specific application domains to further
+    improve merge results. An evaluation of our approach on abstract syntax trees
+    from popular Java projects shows substantially improved merge results
+    compared to Git.",
 }
 
-
-@Article{GhiottoMBvdH2020,
-  author = 	 "Ghiotto, Gleiph and Murta, Leonardo and Barros, M{\'a}rcio and van der Hoek, Andr{\'e}",
-  authorUTF =  "Ghiotto, Gleiph and Murta, Leonardo and Barros, Márcio and van der Hoek, André",
-  authorASCII =  "Ghiotto, Gleiph and Murta, Leonardo and Barros, Marcio and van der Hoek, Andre",
-  title = 	 "On the Nature of Merge Conflicts: A Study of 2,731 Open Source {Java} Projects Hosted by {GitHub}",
-  journal = 	 ieeetse,
-  year = 	 2020,
-  volume = 	 46,
-  number = 	 8,
-  pages = 	 "892-915",
-  month = 	 aug,
-}
-
-
-
-
-
-
-
-
-@ARTICLE{9591645,
-  author={Seibt, Georg and Heck, Florian and Cavalcanti, Guilherme and Borba, Paulo and Apel, Sven},
-  journal={IEEE Transactions on Software Engineering},
-  title={Leveraging Structure in Software Merge: An Empirical Study},
-  year={2022},
-  volume={48},
-  number={11},
-  pages={4590-4610},
-  doi={10.1109/TSE.2021.3123143}}
-Svyatkovskiy et al say:
-"Seibt et al. [37] explore and evaluate merge
-algorithms on a suite of ten software repositories, paying attention
-to the amount of resolutions produced, size of conflict, runtime
-cost, and correctness. Interestingly, they use the test suites of each
-project as an oracle to assess correctness of code after the merge."
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@inproceedings{10.1145/1826147.1826154,
-author = {Koegel, Maximilian and Herrmannsdoerfer, Markus and von Wesendonk, Otto and Helming, Jonas},
-title = {Operation-Based Conflict Detection},
-year = {2010},
-isbn = {9781605589602},
-publisher = {Association for Computing Machinery},
-address = {New York, NY, USA},
-url = {https://doi.org/10.1145/1826147.1826154},
-doi = {10.1145/1826147.1826154},
-abstract = {In recent years, models are increasingly used throughout the entire lifecycle in software engineering projects. In effect, the need for collaboration and for management of change on these models emerged. Traditionally, Software Configuration Management (SCM) systems are employed to facilitate collaboration on software engineering artifacts and to control change to these artifacts. For scalability and to support offline operation, most of these systems employ optimistic concurrency control and therefore require methods to detect concurrent change---also known as conflict detection. However, many researchers have shown that existing approaches for SCM systems do not work well on graph-like models, since they are geared towards textual artifacts and do not take the graph structure of models into account. The approaches for conflict detection in these systems show many false positives, since they require a merge every time the same configuration item --- in this case the same file --- is changed. In this paper, we propose operation-based conflict detection, which detects conflicts directly on the operations that change the model. We compare operation-based conflict detection to file-based conflict detection in a multi-case study and show that operation-based conflict detection results in less conflicts and therefore requires fewer merges.},
-booktitle = {Proceedings of the 1st International Workshop on Model Comparison in Practice},
-pages = {21-30},
-numpages = {10},
-keywords = {conflict detection, model merging, software configuration management, operation-based, version control},
-location = {Malaga, Spain},
-series = {IWMCP '10}
-}
-@inproceedings{10.1109/CVSM.2009.5071721,
-author = {Koegel, Maximilian and Helming, Jonas and Seyboth, Stephan},
-title = {Operation-Based Conflict Detection and Resolution},
-year = {2009},
-isbn = {9781424437146},
-publisher = {IEEE Computer Society},
-address = {USA},
-url = {https://doi.org/10.1109/CVSM.2009.5071721},
-doi = {10.1109/CVSM.2009.5071721},
-abstract = {Models are in wide-spread use in the software development lifecycle and model-driven development even promotes them from an abstraction of the system to the description the system is generated from. Therefore it is increasingly important to collaborate on models. These models can range from requirements models over UML models to project management models such as schedules. Tool support for collaboration on models is therefore crucial. Traditionally Software Configuration Management (SCM) systems such as RCS [9] or Subversion [10] have supported this task for textual artifacts such as source code on the granularity of files and textual lines. They do not work well for graph-like models with many links since the granularity needed to support them is on the level of model elements and their attributes. For the design of a novel SCM system addressing these requirements it is essential to define how conflicts on models are detected and how they can be resolved. In this paper we present an approach to conflict detection and resolution on models. We employ operation-based change tracking and therefore detect conflicts based on operations. For conflict resolution we propose an integration of SCM with techniques from Rational Management to effectively resolve conflicts.},
-booktitle = {Proceedings of the 2009 ICSE Workshop on Comparison and Versioning of Software Models},
-pages = {43-48},
-numpages = {6},
-series = {CVSM '09}
-}
 
 
 
@@ -361,27 +383,6 @@ series = {DocEng '13}
 }
 
 
-@inproceedings{10.1145/3524842.3528448,
-author = {Kudrjavets, Gunnar and Nagappan, Nachiappan and Rastogi, Ayushi},
-title = {Do Small Code Changes Merge Faster? A Multi-Language Empirical Investigation},
-year = {2022},
-isbn = {9781450393034},
-publisher = {Association for Computing Machinery},
-address = {New York, NY, USA},
-url = {https://doi.org/10.1145/3524842.3528448},
-doi = {10.1145/3524842.3528448},
-abstract = {Code velocity, or the speed with which code changes are integrated into a production environment, plays a crucial role in Continuous Integration and Continuous Deployment. Many studies report factors influencing code velocity. However, solutions to increase code velocity are unclear. Meanwhile, the industry continues to issue guidelines on "ideal" code change size, believing it increases code velocity despite lacking evidence validating the practice. Surprisingly, this fundamental question has not been studied to date. This study investigates the practicality of improving code velocity by optimizing pull request size and composition (ratio of insertions, deletions, and modifications).
-\par
-We start with a hypothesis that a moderate correlation exists between pull request size and time-to-merge. We selected 100 most popular, actively developed projects from 10 programming languages on GitHub. We analyzed our dataset of 845,316 pull requests by size, composition, and context to explore its relationship to time-to-merge---a proxy to measure code velocity. Our study shows that pull request size and composition do not relate to time-to-merge. Regardless of the contextual factors that can influence pull request size or composition (e.g., programming language), the observation holds. Pull request data from two other platforms: Gerrit and Phabricator (401,790 code reviews) confirms the lack of relationship. This negative result as in "...eliminate useless hypotheses ..." [75] challenges a widespread belief by showing that small code changes do not merge faster to increase code velocity.},
-booktitle = {Proceedings of the 19th International Conference on Mining Software Repositories},
-pages = {537-548},
-numpages = {12},
-keywords = {code review velocity, pull request size, GitHub, pull request},
-location = {Pittsburgh, Pennsylvania},
-series = {MSR '22}
-}
-
-
 
 
 @Article{LarsenFBM2023,
@@ -396,10 +397,127 @@ series = {MSR '22}
 }
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Merging -- graph-based
+%%%
+
+@InProceedings{HorwitzPR88a,
+  author = 	 "Susan Horwitz and Jan Prins and Thomas Reps",
+  title = 	 "Integrating non-interfering versions of programs",
+  crossref = 	 "POPL88",
+  pages =	 "146--157",
+}
+
+
+@Article{HorwitzPR89:TOPLAS,
+  author = 	 "Susan Horwitz and Jan Prins and Thomas Reps",
+  title = 	 "Integrating non-interfering versions of programs",
+  journal =	 toplas,
+  year =	 1989,
+  volume =	 11,
+  number =	 3,
+  pages =	 "345--387",
+  month =	 jul
+}
+
+
+@TechReport{Binkley91,
+  author = 	 "David W. Binkley",
+  title = 	 "Multi-Procedure Program Integration",
+  institution =  UWMadison,
+  year = 	 1991,
+  number =	 1038,
+  month =	 Aug
+}
 
 
 
 
+@inproceedings{10.1145/1826147.1826154,
+author = {Koegel, Maximilian and Herrmannsdoerfer, Markus and von Wesendonk, Otto and Helming, Jonas},
+title = {Operation-Based Conflict Detection},
+year = {2010},
+isbn = {9781605589602},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/1826147.1826154},
+doi = {10.1145/1826147.1826154},
+abstract = {In recent years, models are increasingly used throughout the entire lifecycle in software engineering projects. In effect, the need for collaboration and for management of change on these models emerged. Traditionally, Software Configuration Management (SCM) systems are employed to facilitate collaboration on software engineering artifacts and to control change to these artifacts. For scalability and to support offline operation, most of these systems employ optimistic concurrency control and therefore require methods to detect concurrent change---also known as conflict detection. However, many researchers have shown that existing approaches for SCM systems do not work well on graph-like models, since they are geared towards textual artifacts and do not take the graph structure of models into account. The approaches for conflict detection in these systems show many false positives, since they require a merge every time the same configuration item --- in this case the same file --- is changed. In this paper, we propose operation-based conflict detection, which detects conflicts directly on the operations that change the model. We compare operation-based conflict detection to file-based conflict detection in a multi-case study and show that operation-based conflict detection results in less conflicts and therefore requires fewer merges.},
+booktitle = {Proceedings of the 1st International Workshop on Model Comparison in Practice},
+pages = {21-30},
+numpages = {10},
+keywords = {conflict detection, model merging, software configuration management, operation-based, version control},
+location = {Malaga, Spain},
+series = {IWMCP '10}
+}
+@inproceedings{10.1109/CVSM.2009.5071721,
+author = {Koegel, Maximilian and Helming, Jonas and Seyboth, Stephan},
+title = {Operation-Based Conflict Detection and Resolution},
+year = {2009},
+isbn = {9781424437146},
+publisher = {IEEE Computer Society},
+address = {USA},
+url = {https://doi.org/10.1109/CVSM.2009.5071721},
+doi = {10.1109/CVSM.2009.5071721},
+abstract = {Models are in wide-spread use in the software development lifecycle and model-driven development even promotes them from an abstraction of the system to the description the system is generated from. Therefore it is increasingly important to collaborate on models. These models can range from requirements models over UML models to project management models such as schedules. Tool support for collaboration on models is therefore crucial. Traditionally Software Configuration Management (SCM) systems such as RCS [9] or Subversion [10] have supported this task for textual artifacts such as source code on the granularity of files and textual lines. They do not work well for graph-like models with many links since the granularity needed to support them is on the level of model elements and their attributes. For the design of a novel SCM system addressing these requirements it is essential to define how conflicts on models are detected and how they can be resolved. In this paper we present an approach to conflict detection and resolution on models. We employ operation-based change tracking and therefore detect conflicts based on operations. For conflict resolution we propose an integration of SCM with techniques from Rational Management to effectively resolve conflicts.},
+booktitle = {Proceedings of the 2009 ICSE Workshop on Comparison and Versioning of Software Models},
+pages = {43-48},
+numpages = {6},
+series = {CVSM '09}
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Merging -- neural, deep learning
+%%%
+
+
+
+
+
+@inproceedings{10.1145/3540250.3549163,
+author = {Svyatkovskiy, Alexey and Fakhoury, Sarah and Ghorbani, Negar and Mytkowicz, Todd and Dinella, Elizabeth and Bird, Christian and Jang, Jinu and Sundaresan, Neel and Lahiri, Shuvendu K.},
+title = {Program Merge Conflict Resolution via Neural Transformers},
+year = {2022},
+isbn = {9781450394130},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3540250.3549163},
+doi = {10.1145/3540250.3549163},
+abstract = {Collaborative software development is an integral part of the modern software development life cycle, essential to the success of large-scale software projects. When multiple developers make concurrent changes around the same lines of code, a merge conflict may occur. Such conflicts stall pull requests and continuous integration pipelines for hours to several days, seriously hurting developer productivity. To address this problem, we introduce MergeBERT, a novel neural program merge framework based on token-level three-way differencing and a transformer encoder model. By exploiting the restricted nature of merge conflict resolutions, we reformulate the task of generating the resolution sequence as a classification task over a set of primitive merge patterns extracted from real-world merge commit data. Our model achieves 63-68% accuracy for merge resolution synthesis, yielding nearly a 3\texttimes{} performance improvement over existing semi-structured, and 2\texttimes{} improvement over neural program merge tools. Finally, we demonstrate that MergeBERT is sufficiently flexible to work with source code files in Java, JavaScript, TypeScript, and C# programming languages. To measure the practical use of MergeBERT, we conduct a user study to evaluate MergeBERT suggestions with 25 developers from large OSS projects on 122 real-world conflicts they encountered. Results suggest that in practice, MergeBERT resolutions would be accepted at a higher rate than estimated by automatic metrics for precision and accuracy. Additionally, we use participant feedback to identify future avenues for improvement of MergeBERT.},
+booktitle = {Proceedings of the 30th ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering},
+pages = {822-833},
+numpages = {12},
+keywords = {program merge, Software evolution, ml4code},
+location = {Singapore, Singapore},
+series = {ESEC/FSE 2022}
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Merging -- other representations
+%%%
+
+
+@article{10.1145/3276535,
+author = {Sousa, Marcelo and Dillig, Isil and Lahiri, Shuvendu K.},
+title = {Verified Three-Way Program Merge},
+year = {2018},
+issue_date = {November 2018},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {2},
+number = {OOPSLA},
+url = {https://doi.org/10.1145/3276535},
+doi = {10.1145/3276535},
+abstract = {Even though many programmers rely on 3-way merge tools to integrate changes from different branches, such tools can introduce subtle bugs in the integration process. This paper aims to mitigate this problem by defining a semantic notion of conflict-freedom, which ensures that the merged program does not introduce new unwanted behaviors. We also show how to verify this property using a novel, compositional algorithm that combines lightweight summarization for shared program fragments with precise relational reasoning for the modifications. Towards this goal, our method uses a 4-way differencing algorithm on abstract syntax trees to represent different program versions as edits applied to a shared program with holes. This representation allows our verification algorithm to reason about different edits in isolation and compose them to obtain an overall proof of conflict freedom. We have implemented the proposed technique in a new tool called SafeMerge for Java and evaluate it on 52 real-world merge scenarios obtained from GitHub. The experimental results demonstrate the benefits of our approach over syntactic conflict-freedom and indicate that SafeMerge is both precise and practical.},
+journal = {Proc. ACM Program. Lang.},
+month = {oct},
+articleno = {165},
+numpages = {29},
+keywords = {Three-way program merge, product programs, relational verification}
+}
 
 
 @Article{Berzins1994,
@@ -434,43 +552,9 @@ keywords = {version space algebra, conflict resolution, Revision control systems
 }
 
 
-@inproceedings{10.1145/3540250.3549163,
-author = {Svyatkovskiy, Alexey and Fakhoury, Sarah and Ghorbani, Negar and Mytkowicz, Todd and Dinella, Elizabeth and Bird, Christian and Jang, Jinu and Sundaresan, Neel and Lahiri, Shuvendu K.},
-title = {Program Merge Conflict Resolution via Neural Transformers},
-year = {2022},
-isbn = {9781450394130},
-publisher = {Association for Computing Machinery},
-address = {New York, NY, USA},
-url = {https://doi.org/10.1145/3540250.3549163},
-doi = {10.1145/3540250.3549163},
-abstract = {Collaborative software development is an integral part of the modern software development life cycle, essential to the success of large-scale software projects. When multiple developers make concurrent changes around the same lines of code, a merge conflict may occur. Such conflicts stall pull requests and continuous integration pipelines for hours to several days, seriously hurting developer productivity. To address this problem, we introduce MergeBERT, a novel neural program merge framework based on token-level three-way differencing and a transformer encoder model. By exploiting the restricted nature of merge conflict resolutions, we reformulate the task of generating the resolution sequence as a classification task over a set of primitive merge patterns extracted from real-world merge commit data. Our model achieves 63-68% accuracy for merge resolution synthesis, yielding nearly a 3\texttimes{} performance improvement over existing semi-structured, and 2\texttimes{} improvement over neural program merge tools. Finally, we demonstrate that MergeBERT is sufficiently flexible to work with source code files in Java, JavaScript, TypeScript, and C# programming languages. To measure the practical use of MergeBERT, we conduct a user study to evaluate MergeBERT suggestions with 25 developers from large OSS projects on 122 real-world conflicts they encountered. Results suggest that in practice, MergeBERT resolutions would be accepted at a higher rate than estimated by automatic metrics for precision and accuracy. Additionally, we use participant feedback to identify future avenues for improvement of MergeBERT.},
-booktitle = {Proceedings of the 30th ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering},
-pages = {822-833},
-numpages = {12},
-keywords = {program merge, Software evolution, ml4code},
-location = {Singapore, Singapore},
-series = {ESEC/FSE 2022}
-}
-
-
-@inproceedings{10.1145/2661136.2661137,
-author = {Swierstra, Wouter and L{\"o}h, Andres},
-authorASCII = {Swierstra, Wouter and Loh, Andres},
-title = {The Semantics of Version Control},
-year = {2014},
-isbn = {9781450332101},
-publisher = {Association for Computing Machinery},
-address = {New York, NY, USA},
-url = {https://doi.org/10.1145/2661136.2661137},
-doi = {10.1145/2661136.2661137},
-abstract = {As software becomes increasingly complex, software configuration management is becoming ever more important. This paper shows how logics for reasoning about mutable state, such as separation logic, can also be used to give semantics for version control systems. By applying these ideas from the programming language research community, developers may reason formally about the broader software development process.},
-booktitle = {Proceedings of the 2014 ACM International Symposium on New Ideas, New Paradigms, and Reflections on Programming \& Software},
-pages = {43-54},
-numpages = {12},
-keywords = {separation logic, semantics, hoare logic, version control},
-location = {Portland, Oregon, USA},
-series = {Onward! 2014}
-}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% New version control systems
+%%%
 
 @inproceedings{10.1145/2905055.2905072,
 author = {Rao, N. Rama and Sekharaiah, K. Chandra},
@@ -490,6 +574,18 @@ location = {Udaipur, India},
 series = {ICTCS '16}
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
 @inproceedings{10.1145/3135932.3135943,
 author = {Cavalcanti, Guilherme},
 title = {What Merge Tool Should I Use?},
@@ -508,23 +604,6 @@ location = {Vancouver, BC, Canada},
 series = {SPLASH Companion 2017}
 }
 
-@inproceedings{10.1145/3422392.3422440,
-author = {Menezes, Jos\'{e} William and Trindade, Bruno and Pimentel, Jo\~{a}o Felipe and Moura, Tayane and Plastino, Alexandre and Murta, Leonardo and Costa, Catarina},
-title = {What Causes Merge Conflicts?},
-year = {2020},
-isbn = {9781450387538},
-publisher = {Association for Computing Machinery},
-address = {New York, NY, USA},
-url = {https://doi.org/10.1145/3422392.3422440},
-doi = {10.1145/3422392.3422440},
-abstract = {During the software development process, several developers commonly change artifacts in parallel. A merge process can combine parallel changes. In the case of changes that cannot be automatically combined, the developer responsible for the merge must reconcile decisions and resolve conflicts. Some studies are concerned with investigating ways to deal with merge conflicts and measuring the effort that this activity may require. However, the investigation of factors that may reduce the occurrence of conflicts needs more and deeper attention. This paper aims at identifying and analyzing attributes of past merges with and without conflicts to understand what may induce physical conflicts. We analyzed 182,273 merge scenarios from 80 projects written in eight different programming languages to find characteristics that increase the chances of a merge to have a conflict. We found that attributes such as the number of committers, the number of commits, and the number of changed files seem to have the biggest influence in the occurrence of merge conflicts. Moreover, attributes in the branch that is being integrated seem to be more influential than the same attributes in the other branch. Additionally, we discovered positive correlations between the occurrence of conflicts and both the duration of the branch and the intersection of developers.},
-booktitle = {Proceedings of the XXXIV Brazilian Symposium on Software Engineering},
-pages = {203-212},
-numpages = {10},
-keywords = {Attributes, Merge, Merge Conflicts, Repository Mining},
-location = {Natal, Brazil},
-series = {SBES '20}
-}
 
 @inproceedings{10.1109/ASE.2019.00098,
 author = {Tavares, Alberto Trindade and Borba, Paulo and Cavalcanti, Guilherme and Soares, S\'{e}rgio},
@@ -864,6 +943,7 @@ series = {OOPSLA '06}
 
 
 
+
 @MastersThesis{Ellis2022,
   author = 	 "Max Ellis",
   title = 	 "A Systematic Comparison of Two Refactoring-aware Merging Techniques",
@@ -871,6 +951,25 @@ series = {OOPSLA '06}
   year = 	 2022,
   address = 	 "Alberta, Canada",
 }
+
+
+
+@Article{EllisND2023,
+  author = 	 "Ellis, Max and Nadi, Sarah and Dig, Danny",
+  title = 	 "Operation-Based Refactoring-Aware Merging: An Empirical Evaluation",
+  journal = 	 IEEETSE,
+  year = 	 2023,
+  volume = 	 49,
+  number = 	 4,
+  pages = 	 "2698-2721",
+  month = 	 apr,
+}
+
+
+
+
+
+
 
 
 
@@ -1064,25 +1163,6 @@ series = {SIGDOC '08}
 }
 
 
-@article{10.1145/383876.383878,
-author = {Perry, Dewayne E. and Siy, Harvey P. and Votta, Lawrence G.},
-title = {Parallel Changes in Large-Scale Software Development: An Observational Case Study},
-year = {2001},
-issue_date = {July 2001},
-publisher = {Association for Computing Machinery},
-address = {New York, NY, USA},
-volume = {10},
-number = {3},
-issn = {1049-331X},
-url = {https://doi.org/10.1145/383876.383878},
-doi = {10.1145/383876.383878},
-abstract = {An essential characteristic of large-scale software development is parallel development by teams of developers. How this parallel development is structured and supported has a profound effect on both the quality and timeliness of the product. We conduct an observational case study in which we collect and analyze the change and configuration management history of a legacy system to delineate the boundaries of, and to understand the nature of, the problems encountered in parallel development. The results of our studies are (1) that the degree of parallelism is very high -- higher than considered by tool builders; (2) there are multiple levels of parallelism, and the data for some important aspects are uniform and consistent for all levels; (3) the tails of the distributions are long, indicating the tail, rather than the mean, must receive serious attention in providing solutions for these problems; and (4) there is a significant correlation between the degree of parallel work on a given component and the number of quality problems it has. Thus, the results of this study are important both for tool builders and for process and project engineers.},
-journal = {ACM Trans. Softw. Eng. Methodol.},
-month = {jul},
-pages = {308-337},
-numpages = {30},
-keywords = {merging interfering and noninterfering versions, change management, parallel/concurrent changes, parallel versions, software integration}
-}
 
 
 
