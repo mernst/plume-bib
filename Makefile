@@ -63,10 +63,14 @@ bibtest: all bibtest-aux-clean bibtest.tex
 	@echo -n 'First pdflatex run, suppressing warnings...'
 	@-pdflatex -interaction=nonstopmode bibtest >/dev/null 2>&1
 	@echo 'done'
-	bibtex -terse -min-crossrefs=9999 bibtest 2>&1 | grep -v "Warning--to sort, need editor, organization"
+	@echo
+	@echo "bibtex bibtest"
+	@bibtex -terse -min-crossrefs=9999 bibtest 2>&1 | grep -v "Warning--to sort, need editor, organization" | grep -v "Warning--empty note in EWD:EWD303" | grep -v "Warning--empty author in IR95:tr" | grep -v "Warning--empty publisher in LindholmBBY:JVMS3" | grep -v "Warning--empty year in LindholmBBY:JVMS3"
+	@echo
 	@echo -n 'Second pdflatex run, suppressing warnings...'
 	@-pdflatex -interaction=nonstopmode bibtest >/dev/null 2>&1
 	@echo 'done'
+	@echo
 	@echo 'Third pdflatex run, now warnings matter:'
 	pdflatex -interaction=nonstopmode bibtest
 # This doesn't work.  I don't want non-ASCII characters within used fields of
