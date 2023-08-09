@@ -65,6 +65,25 @@
 
 
 
+@inproceedings{10.1145/3238147.3238219,
+author = {Huang, Kaifeng and Chen, Bihuan and Peng, Xin and Zhou, Daihong and Wang, Ying and Liu, Yang and Zhao, Wenyun},
+title = {ClDiff: Generating Concise Linked Code Differences},
+year = {2018},
+isbn = {9781450359375},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3238147.3238219},
+doi = {10.1145/3238147.3238219},
+abstract = {Analyzing and understanding source code changes is important in a variety of software maintenance tasks. To this end, many code differencing and code change summarization methods have been proposed. For some tasks (e.g. code review and software merging), however, those differencing methods generate too fine-grained a representation of code changes, and those summarization methods generate too coarse-grained a representation of code changes. Moreover, they do not consider the relationships among code changes. Therefore, the generated differences or summaries make it not easy to analyze and understand code changes in some software maintenance tasks. In this paper, we propose a code differencing approach, named CLDIFF, to generate concise linked code differences whose granularity is in between the existing code differencing and code change summarization methods. The goal of CLDIFF is to generate more easily understandable code differences. CLDIFF takes source code files before and after changes as inputs, and consists of three steps. First, it pre-processes the source code files by pruning unchanged declara- tions from the parsed abstract syntax trees. Second, it generates concise code differences by grouping fine-grained code differences at or above the statement level and describing high-level changes in each group. Third, it links the related concise code differences according to five pre-defined links. Experiments with 12 Java projects (74,387 commits) and a human study with 10 participants have indicated the accuracy, conciseness, performance and usefulness of CLDIFF.},
+booktitle = {Proceedings of the 33rd ACM/IEEE International Conference on Automated Software Engineering},
+pages = {679–690},
+numpages = {12},
+keywords = {Code Differencing, Program Comprehension, AST},
+location = {Montpellier, France},
+series = {ASE '18}
+}
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Diff -- graph-based
@@ -843,9 +862,42 @@ numpages = {10},
 }
 
 
+@InProceedings{WangLZX2019,
+  author = 	 "Wang, Min and Lin, Zeqi and Zou, Yanzhen and Xie, Bing",
+  title = 	 "{CoRA}: Decomposing and describing tangled code changes for reviewer",
+  crossref =  "ASE2019",
+  pages = 	 "1050–1061",
+  abstract =
+   "Code review is an important mechanism for code quality assurance both in
+    open source software and industrial software. Reviewers usually suffer from
+    numerous, tangled and loosely related code changes that are bundled in a
+    single commit, which makes code review very difficult. In this paper, we
+    propose CoRA (<u>Co</u>de <u>R</u>eview <u>A</u>ssistant), an automatic
+    approach to decompose a commit into different parts and generate concise
+    descriptions for reviewers. More specifically, CoRA can decompose a commit
+    into independent parts (e.g., bug fixing, new feature adding, or
+    refactoring) by code dependency analysis and tree-based similar-code
+    detection, then identify the most important code changes in each part based
+    on the PageRank algorithm and heuristic rules. As a result, CoRA can
+    generate a concise description for each part of the commit. We evaluate our
+    approach in seven open source software projects and 50 code commits. The
+    results indicate that CoRA can improve the accuracy of decomposing code
+    changes by 6.3\% over the state-of-art practice. At the same time, CoRA can
+    identify the important part from the fine-grained code changes with a mean
+    average precision (MAP) of 87.7\%. We also conduct a human study with eight
+    participants to evaluate the performance and usefulness of CoRA, the user
+    feedback indicates that CoRA can effectively help reviewers.",
+}
 
 
-@INPROCEEDINGS{7194568,  author={Barnett, Mike and Bird, Christian and Brunet, João and Lahiri, Shuvendu K.},  booktitle={2015 IEEE/ACM 37th IEEE International Conference on Software Engineering},   title={Helping Developers Help Themselves: Automatic Decomposition of Code Review Changesets},   year={2015},  volume={1},  number={},  pages={134-144},  doi={10.1109/ICSE.2015.35}}
+@InProceedings{BarnettBBL2015,
+  author = 	 "Barnett, Mike and Bird, Christian and Brunet, Jo{\~a}o and Lahiri, Shuvendu K.",
+  authorASCII =  "Barnett, Mike and Bird, Christian and Brunet, Joao and Lahiri, Shuvendu K.",
+  authorUTF8 = 	 "Barnett, Mike and Bird, Christian and Brunet, João and Lahiri, Shuvendu K.",
+  title = 	 "Helping developers help themselves: Automatic decomposition of code review changesets",
+  crossref =  "ICSE2015",
+  pages = 	 "134-144",
+}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -927,6 +979,7 @@ keywords = {Linux, Evolution, Version Control History, Traceability},
 location = {Hyderabad, India},
 series = {MSR 2014}
 }
+
 
 
 
