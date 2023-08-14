@@ -11203,7 +11203,7 @@ with an {SMT} solver",
 
 @Article{KelloggSSE2022:artifact,
   author = 	 "Martin Kellogg and Narges Shadab and Manu Sridharan and Michael D. Ernst",
-  title = 	 "Accumulation Analysis (Artifact)",
+  title = 	 "Accumulation analysis (artifact)",
   journal =	 "DARTS, Dagstuhl Artifacts Series",
   year = 	 2022,
   volume = 	 8,
@@ -11227,7 +11227,8 @@ with an {SMT} solver",
     were accumulation would have been much simpler. Anyone interested in
     properties of typestate automata can re-use our work.",
   basefilename = "accumulation-analysis-ecoop2022-artifact",
-  downloads = "https://drops.dagstuhl.de/opus/volltexte/2022/16220/artifact/DARTS-8-2-22-artifact-429b8a9421df64399b328dfa1e075a9d.zip artifact",
+  downloads = "https://checkerframework.org/ implementation;
+               https://drops.dagstuhl.de/opus/volltexte/2022/16220/artifact/DARTS-8-2-22-artifact-429b8a9421df64399b328dfa1e075a9d.zip artifact",
   category =  "Verification",
   csetags =   "kelloggm,mernst,mernst-Verification,plse",
   summary =
@@ -11306,10 +11307,11 @@ with an {SMT} solver",
   NEEDpages = 	 "*",
   abstract =
    "A pluggable type system extends a host programming language with type
-    qualifiers.  It lets programmers write types like \<unsigned int>, \<secret
-    string>, and \<nonnull object>.  Typechecking with pluggable types detects
-    and prevents more errors than the host type system.  However, the need for
-    programmers to write type qualifiers is the biggest obstacle to use of
+    qualifiers.  It lets programmers write types like
+    \texttt{unsigned int}, \texttt{secret string}, and \texttt{nonnull object}.
+    Typechecking with pluggable types detects
+    and prevents more errors than the host type system.  However,
+    programmers must write type qualifiers; this is the biggest obstacle to use of
     pluggable types in practice.  Type inference can solve this problem.
     Traditional approaches to type inference are type-system-specific:  for
     each new pluggable type system, the type inference algorithm must be
@@ -11346,6 +11348,58 @@ with an {SMT} solver",
     type-checker implementation, the framework automatically creates a type
     inference tool.",
 }
+
+
+@InProceedings{ShadabGTEKLLS2023,
+  author = 	 "Shadab, Narges and Gharat, Pritam and Tiwari, Shrey and Ernst, Michael D. and Kellogg, Martin and Lahiri, Shuvendu and Lal, Akash and Sridharan, Manu",
+  title = 	 "Inference of resource management specifications",
+  crossref =  "OOPSLA2023",
+  NEEDpages = 	 "*",
+  abstract =
+   "A resource leak occurs when a program fails to free some finite resource
+    after it is no longer needed. Such leaks are a significant cause of
+    real-world crashes and performance problems.
+    We recently
+    proposed an approach to prevent resource leaks based on checking
+    \textit{resource management specifications}.
+    A resource management specification expresses how the program allocates
+    resources, passes them around, and releases them; it also tracks
+    the ownership relationship between objects and resources, and
+    aliasing relationships between objects.
+    While this specify-and-verify approach has several advantages compared to
+    prior techniques, the need to manually write annotations presents a
+    significant barrier to its practical adoption.
+    \par
+    This paper presents a novel technique to automatically infer a resource
+    management specification for a program, broadening the applicability of
+    specify-and-check verification for resource leaks.  Inference in this domain is
+    challenging because resource management specifications differ significantly in
+    nature from the types that most inference techniques target.  Further, for
+    practical effectiveness, we desire a technique that can infer the resource
+    management specification intended by the developer, even in cases when the code
+    does not fully adhere to that specification.  We address these challenges
+    through a set of inference rules carefully designed to capture real-world coding
+    patterns, yielding an effective fixed-point-based inference algorithm.
+    \par
+    We have implemented our inference algorithm in two different systems,
+    targeting programs written in Java and C\#.
+    In an experimental evaluation,
+    our technique inferred 85.5\%
+    of the annotations that programmers had written
+    manually for the benchmarks.
+    Further, the verifier issued nearly the same rate of false alarms with the
+    manually-written and automatically-inferred annotations.",
+  basefilename = "resource-inference-oopsla2023",
+  downloads = "https://checkerframework.org/ implementation",
+  OPTdownloadsnonlocal = "",
+  category =  "Static analysis",
+  csetags = "mernst,mernst-Static-analysis,plse",
+  summary =
+   "This paper proposes an optimistic analysis to infer specifications about how
+    a program uses and releases resources.  Inference reduces the programmer
+    burden to use a specify-and-verify approach to preventing resource leaks.",
+}
+
 
 
 %% When I add here at the bottom of the file, also post a PLSE news item

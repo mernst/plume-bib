@@ -1940,6 +1940,17 @@
 }
 
 
+@Misc{reinvent-compliance-talk,
+  OPTkey = 	 "",
+  author = 	 "Woolf, Chad and Cook, Byron and McAndrew, Tom",
+  title = 	 "Automate Compliance Verification on {AWS} Using Provable Security",
+  howpublished = "\url{https://www.youtube.com/watch?v=BbXK_-b3DTk}",
+  month = 	 dec,
+  year = 	 "2019",
+  note = 	 "Accessed 25 August 2020",
+}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Parameterized types (generics)
 %%%
@@ -2226,6 +2237,17 @@
 }
 
 
+@article{grigore2017java,
+  title={Java generics are {T}uring complete},
+  author={Grigore, Radu},
+  journal={{ACM} {SIGPLAN} Notices ({POPL})},
+  volume={52},
+  number={1},
+  pages={73--85},
+  year={2017},
+  publisher={ACM New York, NY, USA}
+}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Type and effect systems
@@ -2480,6 +2502,26 @@
 }
 
 
+@article{parreaux2022mlstruct,
+  title={{MLstruct}: principal type inference in a Boolean algebra of structural types},
+  author={Parreaux, Lionel and Chau, Chun Yin},
+  journal={Proceedings of the ACM on Programming Languages},
+  volume={6},
+  number={OOPSLA2},
+  pages={449--478},
+  year={2022},
+  publisher={ACM New York, NY, USA}
+}
+
+@inproceedings{dolan2017polymorphism,
+  title={Polymorphism, subtyping, and type inference in {MLsub}},
+  author={Dolan, Stephen and Mycroft, Alan},
+  booktitle={Symposium on Principles of Programming Languages (POPL)},
+  pages={60--72},
+  year={2017}
+}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Machine learning for type inference
 %%%
@@ -2514,6 +2556,32 @@
 
 
 
+
+
+@inproceedings{hassan2018maxsmt,
+  title={{MaxSMT}-based type inference for {Python} 3},
+  author={Hassan, Mostafa and Urban, Caterina and Eilers, Marco and M{\"u}ller, Peter},
+  booktitle={International Conference on Computer Aided Verification (CAV)},
+  pages={12--19},
+  year={2018},
+  organization={Springer}
+}
+
+@inproceedings{xu2016python,
+  title={Python probabilistic type inference with natural language support},
+  author={Xu, Zhaogui and Zhang, Xiangyu and Chen, Lin and Pei, Kexin and Xu, Baowen},
+  booktitle={Joint European Software Engineering Conference and Symposium on Foundations of Software Engineering (ESEC/FSE)},
+  pages={607--618},
+  year={2016}
+}
+
+@inproceedings{peng2022static,
+  title={Static inference meets deep learning: a hybrid type inference approach for {Python}},
+  author={Peng, Yun and Gao, Cuiyun and Li, Zongjie and Gao, Bowei and Lo, David and Zhang, Qirun and Lyu, Michael},
+  booktitle={International Conference on Software Engineering (ICSE)},
+  pages={2019--2030},
+  year={2022}
+}
 
 
 
@@ -5332,6 +5400,71 @@ keywords = "FindBugs"
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Type error localization
+%%%
+
+@inproceedings{10.1145/2660193.2660230,
+author = {Pavlinovic, Zvonimir and King, Tim and Wies, Thomas},
+title = {Finding Minimum Type Error Sources},
+year = {2014},
+isbn = {9781450325851},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/2660193.2660230},
+doi = {10.1145/2660193.2660230},
+abstract = {Automatic type inference is a popular feature of functional programming languages. If a program cannot be typed, the compiler typically reports a single program location in its error message. This location is the point where the type inference failed, but not necessarily the actual source of the error. Other potential error sources are not even considered. Hence, the compiler often misses the true error source, which increases debugging time for the programmer. In this paper, we present a general framework for automatic localization of type errors. Our algorithm finds all minimum error sources, where the exact definition of minimum is given in terms of a compiler-specific ranking criterion. Compilers can use minimum error sources to produce more meaningful error reports, and for automatic error correction. Our approach works by reducing the search for minimum error sources to an optimization problem that we formulate in terms of weighted maximum satisfiability modulo theories (MaxSMT). The reduction to weighted MaxSMT allows us to build on SMT solvers to support rich type systems and at the same time abstract from the concrete criterion that is used for ranking the error sources. We have implemented an instance of our framework targeted at Hindley-Milner type systems and evaluated it on existing OCaml benchmarks for type error localization. Our evaluation shows that our approach has the potential to significantly improve the quality of type error reports produced by state of the art compilers.},
+booktitle = {Proceedings of the 2014 ACM International Conference on Object Oriented Programming Systems Languages and Applications (OOPSLA)},
+pages = {525–542},
+numpages = {18},
+keywords = {satisfiability modulo theories, type errors, diagnostics},
+location = {Portland, Oregon, USA},
+series = {OOPSLA '14}
+}
+
+@inproceedings{DBLP:conf/oopsla/Loncaric0SS16,
+  author    = {Calvin Loncaric and
+               Satish Chandra and
+               Cole Schlesinger and
+               Manu Sridharan},
+  editor    = {Eelco Visser and
+               Yannis Smaragdakis},
+  title     = {A practical framework for type inference error explanation},
+  booktitle = {Proceedings of the 2016 {ACM} {SIGPLAN} International Conference on
+               Object-Oriented Programming, Systems, Languages, and Applications,
+               {OOPSLA} 2016, part of {SPLASH} 2016, Amsterdam, The Netherlands,
+               October 30 - November 4, 2016},
+  pages     = {781--799},
+  publisher = {{ACM}},
+  year      = {2016},
+  url       = {https://doi.org/10.1145/2983990.2983994},
+  doi       = {10.1145/2983990.2983994},
+  timestamp = {Mon, 18 Oct 2021 18:05:52 +0200},
+  biburl    = {https://dblp.org/rec/conf/oopsla/Loncaric0SS16.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@article{zhang2017sherrloc,
+author = {Zhang, Danfeng and Myers, Andrew C. and Vytiniotis, Dimitrios and Peyton-Jones, Simon},
+title = {{SHErrLoc}: A Static Holistic Error Locator},
+year = {2017},
+issue_date = {December 2017},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {39},
+number = {4},
+issn = {0164-0925},
+url = {https://doi.org/10.1145/3121137},
+doi = {10.1145/3121137},
+abstract = {We introduce a general way to locate programmer mistakes that are detected by static analyses. The program analysis is expressed in a general constraint language that is powerful enough to model type checking, information flow analysis, dataflow analysis, and points-to analysis. Mistakes in program analysis result in unsatisfiable constraints. Given an unsatisfiable system of constraints, both satisfiable and unsatisfiable constraints are analyzed to identify the program expressions most likely to be the cause of unsatisfiability. The likelihood of different error explanations is evaluated under the assumption that the programmer’s code is mostly correct, so the simplest explanations are chosen, following Bayesian principles. For analyses that rely on programmer-stated assumptions, the diagnosis also identifies assumptions likely to have been omitted. The new error diagnosis approach has been implemented as a tool called SHErrLoc, which is applied to three very different program analyses, such as type inference for a highly expressive type system implemented by the Glasgow Haskell Compiler—including type classes, Generalized Algebraic Data Types (GADTs), and type families. The effectiveness of the approach is evaluated using previously collected programs containing errors. The results show that when compared to existing compilers and other tools, SHErrLoc consistently identifies the location of programmer errors significantly more accurately, without any language-specific heuristics.},
+journal = {ACM Trans. Program. Lang. Syst.},
+month = {aug},
+articleno = {18},
+numpages = {47},
+keywords = {Jif, static program analysis, Error diagnosis, Haskell, type inference, information flow, OCaml}
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Etc (perhaps will later be broken into more sections)
 %%%
 
@@ -6129,6 +6262,15 @@ keywords = "FindBugs"
     year = {2019},
     note = "version 3.4.0",
     howpublished = "\url{https://checkerframework.org/}"
+}
+
+
+@misc{CheckerFrameworkManual2022,
+  title={The {Checker Framework} Manual: {C}ustom pluggable types for {Java}.},
+  author={{Checker Framework} developers},
+  howpublished={\url{https://checkerframework.org/manual/}},
+  year={2022},
+  note={Accessed 21 November 2022},
 }
 
 
