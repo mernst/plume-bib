@@ -2237,15 +2237,11 @@
 }
 
 
-@article{grigore2017java,
-  title={Java generics are {T}uring complete},
-  author={Grigore, Radu},
-  journal={{ACM} {SIGPLAN} Notices ({POPL})},
-  volume={52},
-  number={1},
-  pages={73--85},
-  year={2017},
-  publisher={ACM New York, NY, USA}
+@InProceedings{Grigore2017,
+  author = 	 "Grigore, Radu",
+  title = 	 "Java generics are {Turing} complete",
+  crossref =  "POPL2017",
+  pages = 	 "73--85",
 }
 
 
@@ -2502,25 +2498,19 @@
 }
 
 
-@article{parreaux2022mlstruct,
-  title={{MLstruct}: principal type inference in a Boolean algebra of structural types},
-  author={Parreaux, Lionel and Chau, Chun Yin},
-  journal={Proceedings of the ACM on Programming Languages},
-  volume={6},
-  number={OOPSLA2},
-  pages={449--478},
-  year={2022},
-  publisher={ACM New York, NY, USA}
+@InProceedings{ParreauxC2022,
+  author = 	 "Parreaux, Lionel and Chau, Chun Yin",
+  title = 	 "{MLstruct}: principal type inference in a Boolean algebra of structural types",
+  crossref =  "OOPSLA2022",
+  pages = 	 "449--478",
 }
 
-@inproceedings{dolan2017polymorphism,
-  title={Polymorphism, subtyping, and type inference in {MLsub}},
-  author={Dolan, Stephen and Mycroft, Alan},
-  booktitle={Symposium on Principles of Programming Languages (POPL)},
-  pages={60--72},
-  year={2017}
+@InProceedings{DolanM2017,
+  author = 	 "Dolan, Stephen and Mycroft, Alan",
+  title = 	 "Polymorphism, subtyping, and type inference in {MLsub}",
+  crossref =  "POPL2017",
+  pages = 	 "60--72",
 }
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Machine learning for type inference
@@ -2556,32 +2546,34 @@
 
 
 
-
-
-@inproceedings{hassan2018maxsmt,
-  title={{MaxSMT}-based type inference for {Python} 3},
-  author={Hassan, Mostafa and Urban, Caterina and Eilers, Marco and M{\"u}ller, Peter},
-  booktitle={International Conference on Computer Aided Verification (CAV)},
-  pages={12--19},
-  year={2018},
-  organization={Springer}
+@InProceedings{HassonUEM2018,
+  author = 	 "Hassan, Mostafa and Urban, Caterina and Eilers, Marco and M{\"u}ller, Peter",
+  title = 	 "{MaxSMT}-based type inference for {Python} 3",
+  crossref =  "CAV2018",
+  pages = 	 "12--19",
 }
 
-@inproceedings{xu2016python,
-  title={Python probabilistic type inference with natural language support},
-  author={Xu, Zhaogui and Zhang, Xiangyu and Chen, Lin and Pei, Kexin and Xu, Baowen},
-  booktitle={Joint European Software Engineering Conference and Symposium on Foundations of Software Engineering (ESEC/FSE)},
-  pages={607--618},
-  year={2016}
+@InProceedings{XuZCPX2016,
+  author = 	 "Xu, Zhaogui and Zhang, Xiangyu and Chen, Lin and Pei, Kexin and Xu, Baowen",
+  title = 	 "Python probabilistic type inference with natural language support",
+  crossref =  "FSE2016",
+  pages = 	 "607--618",
 }
 
-@inproceedings{peng2022static,
-  title={Static inference meets deep learning: a hybrid type inference approach for {Python}},
-  author={Peng, Yun and Gao, Cuiyun and Li, Zongjie and Gao, Bowei and Lo, David and Zhang, Qirun and Lyu, Michael},
-  booktitle={International Conference on Software Engineering (ICSE)},
-  pages={2019--2030},
-  year={2022}
+@InProceedings{PengGLGLZL2022,
+  author = 	 "Peng, Yun and Gao, Cuiyun and Li, Zongjie and Gao, Bowei and Lo, David and Zhang, Qirun and Lyu, Michael",
+  title = 	 "Static inference meets deep learning: a hybrid type inference approach for {Python}",
+  crossref =  "ICSE2022",
+  pages = 	 "2019--2030",
 }
+
+@InProceedings{PradelGLC2020,
+  author = 	 "Michael Pradel and Georgios Gousios and Jason Liu and Satish Chandra",
+  title = 	 "{TypeWriter}: neural type prediction with search-based validation",
+  crossref =  "FSE2020",
+  pages = 	 "209--220",
+}
+
 
 
 
@@ -3650,6 +3642,42 @@
   school = 	 "U. of Waterloo",
   year = 	 2016,
   address = 	 "Waterloo, Ontario, Canada",
+}
+
+
+@InProceedings{PhippsCostinAGG2021,
+  author = 	 "Phipps-Costin, Luna and Anderson, Carolyn Jane and Greenberg, Michael and Guha, Arjun",
+  title = 	 "Solver-Based Gradual Type Migration",
+  crossref =  "OOPSLA2021",
+  abstract =
+   "Gradually typed languages allow programmers to mix statically and
+    dynamically typed code, enabling them to incrementally reap the benefits of
+    static typing as they add type annotations to their code. However, this
+    type migration process is typically a manual effort with limited tool
+    support. This paper examines the problem of automated type migration: given
+    a dynamic program, infer additional or improved type annotations. Existing
+    type migration algorithms prioritize different goals, such as maximizing
+    type precision, maintaining compatibility with unmigrated code, and
+    preserving the semantics of the original program. We argue that the type
+    migration problem involves fundamental compromises: optimizing for a single
+    goal often comes at the expense of others. Ideally, a type migration tool
+    would flexibly accommodate a range of user priorities. We present
+    TypeWhich, a new approach to automated type migration for the
+    gradually-typed lambda calculus with some extensions. Unlike prior work,
+    which relies on custom solvers, TypeWhich produces constraints for an
+    off-the-shelf MaxSMT solver. This allows us to easily express objectives,
+    such as minimizing the number of necessary syntactic coercions, and
+    constraining the type of the migration to be compatible with unmigrated
+    code. We present the first comprehensive evaluation of GTLC type migration
+    algorithms, and compare TypeWhich to four other tools from the
+    literature. Our evaluation uses prior benchmarks, and a new set of
+    ``challenge problems.'' Moreover, we design a new evaluation methodology that
+    highlights the subtleties of gradual type migration. In addition, we apply
+    TypeWhich to a suite of benchmarks for Grift, a programming language based
+    on the GTLC. TypeWhich is able to reconstruct all human-written annotations
+    on all but one program.",
+  articleno = 111,
+  numpages = 27,
 }
 
 
@@ -5403,65 +5431,96 @@ keywords = "FindBugs"
 %%% Type error localization
 %%%
 
-@inproceedings{10.1145/2660193.2660230,
-author = {Pavlinovic, Zvonimir and King, Tim and Wies, Thomas},
-title = {Finding Minimum Type Error Sources},
-year = {2014},
-isbn = {9781450325851},
-publisher = {Association for Computing Machinery},
-address = {New York, NY, USA},
-url = {https://doi.org/10.1145/2660193.2660230},
-doi = {10.1145/2660193.2660230},
-abstract = {Automatic type inference is a popular feature of functional programming languages. If a program cannot be typed, the compiler typically reports a single program location in its error message. This location is the point where the type inference failed, but not necessarily the actual source of the error. Other potential error sources are not even considered. Hence, the compiler often misses the true error source, which increases debugging time for the programmer. In this paper, we present a general framework for automatic localization of type errors. Our algorithm finds all minimum error sources, where the exact definition of minimum is given in terms of a compiler-specific ranking criterion. Compilers can use minimum error sources to produce more meaningful error reports, and for automatic error correction. Our approach works by reducing the search for minimum error sources to an optimization problem that we formulate in terms of weighted maximum satisfiability modulo theories (MaxSMT). The reduction to weighted MaxSMT allows us to build on SMT solvers to support rich type systems and at the same time abstract from the concrete criterion that is used for ranking the error sources. We have implemented an instance of our framework targeted at Hindley-Milner type systems and evaluated it on existing OCaml benchmarks for type error localization. Our evaluation shows that our approach has the potential to significantly improve the quality of type error reports produced by state of the art compilers.},
-booktitle = {Proceedings of the 2014 ACM International Conference on Object Oriented Programming Systems Languages and Applications (OOPSLA)},
-pages = {525–542},
-numpages = {18},
-keywords = {satisfiability modulo theories, type errors, diagnostics},
-location = {Portland, Oregon, USA},
-series = {OOPSLA '14}
+@InProceedings{PavlinovicKW2014,
+  author = 	 "Pavlinovic, Zvonimir and King, Tim and Wies, Thomas",
+  title = 	 "Finding minimum type error sources",
+  crossref =  "OOPSLA2014",
+  pages = 	 "525–542",
+  abstract =
+   "Automatic type inference is a popular feature of functional programming
+    languages. If a program cannot be typed, the compiler typically reports a
+    single program location in its error message. This location is the point
+    where the type inference failed, but not necessarily the actual source of
+    the error. Other potential error sources are not even considered. Hence,
+    the compiler often misses the true error source, which increases debugging
+    time for the programmer. In this paper, we present a general framework for
+    automatic localization of type errors. Our algorithm finds all minimum
+    error sources, where the exact definition of minimum is given in terms of a
+    compiler-specific ranking criterion. Compilers can use minimum error
+    sources to produce more meaningful error reports, and for automatic error
+    correction. Our approach works by reducing the search for minimum error
+    sources to an optimization problem that we formulate in terms of weighted
+    maximum satisfiability modulo theories (MaxSMT). The reduction to weighted
+    MaxSMT allows us to build on SMT solvers to support rich type systems and
+    at the same time abstract from the concrete criterion that is used for
+    ranking the error sources. We have implemented an instance of our framework
+    targeted at Hindley-Milner type systems and evaluated it on existing OCaml
+    benchmarks for type error localization. Our evaluation shows that our
+    approach has the potential to significantly improve the quality of type
+    error reports produced by state of the art compilers.",
 }
 
-@inproceedings{DBLP:conf/oopsla/Loncaric0SS16,
-  author    = {Calvin Loncaric and
-               Satish Chandra and
-               Cole Schlesinger and
-               Manu Sridharan},
-  editor    = {Eelco Visser and
-               Yannis Smaragdakis},
-  title     = {A practical framework for type inference error explanation},
-  booktitle = {Proceedings of the 2016 {ACM} {SIGPLAN} International Conference on
-               Object-Oriented Programming, Systems, Languages, and Applications,
-               {OOPSLA} 2016, part of {SPLASH} 2016, Amsterdam, The Netherlands,
-               October 30 - November 4, 2016},
-  pages     = {781--799},
-  publisher = {{ACM}},
-  year      = {2016},
-  url       = {https://doi.org/10.1145/2983990.2983994},
-  doi       = {10.1145/2983990.2983994},
-  timestamp = {Mon, 18 Oct 2021 18:05:52 +0200},
-  biburl    = {https://dblp.org/rec/conf/oopsla/Loncaric0SS16.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@InProceedings{LoncaricCSS2016,
+  author = 	 "Calvin Loncaric and Satish Chandra and Cole Schlesinger and Manu Sridharan",
+  title = 	 "A practical framework for type inference error explanation",
+  crossref =  "OOPSLA2016",
+  pages = 	 "781--799",
 }
 
-@article{zhang2017sherrloc,
-author = {Zhang, Danfeng and Myers, Andrew C. and Vytiniotis, Dimitrios and Peyton-Jones, Simon},
-title = {{SHErrLoc}: A Static Holistic Error Locator},
-year = {2017},
-issue_date = {December 2017},
-publisher = {Association for Computing Machinery},
-address = {New York, NY, USA},
-volume = {39},
-number = {4},
-issn = {0164-0925},
-url = {https://doi.org/10.1145/3121137},
-doi = {10.1145/3121137},
-abstract = {We introduce a general way to locate programmer mistakes that are detected by static analyses. The program analysis is expressed in a general constraint language that is powerful enough to model type checking, information flow analysis, dataflow analysis, and points-to analysis. Mistakes in program analysis result in unsatisfiable constraints. Given an unsatisfiable system of constraints, both satisfiable and unsatisfiable constraints are analyzed to identify the program expressions most likely to be the cause of unsatisfiability. The likelihood of different error explanations is evaluated under the assumption that the programmer’s code is mostly correct, so the simplest explanations are chosen, following Bayesian principles. For analyses that rely on programmer-stated assumptions, the diagnosis also identifies assumptions likely to have been omitted. The new error diagnosis approach has been implemented as a tool called SHErrLoc, which is applied to three very different program analyses, such as type inference for a highly expressive type system implemented by the Glasgow Haskell Compiler—including type classes, Generalized Algebraic Data Types (GADTs), and type families. The effectiveness of the approach is evaluated using previously collected programs containing errors. The results show that when compared to existing compilers and other tools, SHErrLoc consistently identifies the location of programmer errors significantly more accurately, without any language-specific heuristics.},
-journal = {ACM Trans. Program. Lang. Syst.},
-month = {aug},
-articleno = {18},
-numpages = {47},
-keywords = {Jif, static program analysis, Error diagnosis, Haskell, type inference, information flow, OCaml}
+@Article{ZhangMVPJ2017,
+  author = 	 "Zhang, Danfeng and Myers, Andrew C. and Vytiniotis, Dimitrios and Peyton-Jones, Simon",
+  title = 	 "{SHErrLoc}: A Static Holistic Error Locator",
+  journal = 	 toplas,
+  year = 	 2017,
+  volume = 	 39,
+  number = 	 4,
+  abstract =
+   "We introduce a general way to locate programmer mistakes that are detected
+    by static analyses. The program analysis is expressed in a general
+    constraint language that is powerful enough to model type checking,
+    information flow analysis, dataflow analysis, and points-to
+    analysis. Mistakes in program analysis result in unsatisfiable
+    constraints. Given an unsatisfiable system of constraints, both satisfiable
+    and unsatisfiable constraints are analyzed to identify the program
+    expressions most likely to be the cause of unsatisfiability. The likelihood
+    of different error explanations is evaluated under the assumption that the
+    programmer’s code is mostly correct, so the simplest explanations are
+    chosen, following Bayesian principles. For analyses that rely on
+    programmer-stated assumptions, the diagnosis also identifies assumptions
+    likely to have been omitted. The new error diagnosis approach has been
+    implemented as a tool called SHErrLoc, which is applied to three very
+    different program analyses, such as type inference for a highly expressive
+    type system implemented by the Glasgow Haskell Compiler—including type
+    classes, Generalized Algebraic Data Types (GADTs), and type families. The
+    effectiveness of the approach is evaluated using previously collected
+    programs containing errors. The results show that when compared to existing
+    compilers and other tools, SHErrLoc consistently identifies the location of
+    programmer errors significantly more accurately, without any
+    language-specific heuristics.",
 }
+
+@InProceedings{LernerFGC2007,
+  author = 	 "Benjamin S. Lerner and Matthew Flower and Dan Grossman and Craig Chambers",
+  title = 	 "Searching for type-error messages",
+  crossref =     "PLDI2007",
+  pages = 	 "425--434",
+  abstract =
+   "Advanced type systems often need some form of type inference to reduce the
+    burden of explicit typing, but type inference often leads to poor error
+    messages for ill-typed programs. This work pursues a new approach to
+    constructing compilers and presenting type-error messages in which the
+    type-checker itself does not produce the messages. Instead, it is an oracle
+    for a search procedure that finds similar programs that do type-check. Our
+    two-fold goal is to improve error messages while simplifying compiler
+    construction.
+    \par
+    Our primary implementation and evaluation is for Caml, a language with full
+    type inference. We also present a prototype for C++ template functions,
+    where type instantiation is implicit. A key extension is making our
+    approach robust even when the program has multiple independent type errors.",
+}
+
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -6031,26 +6090,6 @@ keywords = {Jif, static program analysis, Error diagnosis, Haskell, type inferen
 
 
 
-@InProceedings{LernerFGC2007,
-  author = 	 "Benjamin S. Lerner and Matthew Flower and Dan Grossman and Craig Chambers",
-  title = 	 "Searching for type-error messages",
-  crossref =     "PLDI2007",
-  pages = 	 "425--434",
-  abstract =
-   "Advanced type systems often need some form of type inference to reduce the
-    burden of explicit typing, but type inference often leads to poor error
-    messages for ill-typed programs. This work pursues a new approach to
-    constructing compilers and presenting type-error messages in which the
-    type-checker itself does not produce the messages. Instead, it is an oracle
-    for a search procedure that finds similar programs that do type-check. Our
-    two-fold goal is to improve error messages while simplifying compiler
-    construction.
-    \par
-    Our primary implementation and evaluation is for Caml, a language with full
-    type inference. We also present a prototype for C++ template functions,
-    where type instantiation is implicit. A key extension is making our
-    approach robust even when the program has multiple independent type errors.",
-}
 
 
 
