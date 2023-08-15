@@ -796,7 +796,7 @@ numpages = {10},
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% Tangled commits and untangling algorithms
+%%% Tangled commits and untangling/clustering algorithms
 %%%
 
 
@@ -898,6 +898,133 @@ numpages = {10},
   crossref =  "ICSE2015",
   pages = 	 "134-144",
 }
+
+
+@InProceedings{LiWN2022,
+  author = 	 "Li, Yi and Wang, Shaohua and Nguyen, Tien N.",
+  title = 	 "{UTANGO}: Untangling commits with context-aware, graph-based, code change clustering learning model",
+  crossref =  "FSE2022",
+  pages = 	 "221-232",
+  abstract =
+   "During software evolution, developers make several changes and commit them
+    into the repositories. Unfortunately, many of them tangle different
+    purposes, both hampering program comprehension and reducing separation of
+    concerns. Automated approaches with deterministic solutions have been
+    proposed to untangle commits. However, specifying an effective clustering
+    criteria on the changes in a commit for untangling is challenging for those
+    approaches. In this work, we present UTango, a machine learning (ML)-based
+    approach that learns to untangle the changes in a commit. We develop a
+    novel code change clustering learning model that learns to cluster the code
+    changes, represented by the embeddings, into different groups with
+    different concerns. We adapt the agglomerative clustering algorithm into a
+    supervised-learning clustering model operating on the learned code change
+    embeddings via trainable parameters and a loss function in comparing the
+    predicted clusters and the correct ones during training. To facilitate our
+    clustering learning model, we develop a context-aware, graph-based, code
+    change representation learning model, leveraging Label, Graph-based
+    Convolution Network to produce the contextualized embeddings for code
+    changes, that integrates program dependencies and the surrounding contexts
+    of the changes. The contexts and cloned code are also explicitly
+    represented, helping UTango distinguish the concerns. Our empirical
+    evaluation on C# and Java datasets with 1,612 and 14k tangled commits show
+    that it achieves the accuracy of 28.6\%--462.5\% and 13.3\%--100.0\%
+    relatively higher than the state-of-the-art commit-untangling approaches
+    for C\# and Java, respectively.",
+}
+
+
+@Article{HerzigJZ2016,
+  author = 	 "Herzig, Kim and Just, Sascha and Zeller, Andreas",
+  title = 	 "The impact of tangled code changes on defect prediction models",
+  journal = 	 JEmpiricalSE,
+  year = 	 2016,
+  volume = 	 21,
+  number = 	 2,
+  pages = 	 "303--336",
+}
+
+
+@article{rand1971objective,
+  title={Objective criteria for the evaluation of clustering methods},
+  author={Rand, William M.},
+  journal={Journal of the American Statistical Association},
+  volume={66},
+  number={336},
+  pages={846--850},
+  year={1971},
+  OMITpublisher={Taylor \& Francis}
+}
+
+
+@InProceedings{TaoK2015,
+  author = 	 "Tao, Yida and Kim, Sunghun",
+  title = 	 "Partitioning composite code changes to facilitate code review",
+  crossref =  "MSR2015",
+  pages = 	 "180--190",
+}
+
+
+@InProceedings{KreutzerDREP2016,
+  author = 	 "Kreutzer, Patrick and Dotzler, Georg and Ring, Matthias and Eskofier, Bjoern M. and Philippsen, Michael",
+  title = 	 "Automatic clustering of code changes",
+  crossref =  "MSR2016",
+  pages = 	 "61--72",
+}
+
+
+@InProceedings{DiasBGCD2015,
+  author = 	 "Dias, Mart{\'\i}n and Bacchelli, Alberto and Gousios, Georgios and Cassou, Damien and Ducasse, St{\'e}phane",
+  title = 	 "Untangling fine-grained code changes",
+  crossref =  "SANER2015",
+  pages = 	 "341--350",
+}
+
+
+@InProceedings{NguyenNN2013,
+  author = 	 "Nguyen, Hoan Anh and Nguyen, Anh Tuan and Nguyen, Tien N.",
+  title = 	 "Filtering noise in mixed-purpose fixing commits to improve defect prediction and localization",
+  crossref =  "ISSRE2013",
+  pages = 	 "138--147",
+}
+
+
+@InProceedings{SothornprapakornHS2018,
+  author = 	 "Sothornprapakorn, Sarocha and Hayashi, Shinpei and Saeki, Motoshi",
+  title = 	 "Visualizing a tangled change for supporting its decomposition and commit construction",
+  crossref =  "COMPSAC2018",
+  pages = 	 "74--79",
+}
+
+
+@article{guo2019decomposing,
+  title={Decomposing composite changes for code review and regression test selection in evolving software},
+  author={Guo, Bo and Kwon, Young-Woo and Song, Myoungkyu},
+  journal={Journal of Computer Science and Technology},
+  volume={34},
+  pages={416--436},
+  year={2019},
+  publisher={Springer}
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Understandability
+%%%
+
+@InProceedings{TaoDXZK2012,
+  author = 	 "Tao, Yida and Dang, Yingnong and Xie, Tao and Zhang, Dongmei and Kim, Sunghun",
+  title = 	 "How do software engineers understand code changes? {An} exploratory study in industry",
+  crossref =  "FSE2012",
+  pages = 	 "1--11",
+}
+
+@InProceedings{RamSCB2018,
+  author = 	 "Ram, Achyudh and Sawant, Anand Ashok and Castelluccio, Marco and Bacchelli, Alberto",
+  title = 	 "What makes a code change easier to review: an empirical investigation on code change reviewability",
+  crossref =  "FSE2018",
+  pages = 	 "201--212",
+}
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1299,6 +1426,13 @@ keywords = {software change merging, domains, software maintenance, semantics}
   year = 	 2022,
 }
 
+
+@InProceedings{KawrykowR2011,
+  author = 	 "Kawrykow, David and Robillard, Martin P.",
+  title = 	 "Non-essential changes in version histories",
+  crossref =  "ICSE2011",
+  pages = 	 "351-360",
+}
 
 % LocalWords:  Kasi Sarma KQ177 BERZINS POSTGRAD V550 P229 ISSN Apel
 % LocalWords:  Subfile SciSearch InProceedings ApelLBLK2011 rg Liebig
