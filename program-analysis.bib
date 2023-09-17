@@ -110,3 +110,30 @@ series = {ISSTA 2022}
   pages = 	 "3--11",
   doi = {10.4204/eptcs.188.2},
 }
+
+
+@InProceedings{SunSWZ2015,
+  author = 	 "Hao Sun and Chao Su and Yue Wang and Qingkai Zeng",
+  title = 	 "Improving the accuracy of integer signedness error detection using data flow analysis",
+  crossref =  "SEKE2015",
+  pages = 	 "601-606",
+  doi = 	 "10.18293/SEKE2015-123",
+  abstract =
+   "Integer signedness errors can be exploited by adversaries to cause severe
+    damages to computer systems. Despite the significant advances in automating
+    the detection of integer signedness errors, accurately differentiating
+    exploitable and harmful signedness errors from unharmful ones is an
+    important challenge. In this paper, we present the design and
+    implementation of SignFlow, an instrumentation-based integer signedness
+    error detector to reduce the reports for unharmful signedness
+    errors. SignFlow first utilizes static data flow analysis to identify
+    unharmful integer sign conversions from the view of where the source
+    operands originate and whether the conversion results can propagate to
+    security-related program points, and then inserts security checks for the
+    remaining conversions so as to accomplish runtime protection. We evaluated
+    SignFlow on 8 real-world harmful integer signedness bugs, SPECint 2006
+    benchmarks together with 5 real-world applications. The experimental
+    results show that SignFlow correctly detected all harmful integer
+    signedness bugs (i.e. no false negatives) and achieved a reduction of 41\%
+    in false positives over IntFlow, the state of the art."
+}
