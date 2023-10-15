@@ -900,7 +900,7 @@ numpages = {10},
 
 @InProceedings{LiWN2022,
   author = 	 "Li, Yi and Wang, Shaohua and Nguyen, Tien N.",
-  title = 	 "{UTANGO}: Untangling commits with context-aware, graph-based, code change clustering learning model",
+  title = 	 "{UTango}: Untangling commits with context-aware, graph-based, code change clustering learning model",
   crossref =  "FSE2022",
   pages = 	 "221-232",
   abstract =
@@ -939,6 +939,23 @@ numpages = {10},
   volume = 	 21,
   number = 	 2,
   pages = 	 "303--336",
+  abstract =
+   "When interacting with source control management system, developers often
+    commit unrelated or loosely related code changes in a single
+    transaction. When analyzing version histories, such tangled changes will
+    make all changes to all modules appear related, possibly compromising the
+    resulting analyses through noise and bias. In an investigation of five
+    open-source JAVA projects, we found between 7\% and 20\% of all bug fixes
+    to consist of multiple tangled changes. Using a multi-predictor approach to
+    untangle changes, we show that on average at least 16.6\% of all source
+    files are incorrectly associated with bug reports. These incorrect bug file
+    associations seem to not significantly impact models classifying source
+    files to have at least one bug or no bugs. But our experiments show that
+    untangling tangled code changes can result in more accurate regression bug
+    prediction models when compared to models trained and tested on tangled bug
+    datasets—in our experiments, the statistically significant accuracy
+    improvements lies between 5\% and 200\%. We recommend better change
+    organization to limit the impact of tangled changes."
 }
 
 
