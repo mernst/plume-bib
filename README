@@ -49,6 +49,8 @@ bibliography strings, use one of these commands in your LaTeX file:
     \bibliography{plume-bib/bibstring-abbrev,...,plume-bib/crossrefs-abbrev}
     \bibliography{plume-bib/bibstring-unabbrev,...,plume-bib/crossrefs}
 
+(Note that the cross references file needs to be the last entry in `\bibliography`.)
+
 When using the bibliographies, add near the top of your LaTeX document:
 
     \usepackage{url}
