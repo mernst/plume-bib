@@ -800,6 +800,29 @@ url="https://doi.org/10.1007/s10664-017-9550-0"
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Debugging
+%%%
+
+@inproceedings{10.1145/3586183.3606781,
+author = {Alaboudi, Abdulaziz and Latoza, Thomas D.},
+title = {Hypothesizer: A Hypothesis-Based Debugger to Find and Test Debugging Hypotheses},
+year = {2023},
+isbn = {9798400701320},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3586183.3606781},
+doi = {10.1145/3586183.3606781},
+abstract = {When software defects occur, developers begin the debugging process by formulating hypotheses to explain the cause. These hypotheses guide the investigation process, determining which evidence developers gather to accept or reject the hypothesis, such as parts of the code and program state developers examine. However, existing debugging techniques do not offer support in finding relevant hypotheses, leading to wasted time testing hypotheses and examining code that ultimately does not lead to a fix. To address this issue, we introduce a new type of debugging tool, the hypothesis-based debugger, and an implementation of this tool in Hypothesizer. Hypothesis-based debuggers support developers from the beginning of the debugging process by finding relevant hypotheses until the defect is fixed. To debug using Hypothesizer, developers first demonstrate the defect, generating a recording of the program behavior with code execution, user interface events, network communications, and user interface changes. Based on this information and the developer’s descriptions of the symptoms, Hypothesizer finds relevant hypotheses, analyzes the code to identify relevant evidence to test the hypothesis, and generates an investigation plan through a timeline view. This summarizes all evidence items related to the hypothesis, indicates whether the hypothesis is likely to be true by showing which evidence items were confirmed in the recording, and enables the developer to quickly check evidence in the recording by viewing code snippets for each evidence item. A randomized controlled experiment with 16 professional developers found that, compared to traditional debugging tools and techniques such as breakpoint debuggers and Stack Overflow, Hypothesizer dramatically improved the success rate of fixing defects by a factor of five and decreased the time to debug by a factor of three.},
+booktitle = {Proceedings of the 36th Annual ACM Symposium on User Interface Software and Technology},
+articleno = {73},
+numpages = {14},
+keywords = {debugging tools, debugging hypotheses, debugging},
+location = {<conf-loc>, <city>San Francisco</city>, <state>CA</state>, <country>USA</country>, </conf-loc>},
+series = {UIST '23}
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Miscellaneous
 %%%
 
