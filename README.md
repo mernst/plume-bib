@@ -3,7 +3,9 @@ plume-bib:  collection of BibTeX bibliography files
 
 To obtain the bibliographies, run:
 
+```
     git clone https://github.com/mernst/plume-bib.git
+```
 
 This is a set of BibTeX bibliographies.  You can re-use them rather than
 having to re-type or download.  Re-typing or downloading bibliography
@@ -45,25 +47,33 @@ USAGE
 To choose the abbreviated (short) or unabbreviated (long) version of the
 bibliography strings, use one of these commands in your LaTeX file:
 
+```
     % Use either "-abbrev" or "-unabbrev" to control citation verbosity.
     \bibliography{plume-bib/bibstring-abbrev,...,plume-bib/crossrefs-abbrev}
     \bibliography{plume-bib/bibstring-unabbrev,...,plume-bib/crossrefs}
+```
 
 (Note that the cross references file needs to be the last entry in `\bibliography`.)
 
 When using the bibliographies, add near the top of your LaTeX document:
 
+```
     \usepackage{url}
+```
 
 This defines the `\url` command used in the bibliographies.  To make URLs use
 a slightly narrower font (the regular `tt` font is very wide), use:
 
+```
     \usepackage{pslatex}
+```
 
 or, to use a smaller font, use:
 
+```
     \usepackage{relsize}
     \def\UrlFont{\smaller\ttfamily}
+```
 
 
 EDITING AND ADDING ENTRIES
@@ -93,6 +103,7 @@ SETUP -- if you use a Makefile to process your paper
 2. Add "plume-bib-update" as a dependency of your default target (such as "all").
 3. Add the following rules to your Makefile.
 
+```
     plume-bib:
     ifdef PLUMEBIB
 	    ln -s ${PLUMEBIB} $@
@@ -106,6 +117,7 @@ SETUP -- if you use a Makefile to process your paper
     ifndef NOGIT
 	    -(cd plume-bib && git pull && make)
     endif
+```
 
 
 SETUP -- non-Makefile version
@@ -114,15 +126,19 @@ SETUP -- non-Makefile version
 If you have previously cloned plume-bib and set the PLUMEBIB environment
 variable, there is nothing to do.  Otherwise, run this command:
 
+```
     cd; git clone https://github.com/mernst/plume-bib.git plume-bib
+```
 
 Then, set the PLUMEBIB environment variable to $HOME/plume-bib and
 add the "plume-bib" directory to your BIBINPUTS environment variable.
 
 bash syntax:
 
+```
     export PLUMEBIB=$HOME/plume-bib
     export BIBINPUTS=.:${PLUMEBIB}:..:
+```
 
 
 SETUP -- miscellaneous details
@@ -142,8 +158,10 @@ The bibtex that is supplied with miktex (the popular Windows implementation)
 does not support the BIBINPUTS variable. You need to modify the miktex
 configuration.  In file `...\miktex\config\miktex.ini`, edit this entry:
 
+```
     Input Dirs=searchpath
     (search path for BibTeX input files -- both databases and style files).
+```
 
 
 INVOKING BIBTEX: crossref and -min-crossrefs=9999
@@ -151,13 +169,17 @@ INVOKING BIBTEX: crossref and -min-crossrefs=9999
 
 plume-bib's .bib files use `@crossref`.  To avoid outut like
 
+```
     [1] Brun et al.  Paper title.  In [2].
     [2] Proceedings of ESEC/FSE 2011.  Szeged, Hungary, Sep. 7--9, 2011.
+```
 
 you need to pass the -min-crossrefs=9999 command-line option to BibTeX; for
 example:
 
+```
     bibtex -min-crossrefs=9999 mypaper
+```
 
 
 LICENSE
