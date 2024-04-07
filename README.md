@@ -37,19 +37,20 @@ but you don't need to -- see below for how to set your build system to
 automatically obtain and/or update a copy.
 
 You can also set the `PLUMEBIB` environment variable to the location of your
-clone (usually a directory named bib), so that you will have just one clone
-rather than one for each paper you write.
+clone (such as a directory named `~/bib/`), so that you will have just one
+clone on your computer rather than one clone for each paper you write.
 
 
 USAGE
 -----
 
 To choose the abbreviated (short) or unabbreviated (long) version of the
-bibliography strings, use one of these commands in your LaTeX file:
+bibliography strings, use one of these commands in your LaTeX file,
+depending on how verbose you want citations to be:
 
 ```
-    % Use either "-abbrev" or "-unabbrev" to control citation verbosity.
     \bibliography{plume-bib/bibstring-abbrev,...,plume-bib/crossrefs-abbrev}
+or
     \bibliography{plume-bib/bibstring-unabbrev,...,plume-bib/crossrefs}
 ```
 
@@ -174,7 +175,7 @@ plume-bib's .bib files use `@crossref`.  To avoid outut like
     [2] Proceedings of ESEC/FSE 2011.  Szeged, Hungary, Sep. 7--9, 2011.
 ```
 
-you need to pass the -min-crossrefs=9999 command-line option to BibTeX; for
+you need to pass the `-min-crossrefs=9999` command-line option to BibTeX; for
 example:
 
 ```
