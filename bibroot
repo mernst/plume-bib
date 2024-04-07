@@ -40,6 +40,7 @@
 \include{sideeff.bib}
 \include{slicing.bib}
 \include{soft-eng.bib}
+\include{static-analysis.bib}
 \include{systems.bib}
 \include{tao-of-phd.bib}
 \include{testing.bib}
