@@ -5,16 +5,12 @@
 BIB_ABBREVIATE ?= ./bib-abbreviate.pl
 
 # TODO: reinstate bibstring-crossrefs-abbrev.bib
-all: bibstring-unabbrev.bib bibstring-abbrev.bib crossrefs-abbrev.bib bibroot docs/index.html
+all: bibstring-unabbrev.bib bibstring-abbrev.bib crossrefs-abbrev.bib bibroot
 
 BIBFILES := $(shell ls *.bib | grep -v bibstring-unabbrev.bib | grep -v bibstring-abbrev.bib)
 
 clean: bibtest-aux-clean
 	rm -f bibstring-unabbrev.bib bibstring-abbrev.bib bibroot bibtest.tex
-
-# docs/index.html is published as https://mernst.github.io/plume-bib/
-docs/index.html: README
-	asciidoctor $< --out-file=$@
 
 bibstring-unabbrev.bib: bibstring-master.bib $(BIB_ABBREVIATE)
 	@rm -f $@

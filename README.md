@@ -92,8 +92,6 @@ SETUP -- if you use a Makefile to process your paper
    bibtex, you can skip this step.
 2. Add "plume-bib-update" as a dependency of your default target (such as "all").
 3. Add the following rules to your Makefile.
-   (Warning: these commands get mangled when viewing the README at GitHub.
-   Clone the repository and view the `README` file directly.)
 
     plume-bib:
     ifdef PLUMEBIB
