@@ -376,6 +376,16 @@ We start with a hypothesis that a moderate correlation exists between pull reque
 
 
 
+@InProceedings{Asklund1994,
+  author = 	 "Ulf Asklund",
+  title = 	 "Identifying conflicts during structural merge",
+  booktitle = "NWPER 1994, Nordic Workshop on Programming Environment Research",
+  year = 	 1994,
+  pages = 	 "231-242",
+  month = 	 jun,
+}
+
+
 @InProceedings{HuntT2002,
   author = 	 "J. J. Hunt and W. F. Tichy",
   title = 	 "Extensible language-aware merging",
@@ -463,7 +473,7 @@ We start with a hypothesis that a moderate correlation exists between pull reque
 
 @inproceedings{10.1145/1860559.1860600,
 author = {Vion-Dury, Jean-Yves},
-title = {Diffing, Patching and Merging XML Documents: Toward a Generic Calculus of Editing Deltas.},
+title = {Diffing, Patching and Merging XML Documents: Toward a Generic Calculus of Editing Deltas},
 year = {2010},
 isbn = {9781450302319},
 publisher = {Association for Computing Machinery},
@@ -499,8 +509,6 @@ series = {DocEng '13}
 }
 
 
-
-
 @Article{LarsenFBM2023,
   author = 	 "Lars{\'e}n, Simon and Falleri, Jean-R{\'e}my and Baudry, Benoit and Monperrus, Martin",
   title = 	 "Spork: Structured Merge for {Java} with Formatting Preservation",
@@ -524,6 +532,22 @@ series = {DocEng '13}
 
 
 
+@Misc{Hume2017,
+  author = 	 "Tristan Hume",
+  title = 	 "Designing a tree diff algorithm using dynamic programming and {A*}",
+  howpublished = "\url{https://thume.ca/2017/06/17/tree-diffing/}",
+  year = 	 2017,
+}
+
+
+
+@InProceedings{Lindholm2004,
+  author = 	 "Tancred Lindholm",
+  title = 	 "A three-way merge for {XML} documents",
+  booktitle = "DocEng",
+  year = 	 2004,
+  NEEDpages = 	 "*",
+}
 
 
 
@@ -563,7 +587,8 @@ series = {DocEng '13}
 
 @InProceedings{SkafMolliMRN2008,
   author = 	 "Skaf-Molli, Hala and Molli, Pascal and Rahhal, Charbel and Naja-Jazzar, Hala",
-  title = 	 "1-6",
+  title = 	 "Collaborative Writing of {XML} Documents",
+  pages = 	 "1-6",
   crossref =  "ICTTA2008",
   year = 	 2008,
 }
@@ -646,22 +671,35 @@ series = {CVSM '09}
 
 
 
-@inproceedings{SvyatkovskiyFGMDBJSL2022,
-author = {Svyatkovskiy, Alexey and Fakhoury, Sarah and Ghorbani, Negar and Mytkowicz, Todd and Dinella, Elizabeth and Bird, Christian and Jang, Jinu and Sundaresan, Neel and Lahiri, Shuvendu K.},
-title = {Program Merge Conflict Resolution via Neural Transformers},
-year = {2022},
-isbn = {9781450394130},
-publisher = {Association for Computing Machinery},
-address = {New York, NY, USA},
-url = {https://doi.org/10.1145/3540250.3549163},
-doi = {10.1145/3540250.3549163},
-abstract = {Collaborative software development is an integral part of the modern software development life cycle, essential to the success of large-scale software projects. When multiple developers make concurrent changes around the same lines of code, a merge conflict may occur. Such conflicts stall pull requests and continuous integration pipelines for hours to several days, seriously hurting developer productivity. To address this problem, we introduce MergeBERT, a novel neural program merge framework based on token-level three-way differencing and a transformer encoder model. By exploiting the restricted nature of merge conflict resolutions, we reformulate the task of generating the resolution sequence as a classification task over a set of primitive merge patterns extracted from real-world merge commit data. Our model achieves 63-68% accuracy for merge resolution synthesis, yielding nearly a 3\texttimes{} performance improvement over existing semi-structured, and 2\texttimes{} improvement over neural program merge tools. Finally, we demonstrate that MergeBERT is sufficiently flexible to work with source code files in Java, JavaScript, TypeScript, and C# programming languages. To measure the practical use of MergeBERT, we conduct a user study to evaluate MergeBERT suggestions with 25 developers from large OSS projects on 122 real-world conflicts they encountered. Results suggest that in practice, MergeBERT resolutions would be accepted at a higher rate than estimated by automatic metrics for precision and accuracy. Additionally, we use participant feedback to identify future avenues for improvement of MergeBERT.},
-booktitle = {Proceedings of the 30th ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering},
-pages = {822-833},
-numpages = {12},
-keywords = {program merge, Software evolution, ml4code},
-location = {Singapore, Singapore},
-series = {ESEC/FSE 2022}
+@InProceedings{SvyatkovskiyFGMDBJSL2022,
+  author = 	 "Svyatkovskiy, Alexey and Fakhoury, Sarah and Ghorbani, Negar and Mytkowicz, Todd and Dinella, Elizabeth and Bird, Christian and Jang, Jinu and Sundaresan, Neel and Lahiri, Shuvendu K.",
+  title = 	 "Program Merge Conflict Resolution via Neural Transformers",
+  crossref = "FSE2022",
+  pages = 	 "822-833",
+  abstract =
+   "Collaborative software development is an integral part of the modern
+    software development life cycle, essential to the success of large-scale
+    software projects. When multiple developers make concurrent changes around
+    the same lines of code, a merge conflict may occur. Such conflicts stall
+    pull requests and continuous integration pipelines for hours to several
+    days, seriously hurting developer productivity. To address this problem, we
+    introduce MergeBERT, a novel neural program merge framework based on
+    token-level three-way differencing and a transformer encoder model. By
+    exploiting the restricted nature of merge conflict resolutions, we
+    reformulate the task of generating the resolution sequence as a
+    classification task over a set of primitive merge patterns extracted from
+    real-world merge commit data. Our model achieves 63-68\% accuracy for merge
+    resolution synthesis, yielding nearly a 3\texttimes{} performance
+    improvement over existing semi-structured, and 2\texttimes{} improvement
+    over neural program merge tools. Finally, we demonstrate that MergeBERT is
+    sufficiently flexible to work with source code files in Java, JavaScript,
+    TypeScript, and C# programming languages. To measure the practical use of
+    MergeBERT, we conduct a user study to evaluate MergeBERT suggestions with
+    25 developers from large OSS projects on 122 real-world conflicts they
+    encountered. Results suggest that in practice, MergeBERT resolutions would
+    be accepted at a higher rate than estimated by automatic metrics for
+    precision and accuracy. Additionally, we use participant feedback to
+    identify future avenues for improvement of MergeBERT.",
 }
 
 
@@ -1201,7 +1239,7 @@ numpages = {10},
 
 
 
-@inproceedings{GZ14,
+@inproceedings{GZ2014,
   author = {Gousios, Georgios and Zaidman, Andy},
   title = {A Dataset for Pull-based Development Research},
   booktitle = {Proceedings of the 11th Working Conference on Mining Software Repositories},
@@ -1298,13 +1336,6 @@ series = {MSR 2014}
   pages = 	 "2698-2721",
   month = 	 apr,
 }
-
-
-
-
-
-
-
 
 
 
@@ -1594,7 +1625,7 @@ keywords = {software change merging, domains, software maintenance, semantics}
 % LocalWords:  Tien Dimitar Asenov Balz Guenat uller Otth FASE eg JDT
 % LocalWords:  GumTree parentId IntegerLiteral oldNode newNode RxJava
 % LocalWords:  XHTML DaisyDiff OOPSLA2019 Mahmoudi PEGs subtrees jGit
-% LocalWords:  Gumtree LessnichAL2014 JDime CavalcantiBA2017 Paola V1
+% LocalWords:  Gumtree LessenichAL2014 JDime CavalcantiBA2017 Paola V1
 % LocalWords:  OOPSLA2017 GitMiner Zimmermann Ellis2022 MolhadoRef V2
 % LocalWords:  RefMerge refactoringaware arXiv RQ1 RQ2 LOC DigMNJ2006
 % LocalWords:  Manzoor DigMJN2007 Molhado subgraphs node1 node2 Ladd
@@ -1638,7 +1669,7 @@ keywords = {software change merging, domains, software maintenance, semantics}
 % LocalWords:  Kroh Cabrey Meiyappan Engg Zaidman Eirini Kalliamvakou
 % LocalWords:  PRs H1 H4 centric SemanGit Kubitza ockmann Graux Vadim
 % LocalWords:  Markovtsev Waren Landman Serebrenik Jurgen Vinju ICSME
-% LocalWords:  Sourcerer Qualitas Ewan Tempero Anslow Jing Lumpe GZ14
+% LocalWords:  Sourcerer Qualitas Ewan Tempero Anslow Jing Lumpe GZ2014
 % LocalWords:  APSEC acmid Passos Czarnecki Krzysztof Fasano Oliveto
 % LocalWords:  Santonicola Domenico Subclipse IWPSE Matthieu Barbier
 % LocalWords:  bastien Lugato DSML DSMLs MiSE Munson Boyland ller Uwe
