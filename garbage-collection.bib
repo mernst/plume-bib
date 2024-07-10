@@ -1144,6 +1144,331 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Quantifying the cost of garbage collection
+%%%
+
+
+@InProceedings{HertzB2005,
+  author = 	 "Hertz, Matthew and Berger, Emery D.",
+  title = 	 "Quantifying the performance of garbage collection vs. explicit memory management",
+  crossref =  "OOPSLA2005",
+  pages = 	 "313–326",
+  abstract =
+   {Garbage collection yields numerous software engineering benefits, but its
+    quantitative impact on performance remains elusive. One can compare the cost of
+    conservative garbage collection to explicit memory management in C/C++ programs by
+    linking in an appropriate collector. This kind of direct comparison is not possible
+    for languages designed for garbage collection (e.g., Java), because programs in these
+    languages naturally do not contain calls to free. Thus, the actual gap between the
+    time and space performance of explicit memory management and precise, copying garbage
+    collection remains unknown.We introduce a novel experimental methodology that lets us
+    quantify the performance of precise garbage collection versus explicit memory
+    management. Our system allows us to treat unaltered Java programs as if they used
+    explicit memory management by relying on oracles to insert calls to free. These
+    oracles are generated from profile information gathered in earlier application
+    runs. By executing inside an architecturally-detailed simulator, this "oracular"
+    memory manager eliminates the effects of consulting an oracle while measuring the
+    costs of calling malloc and free. We evaluate two different oracles: a liveness-based
+    oracle that aggressively frees objects immediately after their last use, and a
+    reachability-based oracle that conservatively frees objects just after they are last
+    reachable. These oracles span the range of possible placement of explicit
+    deallocation calls.We compare explicit memory management to both copying and
+    non-copying garbage collectors across a range of benchmarks using the oracular memory
+    manager, and present real (non-simulated) runs that lend further validity to our
+    results. These results quantify the time-space tradeoff of garbage collection: with
+    five times as much memory, an Appel-style generational collector with a non-copying
+    mature space matches the performance of reachability-based explicit memory
+    management. With only three times as much memory, the collector runs on average 17\%
+    slower than explicit memory management. However, with only twice as much memory,
+    garbage collection degrades performance by nearly 70\%. When physical memory is
+    scarce, paging causes garbage collection to run an order of magnitude slower than
+    explicit memory management.},
+}
+
+
+@InProceedings{SareenB2022,
+  author = 	 "Sareen, Kunal and Blackburn, Stephen Michael",
+  title = 	 "Better understanding the costs and benefits of automatic memory management",
+  crossref =  "MPLR2022",
+  pages = 	 "29–44",
+  abstract =
+   {Automatic memory management relieves programmers of the burden of having to reason
+    about object lifetimes in order to soundly reclaim allocated memory. However, this
+    automation comes at a cost. The cost and benefits of garbage collection relative to
+    manual memory management have been the subject of contention for a long time, and
+    will likely remain so. However, until now, the question is surprisingly
+    under-studied. We examine the costs and benefits of garbage collection through four
+    studies, exploring: We conduct this study in a contemporary setting using recent CPU
+    microarchitectures, and novel methodologies including a mark-sweep collector built
+    upon off-the-shelf free-list allocators, allowing us to shed new light on garbage
+    collection overheads in a modern context. We find that: The costs and benefits of
+    garbage collection are likely to remain subject to contentious discussion. However,
+    the methodologies and evaluations we present here provide a deeper understanding of
+    the differences in costs between manual memory management and garbage collection.},
+}
+
+
+@Article{Zorn1993,
+  author = 	 "Zorn, Benjamin",
+  title = 	 "The measured cost of conservative garbage collection",
+  journal = 	 SPE,
+  year = 	 1993,
+  volume = 	 23,
+  number = 	 7,
+  pages = 	 "733-756",
+  abstract =
+   {Because dynamic memory management is an important part of a large class of computer
+    programs, high-performance algorithms for dynamic memory management have been, and
+    will continue to be, of considerable interest. Experience indicates that for many
+    programs, dynamic storage allocation is so important that programmers feel compelled
+    to write and use their own domain-specific allocators to avoid the overhead of system
+    libraries. As an alternative to explicit storage management techniques, conservative
+    garbage collection has been suggested as an important algorithm for dynamic storage
+    management in C programs. In this paper, I evaluate the costs of different dynamic
+    storage management algorithms, including domain-specific allocators, widely-used
+    general-purpose allocators, and a publicly available conservative garbage collection
+    algorithm. Surprisingly, I find that programmer enhancements often have little effect
+    on program performance. I also find that the true cost of conservative garbage
+    collection is not the CPU overhead, but the memory system overhead of the
+    algorithm. I conclude that conservative garbage collection is a promising alternative
+    to explicit storage management and that the performance of conservative collection is
+    likely to improve in the future. C programmers should now seriously consider using
+    conservative garbage collection instead of explicitly calling free in programs they
+    write.},
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Garbage collection coexisting with manual memory management (regions, free)
+%%%
+
+
+@InProceedings{RafkindWRF2009,
+  author = 	 "Rafkind, Jon and Wick, Adam and Regehr, John and Flatt, Matthew",
+  title = 	 "Precise garbage collection for {C}",
+  crossref =  "ISMM2009",
+  pages = 	 "39-48",
+  abstract =
+   {Magpie is a source-to-source transformation for C programs that enables precise
+    garbage collection, where precise means that integers are not confused with pointers,
+    and the liveness of a pointer is apparent at the source level. Precise GC is
+    primarily useful for long-running programs and programs that interact with untrusted
+    components. In particular, we have successfully deployed precise GC in the C
+    implementation of a language run-time system that was originally designed to use
+    conservative GC. We also report on our experience in transforming parts of the Linux
+    kernel to use precise GC instead of manual memory management.},
+}
+
+
+@InProceedings{DegenbaevEHHLP2018,
+  author = 	 "Degenbaev, Ulan and Eisinger, Jochen and Hara, Kentaro and Hlopko, Marcel and Lippautz, Michael and Payer, Hannes",
+  title = 	 "Cross-component garbage collection",
+  crossref =  "OOPSLA2018",
+  abstract =
+   {Embedding a modern language runtime as a component in a larger software system is
+    popular these days. Communication between these systems often requires keeping
+    references to each others' objects. In this paper we present and discuss the problem
+    of cross-component memory management where reference cycles across component
+    boundaries may lead to memory leaks and premature reclamation of objects may lead to
+    dangling cross-component references. We provide a generic algorithm for effective,
+    efficient, and safe garbage collection over component boundaries, which we call
+    cross-component tracing. We designed and implemented cross-component tracing in the
+    Chrome web browser where the JavaScript virtual machine V8 is embedded into the
+    rendering engine Blink. Cross-component tracing from V8's JavaScript heap to Blink's
+    C++ heap improves garbage collection latency and eliminates long-standing memory
+    leaks for real websites in Chrome. We show how cross-component tracing can help web
+    developers to reason about reachability and retainment of objects spanning both V8
+    and Blink components based on Chrome's heap snapshot memory tool. Cross-component
+    tracing was enabled by default for all websites in Chrome version 57 and is also
+    deployed in other widely used software systems such as Opera, Cobalt, and Electron.},
+articleno = 151,
+}
+
+
+@Article{DegenbaevLP2019,
+  author = 	 "Degenbaev, Ulan and Lippautz, Michael and Payer, Hannes",
+  title = 	 "Garbage collection as a joint venture",
+  journal = 	 CACM,
+  year = 	 2019,
+  volume = 	 62,
+  number = 	 6,
+  pages = 	 "36-41",
+  month = 	 jun,
+}
+
+
+@InProceedings{BerezunB2014,
+  author = 	 "Berezun, Daniil and Boulytchev, Dmitri",
+  title = 	 "Precise garbage collection for {C++} with a non-cooperative compiler",
+  crossref =  "CEESECR2014",
+  abstract =
+   {We describe a garbage collector for C++ implemented as a user-level library, which
+    does not require a cooperative compiler but makes use of a custom
+    garbage-collection-friendly heap implementation. We claim our garbage collector to be
+    precise, i.e. capable to precisely identify all pointers to all managed objects,
+    tolerant to the conventional C++ manual memory management, and safe in the sense that
+    it does not affect the semantics of the program as long as a simple conventions,
+    encouraged by library interface, are followed. We also discuss a performance
+    penalties imposed by the usage of our library on an end-user program.},
+articleno = 15,
+}
+
+
+@Article{Michael2004,
+  author = 	 "Michael, Maged M",
+  title = 	 "Hazard Pointers: Safe Memory Reclamation for Lock-Free Objects",
+  journal = 	 "TPDS",
+  year = 	 2004,
+  volume = 	 15,
+  number = 	 6,
+  pages = 	 "491-504",
+  month = 	 jun,
+  abstract =
+   {Lock-free objects offer significant performance and reliability advantages over
+    conventional lock-based objects. However, the lack of an efficient portable lock-free
+    method for the reclamation of the memory occupied by dynamic nodes removed from such
+    objects is a major obstacle to their wide use in practice. This paper presents hazard
+    pointers, a memory management methodology that allows memory reclamation for
+    arbitrary reuse. It is very efficient, as demonstrated by our experimental
+    results. It is suitable for user-level applications--as well as system
+    programs--without dependence on special kernel or scheduler support. It is
+    wait-free. It requires only single-word reads and writes for memory access in its
+    core operations. It allows reclaimed memory to be returned to the operating
+    system. In addition, it offers a lock-free solution for the ABA problem using only
+    practical single-word instructions. Our experimental results on a multiprocessor
+    system show that the new methodology offers equal and, more often, significantly
+    better performance than other memory management methods, in addition to its
+    qualitative advantages regarding memory reclamation and independence of special
+    hardware support. We also show that lock-free implementations of important object
+    types, using hazard pointers, offer comparable performance to that of efficient
+    lock-based implementations under no contention and no multiprogramming, and
+    outperform them by significant margins under moderate multiprogramming and/or
+    contention, in addition to guaranteeing continuous progress and availability, even in
+    the presence of thread failures and arbitrary delays.},
+}
+
+
+@InProceedings{DavisSSS2013,
+  author = 	 "Davis, Matthew and Schachte, Peter and Somogyi, Zoltan and S\o{}ndergaard, Harald",
+  authorASCII =  "Davis, Matthew and Schachte, Peter and Somogyi, Zoltan and Sondergaard, Harald",
+  authorUTF = 	 "Davis, Matthew and Schachte, Peter and Somogyi, Zoltan and Søndergaard, Harald",
+  title = 	 "A low overhead method for recovering unused memory inside regions",
+  crossref =  "MSPC2013",
+  abstract =
+   {Automating memory management improves both resource safety and programmer
+    productivity. One approach, region-based memory management [9] (RBMM), applies
+    compile-time reasoning to identify points in a program at which memory can be safely
+    reclaimed. The main advantage of RBMM over traditional garbage collection (GC) is the
+    avoidance of expensive runtime analysis, which makes reclaiming memory much
+    faster. On the other hand, GC requires no static analysis, and, operating at runtime,
+    can have significantly more accurate information about object lifetimes. In this
+    paper we propose a hybrid system that seeks to combine the advantages of both methods
+    while avoiding the overheads that previous hybrid systems incurred. Our system can
+    also reclaim array segments whose elements are no longer reachable.},
+articleno = 4,
+}
+
+
+@InProceedings{JungLCKPK2023,
+  author = 	 "Jung, Jaehwang and Lee, Janggun and Choi, Jaemin and Kim, Jaewoo and Park, Sunho and Kang, Jeehoon",
+  title = 	 "Modular verification of safe memory reclamation in concurrent separation logic",
+  crossref =  "OOPSLA2023",
+  abstract =
+   {Formal verification is an effective method to address the challenge of designing
+    correct and efficient concurrent data structures. But verification efforts often
+    ignore memory reclamation, which involves nontrivial synchronization between
+    concurrent accesses and reclamation. When incorrectly implemented, it may lead to
+    critical safety errors such as use-after-free and the ABA problem. Semi-automatic
+    safe memory reclamation schemes such as hazard pointers and RCU encapsulate the
+    complexity of manual memory management in modular interfaces. However, this
+    modularity has not been carried over to formal verification. We propose modular
+    specifications of hazard pointers and RCU, and formally verify realistic
+    implementations of them in concurrent separation logic. Specifically, we design
+    abstract predicates for hazard pointers that capture the meaning of validating the
+    protection of nodes, and those for RCU that support optimistic traversal to possibly
+    retired nodes. We demonstrate that the specifications indeed facilitate modular
+    verification in three criteria: compositional verification, general applicability,
+    and easy integration. In doing so, we present the first formal verification of
+    Harris’s list, the Harris-Michael list, the Chase-Lev deque, and RDCSS with
+    reclamation. We report the Coq mechanization of all our results in the Iris
+    separation logic framework.},
+articleno = 251,
+}
+
+
+@InProceedings{GuyerMF2006,
+  author = 	 "Guyer, Samuel Z. and McKinley, Kathryn S. and Frampton, Daniel",
+  title = 	 "{Free-Me}: a static analysis for automatic individual object reclamation",
+  crossref =  "PLDI2006",
+  pages = 	 "364–375",
+  abstract =
+   {Garbage collection has proven benefits, including fewer memory related errors and
+    reduced programmer effort. Garbage collection, however, trades space for time. It
+    reclaims memory only when it is invoked: invoking it more frequently reclaims memory
+    quickly, but incurs a significant cost; invoking it less frequently fills memory with
+    dead objects. In contrast, explicit memory management provides prompt low cost
+    reclamation, but at the expense of programmer effort.This work comes closer to the
+    best of both worlds by adding novel compiler and runtime support for compiler
+    inserted frees to a garbage-collected system. The compiler's free-me analysis
+    identifies when objects become unreachable and inserts calls to free. It combines a
+    lightweight pointer analysis with liveness information that detects when short-lived
+    objects die. Our approach differs from stack and region allocation in two crucial
+    ways. First, it frees objects incrementally exactly when they become unreachable,
+    instead of based on program scope. Second, our system does not require
+    allocation-site lifetime homogeneity, and thus frees objects on some paths and not on
+    others. It also handles common patterns: it can free objects in loops and objects
+    created by factory methods.We evaluate free() variations for free-list and
+    bump-pointer allocators. Explicit freeing improves performance by promptly reclaiming
+    objects and reducing collection load. Compared to marksweep alone, free-me cuts total
+    time by 22\% on average, collector time by 50\% to 70\%, and allows programs to run
+    in 17\% less memory. This combination retains the software engineering benefits of
+    garbage collection while increasing space efficiency and improving performance, and
+    thus is especially appealing for real-time and space constrained systems.},
+}
+
+
+@InProceedings{HallenbergET2002,
+  author = 	 "Hallenberg, Niels and Elsman, Martin and Tofte, Mads",
+  title = 	 "Combining region inference and garbage collection",
+  crossref =  "PLDI2002",
+  pages = 	 "141-152",
+  abstract =
+   {This paper describes a memory discipline that combines region-based memory
+    management and copying garbage collection by extending Cheney's copying garbage
+    collection algorithm to work with regions. The paper presents empirical evidence that
+    region inference very significantly reduces the number of garbage collections; and
+    evidence that the fastest execution is obtained by using regions alone, without
+    garbage collection. The memory discipline is implemented for Standard ML in the ML
+    Kit compiler and measurements show that for a variety of benchmark programs, code
+    generated by the compiler is as efficient, both with respect to execution time and
+    memory usage, as programs compiled with Standard ML of New Jersey, another
+    state-of-the-art Standard ML compiler.},
+}
+
+
+@InProceedings{Elsman2003,
+  author = 	 "Elsman, Martin",
+  title = 	 "Garbage collection safety for region-based memory management",
+  crossref =  "TLDI2003",
+  pages = 	 "123–134",
+  abstract =
+   {In this paper, we prove the safety of integrating region-based memory management and
+    Cheney-style copying garbage collection. The safety property relies on a refinement
+    of the region typing rules that forbids dangling pointers during evaluation.To
+    accommodate the triggering of garbage collection at any step in the evaluation
+    process, we base our type-safety result for the region-based system on a small-step
+    contextual semantics and show that whenever a well-typed expression reduces to
+    another expression, possibly by deallocating a region, then no dangling pointer is
+    introduced. Because there are no dangling pointers in the initial heap, no dangling
+    pointers appear during evaluation.Although in principle, the refinement of the region
+    typing rules leads to less flexibility and can cause worse memory behavior than when
+    dangling pointers are permitted, experiments show that, for a range of benchmark
+    programs, the refinement has little effect on overall memory behavior.},
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% End
 %%%
 
