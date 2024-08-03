@@ -11464,13 +11464,57 @@ with an {SMT} solver",
     challenges call graph construction which jeopardizes soundness.",
   basefilename = "callgraph-soundness-issta2024",
   downloads = "https://anonymous.4open.science/r/Call-Graph-Soundness-in-Android-Static-Analysis-2CD7 artifacts",
-  category =  "Static analysis,Mobile applications",
+  category =     "Static analysis,Mobile applications",
   csetags = 	 "mernst,rjust,mernst-Static-analysis,plse",
   summary =
    "We analyzed 13 static analyzers for Android code. They are very unsound: they
     failed to analyze 61\%, on average, of the dynamically-executed methods.
     Tools were bad at discovering entry points, higher-precision tools were most
     unsound.",
+}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% 2025
+%%%
+
+
+
+
+@InProceedings{PengZECD2025,
+  author = 	 "Haoran Peng and Yu Zhang and Michael D. Ernst and Jinbao Chen and Boyao Ding",
+  title = 	 "GoFree: Reducing garbage collection via compiler-inserted freeing",
+  crossref =  "CGO2025",
+  NEEDpages = 	 "*",
+  OPTabstract =
+   "In a memory-managed programming language, programmers allocate memory by
+    creating new objects, but programmers never free memory. A garbage
+    collector periodically reclaims memory used by unreachable objects. As an
+    optimization based on escape analysis, some memory can be freed explicitly
+    by instructions inserted by the compiler. This optimization reduces the
+    cost of garbage collection, without changing the programming model.
+    \par
+    We designed and implemented this explicit freeing optimization for the Go
+    language. We devised a new escape analysis that is both powerful and fast
+    ($O(n^2)$ time). Our escape analysis identifies short-lived heap objects
+    that can be safely explicitly deallocated. We also implemented a freeing
+    primitive that is safe for use in concurrent environments.
+    \par
+    We evaluated our system, GoFree, on 6 open-source Go programs. GoFree did
+    not observably slow down compilation.  At run time, GoFree deallocated on
+    average 14.1\% of allocated heap memory. It reduced GC frequency by 7.3\%,
+    GC time by 13.0\%, wall-clock time by 2.0\%, and heap size by 3.6\%.",
+  basefilename = "explicit-free-cgo2025",
+  OPTdownloads = "",
+  OPTdownloadsnonlocal = "",
+  category =     "Miscellaneous",
+  csetags = 	 "hrpeng,mernst,mernst-Miscellaneous,plse",
+  summary =
+    "Explicit freeing of memory is more efficient than garbage collection, but
+     it is tedious and error-prone.  Our system GoFree automatically inserts
+     free operations where it is legal to do so, overall reducing run time.",
 }
 
 
