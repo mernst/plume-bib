@@ -669,6 +669,36 @@ series = {CVSM '09}
 %%% Merging -- neural, deep learning
 %%%
 
+@Article{DinellaMSBNL2023,
+  author = 	 "Dinella, Elizabeth and Mytkowicz, Todd and Svyatkovskiy, Alexey and Bird, Christian and Naik, Mayur and Lahiri, Shuvendu",
+  title = 	 "{DeepMerge}: Learning to merge programs",
+  journal = 	 TSE,
+  year = 	 2023,
+  volume = 	 49,
+  number = 	 4,
+  pages = 	 "1599–1614",
+  month = 	 apr,
+  abstract =
+   "In collaborative software development, program merging is \emph{the}
+    mechanism to integrate changes from multiple programmers. Merge algorithms
+    in modern version control systems report a conflict when changes interfere
+    textually. Merge conflicts require manual intervention and frequently stall
+    modern continuous integration pipelines. Prior work found that, although
+    costly, a large majority of resolutions involve re-arranging text without
+    writing any new code. Inspired by this observation we propose the
+    \emph{first data-driven approach} to resolve merge conflicts with a machine
+    learning model. We realize our approach in a tool DeepMerge that uses a
+    novel combination of (i) an edit-aware embedding of merge inputs and (ii) a
+    variation of pointer networks, to construct resolutions from input
+    segments. We also propose an algorithm to localize manual resolutions in a
+    resolved file and employ it to curate a ground-truth dataset comprising
+    8,719 non-trivial resolutions in JavaScript programs. Our evaluation shows
+    that, on a held out test set, DeepMerge can predict correct resolutions for
+    37\% of non-trivial merges, compared to only 4\% by a state-of-the-art
+    semistructured merge technique. Furthermore, on the subset of merges with
+    upto 3 lines (comprising 24\% of the total dataset), DeepMerge can predict
+    correct resolutions with 78\% accuracy.",
+}
 
 
 @InProceedings{SvyatkovskiyFGMDBJSL2022,
@@ -1205,6 +1235,15 @@ numpages = {10},
 
 
 
+@InProceedings{Gousios2013,
+  author = 	 "Georgios Gousios",
+  title = 	 "The {GHTorrent} dataset and tool suite",
+  crossref =  "MSR2013",
+  pages = 	 "233-236",
+  doi = 	 "https://doi.org/10.1109/MSR.2013.6624034",
+}
+
+
 
 
 
@@ -1218,12 +1257,38 @@ numpages = {10},
   number = 	 6,
   pages = 	 "3219-3253",
   month = 	 dec,
+  abstract =
+   "Software forges like GitHub host millions of repositories. Software
+    engineering researchers have been able to take advantage of such a large
+    corpora of potential study subjects with the help of tools like GHTorrent
+    and Boa. However, the simplicity in querying comes with a caveat: there are
+    limited means of separating the signal (e.g. repositories containing
+    engineered software projects) from the noise (e.g. repositories containing
+    home work assignments). The proportion of noise in a random sample of
+    repositories could skew the study and may lead to researchers reaching
+    unrealistic, potentially inaccurate, conclusions. We argue that it is
+    imperative to have the ability to sieve out the noise in such large
+    repository forges.
+    \par
+    We propose a framework, and present a reference implementation of the
+    framework as a tool called reaper, to enable researchers to select GitHub
+    repositories that contain evidence of an engineered software project. We
+    identify software engineering practices (called dimensions) and propose
+    means for validating their existence in a GitHub repository. We used reaper
+    to measure the dimensions of 1,857,423 GitHub repositories. We then used
+    manually classified data sets of repositories to train classifiers capable
+    of predicting if a given GitHub repository contains an engineered software
+    project. The performance of the classifiers was evaluated using a set of
+    200 repositories with known ground truth classification. We also compared
+    the performance of the classifiers to other approaches to classification
+    (e.g. number of GitHub Stargazers) and found our classifiers to outperform
+    existing approaches. We found stargazers-based classifier (with 10 as the
+    threshold for number of stargazers) to exhibit high precision (97\%) but an
+    inversely proportional recall (32\%). On the other hand, our best
+    classifier exhibited a high precision (82\%) and a high recall (86\%). The
+    stargazer-based criteria offers precision but fails to recall a significant
+    portion of the population.",
 }
-
-
-
-
-
 
 
 
