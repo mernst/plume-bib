@@ -11521,30 +11521,55 @@ with an {SMT} solver",
 }
 
 
+
+
+@TechReport{ScheschFYRE2024:TR,
+  author = 	 "Benedikt Schesch and Ryan Featherman and Kenneth J. Yang and Ben R. Roberts and Michael D. Ernst",
+  title = 	 "Evaluation of Version Control Merge Tools (Appendix)",
+  institution =  UWCSE,
+  year = 	 2024,
+  number = 	 "UW-CSE-24-09-01",
+  address = 	 UWCSEaddr,
+  month = 	 sep,
+  abstract =  "This appendix accompanies the ASE 2024 paper ``Evaluation of
+                  Version Control Merge tools''.",
+  basefilename = "merge-evaluation-ase2024-appendix",
+  supersededby = "ScheschFYRE2024 an appendix",
+  category =  "Software engineering",
+  csetags = 	 "mernst",
+  summary =
+   "This paper gives about 75 examples of merge tool output, highlighting the
+   strengths and weaknesses of different tools.  It is an appendix to the ASE
+   2024 paper ``Evaluation of Version Control Merge tools''.",
+}
+
 @InProceedings{ScheschFYRE2024,
   author = 	 "Benedikt Schesch and Ryan Featherman and Kenneth J. Yang and Ben R. Roberts and Michael D. Ernst",
   title = 	 "Evaluation of version control merge tools",
   crossref =  "ASE2024",
   NEEDpages = 	 "*",
   abstract =
-   "A version control system, such as Git, requires a way to integrate
-    changes from different developers or branches. Given a merge scenario,
-    a merge tool either outputs a clean integration of the changes
-    or outputs a conflict for manual resolution. A clean integration is
-    correct if it preserves intended program behavior, and is incorrect
-    otherwise (e.g., if it causes a test failure). Manual resolution
-    consumes valuable developer time, and correcting a defect introduced
-    by an incorrect merge is even more costly.
+   "A version control system, such as Git, requires a way to integrate changes
+    from different developers or branches. Given a merge scenario, a merge tool
+    either outputs a clean integration of the changes, or it outputs a conflict
+    for manual resolution.  A clean integration is correct if it preserves
+    intended program behavior, and is incorrect otherwise (e.g., if it causes a
+    test failure).  Manual resolution consumes valuable developer time, and
+    correcting a defect introduced by an incorrect merge is even more costly.
     \par
-    New merge tools have been proposed, but they have not yet been
-    evaluated against one another. This paper does so, providing essential
-    context for researchers and practitioners. Our novel experimental
-    methodology combines running test suites, examining merges on
-    deleted branches, and accounting for the cost of incorrect merges.
-    Based on these evaluations, we created merge tools that outperform
-    all previous tools under most assumptions.
-    They correctly handle the most common merge conflicts produced
-    by Git.",
+    New merge tools have been proposed, but they have not yet been evaluated
+    against one another.  Prior evaluations do not properly distinguish between
+    correct and incorrect merges, are not evaluated on a realistic set of merge
+    scenarios, and/or do not compare to state-of-the-art tools.  We have
+    performed a more realistic evaluation.  The results differ significantly
+    from previous claims, setting the record straight and enabling better
+    future research.  Our novel experimental methodology combines running test
+    suites, examining merges on deleted branches, and accounting for the cost
+    of incorrect merges.
+    \par
+    Based on these evaluations, we created a merge tool that outperforms all
+    previous tools under most assumptions.  It handles the most common merge
+    scenarios in practice.",
   basefilename = "merge-evaluation-ase2024",
   downloads = "https://github.com/plume-lib/merging implementation",
   category =  "Software engineering",
@@ -11552,7 +11577,7 @@ with an {SMT} solver",
   summary =
    "This paper proposes a new methodology for evaulating merge tools that
     accounts for the cost of incorrect merges. The paper evaluates previous
-    tools and proposes new tools that outperform all previous tools.",
+    tools and presents a new tool that outperforms all previous tools.",
 }
 
 
