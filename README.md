@@ -120,6 +120,15 @@ SETUP -- if you use a Makefile to process your paper
     endif
 ```
 
+Alternately, if you prefer a copy of the plume-bib files (not a clone of
+its repository), you can periodically run this target:
+
+```
+plume-bib-update:
+	(cd ~/tex/plume-bib && git pull && make)
+	rsync -a --delete --exclude=.git ~/tex/plume-bib/ plume-bib/
+```
+
 
 SETUP -- non-Makefile version
 -----------------------------
