@@ -25,7 +25,7 @@ bibstring-abbrev.bib: bibstring-master.bib $(BIB_ABBREVIATE)
 crossrefs-abbrev.bib: crossrefs.bib $(BIB_ABBREVIATE)
 	@rm -f $@
 	$(BIB_ABBREVIATE) -abbrev $< > $@
-	perl -pi -e 's/(^\s*(book)?title\s*=\s*\".*?)(\s+'\''?[0-9]+)?:\s.*(\",$$)/\1\4/' $@
+	perl -pi -e 's/(^\s*(book)?title\s*=\s*\".*?)(\s+'\''?[0-9]+)?(:|\s*---)\s.*(\",$$)/\1\5/' $@
 	perl -pi -e 's/(^\s*(book)?title\s*=\s*\"[A-Za-z]*)(\s+'\''?[0-9]+)?,\s.*(\",$$)/\1\4/' $@
 	perl -pi -e 's/(^\s*address\s*=\s*\".*\",?\n)//' $@
 	@chmod oga-w $@
