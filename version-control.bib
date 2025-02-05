@@ -332,6 +332,48 @@ We start with a hypothesis that a moderate correlation exists between pull reque
 }
 
 
+@Article{ShenGHM2023,
+  author =       {Shen, Bowen and Gulzar, Muhammad Ali and He, Fei and Meng, Na},
+  title =        {A Characterization Study of Merge Conflicts in {Java} Projects},
+  journal =      TOSEM,
+  year =         2023,
+  volume =    32,
+  number =    2,
+  pages =     {40:1-28},
+  month =     mar,
+  abstract =
+   {In collaborative software development, programmers create software branches
+    to add features and fix bugs tentatively, and then merge branches to
+    integrate edits. When edits from different branches textually overlap (i.e.,
+    textual conflicts) or lead to compilation and runtime errors (i.e., build
+    and test conflicts), it is challenging for developers to remove such
+    conflicts. Prior work proposed tools to detect and solve conflicts. They
+    investigate how conflicts relate to code smells and the software development
+    process. However, many questions are still not fully investigated, such as
+    what types of conflicts exist in real-world applications and how developers
+    or tools handle them. For this article, we used automated textual merge,
+    compilation, and testing to reveal three types of conflicts in 208
+    open-source repositories: textual conflicts, build conflicts (i.e.,
+    conflicts causing build errors), and test conflicts (i.e., conflicts
+    triggering test failures). We manually inspected 538 conflicts and their
+    resolutions to characterize merge conflicts from different angles. Our
+    analysis revealed three interesting phenomena. First, higher-order conflicts
+    (i.e., build and test conflicts) are harder to detect and resolve, while
+    existing tools mainly focus on textual conflicts. Second, developers
+    manually resolved most higher-order conflicts by applying similar edits to
+    multiple program locations; their conflict resolutions share common editing
+    patterns implying great opportunities for future tool design. Third,
+    developers resolved 64\% of true textual conflicts by keeping complete edits
+    from either a left or right branch. Unlike prior studies, our research for
+    the first time thoroughly characterizes three types of conflicts, with a
+    special focus on higher-order conflicts and limitations of existing tool
+    design. Our work will shed light on future research of software merge.},
+}
+
+
+
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Merging -- line-based
@@ -771,7 +813,7 @@ journal = {Queue},
 month = sep,
 pages = {101–119},
 numpages = {19}
-}                  
+}
 
 
 
