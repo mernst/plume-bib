@@ -11486,7 +11486,7 @@ with an {SMT} solver",
 
 @InProceedings{YooEJ2024,
   author = 	 "James Yoo and Michael D. Ernst and Ren\'e Just",
-  authorASCII =  "James Yoo and Michael D. Ernst and Ren\'e Just",
+  authorASCII =  "James Yoo and Michael D. Ernst and Rene Just",
   authorNONASCII = "James Yoo and Michael D. Ernst and René Just",
   title = 	 "Verifying the option type with rely-guarantee reasoning",
   crossref =  "ASE2024",
@@ -11600,11 +11600,11 @@ with an {SMT} solver",
   author = 	 "Haoran Peng and Yu Zhang and Michael D. Ernst and Jinbao Chen and Boyao Ding",
   title = 	 "GoFree: Reducing garbage collection via compiler-inserted freeing",
   crossref =  "CGO2025",
-  NEEDpages = 	 "675-688",
+  pages = 	 "675-688",
   abstract =
    "In a memory-managed programming language, programmers
     allocate memory by creating new objects, but programmers never free
-    memory.  A garbage collector periodically
+    memory.  A garbage collector (GC) periodically
     reclaims memory used by unreachable objects.  As an optimization based on
     escape analysis, some memory can be freed explicitly by
     instructions inserted by the compiler.  This optimization reduces
@@ -11619,15 +11619,15 @@ with an {SMT} solver",
     \par
     We evaluated our system, GoFree, on 6 open-source Go programs.
     GoFree did not observably slow down compilation.
-    At run time, GoFree deallocated on average 14.1\% of allocated heap memory.
+    At run time, GoFree deallocated on average 14\% of allocated heap memory.
     It reduced
-    GC frequency by 7.3\%,
-    GC time by 13.0\%,
-    wall-clock time by 2.0\%, and
-    heap size by 3.6\%.",
+    GC frequency by 7\%,
+    GC time by 13\%,
+    wall-clock time by 2\%, and
+    heap size by 4\%. We made GoFree \href{https://doi.org/10.6084/m9.figshare.26785357}{open-source}.",
   basefilename = "explicit-free-cgo2025",
   OPTdownloads = "",
-  OPTdownloadsnonlocal = "",
+  downloadsnonlocal = "https://doi.org/10.6084/m9.figshare.26785357 implementation",
   downloads = "https://doi.org/10.6084/m9.figshare.26785357 artifact",
   category =     "Miscellaneous",
   csetags = 	 "hrpeng,mernst,mernst-Miscellaneous,plse",
@@ -11637,6 +11637,57 @@ with an {SMT} solver",
      free operations where it is legal to do so, overall reducing run time.",
 }
 
+
+
+
+
+@Article{SamhiJEBK2025,
+  author =       {Samhi, Jordan and Ren\'e, Just and Michael D. Ernst and Tegawend\'e F. Bissyand\'e and Klein, Jacques},
+  authorASCII =  {Samhi, Jordan and Rene, Just and Michael D. Ernst and Tegawende F. Bissyande and Klein, Jacques},
+  authorNONASCII = {Samhi, Jordan and René, Just and Michael D. Ernst and Tegawendé F. Bissyandé and Klein, Jacques},
+  title =        {Resolving conditional implicit calls to improve static and dynamic analysis in {Android} apps},
+  journal =      TOSEM,
+  year =         2025,
+  OPTkey =       {},
+  OPTvolume =    {},
+  OPTnumber =    {},
+  OPTpages =     {},
+  OPTmonth =     {},
+  OPTnote =      {},
+  OPTannote =    {},
+  OPTdoi =       {},
+  abstract =
+   {An implicit call is a mechanism that triggers the execution of a method $m$
+    without a direct call to $m$ in the code being analyzed.
+    For instance, in Android apps the \texttt{Thread.start()} method
+    implicitly executes the \texttt{Thread.run()} method.
+    These implicit calls can be conditionally triggered by programmer-specified constraints that are evaluated at run time.
+    For instance, the \texttt{Job\-Scheduler.schedule()} method can be called to implicitly execute the \texttt{Job\-Service.on\-Start\-Job()} method only if the device's battery is charging.
+    Such conditional implicit calls can effectively disguise \emph{logic bombs}, posing significant challenges for both static and dynamic software analyses.
+    Conservative static analysis may produce false-positive alerts due to over-approximation, while less conservative approaches might overlook potential covert behaviors, a serious concern in security analysis.
+    Dynamic analysis may fail to generate the specific inputs required to activate these implicit call targets.
+    To address these challenges, we introduce Archer, a tool designed to resolve conditional implicit calls and extract the constraints triggering execution control transfer.
+    Our evaluation reveals that
+    (1) implicit calls are prevalent in Android apps;
+    (2) Archer enhances app models' soundness beyond existing static analysis methods;
+    and (3) Archer successfully infers constraint values, enabling dynamic analyzers to detect (i.e., thanks to better code coverage) and assess conditionally triggered implicit calls.},
+  OPTusesDaikon = {},
+  OPTusesDaikonAsTestSubject = {},
+  OPTomitfromcv = {},
+  OPTunderreview = {},
+  basefilename = {implicit-calls-tosem2025},
+  downloads = {https://github.com/JordanSamhi/Archer implementation;
+               https://doi.org/10.5281/zenodo.10474310 experimental scripts and data},
+  OPTdownloadsnonlocal = {},
+  OPTsupersededby = {},
+  category =  "Static analysis,Mobile applications",
+  OPTcsetags =   {},
+  summary =
+   {An implicit call causes execution of a method $m$ without a direct call to $m$ in
+    the source code.  Traditional analyses unsoundly overlook implicit calls.  This
+    work adds such calls to the call graph and determines under what conditions they
+    may occur.},
+}
 
 %% When I add here at the bottom of the file, also post a PLSE news item.
 
