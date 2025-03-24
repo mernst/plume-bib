@@ -11079,6 +11079,7 @@ with an {SMT} solver",
     resource leak analysis built into the Eclipse IDE), and imposes only a small
     annotation burden (1/1500 LoC) for developers.",
   basefilename = "resource-leak-esecfse2021",
+  supersededby = "ShadabGTEKLLS2025",
   downloads =
    "https://docs.google.com/presentation/d/1MBBVh0wbaQnlxKwsPwMPEFVIMaH2tj6NghN9NYgnaZo slides (Google Slides);
     https://www.youtube.com/watch?v=bY5K3kRg3aw talk video (YouTube);
@@ -11242,7 +11243,7 @@ with an {SMT} solver",
     properties of typestate automata can re-use our work.",
   basefilename = "accumulation-analysis-ecoop2022-artifact",
   downloads = "https://checkerframework.org/ implementation;
-               https://drops.dagstuhl.de/opus/volltexte/2022/16220/artifact/DARTS-8-2-22-artifact-429b8a9421df64399b328dfa1e075a9d.zip artifact",
+               https://drops.dagstuhl.de/storage/artifacts/darts-vol008/darts-vol008-issue002_ecoop2022/16443/DARTS-8-2-22-artifact-429b8a9421df64399b328dfa1e075a9d.zip artifact",
   category =  "Verification",
   csetags =   "kelloggm,mernst,mernst-Verification,plse",
   summary =
@@ -11688,6 +11689,118 @@ with an {SMT} solver",
     work adds such calls to the call graph and determines under what conditions they
     may occur.},
 }
+
+
+
+
+
+@Article{ShadabGTEKLLS2025,
+  author =       {Narges Shadab and Pritam Gharat and Shrey Tiwari and Michael D. Ernst and Martin Kellogg and Shuvendu K. Lahiri and Akash Lal and Manu Sridharan},
+  title =        {Lightweight and modular resource leak checking (extended version)},
+  journal =      STTT,
+  year =         2025,
+  OPTkey =       {},
+  OPTvolume =    {},
+  OPTnumber =    {},
+  OPTpages =     {},
+  OPTmonth =     {},
+  OPTnote =      {},
+  OPTannote =    {},
+  OPTdoi =       {},
+  abstract =  {
+    A resource leak occurs when a program allocates a resource, such as a socket or file handle, but fails to deallocate
+    it.  Resource leaks cause resource starvation, slowdowns, and crashes.  Previous techniques
+    to prevent resource leaks are either unsound, imprecise, inapplicable to existing code, slow, or a combination
+    of these.
+    \par
+    Static detection of resource leaks requires checking that de-allocation methods
+    are always invoked on relevant objects before they become unreachable.
+      Our key insight is that leak detection can be reduced to an
+    accumulation problem, a class of typestate problems amenable to sound and modular checking without the need for a heavyweight,
+    whole-program alias analysis. The precision of an accumulation analysis can be improved by computing
+    targeted aliasing information, and we augmented our baseline checker with
+    three such novel techniques: a lightweight ownership transfer system;
+    a specialized resource alias analysis; and a system
+    to create a fresh obligation when a non-final resource field
+    is updated.
+    \par
+    Our approach occupies a unique slice of the design space: it is sound
+    and runs relatively quickly
+    (taking minutes on programs that a state-of-the-art approach
+    took hours to analyze). Moreover, our approach generalizes to multiple analysis backends.
+    RLC\# revealed 49 real resource leaks in widely-deployed software; RLC\# revealed 24 real
+    resource leaks in five programs, including three Azure microservices.
+    Both implementations scale well, have manageable false positive rates (comparable to heuristic bug-finders), and
+    impose only a small annotation burden (about 1/6000 LoC) for developers.
+    \par
+    This is an extended version of an ESEC/FSE 2021 publication.  The key new contribution of this work is the introduction of the RLC\# tool for checking of C\# code.  We describe the implementation of RLC\# as a reachability-based analysis built on CodeQL (quite different than the previous approach) and present an evaluation of its effectiveness.},
+  OPTomitfromcv = {},
+  OPTunderreview = {},
+  basefilename = {resource-leak-sttt2025},
+  downloads =
+   "https://checkerframework.org/ implementation;
+    https://doi.org/10.5281/zenodo.4902321 scripts and data",
+  OPTdownloadsnonlocal = {},
+  category =  "Verification",
+  summary =
+   {This paper presents a modular approach to detecting resource leaks that does
+    not require a heavy-weight whole-program analysis.  The approach is sound,
+    is applicable to existing code, and is easy for developers to use.},
+}
+
+
+
+@Article{AlonsoESRC2025,
+  author =       {Juan C. Alonso and Michael D. Ernst and Sergio Segura and Antonio Ruiz-Cort\'es},
+  authorASCII =  {Juan C. Alonso and Michael D. Ernst and Sergio Segura and Antonio Ruiz-Cortes},
+  authorNONASCII = {Juan C. Alonso and Michael D. Ernst and Sergio Segura and Antonio Ruiz-Cortés},
+  title =        {Test oracle generation for {REST} {APIs}},
+  journal =      TOSEM,
+  year =         2025,
+  OPTkey =       {},
+  OPTvolume =    {},
+  OPTnumber =    {},
+  OPTpages =     {},
+  OPTmonth =     {},
+  OPTnote =      {},
+  OPTannote =    {},
+  OPTdoi =       {},
+  abstract =
+   {The number and complexity of test case generation tools for REST APIs have
+    significantly increased in recent years. These tools excel in automating
+    input generation but are limited by their test oracles, which can only
+    detect crashes, regressions, and violations of API specifications or design
+    best practices. This article introduces AGORA+, an approach for
+    generating test oracles for REST APIs through the detection of
+    invariants---output properties that should always hold. AGORA+ learns the
+    expected behavior of an API by analyzing API requests and their
+    corresponding responses. We enhanced the Daikon tool for dynamic detection
+    of likely invariants, adding new invariant types and creating a front-end
+    called Beet. Beet translates any OpenAPI specification
+    and a set of API requests and responses into Daikon inputs. AGORA+ can
+    detect 106 different types of invariants in REST APIs. We also
+    developed PostmanAssertify, which converts the invariants identified by
+    AGORA+ into executable JavaScript assertions. AGORA+ achieved a
+    precision of 80\% on 25 operations from 20
+    industrial APIs. It also identified 48\% of errors systematically
+    seeded in the outputs of the APIs under test. AGORA+ uncovered
+    32 bugs in popular APIs, including Amadeus, Deutschebahn, GitHub,
+    Marvel, NYTimesBooks, and YouTube, leading to fixes and documentation
+    updates.},
+  basefilename = {rest-oracle-tosem2025},
+  downloads =
+   {https://github.com/isa-group/Beet Beet implementation;
+    https://doi.org/10.5281/zenodo.14728849 replication package;
+    https://hub.docker.com/r/javalenzuela/daikon_agora Docker image;
+    https://github.com/JuanCarlosAlonsoValenzuela/daikon_modified modified Daikon},
+  OPTdownloadsnonlocal = {},
+  OPTsupersededby = {},
+  category =  "Specification inference",
+  summary =
+   {This paper dynamically infers specifications for REST APIs.  In addition to
+    REST tooling, a key contribution is new invariant types.},
+}
+
 
 %% When I add here at the bottom of the file, also post a PLSE news item.
 
