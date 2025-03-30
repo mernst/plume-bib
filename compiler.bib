@@ -2242,6 +2242,19 @@ series = {ICSE '24}
 }
 
 
+@InProceedings{GaoCZW2024,
+  author =       {Gao, Fengjuan and Chen, Hongyu and Zhou, Yuewei and Wang, Ke},
+  title =        {Shoot Yourself in the Foot — Efficient Code Causes Inefficiency in Compiler Optimizations},
+  crossref =  {ASE2024},
+  pages =     {1846–1857},
+  abstract =  {In this paper, we take a different angle to evaluate compiler optimizations than all existing works in compiler testing literature. In particular, we consider a specific scenario in software development, that is, when developers manually optimize a program to improve its performance, do compilers actually generate more efficient code with the help of developers' optimizations?To answer this question, we develop a simple approach which consists of (1) deoptimizing a program into a less efficient version of the original program, and then (2) comparing the performance of the generated code from each version of the source code. We realize this approach into a tool, called de3 (detect defects with deoptimizations), and use it to evaluate GCC and LLVM, two state-of-the-art, industry compilers. We observe that the extra optimizations presented in the original programs can be not only unhelpful, but more seriously counterproductive to both GCC and LLVM, resulting in the less efficient code generated overall. Out of our evaluation results, we summarized and reported 53 LLVM and 18 GCC defects, out of which 37 and 17 have been confirmed or fixed.Our work pioneers a new pathway for evaluating compiler optimizations. More importantly, we expect our work to inspire new design principles for compiler development.},
+}
+
+
+
+
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% End
