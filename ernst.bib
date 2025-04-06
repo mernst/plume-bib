@@ -10259,6 +10259,7 @@ with an {SMT} solver",
    "SpaceSearch is a library for developing solver-aided tools within a proof
     assistant.  It enables the creation of provably correct tools that transform
     some problem from its original doman to that of a highly optimized solver.",
+  undergradCoauthor = 1,
 }
 
 
@@ -10419,6 +10420,7 @@ with an {SMT} solver",
    "The VizAssert tool proves that a web page's layout satisfies a usability
     or accessibility property, such as that text never overlaps or buttons
     are onscreen, regardless of screen size, font preferences, browser, etc.",
+  undergradCoauthor = 1,
 }
 
 
@@ -10545,6 +10547,7 @@ with an {SMT} solver",
    "This paper presents a fast, precise, scalable, easy-to-use, static
     verification technique for proving that all array accesses are within
     their bounds, based on multiple simple cooperating type systems.",
+  undergradCoauthor = 1,
 }
 
 
@@ -10714,6 +10717,7 @@ with an {SMT} solver",
    "This paper presents two dools to help developers comprehend distributed
     systems:  ShiVector to add vector timestamps to distributed system logs
     and ShiViz to visualize such logs as space-time diagrams.",
+  undergradCoauthor = 1,
 }
 
 
@@ -10849,6 +10853,7 @@ with an {SMT} solver",
     when run in another order.  This paper presents a way to detect test
     dependencies, plus test prioritization, selection, and parallelization
     techniques that avoid violating the dependencies.",
+  undergradCoauthor = 1,
 }
 
 
@@ -10997,6 +11002,7 @@ with an {SMT} solver",
     deterministic (the same across runs), nondeterministic, or
     order-nondeterministic (each collection has the same contents across
     runs, but possibly in a different order).",
+  undergradCoauthor = 1,
 }
 
 
@@ -11043,6 +11049,7 @@ with an {SMT} solver",
     deterministic (the same across runs), nondeterministic, or
     order-nondeterministic (each collection has the same contents across
     runs, but possibly in a different order).",
+  undergradCoauthor = 1,
 }
 
 
@@ -11382,6 +11389,7 @@ with an {SMT} solver",
    "This paper describes a type inference framework.  Given a pluggable
     type-checker implementation, the framework automatically creates a type
     inference tool.",
+  undergradCoauthor = 1,
 }
 
 
@@ -11549,6 +11557,7 @@ with an {SMT} solver",
    "This paper gives about 75 examples of merge tool output, highlighting the
    strengths and weaknesses of different tools.  It is an appendix to the ASE
    2024 paper ``Evaluation of Version Control Merge tools''.",
+  undergradCoauthor = 1,
 }
 
 @InProceedings{ScheschFYRE2024,
@@ -11586,6 +11595,7 @@ with an {SMT} solver",
    "This paper proposes a new methodology for evaulating merge tools that
     accounts for the cost of incorrect merges. The paper evaluates previous
     tools and presents a new tool that outperforms all previous tools.",
+  undergradCoauthor = 1,
 }
 
 
@@ -11593,9 +11603,6 @@ with an {SMT} solver",
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% 2025
 %%%
-
-
-
 
 @InProceedings{PengZECD2025,
   author = 	 "Haoran Peng and Yu Zhang and Michael D. Ernst and Jinbao Chen and Boyao Ding",
@@ -11637,9 +11644,6 @@ with an {SMT} solver",
      it is tedious and error-prone.  Our system GoFree automatically inserts
      free operations where it is legal to do so, overall reducing run time.",
 }
-
-
-
 
 
 @Article{SamhiJEBK2025,
@@ -11689,9 +11693,6 @@ with an {SMT} solver",
     work adds such calls to the call graph and determines under what conditions they
     may occur.},
 }
-
-
-
 
 
 @Article{ShadabGTEKLLS2025,
@@ -11749,7 +11750,6 @@ with an {SMT} solver",
 }
 
 
-
 @Article{AlonsoESRC2025,
   author =       {Juan C. Alonso and Michael D. Ernst and Sergio Segura and Antonio Ruiz-Cort\'es},
   authorASCII =  {Juan C. Alonso and Michael D. Ernst and Sergio Segura and Antonio Ruiz-Cortes},
@@ -11801,6 +11801,41 @@ with an {SMT} solver",
     REST tooling, a key contribution is new invariant types.},
 }
 
+
+
+@InProceedings{MolinelliMLZEEP2025,
+  author =       {Davide Molinelli and Alberto Martin-Lopez and Elliott Zackrone and Beyza Eken and Michael D. Ernst and Mauro Pezz{\`e}},
+  authorASCII =       {Davide Molinelli and Alberto Martin-Lopez and Elliott Zackrone and Beyza Eken and Michael D. Ernst and Mauro Pezze},
+  authorNONASCII =       {Davide Molinelli and Alberto Martin-Lopez and Elliott Zackrone and Beyza Eken and Michael D. Ernst and Mauro Pezzè},
+  title =        {Tratto: A Neuro-Symbolic Approach to Deriving Axiomatic Test Oracles},
+  crossref =  {ISSTA2025},
+  abstract =
+   {This paper presents Tratto, a neuro-symbolic approach that generates
+    assertions (boolean expressions) that can serve as axiomatic oracles, from
+    source code and documentation. The symbolic module of Tratto takes
+    advantage of the grammar of the programming language, the unit under test,
+    and the context of the unit (its class and available APIs) to restrict the
+    search space of the tokens that can be successfully used to generate valid
+    oracles. The neural module of Tratto uses transformers fine-tuned for both
+    deciding whether to output an oracle or not and selecting the next lexical
+    token to incrementally build the oracle from the set of tokens returned by
+    the symbolic module. Our experiments show that Tratto outperforms the
+    state-of-the-art axiomatic oracle generation approaches, with 73\% accuracy,
+    72\% precision, and 61\% F1-score, largely higher than the best results of
+    the symbolic and neural approaches considered in our study (61\%, 62\%, and
+    37\%, respectively). Tratto can generate three times more axiomatic oracles
+    than current symbolic approaches, while generating 10 times less false
+    positives than GPT4 complemented with few-shot learning and
+    Chain-of-Thought prompting.},
+  basefilename = {axiomatic-oracles-issta2025},
+  downloads = "https://anonymous.4open.science/r/tratto-replication-package-31F6 replication package",
+  category =  "Natural language processing",
+  summary =
+   "This paper generates test assertions (boolean expressions) using both NLP
+    techniques (on documentation) and static analysis (on source code).  It
+    guarantees that the output is syntactically valid.",
+  undergradCoauthor = 1,
+}
 
 %% When I add here at the bottom of the file, also post a PLSE news item.
 
