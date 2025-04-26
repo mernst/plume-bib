@@ -2213,25 +2213,6 @@ described and results from its use are reported."
 
 
 
-@inproceedings{10.1145/3597503.3623323,
-author = {},
-title = {},
-year = {2024},
-isbn = {9798400702174},
-publisher = {Association for Computing Machinery},
-address = {New York, NY, USA},
-url = {https://doi.org/10.1145/3597503.3623323},
-doi = {10.1145/3597503.3623323},
-abstract = {C is an unsafe language. Researchers have been developing tools to port C to safer languages such as Rust, Checked C, or Go. Existing tools, however, resort to preprocessing the source file first, then porting the resulting code, leaving barely recognizable code that loses macro abstractions. To preserve macro usage, porting tools need analyses that understand macro behavior to port to equivalent constructs. But macro semantics differ from typical functions, precluding simple syntactic transformations to port them. We introduce the first comprehensive framework for analyzing the portability of macro usage. We decompose macro behavior into 26 fine-grained properties and implement a program analysis tool, called Maki, that identifies them in real-world code with 94\% accuracy. We apply Maki to 21 programs containing a total of 86,199 macro definitions. We found that real-world macros are much more portable than previously known. More than a third (37\%) are easy-to-port, and Maki provides hints for porting more complicated macros. We find, on average, 2x more easy-to-port macros and up to 7x more in the best case compared to prior work. Guided by Maki's output, we found and hand-ported macros in three real-world programs. We submitted patches to Linux maintainers that transform eleven macros, nine of which have been accepted.},
-booktitle = {Proceedings of the IEEE/ACM 46th International Conference on Software Engineering},
-keywords = {macros, C, program analysis},
-location = {Lisbon, Portugal},
-series = {ICSE '24}
-}
-
-
-
-
 
 @InProceedings{PappasG2024,
   author =       "Pappas, Brent and Gazzillo, Paul",
@@ -2251,6 +2232,24 @@ series = {ICSE '24}
 }
 
 
+
+@inproceedings{10.1145/3669940.3707286,
+author = {Cai, Xuran and Goharshady, Amir Kafshdar and Hitarth, S. and Lam, Chun Kit},
+title = {Faster Chaitin-like Register Allocation via Grammatical Decompositions of Control-Flow Graphs},
+year = {2025},
+isbn = {9798400706981},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3669940.3707286},
+doi = {10.1145/3669940.3707286},
+abstract = {It is well-known that control-flow graphs (CFGs) of structured programs are sparse. This sparsity has been previously formalized in terms of graph parameters such as treewidth and pathwidth and used to design faster parameterized algorithms for numerous compiler optimization, model checking and program analysis tasks.In this work, we observe that the known graph sparsity parameters fail to exactly capture the kind of sparsity exhibited by CFGs. For example, while all structured CFGs have a treewidth of at most 7, not every graph with a treewidth of 7 or less is realizable as a CFG. As a result, current parameterized algorithms are solving the underlying graph problems over a more general family of graphs than the CFGs.To address this problem, we design a new but natural concept of graph decomposition based on a grammar that precisely captures the set of graphs that can be realized as CFGs of programs. We show that our notion of decomposition enables the same type of dynamic programming algorithms that are often used in treewidth/pathwidth-based methods. As two concrete applications, using our grammatical decomposition of CFGs, we provide asymptotically more efficient algorithms for two variants of the classical problem of register allocation as defined by Chaitin, i.e. assigning program variables to a limited number of registers such that variables with intersecting lifetimes are not assigned to the same register. Note that Chaitin's formulation of register allocation does not allow live-range splitting. Our algorithms are asymptotically faster not only in comparison with the non-parameterized solutions for these problems, but also compared to the state-of-the-art treewidth/pathwidth-based approaches in the literature. For minimum-cost register allocation over a fixed number of registers, we provide an algorithm with a runtime of O(|G| ⋅ |𝕈| 5 ⋅ r) where |G| is the size of the program, 𝕈 is the set of program variables and r is the number of registers. In contrast, the previous treewidth-based algorithm had a runtime of O(|G| ⋅ |𝕈| 16 ⋅ r). For the decision problem of spill-free register allocation, our algorithm's runtime is O(|G| ⋅ r5 ⋅ r + 5) whereas the previous works had a runtime of O(|G| ⋅ r16 ⋅ r).Finally, we provide extensive experimental results on spill-free register allocation, showcasing the scalability of our approach in comparison to previous state-of-the-art methods. Most notably, our approach can handle real-world instances with up to 20 registers, whereas previous works could only scale to 8. This is a significant improvement since most ubiquitous architectures, such as the x86 family, have 16 registers. For such architectures, our approach is the first-ever exact algorithm that scales up to solve the real-world instances of spill-free register allocation.},
+booktitle = {Proceedings of the 30th ACM International Conference on Architectural Support for Programming Languages and Operating Systems, Volume 1},
+pages = {463–477},
+numpages = {15},
+keywords = {control-flow graphs, graph decompositions, register allocation, sparsity},
+location = {Rotterdam, Netherlands},
+series = {ASPLOS '25}
+}
 
 
 

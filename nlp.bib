@@ -288,6 +288,37 @@ numpages = {27},
 
 
 
+@InProceedings{DeligiannisLMPR2025,
+  author =       {Deligiannis, Pantazis and Lal, Akash and Mehrotra, Nikita and Poddar, Rishi and Rastogi, Aseem},
+  title =        {{RustAssistant}: Using {LLMs} to Fix Compilation Errors in {Rust} Code},
+  crossref =  {ICSE2025},
+  pages =     {267-279},
+  abstract =  {The Rust programming language, with its safety guarantees, has established itself as a viable choice for low-level systems programming language over the traditional, unsafe alternatives like C/C++. These guarantees come from a strong ownership-based type system, as well as primitive support for features like closures, pattern matching, etc., that make the code more concise and amenable to reasoning. These unique Rust features also pose a steep learning curve for programmers. This paper presents a tool called RustAssistant that leverages the emergent capabilities of Large Language Models (LLMs) to automatically suggest fixes for Rust compilation errors. RustAssistant uses a careful combination of prompting techniques as well as iteration between an LLM and the Rust compiler to deliver high accuracy of fixes. RustAssistant is able to achieve an impressive peak accuracy of roughly 74\% on real-world compilation errors in popular open-source Rust repositories. We also contribute a dataset of Rust compilation errors to enable further research.},
+}
+
+
+
+
+@article{10.1145/3660791,
+author = {Endres, Madeline and Fakhoury, Sarah and Chakraborty, Saikat and Lahiri, Shuvendu K.},
+title = {Can Large Language Models Transform Natural Language Intent into Formal Method Postconditions?},
+year = {2024},
+issue_date = {July 2024},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {1},
+number = {FSE},
+url = {https://doi.org/10.1145/3660791},
+doi = {10.1145/3660791},
+abstract = {Informal natural language that describes code functionality, such as code comments or function documentation, may contain substantial information about a program’s intent. However, there is typically no guarantee that a program’s implementation and natural language documentation are aligned. In the case of a conflict, leveraging information in code-adjacent natural language has the potential to enhance fault localization, debugging, and code trustworthiness. In practice, however, this information is often underutilized due to the inherent ambiguity of natural language, which makes natural language intent challenging to check programmatically. The “emergent abilities” of Large Language Models (LLMs) have the potential to facilitate the translation of natural language intent to programmatically checkable assertions. However, it is unclear if LLMs can correctly translate informal natural language specifications into formal specifications that match programmer intent. Additionally, it is unclear if such translation could be useful in practice.     In this paper, we describe nl2postcondition, the problem of leveraging LLMs for transforming informal natural language to formal method postconditions, expressed as program assertions.   We introduce and validate metrics to measure and compare different nl2postcondition approaches, using the correctness and discriminative power of generated postconditions.   We then use qualitative and quantitative methods to assess the quality of nl2postcondition postconditions, finding that they are generally correct and able to discriminate incorrect code. Finally, we find that  via LLMs has the potential to be helpful in practice;  generated postconditions were able to catch 64 real-world historical bugs from Defects4J.},
+journal = {Proc. ACM Softw. Eng.},
+month = jul,
+articleno = {84},
+numpages = {24},
+keywords = {Formal Specifications, Large Language Models, Postconditions}
+}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Other
 %%%

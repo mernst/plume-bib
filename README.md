@@ -121,12 +121,19 @@ SETUP -- if you use a Makefile to process your paper
 ```
 
 Alternately, if you prefer a copy of the plume-bib files (not a clone of
-its repository), you can periodically run this target:
+its repository), then don't put the above rules in your Makefile, but
+instead add this one and run the target periodically to update your copy:
 
 ```
-plume-bib-update:
-	(cd ~/tex/plume-bib && git pull && make)
-	rsync -a --delete --exclude=.git ~/tex/plume-bib/ plume-bib/
+plume-bib-copy:
+	rm -f master.zip
+	wget https://github.com/mernst/plume-bib/archive/refs/heads/master.zip
+	rm -rf plume-bib-master
+	unzip master.zip
+	rm -rf plume-bib
+	mv plume-bib-master plume-bib
+	sed -i 's/^plume-bib$$/# plume-bib/' .gitignore
+	rm -f master.zip
 ```
 
 
