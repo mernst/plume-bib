@@ -112,6 +112,64 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Resource leaks
+%%%
+
+
+
+@InProceedings{vanTonderLG2018,
+  author =       {van Tonder, Rijnard and Le Goues, Claire},
+  title =        {Static automated program repair for heap properties},
+  crossref =  {ICSE2018},
+  pages =     {151-162},
+  abstract =  {Static analysis tools have demonstrated effectiveness at finding bugs in real world code. Such tools are increasingly widely adopted to improve software quality in practice. Automated Program Repair (APR) has the potential to further cut down on the cost of improving software quality. However, there is a disconnect between these effective bug-finding tools and APR. Recent advances in APR rely on test cases, making them inapplicable to newly discovered bugs or bugs difficult to test for deterministically (like memory leaks). Additionally, the quality of patches generated to satisfy a test suite is a key challenge. We address these challenges by adapting advances in practical static analysis and verification techniques to enable a new technique that finds and then accurately fixes real bugs without test cases. We present a new automated program repair technique using Separation Logic. At a high-level, our technique reasons over semantic effects of existing program fragments to fix faults related to general pointer safety properties: resource leaks, memory leaks, and null dereferences. The procedure automatically translates identified fragments into source-level patches, and verifies patch correctness with respect to reported faults. In this work we conduct the largest study of automatically fixing undiscovered bugs in real-world code to date. We demonstrate our approach by correctly fixing 55 bugs, including 11 previously undiscovered bugs, in 11 real-world projects.},
+}
+
+
+@misc{ecj-resource-leak,
+  howpublished={\url{hhttps://help.eclipse.org/2023-03/index.jsp?topic=\%2Forg.eclipse.jdt.doc.user\%2Ftasks\%2Ftask-avoiding_resource_leaks.htm}},
+  author = {{Eclipse developers}},
+  year = {2023},
+  title = {Avoiding resource leaks},
+  note = {Accessed 24 March 2023},
+}
+
+@misc{pmd-resource-leak,
+  howpublished={\url{https://pmd.sourceforge.io/pmd-6.55.0/pmd_rules_java_errorprone.html\#closeresource}},
+  author = {{PMD developers}},
+  year = {2023},
+  title = {CloseResource},
+  note = {Accessed 24 March 2023},
+}
+
+@misc{rlc-manual,
+  key = {{CheckerRLC}},
+  title = {{Resource Leak Checker for must-call obligations}},
+  howpublished = {\url{https://checkerframework.org/manual/\#resource-leak-checker}},
+  note = {Accessed 29 July 2023},
+  year = 2023,
+}
+
+
+@InProceedings{UttureP2023,
+  author =       {Akshay Utture and Jens Palsberg},
+  title =        {From Leaks to Fixes: Automated Repairs for Resource Leak Warnings},
+  crossref =  {OOPSLA2023},
+  pages =     {159-171},
+}
+
+
+
+@InProceedings{ZhangUSP2024,
+  author =       {Zhizhou Zhang and Akshay Utture and Manu Sridharan and Jens Palsberg},
+  title =        {{FixrLeak}: {GenAI}-based Resource Leak Fix for Real-World {Java} Programs},
+  booktitle = {Machine Learning for Systems Workshop at 38th NeurIPS},
+  year =      2024,
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Other tools
 %%%
 
@@ -137,27 +195,11 @@
   year="accessed 2023",
 }
 
-@misc{ecj-resource-leak,
-  howpublished={\url{hhttps://help.eclipse.org/2023-03/index.jsp?topic=\%2Forg.eclipse.jdt.doc.user\%2Ftasks\%2Ftask-avoiding_resource_leaks.htm}},
-  author = {{Eclipse developers}},
-  year = {2023},
-  title = {Avoiding resource leaks},
-  note = {Accessed 24 March 2023},
-}
-
 @misc{infer-sharp,
   howpublished={\url{https://github.com/microsoft/infersharp/wiki/InferSharp:-A-Scalable-Code-Analytics-Tool-for-.NET}},
   author = {{InferSharp developers}},
   year = {2023},
   title = {InferSharp},
-  note = {Accessed 24 March 2023},
-}
-
-@misc{pmd-resource-leak,
-  howpublished={\url{https://pmd.sourceforge.io/pmd-6.55.0/pmd_rules_java_errorprone.html\#closeresource}},
-  author = {{PMD developers}},
-  year = {2023},
-  title = {CloseResource},
   note = {Accessed 24 March 2023},
 }
 
@@ -177,14 +219,6 @@
   year = 2023,
 }
 
-@misc{rlc-manual,
-  key = {{CheckerRLC}},
-  title = {{Resource Leak Checker for must-call obligations}},
-  howpublished = {\url{https://checkerframework.org/manual/\#resource-leak-checker}},
-  note = {Accessed 29 July 2023},
-  year = 2023,
-}
-
 @misc{codeql-csharp-dataflow,
   key = {{CodeQLCSharpDataflow}},
   title = {{Analyzing data flow in C\#}},
@@ -192,6 +226,8 @@
   note = {Accessed 28 March 2023},
   year = 2023,
 }
+
+
 
 
 

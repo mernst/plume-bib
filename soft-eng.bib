@@ -542,6 +542,22 @@
 %%% Automated program repair (APR)
 %%%
 
+
+
+
+@Article{LeGouesNFW2012,
+  author =       {Le Goues, Claire and Nguyen, ThanhVu and Forrest, Stephanie and Weimer, Westley},
+  title =        {{GenProg}: A Generic Method for Automatic Software Repair},
+  journal =      IEEETSE,
+  year =         2012,
+  volume =    38,
+  number =    1,
+  pages =     {54-72},
+  month =     jan,
+  abstract={This paper describes GenProg, an automated method for repairing defects in off-the-shelf, legacy programs without formal specifications, program annotations, or special coding practices. GenProg uses an extended form of genetic programming to evolve a program variant that retains required functionality but is not susceptible to a given defect, using existing test suites to encode both the defect and required functionality. Structural differencing algorithms and delta debugging reduce the difference between this variant and the original program to a minimal repair. We describe the algorithm and report experimental results of its success on 16 programs totaling 1.25 M lines of C code and 120K lines of module code, spanning eight classes of defects, in 357 seconds, on average. We analyze the generated repairs qualitatively and quantitatively to demonstrate that the process efficiently produces evolved programs that repair the defect, are not fragile input memorizations, and do not lead to serious degradation in functionality.},
+}
+
+
 @InProceedings{LeGouesDVFW2012,
   author = 	 "Le Goues, Claire and Dewey-Vogt, Michael and Forrest, Stephanie and Weimer, Westley",
   title = 	 "A systematic study of automated program repair: fixing 55 out of 105 bugs for \$8 each",
