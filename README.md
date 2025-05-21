@@ -105,19 +105,19 @@ SETUP -- if you use a Makefile to process your paper
 3. Add the following rules to your Makefile.
 
 ```
-    plume-bib:
-    ifdef PLUMEBIB
-	    ln -s ${PLUMEBIB} $@
-    else
-	    git clone https://github.com/mernst/plume-bib.git $@
-    endif
-    .PHONY: plume-bib-update
-    # Even if the plume-bib-update target fails, it does not terminate the make job.
-    # However, to skip it, invoke make as:  make NOGIT=1 ...
-    plume-bib-update: plume-bib
-    ifndef NOGIT
-	    -(cd plume-bib && git pull && make)
-    endif
+plume-bib:
+ifdef PLUMEBIB
+    ln -s ${PLUMEBIB} $@
+else
+    git clone https://github.com/mernst/plume-bib.git $@
+endif
+.PHONY: plume-bib-update
+# Even if the plume-bib-update target fails, it does not terminate the make job.
+# However, to skip it, invoke make as:  make NOGIT=1 ...
+plume-bib-update: plume-bib
+ifndef NOGIT
+    -(cd plume-bib && git pull && make)
+endif
 ```
 
 Alternately, if you prefer a copy of the plume-bib files (not a clone of

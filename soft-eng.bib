@@ -878,6 +878,90 @@ abstract = {Although software documentation standards often go into great detail
 }
 
 
+@INPROCEEDINGS {RongYLTZSH2025,
+author = { Rong, Guoping and Yu, Yongda and Liu, Song and Tan, Xin and Zhang, Tianyi and Shen, Haifeng and Hu, Jidong },
+booktitle = { 2025 IEEE/ACM 47th International Conference on Software Engineering (ICSE) },
+title = {Code Comment Inconsistency Detection and Rectification Using a Large Language Model},
+year = {2025},
+volume = {},
+ISSN = {1558-1225},
+pages = {432-443},
+abstract = { Comments are widely used in source code. If a comment is consistent with the code snippet it intends to annotate, it would aid code comprehension. Otherwise, Code Comment Inconsistency (CCI) is not only detrimental to the understanding of code, but more importantly, it would negatively impact the development, testing, and maintenance of software. To tackle this issue, existing research has been primarily focused on detecting inconsistencies with varied performance. It is evident that detection alone does not solve the problem; it merely paves the way for solving it. A complete solution requires detecting inconsistencies and, more importantly, rectifying them by amending comments. However, this type of work is scarce. In this paper, we contribute C4RLLaMA, a fine-tuned large language model based on the open-source CodeLLaMA. It not only has the ability to rectify inconsistencies by correcting relevant comment content but also outperforms state-of-the-art approaches in detecting inconsistencies. Experiments with various datasets confirm that C4RLLaMA consistently surpasses both post hoc and just-in-time CCI detection approaches. More importantly, C4RLLaMA outperforms substantially the only known CCI rectification approach in terms of multiple performance metrics. To further examine C4RLLaMA's efficacy in rectifying inconsistencies, we conducted a manual evaluation, and the results showed that the percentage of correct comment updates by C4RLLaMA was 65.0% and 55.9% in just-in-time and post hoc, respectively, implying C4RLLaMA's real potential in practical use. },
+keywords = {Code-Comment Inconsistencies;Detection;Rectification;Large Language Model},
+doi = {10.1109/ICSE55347.2025.00035},
+url = {https://doi.ieeecomputersociety.org/10.1109/ICSE55347.2025.00035},
+publisher = {IEEE Computer Society},
+address = {Los Alamitos, CA, USA},
+month =May}
+  This paper is about inconsistency between code and comments, not inconsistency
+among comments.  Their C4RLLaMA technique only changes code -- it assumes that
+any inconsistency is due to a bad comment.  (The paper mentions in passing that
+the code might be right, but their training and evaluation only considers cases
+where the comment did change, whether or not the code also did.)  The technique
+works in two stages -- first, it uses the LLM to determine whether the comments
+are inconsistent with the code, and then it uses the LLM to change the code.  I
+think a really interesting research project would be, after determining that the
+comments are inconsistent with the code, deciding whether to change the comments
+or the code.
+  Evaluation is done in two ways:  "just-in-time" is given a diff and asked if
+the diff introduces inconsistency, and "post hoc" is given one version of code
+and its comment.  "the percentage of correct comment updates by C4RLLaMA was
+65.0\% and 55.9\% in just-in-time and post hoc, respectively".  That seems
+really low!  If the other updates were wrong, then a programmer needs to read
+every output of C4RLLaMA and fix over 1/3 of them.  That sounds like a lot of
+human work, and the paper does not account for the cost of false positive edits.
+Its use of the F1 measure implies that false negatives and false positives are
+equally costly, which is not the case in this scenario.
+  I suspect there were 2 models, one for each scenario, but not 4 (which would
+be the case if there were separate models for the "detection task" and the
+"revision task").  "We utilized the widely used dataset from previous work as
+our training and testing dataset".  The paper does not say how the training set
+and evaluation set were ensured not to overlap; did the authors do anything at
+all about that?
+  Table 1 shows three inconsistent comments. (1) "Read" in comment, "write" in
+method name.  (2) wrong number of formal parameters, which running Javadoc would
+have revealed. (3) The comment "If there is no line number known, -1 is
+returned" for a getter that just returns a field.  Because the method is a
+simple getter, the paper says "the code here is inconsistent with the comment",
+which I disagree with.  If the field might be -1, then the comment is consistent
+with the code.  The one concrete example of C4RLLaMA correcting a comment, in
+Table 4, is fixing a typo from "Arry" to "Array".  Based on these weak examples,
+I am skeptical about the technique and experiments.
+  C4RLLaMA is a fine-tuned version of CodeLLaMA (7B).  Given the fine-tuning,
+the prompt is zero-shot.  The prompt asks the LLM to do chain-of-thought
+reasoning.  The dataset used for training and evaluation is ((method_before,
+comment_before), (method_after, comment_after)).  This dataset shows the full
+method body but no context.  I presume the data comes from a version control
+system.  Regarding the dataset, I did not understand this:  "Based on an
+underlying assumption that all consistency issues will be rectified promptly, a
+code change does not cause a consistency problem, C_before = C_after;
+conversely, if the change raises a consistency problem, C_before != C_after."
+Does "raises" mean "fixes"?
+  For the detection task:  Numerically, their tool outperforms the best previous
+one by just a 1-4\% percent on precision and recall for post hoc detection, and
+it underperformed by 3\% on just-in-time detection; but for the latter
+presenting diffs in a standard format gave their tool an additional boost to be
+7\% better than previous work.  The revision
+  For the revision task:  The revision evaluation omits some LLMs that were
+evaluated for the detection task, such as GPT 3.5 and GPT 4.0; section 6 says
+that's because they perform poorly on the detection task, but that argument does
+not hold water for me.  It is unclear to me whether revision was done everywhere
+that detection indicated an inconsistency, or only where there is truly an
+inconsistency; if the latter, then one needs to multiply the success rates to
+learn the end-to-end success rate.  I suspect that the original, unchanged
+comments would do very well on metrics like BLEU that the paper uses.  The paper
+admits this ("They are not the best for evaluating the efficacy of rectifying
+CCI issues ... [even if wrong], the text similarity metrics may still be very
+high."), but didn't provide any numeric evaluation.  The human evaluation of
+correctness was done by undergraduates.  There is no mention of cross-validation
+or inter-rater reliability testing.  The metric is:  "_successfully fixed_
+requires that the resulting new comment is semantically related to the
+corresponding code and does not contain explicit errors."  In other words, a
+model can get full credit for a new comment that is no different than the
+original.
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Scientific programming and end-user programming
 %%%
@@ -2636,3 +2720,4 @@ keywords = {CSS, Code Style Sheets, Haskell, Structure Editors, Text Layout}
 % LocalWords:  GenProg's RibesL2010 Ribes Sociotechnical JCSCW Tolsum STS Ko
 % LocalWords:  emph Ko Ko faturization PARNAS199541 NguyenHoanFS2010 Perlow1999
 % LocalWords:  PEARL's
+% LocalWords:  C4RLLaMA F1 Arry CodeLLaMA underperformed BLEU CCI
