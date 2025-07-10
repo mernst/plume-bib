@@ -1306,6 +1306,26 @@ Springer-Verlag, 1982. ISBN 0–387–90652–5.},
 
 
 
+
+@inproceedings{10.1145/3540250.3549121,
+author = {Chen, Haoxian and Whitters, Gerald and Amiri, Mohammad Javad and Wang, Yuepeng and Loo, Boon Thau},
+title = {Declarative smart contracts},
+year = {2022},
+isbn = {9781450394130},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3540250.3549121},
+doi = {10.1145/3540250.3549121},
+abstract = {This paper presents DeCon, a declarative programming language for implementing smart contracts and specifying contract-level properties. Driven by the observation that smart contract operations and contract-level properties can be naturally expressed as relational constraints, DeCon models each smart contract as a set of relational tables that store transaction records. This relational representation of smart contracts enables convenient specification of contract properties, facilitates run-time monitoring of potential property violations, and brings clarity to contract debugging via data provenance. Specifically, a DeCon program consists of a set of declarative rules and violation query rules over the relational representation, describing the smart contract implementation and contract-level properties, respectively. We have developed a tool that can compile DeCon programs into executable Solidity programs, with instrumentation for run-time property monitoring. Our case studies demonstrate that DeCon can implement realistic smart contracts such as ERC20 and ERC721 digital tokens. Our evaluation results reveal the marginal overhead of DeCon compared to the open-source reference implementation, incurring 14\% median gas overhead for execution, and another 16\% median gas overhead for run-time verification.},
+booktitle = {Proceedings of the 30th ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering},
+pages = {281–293},
+numpages = {13},
+keywords = {Declarative programming, Run-time verification, Smart contracts},
+location = {Singapore, Singapore},
+series = {ESEC/FSE 2022}
+}
+
+
 % LocalWords: InCollection KaehlerK Kaehler Krasner Booktitle Parberry PocketPC
 % LocalWords: Smalltalk SIGACT LaTeX'ed ftp EATCS apr BlumFPRT Blum os Trompler
 % LocalWords: Rivest Tarjan CormenLR Cormen Leiserson CLR AjtaiKS Koml hlh Minh

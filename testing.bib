@@ -489,20 +489,6 @@ year = {1990},
 
 
 
-@Article{MillerFS90,
-  author = 	 "Barton P. Miller and Louis Fredriksen and Bryan So",
-  title = 	 "An empirical study of the reliability of {UNIX} utilities",
-  journal = 	 CACM,
-  year = 	 1990,
-  volume =	 33,
-  number =	 12,
-  pages =	 "32--44",
-  month =	 dec,
-  doi =	 	 "https://doi.acm.org/10.1145/96267.96279",
-}
-
-
-
 @InProceedings{Xie2006,
   author = 	 "Tao Xie",
   title = 	 "Augmenting automatically generated unit-test suites with
@@ -670,6 +656,41 @@ year = {2013}
     howpublished =
     "\url{https://randoop.github.io/randoop/manual/index.html}"
 }
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Fuzzing
+%%%
+
+@Article{MillerFS90,
+  author = 	 "Barton P. Miller and Louis Fredriksen and Bryan So",
+  title = 	 "An empirical study of the reliability of {UNIX} utilities",
+  journal = 	 CACM,
+  year = 	 1990,
+  volume =	 33,
+  number =	 12,
+  pages =	 "32--44",
+  month =	 dec,
+  doi =	 	 "https://doi.acm.org/10.1145/96267.96279",
+}
+
+
+@article{10.1145/3742894,
+author = {Li, Ao and Huang, Madonna and Vikram, Vasudev and Lemieux, Caroline and Padhye, Rohan},
+title = {The Havoc Paradox in Generator-Based Fuzzing},
+year = {2025},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+issn = {1049-331X},
+url = {https://doi.org/10.1145/3742894},
+doi = {10.1145/3742894},
+abstract = {Parametric generators combine coverage-guided and generator-based fuzzing for testing programs requiring structured inputs. They function as decoders that transform arbitrary byte sequences into structured inputs, allowing mutations on byte sequences to map directly to mutations on structured inputs, without requiring specialized mutators. However, this technique is prone to the havoc effect, where small mutations on the byte sequence cause large, destructive mutations to the structured input. This paper investigates the paradoxical nature of the havoc effect for generator-based fuzzing in Java. In particular, we measure mutation characteristics and confirm the existence of the havoc effect, as well as scenarios where it may be more detrimental. Our evaluation across 7 real-world Java applications compares various techniques that perform context-aware, finer-grained mutations on parametric byte sequences, such as JQF-EI, BeDivFuzz, and Zeugma. We find that these techniques exhibit better control over input mutations and consistently reduce the havoc effect compared to our coverage-guided fuzzer baseline Zest. While we find that context-aware mutation approaches can achieve significantly higher code coverage, we see that destructive mutations still play a valuable role in discovering inputs that increase code coverage. Specialized mutation strategies, while effective, impose substantial computational overhead—revealing practical trade-offs in mitigating the havoc effect.},
+note = {Just Accepted},
+journal = {ACM Trans. Softw. Eng. Methodol.},
+month = jun,
+keywords = {Generator-based Fuzzing, Mutation, Input Generator}
+}
+
 
 
 

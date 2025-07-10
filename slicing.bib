@@ -485,6 +485,26 @@
 }
 
 
+@inproceedings{10.1145/3597926.3598065,
+author = {Gharachorlu, Golnaz and Sumner, Nick},
+title = {Type Batched Program Reduction},
+year = {2023},
+isbn = {9798400702211},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3597926.3598065},
+doi = {10.1145/3597926.3598065},
+abstract = {Given a program with a property of interest, program reduction searches for a smaller program that preserves the property and is easier to understand. Domain agnostic program reducers can reduce programs of multiple languages without extra domain knowledge. Despite their reusability, they may still take hours to run, hindering productivity and scalability. This paper proposes type batched program reduction, which uses machine learning to suggest portions of a program, or batches, that are most likely to be advantageous to reduce at a particular point in the reduction. We also extend this to jointly reduce multiple portions of a program at once, improving the performance further. Suggesting an appropriate order for removing batches from a program along with their potential simultaneous removal enables our reducer to outperform the state of the art reducers in reduction time over a set of large programs from multiple programming languages. This work lays foundations for further improvements in ML guided program reduction.},
+booktitle = {Proceedings of the 32nd ACM SIGSOFT International Symposium on Software Testing and Analysis},
+pages = {398–410},
+numpages = {13},
+keywords = {Delta Debugging, Machine Learning, Program Reduction},
+location = {Seattle, WA, USA},
+series = {ISSTA 2023}
+}
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Combining dynamic and static slicing
 %%%
