@@ -810,6 +810,33 @@ series = {CVSM '09}
 
 
 
+@InProceedings{ZhangMKPL2022,
+  author =       {Zhang, Jialu and Mytkowicz, Todd and Kaufman, Mike and Piskac, Ruzica and Lahiri, Shuvendu K.},
+  title =        {Using pre-trained language models to resolve textual and semantic merge conflicts (experience paper)},
+  crossref =  "ISSTA2022",
+  pages =     {77–88},
+  abstract = {Program merging is standard practice when developers integrate their individual changes to a common code base. When the merge algorithm fails, this is called a merge conflict. The conflict either manifests as a textual merge conflict where the merge fails to produce code, or as a semantic merge conflict where the merged code results in compiler errors or broken tests. Resolving these conflicts for large code projects is expensive because it requires developers to manually identify the sources of conflicts and correct them.   In this paper, we explore the feasibility of automatically repairing merge conflicts (both textual and semantic) using k-shot learning with pre-trained large neural language models (LM) such as GPT-3. One of the challenges in leveraging such language models is fitting the examples and the queries within a small prompt (2048 tokens). We evaluate LMs and k-shot learning for both textual and semantic merge conflicts for Microsoft Edge. Our results are mixed: on one-hand, LMs provide the state-of-the-art (SOTA) performance on semantic merge conflict resolution for Edge compared to earlier symbolic approaches; on the other hand, LMs do not yet obviate the benefits of special purpose domain-specific languages (DSL) for restricted patterns for program synthesis.},
+}
+
+
+@InProceedings{DongZSLH2023,
+  author =       {Dong, Jinhao and Zhu, Qihao and Sun, Zeyu and Lou, Yiling and Hao, Dan},
+  title =        {Merge Conflict Resolution: Classification or Generation?},
+  crossref =  "ASE2023",
+  pages =     {1652-1663},
+}
+
+
+@InProceedings{ShenYPZ2023,
+  author =       {Shen, Chaochao and Yang, Wenhua and Pan, Minxue and Zhou, Yu},
+  title =        {Git Merge Conflict Resolution Leveraging Strategy Classification and {LLM}},
+  booktitle = {2023 IEEE 23rd International Conference on Software Quality, Reliability, and Security (QRS)},
+  year =      2023,
+  pages =     {228-239},
+}
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Merging -- other representations
 %%%
@@ -845,6 +872,7 @@ keywords = {Three-way program merge, product programs, relational verification}
   pages = 	 "1875-1903",
   note = 	 nov,
 }
+
 
 
 
