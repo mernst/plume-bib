@@ -748,7 +748,7 @@ choose among mutated specifications.  Algorithm 1 contains no comments, and
 there is such as "a subset E_selected of mutated specifications that can pass
 the verification. The selected subset E_selected is initialized with E_t.", but
 E_t consists of specifications that do *not* pass verification.  I think it may
-works like this:  add up the cost of a set of mutations, and prioritize the
+work like this:  add up the cost of a set of mutations, and prioritize the
 sets with the lowest cost.
   The evaluation is on a dataset of programs all of which verify perfectly with
 OpenJML.  Any program that does not verify is dropped from their dataset and
@@ -769,7 +769,7 @@ isn't whether Daikon's output is correct or useful, only whether it forms a full
 specification that OpenJML can fully verify (which is not a task Daikon is tuned
 for).
   The paper is full of unfounded claims.  "The selected programs are highly
-representative": no evidence is given:  "specifications that correctly and
+representative": no evidence is given.  "specifications that correctly and
 comprehensively describe the semantics of complex programs": no evaluation of
 the comprehensiveness is given.  We know that the generated specifications are
 verifiable, but they might be quite weak and still verify.  Though OpenJML might
