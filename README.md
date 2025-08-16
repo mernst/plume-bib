@@ -98,18 +98,24 @@ email a patch (a diff file) with your changes to Michael Ernst
 SETUP -- if you use a Makefile to process your paper
 ----------------------------------------------------
 
-1. Add "plume-bib" as a dependency for the rule that calls bibtex; for example,
+You have two choices:
+ * Clone plume-bib, and periodically `git pull` to get the latest version.
+ * Copy plume-bib into your paper, and periodically copy it again.
+
+### To clone plume-bib
+
+1. Add "plume-bib" as a dependency for the rule that calls `bibtex`; for example,
    make "plume-bib" a dependency for the myfile.bbl target.  If no rule calls
-   bibtex, you can skip this step.
+   `bibtex`, you can skip this step.
 2. Add "plume-bib-update" as a dependency of your default target (such as "all").
 3. Add the following rules to your Makefile.
 
 ```
 plume-bib:
 ifdef PLUMEBIB
-    ln -s ${PLUMEBIB} $@
+	ln -s ${PLUMEBIB} $@
 else
-    git clone https://github.com/mernst/plume-bib.git $@
+	git clone https://github.com/mernst/plume-bib.git $@
 endif
 .PHONY: plume-bib-update
 # Even if the plume-bib-update target fails, it does not terminate the make job.
@@ -120,8 +126,13 @@ ifndef NOGIT
 endif
 ```
 
-Alternately, if you prefer a copy of the plume-bib files (not a clone of
-its repository), then don't put the above rules in your Makefile, but
+### To copy plume-bib
+
+Alternately, you may prefer a copy of the plume-bib files (not a clone of
+its repository).  This is common when working with Overleaf, which does not
+run user-defined Makefiles.
+
+In this case, don't put the above rules in your Makefile, but
 instead add this one and run the target periodically to update your copy:
 
 ```
@@ -133,6 +144,8 @@ plume-bib-copy:
 	rm -rf plume-bib
 	mv plume-bib-master plume-bib
 	sed -i 's/^plume-bib$$/# plume-bib/' .gitignore
+	echo "Do not edit files in this directory." > plume-bib/README-DO-NOT-EDIT
+	echo "Add to file bib.bib in the parent directory instead." >> plume-bib/README-DO-NOT-EDIT
 	rm -f master.zip
 ```
 
