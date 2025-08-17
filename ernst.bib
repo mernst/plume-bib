@@ -11054,6 +11054,7 @@ with an {SMT} solver",
   month = 	 sep,
   basefilename = "program-analysis-book",
   downloads = "https://homes.cs.washington.edu/~mernst/pubs/program-analysis-book.pdf PDF",
+  supersededby = "ErnstProgramAnalysis2025",
   category =  "Static analysis",
   summary =
    "This book is an introduction to program analysis.  It covers abstract
@@ -11595,10 +11596,74 @@ with an {SMT} solver",
   downloads = "https://anonymous.4open.science/r/tratto-replication-package-31F6 replication package",
   category =  "Natural language processing",
   summary =
-   "This paper generates test assertions (boolean expressions) using both NLP
-    techniques (on documentation) and static analysis (on source code).  It
-    guarantees that the output is syntactically valid.",
+   {This paper uses LLMs to generate assertions for test cases from documentation.
+    The assertions are axiomatic: they apply to any invocation rather just one
+    specific input. A static analysis on source code guides the LLM step-by-step to
+    produce syntactically valid and relevant assertions.},
   undergradCoauthor = 1,
+}
+
+
+@Book{ErnstProgramAnalysis2025,
+  author = 	 "Michael D. Ernst",
+  title = 	 "Program Analysis: A Pragmatic Approach",
+  publisher = 	 "\url{https://homes.cs.washington.edu/~mernst/pubs/program-analysis-book.pdf}",
+  year = 	 2025,
+  month = 	 aug,
+  basefilename = "program-analysis-book",
+  OMITdownloads = "https://homes.cs.washington.edu/~mernst/pubs/program-analysis-book.pdf PDF",
+  category =  "Static analysis,Dynamic analysis",
+  summary =
+   "This book is an introduction to program analysis.  It covers abstract
+    interpretation (dataflow analysis), testing, and other topics. It is
+    appropriate for self-study or for use in a graduate or advanced
+    undergraduate class.",
+}
+
+
+
+@InProceedings{MolinelliDGMLEP2025,
+  author =       {Davide Molinelli and Luca Di~Grazia and Alberto Martin-Lopez and Michael D. Ernst and Mauro Pezz{\`e}},
+  authorASCII =       {Davide Molinelli and Luca Di~Grazia and Alberto Martin-Lopez and Michael D. Ernst and Mauro Pezze},
+  authorNONASCII =       {Davide Molinelli and Luca Di~Grazia and Alberto Martin-Lopez and Michael D. Ernst and Mauro Pezzè},
+  title =        {Do {LLMs} Generate Useful Test Oracles? An Empirical Study with an Unbiased Dataset},
+  crossref =  {ASE2025},
+  NEEDpages =    {*},
+  abstract =
+   {The oracle problem --- the efficient generation of thorough test oracles --- is
+    still an open problem. Popular test case generators, like EvoSuite and
+    Randoop, rely on implicit, rule-based, and regression oracles that miss
+    failures that depend on the semantics of the program under test. Specified
+    test oracles shift the costs of generating oracles to the production of
+    formal specifications.
+    \par
+    Large Language Models (LLMs) have the potential to overcome these
+    limitations. The few studies of using LLM to automatically generate test
+    oracles validate LLMs on modest-sized public benchmarks, such as Defects4J,
+    that are likely to be included in the LLM training benchmark, with severe
+    threats to the validity of the results.
+    \par
+    This paper presents an empirical study of the effectiveness of LLMs in
+    generating test oracles. We report the results of experimenting with 13,866
+    test oracles that we mined from 135 Java projects, and that were created
+    after the cut-off dates of the training of the LLMs used in the
+    experiments, and are thus unbiased.
+    \par
+    The results of the experiments that we report in this paper indicate that
+    LLMs indeed generate effective oracles that largely increase the mutation
+    score of the test cases, reaching a mutation score comparable to the score
+    of human-designed test oracles. Our results also indicate that the test
+    prefix and the methods called in the program under test provide sufficient
+    information to generate good oracles, while additional code context does
+    not bring relevant benefits. These findings provide actionable insights
+    into using LLMs for automatic testing and highlight their current
+    limitations in generating complex oracles.},
+  basefilename = {neurosymbolic-oracles-ase2025},
+  category =  "Natural language processing",
+  summary =
+   {This paper uses LLMs to generate assertions for test cases.  The assertions are
+    axiomatic: they apply to any invocation rather just one specific input. A static
+    analysis guides the LLM step-by-step to produce legal and relevant assertions.},
 }
 
 %% When I add here at the bottom of the file, also post a PLSE news item.
