@@ -1142,28 +1142,55 @@ original.
   pages =	 "47--57",
 }
 
-
-
-
-@InProceedings{JohnsonSMHB2013,
-  author = 	 "Johnson, Brittany and Song, Yoonki and Murphy-Hill, Emerson and Bowdidge, Robert",
-  title = 	 "Why don't software developers use static analysis tools to find bugs?",
-  crossref =     "ICSE2013",
-  pages = 	 "672--681",
-  abstract =
-   "Using static analysis tools for automating code inspections can be
-    beneficial for software engineers. Such tools can make finding bugs, or
-    software defects, faster and cheaper than manual inspections. Despite the
-    benefits of using static analysis tools to find bugs, research suggests
-    that these tools are underused. In this paper, we investigate why
-    developers are not widely using static analysis tools and how current tools
-    could potentially be improved. We conducted interviews with 20 developers
-    and found that although all of our participants felt that use is
-    beneficial, false positives and the way in which the warnings are
-    presented, among other things, are barriers to use. We discuss several
-    implications of these results, such as the need for an interactive
-    mechanism to help developers fix defects.",
+@Book{Brooks1975,
+  author = 	 "Brooks, Jr., Frederick P.",
+  title = 	 "The Mythical Man-Month: Essays on Software Engineering",
+  publisher = 	 "Addison-Wesley",
+  year = 	 1975,
+  address = {Boston, MA, USA},
+  isbn = {0201006502},
 }
+
+
+
+%%% Rapid releases
+
+@inproceedings{10.1109/ICSM.2013.13,
+author = {M\"{a}ntyl\"{a}, Mika V. and Khomh, Foutse and Adams, Bram and Engstr\"{o}m, Emelie and Petersen, Kai},
+title = {On Rapid Releases and Software Testing},
+year = {2013},
+isbn = {9780769549811},
+publisher = {IEEE Computer Society},
+address = {USA},
+url = {https://doi.org/10.1109/ICSM.2013.13},
+doi = {10.1109/ICSM.2013.13},
+abstract = {Large open and closed source organizations like Google, Facebook and Mozilla are migrating their products towards rapid releases. While this allows faster time-to-market and user feedback, it also implies less time for testing and bug fixing. Since initial research results indeed show that rapid releases fix proportionally less reported bugs than traditional releases, this paper investigates the changes in software testing effort after moving to rapid releases. We analyze the results of 312,502 execution runs of the 1,547 mostly manual system level test cases of Mozilla Fire fox from 2006 to 2012 (5 major traditional and 9 major rapid releases), and triangulated our findings with a Mozilla QA engineer. In rapid releases, testing has a narrower scope that enables deeper investigation of the features and regressions with the highest risk, while traditional releases run the whole test suite. Furthermore, rapid releases make it more difficult to build a large testing community, forcing Mozilla to increase contractor resources in order to sustain testing for rapid releases.},
+booktitle = {Proceedings of the 2013 IEEE International Conference on Software Maintenance},
+pages = {20–29},
+numpages = {10},
+keywords = {Mozilla, Software testing, agile releases, bugs, builds, opensource, release model},
+series = {ICSM '13}
+}
+
+
+@InProceedings{BaysalDG2011,
+  author =       {Olga Baysal and Ian Davis and Michael W Godfrey},
+  title =        {A tale of two browsers},
+  crossref =  {MSR2011},
+  pages =     {238-241},
+  abstract =
+   {We explore the space of open source systems and their user communities by
+    examining the development artifact histories of two popular web browsers --
+    Firefox and Chrome -- as well as usage data. By examining the data and
+    addressing a number of research questions, two very different profiles
+    emerge: Firefox, as the older and established system, with long product
+    version cycles but short bug fix cycles, and a user base that is slow to
+    adopt newer versions; and Chrome, as the new and fast evolving system, with
+    short version cycles, longer bug fix cycles, and a user base that very
+    quickly adopts new versions as they become available (due largely to
+    Chrome's mandatory automatic updates).},
+}
+
 
 @inproceedings{Khomh:2012:FRI:2664446.2664475,
  author = {Khomh, Foutse and Dhaliwal, Tejinder and Zou, Ying and Adams, Bram},
@@ -1181,53 +1208,7 @@ original.
 }
 
 
-@Book{Brooks1975,
-  author = 	 "Brooks, Jr., Frederick P.",
-  title = 	 "The Mythical Man-Month: Essays on Software Engineering",
-  publisher = 	 "Addison-Wesley",
-  year = 	 1975,
-  address = {Boston, MA, USA},
-  isbn = {0201006502},
-}
-
-
-@InProceedings{Przybylek2011,
-  author = 	 "Adam Przyby{\l}ek",
-  authorASCII =  "Adam Przybyłek, Adam Przybylek",
-  title = 	 "Where the truth lies: {AOP} and its impact on software modularity",
-  crossref =     "FASE2011",
-  NEEDpages = 	 "*",
-  abstract =
-   "Modularity is the single attribute of software that allows a program to be
-    intellectually manageable [29]. The recipe for modularizing is to define a
-    narrow interface, hide an implementation detail, keep low coupling and high
-    cohesion. Over a decade ago, aspect-oriented programming (AOP) was proposed
-    in the literature to ``modularize the un-modularizable'' [24]. Since then,
-    aspect-oriented languages have been providing new abstraction and
-    composition mechanisms to deal with concerns that could not be modularized
-    because of the limited abstractions of the underlying programming
-    language. This paper is a continuation of our earlier work [32] and further
-    investigates AO software with regard to coupling and cohesion. We compare
-    two versions (Java and AspectJ) of ten applications to review AOP within
-    the context of software modularity. It turns out that the claim that ``the
-    software built in AOP is more modular than the software built in OOP'' is a
-    myth.",
-}
-
-
-@InProceedings{LoNZ2015,
-  author = 	 "David Lo and Nachiappan Nagappan and Thomas Zimmermann",
-  title = 	 "How practitioners perceive the relevance of software engineering research",
-  crossref =     "FSE2015",
-  pages = 	 "415-425",
-}
-
-@InProceedings{MatichukMAJKS2015,
-  author =       "Daniel Matichuk and Toby Murray and June Andronick and Ross Jeffery and Gerwin Klein and Mark Staples",
-  title =        "Empirical study towards a leading indicator for cost of formal software verification",
-  crossref =     "ICSE2015",
-  NEEDpages =     "*",
-}
+%%% Program reading and readability
 
 
 @inproceedings{Siegmund:2014:UUS:2568225.2568252,
@@ -1281,8 +1262,7 @@ original.
 }
 
 
-
-
+%%% Object-oriented programming
 
 
 @article{https://doi.org/10.1002/(SICI)1097-024X(199908)29:10<833::AID-SPE258>3.0.CO;2-P,
@@ -1296,9 +1276,10 @@ keywords = {object-oriented, software development productivity},
 doi = {https://doi.org/10.1002/(SICI)1097-024X(199908)29:10<833::AID-SPE258>3.0.CO;2-P},
 url = {https://onlinelibrary.wiley.com/doi/abs/10.1002/%28SICI%291097-024X%28199908%2929%3A10%3C833%3A%3AAID-SPE258%3E3.0.CO%3B2-P},
 eprint = {https://onlinelibrary.wiley.com/doi/pdf/10.1002/%28SICI%291097-024X%28199908%2929%3A10%3C833%3A%3AAID-SPE258%3E3.0.CO%3B2-P},
-abstract = {Abstract The introduction of object-oriented technology does not appear to hinder overall productivity on new large commercial projects, but nor does it seem to improve it in the first two product generations. In practice, the governing influence may be the business workflow, and not the methodology. Copyright © 1999 John Wiley \& Sons, Ltd.},
+abstract = {Abstract The introduction of object-oriented technology does not appear to hinder overall productivity on new large commercial projects, but nor does it seem to improve it in the first two product generations. In practice, the governing influence may be the business workflow, and not the methodology.},
 year = {1999}
 }
+
 
 
 @article{WIEDENBECK1999255,
@@ -1377,6 +1358,201 @@ abstract="It has been suggested that using Object-Oriented methods instead of tr
 isbn="978-1-4471-1525-0"
 }
 
+
+
+%%% Offshoring/Outsourcing
+
+
+@inproceedings{10.1109/ICGSE.2017.12,
+author = {\v{S}mite, Darja and Britto, Ricardo and van Solingen, Rini},
+title = {Calculating the extra costs and the bottom-line hourly cost of offshoring},
+year = {2017},
+isbn = {9781538615874},
+publisher = {IEEE Press},
+url = {https://doi.org/10.1109/ICGSE.2017.12},
+doi = {10.1109/ICGSE.2017.12},
+abstract = {Offshoring software development activities to a remote site in another country continues to be one of the key strategies to save development cost. However, the assumed economic benefits of offshoring are often questionable, due to a large number of hidden costs and too simple cost calculations. This study is a continuation of our work on calculating the true hourly cost that includes the extra direct and indirect costs on top of the salary-based hourly rates. We collected data from an empirical case study conducted in a large international corporation. This corporation develops software-intensive systems and has offshored its ongoing product development from Sweden to a recently on-boarded captive company site in India. In this paper, we report a number of extra costs and their impact on the resulting hourly cost as well as the bottom-line cost per work unit. Our analysis includes quantitative data from corporate archives, and expert-based estimates gathered through focus groups and workshops with company representatives from both the onshore and the offshore sites. Our findings show that there is additional cost that can be directly or at least strongly attributed to the transfer of work, working on a distance, and immaturity of the offshore site. Consideration of extra costs increases the hourly cost several times, while the performance gaps between the mature sites and the immature site leads to an even higher difference. As a result, two years after on-boarding of the offshore teams, the mature teams in high-cost locations continue to be "cheaper" despite the big salary differences; and the most positive hypothetical scenario, in which the company could break even, is unrealistic. The implications of our findings are twofold. First, offshoring of complex ongoing products does not seem to lead to short-term bottom-line economic gains, and may not even reach breakeven within five years. Second, offshoring in the studied case can be justified but merely when initiated for other reasons than cost.},
+booktitle = {Proceedings of the 12th International Conference on Global Software Engineering},
+pages = {96–105},
+numpages = {10},
+keywords = {case study, empirical, extra cost, global software development, hidden cost, large-scale software development, offshore cost, offshoring, software transfer},
+location = {Buenos Aires, Argentina},
+series = {ICGSE '17}
+}
+
+@inproceedings{10.1109/ICGSE.2019.000-8,
+author = {Smite, Darja and Moe, Nils Brede and Krekling, Thomas and Stray, Viktoria},
+title = {Offshore outsourcing costs: known or still hidden?},
+year = {2019},
+publisher = {IEEE Press},
+url = {https://doi.org/10.1109/ICGSE.2019.000-8},
+doi = {10.1109/ICGSE.2019.000-8},
+abstract = {Offshore outsourcing of software development has been both famous for the promises of great cost reductions, and infamous for the hidden costs associated with the challenges of organizing software work over distance. Experience shows that many of these costs do not receive the deserved attention and are often excluded when making offshoring decisions. As a result, there is often a significant deviation between the expected and the realized costs of offshoring. In this paper, we investigate the awareness of the extra costs when making an offshoring decision, and the significance of the actual cost deviations. We conducted a single case study of a company that carried out an offshore outsourcing pilot project. We collected qualitative data from interviews, observations and a retrospective, and quantitative data on the costs and effort associated with the project. We conclude that the company was aware of the hidden cost factors, but largely underestimated their significance. The costs that surfaced in the studied project accounted for a total deviation of 181\% and several individual cost categories with more than 400\% overrun. The two main cost drivers in our study were the distance and poor process fit, which escalated the investments needed to make the collaboration work. Our results suggest that pilots are useful to understand the key problem areas in an offshoring collaboration, but too limited to shed light on all potential problems (e.g. turnover) due to the short timeframe. We also conclude that results of pilot projects shall not be the only data source when calculating the true costs of offshoring, since the start-up phase of an offshoring relationship carries large investments. Finally, we provide recommendations for companies in a similar situation on how to run and learn from offshore outsourcing pilot projects.},
+booktitle = {Proceedings of the 14th International Conference on Global Software Engineering},
+pages = {40–47},
+numpages = {8},
+keywords = {cost-savings, extra costs, global software engineering, hidden costs, offshore outsourcing, offshoring},
+location = {Montreal, Quebec, Canada},
+series = {ICGSE '19}
+}
+
+
+@article{10.1145/1113034.1113063,
+author = {Patterson, David A.},
+title = {Offshoring: finally facts vs. folklore},
+year = {2006},
+issue_date = {February 2006},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {49},
+number = {2},
+issn = {0001-0782},
+url = {https://doi.org/10.1145/1113034.1113063},
+doi = {10.1145/1113034.1113063},
+abstract = {The ACM Job Migration study was released last month, and it includes many recommendations for current and future computing professionals and educators.},
+journal = {Commun. ACM},
+month = feb,
+pages = {41–42},
+numpages = {2}
+}
+
+
+@article{10.1145/1400181.1400212,
+author = {Tiwana, Amrit and Bush, Ashley A. and Tsuji, Hiroshi and Yoshida, Kenichi and Sakurai, Akito},
+title = {Myths and paradoxes in Japanese IT offshoring},
+year = {2008},
+issue_date = {October 2008},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {51},
+number = {10},
+issn = {0001-0782},
+url = {https://doi.org/10.1145/1400181.1400212},
+doi = {10.1145/1400181.1400212},
+journal = {Commun. ACM},
+month = oct,
+pages = {141–145},
+numpages = {5}
+}
+
+
+@inproceedings{10.1145/3439961.3439978,
+author = {Sim\~{o}es, Carlos and Santos, Gleison},
+title = {IT Workforce Outsourcing Benefits, Challenges and Success Factors in the Customer and Supplier Perspectives},
+year = {2021},
+isbn = {9781450389235},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3439961.3439978},
+doi = {10.1145/3439961.3439978},
+abstract = {Software organizations need IT workforce members with knowledge and skills to perform their activities properly. The IT workforce may be employed by the organization or made available by an external supplier. Several benefits, challenges, and success factors are associated with workforce outsourcing. They must be addressed properly as they influence directly or indirectly the performance and quality of services provided in the development and maintenance of information systems. We present a qualitative study on the benefits, challenges and success factors associated with outsourcing the IT workforce. We interviewed 38 participants involved in the IT workforce outsourcing business as contract managers, consultants, and team and workforce managers. As a result, we present 18 benefits, 67 challenges, and 31 success factors from the perspective of organizations that hire or provide outsourced workers. This study can be used to increase knowledge in the IT workforce outsourcing business, helping to identify best practices, minimize risks and support the definition and improvement processes related to IT workforce outsourcing.},
+booktitle = {Proceedings of the XIX Brazilian Symposium on Software Quality},
+articleno = {17},
+numpages = {9},
+keywords = {Benefits, Challenges, IT Services, IT Workforce Outsourcing, Qualitative Study, Success factors},
+location = {S\~{a}o Lu\'{\i}s, Brazil},
+series = {SBQS '20}
+}
+
+@article{10.1145/3727635,
+author = {Corpus, Isabel and Giannella, Eric and Koenecke, Allison and Moynihan, Don},
+title = {As Government Outsources More IT, Highly Skilled In-House Technologists Are More Essential},
+year = {2025},
+issue_date = {July 2025},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {68},
+number = {7},
+issn = {0001-0782},
+url = {https://doi.org/10.1145/3727635},
+doi = {10.1145/3727635},
+abstract = {We need more, not fewer technologists at all levels of government to ensure high-quality, cost-effective programs.},
+journal = {Commun. ACM},
+month = jun,
+pages = {37–40},
+numpages = {4}
+}
+
+
+%%% Other
+
+
+@Misc{MoselyM2006,
+  author =    {Ben Moseley and Peter Marks},
+  title =     {Out of the Tar Pit},
+  month =     feb,
+  year =      2006,
+  abstract =
+   {Complexity is the single major difficulty in the successful development
+    of large-scale software systems. Following Brooks we distinguish
+    accidental from essential difficulty, but disagree with his premise that
+    most complexity remaining in contemporary systems is essential. We
+    identify common causes of complexity and discuss general approaches
+    which can be taken to eliminate them where they are accidental in
+    nature. To make things more concrete we then give an outline for
+    a potential complexity-minimizing approach based on functional
+    programming and Codd’s relational model of data.},
+}
+
+
+
+@InProceedings{JohnsonSMHB2013,
+  author = 	 "Johnson, Brittany and Song, Yoonki and Murphy-Hill, Emerson and Bowdidge, Robert",
+  title = 	 "Why don't software developers use static analysis tools to find bugs?",
+  crossref =     "ICSE2013",
+  pages = 	 "672--681",
+  abstract =
+   "Using static analysis tools for automating code inspections can be
+    beneficial for software engineers. Such tools can make finding bugs, or
+    software defects, faster and cheaper than manual inspections. Despite the
+    benefits of using static analysis tools to find bugs, research suggests
+    that these tools are underused. In this paper, we investigate why
+    developers are not widely using static analysis tools and how current tools
+    could potentially be improved. We conducted interviews with 20 developers
+    and found that although all of our participants felt that use is
+    beneficial, false positives and the way in which the warnings are
+    presented, among other things, are barriers to use. We discuss several
+    implications of these results, such as the need for an interactive
+    mechanism to help developers fix defects.",
+}
+
+@InProceedings{Przybylek2011,
+  author = 	 "Adam Przyby{\l}ek",
+  authorASCII =  "Adam Przybyłek, Adam Przybylek",
+  title = 	 "Where the truth lies: {AOP} and its impact on software modularity",
+  crossref =     "FASE2011",
+  NEEDpages = 	 "*",
+  abstract =
+   "Modularity is the single attribute of software that allows a program to be
+    intellectually manageable [29]. The recipe for modularizing is to define a
+    narrow interface, hide an implementation detail, keep low coupling and high
+    cohesion. Over a decade ago, aspect-oriented programming (AOP) was proposed
+    in the literature to ``modularize the un-modularizable'' [24]. Since then,
+    aspect-oriented languages have been providing new abstraction and
+    composition mechanisms to deal with concerns that could not be modularized
+    because of the limited abstractions of the underlying programming
+    language. This paper is a continuation of our earlier work [32] and further
+    investigates AO software with regard to coupling and cohesion. We compare
+    two versions (Java and AspectJ) of ten applications to review AOP within
+    the context of software modularity. It turns out that the claim that ``the
+    software built in AOP is more modular than the software built in OOP'' is a
+    myth.",
+}
+
+
+@InProceedings{LoNZ2015,
+  author = 	 "David Lo and Nachiappan Nagappan and Thomas Zimmermann",
+  title = 	 "How practitioners perceive the relevance of software engineering research",
+  crossref =     "FSE2015",
+  pages = 	 "415-425",
+}
+
+@InProceedings{MatichukMAJKS2015,
+  author =       "Daniel Matichuk and Toby Murray and June Andronick and Ross Jeffery and Gerwin Klein and Mark Staples",
+  title =        "Empirical study towards a leading indicator for cost of formal software verification",
+  crossref =     "ICSE2015",
+  NEEDpages =     "*",
+}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
