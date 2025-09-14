@@ -1,4 +1,4 @@
-%% Bibliography for NLP (natural language processing), as applied to
+% Bibliography for NLP (natural language processing), as applied to
 %% software engineering tasks.
 
 
@@ -329,7 +329,6 @@ pages = {1136–1142},
 numpages = {7},
 keywords = {artificial intelligence, cs1, foundation models, github copilot, introductory programming, large language models, openai},
 location = {Toronto ON, Canada},
-series = {SIGCSE 2023}
 }
 
 
@@ -396,12 +395,11 @@ address = {New York, NY, USA},
 OMITurl = {https://doi.org/10.1145/3597503.3623316},
 doi = {10.1145/3597503.3623316},
 abstract = {Code generation models based on the pre-training and fine-tuning paradigm have been increasingly attempted by both academia and industry, resulting in well-known industrial models such as Codex, CodeGen, and PanGu-Coder. To evaluate the effectiveness of these models, multiple existing benchmarks (e.g., HumanEval and AiXBench) are proposed, including only cases of generating a standalone function, i.e., a function that may invoke or access only built-in functions and standard libraries. However, non-standalone functions, which typically are not included in the existing benchmarks, constitute more than 70\% of the functions in popular open-source projects, and evaluating models' effectiveness on standalone functions cannot reflect these models' effectiveness on pragmatic code generation scenarios (i.e., code generation for real settings of open source or proprietary code).To help bridge the preceding gap, in this paper, we propose a benchmark named CoderEval, consisting of 230 Python and 230 Java code generation tasks carefully curated from popular real-world open-source projects and a self-contained execution platform to automatically assess the functional correctness of generated code. CoderEval supports code generation tasks from six levels of context dependency, where context refers to code elements such as types, APIs, variables, and consts defined outside the function under generation but within the dependent third-party libraries, current class, file, or project. CoderEval can be used to evaluate the effectiveness of models in generating code beyond only standalone functions. By evaluating three state-of-the-art code generation models (CodeGen, PanGu-Coder, and ChatGPT) on CoderEval and HumanEval, we find that the effectiveness of these models in generating standalone functions is substantially higher than that in generating non-standalone functions. Our analysis highlights the current progress and pinpoints future directions to further improve a model's effectiveness by leveraging contextual information for pragmatic code generation.},
-booktitle = {Proceedings of the IEEE/ACM 46th International Conference on Software Engineering},
+booktitle = {ICSE: Proceedings of the IEEE/ACM 46th International Conference on Software Engineering},
 articleno = {37},
 numpages = {12},
 keywords = {code generation, large language models, benchmark},
 location = {Lisbon, Portugal},
-series = {ICSE '24}
 }
 
 
@@ -488,12 +486,36 @@ OMITaddress = {New York, NY, USA},
 OMITurl = {https://doi.org/10.1145/3634814.3634816},
 doi = {10.1145/3634814.3634816},
 abstract = {Due to their robustness, large language models (LLMs) are being utilized in many fields of study, including programming and education. Notably, they can be used by programmers by interfacing with their IDEs to assist with development, and in education by giving students meaningful and immediate feedback. In this paper, we propose and explore the groundwork of a framework designed to combine these two applications of LLMs. The framework acts as a facilitator between the LLM and the student by reading the student’s prompts before filtering and modifying them and sending them to the LLM. The intent is that this will improve the responses from the LLM, thereby improving the student’s learning experience. We discuss the framework in detail and analyze the value of individual responses returned from the LLM as a result of our framework. We conclude that the framework causes the LLM to give helpful responses in comparison to how it would respond without the framework.},
-booktitle = {Proceedings of the 2023 4th Asia Service Sciences and Software Engineering Conference},
+booktitle = {ASSE: Proceedings of the 2023 4th Asia Service Sciences and Software Engineering Conference},
 pages = {10–16},
 numpages = {7},
 keywords = {ChatGPT, educational technology, large language models, programming education, prompt engineering},
 location = {Aizu-Wakamatsu City, Japan},
-series = {ASSE '23}
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Prompt engineering (not for software development tasks)
+%%%
+
+@article{10.1145/3731756,
+author = {Ma, Qianou and Peng, Weirui and Yang, Chenyang and Shen, Hua and Koedinger, Ken and Wu, Tongshuang},
+title = {What Should We Engineer in Prompts? Training Humans in Requirement-Driven LLM Use},
+year = {2025},
+issue_date = {August 2025},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {32},
+number = {4},
+issn = {1073-0516},
+url = {https://doi.org/10.1145/3731756},
+doi = {10.1145/3731756},
+abstract = {Prompting LLMs for complex tasks (e.g., building a trip advisor chatbot) needs humans to clearly articulate customized requirements (e.g., “start the response with a tl;dr”). However, existing prompt engineering instructions often lack focused training on requirement articulation and instead tend to emphasize increasingly automatable strategies (e.g., tricks like adding role-plays and “think step-by-step”). To address the gap, we introduce Requirement-Oriented Prompt Engineering (ROPE), a paradigm that focuses human attention on generating clear, complete requirements during prompting. We implement ROPE through an assessment and training suite that provides deliberate practice with LLM-generated feedback. In a randomized controlled experiment with 30 novices, ROPE significantly outperforms conventional prompt engineering training (20\% vs. 1\% gains), a gap that automatic prompt optimization cannot close. Furthermore, we demonstrate a direct correlation between the quality of input requirements and LLM outputs. Our work paves the way to empower more end-users to build complex LLM applications.},
+journal = {ACM Trans. Comput.-Hum. Interact.},
+month = aug,
+articleno = {41},
+numpages = {27},
+keywords = {LLM, Human-AI Interaction, Prompt Engineering, Requirement Engineering, End-User Programming}
 }
 
 
@@ -526,12 +548,11 @@ OMITaddress = {New York, NY, USA},
 OMITurl = {https://doi.org/10.1145/3491101.3519665},
 doi = {10.1145/3491101.3519665},
 abstract = {Recent advances in Large Language Models (LLM) have made automatic code generation possible for real-world programming tasks in general-purpose programming languages such as Python. However, there are few human studies on the usability of these tools and how they fit the programming workflow. In this work, we conducted a within-subjects user study with 24 participants to understand how programmers use and perceive Copilot, a LLM-based code generation tool. We found that, while Copilot did not necessarily improve the task completion time or success rate, most participants preferred to use Copilot in daily programming tasks, since Copilot often provided a useful starting point and saved the effort of searching online. However, participants did face difficulties in understanding, editing, and debugging code snippets generated by Copilot, which significantly hindered their task-solving effectiveness. Finally, we highlighted several promising directions for improving the design of Copilot based on our observations and participants’ feedback.},
-booktitle = {Extended Abstracts of the 2022 CHI Conference on Human Factors in Computing Systems},
+booktitle = {CHI EA: Extended Abstracts of the 2022 CHI Conference on Human Factors in Computing Systems},
 articleno = {332},
 numpages = {7},
 keywords = {github copilot, large language model},
 location = {New Orleans, LA, USA},
-series = {CHI EA '22}
 }
 
 
@@ -608,7 +629,7 @@ keywords = {Formal Specifications, Large Language Models, Postconditions}
   author =       {Xiuwei Shang and Shaoyin Cheng and Guoqiang Chen and Yanming Zhang and Li Hu and Xiao Yu and Gangyang Li and Weiming Zhang and Nenghai Yu},
   title =        {How Far Have We Gone in Binary Code Understanding Using Large Language Models},
   crossref =  {ICSME2024},
-  NEEDpages =    {*},
+  pages =    {1-12},
 }
 
 
@@ -624,11 +645,10 @@ OMITaddress = {New York, NY, USA},
 OMITurl = {https://doi.org/10.1145/3597503.3639187},
 doi = {10.1145/3597503.3639187},
 abstract = {Understanding code is challenging, especially when working in new and complex development environments. Code comments and documentation can help, but are typically scarce or hard to navigate. Large language models (LLMs) are revolutionizing the process of writing code. Can they do the same for helping understand it? In this study, we provide a first investigation of an LLM-based conversational UI built directly in the IDE that is geared towards code understanding. Our IDE plugin queries OpenAI's GPT-3.5-turbo model with four high-level requests without the user having to write explicit prompts: to explain a highlighted section of code, provide details of API calls used in the code, explain key domain-specific terms, and provide usage examples for an API. The plugin also allows for open-ended prompts, which are automatically contextualized to the LLM with the program being edited. We evaluate this system in a user study with 32 participants, which confirms that using our plugin can aid task completion more than web search. We additionally provide a thorough analysis of the ways developers use, and perceive the usefulness of, our system, among others finding that the usage and benefits differ between students and professionals. We conclude that in-IDE prompt-less interaction with LLMs is a promising future direction for tool builders.},
-booktitle = {Proceedings of the IEEE/ACM 46th International Conference on Software Engineering},
+booktitle = {ICSE: Proceedings of the IEEE/ACM 46th International Conference on Software Engineering},
 articleno = {97},
 numpages = {13},
 location = {Lisbon, Portugal},
-series = {ICSE '24}
 }
 
 
@@ -643,12 +663,11 @@ OMITaddress = {New York, NY, USA},
 OMITurl = {https://doi.org/10.1145/3658644.3690298},
 doi = {10.1145/3658644.3690298},
 abstract = {The capability of generating high-quality source code using large language models (LLMs) reduces software development time and costs. However, recent literature and our empirical investigation in this work show that while LLMs can generate functioning code, they inherently tend to introduce security vulnerabilities, limiting their potential. This problem is mainly due to their training on massive open-source corpora exhibiting insecure and inefficient programming practices. Therefore, automatic optimization of LLM prompts for generating secure and functioning code is a demanding need. This paper introduces PromSec, an algorithm for prompt optimization for secure and functioning code generation using LLMs. In PromSec, we combine 1) code vulnerability clearing using a generative adversarial graph neural network, dubbed as gGAN, to fix and reduce security vulnerabilities in generated codes and 2) code generation using an LLM into an interactive loop, such that the outcome of the gGAN drives the LLM with enhanced prompts to generate secure codes while preserving their functionality. Introducing a new contrastive learning approach in gGAN, we formulate the code-clearing and generation loop as a dual-objective optimization problem, enabling PromSec to notably reduce the number of LLM inferences. As a result, PromSec becomes a cost-effective and practical solution for generating secure and functioning codes.Extensive experiments conducted on Python and Java code datasets confirm that PromSec effectively enhances code security while upholding its intended functionality. Our experiments show that despite the comprehensive application of a state-of-the-art approach, it falls short in addressing all vulnerabilities within the code, whereas PromSec effectively resolves each of them. Moreover, PromSec achieves more than an order-of-magnitude reduction in operational time, number of LLM queries, and security analysis costs. Furthermore, prompts optimized with PromSec for a certain LLM are transferable to other LLMs across programming languages and generalizable to unseen vulnerabilities in training. This study presents an essential step towards improving the trustworthiness of LLMs for secure and functioning code generation, significantly enhancing their large-scale integration in real-world software code development practices.},
-booktitle = {Proceedings of the 2024 on ACM SIGSAC Conference on Computer and Communications Security},
+booktitle = {CCS: Proceedings of the 2024 on ACM SIGSAC Conference on Computer and Communications Security},
 pages = {2266–2280},
 numpages = {15},
 keywords = {LLMs, code generation, graph generative adversarial networks, secure and functioning codes},
 location = {Salt Lake City, UT, USA},
-series = {CCS '24}
 }
 
 
@@ -787,6 +806,28 @@ the authors' graduate students, apparently.
   year =         2024,
 }
 
+
+
+@article{10.1145/3715003,
+author = {Terragni, Valerio and Vella, Annie and Roop, Partha and Blincoe, Kelly},
+title = {The Future of AI-Driven Software Engineering},
+year = {2025},
+issue_date = {June 2025},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {34},
+number = {5},
+issn = {1049-331X},
+url = {https://doi.org/10.1145/3715003},
+doi = {10.1145/3715003},
+abstract = {A paradigm shift is underway in Software Engineering, with AI systems such as LLMs playing an increasingly important role in boosting software development productivity. This trend is anticipated to persist. In the next years, we expect a growing symbiotic partnership between human software developers and AI. The Software Engineering research community cannot afford to overlook this trend; we must address the key research challenges posed by the integration of AI into the software development process. In this article, we present our vision of the future of software development in an AI-driven world and explore the key challenges that our research community should address to realize this vision.},
+journal = {ACM Trans. Softw. Eng. Methodol.},
+month = may,
+articleno = {120},
+numpages = {20},
+keywords = {Software Engineering, Artificial Intelligence, Machine Learning, Large Language Models, APIs, Libraries, Software Testing, Requirements Engineering}
+}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Evaluation benchmarks
 %%%
@@ -798,11 +839,10 @@ author = {Lai, Yuhang and Li, Chengxi and Wang, Yiming and Zhang, Tianyi and Zho
 title = {DS-1000: a natural and reliable benchmark for data science code generation},
 year = 2023,
 publisher = {JMLR.org},
-booktitle = {Proceedings of the 40th International Conference on Machine Learning},
+booktitle = {ICML: Proceedings of the 40th International Conference on Machine Learning},
 articleno = 756,
 numpages = 27,
 location = {Honolulu, Hawaii, USA},
-series = {ICML'23},
 abstract = {We introduce DS-1000, a code generation benchmark with a thousand data science problems spanning seven Python libraries, such as NumPy and Pandas. Compared to prior works, DS-1000 incorporates three core features. First, our problems reflect diverse, realistic, and practical use cases since we collected them from Stack-Overflow. Second, our automatic evaluation is highly specific (reliable) - across all Codex-002- predicted solutions that our evaluation accepts, only 1.8\% of them are incorrect; we achieve this with multi-criteria metrics, checking both functional correctness by running test cases and surface-form constraints by restricting API usages or keywords. Finally, we proactively defend against memorization by slightly modifying our problems to be different from the original Stack-Overflow source; consequently, models cannot answer them correctly by memorizing the solutions from pre-training. The current best public system (Codex-002) achieves 43.3\% accuracy, leaving ample room for improvement. We release our benchmark at https://ds1000-code-gen.github.io.},
 }
 
@@ -850,6 +890,245 @@ Top 25 CWEs in code created using LLMSecEval."
 
 
 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Education
+%%%
+
+%%% Intro CS classes
+
+@inproceedings{10.1145/3754508.3754517,
+author = {Aruleba, Kehinde and Oyelere, Solomon Sunday and Obaido, George Rabeshi and Sanusi, Ismaila Temitayo},
+title = {A Scoping Review of Student and Educator Engagement with Large Language Models in Introductory Programming Education},
+year = {2025},
+isbn = {9798400720789},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3754508.3754517},
+doi = {10.1145/3754508.3754517},
+abstract = {As Large Language Models (LLMs) like ChatGPT and GitHub Copilot gain traction in computing education, understanding their role in introductory programming (CS1) is essential. This scoping review synthesises 38 empirical studies published between 2022 and 2024, focusing on student and educator engagement with LLMs in CS1 contexts. Following Arksey and O’Malley’s five-stage framework and PRISMA-ScR guidelines, we identify four thematic areas: (1) varied student prompting behaviours, from surface-level code copying to iterative refinement; (2) evolving educator practices, from passive allowance to guided integration; (3) assessment-related tensions, notably the “assistance dilemma”; and (4) ethical concerns around bias, integrity, and access. While LLMs support debugging and code comprehension, their value depends on pedagogical framing and learner agency. Gaps remain in longitudinal research, diverse learner representation, and alignment with curriculum frameworks. We offer practical recommendations for scaffolded GenAI integration, prompt engineering strategies, and ethical classroom use. This review supports the development of CS1 curricula that foster critical AI literacy, inclusive participation, and thoughtful engagement with human–AI collaboration in programming education.},
+booktitle = {UKICER: Proceedings of the 2025 Conference on UK and Ireland Computing Education Research},
+articleno = {12},
+numpages = {8},
+keywords = {Large Language Models (LLMs), Programming Education, Introductory Computer Science (CS1), Generative AI, Student Engagement},
+}
+
+
+@inproceedings{10.1145/3641555.3705201,
+author = {Bejarano, Andres and Dickey, Ethan and Setsma, Rhianna},
+title = {Implementing the AI-Lab Framework: Enhancing Introductory Programming Education for CS Majors},
+year = {2025},
+isbn = {9798400705328},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3641555.3705201},
+doi = {10.1145/3641555.3705201},
+abstract = {The advent of generative AI tools presents novel opportunities and challenges in computer science education, particularly in introductory programming courses. This study explores the implementation of AI-Lab, a framework designed to guide students in the effective and ethical use of generative AI, in this case ChatGPT, in academic settings without compromising skill development. Conducted during Spring 2024, our use of the intervention targeted over 500 Computer Science and Data Science majors enrolled in their major-specific Data Structures and Algorithms courses. The AI-Lab framework enabled students to develop both conceptual questions and c++ and Python programs by interacting with ChatGPT and iteratively correcting its errors. Focus groups and post-intervention surveys revealed a generally positive experience. Students appreciated the ability to leverage AI for tasks outside their major, recognizing the value of understanding correct solutions through AI-assisted programming. Moreover, the guided use of generative AI by professors alleviated concerns regarding academic dishonesty, fostering a supportive learning environment. Despite these benefits, students expressed awareness of the potential drawbacks of over-reliance on AI, noting the risk of impeding their professional growth. Nevertheless, they acknowledged the practical utility of AI for non-major related tasks. This study highlights the importance of incorporating structured AI training in curricula to balance skill development and ethical AI usage, offering insights for broader applications in higher education.},
+booktitle = {SIGCSETS: Proceedings of the 56th ACM Technical Symposium on Computer Science Education V. 2},
+pages = {1383–1384},
+numpages = {2},
+keywords = {ai lab, ai-assisted programming, ai-lab framework, ethical ai usage, generative ai in education, skill development with ai, structured ai training},
+location = {Pittsburgh, PA, USA},
+}
+
+
+@inproceedings{10.1145/3723178.3723268,
+author = {Sadat Shanto, Shakib and Ahmed, Zishan and Jony, Akinul Islam},
+title = {Generative AI for Programming Education: Can ChatGPT Facilitate the Acquisition of Fundamental Programming Skills for Novices?},
+year = {2025},
+isbn = {9798400713828},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3723178.3723268},
+doi = {10.1145/3723178.3723268},
+abstract = {Modern Generative AI (GAI) systems like ChatGPT have sparked much interest in their potential to revolutionize programming education, especially for beginners. However, the existing empirical data regarding the effectiveness of technologies like ChatGPT as autonomous programming tutors is presently limited. The present study investigates the capacity of ChatGPT to facilitate the acquisition of fundamental programming skills for novice programmers without human assistance. This study puts forth a conceptual framework (APEC - Adaptive Programming Education via ChatGPT) that integrates both bottom-up and top-down approaches, incorporating ChatGPT as the principal instructor for the study of programming. An empirical study was undertaken to assess the usefulness of ChatGPT as a tool for teaching novice programmers a new programming language. This empirical study was conducted on 20 undergraduate students. To provide an expert assessment of the quality of the responses, a survey was conducted with three programming experts proficient in Python. The survey findings indicate that ChatGPT is proficient in explaining core principles such as variables, data types, and control statements through conversational exchanges, adopting an intelligent and logical methodology. Nevertheless, certain constraints arise when dealing with increasingly complex topics.},
+booktitle = {ICCA: Proceedings of the 3rd International Conference on Computing Advancements},
+pages = {685–692},
+numpages = {8},
+keywords = {Generative AI, ChatGPT, Programming Education, Educational Technology, Higher Education},
+}
+
+
+%%% Non-intro CS classes
+
+@inproceedings{10.1145/3626252.3630927,
+author = {Kirova, Vassilka D. and Ku, Cyril S. and Laracy, Joseph R. and Marlowe, Thomas J.},
+title = {Software Engineering Education Must Adapt and Evolve for an LLM Environment},
+year = {2024},
+isbn = {9798400704239},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3626252.3630927},
+doi = {10.1145/3626252.3630927},
+abstract = {In the era of artificial intelligence (AI), generative AI, and Large Language Models (LLMs) in particular, have become increasingly significant in various sectors. LLMs such as GPT expand their applications, from content creation to advanced code completion. They offer unmatched opportunities but pose unique challenges to the software engineering domain. This paper discusses the necessity and urgency for software engineering education to adapt and evolve to prepare software engineers for the emerging LLM environment. While existing literature and social media have investigated AI's integration into various educational spheres, there is a conspicuous gap in examining the specifics of LLMs' implications for software engineering education. We explore the goals of software engineering education, and changes to software engineering, software engineering education, course pedagogy, and ethics. We argue that a holistic approach is needed, combining technical skills, ethical awareness, and adaptable learning strategies. This paper seeks to contribute to the ongoing conversation about the future of software engineering education, emphasizing the importance of adapting and evolving to remain in sync with rapid advancements in AI and LLMs. It is hoped that this exploration will provide valuable insights for educators, curriculum developers, and policymakers in software engineering.},
+booktitle = {SIGCSE: Proceedings of the 55th ACM Technical Symposium on Computer Science Education V. 1},
+pages = {666–672},
+numpages = {7},
+keywords = {chatgpt, generative ai, large language models (llms), responsible ai, software engineering, software engineering education, software engineering ethics, software ethics},
+location = {Portland, OR, USA},
+}
+
+@inproceedings{10.1145/3702653.3744328,
+author = {Roy, Nimisha and Horielko, Oleksandr and Omojokun, Olufisayo},
+title = {Benchmarking of Generative AI Tools in Software Engineering Education: Formative Insights for Curriculum Integration},
+year = {2025},
+isbn = {9798400713415},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3702653.3744328},
+doi = {10.1145/3702653.3744328},
+abstract = {Generative Artificial Intelligence (Gen-AI) has revolutionized software engineering (SE) by automating tasks across design, coding, and testing [1] [2]. Tools like ChatGPT and GitHub Copilot streamline code generation, architectural modeling, debugging, and test-case creation [3] [4]. Despite their rapid adoption in industry, the pedagogical implications of these tools in computing education have not been systematically examined. This study solves the existing gap by conducting a comprehensive benchmarking study of Gen-AI tools across four core SE phases— design documentation, feature implementation, debugging support, and testing — to address two research questions:RQ1: What strengths and limitations do Gen-AI tools exhibit in each phase?RQ2: How can insights from benchmarking inform effective integration of Gen-AI into SE curricula?To answer these questions, a diverse set of Gen-AI tools is evaluated, ranging from design-focused assistants such as Lucidchart, Mermaid.js and UIzard; implementation-oriented systems including GitHub Copilot, TabNine, Codeium and Supermaven; debugging supports like GPT-4 and Claude 3.5 Sonnet; and testing frameworks such as Testim, Mabl and Applitools—while also surveying emerging platforms (as of summer 2024) like Replit, Postman, Visily, Gemini, Eraser.io and others. For each tool and development phase, we applied phase-specific metrics: in design documentation, we assessed diagram accuracy, completeness, user effort, and IDE integration; in feature implementation, we measured pattern-based code generation quality, code-completion effectiveness, refactoring robustness, and UI/UX scaffolding; in debugging, we evaluated error-detection accuracy, hallucination rates, and clarity of explanatory feedback; and in testing, we examined test-case relevance and defect-detection coverage. Across all phases, we tracked prompt engineering complexity as a key mediating factor influencing tool performance.Our evaluation reveals speed-fidelity trade-offs: Code-completion assistants accelerate boilerplate generation but demand manual oversight to ensure cross-file consistency and manage higher-order abstractions; diagramming tools can produce precise UML models with minimal effort— but at the cost of iterative prompt refinement for complex cases; LLM debuggers deliver context-sensitive fixes yet suffer from nontrivial hallucination rates; testing generators exhibit wide variance in edge-case coverage. On average, tools needed 2.4 prompt iterations for usable diagrams and 1.5 prompts for bug fixes, underscoring the human effort in guiding AI.We recommend a scaffolded framework for integrating Gen-AI into SE education by: embedding AI tools into hands-on assignments, to explore tasks in a controlled context; by structuring small team projects in which one subgroup uses AI assistants while the other completes the same tasks manually (covering design, implementation, debugging and testing) to surface contrasts in workflow, tool strengths, and human reasoning; by requiring students to maintain a reflective journal documenting their AI usage and prompt-engineering strategies, fostering metacognitive insight into how tool inputs shape outputs; and by equipping learners with decision making criteria, teaching them to evaluate AI assistants according to task fit- preparing them to leverage AI responsibly across SE phases in its evolving landscape.},
+booktitle = {ICER: Proceedings of the 2025 ACM Conference on International Computing Education Research V.2},
+pages = {3},
+numpages = {1},
+keywords = {Generative AI, Software Engineering Education, Benchmarking, Prompt Engineering, Hallucination, Productivity},
+}
+
+@inproceedings{10.1145/3639474.3640061,
+author = {Frankford, Eduard and Sauerwein, Clemens and Bassner, Patrick and Krusche, Stephan and Breu, Ruth},
+title = {AI-Tutoring in Software Engineering Education},
+year = {2024},
+isbn = {9798400704987},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3639474.3640061},
+doi = {10.1145/3639474.3640061},
+abstract = {With the rapid advancement of artificial intelligence (AI) in various domains, the education sector is set for transformation. The potential of AI-driven tools in enhancing the learning experience, especially in programming, is immense. However, the scientific evaluation of Large Language Models (LLMs) used in Automated Programming Assessment Systems (APASs) as an AI-Tutor remains largely unexplored. Therefore, there is a need to understand how students interact with such AI-Tutors and to analyze their experiences.In this paper, we conducted an exploratory case study by integrating the GPT-3.5-Turbo model as an AI-Tutor within the APAS Artemis. Through a combination of empirical data collection and an exploratory survey, we identified different user types based on their interaction patterns with the AI-Tutor. Additionally, the findings highlight advantages, such as timely feedback and scalability. However, challenges like generic responses and students' concerns about a learning progress inhibition when using the AI-Tutor were also evident. This research adds to the discourse on AI's role in education.},
+booktitle = {ICSE-SEET: Proceedings of the 46th International Conference on Software Engineering: Software Engineering Education and Training},
+pages = {309–319},
+numpages = {11},
+keywords = {programming education, automated programming assessment systems, artificial intelligence, ChatGPT, OpenAI, ChatBots},
+location = {Lisbon, Portugal},
+}
+
+
+@inproceedings{10.1145/3633053.3633057,
+author = {Petrovska, Olga and Clift, Lee and Moller, Faron and Pearsall, Rebecca},
+title = {Incorporating Generative AI into Software Development Education},
+year = {2024},
+isbn = {9798400709326},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3633053.3633057},
+doi = {10.1145/3633053.3633057},
+abstract = {This paper explores how Generative AI can be incorporated into software development education. We present examples of formative and summative assessments, which explore various aspects of ChatGPT, including its coding capabilities, its ability to construct arguments as well as ethical issues of using ChatGPT and similar tools in education and the workplace. Our work is inspired by the insights from surveys that show that the learners on our Degree Apprenticeship Programme have a great interest in learning about and exploiting emerging AI technology. Similarly, our industrial partners have a clear interest for their employees to be formally prepared to use GenAI in their software engineering roles. In this vein, it is proposed that embedding the use of GenAI tools in a careful and creative way - by developing assessments which encourage learners to critically evaluate AI output - can be beneficial in helping learners understand the subject material being taught without the risk of the AI tools “doing the homework”.},
+booktitle = {CEP: Proceedings of the 8th Conference on Computing Education Practice},
+pages = {37–40},
+numpages = {4},
+keywords = {apprenticeship, assessment, education, generative AI, software engineering},
+location = {Durham, United Kingdom},
+}
+
+
+%%% Other CS education
+
+@inproceedings{10.1145/3719487.3719519,
+author = {Chang, Chi-In and Choi, Wan-Chong and Choi, Iek-Chong and Lei, Huey},
+title = {A Systematic Literature Review of the Practical Applications of Artificial Intelligence-Generated Content (AIGC) Using OpenAI ChatGPT, Copilot, and Codex in Programming Education},
+year = {2025},
+isbn = {9798400717413},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3719487.3719519},
+doi = {10.1145/3719487.3719519},
+abstract = {This systematic literature review investigated the practical applications of Artificial Intelligence-Generated Content (AIGC) tools, specifically ChatGPT, Copilot, and Codex, in programming education. The review synthesized current research trends and key applications, with a particular focus on large language models (LLMs) and advanced chatbots. The findings revealed a significant increase in research interest following the release of ChatGPT, with most studies concentrating on university-level programming education. The review identified eight primary applications of AIGC tools in programming education, including evaluating AI performance in solving programming tasks, providing AI-driven code generation and assistance, automating assessment review and feedback, delivering personalized learning and tutoring, supporting educators and instructional design, investigating educator and student perceptions, checking for plagiarism, and exploring AI's impact on curriculum design. Despite the promising potential of these tools, critical gaps remained, particularly in primary and secondary education, as well as in online and blended learning environments. Future research was recommended to address these areas and to explore a broader range of AIGC tools to unlock their full potential for enhancing programming education.},
+booktitle = {ICEEL: Proceeding of the 2024 8th International Conference on Education and E-Learning},
+pages = {13–19},
+numpages = {7},
+keywords = {Applications of AIGC, Artificial intelligence generated content, ChatGPT, Chatbots, Educational technology, Large language models, Programming education, Systematic literature review},
+}
+
+@inproceedings{10.1145/3719384.3719439,
+author = {Chang, Chi In and Choi, Wan Chong and Choi, Iek Chong},
+title = {Challenges and Limitations of Using Artificial Intelligence Generated Content (AIGC) with ChatGPT in Programming Curriculum: A Systematic Literature Review},
+year = {2025},
+isbn = {9798400717925},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3719384.3719439},
+doi = {10.1145/3719384.3719439},
+abstract = {This systematic literature review examined the challenges and limitations of integrating Artificial Intelligence Generated Content (AIGC) tools into programming curricula. Following Kitchenham's framework, a comprehensive search was conducted across ACM Digital Library and Web of Science databases to select 22 relevant peer-reviewed papers. Key issues identified included increased plagiarism risk due to AI-generated unique code, accuracy and reliability concerns of AI outputs, privacy and data security risks, curriculum changes to incorporate prompt engineering and critical thinking, and challenges in traditional assessment methods. Additionally, the review highlighted the potential over-reliance on AI tools, which could hinder the development of fundamental programming skills. Implementation challenges and inadequate training for educators further complicate the integration process. Addressing these challenges is crucial for leveraging the benefits of AIGC tools while maintaining academic integrity and enhancing learning outcomes in programming education. Future research should focus on developing strategies to mitigate these issues and ensure the responsible use of AI in education.},
+booktitle = {AICCC: Proceedings of the 2024 7th Artificial Intelligence and Cloud Computing Conference},
+pages = {372–378},
+numpages = {7},
+keywords = {Artificial intelligence generated content, Challenges of AIGC, ChatGPT, Large language models, Programming curriculum, Systematic literature review},
+}
+
+
+
+@inproceedings{10.1145/3696630.3727247,
+author = {S\"{o}lch, Maximilian and Dietrich, Felix T. J. and Krusche, Stephan},
+title = {Direct Automated Feedback Delivery for Student Submissions based on LLMs},
+year = {2025},
+isbn = {9798400712760},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3696630.3727247},
+doi = {10.1145/3696630.3727247},
+abstract = {Timely and individualized feedback is essential for students' learning progress and motivation, yet providing such feedback has become increasingly challenging due to growing student numbers. This has resulted in a time-consuming, repetitive, and often manual task for educators, contributing to a high workload.This paper presents DAFeeD, an LLM-based approach for automated feedback on student submissions across various exercise domains. The defined feedback process enables interactive learning by allowing students to submit solutions multiple times and automatically receive iterative LLM feedback on their submission attempts before deadlines. By incorporating task details, grading criteria, student solutions, and custom instructions into the prompt, DAFeeD provides clear, personalized, and pedagogically meaningful feedback to support continuous improvement.To evaluate the feedback process, we implemented DAFeeD in an open-source reference implementation integrated into the learning platform Artemis. A controlled study with students working on a programming task in a supervised environment showed that students found the feedback relevant and beneficial. They reported feeling more comfortable and willing to request automated feedback due to its convenience and immediacy. Additionally, deploying DAFeeD in a software engineering course with 450 students demonstrated improvements in student performance and encouraged iterative refinement through multiple submissions.These findings highlight DAFeeD's potential to enhance feedback processes in computing education, improving both learning efficiency and student outcomes.},
+booktitle = {FSE Companion: Proceedings of the 33rd ACM International Conference on the Foundations of Software Engineering},
+pages = {901–911},
+numpages = {11},
+keywords = {software engineering, education, grading, formative feedback},
+location = {Clarion Hotel Trondheim, Trondheim, Norway},
+}
+
+
+
+%%% Other
+
+@inproceedings{10.1145/3637528.3671498,
+author = {Wen, Qingsong and Liang, Jing and Sierra, Carles and Luckin, Rose and Tong, Richard and Liu, Zitao and Cui, Peng and Tang, Jiliang},
+title = {AI for Education (AI4EDU): Advancing Personalized Education with LLM and Adaptive Learning},
+year = {2024},
+isbn = {9798400704901},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3637528.3671498},
+doi = {10.1145/3637528.3671498},
+abstract = {Recent advanced AI technologies, especially large language models (LLMs) like GPTs, have significantly advanced the field of data mining and led to the development of various LLM-based applications. AI for education (AI4EDU) is a vibrant multi-disciplinary field of data mining, machine learning, and education, with increasing importance and extraordinary potential. In this field, LLM and adaptive learning-based models can be utilized as interfaces in human-in-the-loop education systems, where the model serves as a mediator among the teacher, students, and machine capabilities, including its own. This perspective has several benefits, including the ability to personalize interactions, allow unprecedented flexibility and adaptivity for human-AI collaboration and improve the user experience. However, several challenges still exist, including the need for more robust and efficient algorithms, designing effective user interfaces, and ensuring ethical considerations are addressed. This workshop aims to bring together researchers and practitioners from academia and industry to explore cutting-edge AI technologies for personalized education, especially the potential of LLMs and adaptive learning technologies.},
+booktitle = {KDD: Proceedings of the 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining},
+pages = {6743–6744},
+numpages = {2},
+keywords = {adaptive learning, edtech, education, llm},
+location = {Barcelona, Spain},
+}
+
+
+@inproceedings{10.1145/3641554.3701863,
+author = {Raihan, Nishat and Siddiq, Mohammed Latif and Santos, Joanna C.S. and Zampieri, Marcos},
+title = {Large Language Models in Computer Science Education: A Systematic Literature Review},
+year = {2025},
+isbn = {9798400705311},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3641554.3701863},
+doi = {10.1145/3641554.3701863},
+abstract = {Large language models (LLMs) are becoming increasingly better at a wide range of Natural Language Processing tasks (NLP), such as text generation and understanding. Recently, these models have extended their capabilities to coding tasks, bridging the gap between natural languages (NL) and programming languages (PL). Foundational models such as the Generative Pre-trained Transformer (GPT) and LLaMA series have set strong baseline performances in various NL and PL tasks. Additionally, several models have been fine-tuned specifically for code generation, showing significant improvements in code-related applications. Both foundational and fine-tuned models are increasingly used in education, helping students write, debug, and understand code. We present a comprehensive systematic literature review to examine the impact of LLMs in computer science and computer engineering education. We analyze their effectiveness in enhancing the learning experience, supporting personalized education, and aiding educators in curriculum development. We address five research questions to uncover insights into how LLMs contribute to educational outcomes, identify challenges, and suggest directions for future research.},
+booktitle = {SIGCSETS: Proceedings of the 56th ACM Technical Symposium on Computer Science Education V. 1},
+pages = {938–944},
+numpages = {7},
+keywords = {code generation, cs education, large language models},
+location = {Pittsburgh, PA, USA},
+}
+
+
+@inproceedings{10.1145/3706599.3719857,
+author = {Wang, Xinyu Jessica and Lee, Christine P. and Mutlu, Bilge},
+title = {LearnMate: Enhancing Online Education with LLM-Powered Personalized Learning Plans and Support},
+year = {2025},
+isbn = {9798400713958},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3706599.3719857},
+doi = {10.1145/3706599.3719857},
+abstract = {With the increasing prevalence of online learning, adapting education to diverse learner needs remains a persistent challenge. Recent advancements in artificial intelligence (AI), particularly large language models (LLMs), promise powerful tools and capabilities to enhance personalized learning in online educational environments. In this work, we explore how LLMs can improve personalized learning experiences by catering to individual user needs toward enhancing the overall quality of online education. We designed personalization guidelines based on the growing literature on personalized learning to ground LLMs in generating tailored learning plans. To operationalize these guidelines, we implemented LearnMate, an LLM-based system that generates personalized learning plans and provides users with real-time learning support. We discuss the implications and future directions of this work, aiming to move beyond the traditional one-size-fits-all approach by integrating LLM-based personalized support into online learning environments.},
+booktitle = {CHI EA: Proceedings of the Extended Abstracts of the CHI Conference on Human Factors in Computing Systems},
+articleno = {373},
+numpages = {10},
+keywords = {large-language models; personalized learning; human-centered AI},
+}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
