@@ -6649,6 +6649,5 @@
 %% *compilation* buffer.  Let's hope this isn't too big an annoyance.
 %%% Local Variables:
 %%% auto-fill-function: nil
-%%% eval: (make-local-variable 'after-save-hook)
-%%% eval: (add-hook 'after-save-hook '(lambda () (save-window-excursion (let ((compilation-ask-about-save nil)) (compile "make")))))
+%%% eval: (add-hook 'after-save-hook '(lambda () (run-command nil "make")))
 %%% End:
