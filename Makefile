@@ -87,6 +87,13 @@ webtest: all
 	rsync -rC $(PUBS_SRC)/ webtest
 	$(MAKE) -C webtest -f $(PUBS_SRC)/Makefile-pubs BIBDIR=`pwd`
 
+style-fix: markdownlint-fix
+markdownlint-fix:
+	markdownlint-cli2 --fix .
+style-check: markdownlint-check
+markdownlint-check:
+	markdownlint-cli2 .
+
 tags: TAGS
 
 TAGS: ${BIBFILES}

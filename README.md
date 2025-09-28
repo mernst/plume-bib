@@ -3,7 +3,7 @@ plume-bib:  collection of BibTeX bibliography files
 
 To obtain the bibliographies, run:
 
-```
+```sh
     git clone https://github.com/mernst/plume-bib.git
 ```
 
@@ -15,21 +15,21 @@ reference when the conference proceedings would be more appropriate.
 
 Here are some other features:
 
- * Short and long versions of names, locations, and dates for conferences,
-   journals, etc.  The short (abbreviated) version is convenient if your
-   paper is nearing its page limit.  Changing between the two versions only
-   requires a tiny change to your LaTeX file (see below), and no
-   changes to any bib files.
- * Consistent naming convention for citation keys:  last name of first
-   author, followed by last initial of each other author, followed by
-   year.  This makes the citation more recognizable in your LaTeX source,
-   and avoids duplicates.
- * Searchable via the bibfind tool.  For instance, `bibfind keyword1 keyword2`
-   displays all the bibliographies with all the keywords, either in the
-   entries in the comments.  (This is why there are no blank lines in the
-   comments that abut some bib entries:  the search tool considers each
-   blank line to start a new entry.  We may lift that restriction in the
-   future.)
+* Short and long versions of names, locations, and dates for conferences,
+  journals, etc.  The short (abbreviated) version is convenient if your
+  paper is nearing its page limit.  Changing between the two versions only
+  requires a tiny change to your LaTeX file (see below), and no
+  changes to any bib files.
+* Consistent naming convention for citation keys:  last name of first
+  author, followed by last initial of each other author, followed by
+  year.  This makes the citation more recognizable in your LaTeX source,
+  and avoids duplicates.
+* Searchable via the bibfind tool.  For instance, `bibfind keyword1 keyword2`
+  displays all the bibliographies with all the keywords, either in the
+  entries in the comments.  (This is why there are no blank lines in the
+  comments that abut some bib entries:  the search tool considers each
+  blank line to start a new entry.  We may lift that restriction in the
+  future.)
 
 You can obtain the bibliographies by running the command
 `git clone https://github.com/mernst/plume-bib.git`
@@ -40,7 +40,6 @@ You can also set the `PLUMEBIB` environment variable to the location of your
 clone (such as a directory named `~/bib/`), so that you will have just one
 clone on your computer rather than one clone for each paper you write.
 
-
 USAGE
 -----
 
@@ -48,7 +47,7 @@ To choose the abbreviated (short) or unabbreviated (long) version of the
 bibliography strings, use one of these commands in your LaTeX file,
 depending on how verbose you want citations to be:
 
-```
+```latex
     \bibliography{plume-bib/bibstring-abbrev,...,plume-bib/crossrefs-abbrev}
 or
     \bibliography{plume-bib/bibstring-unabbrev,...,plume-bib/crossrefs}
@@ -58,24 +57,23 @@ or
 
 When using the bibliographies, add near the top of your LaTeX document:
 
-```
+```latex
     \usepackage{url}
 ```
 
 This defines the `\url` command used in the bibliographies.  To make URLs use
 a slightly narrower font (the regular `tt` font is very wide), use:
 
-```
+```latex
     \usepackage{pslatex}
 ```
 
 or, to use a smaller font, use:
 
-```
+```latex
     \usepackage{relsize}
     \def\UrlFont{\smaller\ttfamily}
 ```
-
 
 EDITING AND ADDING ENTRIES
 --------------------------
@@ -89,11 +87,9 @@ When adding new bibliography entries, please create an entry in
 For consistency, please start each new bibliography entry with "@" in the
 first column, and end the entry with "}" on its own line.
 
-If you make changes but you lack write access to the Git repository at
-https://github.com/mernst/plume-bib, then please submit a pull request, or
-email a patch (a diff file) with your changes to Michael Ernst
-<mernst@cs.washington.edu>.  Thanks for your contributions!
-
+If you make changes but you lack write access to the [Git
+repository](https://github.com/mernst/plume-bib), then please submit a pull
+request.  Thanks for your contributions!
 
 SETUP -- if you use a Makefile to process your paper
 ----------------------------------------------------
@@ -104,19 +100,20 @@ SETUP -- if you use a Makefile to process your paper
 2. Add "plume-bib-update" as a dependency of your default target (such as "all").
 3. Add the following rules to your Makefile.
 
+<!-- markdownlint-disable -->
 ```
 plume-bib:
 ifdef PLUMEBIB
-    ln -s ${PLUMEBIB} $@
+	ln -s ${PLUMEBIB} $@
 else
-    git clone https://github.com/mernst/plume-bib.git $@
+	git clone https://github.com/mernst/plume-bib.git $@
 endif
 .PHONY: plume-bib-update
 # Even if the plume-bib-update target fails, it does not terminate the make job.
 # However, to skip it, invoke make as:  make NOGIT=1 ...
 plume-bib-update: plume-bib
 ifndef NOGIT
-    -(cd plume-bib && git pull && make)
+	-(cd plume-bib && git pull && make)
 endif
 ```
 
@@ -135,7 +132,7 @@ plume-bib-copy:
 	sed -i 's/^plume-bib$$/# plume-bib/' .gitignore
 	rm -f master.zip
 ```
-
+<!-- markdownlint-enable -->
 
 SETUP -- non-Makefile version
 -----------------------------
@@ -143,8 +140,8 @@ SETUP -- non-Makefile version
 If you have previously cloned plume-bib and set the PLUMEBIB environment
 variable, there is nothing to do.  Otherwise, run this command:
 
-```
-    cd; git clone https://github.com/mernst/plume-bib.git plume-bib
+```sh
+cd; git clone https://github.com/mernst/plume-bib.git plume-bib
 ```
 
 Then, set the PLUMEBIB environment variable to $HOME/plume-bib and
@@ -152,18 +149,17 @@ add the "plume-bib" directory to your BIBINPUTS environment variable.
 
 bash syntax:
 
+```bash
+export PLUMEBIB=$HOME/plume-bib
+export BIBINPUTS=.:${PLUMEBIB}:..:
 ```
-    export PLUMEBIB=$HOME/plume-bib
-    export BIBINPUTS=.:${PLUMEBIB}:..:
-```
-
 
 SETUP -- miscellaneous details
 ------------------------------
 
-For the bibfind command, see
-https://github.com/mernst/uwisdom/blob/wiki/README.adoc .
-The bibfind command uses the `bibroot` file in the `plume-bib` directory.
+You can create an alias
+[`bibfind`](https://github.com/mernst/uwisdom/blob/wiki/README.adoc#installing-the-lookup-program-and-shell-aliases)
+that uses the `bibroot` file in the `plume-bib` directory.
 
 If you wish to have only a single copy of the bibliographies on your
 computer, you can clone the repository just once and set the PLUMEBIB
@@ -175,29 +171,27 @@ The bibtex that is supplied with miktex (the popular Windows implementation)
 does not support the BIBINPUTS variable. You need to modify the miktex
 configuration.  In file `...\miktex\config\miktex.ini`, edit this entry:
 
-```
+```ini
     Input Dirs=searchpath
     (search path for BibTeX input files -- both databases and style files).
 ```
 
-
 INVOKING BIBTEX: crossref and -min-crossrefs=9999
 -------------------------------------------------
 
-plume-bib's .bib files use `@crossref`.  To avoid outut like
+plume-bib's `.bib` files use `@crossref`.  To avoid outut like
 
-```
-    [1] Brun et al.  Paper title.  In [2].
-    [2] Proceedings of ESEC/FSE 2011.  Szeged, Hungary, Sep. 7--9, 2011.
+```html
+[1] Brun et al.  Paper title.  In [2].
+[2] Proceedings of ESEC/FSE 2011.  Szeged, Hungary, Sep. 7--9, 2011.
 ```
 
 you need to pass the `-min-crossrefs=9999` command-line option to BibTeX; for
 example:
 
+```sh
+bibtex -min-crossrefs=9999 mypaper
 ```
-    bibtex -min-crossrefs=9999 mypaper
-```
-
 
 LICENSE
 -------
