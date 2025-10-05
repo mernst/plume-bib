@@ -11666,6 +11666,50 @@ with an {SMT} solver",
     analysis guides the LLM step-by-step to produce legal and relevant assertions.},
 }
 
+
+@InProceedings{MalakarEKS2025,
+  author =       {Sanjay Malakar and Michael D. Ernst and Martin Kellogg and Manu Sridharan},
+  title =        {Repairing leaks in resource wrappers},
+  crossref =  {ASE2025},
+  NEEDpages =     {*},
+  abstract =
+   {A resource leak occurs when a program fails to
+    release a finite resource like a socket, file descriptor or database
+    connection. While sound static analysis tools can detect all leaks,
+    automatically repairing them remains challenging. Prior work
+    took the output of a detection tool and attempted to repair only
+    leaks from a hard-coded list of library resource types. That
+    approach limits the scope of repairable leaks: real-world code
+    uses resource wrappers that store a resource in a field and must
+    themselves be closed.
+    \par
+    This paper makes four key contributions to improve resource
+    leak repair in the presence of wrappers. (1) It integrates inference
+    of resource management specifications into the repair pipeline,
+    enabling extant fixing approaches to reason about wrappers. (2)
+    It transforms programs into variants that are easier to analyze,
+    making inference, detection, and fixing tools more effective; for
+    instance, it makes detection tools report problems closer to the
+    root cause, often in a client of a resource wrapper rather than
+    within the wrapper class itself. (3) A novel field containment
+    analysis reasons about resource lifetimes, enabling repair of more
+    leaks involving resources stored in fields. (4) It introduces a
+    new repair pattern and more precise reasoning to better handle
+    resources stored in non-final fields.
+    \par
+    Prior work fixed 41\% of resource leak warnings in the NJR
+    benchmark suite; our implementation Arodnap fixes 68\%.},
+  basefilename = {resource-leak-fix},
+  downloads = {https://github.com/typetools/arodnap implementation},
+  category = "Program repair,Verification",
+  summary =
+   {We built a tool that repairs resource leaks.  The tool infers resource
+    management specifications, transforms programs to make them easier to
+    analyze, reasons about resource lifetimes, and finally repairs the leaks.},
+}
+
+
+
 %% When I add here at the bottom of the file, also post a PLSE news item.
 
 
