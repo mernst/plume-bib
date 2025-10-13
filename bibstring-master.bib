@@ -250,8 +250,6 @@
 %% bp (and maybe other programs) fail if string{...} is the last thing in
 %% the file.  Thus, this comment.  (Yuck.)
 
-%% A problem with this after-save-hook is that it blows away any existing
-%% *compilation* buffer.  Let's hope this isn't too big an annoyance.
 %%% Local Variables:
 %%% auto-fill-function: nil
 %%% eval: (add-hook 'after-save-hook '(lambda () (run-command nil "make")))
