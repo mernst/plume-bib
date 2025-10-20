@@ -4,8 +4,10 @@
 
 BIB_ABBREVIATE ?= ./bib-abbreviate.pl
 
+GENERATED_FILES = bibstring-unabbrev.bib bibstring-abbrev.bib crossrefs-abbrev.bib bibroot bibtest.tex
+
 # TODO: reinstate bibstring-crossrefs-abbrev.bib
-all: bibstring-unabbrev.bib bibstring-abbrev.bib crossrefs-abbrev.bib bibroot
+all: ${GENERATED_FILES}
 
 BIBFILES := $(shell ls *.bib | grep -v bibstring-unabbrev.bib | grep -v bibstring-abbrev.bib)
 
@@ -37,25 +39,32 @@ crossrefs-abbrev.bib: crossrefs.bib $(BIB_ABBREVIATE)
 # 	@chmod oga-w $@
 
 bibroot: *.bib
-	@rm -f $@
-	@ls -1 *.bib | perl -p -e 'BEGIN { print "% File for finding bibliography items.\n\n"; } if (/^bibstring/ || /^crossrefs/) { $$_=""; next; }; s:^(.*)$$:\\include{$$1}:;' > $@
-	@chmod oga-w $@
+	@ls -1 *.bib | perl -p -e 'BEGIN { print "% File for finding bibliography items with the lookup program.\n\n"; } if (/^bibstring/ || /^crossrefs/) { $$_=""; next; }; s:^(.*)$$:\\include{$$1}:;' > $@.new
+	if cmp -s $@ $@.new ; then \
+	  rm -f $@.new; \
+	else \
+	  mv -f $@.new $@; \
+	  chmod oga-w $@; \
+	fi
 
 bibtest-aux-clean:
-	rm -f bibtest.aux bibtest.bbl bibtest.blg bibtest.dvi bibtest.log bibtest.pdf
+	rm -f bibtest.aux bibtest.bbl bibtest.blg bibtest.dvi bibtest.log
 
+# bibtest.tex lists all the files and contains "\nocite{*}"
 bibtest.tex: *.bib
-	@rm -f $@
-	@ls -1 *.bib | perl -p -e 'BEGIN { print "\\documentclass{report}\n\\usepackage{url}\n\\usepackage{fullpage}\n\\usepackage{relsize}\n\\begin{document}\\hbadness=10000\n\n\\bibliographystyle{alpha}\n\\nocite{*}\n\n\\bibliography{bibstring-unabbrev,crossrefs"; } END { print "}\n\n\\end{document}\n"; } if (/^bibstring/ || /^crossrefs/) { $$_=""; next; }; s:^(.*)\.bib\n:,$$1:;' > $@
-	@chmod oga-w $@
-# This must be phony because a file might be old, but not listed in bibroot.
-.PHONY: bibtest.tex
+	ls -1 *.bib | perl -p -e 'BEGIN { print "\\documentclass{report}\n\\usepackage{url}\n\\usepackage{fullpage}\n\\usepackage{relsize}\n\\begin{document}\\hbadness=10000\n\n\\bibliographystyle{alpha}\n\\nocite{*}\n\n\\bibliography{bibstring-unabbrev,crossrefs"; } END { print "}\n\n\\end{document}\n"; } if (/^bibstring/ || /^crossrefs/) { $$_=""; next; }; s:^(.*)\.bib\n:,$$1:;' > $@.new
+	if cmp -s $@ $@.new ; then \
+	  rm -f $@.new; \
+	else \
+	  mv -f $@.new $@; \
+	  chmod oga-w $@; \
+	fi
 
 # Before doing this, run bibtex-validate-globally
 # I'm not sure why this doesn't work (so for now do it by hand):
 #   emacs -batch -l bibtex --eval="(progn (setq bibtex-files '(bibtex-file-path) enable-local-eval t) (bibtex-validate-globally))"
-test: bibtest
-bibtest: all bibtest-aux-clean bibtest.tex
+test bibtest: bibtest.pdf
+bibtest.pdf: ${GENERATED_FILES} bibtest.tex
 	@echo -n 'First pdflatex run, suppressing warnings...'
 	@-pdflatex -interaction=nonstopmode bibtest >/dev/null 2>&1
 	@echo 'done'

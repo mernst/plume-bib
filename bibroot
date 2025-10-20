@@ -1,4 +1,4 @@
-% File for finding bibliography items.
+% File for finding bibliography items with the lookup program.
 
 \include{algorithms.bib}
 \include{alias.bib}
