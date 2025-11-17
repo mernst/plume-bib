@@ -1,5 +1,6 @@
 % Partial bibliography on data prefetching.
 
+
 @string(alewife = "Alewife group, MIT LCS")
 @string(can = "ACM Computer Architecture News")
 @string(comp = "IEEE Computer")
@@ -42,6 +43,7 @@
 @string(ureport = "Microprocessor Report")
 @string(wlcpc = "Workshop on Languages and Compilers for Parallel Computing")
 
+
 @inproceedings(rogers-asplos,
 	title = "Software support for speculative loads",
 	author = "Anne Rogers and Kai Li",
@@ -59,6 +61,7 @@
 	range from 10\% to about four times improvement.   They mention
 	problems caused by extra register pressure. \en}
 )
+
 
 @inproceedings(chen-baer-asplos,
 	title = "Reducing memory latency via non-blocking and prefetching
@@ -80,6 +83,7 @@
 	improve the results by up to 24\%.  \en}
 )
 
+
 @inproceedings(baer-sc,
 	title = "An effective on-chip preloading scheme to reduce data access
 	penalty",
@@ -100,6 +104,7 @@
 	conclude 1-2 $\times$ memory latency is good. \en}
 )
 
+
 @inproceedings(mowry-lam-asplos,
 	title = "Design and evaluation of a compiler algorithm for prefetching",
 	author = "Todd C. Mowry and Monica S. Lam and Anoop Gupta",
@@ -116,6 +121,7 @@
 	good related work section. \en}
 )
 
+
 @inproceedings(przybylski,
 	title = "The performance impact of block sizes and fetch strategies",
 	author = "Steven Przybylski",
@@ -129,6 +135,7 @@
 	larger cache blocks, which quickly yields small optimal blocks.
 	Investigates useful prefetching space in terms of bus utilization. \en}
 )
+
 
 @inproceedings(klaiber-91,
 	title = "An architecture for software-controlled data prefetching",
@@ -146,6 +153,7 @@
 	pessimistic MIPS simulator, on extended Livermore Loops.  They get
 	up to 10-fold speedup on some loops, much less on others. \en}
 )
+
 
 @inproceedings(fu-patel-isca,
 	title = "Data prefetching in multiprocessor vector cache memories",
@@ -165,6 +173,7 @@
 	both miss ratio and completion time. \en}
 )
 
+
 @inproceedings(callahan-sc,
 	title = "Data cache performance of supercomputer applications",
 	author = "David Callahan and Allan Porterfield",
@@ -178,6 +187,7 @@
 	prefetching ``very effective'' for column-eriented programs;
 	looks to software for improvements. \en}
 )
+
 
 @inproceedings(callahan-asplos,
 	title = "Software prefetching",
@@ -198,6 +208,7 @@
 	cover 20+ cycle latencies.  \en}
 )
 
+
 @phdthesis(porterfield-rice,
 	title = "Software Methods for Improvement of Cache Performance
 	on Supercomputer Applications",
@@ -212,6 +223,7 @@
 	ediscussed.  Cache prefetching is considered, as well as
 	overhead, and methods to reduce it. \en}
 )
+
 
 @inproceedings(gupta-isca,
 	title = "Comparative evaluation of latency reducing and tolerating
@@ -232,6 +244,7 @@
 	data. \en}
 )
 
+
 @article(trivedi-tcomps,
 	title = "Prepaging and applications to array algorithms",
 	author = "Kishor S. Trivedi",
@@ -246,6 +259,7 @@
 	with DPMIN and shown to do well, up to an order of magnitude.
 	Compiler work has not been done. \en}
 )
+
 
 @inproceedings(chen-pm,
 	title = "Data access microarchitectures for superscalar processors
@@ -263,6 +277,7 @@
 	code percolation.  A 32-entry prefetch buffer is shown to be
 	enough.  Apparently they insert prefetches with the compiler.  \en}
 )
+
 
 @inproceedings(gornish-ics,
 	title = "Compiler-directed data prefetching in multiprocessors
@@ -287,6 +302,7 @@
 	more bandwidth. \en}
 )
 
+
 @mastersthesis(gornish-ms,
 	title = "Compile Time Analysis for Data Prefetching",
 	author = "Edward H. Gornish",
@@ -298,6 +314,7 @@
 	No simulation results are given; for their overlapped model
 	they predict speedups of 1.94 to 2.74 \en}
 )
+
 
 @inproceedings(lee-yew-isca,
 	title = "Multiprocessor cache design considerations",
@@ -314,6 +331,7 @@
 	speedup instead), and (b) that the optimal line size for
 	multiprocessors is small, only one or two words. \en}
 )
+
 
 @inproceedings(lee-yew-icpp,
 	title = "Data Prefetching in Shared Memory Multiprocessors",
@@ -333,6 +351,7 @@
 	0-16 words. \en}
 )
 
+
 @phdthesis(lee-thesis,
 	title = "The Effectiveness of Caches and Data Prefetch
               Buffers in Large-Scale Shared Memory Multiprocessors",
@@ -344,6 +363,7 @@
 	\bn This work is basically the same as what is in
 	\cite{lee-yew-isca,lee-yew-icpp}.  \en}
 )
+
 
 @article(johnson-acm,
 	title = "Working set prefetching for cache memories",
@@ -362,6 +382,7 @@
 	suggests a sequence number so that data-flow style cache
 	updating of working sets can be done.  No numbers are presented.  \en}
 )
+
 
 @inproceedings(jouppi-isca,
 	title = "Improving direct-mapped cache performance by the addition of
@@ -384,6 +405,7 @@
 	give 143\% improvement in system performance on average. \en}
 )
 
+
 @article(smith-ieee,
 	title = "Sequential program prefetching in memory hierarchies",
 	author = "Alan Jay Smith",
@@ -398,6 +420,7 @@
 	improvements on the order of 10--25\%. \en}
 )
 
+
 @article(bennett-ibm,
 	title = "Prefetching in a multilevel hierarchy",
 	author = "B. T. Bennett and J. H. Pomerene and T. R. Puzak and
@@ -409,6 +432,7 @@
 	annote = {\bn Short blurb about incorporating a {\em prefetching engine}
 	for L1 cache in L2 cache. \en}
 )
+
 
 @article(gindele-ibm,
 	title = "Buffer block prefetching method",
@@ -422,6 +446,7 @@
 	1/2 to 1/4 capacity to maintain the same hit ratio via prefetching.
 	\en}
 )
+
 
 @inproceedings(decoupled-isca,
 	title = "Decoupled access/execute computer architecture",
@@ -440,6 +465,7 @@
 	latencies, e.g. 11-cycle loads. \en}
 )
 
+
 @inproceedings(kroft-isca,
 	title = "Lockup-free instruction fetch/prefetch cache organization",
 	author = "David Kroft",
@@ -451,6 +477,7 @@
 	he suggests should be 4).  Miss information/status holding registers
 	(MSHRs) are the key resources. \en}
 )
+
 
 @article(gannon-jpdc,
 	title = "Strategies for cache and local memory management by
@@ -470,6 +497,7 @@
 	\cite{abu-sufah-79}, plus loop blocking. \en}
 )
 
+
 @inproceedings(farrens-isca,
 	title = "Improving performance of small on-chip instruction caches",
 	author = "Matthew K. Farrens and Andrew R. Pleszkun",
@@ -484,6 +512,7 @@
 	document PIPE chip features such as PBR (prepare to branch) and
 	exposes load/store pipelines. \en}
 )
+
 
 @inproceedings(smith-isca-12,
 	title = "Cache evaluation and the impact of workload choice",
@@ -500,6 +529,7 @@
 	a factor of 2 for data prefetching. \en}
 )
 
+
 @inproceedings(scheurich-dubois,
 	title = "Concurrent miss resolution in multiprocessor caches",
 	author = "Christoph Scheurich and Michel Dubois",
@@ -515,6 +545,7 @@
 	hardware.  Prefetching is suggested as helpful in this situation.
 	Some analytical curves are given. \en}
 )
+
 
 @article(anant-tocs,
 	title = "An Analytical Cache Model",
@@ -533,6 +564,7 @@
 	referenced, and the {\em collision rate}.  \en}
 )
 
+
 @article(smith-cache,
 	title = "Cache memories",
 	author = "Alan Jay Smith",
@@ -547,6 +579,7 @@
 	tagged prefetch, which basically prefetches on the second
 	reference to a block. \en}
 )
+
 
 @article(driscoll-ibm,
 	title = "Cache miss directory---a means of prefetching cache `missed'
@@ -564,6 +597,7 @@
 	The CMD is loaded by an initial run with a hardware monitor. \en}
 )
 
+
 @article(rechtschaffen-ibm,
 	title = "Using a branch history table to prefetch cache lines",
 	author = "R. N. Rechtschaffen",
@@ -574,6 +608,7 @@
 	annote = {\bn The BHT is suggested as a way to prefetch instruction
 	lines. \en}
 )
+
 
 @techreport(chi-purdue,
 	title = "Compiler-driven cache policy (known reference string)",
@@ -592,6 +627,7 @@
 	coming. \en}
 )
 
+
 @unpublished(selvidge-isca,
 	title = "Compilation-based Data Prefetching",
 	author = "Charles Selvidge",
@@ -609,6 +645,7 @@
 	improvement with prefetching. \en}
 )
 
+
 @phdthesis(selvidge,
 	title = "Compilation-Based Prefetching for Memory Latency Tolerance",
 	author = "Charles Selvidge",
@@ -618,6 +655,7 @@
 	\cite{selvidge-isca}; it provides implementation specifics and more
 	detailed results. \en}
 )
+
 
 @article(comp-survey,
 	title = "A survey of {RISC} processors and computers of the mid-1980's",
@@ -630,6 +668,7 @@
 	prefetching much. \en}
 )
 
+
 @techreport(rau-stanford,
 	title = "Sequential Prefetch Strategies for Instructions and Data",
 	author = "B. R. Rau",
@@ -638,6 +677,7 @@
 	year = 1977,
 	annote = {\bn Unread. \en}
 )
+
 
 @inproceedings(bpt-asplos,
 	title = "Improving the accuracy of dynamic branch prediction
@@ -649,6 +689,7 @@
 	annote = {\bn A handy reference for some prefetching techniques. \en}
 )
 
+
 @article(hill-assoc,
 	title = "Evaluating associativity in {CPU} caches",
 	author = "Mark D. Hill and Alan Jay Smith",
@@ -659,6 +700,7 @@
 	annote = {\bn Information on compulsory/capacity/conflict misses. \en}
 )
 
+
 @unpublished(alpha,
 	title = "Alpha Architecture Technical Summary",
 	author = "Dick Sites and Rich Witek",
@@ -667,6 +709,7 @@
 	{\tt gatekeeper.dec.com} as {\tt pub/DEC/Alpha/technical-summary.txt}",
 	annote = {\bn Not read. \en}
 )
+
 
 @book(rs6000,
 	title = "IBM Journal of Research and Development, Special
@@ -677,6 +720,7 @@
 	annote = {\bn Not read. \en}
 )
 
+
 @book(moto88100,
 	title = "MCS88100:  RISC Microprocessor User's Manual",
 	author = "Motorola",
@@ -684,6 +728,7 @@
 	year = 1988,
 	annote = {\bn Not read. \en}
 )
+
 
 @inproceedings(fp-micro,
 	title = "Stride directed prefetching in scalar processors",
@@ -697,6 +742,7 @@
 	actually showing performance figures. \en}
 )
 
+
 @phdthesis(chen-thesis,
 	title = "Data Prefetching for High-Performance Processors",
 	author = "Tien-Fu Chen",
@@ -709,6 +755,7 @@
 	seen for the all-hardware approach. \en}
 )
 
+
 @article(spec-cache,
 	title = "Cache performance of the {SPEC92} benchmark suite",
 	author = "Jeffrey D. Gee and Mark D. Hill and Dionisis N.
@@ -719,6 +766,7 @@
 	pages = "17--27",
 	annote = {\bn Interesting reading. \en}
 )
+
 
 @inproceedings(spaniol,
 	title = "Demand prepaging algorithms based on a model
@@ -733,6 +781,7 @@
 	interesting. \en}
 )
 
+
 @article(sklenar-can,
 	title = "Prefetch unit for vector operations on scalar computers",
 	author = "Ivan Sklen\'a\v{r}",
@@ -743,6 +792,7 @@
 	annote = {Very similar to constant-stride prefetch described
 	in baer-sc, so not very interesting.  No prediction attempts.}
 )
+
 
 @article(smith-bib,
 	title = "Bibliography and Readings on {CPU} Cache Memories and
@@ -755,6 +805,7 @@
 	annote = {\bn Didn't really read through it. \en}
 )
 
+
 @phdthesis(anant-su,
 	title = "Analysis of Cache Performance for Operating Systems and
 	Multiprogramming",
@@ -764,6 +815,7 @@
 	annote = {\bn Available as Technical Report CSL-TR-87-332.
 	Didn't read. \en}
 )
+
 
 @article(bennett,
 	title = "Cache Memory with Prefetching of Data by Priority",
@@ -775,6 +827,7 @@
 	annote = {\bn Couldn't find. \en}
 )
 
+
 @article(enger-ibm,
 	title = "Paged control store prefetch mechanism",
 	author = "T. A. Enger",
@@ -785,6 +838,7 @@
 	annote = {\bn Couldn't find. \en}
 )
 
+
 @inproceedings(fu-patel-ipps,
 	title = "Data prefetching strategies for vector cache memories",
 	author = "John W. C. Fu and Janak H. Patel",
@@ -794,4 +848,3 @@
 	annote = {\bn See \cite{fu-patel-isca} for all details; this paper
 	has identical content. \en}
 )
-

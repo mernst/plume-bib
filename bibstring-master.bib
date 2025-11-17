@@ -4,14 +4,17 @@
 %% Each string{...} entry may contain an extra ``= "..."'' element which is
 %%   used as the abbreviation.
 
+
 %%% See file mernst/abbreviations for the abbreviations available in the
 %%% standard BibTeX styles (abbrev, alpha, plain, unsrt).
+
 
 %%% Don't put cross references here; they go in file crossrefs.bib.
 
 
 %%% ========================================================================
 %%% Built-in abbreviations
+
 
 % The following abbreviations used to be available in the standard BibTeX
 % styles (abbrev, alpha, plain, unsrt) but were removed in 2009.
@@ -61,6 +64,7 @@
 %%% ========================================================================
 %%% Months
 
+
 % These are built into plain.bst.  I can override them here only if they
 % precede all uses of the macros later in this file.
 @string{jan = "January" = "Jan."}
@@ -80,11 +84,14 @@
 %%% ========================================================================
 %%% Accented place names
 
+
 % These definitions must also precede uses later in the file.
+
 
 @string{Aarhus = "{\AA}arhus, Denmark"}
 @string{Jyvaskyla = "Jyv{\"{a}}skyl{\"{a}}, Finland"}
 @string{Malaga = "M{\'a}laga, Spain"}
+
 
 % The accents belong in French, but do not belong in English
 @string{Montreal = "Montreal, Canada"}
@@ -93,22 +100,27 @@
 % string{Montreal = "Montr{\'e}al, Canada"}
 % string{Montreal = "Montr{\'e}al, Qu{\'e}bec, Canada"}
 
+
 @string{Zurich = "Z{\"u}rich, Switzerland"}
 
 
 %%% ========================================================================
 %%% Research labs and schools
 
+
 @string{CMUHCII = "Human-Computer Interaction Institute, School of Computer Science, Carnegie Mellon University" = "CMU HCII"}
 @string{CMUISR = "Institute for Software Research, School of Computer Science, Carnegie Mellon University" = "CMU ISR"}
 @string{CMUSCS = "School of Computer Science, Carnegie Mellon University" = "CMU SCS"}
 @string{CMUaddr = "Pittsburgh, PA"}
 
+
 @string{ETHZ = "ETH Z{\"u}rich"}
 @string{ETHZaddr = "Z{\"u}rich, Switzerland"}
 
+
 @string{PARC   = "Xerox Corporation Palo Alto Research Center"}
 @string{PurdueSERC = "Software Engineering Research Center, Purdue University" = "SERC, Purdue"}
+
 
 @string{MIT    = "Massachusetts Institute of Technology"}
 % string{MITEECS = "Massachusetts Institute of Technology Department of
@@ -127,12 +139,15 @@
 @string{MITSloan = "MIT Sloan School of Management Science" = "MIT Sloan School of Management"}
 @string{MITaddr = "Cambridge, MA" = ""}
 
+
 @string{MSRaddr = "Redmond, WA" = ""}
+
 
 @string{IBMTJWatson = "IBM T.J. Watson Research Center"}
 % Most common location for software research, but IBM dropped the lease in 2012.
 @string{IBMYorktownHeights = "Yorktown Heights, NY" = ""}
 @string{IBMHawthorne = "Hawthorne, NY" = ""}
+
 
 @string{UBCCS = "University of British Columbia Department of Computer Science" =
                   "U. Brit. Columb. Dept. of Comp. Sci."}
@@ -142,11 +157,14 @@
 @string{UBCaddr = "Vancouver, BC, Canada"}
 @string{UBCcircle = "cIRcle: UBC's Digital Repository" = "cIRcle"}
 
+
 @string{UCL = "University College London" = "UCL"}
 @string{UCLaddr = "London"}
 
+
 @string{UIUC = "University of Illinois at Urbana-Champaign" = "UIUC"}
 @string{UIUCaddr = "Urbana, IL, USA"}
+
 
 % UW CSE was "Department of" until early March 2017, then "School of" thereafter.
 @string{UWCSEDept = "University of Washington Department of Computer Science and Engineering" =
@@ -155,15 +173,18 @@
                   "U. Wash. Comp. Sci. \& Eng."}
 @string{UWCSEaddr = "Seattle, WA, USA"}
 
+
 @string{UWaterloo = "University of Waterloo" = "U.~Waterloo"}
 @string{UWaterlooECE = "University of Waterloo Department of Electrical and Computer Engineering" = "U.~Waterloo ECE"}
 @string{UWaterlooCS = "University of Waterloo Department of Computer Science" = "U.~Waterloo CS"}
 @string{UWaterlooaddr = "Waterloo, Ontario, Canada" = "Waterloo, ON, Canada"}
 
+
 % Perhaps add "Computer Sciences Department"
 @string{UWMadison = "University of Wisconsin -- Madison"}
 @string{UWMadisonaddr = "1210 West Dayton Street, Madison, WI 53706, USA" =
                   "Madison, WI"}
+
 
 @string{WRL    = "Digital Equipment Corporation Western Research Laboratory"}
 
@@ -171,12 +192,14 @@
 %%% ========================================================================
 %%% Book series
 
+
 % Isn't this supposed to be built-in?
 @string{LNCS   = "Lecture Notes in Computer Science" = "LNCS"}
 
 
 %%% ========================================================================
 %%% Journal titles
+
 
 % "SCP" is built into plain.bst.
 % The others are built into plain.bst, but I can override them here.
@@ -188,13 +211,17 @@
 % built in: @string{SCP     = "Science of Computer Programming"}
 @string{IEEETC  = "IEEE Transactions on Computers" = "IEEE Trans. Comput."}
 
+
 %% The below entries do not override anything that is built in.
 
+
 @string{AnnalsSE = "Annals of Software Engineering"}
+
 
 % The word "Journal" isn't in the title of the journal.
 @string{ASEjournal = "Automated Software Engineering Journal" = "ASE"}
 @string{JASE = "Automated Software Engineering" = "ASE"}
+
 
 @string{ACMQueue = "ACM Queue" = "Queue"}
 @string{computer = "IEEE Computer" = "Computer"}
@@ -224,7 +251,9 @@
 @string{SPE     = "Software: Practice and Experience"}
 @string{j-SPE   = SPE}
 
+
 @string{STTT = "Software Tools for Technology Transfer" = "STTT"}
+
 
 @string{STVR    = "Journal of Software Testing, Verification and Reliability" = "STVR"}
 @string{TDSC    = "IEEE Transactions on Dependable and Secure Computing" = "TDSC"}
@@ -242,13 +271,17 @@
 % built in: @string{SCP     = "Science of Computer Programming"}
 @string{IPAM    = "Information Processing \& Management"}
 
+
 @string{PTRSLB   = "Philosophical Transactions of the Royal Society of London, Series B" = "Phil.\ Trans.\ Royal Soc., B"}
 @string{IJMMS   = "International Journal of Man-Machine Studies" = "Int'l. J. Man-Machine Studies"}
 
+
 @string{JCSCW   = "Computer Supported Cooperative Work (CSCW)" = "CSCW Journal"}
+
 
 %% bp (and maybe other programs) fail if string{...} is the last thing in
 %% the file.  Thus, this comment.  (Yuck.)
+
 
 %%% Local Variables:
 %%% auto-fill-function: nil
