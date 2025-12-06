@@ -96,17 +96,16 @@ webtest: all
 	rsync -rC $(PUBS_SRC)/ webtest
 	$(MAKE) -C webtest -f $(PUBS_SRC)/Makefile-pubs BIBDIR=`pwd`
 
-style-fix: markdownlint-fix
-markdownlint-fix:
-	markdownlint-cli2 --fix "**/*.md" "#node_modules"
-style-check: markdownlint-check
-markdownlint-check:
-	markdownlint-cli2  "**/*.md" "#node_modules"
-
 tags: TAGS
 
 TAGS: ${BIBFILES}
 	etags ${BIBFILES}
 
-showvars:
+showvars::
 	@echo "BIBFILES = ${BIBFILES}"
+
+# Code style
+ifeq (,$(wildcard .plume-scripts))
+dummy != git clone -q https://github.com/plume-lib/plume-scripts.git .plume-scripts
+endif
+include .plume-scripts/code-style.mak

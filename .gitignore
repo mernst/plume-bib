@@ -1,3 +1,7 @@
+.plume-scripts
+.project
+.ruff.toml
+bib
 bibtest.aux
 bibtest.bbl
 bibtest.blg
@@ -6,6 +10,4 @@ bibtest.log
 bibtest.pdf
 bibtest.tex
 mail
-.project
 webtest
-bib

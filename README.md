@@ -178,7 +178,6 @@ If you make changes but you lack write access to the [Git
 repository](https://github.com/mernst/plume-bib), then please submit a pull
 request.  Thanks for your contributions!
 
-LICENSE
--------
+## License
 
 Uses the Creative Commons Attribution ("CC-BY") license.  See file LICENSE.
