@@ -7,7 +7,7 @@ BIB_ABBREVIATE ?= ./bib-abbreviate.pl
 GENERATED_FILES = bibstring-unabbrev.bib bibstring-abbrev.bib crossrefs-abbrev.bib bibroot bibtest.tex
 
 # TODO: reinstate bibstring-crossrefs-abbrev.bib
-all: ${GENERATED_FILES}
+all: ${GENERATED_FILES} style-check
 
 BIBFILES := $(shell ls *.bib | grep -v bibstring-unabbrev.bib | grep -v bibstring-abbrev.bib)
 
@@ -104,7 +104,7 @@ TAGS: ${BIBFILES}
 showvars::
 	@echo "BIBFILES = ${BIBFILES}"
 
-# Code style
+# Code style; defines `style-check` and `style-fix`.
 ifeq (,$(wildcard .plume-scripts))
 dummy != git clone -q https://github.com/plume-lib/plume-scripts.git .plume-scripts
 endif
