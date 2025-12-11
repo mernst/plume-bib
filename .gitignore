@@ -1,5 +1,6 @@
 .plume-scripts
 .project
+.pymarkdown
 .ruff.toml
 bib
 bibtest.aux
