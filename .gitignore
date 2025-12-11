@@ -1,7 +1,4 @@
-.plume-scripts
 .project
-.pymarkdown
-.ruff.toml
 bib
 bibtest.aux
 bibtest.bbl
@@ -12,3 +9,9 @@ bibtest.pdf
 bibtest.tex
 mail
 webtest
+
+# For style checking.
+.plume-scripts
+.markdownlint-cli2.yaml
+.pymarkdown
+.ruff.toml
