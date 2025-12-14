@@ -74,6 +74,8 @@ To use a smaller font for URLs, add:
 3. Add the following rules to your Makefile.
 
 <!-- markdownlint-disable no-hard-tabs -->
+<!-- pyml disable no-hard-tabs -->
+
 ```make
 plume-bib:
 ifdef PLUMEBIB
@@ -105,6 +107,8 @@ plume-bib-copy:
 	sed -i 's/^plume-bib$$/# plume-bib/' .gitignore
 	rm -f master.zip
 ```
+
+<!-- pyml enable no-hard-tabs -->
 <!-- markdownlint-enable no-hard-tabs -->
 
 You can see a full `Makefile` (with many features, so it is a bit complex)
