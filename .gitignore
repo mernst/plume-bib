@@ -10,8 +10,5 @@ bibtest.tex
 mail
 webtest
 
-# For style checking.
+# Obtained via Git
 .plume-scripts
-.markdownlint-cli2.yaml
-.pymarkdown
-.ruff.toml
