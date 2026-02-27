@@ -11629,24 +11629,26 @@ with an {SMT} solver",
   authorNONASCII =       {Davide Molinelli and Alberto Martin-Lopez and Elliott Zackrone and Beyza Eken and Michael D. Ernst and Mauro Pezzè},
   title =        {Tratto: A Neuro-Symbolic Approach to Deriving Axiomatic Test Oracles},
   crossref =  {ISSTA2025},
+  pages = {1887-1909},
   abstract =
    {This paper presents Tratto, a neuro-symbolic approach that generates
     assertions (boolean expressions) that can serve as axiomatic oracles, from
-    source code and documentation. The symbolic module of Tratto takes
+    source code and documentation.  The symbolic module of Tratto takes
     advantage of the grammar of the programming language, the unit under test,
     and the context of the unit (its class and available APIs) to restrict the
     search space of the tokens that can be successfully used to generate valid
-    oracles. The neural module of Tratto uses transformers fine-tuned for both
+    oracles.  The neural module of Tratto uses transformers fine-tuned for both
     deciding whether to output an oracle or not and selecting the next lexical
     token to incrementally build the oracle from the set of tokens returned by
-    the symbolic module. Our experiments show that Tratto outperforms the
-    state-of-the-art axiomatic oracle generation approaches, with 73\% accuracy,
-    72\% precision, and 61\% F1-score, largely higher than the best results of
-    the symbolic and neural approaches considered in our study (61\%, 62\%, and
-    37\%, respectively). Tratto can generate three times more axiomatic oracles
-    than current symbolic approaches, while generating 10 times less false
-    positives than GPT4 complemented with few-shot learning and
-    Chain-of-Thought prompting.},
+    the symbolic module.
+    Our experiments show that Tratto outperforms the state-of-the-art axiomatic
+    oracle generation approaches, with 73\% accuracy, 72\% precision, and 61\%
+    F1-score, largely higher than the best results of the symbolic and neural
+    approaches considered in our study (61\%, 62\%, and 37\%,
+    respectively). Tratto can generate three times more axiomatic oracles than
+    current symbolic approaches, while generating 10 times less false positives
+    than GPT4 complemented with few-shot learning and Chain-of-Thought
+    prompting.},
   basefilename = {axiomatic-oracles-issta2025},
   downloads = "https://anonymous.4open.science/r/tratto-replication-package-31F6 replication package",
   category =  "Natural language processing",
@@ -11722,38 +11724,39 @@ with an {SMT} solver",
 }
 
 
+
 @InProceedings{MalakarEKS2025,
   author =       {Sanjay Malakar and Michael D. Ernst and Martin Kellogg and Manu Sridharan},
   title =        {Repairing leaks in resource wrappers},
   crossref =  {ASE2025},
   NEEDpages =     {*},
   abstract =
-   {A resource leak occurs when a program fails to
-    release a finite resource like a socket, file descriptor or database
-    connection. While sound static analysis tools can detect all leaks,
-    automatically repairing them remains challenging. Prior work
-    took the output of a detection tool and attempted to repair only
-    leaks from a hard-coded list of library resource types. That
-    approach limits the scope of repairable leaks: real-world code
-    uses resource wrappers that store a resource in a field and must
-    themselves be closed.
+   {A resource leak occurs when a program fails to release a finite resource
+    like a socket, file descriptor or database connection.  While sound static
+    analysis tools can \emph{detect} all leaks, automatically \emph{repairing}
+    them remains challenging.  Prior work took the output of a detection tool
+    and attempted to repair only leaks from a hard-coded list of library
+    resource types.  That approach limits the scope of repairable leaks:
+    real-world code uses \emph{resource wrappers} that store a resource in a
+    field and must themselves be closed.
     \par
-    This paper makes four key contributions to improve resource
-    leak repair in the presence of wrappers. (1) It integrates inference
-    of resource management specifications into the repair pipeline,
-    enabling extant fixing approaches to reason about wrappers. (2)
-    It transforms programs into variants that are easier to analyze,
-    making inference, detection, and fixing tools more effective; for
-    instance, it makes detection tools report problems closer to the
-    root cause, often in a client of a resource wrapper rather than
-    within the wrapper class itself. (3) A novel field containment
-    analysis reasons about resource lifetimes, enabling repair of more
-    leaks involving resources stored in fields. (4) It introduces a
-    new repair pattern and more precise reasoning to better handle
-    resources stored in non-final fields.
+    This paper makes four key contributions to improve resource leak repair in
+    the presence of wrappers.
+    (1) It integrates inference of resource management specifications into the
+    repair pipeline, enabling extant fixing approaches to reason about
+    wrappers.
+    (2) It transforms programs into variants that are easier to analyze, making
+    inference, detection, and fixing tools more effective; for instance, it
+    makes detection tools report problems closer to the root cause, often in a
+    client of a resource wrapper rather than within the wrapper class itself.
+    (3) A novel \emph{field containment analysis} reasons about resource
+    lifetimes, enabling repair of more leaks involving resources stored in
+    fields.
+    (4) It introduces a new repair pattern and more precise reasoning to better
+    handle resources stored in non-final fields.
     \par
-    Prior work fixed 41\% of resource leak warnings in the NJR
-    benchmark suite; our implementation Arodnap fixes 68\%.},
+    Prior work fixed 41\% of resource leak warnings in the NJR benchmark suite;
+    our implementation Arodnap fixes 68\%.},
   basefilename = {resource-leak-fix},
   downloads = {https://github.com/typetools/arodnap implementation},
   category = "Program repair,Verification",
