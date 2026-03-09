@@ -941,72 +941,6 @@ url = {https://doi.ieeecomputersociety.org/10.1109/ICSE55347.2025.00035},
 publisher = {IEEE Computer Society},
 address = {Los Alamitos, CA, USA},
 month =May}
-  This paper is about inconsistency between code and comments, not inconsistency
-among comments.  Their C4RLLaMA technique only changes code -- it assumes that
-any inconsistency is due to a bad comment.  (The paper mentions in passing that
-the code might be right, but their training and evaluation only considers cases
-where the comment did change, whether or not the code also did.)  The technique
-works in two stages -- first, it uses the LLM to determine whether the comments
-are inconsistent with the code, and then it uses the LLM to change the code.  I
-think a really interesting research project would be, after determining that the
-comments are inconsistent with the code, deciding whether to change the comments
-or the code.
-  Evaluation is done in two ways:  "just-in-time" is given a diff and asked if
-the diff introduces inconsistency, and "post hoc" is given one version of code
-and its comment.  "the percentage of correct comment updates by C4RLLaMA was
-65.0\% and 55.9\% in just-in-time and post hoc, respectively".  That seems
-really low!  If the other updates were wrong, then a programmer needs to read
-every output of C4RLLaMA and fix over 1/3 of them.  That sounds like a lot of
-human work, and the paper does not account for the cost of false positive edits.
-Its use of the F1 measure implies that false negatives and false positives are
-equally costly, which is not the case in this scenario.
-  I suspect there were 2 models, one for each scenario, but not 4 (which would
-be the case if there were separate models for the "detection task" and the
-"revision task").  "We utilized the widely used dataset from previous work as
-our training and testing dataset".  The paper does not say how the training set
-and evaluation set were ensured not to overlap; did the authors do anything at
-all about that?
-  Table 1 shows three inconsistent comments. (1) "Read" in comment, "write" in
-method name.  (2) wrong number of formal parameters, which running Javadoc would
-have revealed. (3) The comment "If there is no line number known, -1 is
-returned" for a getter that just returns a field.  Because the method is a
-simple getter, the paper says "the code here is inconsistent with the comment",
-which I disagree with.  If the field might be -1, then the comment is consistent
-with the code.  The one concrete example of C4RLLaMA correcting a comment, in
-Table 4, is fixing a typo from "Arry" to "Array".  Based on these weak examples,
-I am skeptical about the technique and experiments.
-  C4RLLaMA is a fine-tuned version of CodeLLaMA (7B).  Given the fine-tuning,
-the prompt is zero-shot.  The prompt asks the LLM to do chain-of-thought
-reasoning.  The dataset used for training and evaluation is ((method_before,
-comment_before), (method_after, comment_after)).  This dataset shows the full
-method body but no context.  I presume the data comes from a version control
-system.  Regarding the dataset, I did not understand this:  "Based on an
-underlying assumption that all consistency issues will be rectified promptly, a
-code change does not cause a consistency problem, C_before = C_after;
-conversely, if the change raises a consistency problem, C_before != C_after."
-Does "raises" mean "fixes"?
-  For the detection task:  Numerically, their tool outperforms the best previous
-one by just a 1-4\% percent on precision and recall for post hoc detection, and
-it underperformed by 3\% on just-in-time detection; but for the latter
-presenting diffs in a standard format gave their tool an additional boost to be
-7\% better than previous work.  The revision
-  For the revision task:  The revision evaluation omits some LLMs that were
-evaluated for the detection task, such as GPT 3.5 and GPT 4.0; section 6 says
-that's because they perform poorly on the detection task, but that argument does
-not hold water for me.  It is unclear to me whether revision was done everywhere
-that detection indicated an inconsistency, or only where there is truly an
-inconsistency; if the latter, then one needs to multiply the success rates to
-learn the end-to-end success rate.  I suspect that the original, unchanged
-comments would do very well on metrics like BLEU that the paper uses.  The paper
-admits this ("They are not the best for evaluating the efficacy of rectifying
-CCI issues ... [even if wrong], the text similarity metrics may still be very
-high."), but didn't provide any numeric evaluation.  The human evaluation of
-correctness was done by undergraduates.  There is no mention of cross-validation
-or inter-rater reliability testing.  The metric is:  "_successfully fixed_
-requires that the resulting new comment is semantically related to the
-corresponding code and does not contain explicit errors."  In other words, a
-model can get full credit for a new comment that is no different than the
-original.
 
 
 
@@ -2829,56 +2763,6 @@ series = {ICSE ’19}
   pages={2-10},
   keywords={Investments;Programming profession;Mathematical programming;Psychology;Books;Humans;Laboratories;Microcomputers;Microprocessors;Electronic switching systems},
   doi={10.1109/HCC.2002.1046334}}
-  I disagree with the paper's claim that "most [computer] programming deals with
-problems that we would not now consider to be mathematical.", because there is
-always a mathematical model that the program deals with.  The paper gives no
-examples.
-  The paper asks 3 questions.  I think the questions are in the wrong answer,
-and thus lead to definitions that are not very useful.
- 1. Who is a programmer?  "all computer users ought to be regarded as potential
-programmers, whose tools differ only in their usability for that purpose".
- 2. What is a programming language?  "almost all major software
-applications could now be recognized as including programming languages".
- 3. What is a programming activity? The paper answers that it's anything anyone
-uses the term "programming" for, including programming a VCR, programming a
-microwave, programming a car radio, or writing HTML.  This ignores the obvious
-fact that "programming" is a homonym in English.
-  That bit of wordplay about "programming" renders the paper useless for
-thinking about computer programming in specific.  However, the paper is still
-useful insofar as it applies to many or all intellectual tasks that humans
-perform.  The paper could have given a useful definition such as "a program is
-something that runs multiple times on different inputs", and then an editor
-macro and a spreadsheet would count but HTML and the buttons pressed on a
-microwave would not.
-  The key idea of the paper is in paragraph 6:  "This paper asks instead what is
-distinctive about the cognitive tasks involved in programming," The paper states
-that the cognitive features of "programming" (i.e., any intellectual activity)
-are "(a) loss of the benefits of direct manipulation and (b) introduction of
-notational elements to represent abstraction", and (c) abstraction, or factoring
-out repeated parts of a complex activity.  Even gestures, button presses, and
-"linguistic and representational strategies" count as "notational elements".
-  "The Attention Investment model is a decision-theoretic account of programming
-behavior. It offers a cost/benefit analysis of abstraction use that allows us to
-predict the circumstances in which users will choose to engage in programming
-activities, as well as helping tool designers to facilitate users’ investment
-decisions and reduce the risks associated with those decisions. As with any
-decision theoretic account, this depends on the availability of some currency -
-a measure according to which cost, risk, pay-off etc can be calculated and
-compared."  The paper cites "earlier papers on attention investment", but I
-guess those are not (capitalized) Attention Investment.  This model seems
-high-level and glaringly obvious:  people do a risk-benefit analysis before
-choosing their course of action, such as which financial instruments to invest
-in, or whether to go to the hardware store to purchase a new tool or make do
-with the tools in their toolbox.  Was this novel at the time?  Or novel as
-applied to programming?
-  They built a "model" of many agents doing a spell-correction task, with each
-agent working at a different location.  (Two different actions are to do a
-single edit, or to pop up a search-and-replace box to correct all instances of
-the misspelling.)  I don't see what information this model conveys, except that
-they achieved, via a multi-agent process, a result that they say reflects
-unconscious decisions that human would take.  I don't see that the model enables
-prediction or yields insight.
-  The paper is twice as long as it needs to be, due to waffling generalities.
 
 
 @article{doi:10.1080/13639080020028747,
