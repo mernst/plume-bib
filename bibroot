@@ -10,8 +10,8 @@
 \include{debug-optimized.bib}
 \include{dispatch.bib}
 \include{education.bib}
-\include{ernst-underreview.bib}
 \include{ernst.bib}
+\include{ernst-underreview.bib}
 \include{games.bib}
 \include{garbage-collection.bib}
 \include{generals.bib}
