@@ -247,6 +247,8 @@ url = {https://doi.ieeecomputersociety.org/10.1109/ICSE55347.2025.00097},
 publisher = {IEEE Computer Society},
 address = {Los Alamitos, CA, USA},
 month =May}
+This generates the whole test, not just the assertion.
+Under the hood, it breaks the problem into parts.
 
 
 
@@ -297,6 +299,9 @@ keywords = {Large Language Models, Test Generation}
   doi={10.1109/FLLM63129.2024.10852455},
   ISSN={},
   month=Nov,}
+I have not read this.
+                  Abstract says it investigates "..., different prompting
+                  strategies, ...".
 
 
 
@@ -447,6 +452,8 @@ location = {Lisbon, Portugal},
   doi={10.1109/ASE56229.2023.00065},
   ISSN={2643-1572},
   month=Sep,}
+Advocates self-consistency, which is calling an LLM multiple times and choosing
+                  the most common answer.
 
 
 
@@ -767,6 +774,78 @@ url = {https://doi.ieeecomputersociety.org/10.1109/ICSE55347.2025.00129},
 publisher = {IEEE Computer Society},
 address = {Los Alamitos, CA, USA},
 month =May}
+  The technique consists of two parts:  "conversation-driven specification
+generation", then "mutation-based specification generation".  The novelty lies
+in the fix guidance and in mutating an incorrect specification to make it
+correct.
+  "conversation-driven specification generation" is not conversational in the
+natural language sense.  It iterates with an LLM to produce a specification.  On
+each iteration, ask the LLM for (an improved) specification; the input is the
+code, the previous specification, the errors produced by the verifier for the
+previous iteration, and guidance about how to fix the errors.  (This is rather
+obvious -- It is used by RustAssistant [DeligiannisLMPR2025], for example --
+except for the guidance.)  Terminate when the specification verifies
+or after 10 rounds.  The prompt is few-shot:  it contains 4 randomly-chosen
+examples from their dataset, together with their specifications.  I wonder how
+similar different specifications are -- that is, how much the few-shot examples
+help the LLM for this particular dataset.  For 4 of the executions (on
+expectation), one of randomly-chosen examples will be exactly the program being
+analyzed.
+  For iterations after the first, the prompt gives guidance about correcting the
+problem.  "through a massive amount of experiments, we summarize several types
+of common verification failures reported by the verifier. For each kind of
+error, we provide guidance in the natural language to facilitate the model in
+generating correct specifications."  Does this imply that their technique is
+difficult to apply to new situations?  They don't report what the guidance was.
+They didn't evaluate the effect of the guidance (say, by an ablation study).
+They don't report trying to do the correction symbolically.
+  "Mutation-based specification generation" is really mutation-based
+specification *correction*.  Even if the result of the previous step is not
+correct, it may be close to correct.  Apply mutation operators to the
+specification to see whether some variant of the specification verifies.  There
+is some heuristic about the order in which to apply the mutations and
+combinations of them.  This part does not use an LLM.  The 15 mutation operators
+seem tuned to array invariants, which I suspect is the majority of their
+invariants.  This correction is responsible for about 1/4 of SpecGen's overall
+success.  AutoGen outperforms the "conversational specification generation";
+if it were combined with the mutation-based correction, would that outperform
+SpecGen?
+  The paper gives only one example of output, in figure 1.
+  I could not understand the explanation in section 3.C of the heuristics that
+choose among mutated specifications.  Algorithm 1 contains no comments, and
+there is such as "a subset E_selected of mutated specifications that can pass
+the verification. The selected subset E_selected is initialized with E_t.", but
+E_t consists of specifications that do *not* pass verification.  I think it may
+work like this:  add up the cost of a set of mutations, and prioritize the
+sets with the lowest cost.
+  The evaluation is on a dataset of programs all of which verify perfectly with
+OpenJML.  Any program that does not verify is dropped from their dataset and
+does not appear in their experimental numbers.  The programs are selected from
+the SV-COMP dataset (89\% of which are loop-free), from Nilizadeh et al. [43],
+and from LeetCode.
+  The "Prob." column in Table 2 and Table 6, is the "average success
+probability" over 10 trials.  That is not as interesting as whether the
+technique ever succeeds -- that is, prior work AutoSpec is just as good as their
+SpecGen for the "Sequential" column, but the table only highlights their
+SpecGen.
+  It is no surprise that Daikon does poorly in their evaluation, since they
+didn't subset their data to only programs whose specifications are within
+Daikon's grammar.  Nor did they expand Daikon's grammar to include properties
+that are necessary.  Nor do they report using Daikon to compute loop invariants
+(which are necessary for verifying many of their programs).  The evaluation
+isn't whether Daikon's output is correct or useful, only whether it forms a full
+specification that OpenJML can fully verify (which is not a task Daikon is tuned
+for).
+  The paper is full of unfounded claims.  "The selected programs are highly
+representative": no evidence is given.  "specifications that correctly and
+comprehensively describe the semantics of complex programs": no evaluation of
+the comprehensiveness is given.  We know that the generated specifications are
+verifiable, but they might be quite weak and still verify.  Though OpenJML might
+require that properties such as nullness and array indexing are satisfied.
+  The authors did a user study on scoring how good the specifications were.
+However, they did not include previous work, such as AutoSpec.  The raters were
+the authors' graduate students, apparently.
+  The artifact is at https://github.com/Lezhi-Ma/SpecGen-Artifact .
 
 
 @Book{PorterZ2024,
@@ -876,6 +955,11 @@ url = {https://doi.ieeecomputersociety.org/10.1109/MSR59073.2023.00084},
 publisher = {IEEE Computer Society},
 address = {Los Alamitos, CA, USA},
 month =May}
+The prompts are generated by Codex from CWE-related code snippets, then
+"curated" (filtered? edited?) by the authors.
+There are no test cases; the authors did an experiment where they ran their CodeQL
+tool on the generated code:  "We used built-in QL queries to detect 18 of the
+Top 25 CWEs in code created using LLMSecEval."
 
 
 
@@ -1551,6 +1635,9 @@ keywords = {large-language models; personalized learning; human-centered AI},
   doi={10.1109/NLBSE59153.2023.00018},
   ISSN={},
   month=May,}
+GitHub Copilot can correctly predict the runtime complexity 45.44\% times in the
+first suggestion (top-1) and 56.38 \% times considering all suggestions (top-all).
+Short 4-page paper.  They don't come out and say that one should re-prompt.
 
 
 
