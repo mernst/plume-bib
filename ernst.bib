@@ -11770,8 +11770,22 @@ with an {SMT} solver",
   author =       {Benedikt Schesch and Michael D. Ernst},
   title =        {{Merge-Bench}: Resolve Merge Conflicts with Large Language Models},
   crossref =  {ICPR2026},
-  NEEDpages =     {*},
-  abstract =
+  OPTkey =       {},
+  OPTbooktitle = {},
+  OPTyear =      {},
+  OPTeditor =    {},
+  OPTvolume =    {},
+  OPTnumber =    {},
+  OPTseries =    {},
+  OPTpages =     {},
+  OPTmonth =     {},
+  OPTaddress =   {},
+  OPTorganization = {},
+  OPTpublisher = {},
+  OPTnote =      {},
+  OPTannote =    {},
+  OPTdoi =       {},
+  OPTabstract =
    {This paper applies machine learning to the difficult and important task of
     version control merging. (1) We constructed a dataset, Merge-Bench, of 7938
     real-world merge conflict hunks from 1439 GitHub repositories. The ground
@@ -11786,53 +11800,19 @@ with an {SMT} solver",
     trailing only Gemini 2.5 Pro. Across 11 programming languages, commercial
     LLM performance is largely stable from language to language. The best
     models correctly resolve less than 60\% of merge conflicts.},
+  OPTusesDaikon = {},
+  OPTusesDaikonAsTestSubject = {},
+  OPTomitfromcv = {},
+  OPTunderreview = {},
   basefilename = {merge-bench-icpr2026},
+  OPTdownloads = {},
+  OPTdownloadsnonlocal = {},
+  OPTsupersededby = {},
   category =  {Software Engineering},
   summary =
    {This paper presents a new dataset, Merge-Bench, of real-world merge conflicts.
     It also presents a small (14B parameters) LLM trained to resolve merge
     conflicts, which outperforms commercial frontier models many times its size.},
-}
-
-
-
-@InProceedings{PengKBE2026,
-  author =       {Haoran Peng and Baris Kasikci and Gilbert Bernstein and Michael D. Ernst},
-  title =        {Hayroll: A Modular Wrapper for Translating {C} Macros and Conditional Compilation to {R}ust},
-  crossref =  {PLDI2026},
-  needpages =     {*},
-  abstract =
-   {Existing C-to-Rust translators preprocess their input before translation,
-    discarding macro structure and configurability. As a result, they are
-    incomplete on configurable software and lose programmer-defined
-    abstractions embedded in C macros.
-    \par
-    We present Hayroll, a modular wrapper that makes C-to-Rust translation
-    preprocessor-aware without modifying the underlying translator. Hayroll
-    consists of two cooperating layers. The conditional compilation translation
-    layer uses symbolic execution to derive activation conditions for each line
-    of the source code and splits the program into a set of
-    configuration-specific translation tasks. These tasks are then passed
-    independently to the macro translation layer, which classifies macros,
-    annotates macro-expanded nodes with in-AST tags, sends the code through the
-    underlying translator, and later reconstructs them in Rust by retrieving
-    these tags from the translator’s output. Because the layers communicate
-    only through task partitioning and in-AST annotations, the underlying
-    translator remains a black box; no invasive changes are required. Our
-    implementation uses C2Rust, but the design is translator-agnostic.
-    \par
-    Evaluated on CRUST-Bench, LibmCS, and zlib, Hayroll preserves correctness
-    across configurations, successfully reconstructs most syntactical macros,
-    and avoids configuration explosion through symbolic execution. These
-    results show that decoupled preprocessor analysis can restore
-    configurability and abstraction to C-to-Rust translation in a practical and
-    modular way.},
-  basefilename = {c-to-rust-macros},
-  category =  {Refactoring},
-  summary =
-   {Most C-to-Rust translators first run the C preprocessor, losing
-    configurability and programmer-written abstractions.  Hayroll records macro
-    information from C, then rewrites the Rust to recovers that information.},
 }
 
 %% When I add here at the bottom of the file, also post a PLSE news item.
