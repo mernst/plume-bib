@@ -11795,38 +11795,39 @@ with an {SMT} solver",
 }
 
 
-
 @InProceedings{PengKBE2026,
   author =       {Haoran Peng and Baris Kasikci and Gilbert Bernstein and Michael D. Ernst},
   title =        {Hayroll: A Modular Wrapper for Translating {C} Macros and Conditional Compilation to {R}ust},
   crossref =  {PLDI2026},
   needpages =     {*},
   abstract =
-   {Existing C-to-Rust translators preprocess their input before translation,
-    discarding macro structure and configurability. As a result, they are
-    incomplete on configurable software and lose programmer-defined
-    abstractions embedded in C macros.
+   {Previous C-to-Rust translators run the C preprocessor {\tt cpp} on
+    their input before translation.  This discards configurability, and it
+    loses programmer-defined abstractions expressed as C macros.
     \par
     We present Hayroll, a modular wrapper that makes C-to-Rust translation
     preprocessor-aware without modifying the underlying translator. Hayroll
     consists of two cooperating layers. The conditional compilation translation
     layer uses symbolic execution to derive activation conditions for each line
-    of the source code and splits the program into a set of
-    configuration-specific translation tasks. These tasks are then passed
-    independently to the macro translation layer, which classifies macros,
-    annotates macro-expanded nodes with in-AST tags, sends the code through the
-    underlying translator, and later reconstructs them in Rust by retrieving
-    these tags from the translator's output. Because the layers communicate
-    only through task partitioning and in-AST annotations, the underlying
-    translator remains a black box; no invasive changes are required. Our
-    implementation uses C2Rust, but the design is translator-agnostic.
+    of the source code.  It splits the program into a set of
+    configuration-specific translation tasks that together cover every line of
+    code.  These tasks are then passed independently to the macro translation
+    layer.  The macro translation layer classifies macros, annotates
+    macro-expanded nodes with tags, and sends the code through the
+    underlying translator.  It then reconstructs C macros as Rust functions or
+    macros by retrieving these tags from the translator's output. Because the
+    layers communicate only through task partitioning and source-code annotations,
+    the underlying translator remains a black box; no invasive changes are
+    required. Our implementation uses C2Rust, but the design is
+    translator-agnostic.
     \par
-    Evaluated on CRUST-Bench, LibmCS, and zlib, Hayroll preserves correctness
-    across configurations, successfully reconstructs most syntactical macros,
-    and avoids configuration explosion through symbolic execution. These
-    results show that decoupled preprocessor analysis can restore
-    configurability and abstraction to C-to-Rust translation in a practical and
-    modular way.},
+    We evaluated Hayroll on CRUST-Bench, LibmCS, and zlib.  Hayroll
+    successfully reconstructs most syntactical macros and avoids configuration
+    explosion through symbolic execution.  Hayroll's output passes the same
+    tests as the underlying C-to-Rust transpiler.  These results show that
+    decoupled preprocessor analysis can restore configurability and abstraction
+    to C-to-Rust translation in a practical and modular way.},
+  doi =       {10.1145/3808276},
   basefilename = {c-rust-macros-pldi2026},
   category =  {Refactoring},
   summary =
@@ -11834,6 +11835,7 @@ with an {SMT} solver",
     configurability and programmer-written abstractions.  Hayroll records macro
     information from C, then rewrites the Rust to recovers that information.},
 }
+
 
 %% When I add here at the bottom of the file, also post a PLSE news item.
 
