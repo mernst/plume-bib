@@ -3385,6 +3385,35 @@ abstract = "Abstract The wide adoption of Web Services has led to the developmen
 
 
 
+@article{10.1145/3729395,
+author = {Eghbali, Aryaz and Burk, Felix and Pradel, Michael},
+title = {{DyLin}: A Dynamic Linter for {Python}},
+year = {2025},
+issue_date = {July 2025},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {2},
+number = {FSE},
+url = {https://doi.org/10.1145/3729395},
+doi = {10.1145/3729395},
+abstract = {Python is a dynamic language with applications in many domains, and one of the most popular languages in recent years. To increase code quality, developers have turned to “linters” that statically analyze the source code and warn about potential programming problems. However, the inherent limitations of static analysis and the dynamic nature of Python make it difficult or even impossible for static linters to detect some problems. This paper presents DyLin, the first dynamic linter for Python. Similar to a traditional linter, the approach has an extensible set of checkers, which, unlike in traditional linters, search for specific programming anti-patterns by analyzing the program as it executes. A key contribution of this paper is a set of 15 Python-specific anti-patterns that are hard to find statically but amenable to dynamic analysis, along with corresponding checkers to detect them. Our evaluation applies DyLin to 37 popular open-source Python projects on GitHub and to a dataset of code submitted to Kaggle machine learning competitions, totaling over 683k lines of Python code. The approach reports a total of 68 problems, 48 of which are previously unknown true positives, i.e., a precision of 70.6\%. The detected problems include bugs that cause incorrect values, such as inf, incorrect behavior, e.g., missing out on relevant events, unnecessary computations that slow down the program, and unintended data leakage from test data to the training phase of machine learning pipelines. These issues remained unnoticed in public repositories for more than 3.5 years, on average, despite the fact that the corresponding code has been exercised by the developer-written tests. A comparison with popular static linters and a type checker shows that DyLin complements these tools by detecting problems that are missed statically. Based on our reporting of 42 issues to the developers, 31 issues have so far been fixed.},
+journal = {Proc. ACM Softw. Eng.},
+month = jun,
+articleno = {FSE125},
+numpages = {22},
+keywords = {Bug, Dynamic analysis, Linter}
+}
+
+
+
+
+
+
+
+
+
+
+
 %%%
 %%% Computational Learning Theory
 %%%

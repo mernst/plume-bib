@@ -11635,15 +11635,14 @@ with an {SMT} solver",
     oracles.  The neural module of Tratto uses transformers fine-tuned for both
     deciding whether to output an oracle or not and selecting the next lexical
     token to incrementally build the oracle from the set of tokens returned by
-    the symbolic module.
-    Our experiments show that Tratto outperforms the state-of-the-art axiomatic
-    oracle generation approaches, with 73\% accuracy, 72\% precision, and 61\%
-    F1-score, largely higher than the best results of the symbolic and neural
-    approaches considered in our study (61\%, 62\%, and 37\%,
-    respectively). Tratto can generate three times more axiomatic oracles than
-    current symbolic approaches, while generating 10 times less false positives
-    than GPT4 complemented with few-shot learning and Chain-of-Thought
-    prompting.},
+    the symbolic module.  Our experiments show that Tratto outperforms the
+    state-of-the-art axiomatic oracle generation approaches, with 73\%
+    accuracy, 72\% precision, and 61\% F1-score, largely higher than the best
+    results of the symbolic and neural approaches considered in our study
+    (61\%, 62\%, and 37\%, respectively). Tratto can generate three times more
+    axiomatic oracles than current symbolic approaches, while generating 10
+    times less false positives than GPT4 complemented with few-shot learning
+    and Chain-of-Thought prompting.},
   basefilename = {axiomatic-oracles-issta2025},
   downloads = "https://anonymous.4open.science/r/tratto-replication-package-31F6 replication package",
   category =  "Natural language processing",
@@ -11680,36 +11679,30 @@ with an {SMT} solver",
   authorNONASCII =       {Davide Molinelli and Luca Di~Grazia and Alberto Martin-Lopez and Michael D. Ernst and Mauro Pezzè},
   title =        {Do {LLMs} Generate Useful Test Oracles? An Empirical Study with an Unbiased Dataset},
   crossref =  {ASE2025},
-  NEEDpages =    {*},
+  pages =    {278-290},
   abstract =
-   {The oracle problem --- the efficient generation of thorough test oracles --- is
-    still an open problem. Popular test case generators, like EvoSuite and
-    Randoop, rely on implicit, rule-based, and regression oracles that miss
-    failures that depend on the semantics of the program under test. Specified
-    test oracles shift the costs of generating oracles to the production of
-    formal specifications.
-    \par
+   {Generation of thorough test oracles is an open problem. Popular test case
+    generators, like EvoSuite and Randoop, rely on implicit, rule-based, and
+    regression oracles that miss failures that depend on the semantics of the
+    program under test.  Formal specifications can yield test oracles but are
+    expensive to create.
     Large Language Models (LLMs) have the potential to overcome these
-    limitations. The few studies of using LLM to automatically generate test
-    oracles validate LLMs on modest-sized public benchmarks, such as Defects4J,
-    that are likely to be included in the LLM training benchmark, with severe
-    threats to the validity of the results.
-    \par
+    limitations. The few studies of using LLMs to generate test oracles use
+    modest-sized public benchmarks, such as Defects4J, that are likely to be
+    included in the LLM training data, which threatens the validity of the
+    results.
     This paper presents an empirical study of the effectiveness of LLMs in
-    generating test oracles. We report the results of experimenting with 13,866
-    test oracles that we mined from 135 Java projects, and that were created
-    after the cut-off dates of the training of the LLMs used in the
-    experiments, and are thus unbiased.
-    \par
-    The results of the experiments that we report in this paper indicate that
-    LLMs indeed generate effective oracles that largely increase the mutation
-    score of the test cases, reaching a mutation score comparable to the score
-    of human-designed test oracles. Our results also indicate that the test
-    prefix and the methods called in the program under test provide sufficient
-    information to generate good oracles, while additional code context does
-    not bring relevant benefits. These findings provide actionable insights
-    into using LLMs for automatic testing and highlight their current
-    limitations in generating complex oracles.},
+    generating test oracles.  Our experiments use 13,866 test oracles, from 135
+    Java projects, that were created after the LLMs training cut-off dates.
+    Thus, our dataset is unbiased.
+    In our experiments, LLMs generated oracles with average mutation score of
+    43\%{\,---\,}similar to the 45\% score of human-designed test oracles.  Our
+    results also indicate that the test prefix and the methods called in the
+    program under test provide sufficient information to generate good oracles,
+    while additional code context does not bring relevant benefits.
+    These findings provide actionable insights into using LLMs for automatic
+    testing and highlight their current limitations in generating complex
+    oracles.},
   basefilename = {neurosymbolic-oracles-ase2025},
   category =  "Natural language processing",
   summary =
@@ -11787,6 +11780,10 @@ with an {SMT} solver",
     LLM performance is largely stable from language to language. The best
     models correctly resolve less than 60\% of merge conflicts.},
   basefilename = {merge-bench-icpr2026},
+  downloads =
+    {https://github.com/benedikt-schesch/Merge-Bench-Builder dataset construction;
+     https://github.com/benedikt-schesch/LLMerge model training;
+     https://github.com/benedikt-schesch/Merge-Bench evaluation},
   category =  {Software Engineering},
   summary =
    {This paper presents a new dataset, Merge-Bench, of real-world merge conflicts.
