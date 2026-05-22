@@ -64,7 +64,7 @@ bibtest.tex: *.bib
 # I'm not sure why this doesn't work (so for now do it by hand):
 #   emacs -batch -l bibtex --eval="(progn (setq bibtex-files '(bibtex-file-path) enable-local-eval t) (bibtex-validate-globally))"
 test bibtest: bibtest.pdf
-bibtest.pdf: ${GENERATED_FILES} bibtest.tex *.bib
+bibtest.pdf: ${GENERATED_FILES} bibtest.tex
 	@echo -n 'First pdflatex run, suppressing warnings...'
 	@-pdflatex -interaction=nonstopmode bibtest >/dev/null 2>&1
 	@echo 'done'
