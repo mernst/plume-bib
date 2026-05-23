@@ -678,7 +678,6 @@ endgame.",
 }
 
 
-% Identical to Ernst94:Serialize:LCSTR
 @TechReport{Ernst94:Serialize:MSRTR,
   author = 	 "Michael D. Ernst",
   title = 	 "Serializing parallel programs by removing redundant
@@ -695,7 +694,6 @@ endgame.",
 }
 
 
-% Identical to Ernst94:Serialize:MSRTR.
 @TechReport{Ernst94:Serialize:LCSTR,
   author = 	 "Michael D. Ernst",
   title = 	 "Serializing parallel programs by removing redundant
@@ -1457,7 +1455,6 @@ endgame.",
 }
 
 
-% My dissertation summary
 @InProceedings{Ernst01:ICSM,
   author = 	 "Michael D. Ernst",
   title = 	 "Summary of {\em Dynamically discovering likely program invariants}",
@@ -1501,6 +1498,7 @@ endgame.",
     detection.",
   supersededby = "Ernst2000:PhD A summary",
 }
+
 
 
 @Manual{DaikonManual-2.3.2,
@@ -1623,7 +1621,6 @@ endgame.",
 }
 
 
-% Used to be named NimmerE02:annotate
 @InProceedings{NimmerE02:FSE,
   author =	 "Jeremy W. Nimmer and Michael D. Ernst",
   title =	 "Invariant inference for static checking: An empirical evaluation",
@@ -1722,7 +1719,6 @@ endgame.",
 }
 
 
-% Old key was NeWinEL02; actual second author is "Michael Ernst".
 @TechReport{NeWinE02:TR841,
   author = 	 "Toh {Ne Win} and Michael D. Ernst",
   title = 	 "Verifying distributed algorithms via dynamic analysis and theorem proving",
@@ -1997,8 +1993,6 @@ endgame.",
 }
 
 
-% Actual fourth author is "Michael Ernst" (but that's fixed in the
-% BurdyEtAl03 paper).
 @TechReport{BurdyEtAl03:TR,
   author =       {Lilian Burdy and Yoonsik Cheon and David Cok and
 		   Michael D. Ernst and Joe Kiniry and Gary T. Leavens and
@@ -2030,6 +2024,7 @@ endgame.",
     applications of JML. Thus far, most applications have focused on code for
     programming smartcards written in the Java Card dialect of Java.",
 }
+
 
 
 @InProceedings{Ernst2003:WODA,
@@ -11640,15 +11635,14 @@ with an {SMT} solver",
     oracles.  The neural module of Tratto uses transformers fine-tuned for both
     deciding whether to output an oracle or not and selecting the next lexical
     token to incrementally build the oracle from the set of tokens returned by
-    the symbolic module.
-    Our experiments show that Tratto outperforms the state-of-the-art axiomatic
-    oracle generation approaches, with 73\% accuracy, 72\% precision, and 61\%
-    F1-score, largely higher than the best results of the symbolic and neural
-    approaches considered in our study (61\%, 62\%, and 37\%,
-    respectively). Tratto can generate three times more axiomatic oracles than
-    current symbolic approaches, while generating 10 times less false positives
-    than GPT4 complemented with few-shot learning and Chain-of-Thought
-    prompting.},
+    the symbolic module.  Our experiments show that Tratto outperforms the
+    state-of-the-art axiomatic oracle generation approaches, with 73\%
+    accuracy, 72\% precision, and 61\% F1-score, largely higher than the best
+    results of the symbolic and neural approaches considered in our study
+    (61\%, 62\%, and 37\%, respectively). Tratto can generate three times more
+    axiomatic oracles than current symbolic approaches, while generating 10
+    times less false positives than GPT4 complemented with few-shot learning
+    and Chain-of-Thought prompting.},
   basefilename = {axiomatic-oracles-issta2025},
   downloads = "https://anonymous.4open.science/r/tratto-replication-package-31F6 replication package",
   category =  "Natural language processing",
@@ -11685,36 +11679,30 @@ with an {SMT} solver",
   authorNONASCII =       {Davide Molinelli and Luca Di~Grazia and Alberto Martin-Lopez and Michael D. Ernst and Mauro Pezzè},
   title =        {Do {LLMs} Generate Useful Test Oracles? An Empirical Study with an Unbiased Dataset},
   crossref =  {ASE2025},
-  NEEDpages =    {*},
+  pages =    {278-290},
   abstract =
-   {The oracle problem --- the efficient generation of thorough test oracles --- is
-    still an open problem. Popular test case generators, like EvoSuite and
-    Randoop, rely on implicit, rule-based, and regression oracles that miss
-    failures that depend on the semantics of the program under test. Specified
-    test oracles shift the costs of generating oracles to the production of
-    formal specifications.
-    \par
+   {Generation of thorough test oracles is an open problem. Popular test case
+    generators, like EvoSuite and Randoop, rely on implicit, rule-based, and
+    regression oracles that miss failures that depend on the semantics of the
+    program under test.  Formal specifications can yield test oracles but are
+    expensive to create.
     Large Language Models (LLMs) have the potential to overcome these
-    limitations. The few studies of using LLM to automatically generate test
-    oracles validate LLMs on modest-sized public benchmarks, such as Defects4J,
-    that are likely to be included in the LLM training benchmark, with severe
-    threats to the validity of the results.
-    \par
+    limitations. The few studies of using LLMs to generate test oracles use
+    modest-sized public benchmarks, such as Defects4J, that are likely to be
+    included in the LLM training data, which threatens the validity of the
+    results.
     This paper presents an empirical study of the effectiveness of LLMs in
-    generating test oracles. We report the results of experimenting with 13,866
-    test oracles that we mined from 135 Java projects, and that were created
-    after the cut-off dates of the training of the LLMs used in the
-    experiments, and are thus unbiased.
-    \par
-    The results of the experiments that we report in this paper indicate that
-    LLMs indeed generate effective oracles that largely increase the mutation
-    score of the test cases, reaching a mutation score comparable to the score
-    of human-designed test oracles. Our results also indicate that the test
-    prefix and the methods called in the program under test provide sufficient
-    information to generate good oracles, while additional code context does
-    not bring relevant benefits. These findings provide actionable insights
-    into using LLMs for automatic testing and highlight their current
-    limitations in generating complex oracles.},
+    generating test oracles.  Our experiments use 13,866 test oracles, from 135
+    Java projects, that were created after the LLMs training cut-off dates.
+    Thus, our dataset is unbiased.
+    In our experiments, LLMs generated oracles with average mutation score of
+    43\%{\,---\,}similar to the 45\% score of human-designed test oracles.  Our
+    results also indicate that the test prefix and the methods called in the
+    program under test provide sufficient information to generate good oracles,
+    while additional code context does not bring relevant benefits.
+    These findings provide actionable insights into using LLMs for automatic
+    testing and highlight their current limitations in generating complex
+    oracles.},
   basefilename = {neurosymbolic-oracles-ase2025},
   category =  "Natural language processing",
   summary =
@@ -11766,6 +11754,84 @@ with an {SMT} solver",
     analyze, reasons about resource lifetimes, and finally repairs the leaks.},
 }
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% 2026
+%%%
+
+@InProceedings{ScheschE2026,
+  author =       {Benedikt Schesch and Michael D. Ernst},
+  title =        {{Merge-Bench}: Resolve Merge Conflicts with Large Language Models},
+  crossref =  {ICPR2026},
+  NEEDpages =     {*},
+  abstract =
+   {This paper applies machine learning to the difficult and important task of
+    version control merging. (1) We constructed a dataset, Merge-Bench, of 7938
+    real-world merge conflict hunks from 1439 GitHub repositories. The ground
+    truth is the merge resolution that developers committed to the
+    repository. Our dataset construction methodology is scalable to arbitrary
+    amounts of data since no manual labeling is required. (2) We trained a
+    model, LLMergeJ, to resolve merge conflicts in Java programs. Our approach
+    uses Group Relative Policy Optimization (GRPO), an online reinforcement
+    learning method, to train a Large Language Model (LLM). (3) We performed
+    two evaluations of the performance of LLMs on resolving merge conflicts. On
+    Java programs, LLMergeJ with 14B parameters outperforms 3 commercial LLMs,
+    trailing only Gemini 2.5 Pro. Across 11 programming languages, commercial
+    LLM performance is largely stable from language to language. The best
+    models correctly resolve less than 60\% of merge conflicts.},
+  basefilename = {merge-bench-icpr2026},
+  downloads =
+    {https://github.com/benedikt-schesch/Merge-Bench-Builder dataset construction;
+     https://github.com/benedikt-schesch/LLMerge model training;
+     https://github.com/benedikt-schesch/Merge-Bench evaluation},
+  category =  {Software Engineering},
+  summary =
+   {This paper presents a new dataset, Merge-Bench, of real-world merge conflicts.
+    It also presents a small (14B parameters) LLM trained to resolve merge
+    conflicts, which outperforms commercial frontier models many times its size.},
+}
+
+
+@InProceedings{PengKBE2026,
+  author =       {Haoran Peng and Baris Kasikci and Gilbert Bernstein and Michael D. Ernst},
+  title =        {Hayroll: A Modular Wrapper for Translating {C} Macros and Conditional Compilation to {R}ust},
+  crossref =  {PLDI2026},
+  needpages =     {*},
+  abstract =
+   {Previous C-to-Rust translators run the C preprocessor {\tt cpp} on
+    their input before translation.  This discards configurability, and it
+    loses programmer-defined abstractions expressed as C macros.
+    \par
+    We present Hayroll, a modular wrapper that makes C-to-Rust translation
+    preprocessor-aware without modifying the underlying translator. Hayroll
+    consists of two cooperating layers. The conditional compilation translation
+    layer uses symbolic execution to derive activation conditions for each line
+    of the source code.  It splits the program into a set of
+    configuration-specific translation tasks that together cover every line of
+    code.  These tasks are then passed independently to the macro translation
+    layer.  The macro translation layer classifies macros, annotates
+    macro-expanded nodes with tags, and sends the code through the
+    underlying translator.  It then reconstructs C macros as Rust functions or
+    macros by retrieving these tags from the translator's output. Because the
+    layers communicate only through task partitioning and source-code annotations,
+    the underlying translator remains a black box; no invasive changes are
+    required. Our implementation uses C2Rust, but the design is
+    translator-agnostic.
+    \par
+    We evaluated Hayroll on CRUST-Bench, LibmCS, and zlib.  Hayroll
+    successfully reconstructs most syntactical macros and avoids configuration
+    explosion through symbolic execution.  Hayroll's output passes the same
+    tests as the underlying C-to-Rust transpiler.  These results show that
+    decoupled preprocessor analysis can restore configurability and abstraction
+    to C-to-Rust translation in a practical and modular way.},
+  doi =       {10.1145/3808276},
+  basefilename = {c-rust-macros-pldi2026},
+  category =  {Refactoring},
+  summary =
+   {Most C-to-Rust translators first run the C preprocessor, losing
+    configurability and programmer-written abstractions.  Hayroll records macro
+    information from C, then rewrites the Rust to recovers that information.},
+}
 
 
 %% When I add here at the bottom of the file, also post a PLSE news item.
