@@ -20,6 +20,7 @@
 \include{konane.bib}
 \include{kvasir.bib}
 \include{layout.bib}
+\include{lectures-ernst.bib}
 \include{macros.bib}
 \include{model-checking.bib}
 \include{nlp.bib}
