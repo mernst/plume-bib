@@ -195,6 +195,127 @@
 }
 
 
+@InProceedings{RochaICB2015,
+  author =       {Rocha, Herbert and Ismail, Hussama and Cordeiro, Lucas and Barreto, Raimundo},
+  title =        {Model Checking Embedded {C} Software Using k-Induction and Invariants},
+  crossref =  {SBESC2015},
+  pages =     {90-95},
+  abstract =
+    {We present a proof by induction algorithm, which combines k-induction with
+invariants to model check embedded C software with bounded and unbounded
+loops. The k-induction algorithm consists of three cases: in the base case,
+we aim to find a counterexample with up to k loop unwindings, in the
+forward condition, we check whether loops have been fully unrolled and that
+the safety property ø holds in all states reachable within k unwindings,
+and in the inductive step, we check that whenever ø holds for k unwindings,
+it also holds after the next unwinding of the system. For each step of the
+k-induction algorithm, we infer invariants using affine constraints (i.e.,
+polyhedral) to specify pre-and post-conditions. Experimental results show
+that our approach can handle a wide variety of safety properties in typical
+embedded software applications from telecommunications, control systems,
+and medical devices, we demonstrate an improvement of the induction
+algorithm effectiveness if compared to other approaches.},
+}
+
+
+@InProceedings{PonzioGRAAF2021,
+  author =       {Pablo Ponzio and Ariel Godio and Nicolás Rosner and Marcelo Arroyo and Nazareno Aguirre and Marcelo F. Frias},
+  title =        {Efficient bounded model checking of heap-manipulating programs using tight field bounds},
+  crossref =  {FASE2021},
+  pages =     {218-239},
+}
+
+
+@InProceedings{BehrendLHRKR2011,
+  author =       {Behrend, Jörg and Lettnin, Djones and Heckeler, Patrick and Ruf, Jürgen and Kropf, Thomas and Rosenstiel, Wolfgang},
+  title =        {Scalable hybrid verification for embedded software},
+  crossref =  {DATE2011},
+  pages =     {1-6},
+}
+
+
+@InProceedings{OferG2005,
+  author =       {Strichman, Ofer and Godlin, Benny},
+  title =        {Regression Verification --- A Practical Way to Verify Programs},
+  crossref =  {VSTTE2005},
+  pages =     {496–501},
+  abstract =
+   {When considering the program verification challenge [8] one should not
+    forget a lesson learned in the testing community: when it comes to
+    industrial size programs, it is not realistic to expect programmers to
+    formally specify their program beyond simple assertions. It is well known
+    that large parts of real code cannot be described naturally with high level
+    invariants or temporal properties, and further that it is often the case
+    that the process of describing what a code segment should do is as
+    difficult and at least as complicated as the coding itself. Indeed,
+    high-level temporal property-based testing, although by now supported by
+    commercial tools such as <Emphasis
+    Type="SmallCaps">Temporal-Rover</Emphasis>[4], is in very limited use. The
+    industry typically attempts to circumvent this problem with <em>Regression
+    Testing</em>, which is probably the most popular testing method for general
+    computer programs. It is based on the idea of reasoning by induction: check
+    an initial version of the software when it is still very simple, and then
+    check that a newer version of the software produces the same output as the
+    earlier one, given the same inputs. If this process results with a
+    counterexample, the user is asked to check whether it is an error or a
+    legitimate change. In the latter case the testing database is updated with
+    the new 'correct' output value.Regression Testing does not require a formal
+    specification of the investigated system nor a deep understanding of the
+    code, which makes it highly suitable for accompanying the development
+    process, especially if it involves more than one programmer.We propose to
+    learn from this experience and develop techniques for <em>Regression
+    Verification.</em>The underlying proof engine is still a certifying
+    compiler as envisioned by the grand challenge, so this proposal should be
+    thought of as another application of this technology that makes the
+    verification picture more complete.},
+}
+
+
+@Article{CollavizzaLVPRR2014,
+  author =       {Collavizza, H\'{e}l\`{e}ne and Le Vinh, Nguyen and Ponsini, Olivier and Rueher, Michel and Rollet, Antoine},
+  title =        {Constraint-based {BMC}: A backjumping strategy},
+  journal =      {STTT},
+  year =         2014,
+  volume =    16,
+  number =    1,
+  pages =     {103–121},
+  month =     feb,
+  abstract =
+   {Safety property checking is mandatory in the validation process of
+    critical software. When formal verification tools fail to prove some
+    properties, the automatic generation of counterexamples for a given loop
+    depth is an important issue in practice. We investigate in this paper the
+    capabilities of constraint-based bounded model checking for program
+    verification and counterexample generation on real applications. We
+    introduce dynamic post-condition variable-driven strategy (DPVS), a new
+    backjumping strategy we developed to handle an industrial application from
+    a car manufacturer, the Flasher Manager. This backjumping strategy is used
+    to search a faulty path and to collect the constraints of such a path. The
+    simplified control flow graph (CFG) of the program is explored in a
+    backward way, starting from the post-condition and jumping to the most
+    promising node where the variables of the post-condition are defined. In
+    other words, the constraints are collected by exploring the CFG in a
+    dynamic and non-sequential backward way. The Flasher Manager application
+    has been designed and simulated using the Simulink platform. However, this
+    module is concretely embedded as a C program in a car computer, thus we
+    have to check that the safety properties are preserved on this C code. We
+    report experiments on the Flasher Manager with our constraint-based bounded
+    model checker, and with CBMC, a state-of-the-art bounded model
+    checker. Experiments show that DPVS and CBMC have similar performances on
+    one property of the Flasher Manager; DPVS outperforms CBMC to find a
+    counterexample for two properties; two of the properties of the Flasher
+    Manager remain intractable for CBMC and DPVS.},
+}
+
+
+@InProceedings{IvancicBGSMTIM2011,
+  author =       {Ivančić, Franjo and Balakrishnan, Gogul and Gupta, Aarti and Sankaranarayanan, Sriram and Maeda, Naoto and Tokuoka, Hiroki and Imoto, Takashi and Miyazaki, Yoshiaki},
+  title =        {{DC2}: A framework for scalable, scope-bounded software verification},
+  crossref =  {ASE2011},
+  pages =     {133-142},
+}
+
+
 % LocalWords: GanapathySJRB Vinod Ganapathy Sanjit Seshia Somesh Jha jul Verlag
 % LocalWords: API CCA InProceedings booktitle NEEDpages addr printf XP doi CACM
 % LocalWords: printf's unmodeled seteuid execl HenzingerJMS Henzinger isbn

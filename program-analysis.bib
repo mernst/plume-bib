@@ -154,3 +154,175 @@ series = {ISSTA 2022}
   pages =     {332-343},
   abstract =  {Program Analysis has been a rich and fruitful field of research for many decades, and countless high quality program analysis tools have been produced by academia. Though there are some well-known examples of tools that have found their way into routine use by practitioners, a common challenge faced by researchers is knowing how to achieve broad and lasting adoption of their tools. In an effort to understand what makes a program analyzer most attractive to developers, we mounted a multi-method investigation at Microsoft. Through interviews and surveys of developers as well as analysis of defect data, we provide insight and answers to four high level research questions that can help researchers design program analyzers meeting the needs of software developers.  First, we explore what barriers hinder the adoption of program analyzers, like poorly expressed warning messages. Second, we shed light on what functionality developers want from analyzers, including the types of code issues that developers care about. Next, we answer what non-functional characteristics an analyzer should have to be widely used, how the analyzer should fit into the development process, and how its results should be reported. Finally, we investigate defects in one of Microsoft's flagship software services, to understand what types of code issues are most important to minimize, potentially through program analysis.},
 }
+
+
+
+
+@InProceedings{HalfondO2008,
+  author =       {Halfond, William G. J. and Orso, Alessandro},
+  title =        {Automated identification of parameter mismatches in web applications},
+  crossref =  {FSE2008},
+  pages =     {181-191},
+  abstract =
+   {Quality assurance techniques for web applications have become
+    increasingly important as web applications have gained in
+    popularity and become an essential part of our daily lives. To
+    integrate content and data from multiple sources, the components
+    of a web application communicate extensively among
+    themselves. Unlike traditional program modules, the components
+    communicate through interfaces and invocations that are not
+    explicitly declared. Because of this, the communication between
+    two components can fail due to a parameter mismatch between the
+    interface invoked by a calling component and the interface
+    provided by the called component. Parameter mismatches can cause
+    serious errors in the web application and are difficult to
+    identify using traditional testing and verification
+    techniques. To address this problem, we propose a static-analysis
+    based approach for identifying parameter mismatches. We also
+    present an empirical evaluation of the approach, which we
+    performed on a set of real web applications. The results of the
+    evaluation are promising; our approach discovered 133 parameter
+    mismatches in the subject applications.},
+}
+
+
+
+@InProceedings{GuoBTORA2005,
+  author =       {Guo, Bolei and Bridges, Matthew J. and Triantafyllis, Spyridon and Ottoni, Guilherme and Raman, Easwaran and August, David I.},
+  title =        {Practical and accurate low-level pointer analysis},
+  crossref =  {CGO2005},
+  pages =     {291-302},
+  abstract =
+   {Pointer analysis is traditionally performed once, early in the
+    compilation process, upon an intermediate representation (IR)
+    with source-code semantics. However, performing pointer analysis
+    only once at this level imposes a phase-ordering constraint,
+    causing alias information to become stale after subsequent code
+    transformations. Moreover, high-level pointer analysis cannot be
+    used at link time or run time, where the source code is
+    unavailable. This paper advocates performing pointer analysis on
+    a low-level intermediate representation. We present the first
+    context-sensitive and partially flow-sensitive points-to analysis
+    designed to operate at the assembly level. As we will
+    demonstrate, low-level pointer analysis can be as accurate as
+    high-level analysis. Additionally, our low-level pointer analysis
+    also enables a quantitative comparison of propagating high-level
+    pointer analysis results through subsequent code transformations,
+    versus recomputing them at the low level. We show that, for C
+    programs, the former practice is considerably less accurate than
+    the latter.},
+}
+
+
+
+
+@InProceedings{LYCFRN2008,
+  author =       {Loginov, Alexey and Yahav, Eran and Chandra, Satish and Fink, Stephen and Rinetzky, Noam and Nanda, Mangala},
+  title =        {Verifying dereference safety via expanding-scope analysis},
+  crossref =  {ISSTA2008},
+  pages =     {213-224},
+  abstract =
+   {This paper addresses the challenging problem of verifying the
+    safety of pointer dereferences in real Java programs. We provide
+    an automatic approach to this problem based on a sound
+    interprocedural analysis. We present a staged expanding-scope
+    algorithm for interprocedural abstract interpretation, which
+    invokes sound analysis with partial programs of increasing
+    scope. This algorithm achieves many benefits typical of
+    whole-program interprocedural analysis, but scales to large
+    programs by limiting analysis to small program fragments. To
+    address cases where the static analysis of program fragments
+    fails to prove safety, the analysis also suggests possible
+    annotations which, if a user accepts, ensure the desired
+    properties. Experimental evaluation on a number of Java programs
+    shows that we are able to verify 90\% of all dereferences soundly
+    and automatically, and further reduce the number of remaining
+    dereferences using non-nullness annotations.},
+}
+
+
+
+
+@InProceedings{DilligDAS2011,
+  author =       {Dillig, Isil and Dillig, Thomas and Aiken, Alex and Sagiv, Mooly},
+  title =        {Precise and compact modular procedure summaries for heap manipulating programs},
+  crossref =  {PLDI2011},
+  pages =     {567-577},
+  abstract =
+   {We present a strictly bottom-up, summary-based, and precise heap
+    analysis targeted for program verification that performs strong
+    updates to heap locations at call sites. We first present a
+    theory of heap decompositions that forms the basis of our
+    approach; we then describe a full analysis algorithm that is
+    fully symbolic and efficient. We demonstrate the precision and
+    scalability of our approach for verification of real C and C++
+    programs.},
+}
+
+
+
+
+@InProceedings{YuXHFZ2010,
+  author =       {Yu, Hongtao and Xue, Jingling and Huo, Wei and Feng, Xiaobing and Zhang, Zhaoqing},
+  title =        {Level by level: Making flow- and context-sensitive pointer analysis scalable for millions of lines of code},
+  crossref =  {CGO2010},
+  pages =     {218-229},
+  abstract =
+   {We present a practical and scalable method for flow- and
+    context-sensitive (FSCS) pointer analysis for C programs. Our
+    method analyzes the pointers in a program level by level in terms
+    of their points-to levels, allowing the points-to relations of
+    the pointers at a particular level to be discovered based on the
+    points-to relations of the pointers at this level and higher
+    levels. This level-by-level strategy can enhance the scalability
+    of the FSCS pointer analysis in two fundamental ways, by enabling
+    (1) fast and accurate flow-sensitive analysis on full sparse SSA
+    form using a flow-insensitive algorithm and (2) fast and accurate
+    context-sensitive analysis using a full transfer function and a
+    meet function for each procedure.Our level-by-level algorithm,
+    LevPA, gives rises to (1) a precise and compact SSA
+    representation for subsequent program analysis and optimization
+    tasks and (2) a flow- and context-sensitive MAY/MUST mod
+    (modification) set and read set for each procedure. Our
+    preliminary results show that LevPA can analyze some programs
+    with over a million lines of C code in minutes, faster than the
+    state-of-the-art FSCS methods.},
+}
+
+
+
+@InProceedings{HeineL2003,
+  author =       {Heine, David L. and Lam, Monica S.},
+  title =        {A practical flow-sensitive and context-sensitive {C} and {C}++ memory leak detector},
+  crossref =  {PLDI2003},
+  pages =     {168–181},
+  abstract =
+   {This paper presents a static analysis tool that can
+    automatically find memory leaks and deletions of dangling
+    pointers in large C and C++ applications.We have developed a type
+    system to formalize a practical ownership model of memory
+    management. In this model, every object is pointed to by one and
+    only one owning pointer, which holds the exclusive right and
+    obligation to either delete the object or to transfer the right
+    to another owning pointer. In addition, a pointer-typed class
+    member field is required to either always or never own its
+    pointee at public method boundaries. Programs satisfying this
+    model do not leak memory or delete the same object more than
+    once.We have also developed a flow-sensitive and
+    context-sensitive algorithm to automatically infer the likely
+    ownership interfaces of methods in a program. It identifies
+    statements inconsistent with the model as sources of potential
+    leaks or double deletes. The algorithm is sound with respect to a
+    large subset of the C and C++ language in that it will report all
+    possible errors. It is also practical and useful as it identifies
+    those warnings likely to correspond to errors and helps the user
+    understand the reported errors by showing them the assumed method
+    interfaces.Our techniques are validated with an implementation of
+    a tool we call Clouseau. We applied Clouseau to a suite of
+    applications: two web servers, a chat client, secure shell tools,
+    executable object manipulation tools, and a compiler. The tool
+    found a total of 134 serious memory errors in these
+    applications. The tool analyzes over 50K lines of C++ code in
+    about 9 minutes on a 2 GHz Pentium 4 machine and over 70K lines
+    of C code in just over a minute.},
+}
