@@ -34,6 +34,7 @@
   title = 	 "Generalizing symbolic execution to library classes",
   crossref =     "PASTE2005",
   pages = 	 "103--110",
+  doi =          "10.1145/1108792.1108817",
 }
 
 
@@ -45,6 +46,7 @@
   publisher =    {Springer},
   year =         1999,
   edition =   {Corrected},
+  doi =          "10.1007/978-3-662-03811-6",
 }
 
 
@@ -93,6 +95,7 @@
   crossref =  {FSE2023},
   pages =     {2107-2111},
   numpages = 5,
+  doi =          "10.1145/3611643.3613078",
   abstract =
       {Recent advances of Large Language Models (LLMs), e.g., ChatGPT, exhibited
     strong capabilities of comprehending and responding to questions across a
@@ -120,5 +123,6 @@
   title =        {Statfier: Automated Testing of Static Analyzers via Semantic-Preserving Program Transformations},
   crossref =  {FSE2023},
   pages =     {237–249},
+  doi =       "10.1145/3611643.3616272",
   abstract =  {Static analyzers reason about the behaviors of programs without executing them and report issues when they violate pre-defined desirable properties. One of the key limitations of static analyzers is their tendency to produce inaccurate and incomplete analysis results, i.e., they often generate too many spurious warnings and miss important issues. To help enhance the reliability of a static analyzer, developers usually manually write tests involving input programs and the corresponding expected analysis results for the analyzers. Meanwhile, a static analyzer often includes example programs in its documentation to demonstrate the desirable properties and/or their violations. Our key insight is that we can reuse programs extracted either from the official test suite or documentation and apply semantic-preserving transformations to them to generate variants. We studied the quality of input programs from these two sources and found that most rules in static analyzers are covered by at least one input program, implying the potential of using these programs as the basis for test generation. We present Statfier, a heuristic-based automated testing approach for static analyzers that generates program variants via semantic-preserving transformations and detects inconsistencies between the original program and variants (indicate inaccurate analysis results in the static analyzer). To select variants that are more likely to reveal new bugs, Statfier uses two key heuristics: (1) analysis report guided location selection that uses program locations in the reports produced by static analyzers to perform transformations and (2) structure diversity driven variant selection that chooses variants with different program contexts and diverse types of transformations. Our experiments with five popular static analyzers show that Statfier can find 79 bugs in these analyzers, of which 46 have been confirmed.},
 }
