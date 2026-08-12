@@ -7,8 +7,7 @@ BIB_ABBREVIATE ?= ./bib-abbreviate.pl
 GENERATED_FILES = bibstring-unabbrev.bib bibstring-abbrev.bib crossrefs-abbrev.bib bibroot bibtest.tex
 
 # TODO: reinstate bibstring-crossrefs-abbrev.bib
-.PHONY: all clean test
-all: ${GENERATED_FILES}
+all: ${GENERATED_FILES} style-check
 
 BIBFILES := $(shell ls *.bib | grep -v bibstring-unabbrev.bib | grep -v bibstring-abbrev.bib)
 
@@ -85,10 +84,6 @@ bibtest.pdf: ${GENERATED_FILES} bibtest.tex *.bib
 # 	grep -P "[\x80-\xFF]" *.bib
 
 PUBS_SRC ?= /afs/csail.mit.edu/group/pag/www/pubs-src
-
-.PHONY: run-prek
-run-prek:
-	prek -q run --all-files
 
 # Make a version of the bibliography web pages, based on your working copy,
 # in the subdirectory webtest. If it looks good, you can regenerate the
