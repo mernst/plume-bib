@@ -31,12 +31,14 @@ crossrefs-abbrev.bib: crossrefs.bib $(BIB_ABBREVIATE)
 	perl -pi -e 's/(^\s*(book)?title\s*=\s*\".*?)(\s+'\''?[0-9]+)?(:|\s*---)\s.*(\",$$)/\1\5/' $@
 	perl -pi -e 's/(^\s*(book)?title\s*=\s*\"[A-Za-z]*)(\s+'\''?[0-9]+)?,\s.*(\",$$)/\1\4/' $@
 	perl -pi -e 's/(^\s*address\s*=\s*\".*\",?\n)//' $@
-	@chmod oga-w $@
+# Comment out for now because prek requires files to be writeable.
+#	@chmod oga-w $@
 
 ## TODO: write a new abbreviaton script, only for [book]titles
 # bibstring-crossrefs-abbrev.bib: bibstring-crossrefs-master.bib $(BIB_ABBREVIATE)
 # 	@rm -f $@
 # 	$(BIB_TITLE_ABBREVIATE) -abbrev $< > $@
+# # Comment out for now because prek requires files to be writeable.
 # 	@chmod oga-w $@
 
 bibroot: *.bib
@@ -45,8 +47,9 @@ bibroot: *.bib
 	  rm -f $@.new; \
 	else \
 	  mv -f $@.new $@; \
-	  chmod oga-w $@; \
 	fi
+# Removed from just above for now because prek requires files to be writeable.
+#	  chmod oga-w $@; \
 
 bibtest-aux-clean:
 	rm -f bibtest.aux bibtest.bbl bibtest.blg bibtest.dvi bibtest.log
@@ -58,8 +61,9 @@ bibtest.tex: *.bib
 	  rm -f $@.new; \
 	else \
 	  mv -f $@.new $@; \
-	  chmod oga-w $@; \
 	fi
+# Removed from just above for now because prek requires files to be writeable.
+#	  chmod oga-w $@; \
 
 # Before doing this, run bibtex-validate-globally
 # I'm not sure why this doesn't work (so for now do it by hand):
