@@ -7,8 +7,7 @@ BIB_ABBREVIATE ?= ./bib-abbreviate.pl
 GENERATED_FILES = bibstring-unabbrev.bib bibstring-abbrev.bib crossrefs-abbrev.bib bibroot bibtest.tex
 
 # TODO: reinstate bibstring-crossrefs-abbrev.bib
-.PHONY: all clean test
-all: ${GENERATED_FILES}
+all: ${GENERATED_FILES} style-check
 
 BIBFILES := $(shell ls *.bib | grep -v bibstring-unabbrev.bib | grep -v bibstring-abbrev.bib)
 
@@ -31,14 +30,12 @@ crossrefs-abbrev.bib: crossrefs.bib $(BIB_ABBREVIATE)
 	perl -pi -e 's/(^\s*(book)?title\s*=\s*\".*?)(\s+'\''?[0-9]+)?(:|\s*---)\s.*(\",$$)/\1\5/' $@
 	perl -pi -e 's/(^\s*(book)?title\s*=\s*\"[A-Za-z]*)(\s+'\''?[0-9]+)?,\s.*(\",$$)/\1\4/' $@
 	perl -pi -e 's/(^\s*address\s*=\s*\".*\",?\n)//' $@
-# Comment out for now because prek requires files to be writeable.
-#	@chmod oga-w $@
+	@chmod oga-w $@
 
 ## TODO: write a new abbreviaton script, only for [book]titles
 # bibstring-crossrefs-abbrev.bib: bibstring-crossrefs-master.bib $(BIB_ABBREVIATE)
 # 	@rm -f $@
 # 	$(BIB_TITLE_ABBREVIATE) -abbrev $< > $@
-# # Comment out for now because prek requires files to be writeable.
 # 	@chmod oga-w $@
 
 bibroot: *.bib
@@ -47,9 +44,8 @@ bibroot: *.bib
 	  rm -f $@.new; \
 	else \
 	  mv -f $@.new $@; \
+	  chmod oga-w $@; \
 	fi
-# Removed from just above for now because prek requires files to be writeable.
-#	  chmod oga-w $@; \
 
 bibtest-aux-clean:
 	rm -f bibtest.aux bibtest.bbl bibtest.blg bibtest.dvi bibtest.log
@@ -61,9 +57,8 @@ bibtest.tex: *.bib
 	  rm -f $@.new; \
 	else \
 	  mv -f $@.new $@; \
+	  chmod oga-w $@; \
 	fi
-# Removed from just above for now because prek requires files to be writeable.
-#	  chmod oga-w $@; \
 
 # Before doing this, run bibtex-validate-globally
 # I'm not sure why this doesn't work (so for now do it by hand):
@@ -89,10 +84,6 @@ bibtest.pdf: ${GENERATED_FILES} bibtest.tex *.bib
 # 	grep -P "[\x80-\xFF]" *.bib
 
 PUBS_SRC ?= /afs/csail.mit.edu/group/pag/www/pubs-src
-
-.PHONY: run-prek
-run-prek:
-	prek -q run --all-files
 
 # Make a version of the bibliography web pages, based on your working copy,
 # in the subdirectory webtest. If it looks good, you can regenerate the
