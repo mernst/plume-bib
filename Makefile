@@ -18,10 +18,12 @@ clean: bibtest-aux-clean
 bibstring-unabbrev.bib: bibstring-master.bib $(BIB_ABBREVIATE)
 	@rm -f $@
 	$(BIB_ABBREVIATE) $< > $@
+	@chmod oga-w $@
 
 bibstring-abbrev.bib: bibstring-master.bib $(BIB_ABBREVIATE)
 	@rm -f $@
 	$(BIB_ABBREVIATE) -abbrev $< > $@
+	@chmod oga-w $@
 
 crossrefs-abbrev.bib: crossrefs.bib $(BIB_ABBREVIATE)
 	@rm -f $@
