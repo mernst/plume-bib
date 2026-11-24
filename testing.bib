@@ -1955,6 +1955,32 @@ keywords = {Generator-based Fuzzing, Mutation, Input Generator}
 
 
 
+
+@article{10.1145/3832098,
+author = {Khalili, Farideh and Domondon, Aidan and Garg, Harshit and Tip, Frank},
+title = {LLMutantKiller: Using Large Language Models to Generate Tests That Kill Mutants},
+year = {2026},
+issue_date = {October 2026},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {3},
+number = {ISSTA},
+url = {https://doi.org/10.1145/3832098},
+doi = {10.1145/3832098},
+abstract = {The primary goal of mutation testing is to assess the quality of an application’s test suite. This is accomplished   by introducing syntactic changes into a program and determining if any test failures occur for the resulting   mutated program, commonly referred to as a mutant. If so, the mutant is said to be killed, confirming that the   test suite is of sufficient quality to detect the introduced fault. A problem arises if a mutant does not impact   the behavior of any test. Such a surviving mutant may occur for two reasons: either it involves a semantics-   preserving program transformation or the test suite is not strong enough. Determining why a mutant survives   often involves complex, non-local reasoning. This paper presents an LLM-based test generation technique for   killing surviving mutants, implemented in a tool called LLMutantKiller. The technique is feedback-directed in   the sense that if a test is produced that does not kill a given mutant, the LLM is re-prompted up to a specified   number of times with scenario-specific feedback such as syntax errors, dependency violations, or execution   logs (e.g., failing assertions) and asked to try again. We evaluate LLMutantKiller on 915 randomly selected   surviving mutants produced by StrykerJS, a state-of-the-art mutation testing tool, across 13 open-source   JavaScript/TypeScript applications. The results show that LLMutantKiller kills up to 95.3\% of the surviving   mutants classified as inducing behavioral changes and that it rarely produces invalid tests.},
+journal = {Proc. ACM Softw. Eng.},
+month = oct,
+articleno = {ISSTA007},
+numpages = {23},
+keywords = {LLM Integration, Mutation Testing, Software Testing, Test Generation}
+}
+
+
+
+
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Generating test cases
 %%%
